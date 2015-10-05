@@ -42,6 +42,8 @@
 		18BB05761BC24DFE00D237CD /* searchHospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055F1BC24DFE00D237CD /* searchHospital.png */; };
 		18BB05771BC24DFE00D237CD /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05601BC24DFE00D237CD /* setting.png */; };
 		18BB05781BC24DFE00D237CD /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05611BC24DFE00D237CD /* unchecked.png */; };
+		18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F381BC2564300AFF591 /* DetailManageTemplate.m */; };
+		18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,10 @@
 		18BB055F1BC24DFE00D237CD /* searchHospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchHospital.png; sourceTree = "<group>"; };
 		18BB05601BC24DFE00D237CD /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		18BB05611BC24DFE00D237CD /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		18C14F371BC2564300AFF591 /* DetailManageTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplate.h; sourceTree = "<group>"; };
+		18C14F381BC2564300AFF591 /* DetailManageTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplate.m; sourceTree = "<group>"; };
+		18C14F3A1BC2567900AFF591 /* DetailManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplateCell.h; sourceTree = "<group>"; };
+		18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplateCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,10 @@
 				18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */,
 				18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */,
 				18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */,
+				18C14F371BC2564300AFF591 /* DetailManageTemplate.h */,
+				18C14F381BC2564300AFF591 /* DetailManageTemplate.m */,
+				18C14F3A1BC2567900AFF591 /* DetailManageTemplateCell.h */,
+				18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				182394EF1BBD0DCE00D97366 /* Images.xcassets */,
 				182394F11BBD0DCE00D97366 /* LaunchScreen.xib */,
@@ -336,11 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
+				18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */,
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
+				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

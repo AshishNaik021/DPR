@@ -1,29 +1,36 @@
 //
-//  ManageTemplateTableViewController.m
+//  DetailManageTemplate.m
 //  Medico
 //
-//  Created by Apple on 05/10/15.
+//  Created by APPLE on 05/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "ManageTemplateTableViewController.h"
-#import "ManageTemplateCell.h"
 #import "DetailManageTemplate.h"
 #import "DetailManageTemplateCell.h"
 
-@interface ManageTemplateTableViewController ()
+@interface DetailManageTemplate ()
 
 @end
 
-@implementation ManageTemplateTableViewController
+@implementation DetailManageTemplate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _templateArr = @[@"Dental Procedures",
-                     @"Laparoscopic Procedures",
-                     @"Kidney Procedures"];
     
+    _DentalArr = @[@"Dental Flush",
+                     @"Cavity Filling",
+                     @"Brace Fixing"];
+    
+    _LaparoscopicArr = @[@"Laparoscopic 1",
+                         @"Laparoscopic 2",
+                         @"Laparoscopic 3"];
+    
+    _KidneyArr = @[@"Kidey 1",
+                   @"Kidey 2",
+                   @"Kidey 3"];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,36 +53,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _templateArr.count;
+    return -_DentalArr.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"TableCell";
-    ManageTemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"DetailTableCell";
+    DetailManageTemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     int row = [indexPath row];
-    cell.TemplateLabel.text = _templateArr[row];
+    
+    cell.manageLabel.text = _DentalArr[row];
+    
+    
     
     return cell;
     
 }
 
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
-        DetailManageTemplate *detailmanagetemplate = [segue destinationViewController];
-        NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
-        int row = [myIndex row];
-        
-    }
-    
-    
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
