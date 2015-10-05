@@ -44,6 +44,8 @@
 		18BB05781BC24DFE00D237CD /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05611BC24DFE00D237CD /* unchecked.png */; };
 		18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F381BC2564300AFF591 /* DetailManageTemplate.m */; };
 		18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */; };
+		18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F3E1BC2808E00AFF591 /* DoctorRegistrer.m */; };
+		18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F411BC2870F00AFF591 /* AssistantRegister.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,10 @@
 		18C14F381BC2564300AFF591 /* DetailManageTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplate.m; sourceTree = "<group>"; };
 		18C14F3A1BC2567900AFF591 /* DetailManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplateCell.h; sourceTree = "<group>"; };
 		18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplateCell.m; sourceTree = "<group>"; };
+		18C14F3D1BC2808E00AFF591 /* DoctorRegistrer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorRegistrer.h; sourceTree = "<group>"; };
+		18C14F3E1BC2808E00AFF591 /* DoctorRegistrer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorRegistrer.m; sourceTree = "<group>"; };
+		18C14F401BC2870F00AFF591 /* AssistantRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantRegister.h; sourceTree = "<group>"; };
+		18C14F411BC2870F00AFF591 /* AssistantRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantRegister.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,10 @@
 				1822A71D1BBE4BD500019B58 /* LoginPage.m */,
 				18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */,
 				18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */,
+				18C14F3D1BC2808E00AFF591 /* DoctorRegistrer.h */,
+				18C14F3E1BC2808E00AFF591 /* DoctorRegistrer.m */,
+				18C14F401BC2870F00AFF591 /* AssistantRegister.h */,
+				18C14F411BC2870F00AFF591 /* AssistantRegister.m */,
 				18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */,
 				18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */,
 				18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */,
@@ -347,10 +357,12 @@
 			files = (
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
 				18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */,
+				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */,
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
+				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
