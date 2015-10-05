@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822A71D1BBE4BD500019B58 /* LoginPage.m */; };
 		182394E51BBD0DCE00D97366 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394E41BBD0DCE00D97366 /* main.m */; };
 		182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394E71BBD0DCE00D97366 /* AppDelegate.m */; };
 		182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394EA1BBD0DCE00D97366 /* ViewController.m */; };
@@ -14,6 +15,33 @@
 		182394F01BBD0DCE00D97366 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182394EF1BBD0DCE00D97366 /* Images.xcassets */; };
 		182394F31BBD0DCE00D97366 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182394F11BBD0DCE00D97366 /* LaunchScreen.xib */; };
 		182394FF1BBD0DCE00D97366 /* MedicoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394FE1BBD0DCE00D97366 /* MedicoTests.m */; };
+		18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */; };
+		18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */; };
+		18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */; };
+		18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05491BC24DC100D237CD /* manageAssistents.png */; };
+		18BB05621BC24DFE00D237CD /* appointment.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054B1BC24DFE00D237CD /* appointment.png */; };
+		18BB05631BC24DFE00D237CD /* assistance.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054C1BC24DFE00D237CD /* assistance.png */; };
+		18BB05641BC24DFE00D237CD /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054D1BC24DFE00D237CD /* calendar.png */; };
+		18BB05651BC24DFE00D237CD /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054E1BC24DFE00D237CD /* check.png */; };
+		18BB05661BC24DFE00D237CD /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054F1BC24DFE00D237CD /* checked.png */; };
+		18BB05671BC24DFE00D237CD /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05501BC24DFE00D237CD /* default.png */; };
+		18BB05681BC24DFE00D237CD /* doctordefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05511BC24DFE00D237CD /* doctordefault.png */; };
+		18BB05691BC24DFE00D237CD /* doctorLanding.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05521BC24DFE00D237CD /* doctorLanding.png */; };
+		18BB056A1BC24DFE00D237CD /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05531BC24DFE00D237CD /* home.png */; };
+		18BB056B1BC24DFE00D237CD /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05541BC24DFE00D237CD /* location.png */; };
+		18BB056C1BC24DFE00D237CD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05551BC24DFE00D237CD /* logo.png */; };
+		18BB056D1BC24DFE00D237CD /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05561BC24DFE00D237CD /* logout.png */; };
+		18BB056E1BC24DFE00D237CD /* manageAppointments.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05571BC24DFE00D237CD /* manageAppointments.png */; };
+		18BB056F1BC24DFE00D237CD /* manageClinics.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05581BC24DFE00D237CD /* manageClinics.png */; };
+		18BB05701BC24DFE00D237CD /* manageFinance.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05591BC24DFE00D237CD /* manageFinance.png */; };
+		18BB05711BC24DFE00D237CD /* manageTemplates.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055A1BC24DFE00D237CD /* manageTemplates.png */; };
+		18BB05721BC24DFE00D237CD /* notifications.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055B1BC24DFE00D237CD /* notifications.png */; };
+		18BB05731BC24DFE00D237CD /* patientProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055C1BC24DFE00D237CD /* patientProfile.png */; };
+		18BB05741BC24DFE00D237CD /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055D1BC24DFE00D237CD /* refresh.png */; };
+		18BB05751BC24DFE00D237CD /* searchDoctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055E1BC24DFE00D237CD /* searchDoctor.png */; };
+		18BB05761BC24DFE00D237CD /* searchHospital.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB055F1BC24DFE00D237CD /* searchHospital.png */; };
+		18BB05771BC24DFE00D237CD /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05601BC24DFE00D237CD /* setting.png */; };
+		18BB05781BC24DFE00D237CD /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05611BC24DFE00D237CD /* unchecked.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1822A71C1BBE4BD500019B58 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = ../LoginPage.h; sourceTree = "<group>"; };
+		1822A71D1BBE4BD500019B58 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = ../LoginPage.m; sourceTree = "<group>"; };
 		182394DF1BBD0DCE00D97366 /* Medico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182394E31BBD0DCE00D97366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182394E41BBD0DCE00D97366 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +70,36 @@
 		182394F81BBD0DCE00D97366 /* MedicoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182394FD1BBD0DCE00D97366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182394FE1BBD0DCE00D97366 /* MedicoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicoTests.m; sourceTree = "<group>"; };
+		18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateTableViewController.h; sourceTree = "<group>"; };
+		18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateTableViewController.m; sourceTree = "<group>"; };
+		18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateCell.h; sourceTree = "<group>"; };
+		18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateCell.m; sourceTree = "<group>"; };
+		18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientRegisterViewController.h; path = ../PatientRegisterViewController.h; sourceTree = "<group>"; };
+		18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientRegisterViewController.m; path = ../PatientRegisterViewController.m; sourceTree = "<group>"; };
+		18BB05491BC24DC100D237CD /* manageAssistents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageAssistents.png; sourceTree = "<group>"; };
+		18BB054B1BC24DFE00D237CD /* appointment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appointment.png; sourceTree = "<group>"; };
+		18BB054C1BC24DFE00D237CD /* assistance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assistance.png; sourceTree = "<group>"; };
+		18BB054D1BC24DFE00D237CD /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		18BB054E1BC24DFE00D237CD /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		18BB054F1BC24DFE00D237CD /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		18BB05501BC24DFE00D237CD /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		18BB05511BC24DFE00D237CD /* doctordefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctordefault.png; sourceTree = "<group>"; };
+		18BB05521BC24DFE00D237CD /* doctorLanding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctorLanding.png; sourceTree = "<group>"; };
+		18BB05531BC24DFE00D237CD /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		18BB05541BC24DFE00D237CD /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		18BB05551BC24DFE00D237CD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		18BB05561BC24DFE00D237CD /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		18BB05571BC24DFE00D237CD /* manageAppointments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageAppointments.png; sourceTree = "<group>"; };
+		18BB05581BC24DFE00D237CD /* manageClinics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageClinics.png; sourceTree = "<group>"; };
+		18BB05591BC24DFE00D237CD /* manageFinance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageFinance.png; sourceTree = "<group>"; };
+		18BB055A1BC24DFE00D237CD /* manageTemplates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageTemplates.png; sourceTree = "<group>"; };
+		18BB055B1BC24DFE00D237CD /* notifications.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notifications.png; sourceTree = "<group>"; };
+		18BB055C1BC24DFE00D237CD /* patientProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patientProfile.png; sourceTree = "<group>"; };
+		18BB055D1BC24DFE00D237CD /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		18BB055E1BC24DFE00D237CD /* searchDoctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchDoctor.png; sourceTree = "<group>"; };
+		18BB055F1BC24DFE00D237CD /* searchHospital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchHospital.png; sourceTree = "<group>"; };
+		18BB05601BC24DFE00D237CD /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		18BB05611BC24DFE00D237CD /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +145,14 @@
 				182394E71BBD0DCE00D97366 /* AppDelegate.m */,
 				182394E91BBD0DCE00D97366 /* ViewController.h */,
 				182394EA1BBD0DCE00D97366 /* ViewController.m */,
+				1822A71C1BBE4BD500019B58 /* LoginPage.h */,
+				1822A71D1BBE4BD500019B58 /* LoginPage.m */,
+				18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */,
+				18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */,
+				18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */,
+				18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */,
+				18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */,
+				18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				182394EF1BBD0DCE00D97366 /* Images.xcassets */,
 				182394F11BBD0DCE00D97366 /* LaunchScreen.xib */,
@@ -96,6 +164,30 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18BB054B1BC24DFE00D237CD /* appointment.png */,
+				18BB054C1BC24DFE00D237CD /* assistance.png */,
+				18BB054D1BC24DFE00D237CD /* calendar.png */,
+				18BB054E1BC24DFE00D237CD /* check.png */,
+				18BB054F1BC24DFE00D237CD /* checked.png */,
+				18BB05501BC24DFE00D237CD /* default.png */,
+				18BB05511BC24DFE00D237CD /* doctordefault.png */,
+				18BB05521BC24DFE00D237CD /* doctorLanding.png */,
+				18BB05531BC24DFE00D237CD /* home.png */,
+				18BB05541BC24DFE00D237CD /* location.png */,
+				18BB05551BC24DFE00D237CD /* logo.png */,
+				18BB05561BC24DFE00D237CD /* logout.png */,
+				18BB05571BC24DFE00D237CD /* manageAppointments.png */,
+				18BB05581BC24DFE00D237CD /* manageClinics.png */,
+				18BB05591BC24DFE00D237CD /* manageFinance.png */,
+				18BB055A1BC24DFE00D237CD /* manageTemplates.png */,
+				18BB055B1BC24DFE00D237CD /* notifications.png */,
+				18BB055C1BC24DFE00D237CD /* patientProfile.png */,
+				18BB055D1BC24DFE00D237CD /* refresh.png */,
+				18BB055E1BC24DFE00D237CD /* searchDoctor.png */,
+				18BB055F1BC24DFE00D237CD /* searchHospital.png */,
+				18BB05601BC24DFE00D237CD /* setting.png */,
+				18BB05611BC24DFE00D237CD /* unchecked.png */,
+				18BB05491BC24DC100D237CD /* manageAssistents.png */,
 				182394E31BBD0DCE00D97366 /* Info.plist */,
 				182394E41BBD0DCE00D97366 /* main.m */,
 			);
@@ -199,9 +291,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BB05641BC24DFE00D237CD /* calendar.png in Resources */,
+				18BB05701BC24DFE00D237CD /* manageFinance.png in Resources */,
+				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				182394EE1BBD0DCE00D97366 /* Main.storyboard in Resources */,
+				18BB05651BC24DFE00D237CD /* check.png in Resources */,
+				18BB05751BC24DFE00D237CD /* searchDoctor.png in Resources */,
+				18BB05631BC24DFE00D237CD /* assistance.png in Resources */,
+				18BB05781BC24DFE00D237CD /* unchecked.png in Resources */,
+				18BB056F1BC24DFE00D237CD /* manageClinics.png in Resources */,
+				18BB05711BC24DFE00D237CD /* manageTemplates.png in Resources */,
+				18BB056B1BC24DFE00D237CD /* location.png in Resources */,
+				18BB05691BC24DFE00D237CD /* doctorLanding.png in Resources */,
+				18BB05731BC24DFE00D237CD /* patientProfile.png in Resources */,
+				18BB056E1BC24DFE00D237CD /* manageAppointments.png in Resources */,
+				18BB05721BC24DFE00D237CD /* notifications.png in Resources */,
+				18BB05621BC24DFE00D237CD /* appointment.png in Resources */,
+				18BB056D1BC24DFE00D237CD /* logout.png in Resources */,
 				182394F31BBD0DCE00D97366 /* LaunchScreen.xib in Resources */,
+				18BB05681BC24DFE00D237CD /* doctordefault.png in Resources */,
+				18BB05661BC24DFE00D237CD /* checked.png in Resources */,
+				18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */,
+				18BB05761BC24DFE00D237CD /* searchHospital.png in Resources */,
+				18BB056C1BC24DFE00D237CD /* logo.png in Resources */,
+				18BB056A1BC24DFE00D237CD /* home.png in Resources */,
 				182394F01BBD0DCE00D97366 /* Images.xcassets in Resources */,
+				18BB05671BC24DFE00D237CD /* default.png in Resources */,
+				18BB05741BC24DFE00D237CD /* refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
+				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
+				18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */,
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
+				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +536,7 @@
 				182395041BBD0DCE00D97366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		182395051BBD0DCE00D97366 /* Build configuration list for PBXNativeTarget "MedicoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +545,7 @@
 				182395071BBD0DCE00D97366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
