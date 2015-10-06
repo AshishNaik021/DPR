@@ -7,9 +7,7 @@
 //
 
 #import "ManageTemplateTableViewController.h"
-#import "ManageTemplateCell.h"
 #import "DetailManageTemplate.h"
-#import "DetailManageTemplateCell.h"
 
 @interface ManageTemplateTableViewController ()
 
@@ -64,12 +62,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
-    ManageTemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    cell.textLabel.text = [_templateArr objectAtIndex:indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    int row = [indexPath row];
-    cell.TemplateLabel.text = _templateArr[row];
     
     return cell;
     
@@ -77,13 +75,21 @@
 
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
+   /*
     if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
         DetailManageTemplate *detailmanagetemplate = [segue destinationViewController];
         NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
         int row = [myIndex row];
         
     }
+    */
+    
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    DetailManageTemplate *detailManage;
+    detailManage = [segue destinationViewController];
+    detailManage.pid = path.row;
+    
+    
     
     
 }

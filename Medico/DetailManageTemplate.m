@@ -7,7 +7,6 @@
 //
 
 #import "DetailManageTemplate.h"
-#import "DetailManageTemplateCell.h"
 
 @interface DetailManageTemplate ()
 
@@ -16,9 +15,35 @@
 @implementation DetailManageTemplate
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+        [super viewDidLoad];
     
     
+    if (_pid == 0) {
+        _DentalArr = @[@"Dental Flush",
+                       @"Cavity Filling",
+                       @"Brace Fixing"];
+    }
+    if (_pid == 1) {
+        _DentalArr = @[@"Laparoscopic 1",
+                       @"Laparoscopic 2",
+                       @"Laparoscopic 3"];
+    }
+    if (_pid == 2) {
+        _DentalArr = @[@"Kidey 1",
+                       @"Kidey 2",
+                       @"Kidey 3"];
+    }
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    
+    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
+    
+    
+    //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+
+    /*
     _DentalArr = @[@"Dental Flush",
                      @"Cavity Filling",
                      @"Brace Fixing"];
@@ -30,7 +55,7 @@
     _KidneyArr = @[@"Kidey 1",
                    @"Kidey 2",
                    @"Kidey 3"];
-
+*/
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,9 +78,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return -_DentalArr.count;
+    return _DentalArr.count;
 }
 
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"DetailTableCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    // Configure the cell...
+    cell.textLabel.text = [_DentalArr objectAtIndex:indexPath.row];
+    
+    
+    
+    return cell;
+    
+}
+
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"DetailTableCell";
@@ -72,7 +113,7 @@
     return cell;
     
 }
-
+*/
 
 
 /*

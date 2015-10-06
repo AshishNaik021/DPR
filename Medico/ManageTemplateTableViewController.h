@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManageTemplateTableViewController : UITableViewController
+@interface ManageTemplateTableViewController : UITableViewController <UITableViewDataSource, UITabBarDelegate>
+
 @property IBOutlet NSArray *templateArr;
 
 

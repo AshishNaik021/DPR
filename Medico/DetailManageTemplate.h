@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailManageTemplate : UITableViewController
+@interface DetailManageTemplate : UITableViewController <UITableViewDataSource, UITabBarDelegate>
 
 
 @property IBOutlet NSArray *DentalArr;
 @property IBOutlet NSArray *LaparoscopicArr;
 @property IBOutlet NSArray *KidneyArr;
-
-
+@property NSInteger pid;
 
 @end
