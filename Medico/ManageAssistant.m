@@ -1,40 +1,66 @@
 //
-//  ManageTemplateTableViewController.m
+//  ManageAssistant.m
 //  Medico
 //
-//  Created by Apple on 05/10/15.
+//  Created by APPLE on 06/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "ManageTemplateTableViewController.h"
-#import "ManageTemplateCell.h"
-#import "DetailManageTemplate.h"
-#import "DetailManageTemplateCell.h"
+#import "ManageAssistant.h"
+#import "ManageAssistantCell.h"
 
-@interface ManageTemplateTableViewController ()
+@interface ManageAssistant ()
 
 @end
 
-@implementation ManageTemplateTableViewController
+@implementation ManageAssistant
 
+-(void)addAssistant:(id)sender{
+
+   
+    
+    
+}
+
+
+-(void)homePage:(id)sender{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _templateArr = @[@"Dental Procedures",
-                     @"Laparoscopic Procedures",
-                     @"Kidney Procedures"];
+    _assistantNameArr = @[@"Pooja Shah",
+                     @"Ankita Oza",
+                     @"Priya Sonone",
+                     @"Neha Dhawale"];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    _assistantCityArr = @[@"Pune, India",
+                          @"Pune, India",
+                          @"Mumbai, India",
+                          @"Nagpur, India"];
+    
+    _assistantProfileArr = @[@"Lab Assistent",
+                             @"Nurse",
+                             @"Nurse",
+                             @"Lab Assistent"];
+    
+   /* UIImage *assistantImage = [UIImage imageNamed: @"assistance.png"];
+    [_assistantImg setImage:assistantImage];
+    
+    UIImage *btnImage = [UIImage imageNamed:@"delete.png"];
+    [_deleteAssistantButton setImage:btnImage forState:UIControlStateNormal];
+    */
+    
+    
+  /*  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAssistant:)];*/
     
     UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
+   UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
     
     
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
-    
-    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -57,46 +83,27 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _templateArr.count;
+    return _assistantNameArr.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
-    ManageTemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    ManageAssistantCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     int row = [indexPath row];
-    cell.TemplateLabel.text = _templateArr[row];
-    
-    return cell;
-    
-}
-
-
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
-        DetailManageTemplate *detailmanagetemplate = [segue destinationViewController];
-        NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
-        int row = [myIndex row];
-        
-    }
-    
-    
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    cell.assistantNameLabel.text = _assistantNameArr[row];
+    cell.assistantCityLabel.text = _assistantCityArr[row];
+    cell.assistantProfileLabel.text = _assistantProfileArr[row];
+    cell.assistantImg.image = [UIImage imageNamed:@"assistance.png"];
+    cell.deleteAssistantButton = _assistantNameArr[row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
