@@ -18,8 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *regDoctor;
 @property (weak, nonatomic) IBOutlet UIButton *regPatient;
 @property (weak, nonatomic) IBOutlet UIButton *knowMore;
-
 @property (weak, nonatomic) IBOutlet UIButton *regAssistant;
+
 - (IBAction)validate:(id)sender;
 
 - (IBAction)forgotPassword:(id)sender;
