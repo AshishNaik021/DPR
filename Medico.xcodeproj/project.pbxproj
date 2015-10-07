@@ -15,6 +15,8 @@
 		182394F01BBD0DCE00D97366 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182394EF1BBD0DCE00D97366 /* Images.xcassets */; };
 		182394F31BBD0DCE00D97366 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182394F11BBD0DCE00D97366 /* LaunchScreen.xib */; };
 		182394FF1BBD0DCE00D97366 /* MedicoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394FE1BBD0DCE00D97366 /* MedicoTests.m */; };
+		18327F171BC4E57A002210BC /* ForgotPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F161BC4E57A002210BC /* ForgotPasswordView.m */; };
+		18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F191BC4E8FC002210BC /* SMSConfirmationView.m */; };
 		18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */; };
 		18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */; };
 		1842F3141BC38F970055597E /* ManageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3131BC38F970055597E /* ManageAssistant.m */; };
@@ -84,6 +86,10 @@
 		182394F81BBD0DCE00D97366 /* MedicoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182394FD1BBD0DCE00D97366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182394FE1BBD0DCE00D97366 /* MedicoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicoTests.m; sourceTree = "<group>"; };
+		18327F151BC4E57A002210BC /* ForgotPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordView.h; sourceTree = "<group>"; };
+		18327F161BC4E57A002210BC /* ForgotPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordView.m; sourceTree = "<group>"; };
+		18327F181BC4E8FC002210BC /* SMSConfirmationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSConfirmationView.h; sourceTree = "<group>"; };
+		18327F191BC4E8FC002210BC /* SMSConfirmationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMSConfirmationView.m; sourceTree = "<group>"; };
 		18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateTableViewController.h; sourceTree = "<group>"; };
 		18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateTableViewController.m; sourceTree = "<group>"; };
 		18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateCell.h; sourceTree = "<group>"; };
@@ -185,8 +191,13 @@
 				182394E71BBD0DCE00D97366 /* AppDelegate.m */,
 				182394E91BBD0DCE00D97366 /* ViewController.h */,
 				182394EA1BBD0DCE00D97366 /* ViewController.m */,
+				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				1822A71C1BBE4BD500019B58 /* LoginPage.h */,
 				1822A71D1BBE4BD500019B58 /* LoginPage.m */,
+				18327F151BC4E57A002210BC /* ForgotPasswordView.h */,
+				18327F161BC4E57A002210BC /* ForgotPasswordView.m */,
+				18327F181BC4E8FC002210BC /* SMSConfirmationView.h */,
+				18327F191BC4E8FC002210BC /* SMSConfirmationView.m */,
 				18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */,
 				18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */,
 				18C14F3D1BC2808E00AFF591 /* DoctorRegistrer.h */,
@@ -217,7 +228,6 @@
 				1842F36D1BC3E7850055597E /* EditTemplateDetailViewCell.m */,
 				1842F36F1BC3F1600055597E /* AddNewTemplateView.h */,
 				1842F3701BC3F1600055597E /* AddNewTemplateView.m */,
-				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				182394EF1BBD0DCE00D97366 /* Images.xcassets */,
 				182394F11BBD0DCE00D97366 /* LaunchScreen.xib */,
 				182394E21BBD0DCE00D97366 /* Supporting Files */,
@@ -409,10 +419,12 @@
 				18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */,
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
+				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
 				18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */,
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
+				18327F171BC4E57A002210BC /* ForgotPasswordView.m in Sources */,
 				1842F3651BC3E0300055597E /* TemplateDetailView.m in Sources */,
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,

@@ -1,20 +1,18 @@
 //
-//  LoginPage.m
+//  ForgotPasswordView.m
 //  Medico
 //
-//  Created by Apple on 02/10/15.
+//  Created by APPLE on 07/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "LoginPage.h"
+#import "ForgotPasswordView.h"
 
-
-@interface LoginPage ()
+@interface ForgotPasswordView ()
 
 @end
 
-@implementation LoginPage
-
+@implementation ForgotPasswordView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,20 +34,6 @@
 }
 */
 
-- (IBAction)validate:(id)sender {
-}
-
-- (IBAction)forgotPassword:(id)sender {
-}
-
-- (IBAction)doctorRegistration:(id)sender {
-}
-
-- (IBAction)patientRegistration:(id)sender {
-}
-
-- (IBAction)assistantRegistration:(id)sender {
-}
-- (IBAction)knowMore:(id)sender {
+- (IBAction)sendPassword:(id)sender {
 }
 @end

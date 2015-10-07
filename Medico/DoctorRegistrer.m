@@ -49,4 +49,14 @@
 }
 */
 
+- (IBAction)addCalendar:(id)sender {
+}
+- (IBAction)readTermsConditions:(id)sender {
+}
+- (IBAction)next:(id)sender {
+}
+- (IBAction)addLocation:(id)sender {
+}
+- (IBAction)changeImage:(id)sender {
+}
 @end

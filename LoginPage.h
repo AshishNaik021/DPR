@@ -10,6 +10,7 @@
 
 
 @interface LoginPage : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
@@ -27,7 +28,7 @@
 
 - (IBAction)patientRegistration:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *assistantRegistration;
+- (IBAction)assistantRegistration:(id)sender;
 
 - (IBAction)knowMore:(id)sender;
 

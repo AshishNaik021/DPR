@@ -49,4 +49,12 @@
 }
 */
 
+- (IBAction)changeImage:(id)sender {
+}
+- (IBAction)readTermConditions:(id)sender {
+}
+- (IBAction)next:(id)sender {
+}
+- (IBAction)addLocation:(id)sender {
+}
 @end

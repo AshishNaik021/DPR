@@ -12,4 +12,31 @@ BOOL assistantChecked;
 @interface AssistantRegister : UIViewController
 @property IBOutlet UIButton *checkButton;
 -(IBAction)checkButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
+- (IBAction)changeImage:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UITextField *mobileField;
+@property (weak, nonatomic) IBOutlet UITextField *genderField;
+@property (weak, nonatomic) IBOutlet UITextField *dateofBirthField;
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+- (IBAction)addCalendar:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *locationField;
+@property (weak, nonatomic) IBOutlet UIButton *locationButton;
+- (IBAction)addLocation:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *professionField;
+@property (weak, nonatomic) IBOutlet UITextField *specializationField;
+@property (weak, nonatomic) IBOutlet UIButton *manageButton;
+- (IBAction)manage:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *readTCButton;
+- (IBAction)readTermsConditions:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+- (IBAction)next:(id)sender;
+
+
+
+
+
+
 @end
