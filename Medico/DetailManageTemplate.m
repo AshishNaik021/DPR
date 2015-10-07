@@ -8,6 +8,7 @@
 
 #import "DetailManageTemplate.h"
 #import "TemplateDetailView.h"
+#import "TemplateDetailViewController.h"
 #import "DoctorLandingPageView.h"
 
 @interface DetailManageTemplate ()
@@ -24,6 +25,7 @@
 
 - (void)viewDidLoad {
         [super viewDidLoad];
+    self.tableView.backgroundColor = [ UIColor colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
     
     
     if (_pid == 0) {
@@ -116,7 +118,7 @@
      */
     
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    TemplateDetailView *templateDetail;
+    TemplateDetailViewController *templateDetail;
     templateDetail = [segue destinationViewController];
     templateDetail.var = path.row;
     

@@ -20,6 +20,11 @@
 		18327F1D1BC4F1A0002210BC /* DoctorLandingPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */; };
 		18327F201BC4F5D9002210BC /* DoctorSettingPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */; };
 		18327F221BC4FD79002210BC /* MyDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 18327F211BC4FD79002210BC /* MyDemo.json */; };
+		18327F2D1BC521C8002210BC /* TemplateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F2C1BC521C8002210BC /* TemplateDetailViewController.m */; };
+		18327F331BC5234B002210BC /* TemplateDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F321BC5234B002210BC /* TemplateDetailCell.m */; };
+		18327F361BC533EE002210BC /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18327F341BC533EE002210BC /* downArrow.png */; };
+		18327F3B1BC53615002210BC /* upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18327F3A1BC53615002210BC /* upArrow.png */; };
+		18327F3E1BC536DD002210BC /* EditTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F3D1BC536DD002210BC /* EditTemplateView.m */; };
 		18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */; };
 		18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */; };
 		1842F3141BC38F970055597E /* ManageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3131BC38F970055597E /* ManageAssistant.m */; };
@@ -98,6 +103,14 @@
 		18327F1E1BC4F5D9002210BC /* DoctorSettingPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorSettingPageView.h; sourceTree = "<group>"; };
 		18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorSettingPageView.m; sourceTree = "<group>"; };
 		18327F211BC4FD79002210BC /* MyDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyDemo.json; sourceTree = "<group>"; };
+		18327F2B1BC521C8002210BC /* TemplateDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDetailViewController.h; sourceTree = "<group>"; };
+		18327F2C1BC521C8002210BC /* TemplateDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateDetailViewController.m; sourceTree = "<group>"; };
+		18327F311BC5234B002210BC /* TemplateDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDetailCell.h; sourceTree = "<group>"; };
+		18327F321BC5234B002210BC /* TemplateDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateDetailCell.m; sourceTree = "<group>"; };
+		18327F341BC533EE002210BC /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		18327F3A1BC53615002210BC /* upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upArrow.png; sourceTree = "<group>"; };
+		18327F3C1BC536DD002210BC /* EditTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTemplateView.h; sourceTree = "<group>"; };
+		18327F3D1BC536DD002210BC /* EditTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTemplateView.m; sourceTree = "<group>"; };
 		18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateTableViewController.h; sourceTree = "<group>"; };
 		18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateTableViewController.m; sourceTree = "<group>"; };
 		18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateCell.h; sourceTree = "<group>"; };
@@ -197,6 +210,10 @@
 			children = (
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				18327F2B1BC521C8002210BC /* TemplateDetailViewController.h */,
+				18327F2C1BC521C8002210BC /* TemplateDetailViewController.m */,
+				18327F311BC5234B002210BC /* TemplateDetailCell.h */,
+				18327F321BC5234B002210BC /* TemplateDetailCell.m */,
 				182394E61BBD0DCE00D97366 /* AppDelegate.h */,
 				182394E71BBD0DCE00D97366 /* AppDelegate.m */,
 				182394E91BBD0DCE00D97366 /* ViewController.h */,
@@ -237,6 +254,8 @@
 				1842F3671BC3E0530055597E /* TemplateDetailViewCell.m */,
 				1842F3691BC3E7600055597E /* EditTemplateDetailView.h */,
 				1842F36A1BC3E7600055597E /* EditTemplateDetailView.m */,
+				18327F3C1BC536DD002210BC /* EditTemplateView.h */,
+				18327F3D1BC536DD002210BC /* EditTemplateView.m */,
 				1842F36C1BC3E7850055597E /* EditTemplateDetailViewCell.h */,
 				1842F36D1BC3E7850055597E /* EditTemplateDetailViewCell.m */,
 				1842F36F1BC3F1600055597E /* AddNewTemplateView.h */,
@@ -251,6 +270,8 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18327F3A1BC53615002210BC /* upArrow.png */,
+				18327F341BC533EE002210BC /* downArrow.png */,
 				1842F3201BC3A4AF0055597E /* create.png */,
 				1842F3151BC398BA0055597E /* delete.png */,
 				18BB054B1BC24DFE00D237CD /* appointment.png */,
@@ -382,6 +403,7 @@
 			files = (
 				18BB05641BC24DFE00D237CD /* calendar.png in Resources */,
 				18BB05701BC24DFE00D237CD /* manageFinance.png in Resources */,
+				18327F361BC533EE002210BC /* downArrow.png in Resources */,
 				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				182394EE1BBD0DCE00D97366 /* Main.storyboard in Resources */,
 				1842F3161BC398BA0055597E /* delete.png in Resources */,
@@ -393,6 +415,7 @@
 				18BB05711BC24DFE00D237CD /* manageTemplates.png in Resources */,
 				18BB056B1BC24DFE00D237CD /* location.png in Resources */,
 				18BB05691BC24DFE00D237CD /* doctorLanding.png in Resources */,
+				18327F3B1BC53615002210BC /* upArrow.png in Resources */,
 				18BB05731BC24DFE00D237CD /* patientProfile.png in Resources */,
 				18BB056E1BC24DFE00D237CD /* manageAppointments.png in Resources */,
 				18BB05721BC24DFE00D237CD /* notifications.png in Resources */,
@@ -429,11 +452,13 @@
 			files = (
 				18327F201BC4F5D9002210BC /* DoctorSettingPageView.m in Sources */,
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
+				18327F331BC5234B002210BC /* TemplateDetailCell.m in Sources */,
 				1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */,
 				1842F36E1BC3E7850055597E /* EditTemplateDetailViewCell.m in Sources */,
 				18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */,
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
+				18327F2D1BC521C8002210BC /* TemplateDetailViewController.m in Sources */,
 				18327F1D1BC4F1A0002210BC /* DoctorLandingPageView.m in Sources */,
 				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
@@ -449,6 +474,7 @@
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
 				1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
+				18327F3E1BC536DD002210BC /* EditTemplateView.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
