@@ -36,4 +36,17 @@
 }
 */
 
+- (IBAction)validate:(id)sender {
+}
+
+- (IBAction)forgotPassword:(id)sender {
+}
+
+- (IBAction)doctorRegistration:(id)sender {
+}
+
+- (IBAction)patientRegistration:(id)sender {
+}
+- (IBAction)knowMore:(id)sender {
+}
 @end

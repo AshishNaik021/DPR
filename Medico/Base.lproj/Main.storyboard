@@ -52,12 +52,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-QP-LVy">
-                                <rect key="frame" x="141" y="274" width="177" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-Tg-91c">
                                 <rect key="frame" x="231" y="312" width="74" height="33"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
@@ -65,6 +59,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="validate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aZx-hg-2Ya"/>
                                     <segue destination="BuQ-z7-7Qx" kind="push" id="Xq0-Lk-OMp"/>
                                 </connections>
                             </button>
@@ -75,6 +70,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="forgotPassword:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FbN-hO-QtR"/>
                                     <segue destination="MLe-cs-Wkb" kind="push" id="Rpz-ZT-Bbt"/>
                                 </connections>
                             </button>
@@ -85,6 +81,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doctorRegistration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qap-vl-meD"/>
                                     <segue destination="Yte-o3-ird" kind="push" id="kZd-H5-4K7"/>
                                 </connections>
                             </button>
@@ -95,6 +92,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="patientRegistration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hmd-mH-QK1"/>
                                     <segue destination="0tf-dq-kTp" kind="push" id="pCk-U9-B6s"/>
                                 </connections>
                             </button>
@@ -125,6 +123,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="knowMore:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A4t-Xq-ClT"/>
                                     <segue destination="08b-rN-PUI" kind="push" id="vij-CE-XgF"/>
                                 </connections>
                             </button>
@@ -134,6 +133,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-QP-LVy">
+                                <rect key="frame" x="141" y="275" width="177" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.56862745098039214" green="0.81176470588235294" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -142,6 +147,17 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="assistantRegistration" destination="PLa-hn-dze" id="AEn-gk-oJd"/>
+                        <outlet property="emailField" destination="GCT-gW-WTS" id="uh0-xO-D17"/>
+                        <outlet property="forgotButton" destination="sL8-cN-8Hd" id="S4U-cs-XtQ"/>
+                        <outlet property="knowMore" destination="GIR-qH-vVN" id="q9N-g2-Pxa"/>
+                        <outlet property="loginButton" destination="qwb-Tg-91c" id="cQC-hj-RiO"/>
+                        <outlet property="passwordField" destination="8Yh-QP-LVy" id="DQl-jR-HNZ"/>
+                        <outlet property="regAssistant" destination="PLa-hn-dze" id="RT1-jx-rVA"/>
+                        <outlet property="regDoctor" destination="WJV-yM-lMA" id="wZU-cf-FeD"/>
+                        <outlet property="regPatient" destination="WFd-gs-ZDu" id="dbZ-TU-WQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
