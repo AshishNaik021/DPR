@@ -1,28 +1,21 @@
 //
-//  AddNewTemplateView.m
+//  DoctorSettingPageView.m
 //  Medico
 //
-//  Created by APPLE on 06/10/15.
+//  Created by APPLE on 07/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "AddNewTemplateView.h"
+#import "DoctorSettingPageView.h"
 
-@interface AddNewTemplateView ()
+@interface DoctorSettingPageView ()
 
 @end
 
-@implementation AddNewTemplateView
+@implementation DoctorSettingPageView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
-    self.navigationItem.rightBarButtonItems = buttonArr;
-    
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +34,12 @@
 }
 */
 
-- (IBAction)addFields:(id)sender {
+- (IBAction)manageAssistant:(id)sender {
+}
+- (IBAction)manageTemplate:(id)sender {
+}
+- (IBAction)manageClinics:(id)sender {
+}
+- (IBAction)smsNotification:(id)sender {
 }
 @end

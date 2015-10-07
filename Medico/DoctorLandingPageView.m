@@ -1,28 +1,21 @@
 //
-//  AddNewTemplateView.m
+//  DoctorLandingPageView.m
 //  Medico
 //
-//  Created by APPLE on 06/10/15.
+//  Created by APPLE on 07/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "AddNewTemplateView.h"
+#import "DoctorLandingPageView.h"
 
-@interface AddNewTemplateView ()
+@interface DoctorLandingPageView ()
 
 @end
 
-@implementation AddNewTemplateView
+@implementation DoctorLandingPageView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
-    self.navigationItem.rightBarButtonItems = buttonArr;
-    
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +34,20 @@
 }
 */
 
-- (IBAction)addFields:(id)sender {
+- (IBAction)settings:(id)sender {
+}
+- (IBAction)logout:(id)sender {
+}
+- (IBAction)searchAppointment:(id)sender {
+}
+- (IBAction)searchDoctor:(id)sender {
+}
+- (IBAction)searchClinic:(id)sender {
+}
+- (IBAction)patientprofile:(id)sender {
+}
+- (IBAction)manageFinance:(id)sender {
+}
+- (IBAction)manageAppointments:(id)sender {
 }
 @end

@@ -11,4 +11,26 @@ BOOL CreateNew;
 @interface AddAssistantView : UIViewController
 @property IBOutlet UIButton *createNewBtn;
 -(IBAction)checkBtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
+- (IBAction)changeImage:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *mobileField;
+@property (weak, nonatomic) IBOutlet UITextField *genderField;
+@property (weak, nonatomic) IBOutlet UITextField *dateofBirthField;
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+- (IBAction)addCalendar:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *locationField;
+@property (weak, nonatomic) IBOutlet UITextField *professionField;
+@property (weak, nonatomic) IBOutlet UITextView *specializationField;
+@property (weak, nonatomic) IBOutlet UIButton *readTCButton;
+- (IBAction)readTermConditions:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *createAssistantButton;
+- (IBAction)createAssistant:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *locationButton;
+- (IBAction)addLocation:(id)sender;
+
+
+
+
 @end

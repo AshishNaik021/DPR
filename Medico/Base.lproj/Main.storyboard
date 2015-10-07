@@ -60,7 +60,6 @@
                                 </state>
                                 <connections>
                                     <action selector="validate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aZx-hg-2Ya"/>
-                                    <segue destination="BuQ-z7-7Qx" kind="push" id="Xq0-Lk-OMp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-cN-8Hd">
@@ -138,7 +137,7 @@
                                 <rect key="frame" x="141" y="275" width="177" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.56862745098039214" green="0.81176470588235294" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,7 +148,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="assistantRegistration" destination="PLa-hn-dze" id="AEn-gk-oJd"/>
                         <outlet property="emailField" destination="GCT-gW-WTS" id="uh0-xO-D17"/>
                         <outlet property="forgotButton" destination="sL8-cN-8Hd" id="S4U-cs-XtQ"/>
                         <outlet property="knowMore" destination="GIR-qH-vVN" id="q9N-g2-Pxa"/>
@@ -349,7 +347,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <rect key="frame" x="136" y="273" width="223" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P7p-pk-QWp">
                                 <rect key="frame" x="136" y="311" width="223" height="30"/>
@@ -640,7 +638,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <rect key="frame" x="142" y="274" width="223" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3l-Um-lco">
                                 <rect key="frame" x="142" y="312" width="223" height="30"/>
@@ -876,7 +874,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <rect key="frame" x="139" y="274" width="223" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8c-Ff-SAK">
                                 <rect key="frame" x="139" y="312" width="223" height="30"/>
@@ -1182,10 +1180,10 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
             </objects>
             <point key="canvasLocation" x="-1054.5" y="326.5"/>
         </scene>
-        <!--Welcome Doctor-->
+        <!--Welcome-->
         <scene sceneID="aKc-K4-PiV">
             <objects>
-                <viewController id="BuQ-z7-7Qx" sceneMemberID="viewController">
+                <viewController id="BuQ-z7-7Qx" customClass="DoctorLandingPageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ioF-vf-pHe"/>
                         <viewControllerLayoutGuide type="bottom" id="kh4-6h-kW1"/>
@@ -1205,18 +1203,27 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" image="appointment.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchAppointment:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="XRk-Cj-2F7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xu-nF-VsZ">
                                 <rect key="frame" x="165" y="271" width="45" height="50"/>
                                 <state key="normal" image="searchDoctor.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchDoctor:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="UDF-5v-DRW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jt-jQ-xGH">
                                 <rect key="frame" x="299" y="271" width="42" height="50"/>
                                 <state key="normal" image="searchHospital.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchClinic:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="VGy-ar-6HK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-YS-9Bf">
                                 <rect key="frame" x="293" y="72" width="29" height="30"/>
@@ -1224,7 +1231,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ovf-ZZ-bQj" kind="push" id="iK8-zw-sXZ"/>
+                                    <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HYX-nD-mvb"/>
+                                    <segue destination="Exi-cC-6vI" kind="push" id="kLt-Ed-yds"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-Ct-KuB">
@@ -1232,6 +1240,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" image="logout.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logout:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="b8a-2q-qjf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorLanding.png" translatesAutoresizingMaskIntoConstraints="NO" id="mMX-u9-9ZO">
                                 <rect key="frame" x="126" y="90" width="127" height="118"/>
@@ -1242,6 +1253,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleColor" red="0.24313725489999999" green="0.52549019610000003" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="patientprofile:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="GCq-CD-Xwv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-4y-i5e">
                                 <rect key="frame" x="16" y="511" width="343" height="48"/>
@@ -1249,6 +1263,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleColor" red="0.24313725489999999" green="0.52549019610000003" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="ISm-Bx-wfL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-Up-uVU">
                                 <rect key="frame" x="16" y="431" width="343" height="52"/>
@@ -1256,6 +1273,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleColor" red="0.24313725489999999" green="0.52549019610000003" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="h37-qt-qg7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Amit Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-VQ-4ua">
                                 <rect key="frame" x="132" y="222" width="111" height="25"/>
@@ -1266,11 +1286,23 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         </subviews>
                         <color key="backgroundColor" red="0.56862745100000001" green="0.81176470590000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome Doctor" id="l95-0p-wbM">
+                    <navigationItem key="navigationItem" title="Welcome" id="l95-0p-wbM">
                         <barButtonItem key="backBarButtonItem" title="Back" id="iOU-Dl-Rb0"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="doctorNameLabel" destination="qBt-VQ-4ua" id="11s-Vj-SnI"/>
+                        <outlet property="logout" destination="PuM-Ct-KuB" id="U0i-hE-JHc"/>
+                        <outlet property="logoutButton" destination="PuM-Ct-KuB" id="x2h-8i-oaK"/>
+                        <outlet property="manageAppointmentButton" destination="Ys5-4y-i5e" id="kcW-d0-DSb"/>
+                        <outlet property="manageFinanceButton" destination="mcV-Up-uVU" id="ccV-qH-Lt8"/>
+                        <outlet property="patientProfileButton" destination="meL-D2-T7a" id="wyt-aw-Yik"/>
+                        <outlet property="searchAppointmentsButton" destination="Qox-Eu-1WM" id="hm4-AL-vnT"/>
+                        <outlet property="searchClinicButton" destination="8jt-jQ-xGH" id="7kb-K0-nw7"/>
+                        <outlet property="searchDoctorButton" destination="2Xu-nF-VsZ" id="Btt-pF-J55"/>
+                        <outlet property="settingButton" destination="YOk-YS-9Bf" id="gYa-D7-xtr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpM-6E-Vho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1304,9 +1336,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Exi-cC-6vI" kind="push" id="sXK-xb-Tdl"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.56862745100000001" green="0.81176470590000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1320,12 +1349,12 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0F-gL-dXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191.5" y="326.5"/>
+            <point key="canvasLocation" x="-1054.5" y="1084.5"/>
         </scene>
         <!--Manage Profile-->
         <scene sceneID="tPx-lR-CY8">
             <objects>
-                <viewController id="Exi-cC-6vI" sceneMemberID="viewController">
+                <viewController id="Exi-cC-6vI" customClass="DoctorSettingPageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hgA-uo-rKm"/>
                         <viewControllerLayoutGuide type="bottom" id="hEv-Xl-3vm"/>
@@ -1350,6 +1379,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="manageAssistant:" destination="Exi-cC-6vI" eventType="touchUpInside" id="zcg-Us-def"/>
                                     <segue destination="ZOx-Yl-mse" kind="push" id="o44-gL-NBX"/>
                                 </connections>
                             </button>
@@ -1360,6 +1390,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="manageTemplate:" destination="Exi-cC-6vI" eventType="touchUpInside" id="T3E-JJ-wxl"/>
                                     <segue destination="zmp-eV-Mht" kind="push" id="KEg-hN-oc4"/>
                                 </connections>
                             </button>
@@ -1369,6 +1400,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" title="Manage Clinics" image="manageClinics.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageClinics:" destination="Exi-cC-6vI" eventType="touchUpInside" id="zLx-jw-KMy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-9G-0tS">
                                 <rect key="frame" x="16" y="421" width="343" height="56"/>
@@ -1376,6 +1410,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" title="Massaging &amp; Notification" image="notifications.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="smsNotification:" destination="Exi-cC-6vI" eventType="touchUpInside" id="Ely-gT-RNK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.56862745100000001" green="0.81176470590000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1386,10 +1423,17 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="doctorNameLabel" destination="kYW-J1-ajm" id="Jlf-B0-lvU"/>
+                        <outlet property="manageAssistantButton" destination="sgq-kn-1hp" id="QMk-T7-DVG"/>
+                        <outlet property="manageClinicsButton" destination="XCf-VR-Wrz" id="hDg-fW-FHt"/>
+                        <outlet property="manageTemplatebutton" destination="LW1-rr-y3c" id="UXF-Dt-lzc"/>
+                        <outlet property="smsNotificationButton" destination="b0C-9G-0tS" id="Rmn-7X-c7h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVM-S1-1kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254.5" y="326.5"/>
+            <point key="canvasLocation" x="-159.5" y="326.5"/>
         </scene>
         <!--Manage Assistant-->
         <scene sceneID="6H0-3l-UoJ">
@@ -1466,7 +1510,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZQ-zG-g8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706.5" y="-425.5"/>
+            <point key="canvasLocation" x="330.5" y="-414.5"/>
         </scene>
         <!--Create Assistant-->
         <scene sceneID="oaa-Gb-Aih">
@@ -1495,6 +1539,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" title="Change...">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeImage:" destination="Vha-Gx-tDF" eventType="touchUpInside" id="aHC-2b-XbR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-PW-rci">
                                 <rect key="frame" x="7" y="173" width="60" height="23"/>
@@ -1544,9 +1591,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location.png" translatesAutoresizingMaskIntoConstraints="NO" id="QEp-iu-yaU">
-                                <rect key="frame" x="78" y="361" width="27" height="27"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ayq-uy-aO7">
                                 <rect key="frame" x="130" y="323" width="160" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1610,12 +1654,18 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" title="Read T &amp; C">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="readTermConditions:" destination="Vha-Gx-tDF" eventType="touchUpInside" id="Cbs-TQ-hc2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8md-tu-sKG">
                                 <rect key="frame" x="307" y="320" width="34" height="36"/>
                                 <state key="normal" image="calendar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addCalendar:" destination="Vha-Gx-tDF" eventType="touchUpInside" id="CUr-rY-PgH"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNZ-qq-qN7">
                                 <rect key="frame" x="130" y="441" width="211" height="58"/>
@@ -1629,6 +1679,18 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" title="Create">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAssistant:" destination="Vha-Gx-tDF" eventType="touchUpInside" id="hit-N7-SRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MED-XF-UUP">
+                                <rect key="frame" x="78" y="361" width="33" height="26"/>
+                                <state key="normal" image="location.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addLocation:" destination="Vha-Gx-tDF" eventType="touchUpInside" id="Cod-tr-Yih"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50588235290000005" green="0.78823529410000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -1639,12 +1701,25 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="357" height="667"/>
                     <connections>
+                        <outlet property="calendarButton" destination="8md-tu-sKG" id="vJd-1b-Hvc"/>
+                        <outlet property="changeImageButton" destination="dAi-he-R8y" id="iay-to-N3o"/>
+                        <outlet property="createAssistantButton" destination="uHu-Su-glI" id="kUl-dG-yoB"/>
                         <outlet property="createNewBtn" destination="9ff-XX-se5" id="dZA-e3-v0f"/>
+                        <outlet property="dateofBirthField" destination="Ayq-uy-aO7" id="aoS-0k-uxV"/>
+                        <outlet property="emailField" destination="2eO-oP-Mmt" id="Ux0-bE-UzR"/>
+                        <outlet property="genderField" destination="KEx-YF-JeB" id="3we-3V-qKa"/>
+                        <outlet property="locationButton" destination="MED-XF-UUP" id="ZvB-mE-1en"/>
+                        <outlet property="locationField" destination="c82-qy-KVf" id="OQV-Z7-oRE"/>
+                        <outlet property="mobileField" destination="FX3-RU-ElV" id="ghq-ZZ-d2H"/>
+                        <outlet property="nameField" destination="Ck4-GO-dTj" id="5lk-Yp-xaN"/>
+                        <outlet property="professionField" destination="YEn-pM-HiQ" id="9dF-Ru-VrZ"/>
+                        <outlet property="readTCButton" destination="Gd8-sr-8hG" id="yVP-1D-RQE"/>
+                        <outlet property="specializationField" destination="jNZ-qq-qN7" id="09h-qk-2Te"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkl-QQ-lWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182.5" y="-425.5"/>
+            <point key="canvasLocation" x="777.5" y="-414.5"/>
         </scene>
         <!--Manage Template-->
         <scene sceneID="NAN-IT-ThK">
@@ -1679,7 +1754,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjJ-fT-kNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706.5" y="326.5"/>
+            <point key="canvasLocation" x="330.5" y="326.5"/>
         </scene>
         <!--Detail Manage Template-->
         <scene sceneID="BFA-Lf-829">
@@ -1710,7 +1785,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4x-3S-kNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182.5" y="326.5"/>
+            <point key="canvasLocation" x="786.5" y="326.5"/>
         </scene>
         <!--Template Detail View-->
         <scene sceneID="mOI-1j-w6d">
@@ -1774,7 +1849,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHV-pN-jcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640.5" y="326.5"/>
+            <point key="canvasLocation" x="1246.5" y="326.5"/>
         </scene>
         <!--Edit Details-->
         <scene sceneID="2Je-yi-K6S">
@@ -1841,7 +1916,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODI-vH-MTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2088.5" y="326.5"/>
+            <point key="canvasLocation" x="1684.5" y="326.5"/>
         </scene>
         <!--Add New Fields-->
         <scene sceneID="qir-s1-by7">
@@ -1913,6 +1988,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" title="Add Fields">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFields:" destination="Lek-vj-FLP" eventType="touchUpInside" id="YuC-9E-MQ3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50588235290000005" green="0.78823529410000004" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -1922,10 +2000,17 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="addFieldsButton" destination="b8N-Sn-OVk" id="UvS-XB-X2T"/>
+                        <outlet property="defaultValueField" destination="Zen-IN-aO6" id="DEu-Y0-phB"/>
+                        <outlet property="displayNameField" destination="qhN-qo-BHl" id="ezf-nA-wyx"/>
+                        <outlet property="nameField" destination="Y5q-sA-MOm" id="fhQ-62-Axo"/>
+                        <outlet property="typeField" destination="Q5I-Mz-oIx" id="VGH-7q-FJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqC-vo-tE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.5" y="326.5"/>
+            <point key="canvasLocation" x="2161.5" y="326.5"/>
         </scene>
         <!--SMS Confirmation-->
         <scene sceneID="Ybh-OY-rqw">
@@ -2018,7 +2103,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ud-Mv-Q4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-242.5" y="-425.5"/>
+            <point key="canvasLocation" x="-621.5" y="1084.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A4Y-pT-HsH">

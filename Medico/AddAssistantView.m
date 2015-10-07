@@ -52,4 +52,14 @@
 }
 */
 
+- (IBAction)changeImage:(id)sender {
+}
+- (IBAction)addCalendar:(id)sender {
+}
+- (IBAction)readTermConditions:(id)sender {
+}
+- (IBAction)createAssistant:(id)sender {
+}
+- (IBAction)addLocation:(id)sender {
+}
 @end
