@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addFieldsButton;
 - (IBAction)addFields:(id)sender;
 
+-(IBAction)homePage:(id)sender;
 
 
 

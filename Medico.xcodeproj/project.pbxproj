@@ -19,6 +19,7 @@
 		18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F191BC4E8FC002210BC /* SMSConfirmationView.m */; };
 		18327F1D1BC4F1A0002210BC /* DoctorLandingPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */; };
 		18327F201BC4F5D9002210BC /* DoctorSettingPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */; };
+		18327F221BC4FD79002210BC /* MyDemo.json in Resources */ = {isa = PBXBuildFile; fileRef = 18327F211BC4FD79002210BC /* MyDemo.json */; };
 		18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */; };
 		18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */; };
 		1842F3141BC38F970055597E /* ManageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3131BC38F970055597E /* ManageAssistant.m */; };
@@ -96,6 +97,7 @@
 		18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorLandingPageView.m; sourceTree = "<group>"; };
 		18327F1E1BC4F5D9002210BC /* DoctorSettingPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorSettingPageView.h; sourceTree = "<group>"; };
 		18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorSettingPageView.m; sourceTree = "<group>"; };
+		18327F211BC4FD79002210BC /* MyDemo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyDemo.json; sourceTree = "<group>"; };
 		18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateTableViewController.h; sourceTree = "<group>"; };
 		18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateTableViewController.m; sourceTree = "<group>"; };
 		18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateCell.h; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		182394E11BBD0DCE00D97366 /* Medico */ = {
 			isa = PBXGroup;
 			children = (
+				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				182394E61BBD0DCE00D97366 /* AppDelegate.h */,
 				182394E71BBD0DCE00D97366 /* AppDelegate.m */,
@@ -397,6 +400,7 @@
 				18BB056D1BC24DFE00D237CD /* logout.png in Resources */,
 				182394F31BBD0DCE00D97366 /* LaunchScreen.xib in Resources */,
 				18BB05681BC24DFE00D237CD /* doctordefault.png in Resources */,
+				18327F221BC4FD79002210BC /* MyDemo.json in Resources */,
 				18BB05661BC24DFE00D237CD /* checked.png in Resources */,
 				18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */,
 				18BB05761BC24DFE00D237CD /* searchHospital.png in Resources */,

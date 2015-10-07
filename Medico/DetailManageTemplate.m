@@ -8,12 +8,19 @@
 
 #import "DetailManageTemplate.h"
 #import "TemplateDetailView.h"
+#import "DoctorLandingPageView.h"
 
 @interface DetailManageTemplate ()
 
 @end
 
 @implementation DetailManageTemplate
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *homePageView =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"homePageView"];
+    [self.navigationController pushViewController:homePageView animated:YES];
+    
+}
 
 - (void)viewDidLoad {
         [super viewDidLoad];
@@ -38,9 +45,8 @@
         self.navigationItem.title = _DentalArr[2];
     }
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
-    
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     
     
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];

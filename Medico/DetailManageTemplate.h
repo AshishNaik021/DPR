@@ -15,5 +15,6 @@
 @property IBOutlet NSArray *LaparoscopicArr;
 @property IBOutlet NSArray *KidneyArr;
 @property NSInteger pid;
+-(IBAction)homePage:(id)sender;
 
 @end

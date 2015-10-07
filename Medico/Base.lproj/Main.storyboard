@@ -1183,7 +1183,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Welcome-->
         <scene sceneID="aKc-K4-PiV">
             <objects>
-                <viewController id="BuQ-z7-7Qx" customClass="DoctorLandingPageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePageView" id="BuQ-z7-7Qx" customClass="DoctorLandingPageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ioF-vf-pHe"/>
                         <viewControllerLayoutGuide type="bottom" id="kh4-6h-kW1"/>
@@ -1277,8 +1277,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="h37-qt-qg7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Amit Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-VQ-4ua">
-                                <rect key="frame" x="132" y="222" width="111" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-VQ-4ua">
+                                <rect key="frame" x="16" y="222" width="343" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1293,7 +1293,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="doctorNameLabel" destination="qBt-VQ-4ua" id="11s-Vj-SnI"/>
-                        <outlet property="logout" destination="PuM-Ct-KuB" id="U0i-hE-JHc"/>
                         <outlet property="logoutButton" destination="PuM-Ct-KuB" id="x2h-8i-oaK"/>
                         <outlet property="manageAppointmentButton" destination="Ys5-4y-i5e" id="kcW-d0-DSb"/>
                         <outlet property="manageFinanceButton" destination="mcV-Up-uVU" id="ccV-qH-Lt8"/>
@@ -1306,7 +1305,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpM-6E-Vho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-621.5" y="326.5"/>
+            <point key="canvasLocation" x="-608.5" y="326.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8cR-iA-8Da">
@@ -1366,8 +1365,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorLanding.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rsa-9p-gFi">
                                 <rect key="frame" x="34" y="97" width="54" height="50"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Amit Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-J1-ajm">
-                                <rect key="frame" x="111" y="107" width="153" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-J1-ajm">
+                                <rect key="frame" x="111" y="107" width="248" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1419,7 +1418,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     </view>
                     <navigationItem key="navigationItem" title="Manage Profile" id="527-Xn-JVW">
                         <barButtonItem key="backBarButtonItem" title="Back" id="YQN-vd-P8q"/>
-                        <barButtonItem key="rightBarButtonItem" image="home.png" id="LZ4-lc-8Ar"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -2134,7 +2132,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="delete.png" width="200" height="200"/>
         <image name="doctorLanding.png" width="144" height="145"/>
         <image name="doctordefault.png" width="76" height="76"/>
-        <image name="home.png" width="41" height="41"/>
         <image name="location.png" width="44" height="44"/>
         <image name="logo.png" width="84" height="88"/>
         <image name="logout.png" width="46" height="46"/>

@@ -8,25 +8,31 @@
 
 #import "TemplateDetailView.h"
 #import "TemplateDetailViewCell.h"
+#import "DoctorLandingPageView.h"
 
 @interface TemplateDetailView ()
 
 @end
 
 @implementation TemplateDetailView
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *homePageView =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"homePageView"];
+    [self.navigationController pushViewController:homePageView animated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.tableView registerClass:[TemplateDetailViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.separatorColor = [UIColor lightGrayColor];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     
+
     
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
-    
-    
-    //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
+       //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     // Uncomment the following line to preserve selection between presentations.

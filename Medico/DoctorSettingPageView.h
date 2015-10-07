@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *smsNotificationButton;
 - (IBAction)smsNotification:(id)sender;
 
+-(IBAction)homePage:(id)sender;
 
 
 

@@ -11,5 +11,6 @@
 @interface TemplateDetailView : UITableViewController
 @property NSInteger var;
 @property IBOutlet NSArray *DentalArr;
+-(IBAction)homePage:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DoctorSettingPageView.h"
+#import "DoctorLandingPageView.h"
 
 @interface DoctorSettingPageView ()
 
@@ -14,8 +15,30 @@
 
 @implementation DoctorSettingPageView
 
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *homePageView =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"homePageView"];
+    [self.navigationController pushViewController:homePageView animated:YES];
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"MyDemo" ofType:@"json"];
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error = nil;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    NSArray *arr = [json valueForKeyPath:@"demo"];
+    self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
+    
+
     // Do any additional setup after loading the view.
 }
 

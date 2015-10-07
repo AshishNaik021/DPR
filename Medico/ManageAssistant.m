@@ -8,6 +8,7 @@
 
 #import "ManageAssistant.h"
 #import "ManageAssistantCell.h"
+#import "DoctorLandingPageView.h"
 
 @interface ManageAssistant ()
 
@@ -24,6 +25,11 @@
 
 
 -(void)homePage:(id)sender{
+    
+    DoctorLandingPageView *homePageView =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"homePageView"];
+    [self.navigationController pushViewController:homePageView animated:YES];
+    
     
 }
 - (void)viewDidLoad {
@@ -54,11 +60,8 @@
     
   /*  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAssistant:)];*/
     
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-   UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
-    
-    
-    //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     

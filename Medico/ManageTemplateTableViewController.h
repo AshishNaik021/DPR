@@ -12,5 +12,6 @@
 
 @property IBOutlet NSArray *templateArr;
 
+-(IBAction)homePage:(id)sender;
 
 @end

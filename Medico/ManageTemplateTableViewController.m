@@ -8,12 +8,21 @@
 
 #import "ManageTemplateTableViewController.h"
 #import "DetailManageTemplate.h"
+#import "DoctorLandingPageView.h"
 
 @interface ManageTemplateTableViewController ()
 
 @end
 
 @implementation ManageTemplateTableViewController
+
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *homePageView =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"homePageView"];
+    [self.navigationController pushViewController:homePageView animated:YES];
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,10 +32,10 @@
                      @"Kidney Procedures"];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
-    
+
     
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
