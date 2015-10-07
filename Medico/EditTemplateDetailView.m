@@ -1,66 +1,35 @@
 //
-//  DetailManageTemplate.m
+//  EditTemplateDetailView.m
 //  Medico
 //
-//  Created by APPLE on 05/10/15.
+//  Created by APPLE on 06/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "DetailManageTemplate.h"
-#import "TemplateDetailView.h"
+#import "EditTemplateDetailView.h"
+#import "EditTemplateDetailViewCell.h"
 
-@interface DetailManageTemplate ()
+@interface EditTemplateDetailView ()
 
 @end
 
-@implementation DetailManageTemplate
+@implementation EditTemplateDetailView
 
 - (void)viewDidLoad {
-        [super viewDidLoad];
+    [super viewDidLoad];
+    [self.tableView registerClass:[EditTemplateDetailViewCell class] forCellReuseIdentifier:@"Cell"];
+    self.tableView.separatorColor = [UIColor lightGrayColor];
     
-    
-    if (_pid == 0) {
-        _DentalArr = @[@"Dental Flush",
-                       @"Cavity Filling",
-                       @"Brace Fixing"];
-        self.navigationItem.title = _DentalArr[0];
-    }
-    if (_pid == 1) {
-        _DentalArr = @[@"Laparoscopic 1",
-                       @"Laparoscopic 2",
-                       @"Laparoscopic 3"];
-        self.navigationItem.title = _DentalArr[1];
-    }
-    if (_pid == 2) {
-        _DentalArr = @[@"Kidey 1",
-                       @"Kidey 2",
-                       @"Kidey 3"];
-        self.navigationItem.title = _DentalArr[2];
-    }
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
-    
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *removeButton = [[UIBarButtonItem alloc] initWithTitle:@"Remove" style:UIBarButtonItemStyleDone target:self action:nil];
+
+    //UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"home.png"]];
+   // UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithCustomView:image];
     
     
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:saveButton,removeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
-
-    /*
-    _DentalArr = @[@"Dental Flush",
-                     @"Cavity Filling",
-                     @"Brace Fixing"];
-    
-    _LaparoscopicArr = @[@"Laparoscopic 1",
-                         @"Laparoscopic 2",
-                         @"Laparoscopic 3"];
-    
-    _KidneyArr = @[@"Kidey 1",
-                   @"Kidey 2",
-                   @"Kidey 3"];
-*/
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -82,63 +51,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _DentalArr.count;
+    return 5;
 }
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"DetailTableCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // Configure the cell...
-    cell.textLabel.text = [_DentalArr objectAtIndex:indexPath.row];
-    
-    
-    
+    EditTemplateDetailViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.nameLabel1.text = [NSString stringWithFormat:@"Name %ld", (long)indexPath.row];
+    cell.systemNameLabel1.text = [NSString stringWithFormat:@"Start %ld", (long)indexPath.row];
+    cell.typeLabel1.text = [NSString stringWithFormat:@"End %ld", (long)indexPath.row];
     return cell;
-    
 }
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    /*
-     if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
-     DetailManageTemplate *detailmanagetemplate = [segue destinationViewController];
-     NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
-     int row = [myIndex row];
-     
-     }
-     */
-    
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    TemplateDetailView *templateDetail;
-    templateDetail = [segue destinationViewController];
-    templateDetail.var = path.row;
-    
-    
-    
-    
-}
-
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"DetailTableCell";
-    DetailManageTemplateCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    int row = [indexPath row];
-    
-    cell.manageLabel.text = _DentalArr[row];
-    
-    
-    
-    return cell;
-    
-}
-*/
-
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

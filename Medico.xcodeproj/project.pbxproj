@@ -22,6 +22,11 @@
 		1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F31B1BC399A80055597E /* ManageAssistantCell.m */; };
 		1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F31E1BC3A1B50055597E /* AddAssistantView.m */; };
 		1842F3211BC3A4AF0055597E /* create.png in Resources */ = {isa = PBXBuildFile; fileRef = 1842F3201BC3A4AF0055597E /* create.png */; };
+		1842F3651BC3E0300055597E /* TemplateDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3641BC3E0300055597E /* TemplateDetailView.m */; };
+		1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3671BC3E0530055597E /* TemplateDetailViewCell.m */; };
+		1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F36A1BC3E7600055597E /* EditTemplateDetailView.m */; };
+		1842F36E1BC3E7850055597E /* EditTemplateDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F36D1BC3E7850055597E /* EditTemplateDetailViewCell.m */; };
+		1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3701BC3F1600055597E /* AddNewTemplateView.m */; };
 		18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */; };
 		18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05491BC24DC100D237CD /* manageAssistents.png */; };
 		18BB05621BC24DFE00D237CD /* appointment.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054B1BC24DFE00D237CD /* appointment.png */; };
@@ -91,6 +96,16 @@
 		1842F31D1BC3A1B50055597E /* AddAssistantView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAssistantView.h; sourceTree = "<group>"; };
 		1842F31E1BC3A1B50055597E /* AddAssistantView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAssistantView.m; sourceTree = "<group>"; };
 		1842F3201BC3A4AF0055597E /* create.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create.png; sourceTree = "<group>"; };
+		1842F3631BC3E0300055597E /* TemplateDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDetailView.h; sourceTree = "<group>"; };
+		1842F3641BC3E0300055597E /* TemplateDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateDetailView.m; sourceTree = "<group>"; };
+		1842F3661BC3E0530055597E /* TemplateDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDetailViewCell.h; sourceTree = "<group>"; };
+		1842F3671BC3E0530055597E /* TemplateDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateDetailViewCell.m; sourceTree = "<group>"; };
+		1842F3691BC3E7600055597E /* EditTemplateDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTemplateDetailView.h; sourceTree = "<group>"; };
+		1842F36A1BC3E7600055597E /* EditTemplateDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTemplateDetailView.m; sourceTree = "<group>"; };
+		1842F36C1BC3E7850055597E /* EditTemplateDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTemplateDetailViewCell.h; sourceTree = "<group>"; };
+		1842F36D1BC3E7850055597E /* EditTemplateDetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTemplateDetailViewCell.m; sourceTree = "<group>"; };
+		1842F36F1BC3F1600055597E /* AddNewTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewTemplateView.h; sourceTree = "<group>"; };
+		1842F3701BC3F1600055597E /* AddNewTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTemplateView.m; sourceTree = "<group>"; };
 		18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientRegisterViewController.h; path = ../PatientRegisterViewController.h; sourceTree = "<group>"; };
 		18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientRegisterViewController.m; path = ../PatientRegisterViewController.m; sourceTree = "<group>"; };
 		18BB05491BC24DC100D237CD /* manageAssistents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageAssistents.png; sourceTree = "<group>"; };
@@ -192,6 +207,16 @@
 				18C14F381BC2564300AFF591 /* DetailManageTemplate.m */,
 				18C14F3A1BC2567900AFF591 /* DetailManageTemplateCell.h */,
 				18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */,
+				1842F3631BC3E0300055597E /* TemplateDetailView.h */,
+				1842F3641BC3E0300055597E /* TemplateDetailView.m */,
+				1842F3661BC3E0530055597E /* TemplateDetailViewCell.h */,
+				1842F3671BC3E0530055597E /* TemplateDetailViewCell.m */,
+				1842F3691BC3E7600055597E /* EditTemplateDetailView.h */,
+				1842F36A1BC3E7600055597E /* EditTemplateDetailView.m */,
+				1842F36C1BC3E7850055597E /* EditTemplateDetailViewCell.h */,
+				1842F36D1BC3E7850055597E /* EditTemplateDetailViewCell.m */,
+				1842F36F1BC3F1600055597E /* AddNewTemplateView.h */,
+				1842F3701BC3F1600055597E /* AddNewTemplateView.m */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				182394EF1BBD0DCE00D97366 /* Images.xcassets */,
 				182394F11BBD0DCE00D97366 /* LaunchScreen.xib */,
@@ -379,6 +404,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
+				1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */,
+				1842F36E1BC3E7850055597E /* EditTemplateDetailViewCell.m in Sources */,
 				18C14F391BC2564300AFF591 /* DetailManageTemplate.m in Sources */,
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
@@ -386,10 +413,13 @@
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
 				18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */,
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
+				1842F3651BC3E0300055597E /* TemplateDetailView.m in Sources */,
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
 				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
+				1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
+				1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
 			);
