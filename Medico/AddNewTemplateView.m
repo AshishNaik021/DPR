@@ -15,9 +15,9 @@
 
 @implementation AddNewTemplateView
 - (void) homePage:(id)sender{
-    DoctorLandingPageView *homePageView =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"homePageView"];
-    [self.navigationController pushViewController:homePageView animated:YES];
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
     
 }
 

@@ -1183,7 +1183,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Welcome-->
         <scene sceneID="aKc-K4-PiV">
             <objects>
-                <viewController storyboardIdentifier="homePageView" id="BuQ-z7-7Qx" customClass="DoctorLandingPageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorHome" id="BuQ-z7-7Qx" customClass="DoctorLandingPageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ioF-vf-pHe"/>
                         <viewControllerLayoutGuide type="bottom" id="kh4-6h-kW1"/>

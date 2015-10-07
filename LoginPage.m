@@ -7,6 +7,7 @@
 //
 
 #import "LoginPage.h"
+#import "DoctorLandingPageView.h"
 
 
 @interface LoginPage ()
@@ -37,6 +38,10 @@
 */
 
 - (IBAction)validate:(id)sender {
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
 }
 
 - (IBAction)forgotPassword:(id)sender {
