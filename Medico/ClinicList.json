@@ -1,0 +1,20 @@
+{
+    "ClinicList": [
+                   {
+                   "Name": "Anuradha Nursing Home",
+                   "Email": "anuradha@gmail.com",
+                   "Mobile": "9579956655",
+                   "Location": "Pune",
+                   "Services": "CTScan",
+                   "Slots": "Slot1"
+                   },
+                   {
+                   "Name": "Maai Mangeshkar Hospital",
+                   "Email": "anuradha@gmail.com",
+                   "Mobile": "9579956655",
+                   "Location": "Pune",
+                   "Services": "CTScan",
+                   "Slots": "Slot1"
+                   }
+                   ]
+}

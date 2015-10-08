@@ -9,6 +9,7 @@
 #import "ManageAssistant.h"
 #import "ManageAssistantCell.h"
 #import "DoctorLandingPageView.h"
+#import "SearchAssistant.h"
 
 @interface ManageAssistant ()
 
@@ -16,12 +17,12 @@
 
 @implementation ManageAssistant
 
--(void)addAssistant:(id)sender{
+-(void)searchPage:(id)sender{
 
-   
-    
-    
-}
+    SearchAssistant *SearchAssistantID =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"SearchAssistantID"];
+    [self.navigationController pushViewController:SearchAssistantID animated:YES];
+    }
 
 
 -(void)homePage:(id)sender{
@@ -32,6 +33,8 @@
     
     
 }
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -61,10 +64,13 @@
     
     
   /*  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAssistant:)];*/
+    UIImage *searchImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]  initWithImage:searchImage style:UIBarButtonItemStylePlain target:self action:@selector(searchPage:)];
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,searchButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
     // Uncomment the following line to preserve selection between presentations.

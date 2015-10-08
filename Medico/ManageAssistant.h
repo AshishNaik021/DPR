@@ -13,7 +13,7 @@
 @property IBOutlet NSArray *assistantCityArr;
 @property IBOutlet NSArray *assistantProfileArr;
 
--(IBAction)addAssistant:(id)sender;
+-(IBAction)searchPage:(id)sender;
 -(IBAction)homePage:(id)sender;
 
 
