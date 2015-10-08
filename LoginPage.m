@@ -57,7 +57,7 @@
     BOOL isEmailValid = [self validateEmail:emailField.text];
     if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
-                                                        message:@"All fields are mendatory."
+                                                        message:@"Both fields are Mandatory."
                                                        delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -129,6 +129,8 @@
                                                                                                          cancelButtonTitle:@"OK"
                                                                                                          otherButtonTitles:nil];
                                                                    [alert show];
+                                                                   emailField.text = @"";
+                                                                   passwordField.text = @"";
                                                                    
                                                                }
                                                            }
