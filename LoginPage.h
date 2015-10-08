@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface LoginPage : UIViewController
+@interface LoginPage : UIViewController{
+    UIActivityIndicatorView *spinner;
+    NSString *returnString;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
@@ -19,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *regPatient;
 @property (weak, nonatomic) IBOutlet UIButton *knowMore;
 @property (weak, nonatomic) IBOutlet UIButton *regAssistant;
+@property (nonatomic,retain) NSString *returnString;
 
 - (IBAction)validate:(id)sender;
 
@@ -32,5 +36,9 @@
 
 - (IBAction)knowMore:(id)sender;
 
+- (void)loginRequest;
+
+-(void)parseJSON:(NSString *)responseData;
 
 @end
+
