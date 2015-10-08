@@ -1486,6 +1486,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="assistantCityLabel" destination="XRJ-gu-upb" id="dat-xR-1sU"/>
                                     <outlet property="assistantImg" destination="VJY-Ui-Hhf" id="z0L-TG-Qmb"/>
@@ -1819,7 +1820,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="OTs-NO-nPZ" kind="show" id="nnj-Nn-xnb"/>
+                                    <segue destination="OTs-NO-nPZ" kind="show" identifier="" id="nnj-Nn-xnb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

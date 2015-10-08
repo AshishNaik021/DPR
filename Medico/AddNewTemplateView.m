@@ -31,7 +31,8 @@
 
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
-    
+    self.navigationItem.backBarButtonItem.title = @"Back";
+
     // Do any additional setup after loading the view.
 }
 

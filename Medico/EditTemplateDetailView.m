@@ -30,6 +30,8 @@
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:saveButton,removeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationItem.backBarButtonItem.title = @"Back";
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

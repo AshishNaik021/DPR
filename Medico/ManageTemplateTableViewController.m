@@ -86,24 +86,28 @@
 
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-   /*
-    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+   
+    //if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
         DetailManageTemplate *detailmanagetemplate = [segue destinationViewController];
         NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
         int row = [myIndex row];
-        
-    }
-    */
-    
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        detailmanagetemplate.DetailArr = @[_templateArr[row]]
+        ;
+       detailmanagetemplate.pid = myIndex.row;
+   // }
+}
+
+  /*  NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     DetailManageTemplate *detailManage;
     detailManage = [segue destinationViewController];
+    detailManage.DetailArr = _templateArr[path.row];
     detailManage.pid = path.row;
     
     
     
     
-}
+    }    */
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

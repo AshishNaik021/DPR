@@ -37,6 +37,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     gridTableView.backgroundColor = [UIColor clearColor];
+    self.navigationItem.title = _subArr[0];
+   // self.navigationItem.backBarButtonItem.title = @"Back";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+
+
     // Do any additional setup after loading the view.
 }
 

@@ -12,7 +12,7 @@
 
 
 @property IBOutlet NSArray *DentalArr;
-@property IBOutlet NSArray *LaparoscopicArr;
+@property IBOutlet NSArray *DetailArr;
 @property IBOutlet NSArray *KidneyArr;
 @property NSInteger pid;
 -(IBAction)homePage:(id)sender;

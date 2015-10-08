@@ -13,7 +13,7 @@
     IBOutlet UITableView *gridTableView;
 
 }
-@property NSInteger var;
+@property NSArray *subArr;
 
 
 @end

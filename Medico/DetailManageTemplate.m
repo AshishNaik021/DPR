@@ -27,25 +27,45 @@
         [super viewDidLoad];
     self.tableView.backgroundColor = [ UIColor colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
     
-    
-    if (_pid == 0) {
+    if ([_DetailArr[0] isEqualToString:@"Dental Procedures"]) {
         _DentalArr = @[@"Dental Flush",
                        @"Cavity Filling",
                        @"Brace Fixing"];
-        self.navigationItem.title = _DentalArr[0];
+        self.navigationItem.title = _DetailArr[0];
+    }
+    
+    if ([_DetailArr[0] isEqualToString:@"Laparoscopic Procedures"]) {
+        _DentalArr = @[@"Laparoscopic 1",
+                       @"Laparoscopic 2",
+                       @"Laparoscopic 3"];
+        self.navigationItem.title = _DetailArr[0];
+    }
+    
+    if ([_DetailArr[0] isEqualToString:@"Kidney Procedures"]) {
+        _DentalArr = @[@"Kidey 1",
+                       @"Kidey 2",
+                       @"Kidey 3"];
+        self.navigationItem.title = _DetailArr[0];
+    }
+    
+  /* if (_pid == 0) {
+    _DentalArr = @[@"Dental Flush",
+                      @"Cavity Filling",
+                      @"Brace Fixing"];
+      self.navigationItem.title = _DetailArr[0];
     }
     if (_pid == 1) {
         _DentalArr = @[@"Laparoscopic 1",
                        @"Laparoscopic 2",
                        @"Laparoscopic 3"];
-        self.navigationItem.title = _DentalArr[1];
+        self.navigationItem.title = _DetailArr[0];
     }
     if (_pid == 2) {
         _DentalArr = @[@"Kidey 1",
                        @"Kidey 2",
                        @"Kidey 3"];
-        self.navigationItem.title = _DentalArr[2];
-    }
+        self.navigationItem.title = _DetailArr[0];
+    }*/
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
@@ -117,14 +137,16 @@
      }
      */
     
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+   /* NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     TemplateDetailViewController *templateDetail;
     templateDetail = [segue destinationViewController];
     templateDetail.var = path.row;
+    */
     
-    
-    
-    
+    TemplateDetailViewController *templateDetailView = [segue destinationViewController];
+    NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
+    int row = [myIndex row];
+    templateDetailView.subArr = @[_DentalArr[row]];
 }
 
 

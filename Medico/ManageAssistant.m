@@ -35,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [ UIColor colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
+    
     _assistantNameArr = @[@"Pooja Shah",
                      @"Ankita Oza",
                      @"Priya Sonone",
