@@ -7,9 +7,7 @@
 //
 
 #import "LoginPage.h"
-#import "DoctorLandingPageView.h"
-//#import "PatientLandingPageView.h"
-//#import "AssistantLandingPageView.h"
+
 
 @interface LoginPage ()
 
@@ -67,6 +65,16 @@
             BOOL isConnected = [self checkInternetConnection];
             if (isConnected) {
                 [self loginRequest];
+            } else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                message:@"Please try once you are connected to Internet."
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
+                emailField.text = @"";
+                passwordField.text = @"";
+                
             }
         }
         else{

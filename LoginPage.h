@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DoctorLandingPageView.h"
+//#import "PatientLandingPageView.h"
+//#import "AssistantLandingPageView.h"
 
 @interface LoginPage : UIViewController{
     UIActivityIndicatorView *spinner;
