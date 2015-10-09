@@ -1,0 +1,42 @@
+{
+    "PatientProfile": [
+                       {
+                       "patientId": "1",
+                       "doctorId": "1",
+                       "name": "Salman Khan",
+                       "speciality": "IT Officer",
+                       "emailID": "ss@gmail.com",
+                       "mobileNumber": 911234567890,
+                       "location": "pune",
+                       "dateOfBirth": "MonSep2800: 00: 00IST2015",
+                       "gender": "Male",
+                       "blood_group": "A+",
+                       "allergic_to": "pain",
+                       "type": 1,
+                       "bookDate": "5/06/2015",
+                       "bookTime": "13.56pm",
+                       "shift": "shift1",
+                       "clinicId": "1",
+                       "lastVisited": "20/05/2015"
+                        },
+                       {
+                       "patientId": "1",
+                       "doctorId": "1",
+                       "name": "Shah Rukh Khan",
+                       "speciality": "IT Officer",
+                       "emailID": "ss@gmail.com",
+                       "mobileNumber": 911234567890,
+                       "location": "pune",
+                       "dateOfBirth": "MonSep2800: 00: 00IST2015",
+                       "gender": "Male",
+                       "blood_group": "A+",
+                       "allergic_to": "pain",
+                       "type": 1,
+                       "bookDate": "5/06/2015",
+                       "bookTime": "13.56pm",
+                       "shift": "shift1",
+                       "clinicId": "1",
+                       "lastVisited": "20/05/2015"
+                       }
+                       ]
+}
