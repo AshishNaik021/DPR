@@ -9,7 +9,7 @@
 #import "ManageTemplateTableViewController.h"
 #import "DetailManageTemplate.h"
 #import "DoctorLandingPageView.h"
-
+#import "SearchTemplate.h"
 @interface ManageTemplateTableViewController ()
 
 @end
@@ -20,6 +20,12 @@
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
+- (void) searchTemplate:(id)sender{
+    SearchTemplate *search =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"search"];
+    [self.navigationController pushViewController:search animated:NO];
     
 }
 
@@ -33,14 +39,17 @@
                      @"Laparoscopic Procedures",
                      @"Kidney Procedures"];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+   
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *searchImage = [UIImage imageNamed:@"default.png"];
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]  initWithImage:searchImage style:UIBarButtonItemStylePlain target:self action:@selector(searchTemplate:)];
+    
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     
 
     
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,searchButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
     

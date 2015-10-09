@@ -9,6 +9,7 @@
 #import "SearchClinicView.h"
 #import "SearchClinicCell.h"
 #import "DoctorLandingPageView.h"
+#import "ClinicInformationView.h"
 
 @interface SearchClinicView ()
 
@@ -82,6 +83,15 @@
     
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+    ClinicInformationView *cliniInformation = [segue destinationViewController];
+    NSIndexPath *myIndex = [gridTableView indexPathForSelectedRow];
+    int row = [myIndex row];
+    cliniInformation.totalDetail = @[_dataArr[row]];
+     }
+}
 
 
 

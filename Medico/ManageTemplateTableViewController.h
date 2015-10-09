@@ -13,5 +13,6 @@
 @property IBOutlet NSArray *templateArr;
 
 -(IBAction)homePage:(id)sender;
+-(IBAction)searchTemplate:(id)sender;
 
 @end

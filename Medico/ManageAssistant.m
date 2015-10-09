@@ -9,7 +9,7 @@
 #import "ManageAssistant.h"
 #import "ManageAssistantCell.h"
 #import "DoctorLandingPageView.h"
-#import "SearchAssistant.h"
+#import "SearchAssistantView.h"
 
 @interface ManageAssistant ()
 
@@ -19,7 +19,7 @@
 
 -(void)searchPage:(id)sender{
 
-    SearchAssistant *SearchAssistantID =
+    SearchAssistantView *SearchAssistantID =
     [self.storyboard instantiateViewControllerWithIdentifier:@"SearchAssistantID"];
     [self.navigationController pushViewController:SearchAssistantID animated:YES];
     }

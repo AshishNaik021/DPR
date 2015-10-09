@@ -1,0 +1,26 @@
+{
+    "AssistantList": [
+        {
+            "Name": "Anuradha Deshmukh",
+            "Email": "anuradha@gmail.com",
+            "Mobile": "9579956655",
+            "Location": "Pune",
+            "Gender": "Female",
+            "DOB": "25/05/1989",
+            "Profession": "Lab Assistent",
+            "Specialization": "Special",
+            "Image": "assistance.png"
+        },
+        {
+            "Name": "Shweta Deshmukh",
+            "Email": "shweta@gmail.com",
+            "Mobile": "9579956655",
+            "Location": "Pune",
+            "Gender": "Female",
+            "DOB": "25/05/1989",
+            "Profession": "Lab Assistent",
+            "Specialization": "Special",
+            "Image": "assistance.png"
+        }
+    ]
+}
