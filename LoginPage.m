@@ -89,17 +89,6 @@
     }
     
 }
-//-(void)reportError:(long *) statuscode1{
-//    NSLog(@"Error Code:%@",statuscode1);
-//    [spinner stopAnimating];
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-//                                                    message:@"An error occured. Please try again later."
-//                                                   delegate:self
-//                                          cancelButtonTitle:@"OK"
-//                                          otherButtonTitles:nil];
-//    [alert show];
-//
-//}
 
 -(void)loginRequest{
     
@@ -202,9 +191,6 @@
     [self.view endEditing:YES];
 }
 
-
-- (IBAction)forgotPassword:(id)sender {
-}
 
 - (IBAction)doctorRegistration:(id)sender {
 }
