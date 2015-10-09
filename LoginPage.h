@@ -28,14 +28,6 @@
 
 - (IBAction)validate:(id)sender;
 
-- (IBAction)doctorRegistration:(id)sender;
-
-- (IBAction)patientRegistration:(id)sender;
-
-- (IBAction)assistantRegistration:(id)sender;
-
-- (IBAction)knowMore:(id)sender;
-
 - (void)loginRequest;
 
 -(void)parseJSON:(NSString *)responseData;

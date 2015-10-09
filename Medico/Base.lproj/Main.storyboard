@@ -79,7 +79,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doctorRegistration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qap-vl-meD"/>
                                     <segue destination="Yte-o3-ird" kind="push" id="kZd-H5-4K7"/>
                                 </connections>
                             </button>
@@ -90,7 +89,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="patientRegistration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hmd-mH-QK1"/>
                                     <segue destination="0tf-dq-kTp" kind="push" id="pCk-U9-B6s"/>
                                 </connections>
                             </button>
@@ -101,7 +99,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="assistantRegistration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eNX-H2-H59"/>
                                     <segue destination="y3W-hf-Nnx" kind="push" id="UAM-Su-euv"/>
                                 </connections>
                             </button>
