@@ -8,6 +8,7 @@
 
 #import "SearchClinicView.h"
 #import "SearchClinicCell.h"
+#import "DoctorLandingPageView.h"
 
 @interface SearchClinicView ()
 
@@ -18,19 +19,38 @@
 @synthesize phoneRadioButton;
 @synthesize emailRadioButton;
 
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     nameRadioClicked = NO;
     phoneRadioClicked = NO;
     emailradioClicked = NO;
+    gridTableView.backgroundColor = [UIColor clearColor];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    
+    self.navigationItem.title = @"Search Clinics";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     _dataArr = [json valueForKeyPath:@"ClinicList"];
-   
-
+    int total;
+    total = _dataArr.count;
+    self.totalClinicLabel.text = [NSString stringWithFormat:@"%d Clinics",total];
+    self.totalClinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
+    
+    
     
     
     // Do any additional setup after loading the view.
@@ -57,6 +77,7 @@
     int row = [indexPath row];
     cell.clinicNameLabel.text = [[_dataArr objectAtIndex:row] objectForKey:@"Name"];
     cell.cityLabel.text = [[_dataArr objectAtIndex:row] objectForKey:@"Location"];
+    cell.searchClinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
     return cell;
     
 }
@@ -76,14 +97,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)search:(id)sender {
 }
@@ -97,7 +118,7 @@
         nameRadioClicked = NO;
         
     }
-
+    
     
 }
 - (IBAction)phoneRadio:(id)sender {

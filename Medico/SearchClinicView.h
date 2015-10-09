@@ -11,18 +11,26 @@ BOOL nameRadioClicked;
 BOOL phoneRadioClicked;
 BOOL emailradioClicked;
 
-@interface SearchClinicView : UIViewController <UITableViewDataSource , UITableViewDelegate>
-
+@interface SearchClinicView : UIViewController <UITableViewDataSource , UITableViewDelegate> {
+   
+    IBOutlet UITableView *gridTableView;
+    
+}
 
 @property IBOutlet NSArray *dataArr;
+
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
-- (IBAction)search:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *nameRadiobutton;
-- (IBAction)nameRadio:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *phoneRadioButton;
+@property (weak, nonatomic) IBOutlet UIButton *emailRadioButton;
+@property (weak, nonatomic) IBOutlet UIImageView *totalClinicImage;
+@property (weak, nonatomic) IBOutlet UILabel *totalClinicLabel;
+
+- (IBAction)search:(id)sender;
+- (IBAction)nameRadio:(id)sender;
 - (IBAction)phoneRadio:(id)sender;
 - (IBAction)emailRadio:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *emailRadioButton;
+-(IBAction)homePage:(id)sender;
 
 @end

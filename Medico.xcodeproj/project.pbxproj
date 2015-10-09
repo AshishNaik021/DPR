@@ -73,6 +73,7 @@
 		18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */; };
 		18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F3E1BC2808E00AFF591 /* DoctorRegistrer.m */; };
 		18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C14F411BC2870F00AFF591 /* AssistantRegister.m */; };
+		18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7DAF91BC78767005B93A9 /* DetailClinicView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,8 @@
 		18C14F3E1BC2808E00AFF591 /* DoctorRegistrer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorRegistrer.m; sourceTree = "<group>"; };
 		18C14F401BC2870F00AFF591 /* AssistantRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistantRegister.h; sourceTree = "<group>"; };
 		18C14F411BC2870F00AFF591 /* AssistantRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantRegister.m; sourceTree = "<group>"; };
+		18C7DAF81BC78767005B93A9 /* DetailClinicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailClinicView.h; sourceTree = "<group>"; };
+		18C7DAF91BC78767005B93A9 /* DetailClinicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailClinicView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 		182394E11BBD0DCE00D97366 /* Medico */ = {
 			isa = PBXGroup;
 			children = (
+				18C7DAF81BC78767005B93A9 /* DetailClinicView.h */,
+				18C7DAF91BC78767005B93A9 /* DetailClinicView.m */,
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
@@ -502,6 +507,7 @@
 				18327F171BC4E57A002210BC /* ForgotPasswordView.m in Sources */,
 				1842F3651BC3E0300055597E /* TemplateDetailView.m in Sources */,
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
+				18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
 				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
 				1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */,

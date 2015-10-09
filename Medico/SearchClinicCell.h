@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchClinicCell : UITableViewCell
+
 @property IBOutlet UILabel *clinicNameLabel;
 @property IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *searchClinicImage;
 
 @end
