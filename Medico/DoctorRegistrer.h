@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 BOOL doctorchecked;
 
-@interface DoctorRegistrer : UIViewController
+@interface DoctorRegistrer : UIViewController {
+    IBOutlet UIScrollView *scroll;
+}
 @property IBOutlet UIButton *checkButton;
 -(IBAction)checkButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -19,6 +21,7 @@ BOOL doctorchecked;
 @property (weak, nonatomic) IBOutlet UITextField *cloudTypeField;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
 - (IBAction)changeImage:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *bloodGroupField;
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *mobileField;

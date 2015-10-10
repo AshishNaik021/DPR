@@ -28,8 +28,24 @@
     }
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+    CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
+    [scroll setContentOffset:scrollpoint animated:YES];
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    [scroll setContentOffset:CGPointZero animated:YES];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [scroll setScrollEnabled:YES];
+    [scroll setContentSize:CGSizeMake(375, 1000)];
+    
     doctorchecked = NO;
     // Do any additional setup after loading the view.
 }
