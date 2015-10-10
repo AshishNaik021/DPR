@@ -9,6 +9,7 @@
 #import "PatientProfileViewController.h"
 #import "DoctorLandingPageView.h"
 #import "PatientProfileTableViewCell.h"
+#import "DetailPatientProfileViewController.h"
 
 @interface PatientProfileViewController ()
 
@@ -40,7 +41,10 @@
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     _patientArr = [json valueForKeyPath:@"PatientProfile"];
-    // Do any additional setup after loading the view.
+    
+    
+    
+    
 }
 
 
@@ -71,6 +75,16 @@
     
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+        DetailPatientProfileViewController *detailPatientProfile = [segue destinationViewController];
+        NSIndexPath *myIndex = [gridViewTable indexPathForSelectedRow];
+        int row = [myIndex row];
+        detailPatientProfile.detailArr = @[_patientArr[row]];
+    }
+
+}
 
 
 - (void)didReceiveMemoryWarning {

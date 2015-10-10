@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RWx-wm-FQX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RWx-wm-FQX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -384,7 +384,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="0tf-dq-kTp" eventType="touchUpInside" id="Kav-jO-SHI"/>
-                                    <segue destination="k0O-gn-cqy" kind="push" id="3Sa-0n-2Cj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUU-hp-QBB">
@@ -675,7 +674,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="Yte-o3-ird" eventType="touchUpInside" id="POc-gR-1U0"/>
-                                    <segue destination="k0O-gn-cqy" kind="push" id="Sim-js-WkA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-4s-iLE">
@@ -911,7 +909,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="y3W-hf-Nnx" eventType="touchUpInside" id="Jb6-6y-Rh5"/>
-                                    <segue destination="k0O-gn-cqy" kind="push" id="ybd-FG-yfP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ael-GQ-VhD">
@@ -1069,7 +1066,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--SMS Confirmation-->
         <scene sceneID="oPb-3w-fgw">
             <objects>
-                <viewController id="k0O-gn-cqy" customClass="SMSConfirmationView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SMSConfirmationView" id="k0O-gn-cqy" customClass="SMSConfirmationView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xqa-pW-0mX"/>
                         <viewControllerLayoutGuide type="bottom" id="he8-r0-kVc"/>
@@ -1459,25 +1456,25 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2W-xj-9cG">
                                                     <rect key="frame" x="72" y="8" width="211" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-ZW-4Ka">
                                                     <rect key="frame" x="72" y="25" width="144" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Visited:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbf-4i-J3m">
                                                     <rect key="frame" x="72" y="39" width="84" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-Wr-A4G">
                                                     <rect key="frame" x="164" y="39" width="136" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1488,6 +1485,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                             <outlet property="patientNameLabel" destination="V2W-xj-9cG" id="W3F-21-N5s"/>
                                             <outlet property="patientPicture" destination="19L-Ip-FqJ" id="MP9-Xi-uwR"/>
                                             <outlet property="specialistLabel" destination="zh6-ZW-4Ka" id="5nY-Pk-65y"/>
+                                            <segue destination="qe6-h4-X7p" kind="show" identifier="ShowDetails" id="RP6-EF-nzT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1523,6 +1521,101 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2X-Y0-iEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2019.5" y="-1205.5"/>
+        </scene>
+        <!--Detail Patient Profile View Controller-->
+        <scene sceneID="ugc-U7-iZW">
+            <objects>
+                <viewController id="qe6-h4-X7p" customClass="DetailPatientProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mbu-zf-Fgk"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ME-rJ-K0Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fNp-G3-coQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlB-p0-S3T">
+                                <rect key="frame" x="16" y="82" width="56" height="49"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYk-av-bGF">
+                                <rect key="frame" x="80" y="82" width="279" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXG-cd-Pmr">
+                                <rect key="frame" x="80" y="100" width="279" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Visited:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgC-wv-hUl">
+                                <rect key="frame" x="80" y="114" width="90" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjT-Mj-N2u">
+                                <rect key="frame" x="178" y="114" width="181" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---------------------------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSc-3w-y4p">
+                                <rect key="frame" x="16" y="139" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jS-iS-qPS">
+                                <rect key="frame" x="16" y="206" width="343" height="441"/>
+                                <connections>
+                                    <segue destination="WGu-ja-b8D" kind="embed" id="pjP-Tl-esE"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7z-zu-uy1">
+                                <rect key="frame" x="16" y="206" width="343" height="441"/>
+                                <connections>
+                                    <segue destination="eZR-Ro-CUi" kind="embed" id="XAv-Lx-enS"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFo-ST-yOu">
+                                <rect key="frame" x="81" y="168" width="106" height="30"/>
+                                <state key="normal" title="Appointment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="appointmentTab:" destination="qe6-h4-X7p" eventType="touchUpInside" id="41H-ff-gOp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg0-Lr-rj3">
+                                <rect key="frame" x="187" y="168" width="106" height="30"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="profileTab:" destination="qe6-h4-X7p" eventType="touchUpInside" id="yrX-AH-18s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56862745100000001" green="0.81176470590000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="appointmentContainerView" destination="5jS-iS-qPS" id="b0z-r6-YLb"/>
+                        <outlet property="appointmentTabButton" destination="jFo-ST-yOu" id="Pfg-tm-3dk"/>
+                        <outlet property="lastVisitedField" destination="SjT-Mj-N2u" id="IFy-mR-LDp"/>
+                        <outlet property="patientNameLabel" destination="DYk-av-bGF" id="z8G-wk-Svh"/>
+                        <outlet property="patientPicture" destination="PlB-p0-S3T" id="AS8-kX-kYL"/>
+                        <outlet property="patientSpecialityField" destination="YXG-cd-Pmr" id="1aK-e4-aNW"/>
+                        <outlet property="profileContainerView" destination="q7z-zu-uy1" id="rXG-ZI-z21"/>
+                        <outlet property="profileTabButton" destination="Lg0-Lr-rj3" id="NAJ-Dx-cgV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fp-JX-jfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1566.5" y="-1205.5"/>
         </scene>
         <!--Manage Assistant-->
         <scene sceneID="6H0-3l-UoJ">
@@ -1943,7 +2036,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G30-U5-Qpl">
                                                     <rect key="frame" x="8" y="8" width="175" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2177,13 +2270,13 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhx-Da-oDg">
                                                     <rect key="frame" x="53" y="8" width="282" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRo-yk-Y8j">
                                                     <rect key="frame" x="53" y="27" width="282" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -2714,7 +2807,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgW-UD-g7i">
                                 <rect key="frame" x="69" y="615" width="111" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSh-CC-e7a">
@@ -3081,6 +3174,60 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
             </objects>
             <point key="canvasLocation" x="306.5" y="1084.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iGv-D7-9EJ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WGu-ja-b8D" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KLx-E1-Kho"/>
+                        <viewControllerLayoutGuide type="bottom" id="fvd-lK-Hb6"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ws5-MP-LpC">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="441"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Appointment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuJ-fM-o6u">
+                                <rect key="frame" x="115" y="206" width="112" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRd-si-ZT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2026.5" y="-1824.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Q61-4p-ihD">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eZR-Ro-CUi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VnG-Jk-tow"/>
+                        <viewControllerLayoutGuide type="bottom" id="zNn-JU-oEa"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hNA-Ag-KXf">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="441"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdE-ge-Hd3">
+                                <rect key="frame" x="115" y="206" width="112" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06T-ls-X1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1566.5" y="-1824.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="appointment.png" width="251" height="303"/>
@@ -3110,7 +3257,4 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="unchecked.png" width="21" height="18"/>
         <image name="upArrow.png" width="256" height="256"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ybd-FG-yfP"/>
-    </inferredMetricsTieBreakers>
 </document>
