@@ -14,6 +14,9 @@ BOOL checked;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
+@property (weak, nonatomic) IBOutlet UITextField *cloudLoginField;
+@property (weak, nonatomic) IBOutlet UITextField *cloudPasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *cloudTypeField;
 
 @property (weak, nonatomic) IBOutlet UITextField *mobileField;
 @property (weak, nonatomic) IBOutlet UITextField *genderField;
