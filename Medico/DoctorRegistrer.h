@@ -14,6 +14,9 @@ BOOL doctorchecked;
 -(IBAction)checkButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (weak, nonatomic) IBOutlet UITextField *cloudLogInField;
+@property (weak, nonatomic) IBOutlet UITextField *cloudPasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *cloudTypeField;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
 - (IBAction)changeImage:(id)sender;
 
