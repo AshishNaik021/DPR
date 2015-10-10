@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 BOOL checked;
-@interface PatientRegisterViewController : UIViewController
+@interface PatientRegisterViewController : UIViewController{
+    IBOutlet UIScrollView *scroll;
+
+}
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
 - (IBAction)changeImage:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
