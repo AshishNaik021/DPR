@@ -7,6 +7,7 @@
 //
 
 #import "DoctorLandingPageView.h"
+#import "LoginPage.h"
 
 @interface DoctorLandingPageView ()
 
@@ -46,7 +47,12 @@
 - (IBAction)settings:(id)sender {
 }
 - (IBAction)logout:(id)sender {
+
+        LoginPage *loginPage =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+        [self.navigationController pushViewController:loginPage animated:YES];
 }
+
 - (IBAction)searchAppointment:(id)sender {
 }
 - (IBAction)searchDoctor:(id)sender {

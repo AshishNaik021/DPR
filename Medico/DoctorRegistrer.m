@@ -29,10 +29,12 @@
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
+    if (textField == _genderField || _dateofBirthField || _locationField || _specializationField || _bloodGroupField) {
+
     
     CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
     [scroll setContentOffset:scrollpoint animated:YES];
-    
+    }
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{

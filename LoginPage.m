@@ -31,6 +31,7 @@
     spinner.color = [UIColor blueColor];
     spinner.center=self.view.center;
     [self.view addSubview:spinner];
+     self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -41,6 +42,12 @@
 //    [self.navigationController pushViewController:DoctorHome animated:YES];
 //
 //}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 - (BOOL)validateEmail:(NSString*)checkString
 {
     BOOL stricterFilter = NO;
@@ -51,42 +58,45 @@
     return [emailTest evaluateWithObject:checkString];
 }
 - (IBAction)validate:(id)sender {
-    [self.view endEditing:YES];
-    BOOL isEmailValid = [self validateEmail:emailField.text];
-    if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
-                                                        message:@"Both fields are Mandatory."
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-    } else{
-        if (isEmailValid) {
-            BOOL isConnected = [self checkInternetConnection];
-            if (isConnected) {
-                [self loginRequest];
-            } else{
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                                message:@"Please try once you are connected to Internet."
-                                                               delegate:self
-                                                      cancelButtonTitle:@"OK"
-                                                      otherButtonTitles:nil];
-                [alert show];
-                emailField.text = @"";
-                passwordField.text = @"";
-                
-            }
-        }
-        else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
-                                                            message:@"Please Enter Valid Email Address."
-                                                           delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-            [alert show];
-        }
-        
-    }
+    DoctorLandingPageView *doctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:doctorHome animated:YES];
+//    [self.view endEditing:YES];
+//    BOOL isEmailValid = [self validateEmail:emailField.text];
+//    if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
+//                                                        message:@"Both fields are Mandatory."
+//                                                       delegate:self
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+//    } else{
+//        if (isEmailValid) {
+//            BOOL isConnected = [self checkInternetConnection];
+//            if (isConnected) {
+//                [self loginRequest];
+//            } else{
+//                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+//                                                                message:@"Please try once you are connected to Internet."
+//                                                               delegate:self
+//                                                      cancelButtonTitle:@"OK"
+//                                                      otherButtonTitles:nil];
+//                [alert show];
+//                emailField.text = @"";
+//                passwordField.text = @"";
+//                
+//            }
+//        }
+//        else{
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
+//                                                            message:@"Please Enter Valid Email Address."
+//                                                           delegate:self
+//                                                  cancelButtonTitle:@"OK"
+//                                                  otherButtonTitles:nil];
+//            [alert show];
+//        }
+//        
+//    }
     
 }
 
