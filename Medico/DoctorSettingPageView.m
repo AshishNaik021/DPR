@@ -15,6 +15,9 @@
 
 @implementation DoctorSettingPageView
 
+- (IBAction)manageProfile:(id)sender {
+}
+
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];

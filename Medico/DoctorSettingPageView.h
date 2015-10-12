@@ -18,6 +18,8 @@
 - (IBAction)manageClinics:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *smsNotificationButton;
 - (IBAction)smsNotification:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *manageProfileButton;
+- (IBAction)manageProfile:(id)sender;
 
 -(IBAction)homePage:(id)sender;
 
