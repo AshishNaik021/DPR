@@ -1792,9 +1792,10 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <rect key="frame" x="160" y="70" width="54" height="50"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgq-kn-1hp">
-                                <rect key="frame" x="16" y="432" width="343" height="56"/>
+                                <rect key="frame" x="0.0" y="432" width="375" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Assistants                           &gt;" image="manageAssistents.png">
+                                <state key="normal" title="Assistants                                 &gt;" image="manageAssistents.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1804,21 +1805,23 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCf-VR-Wrz">
-                                <rect key="frame" x="16" y="317" width="343" height="56"/>
+                                <rect key="frame" x="0.0" y="320" width="375" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Clinics                                 &gt;" image="manageAssistents.png">
+                                <state key="normal" title="Clinics                                       &gt;" image="manageAssistents.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="manageClinics:" destination="Exi-cC-6vI" eventType="touchUpInside" id="zLx-jw-KMy"/>
-                                    <segue destination="atU-bR-N5A" kind="push" id="ufQ-u3-Z7n"/>
+                                    <segue destination="0cy-Vu-FF9" kind="push" id="tOe-dT-VuS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-9G-0tS">
-                                <rect key="frame" x="16" y="213" width="343" height="56"/>
+                                <rect key="frame" x="0.0" y="213" width="375" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Profile                                 &gt;" image="manageAssistents.png">
+                                <state key="normal" title="Profile                                        &gt;" image="manageAssistents.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1833,9 +1836,10 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW1-rr-y3c">
-                                <rect key="frame" x="16" y="540" width="343" height="56"/>
+                                <rect key="frame" x="0.0" y="540" width="375" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Manage Templates             &gt;" image="manageAssistents.png">
+                                <state key="normal" title="Manage Templates                   &gt;" image="manageAssistents.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1845,7 +1849,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.89330808080808077" green="0.89330808080808077" blue="0.89330808080808077" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Manage Profile" id="527-Xn-JVW">
                         <barButtonItem key="backBarButtonItem" title="Back" id="YQN-vd-P8q"/>
@@ -3554,7 +3558,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSe-rb-KUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159.5" y="1084.5"/>
+            <point key="canvasLocation" x="-349.5" y="1852.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A4Y-pT-HsH">
@@ -3789,7 +3793,79 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-qN-HUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159.5" y="1850.5"/>
+            <point key="canvasLocation" x="-873.5" y="1852.5"/>
+        </scene>
+        <!--Manage Doctors Clinic Settings View Controller-->
+        <scene sceneID="ccN-oR-AGg">
+            <objects>
+                <viewController id="0cy-Vu-FF9" customClass="ManageDoctorsClinicSettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dVl-20-86b"/>
+                        <viewControllerLayoutGuide type="bottom" id="87t-O0-VfI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g4f-tt-ETK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-0b-TQB">
+                                <rect key="frame" x="0.0" y="36" width="375" height="631"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="63" id="8X4-yh-bYH" customClass="ManageDoctorsClinicSettingsCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8X4-yh-bYH" id="ic7-ok-GMi">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-F4-NvH">
+                                                    <rect key="frame" x="8" y="8" width="52" height="46"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbd-9Z-hln">
+                                                    <rect key="frame" x="68" y="8" width="249" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gM-IR-zxj">
+                                                    <rect key="frame" x="68" y="35" width="249" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xea-Xa-KKt">
+                                                    <rect key="frame" x="328" y="15" width="39" height="32"/>
+                                                    <state key="normal" image="delete.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteClinic:" destination="8X4-yh-bYH" eventType="touchUpInside" id="RQg-Uj-Jnr"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="clinicCityLabel" destination="2gM-IR-zxj" id="DTh-Hl-E6r"/>
+                                            <outlet property="clinicNameLabel" destination="jbd-9Z-hln" id="twL-Ok-pKs"/>
+                                            <outlet property="deleteClinicButton" destination="xea-Xa-KKt" id="yoL-AY-fEY"/>
+                                            <outlet property="doctorImage" destination="A3q-F4-NvH" id="yKc-TH-Gic"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0cy-Vu-FF9" id="4k6-wR-v45"/>
+                                    <outlet property="delegate" destination="0cy-Vu-FF9" id="Avr-e8-4g9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SNs-43-nQM"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYU-80-13H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141.5" y="1084.5"/>
         </scene>
         <!--Clinic Information View-->
         <scene sceneID="rcG-Rj-jSc">
@@ -3888,7 +3964,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE8-7W-RcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306.5" y="1084.5"/>
+            <point key="canvasLocation" x="320.5" y="1084.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iGv-D7-9EJ">
