@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 
 @property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (weak, nonatomic) IBOutlet UITextField *mobileNoField;
 
 - (IBAction)sendPassword:(id)sender;
 

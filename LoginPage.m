@@ -33,6 +33,7 @@
     [self.view addSubview:spinner];
      self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
