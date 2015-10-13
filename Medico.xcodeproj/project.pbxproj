@@ -46,6 +46,9 @@
 		187A0C821BC68ABD003AC5D9 /* ClinicList.json in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C811BC68ABD003AC5D9 /* ClinicList.json */; };
 		187A0C851BC68B5D003AC5D9 /* SearchClinicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */; };
 		1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */; };
+		1897CD991BCCC5570043F0FD /* PatientSettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */; };
+		1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */; };
+		1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */; };
 		18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */; };
 		18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05491BC24DC100D237CD /* manageAssistents.png */; };
 		18BB05621BC24DFE00D237CD /* appointment.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054B1BC24DFE00D237CD /* appointment.png */; };
@@ -168,6 +171,12 @@
 		187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicCell.m; sourceTree = "<group>"; };
 		1895A1DA1BC8CBF100C8647D /* DetailPatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPatientProfileViewController.h; sourceTree = "<group>"; };
 		1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPatientProfileViewController.m; sourceTree = "<group>"; };
+		1897CD971BCCC5570043F0FD /* PatientSettingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSettingPageViewController.h; sourceTree = "<group>"; };
+		1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientSettingPageViewController.m; sourceTree = "<group>"; };
+		1897CD9A1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PatientTerms&ConditionsViewController.h"; sourceTree = "<group>"; };
+		1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PatientTerms&ConditionsViewController.m"; sourceTree = "<group>"; };
+		1897CD9D1BCCCD0F0043F0FD /* HowItWorksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowItWorksViewController.h; sourceTree = "<group>"; };
+		1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowItWorksViewController.m; sourceTree = "<group>"; };
 		18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientRegisterViewController.h; path = ../PatientRegisterViewController.h; sourceTree = "<group>"; };
 		18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientRegisterViewController.m; path = ../PatientRegisterViewController.m; sourceTree = "<group>"; };
 		18BB05491BC24DC100D237CD /* manageAssistents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageAssistents.png; sourceTree = "<group>"; };
@@ -269,6 +278,14 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				1897CD9D1BCCCD0F0043F0FD /* HowItWorksViewController.h */,
+				1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */,
+				1897CD971BCCC5570043F0FD /* PatientSettingPageViewController.h */,
+				1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */,
+				1897CD9A1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.h */,
+				1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */,
+				18327F1E1BC4F5D9002210BC /* DoctorSettingPageView.h */,
+				18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */,
 				1835118C1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.h */,
 				1835118D1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.m */,
 				1835118F1BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.h */,
@@ -311,8 +328,6 @@
 				18327F191BC4E8FC002210BC /* SMSConfirmationView.m */,
 				18327F1B1BC4F1A0002210BC /* DoctorLandingPageView.h */,
 				18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */,
-				18327F1E1BC4F5D9002210BC /* DoctorSettingPageView.h */,
-				18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */,
 				18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */,
 				18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */,
 				18C14F3D1BC2808E00AFF591 /* DoctorRegistrer.h */,
@@ -551,6 +566,7 @@
 				18C7DB201BC7D277005B93A9 /* PatientProfileTableViewCell.m in Sources */,
 				18C7DB051BC799ED005B93A9 /* SearchTemplateCell.m in Sources */,
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
+				1897CD991BCCC5570043F0FD /* PatientSettingPageViewController.m in Sources */,
 				18327F331BC5234B002210BC /* TemplateDetailCell.m in Sources */,
 				18C7DB101BC7AD94005B93A9 /* SearchAssistantCell.m in Sources */,
 				1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */,
@@ -565,6 +581,7 @@
 				18327F1D1BC4F1A0002210BC /* DoctorLandingPageView.m in Sources */,
 				187A0C851BC68B5D003AC5D9 /* SearchClinicCell.m in Sources */,
 				1835118E1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.m in Sources */,
+				1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */,
 				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
@@ -578,6 +595,7 @@
 				18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
 				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
+				1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */,
 				1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */,
 				1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
