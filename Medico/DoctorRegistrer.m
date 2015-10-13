@@ -28,6 +28,7 @@
     }
 }
 
+
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     if (textField == _genderField || _dateofBirthField || _locationField || _specializationField || _bloodGroupField) {
 
