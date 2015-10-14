@@ -40,18 +40,67 @@
 }
 - (BOOL)validatePhone:(NSString *)phoneNumber
 {
-    NSString *phoneRegex = @"^((\\+)|(00))[0-9]{6,14}$";
-    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
-    
-    return [phoneTest evaluateWithObject:phoneNumber];
+    NSString *numberRegEx = @"[0-9]{10}";
+    NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegEx];
+    if ([numberTest evaluateWithObject:phoneNumber] == YES)
+        return TRUE;
+    else
+        return FALSE;
 }
-- (IBAction)validate:(id)sender {
+-(void)errorMessageEmailNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Valid Email ID for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(void)errorMessageMobileNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Valid Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
+
+}
+-(void)errorMessageBothFieldsNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please Enter Valid Email ID or Valid Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
+   
+}
+-(void)errorMessage{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Email ID or Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
+}
+- (IBAction)sendPassword:(id)sender {
     if ([emailField.text isEqualToString:@""] && [mobileNoField.text isEqualToString:@""]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Email ID or Mobile Number for Password retrieval" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
-        [alert show];
+        [self errorMessage];
     }
     else{
-        
+        if (![emailField.text isEqualToString:@""] && ![mobileNoField.text isEqualToString:@""]) {
+            if ([self validatePhone:mobileNoField.text] && [self validateEmail:emailField.text]) {
+                NSLog(@"Send password on email and mobile");
+            }
+            else if (![self validatePhone:mobileNoField.text] && ![self validateEmail:emailField.text]){
+                [self errorMessageBothFieldsNotValid];
+            }
+            else if (![self validateEmail:emailField.text] && [self validatePhone:mobileNoField.text]){
+                //[self errorMessageEmailNotValid];
+                NSLog(@"Send SMS");
+            }
+            else if (![self validatePhone:mobileNoField.text] && [self validateEmail:emailField.text]){
+                //[self errorMessageMobileNotValid];
+                NSLog(@"Send Email");
+            }
+        }
+        else {
+            if ([emailField.text isEqualToString:@""] && [self validatePhone:mobileNoField.text]) {
+                NSLog(@"Send SMS");
+            }
+            else if ([emailField.text isEqualToString:@""] && ![self validatePhone:mobileNoField.text]){
+                [self errorMessageMobileNotValid];
+            }
+            else if ([mobileNoField.text isEqualToString:@""] && [self validateEmail:emailField.text]){
+                NSLog(@"Send Email");
+            }
+            else if ([mobileNoField.text isEqualToString:@""] && ![self validateEmail:emailField.text]){
+                [self errorMessageEmailNotValid];
+            }
+        }
+
     }
 }
 
@@ -65,6 +114,4 @@
 }
 */
 
-- (IBAction)sendPassword:(id)sender {
-}
 @end
