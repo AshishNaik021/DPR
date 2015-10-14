@@ -31,17 +31,17 @@
     spinner.color = [UIColor blueColor];
     spinner.center=self.view.center;
     [self.view addSubview:spinner];
-     self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)validate:(id)sender {
+- (IBAction)validate1:(id)sender {
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +58,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
-- (IBAction)validate1:(id)sender {
+- (IBAction)validate:(id)sender {
     [self.view endEditing:YES];
     BOOL isEmailValid = [self validateEmail:emailField.text];
     if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
@@ -98,6 +98,28 @@
     
 }
 
+-(void)errorMessage{
+    [spinner stopAnimating];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                    message:@"An error occured. Please try again later."
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    emailField.text = @"";
+    passwordField.text = @"";
+}
+-(void)requestTimeOut{
+    [spinner stopAnimating];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                    message:@"An error occured. Server is not responding!"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    emailField.text = @"";
+    passwordField.text = @"";
+}
 -(void)loginRequest{
     
     returnString = @"";
@@ -126,24 +148,21 @@
                                                                if ([httpResponse statusCode] == 200) {
                                                                    [self parseJSON:returnString];
                                                                } else {
-                                                                   //[self reportError:[httpResponse statusCode]];
-                                                                   [spinner stopAnimating];
-                                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                                                                                   message:@"An error occured. Please try again later."
-                                                                                                                  delegate:self
-                                                                                                         cancelButtonTitle:@"OK"
-                                                                                                         otherButtonTitles:nil];
-                                                                   [alert show];
-                                                                   emailField.text = @"";
-                                                                   passwordField.text = @"";
-                                                                   
+                                                                   [self errorMessage];
                                                                }
+                                                           }
+                                                           else if ([error.localizedDescription isEqualToString:@"The request timed out."]){
+                                                               [self requestTimeOut];
+                                                           }
+                                                           else {
+                                                               [self errorMessage];
                                                            }
                                                            
                                                        }];
     [dataTask resume];
     
 }
+
 
 
 -(BOOL)checkInternetConnection{
