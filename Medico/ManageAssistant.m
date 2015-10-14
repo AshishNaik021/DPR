@@ -38,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = [ UIColor colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
+    self.tableView.backgroundColor = [ UIColor whiteColor ];//colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
     
     _assistantNameArr = @[@"Pooja Shah",
                      @"Ankita Oza",
@@ -61,17 +61,20 @@
     UIImage *btnImage = [UIImage imageNamed:@"delete.png"];
     [_deleteAssistantButton setImage:btnImage forState:UIControlStateNormal];
     */
-    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchPage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
     
   /*  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAssistant:)];*/
-    UIImage *searchImage = [UIImage imageNamed:@"home.png"];
-    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]  initWithImage:searchImage style:UIBarButtonItemStylePlain target:self action:@selector(searchPage:)];
-    
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
-    
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,searchButton, nil];
-    self.navigationItem.rightBarButtonItems = buttonArr;
+//    UIImage *searchImage = [UIImage imageNamed:@"home.png"];
+//    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]  initWithImage:searchImage style:UIBarButtonItemStylePlain target:self action:@selector(searchPage:)];
+//    
+//    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+//    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+//    
+//    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,searchButton, nil];
+//    self.navigationItem.rightBarButtonItems = buttonArr;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -113,6 +116,7 @@
     cell.deleteAssistantButton = _assistantNameArr[row];
     
     return cell;
+    
 }
 
 

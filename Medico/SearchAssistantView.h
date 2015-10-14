@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchAssistantView : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+@interface SearchAssistantView : UIViewController //<UITableViewDelegate, UITableViewDataSource>{
     
-    IBOutlet UITableView *gridTableView;
+//    IBOutlet UITableView *gridTableView;
 
     
-}
+//}
 
 @property IBOutlet NSArray *assistantTotal;
 -(IBAction)homePage:(id)sender;

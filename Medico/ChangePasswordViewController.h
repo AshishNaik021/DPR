@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChangePasswordViewController : UIViewController
+@interface ChangePasswordViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *oldPasswordField;
 @property (weak, nonatomic) IBOutlet UITextField *writeNewPasswordField;

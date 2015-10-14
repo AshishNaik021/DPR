@@ -1,37 +1,22 @@
 //
-//  SearchAssistantView.m
+//  SearchResultAssistantViewController.m
 //  Medico
 //
-//  Created by APPLE on 09/10/15.
+//  Created by APPLE on 14/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "SearchAssistantView.h"
-#import "DoctorLandingPageView.h"
+#import "SearchResultAssistantViewController.h"
 #import "SearchAssistantCell.h"
 
-@interface SearchAssistantView ()
+@interface SearchResultAssistantViewController ()
 
 @end
 
-@implementation SearchAssistantView
-
-- (void) homePage:(id)sender{
-    DoctorLandingPageView *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
-    
-}
+@implementation SearchResultAssistantViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   // gridTableView.backgroundColor = [UIColor clearColor];
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
-    self.navigationItem.rightBarButtonItems = buttonArr;
-    
     self.navigationItem.title = @"Search Assistants";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
@@ -40,12 +25,7 @@
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     _assistantTotal = [json valueForKeyPath:@"AssistantList"];
-//    for(NSDictionary *item in _assistantTotal){
-//        NSLog(@"image = %@",[item objectForKey:@"Image"]);
-//    }
-    
-    
-    
+
     // Do any additional setup after loading the view.
 }
 

@@ -32,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [_specializationField.layer setBorderWidth:1.0];
     CreateNew = NO;
     // Do any additional setup after loading the view.
 }
