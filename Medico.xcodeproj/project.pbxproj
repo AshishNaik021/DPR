@@ -40,6 +40,7 @@
 		1842F36E1BC3E7850055597E /* EditTemplateDetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F36D1BC3E7850055597E /* EditTemplateDetailViewCell.m */; };
 		1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3701BC3F1600055597E /* AddNewTemplateView.m */; };
 		184F01D81BCE593800913B23 /* SearchResultAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */; };
+		184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */; };
 		187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */; };
 		187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7B1BC67C78003AC5D9 /* searchButton.png */; };
 		187A0C7F1BC67F1F003AC5D9 /* checkRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7D1BC67F1F003AC5D9 /* checkRadio.png */; };
@@ -166,6 +167,8 @@
 		1842F3701BC3F1600055597E /* AddNewTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewTemplateView.m; sourceTree = "<group>"; };
 		184F01D61BCE593800913B23 /* SearchResultAssistantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultAssistantViewController.h; sourceTree = "<group>"; };
 		184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultAssistantViewController.m; sourceTree = "<group>"; };
+		184F01DF1BCE7A1800913B23 /* DoctorLandingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorLandingCell.h; sourceTree = "<group>"; };
+		184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorLandingCell.m; sourceTree = "<group>"; };
 		187A0C781BC67BA0003AC5D9 /* SearchClinicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchClinicView.h; sourceTree = "<group>"; };
 		187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicView.m; sourceTree = "<group>"; };
 		187A0C7B1BC67C78003AC5D9 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
@@ -289,6 +292,10 @@
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
 				184F01D61BCE593800913B23 /* SearchResultAssistantViewController.h */,
 				184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */,
+				18327F1B1BC4F1A0002210BC /* DoctorLandingPageView.h */,
+				18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */,
+				184F01DF1BCE7A1800913B23 /* DoctorLandingCell.h */,
+				184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */,
 				1897CDA31BCD33DA0043F0FD /* ChangePasswordViewController.h */,
 				1897CDA41BCD33DA0043F0FD /* ChangePasswordViewController.m */,
 				1897CDA01BCD2F320043F0FD /* DoctorChangePasswordViewController.h */,
@@ -341,8 +348,6 @@
 				18327F161BC4E57A002210BC /* ForgotPasswordView.m */,
 				18327F181BC4E8FC002210BC /* SMSConfirmationView.h */,
 				18327F191BC4E8FC002210BC /* SMSConfirmationView.m */,
-				18327F1B1BC4F1A0002210BC /* DoctorLandingPageView.h */,
-				18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */,
 				18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */,
 				18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */,
 				18C14F3D1BC2808E00AFF591 /* DoctorRegistrer.h */,
@@ -609,6 +614,7 @@
 				18C7DB081BC7A047005B93A9 /* ClinicInformationView.m in Sources */,
 				1842F3651BC3E0300055597E /* TemplateDetailView.m in Sources */,
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
+				184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */,
 				18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
 				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
