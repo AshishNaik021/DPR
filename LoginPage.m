@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)validate:(id)sender {
+- (IBAction)validate1:(id)sender {
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
@@ -58,7 +58,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
-- (IBAction)validate1:(id)sender {
+- (IBAction)validate:(id)sender {
     [self.view endEditing:YES];
     BOOL isEmailValid = [self validateEmail:emailField.text];
     if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
@@ -200,11 +200,16 @@
         [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
     }
-    //    else if ([userType isEqualToString:@"Patient"]){
-    //        PatientLandingPageView *patientHome =
-    //        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
-    //        [self.navigationController pushViewController:patientHome animated:YES];
-    //    }
+    else if ([userType isEqualToString:@"Patient"]){
+        DoctorLandingPageView *doctorHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:doctorHome animated:YES];
+        [spinner stopAnimating];
+        // As Patient Page not not present, doctor page is displayed
+        //            PatientLandingPageView *patientHome =
+        //            [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
+        //            [self.navigationController pushViewController:patientHome animated:YES];
+    }
     //    else {
     //        AssistantLandingPageView *assistantHome =
     //        [self.storyboard instantiateViewControllerWithIdentifier:@"AssistantHome"];

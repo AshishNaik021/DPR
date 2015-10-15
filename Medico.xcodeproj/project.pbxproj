@@ -45,6 +45,8 @@
 		186BD6201BCF7F8400B43A8C /* PatientChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61F1BCF7F8400B43A8C /* PatientChangePasswordViewController.m */; };
 		186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD6221BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m */; };
 		186BD6251BCFA87B00B43A8C /* HomeCountPatients.json in Resources */ = {isa = PBXBuildFile; fileRef = 186BD6241BCFA87B00B43A8C /* HomeCountPatients.json */; };
+		186BD6281BCFB0FF00B43A8C /* PatientLandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD6271BCFB0FF00B43A8C /* PatientLandingPageViewController.m */; };
+		186BD62B1BCFB5E100B43A8C /* PatientLandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD62A1BCFB5E100B43A8C /* PatientLandingCell.m */; };
 		187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */; };
 		187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7B1BC67C78003AC5D9 /* searchButton.png */; };
 		187A0C7F1BC67F1F003AC5D9 /* checkRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7D1BC67F1F003AC5D9 /* checkRadio.png */; };
@@ -180,6 +182,10 @@
 		186BD6211BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordVerificationViewController.h; sourceTree = "<group>"; };
 		186BD6221BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordVerificationViewController.m; sourceTree = "<group>"; };
 		186BD6241BCFA87B00B43A8C /* HomeCountPatients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeCountPatients.json; sourceTree = "<group>"; };
+		186BD6261BCFB0FF00B43A8C /* PatientLandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientLandingPageViewController.h; sourceTree = "<group>"; };
+		186BD6271BCFB0FF00B43A8C /* PatientLandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientLandingPageViewController.m; sourceTree = "<group>"; };
+		186BD6291BCFB5E100B43A8C /* PatientLandingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientLandingCell.h; sourceTree = "<group>"; };
+		186BD62A1BCFB5E100B43A8C /* PatientLandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientLandingCell.m; sourceTree = "<group>"; };
 		187A0C781BC67BA0003AC5D9 /* SearchClinicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchClinicView.h; sourceTree = "<group>"; };
 		187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicView.m; sourceTree = "<group>"; };
 		187A0C7B1BC67C78003AC5D9 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
@@ -302,6 +308,10 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				186BD6261BCFB0FF00B43A8C /* PatientLandingPageViewController.h */,
+				186BD6271BCFB0FF00B43A8C /* PatientLandingPageViewController.m */,
+				186BD6291BCFB5E100B43A8C /* PatientLandingCell.h */,
+				186BD62A1BCFB5E100B43A8C /* PatientLandingCell.m */,
 				18C7DB1B1BC7D231005B93A9 /* PatientProfileViewController.h */,
 				18C7DB1C1BC7D231005B93A9 /* PatientProfileViewController.m */,
 				18C7DB1E1BC7D277005B93A9 /* PatientProfileTableViewCell.h */,
@@ -618,6 +628,7 @@
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
 				187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */,
+				186BD6281BCFB0FF00B43A8C /* PatientLandingPageViewController.m in Sources */,
 				18327F2D1BC521C8002210BC /* TemplateDetailViewController.m in Sources */,
 				18C7DB0B1BC7AA75005B93A9 /* SearchAssistantView.m in Sources */,
 				18327F1D1BC4F1A0002210BC /* DoctorLandingPageView.m in Sources */,
@@ -627,6 +638,7 @@
 				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
+				186BD62B1BCFB5E100B43A8C /* PatientLandingCell.m in Sources */,
 				18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */,
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
 				18327F171BC4E57A002210BC /* ForgotPasswordView.m in Sources */,

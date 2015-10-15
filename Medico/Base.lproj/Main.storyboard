@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RWx-wm-FQX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hzv-uG-u24">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -320,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awP-ON-g6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1582.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-770.5" y="-2568.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="RHO-aW-7AX">
@@ -569,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5s-0q-9fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-253.5" y="-2568.5"/>
+            <point key="canvasLocation" x="558.5" y="-2568.5"/>
         </scene>
         <!--Terms And Conditions-->
         <scene sceneID="soy-kq-ld9">
@@ -604,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hc-NE-Le9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1135.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-323.5" y="-2568.5"/>
         </scene>
         <!--Help-->
         <scene sceneID="Ea5-uT-wfZ">
@@ -636,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bex-BW-EKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-694.5" y="-2568.5"/>
+            <point key="canvasLocation" x="117.5" y="-2568.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n4m-AW-yIc">
@@ -718,7 +718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppM-0V-f3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649.5" y="-2568.5"/>
+            <point key="canvasLocation" x="1461.5" y="-2568.5"/>
         </scene>
         <!--About Medico-->
         <scene sceneID="YbF-NO-Hem">
@@ -3063,7 +3063,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9U-Pl-zzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196.5" y="-2568.5"/>
+            <point key="canvasLocation" x="1008.5" y="-2568.5"/>
         </scene>
         <!--Manage Assistant-->
         <scene sceneID="6H0-3l-UoJ">
@@ -4781,25 +4781,151 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
             </objects>
             <point key="canvasLocation" x="-1566.5" y="-1824.5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aiy-DF-gLM">
+        <!--Patient Landing Page View Controller-->
+        <scene sceneID="UoD-yR-Dd7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uwp-AQ-oke" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientLandingPageViewController" id="1iT-x8-XNu" customClass="PatientLandingPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r7U-S2-BA4"/>
+                        <viewControllerLayoutGuide type="bottom" id="kZd-DJ-PXN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJu-10-94P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDk-UX-PUG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="153"/>
+                                <color key="backgroundColor" red="0.82860295299999998" green="0.92622106120000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3y-IU-9zd">
+                                <rect key="frame" x="256" y="66" width="29" height="30"/>
+                                <state key="normal" image="refresh.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X8-nB-fUv">
+                                <rect key="frame" x="31" y="171" width="33" height="42"/>
+                                <state key="normal" image="appointment.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAppointment:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="N86-Ry-1mg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-o7-cbW">
+                                <rect key="frame" x="165" y="167" width="45" height="50"/>
+                                <state key="normal" image="searchDoctor.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchDoctor:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="3pf-fl-P3M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaL-g3-0jN">
+                                <rect key="frame" x="302" y="167" width="42" height="50"/>
+                                <state key="normal" image="searchHospital.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchClinic:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HTE-sA-jls"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuk-ue-FAr">
+                                <rect key="frame" x="293" y="66" width="29" height="30"/>
+                                <state key="normal" image="setting.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="tjn-3J-KDs"/>
+                                    <segue destination="Dtp-uY-QKh" kind="push" id="TZe-vp-yR2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWh-sb-aAy">
+                                <rect key="frame" x="330" y="66" width="29" height="30"/>
+                                <state key="normal" image="logout.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="AZu-oS-eUd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorLanding.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-zX-DRR">
+                                <rect key="frame" x="160" y="78" width="55" height="52"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-zS-aAp">
+                                <rect key="frame" x="16" y="128" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-df-kr0">
+                                <rect key="frame" x="0.0" y="221" width="375" height="446"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="58" id="zup-RM-Uif" customClass="PatientLandingCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zup-RM-Uif" id="2dP-h5-ops">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-vx-V5R">
+                                                    <rect key="frame" x="8" y="8" width="45" height="41"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph7-4q-3oY">
+                                                    <rect key="frame" x="61" y="8" width="254" height="41"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VN0-v6-GGk">
+                                                    <rect key="frame" x="323" y="18" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="kcx-vx-V5R" id="Azb-rW-Leh"/>
+                                            <outlet property="numberLabel" destination="VN0-v6-GGk" id="IN6-r0-cCj"/>
+                                            <outlet property="titleLabel" destination="ph7-4q-3oY" id="O5P-Zj-erV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1iT-x8-XNu" id="FGz-a2-2sW"/>
+                                    <outlet property="delegate" destination="1iT-x8-XNu" id="PJ6-L6-EPS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5rH-Pc-UAy"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qk-lf-PZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1254.5" y="-2580.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qqz-Gj-TUm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hzv-uG-u24" sceneMemberID="viewController">
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yOd-xv-dW4">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Nf-8B-qiO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Dtp-uY-QKh" kind="relationship" relationship="rootViewController" id="2HC-FE-A6c"/>
+                        <segue destination="1iT-x8-XNu" kind="relationship" relationship="rootViewController" id="niv-wb-hsK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVa-SY-uOb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rd1-ov-kxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2042.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-1763.5" y="-2580.5"/>
         </scene>
     </scenes>
     <resources>
