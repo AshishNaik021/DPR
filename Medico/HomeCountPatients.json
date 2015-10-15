@@ -1,0 +1,60 @@
+{
+    "doctorsCount": 2,
+    "clinicsCount": 5,
+    "appointmentsCount": 10,
+    "appointmentVm": {
+        "id": 21,
+        "doctorId": 5,
+        "patientId": 12,
+        "clinicId": 3,
+        "shift": "shift3",
+        "bookTime": "9:0PM",
+        "timeSlot": "07:00 PM to 10:00 PM",
+        "appointmentDate": 1444867200000,
+        "status": null,
+        "visitType": "Physical Exam",
+        "isVisited": null
+    },
+    "doctors": [
+        {
+            "doctorId": "2",
+            "name": "ahemad",
+            "speciality": "Gynachologic",
+            "emailID": "ahemad@gmail.com",
+            "mobileNumber": 911236547890,
+            "location": "pune",
+            "dateOfBirth": "Tue Aug 04 00:00:00 UTC 2015",
+            "gender": "Male",
+            "blood_group": "A-",
+            "allergic_to": null,
+            "type": 1,
+            "bookDate": null,
+            "bookTime": null,
+            "shift": null,
+            "clinicId": null,
+            "lastVisited": null,
+            "previousAppointment": null,
+            "previousDate": null
+        },
+        {
+            "doctorId": "3",
+            "name": "mayur zambare",
+            "speciality": "Gynachologic",
+            "emailID": "ma@gmail.com",
+            "mobileNumber": 913669888808,
+            "location": "pune",
+            "dateOfBirth": "Wed Aug 05 00:00:00 UTC 2015",
+            "gender": "Male",
+            "blood_group": "A+",
+            "allergic_to": null,
+            "type": 1,
+            "bookDate": null,
+            "bookTime": null,
+            "shift": null,
+            "clinicId": null,
+            "lastVisited": null,
+            "previousAppointment": null,
+            "previousDate": null
+        }
+    ]
+}
