@@ -200,11 +200,16 @@
         [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
     }
-    //    else if ([userType isEqualToString:@"Patient"]){
-    //        PatientLandingPageView *patientHome =
-    //        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
-    //        [self.navigationController pushViewController:patientHome animated:YES];
-    //    }
+    else if ([userType isEqualToString:@"Patient"]){
+        DoctorLandingPageView *doctorHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:doctorHome animated:YES];
+        [spinner stopAnimating];
+        // As Patient Page not not present, doctor page is displayed
+        //            PatientLandingPageView *patientHome =
+        //            [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
+        //            [self.navigationController pushViewController:patientHome animated:YES];
+    }
     //    else {
     //        AssistantLandingPageView *assistantHome =
     //        [self.storyboard instantiateViewControllerWithIdentifier:@"AssistantHome"];
