@@ -11,6 +11,7 @@ BOOL doctorchecked;
 
 @interface DoctorRegistrer : UIViewController {
     IBOutlet UIScrollView *scroll;
+    BOOL clearField;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
