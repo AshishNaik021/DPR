@@ -1401,16 +1401,13 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <state key="normal" title="Change...">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="changeImage:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="3wp-qP-c7a"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJT-uO-tzD">
                                                 <rect key="frame" x="13" y="129" width="115" height="21"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rt7-lK-3bv">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rt7-lK-3bv">
                                                 <rect key="frame" x="139" y="129" width="223" height="21"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
@@ -1464,9 +1461,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <state key="normal" image="unchecked.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="checkButton:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="7tK-il-yPy"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agree to Terms and Conditions." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-Yq-Upw">
                                                 <rect key="frame" x="50" y="397" width="249" height="21"/>
@@ -1540,19 +1534,19 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <rect key="frame" x="139" y="215" width="223" height="21"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPq-GM-KSh">
                                                 <rect key="frame" x="139" y="158" width="223" height="21"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDH-hH-JoN">
                                                 <rect key="frame" x="139" y="186" width="223" height="21"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKi-2X-ZqJ">
                                                 <rect key="frame" x="139" y="244" width="223" height="21"/>
@@ -2323,7 +2317,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="readTermsConditions:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="3D5-LT-pNr"/>
                                                     <action selector="readTermsConditions:" destination="rur-Ft-b1n" eventType="touchUpInside" id="IGm-6w-rgt"/>
                                                 </connections>
                                             </button>
@@ -2359,7 +2352,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 </state>
                                                 <connections>
                                                     <action selector="addCalendar:" destination="rur-Ft-b1n" eventType="touchUpInside" id="IwY-cT-4Hz"/>
-                                                    <action selector="addCalendar:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="pug-uH-o1U"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFx-3u-vMU">
@@ -2420,7 +2412,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="next:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="1wI-kZ-lv2"/>
                                                     <action selector="save:" destination="rur-Ft-b1n" eventType="touchUpInside" id="bMr-KV-oQE"/>
                                                 </connections>
                                             </button>

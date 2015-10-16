@@ -41,37 +41,38 @@
     }
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    clearField = NO;
-    return clearField;
-}
+//-(BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    clearField = NO;
+//    return clearField;
+//}
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    if(clearField)
-    {
-        textField.text = @"";
-        clearField = NO;
-    }
-    return clearField;
-}
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    clearField = YES;
-    if (textField == genderField || dateofBirthField || locationField || specializationField || bloodGroupField) {
-        
-        
-        CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
-        [scroll setContentOffset:scrollpoint animated:YES];
-    }
-}
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//{
+//    if(clearField)
+//    {
+//        textField.text = @"";
+//        clearField = NO;
+//    }
+//    return clearField;
+//}
 
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    clearField = NO;
-    
-    [scroll setContentOffset:CGPointZero animated:YES];
-    
-}
+//-(void)textFieldDidBeginEditing:(UITextField *)textField{
+//    //clearField = YES;
+//    if (textField == genderField || dateofBirthField || locationField || specializationField || bloodGroupField) {
+//        
+//        
+//        CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
+//        [scroll setContentOffset:scrollpoint animated:YES];
+//    }
+//}
+
+//-(void)textFieldDidEndEditing:(UITextField *)textField{
+//    clearField = NO;
+//    
+//    [scroll setContentOffset:CGPointZero animated:YES];
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -106,44 +107,51 @@
     NSString *nameRegex = @"[A-Za-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
-    if(![nameTest evaluateWithObject:self.nameField.text]){
+    if(![nameTest evaluateWithObject:name]){
         return 0;
     }
     else
         return 1;
 }
 -(BOOL)validateEmail:(NSString *) email{
-    if (1) {
-        return 1;
-    }
-    else
-        return 0;
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 -(BOOL)validatePassword:(NSString *) password{
-    if (1) {
-        return 1;
+    if ([password isEqualToString:@""]) {
+        return 0;
     }
     else
-        return 0;
+        return 1;
 }
 -(BOOL)validateMobileNumber:(NSString *) mobileNumber{
-    if (1) {
-        return 1;
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:mobileNumber]){
+        return 0;
     }
     else
-        return 0;
+        return 1;
 }
 
 -(BOOL)validateBloodGroup:(NSString *) bloodGroup{
-    if (1) {
-        return 1;
+    if ([bloodGroup isEqualToString:@""]) {
+        return 0;
     }
     else
-        return 0;
+        return 1;
 }
 
 -(BOOL)validateGender:(NSString *) gender{
-    if (1) {
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![gender isEqualToString:@""] && [nameTest evaluateWithObject:gender]){
         return 1;
     }
     else
@@ -151,15 +159,17 @@
 }
 
 -(BOOL)validateDOB:(NSString *) DOB{
-    if (1) {
+    if (![DOB  isEqualToString:@""])
         return 1;
-    }
     else
         return 0;
 }
 
 -(BOOL)validateLocation:(NSString *) location{
-    if (1) {
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![location isEqualToString:@""] && [nameTest evaluateWithObject:location]){
         return 1;
     }
     else
@@ -220,8 +230,13 @@
                                    :specializationField.text]) {
             NSLog(@"All fields are valid do next steps here");
         }
-        else
-            [self errorAllFieldsMandatory];
+        else{
+            NSLog(@"All filled but not valid");
+        }
+    }
+    else{
+        NSLog(@"All fields are either empty or not valid");
+        [self errorAllFieldsMandatory];
     }
 }
 - (IBAction)addLocation:(id)sender {
