@@ -10,4 +10,12 @@
 
 @interface PatientClinicProfileAndAppointmentsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *clinicImage;
+@property (weak, nonatomic) IBOutlet UILabel *clinicNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *clinicSpecializationLabel;
+@property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
+- (IBAction)nextAppointment:(id)sender;
+
+
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PatientClinicProfileAndAppointmentsViewController.h"
+#import "PatientLandingPageViewController.h"
 
 @interface PatientClinicProfileAndAppointmentsViewController ()
 
@@ -14,8 +15,24 @@
 
 @implementation PatientClinicProfileAndAppointmentsViewController
 
+- (void) homePage:(id)sender{
+    PatientLandingPageViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    
+    self.navigationItem.title = @"Clinics And Labs";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -34,4 +51,6 @@
 }
 */
 
+- (IBAction)nextAppointment:(id)sender {
+}
 @end
