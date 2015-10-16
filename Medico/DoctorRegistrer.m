@@ -57,18 +57,18 @@
     return clearField;
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-        clearField = YES;
+    clearField = YES;
     if (textField == genderField || dateofBirthField || locationField || specializationField || bloodGroupField) {
-
-    
-    CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
-    [scroll setContentOffset:scrollpoint animated:YES];
+        
+        
+        CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
+        [scroll setContentOffset:scrollpoint animated:YES];
     }
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     clearField = NO;
-
+    
     [scroll setContentOffset:CGPointZero animated:YES];
     
 }
@@ -88,14 +88,18 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+-(void)errorAllFieldsMandatory{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"All fields are mandatory." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
-*/
 
 -(BOOL)validateName:(NSString *) name{
     
@@ -103,12 +107,10 @@
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:self.nameField.text]){
-        self.nameField.text = @"Username can only contain english letters.";
-        self.nameField.textColor = [UIColor redColor];
         return 0;
-        }
+    }
     else
-    return 1;
+        return 1;
 }
 -(BOOL)validateEmail:(NSString *) email{
     if (1) {
@@ -165,11 +167,17 @@
 }
 
 -(BOOL)validateSpeciality:(NSString *) speciality{
-    if (1) {
-        return 1;
+    if (![speciality isEqualToString:@""]) {
+        NSString *nameRegex = @"[A-Za-z]+";
+        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+        
+        if([nameTest evaluateWithObject:self.nameField.text]){
+            return 1;
+        }
     }
     else
         return 0;
+    return 1;
 }
 -(BOOL)validateAllFields:(NSString *)name : (NSString *)email : (NSString *)password :(NSString *) mobileNumber : (NSString *)bloodGroup : (NSString *)gender : (NSString *)dateOfBirth : (NSString *)location :(NSString *)speciality{
     if ([self validateName:name]
@@ -213,7 +221,7 @@
             NSLog(@"All fields are valid do next steps here");
         }
         else
-            NSLog(@"give error about mandatory fields");
+            [self errorAllFieldsMandatory];
     }
 }
 - (IBAction)addLocation:(id)sender {
