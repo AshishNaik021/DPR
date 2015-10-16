@@ -48,21 +48,21 @@
         return FALSE;
 }
 -(void)errorMessageEmailNotValid{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Valid Email ID for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Valid Email ID for Password Retrieval." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 -(void)errorMessageMobileNotValid{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Valid Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Valid Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 
 }
 -(void)errorMessageBothFieldsNotValid{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please Enter Valid Email ID or Valid Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please Enter Valid Email ID or Valid Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
    
 }
 -(void)errorMessage{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Email ID or Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Email ID or Mobile Number for Password Retrieval." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 - (IBAction)sendPassword:(id)sender {
