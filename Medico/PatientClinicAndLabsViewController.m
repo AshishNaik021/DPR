@@ -1,43 +1,29 @@
 //
-//  PatientLandingPageViewController.m
+//  PatientClinicAndLabsViewController.m
 //  Medico
 //
-//  Created by APPLE on 15/10/15.
+//  Created by APPLE on 16/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "PatientLandingPageViewController.h"
-#import "PatientLandingCell.h"
+#import "PatientClinicAndLabsViewController.h"
+#import "PatientClinicAndLabsCell.h"
+#import "PatientClinicProfileAndAppointmentsViewController.h"
 
-@interface PatientLandingPageViewController ()
+@interface PatientClinicAndLabsViewController ()
 
 @end
 
-@implementation PatientLandingPageViewController
+@implementation PatientClinicAndLabsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _image = @[@"default.png",
-               @"default.png",
-               @"default.png",
-               @"default.png"];
-    
-    _titleName = @[@"Doctor Consultations",
-                   @"Manage Appointments",
-                   @"Clinics and Labs",
-                   @"Medicine Alarm"];
-    
-    _total = @[@"2",
-               @"4",
-               @"10",
-               @"5"];
-    self.navigationItem.title = @"Welcome";
+    self.navigationItem.title = @"Clinics And Labs";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
+
     // Do any additional setup after loading the view.
 }
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -45,29 +31,31 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _titleName.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
-    PatientLandingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    PatientClinicAndLabsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     //for(int count = 0;count<_arr.count;count++){
-    int row = [indexPath row];
-    cell.titleLabel.text = _titleName[row];
-    cell.numberLabel.text = _total[row];
-    cell.image.image = [UIImage imageNamed:_image[row]];
+    cell.showDetailsButton.tag = indexPath.row;
+    [cell.showDetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
     
 }
+- (IBAction)showDetails:(id)sender {
+    PatientClinicProfileAndAppointmentsViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientClinicProfileAndAppointmentsViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
 
-
-
-
-
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
