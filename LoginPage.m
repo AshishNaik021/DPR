@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)validate1:(id)sender {
+- (IBAction)validate:(id)sender {
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
@@ -58,7 +58,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
-- (IBAction)validate:(id)sender {
+- (IBAction)validate1:(id)sender {
     [self.view endEditing:YES];
     BOOL isEmailValid = [self validateEmail:emailField.text];
     if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {

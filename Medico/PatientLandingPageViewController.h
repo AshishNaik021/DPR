@@ -15,4 +15,7 @@
 @property IBOutlet NSArray *total;
 
 
+
+
+
 @end
