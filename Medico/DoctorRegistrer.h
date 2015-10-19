@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 BOOL doctorchecked;
 
-@interface DoctorRegistrer : UIViewController {
+@interface DoctorRegistrer : UIViewController <UITextFieldDelegate> {
     IBOutlet UIScrollView *scroll;
     BOOL clearField;
 }
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
 
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;

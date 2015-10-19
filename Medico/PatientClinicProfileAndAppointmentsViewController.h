@@ -16,11 +16,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
 - (IBAction)nextAppointment:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *profileView;
-@property (weak, nonatomic) IBOutlet UIView *appointmentView;
 @property (weak, nonatomic) IBOutlet UIButton *profileButton;
 - (IBAction)profileClicked:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *appointmentButton;
+@property (weak, nonatomic) IBOutlet UIButton *appointmentsButton;
 - (IBAction)appointmentClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *appointmentView;
+
 
 
 

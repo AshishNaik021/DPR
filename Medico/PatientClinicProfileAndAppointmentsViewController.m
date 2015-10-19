@@ -60,24 +60,25 @@
 - (IBAction)profileClicked:(id)sender {
     self.profileView.hidden = FALSE;
     self.appointmentView.hidden = TRUE;
-    //self.appointmentButton.backgroundColor = [UIColor clearColor];
-    //self.profileButton.backgroundColor = [UIColor colorWithRed:(212/255.0) green:(255/255.0) blue:(203/255.0) alpha:1];
-     //self.profileButton.titleLabel.textColor = [UIColor clearColor];
     [self.profileButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.appointmentButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [self.appointmentsButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
 
 
 }
-- (IBAction)appointmentClicked:(id)sender {
-    self.appointmentView.hidden = FALSE;
-    self.profileView.hidden = TRUE;
-[self.profileButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];    [self.appointmentButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
 
+    
    // self.profileButton.backgroundColor = [UIColor clearColor];
     //self.appointmentButton.backgroundColor = [UIColor colorWithRed:(212/255.0) green:(255/255.0) blue:(203/255.0) alpha:1];
    // self.profileButton.titleLabel.textColor = [UIColor redColor];
 
+
+
+- (IBAction)appointmentClicked:(id)sender {
+    self.appointmentView.hidden = FALSE;
+    self.profileView.hidden = TRUE;
+    [self.profileButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [self.appointmentsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
+
 }
 @end
