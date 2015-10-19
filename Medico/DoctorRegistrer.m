@@ -109,8 +109,8 @@
 
 -(BOOL)validateName:(NSString *) name{
     
-    NSString *nameRegex = @"[A-Za-z]+";
-    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:name]){
         [self errorMessageNameNotValid];
@@ -129,7 +129,7 @@
     NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
     NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
     NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", emailRegex];
     
     if ([emailTest evaluateWithObject:email]){
         return 1;
@@ -187,15 +187,19 @@
 }
 
 -(BOOL)validateGender:(NSString *) gender{
-    NSString *nameRegex = @"[A-Za-z]+";
-    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
-    
-    if(![gender isEqualToString:@""] && [nameTest evaluateWithObject:gender]){
-        [self errorMessageGenderNotValid];
-        return 0;
+    BOOL returnvalue = 0;
+    if ([gender isEqualToString:@""]) {
+        returnvalue = 1;
     }
-    else
-        return 1;
+    else{
+        NSString *nameRegex = @"[a-z]+";
+        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+        if ([nameTest evaluateWithObject:gender]) {
+            returnvalue = 1;
+        }
+    }
+    
+        return returnvalue;
 }
 -(void)errorMessageDOBNotValid{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid date of birth." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -216,8 +220,8 @@
 }
 
 -(BOOL)validateLocation:(NSString *) location{
-    NSString *nameRegex = @"[A-Za-z]+";
-    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![location isEqualToString:@""] && [nameTest evaluateWithObject:location]){
         return 1;
@@ -236,8 +240,8 @@
         returnValue =  1;
     }
     else{
-        NSString *nameRegex = @"[A-Za-z]+";
-        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+        NSString *nameRegex = @"[a-z]+";
+        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
         
         if([nameTest evaluateWithObject:speciality]){
             returnValue = 1;
@@ -269,7 +273,7 @@
 - (IBAction)readTermsConditions:(id)sender {
 }
 
--(BOOL)callValidateAllFields{
+-(void)callValidateAllFields{
     
     [self validateAllFields:nameField.text
                            :emailField.text
@@ -280,7 +284,6 @@
                            :dateofBirthField.text
                            :locationField.text
                            :specializationField.text];
-    return 3;
 }
 -(void)errorMessaggeCheckBox{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -306,6 +309,7 @@
         }
         else{
             NSLog(@"Check button");
+            [self errorMessaggeCheckBox];
         }
     }
 }
