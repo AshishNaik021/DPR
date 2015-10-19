@@ -11,7 +11,7 @@ BOOL doctorchecked;
 
 @interface DoctorRegistrer : UIViewController <UITextFieldDelegate> {
     IBOutlet UIScrollView *scroll;
-    BOOL clearField;
+   // BOOL clearField;
 }
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;

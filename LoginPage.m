@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)validate:(id)sender {
+- (IBAction)validate1:(id)sender {
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
@@ -58,8 +58,12 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
-- (IBAction)validate1:(id)sender {
-    [self.view endEditing:YES];
+- (IBAction)validate:(id)sender {
+    [self.passwordField resignFirstResponder];
+    [self.emailField resignFirstResponder];
+
+    //[self.view endEditing:YES];
+    
     BOOL isEmailValid = [self validateEmail:emailField.text];
     if ([emailField.text isEqualToString:@""] || [passwordField.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
@@ -121,7 +125,7 @@
     passwordField.text = @"";
 }
 -(void)loginRequest{
-    
+//    [self.view endEditing:YES];
     returnString = @"";
     
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -166,6 +170,7 @@
 
 
 -(BOOL)checkInternetConnection{
+//        [self.view endEditing:YES];
     [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
     NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/m"];
     NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
@@ -222,6 +227,7 @@
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
 }
+
 
 
 @end
