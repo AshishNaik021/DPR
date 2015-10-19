@@ -15,6 +15,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *clinicSpecializationLabel;
 @property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
 - (IBAction)nextAppointment:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *profileView;
+@property (weak, nonatomic) IBOutlet UIView *appointmentView;
+@property (weak, nonatomic) IBOutlet UIButton *profileButton;
+- (IBAction)profileClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *appointmentButton;
+- (IBAction)appointmentClicked:(id)sender;
+
 
 
 
