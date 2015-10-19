@@ -8,6 +8,7 @@
 
 #import "PatientClinicProfileAndAppointmentsViewController.h"
 #import "PatientLandingPageViewController.h"
+#import "PatientClinicAndLabsViewController.h"
 
 @interface PatientClinicProfileAndAppointmentsViewController ()
 
@@ -78,6 +79,13 @@
     self.profileView.hidden = TRUE;
     [self.profileButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [self.appointmentsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+
+}
+- (IBAction)hideDetails:(id)sender {
+    PatientClinicAndLabsViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientClinicAndLabsViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
     
 
 }

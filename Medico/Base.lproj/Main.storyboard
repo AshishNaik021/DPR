@@ -1464,6 +1464,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <state key="normal" image="unchecked.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="checkButton:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="He6-Fu-og3"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agree to Terms and Conditions." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdn-Yq-Upw">
                                                 <rect key="frame" x="50" y="397" width="249" height="21"/>
@@ -4930,7 +4933,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manageClinics.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dye-lQ-I05">
-                                <rect key="frame" x="16" y="69" width="55" height="59"/>
+                                <rect key="frame" x="16" y="69" width="49" height="44"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Samjay Agrawal Clinic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQo-AI-9dj">
                                 <rect key="frame" x="73" y="69" width="286" height="21"/>
@@ -5002,6 +5005,15 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <segue destination="IK7-9y-aum" kind="embed" id="qsd-DN-HrZ"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t28-hM-g4S">
+                                <rect key="frame" x="16" y="121" width="49" height="25"/>
+                                <state key="normal" image="uparrowButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideDetails:" destination="337-e6-T4w" eventType="touchUpInside" id="lGn-RC-zPe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -5013,6 +5025,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         <outlet property="clinicImage" destination="Dye-lQ-I05" id="kcx-7f-oQl"/>
                         <outlet property="clinicNameLabel" destination="uQo-AI-9dj" id="1rA-iU-8x8"/>
                         <outlet property="clinicSpecializationLabel" destination="9rf-KA-azH" id="gvJ-5E-qWY"/>
+                        <outlet property="hideDetailsButton" destination="t28-hM-g4S" id="oeq-iD-3oU"/>
                         <outlet property="nextAppointmentButton" destination="FtD-9O-CVx" id="gwl-QG-VQI"/>
                         <outlet property="profileButton" destination="jWQ-fW-kdM" id="gkb-aU-LqS"/>
                         <outlet property="profileView" destination="cIw-WW-fSn" id="1Ph-tQ-pIu"/>
@@ -5188,10 +5201,10 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
             </objects>
             <point key="canvasLocation" x="-985.5" y="-3333.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Container View Controller-->
         <scene sceneID="81D-qN-y8b">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jpt-Ww-SAr" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jpt-Ww-SAr" customClass="ProfileContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uBr-Ka-DGl"/>
                         <viewControllerLayoutGuide type="bottom" id="S3B-h1-Hmo"/>
@@ -5200,7 +5213,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         <rect key="frame" x="0.0" y="0.0" width="343" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Assistant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-UI-V8J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-UI-V8J">
                                 <rect key="frame" x="16" y="20" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -5240,7 +5253,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGi-mU-TJr">
-                                <rect key="frame" x="16" y="150" width="107" height="21"/>
+                                <rect key="frame" x="16" y="150" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -5282,15 +5295,24 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="emailField" destination="CkQ-DU-Rq9" id="Ss5-vJ-M7j"/>
+                        <outlet property="landlineField" destination="FMm-8s-F7b" id="Y0K-B0-19h"/>
+                        <outlet property="locationField" destination="ZYU-Xo-ueb" id="395-ak-TWe"/>
+                        <outlet property="mobileField" destination="p8j-UX-Y8W" id="BUh-62-KsN"/>
+                        <outlet property="nameField" destination="Erv-5a-rP8" id="Ie4-YF-ctt"/>
+                        <outlet property="practiceField" destination="ORB-9G-uzi" id="ZJe-Gi-4PC"/>
+                        <outlet property="specialtyField" destination="Oii-oU-YPk" id="QMR-HW-a0V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKn-CA-Qme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-513.5" y="-4014"/>
         </scene>
-        <!--View Controller-->
+        <!--Appointment Container View Controller-->
         <scene sceneID="hFO-0O-S3p">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="IK7-9y-aum" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="IK7-9y-aum" customClass="AppointmentContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gS0-hv-Rjf"/>
                         <viewControllerLayoutGuide type="bottom" id="VWm-4g-vfc"/>
@@ -5299,20 +5321,210 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         <rect key="frame" x="0.0" y="0.0" width="343" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Appointments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-ei-fd2">
-                                <rect key="frame" x="117" y="20" width="108" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dr. Vimal Jain" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8U-kH-sGV">
+                                <rect key="frame" x="16" y="28" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dr. Sanjay Agrawal" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4C-Ed-C50">
+                                <rect key="frame" x="16" y="57" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MON - SAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cq-hB-wGr">
+                                <rect key="frame" x="16" y="91" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8.00 AM - 11.00 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbo-tE-L5d">
+                                <rect key="frame" x="16" y="111" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25-Feb-2015  9.30 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B48-yu-hb1">
+                                <rect key="frame" x="16" y="149" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.28754471908199919" green="0.5" blue="0.12539032317317317" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25-March-2015  9.30 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHk-Ev-yW1">
+                                <rect key="frame" x="16" y="187" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-lx-22t">
+                                <rect key="frame" x="213" y="97" width="90" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Book Online">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bookOnlineAM:" destination="IK7-9y-aum" eventType="touchUpInside" id="Lat-RV-Uqf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHX-R4-HML">
+                                <rect key="frame" x="193" y="146" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeNextAppointmentAM:" destination="IK7-9y-aum" eventType="touchUpInside" id="BMq-Iq-JHt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-kt-7NA">
+                                <rect key="frame" x="258" y="146" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelNextAM:" destination="IK7-9y-aum" eventType="touchUpInside" id="BSd-RJ-mvQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3b-HY-QzY">
+                                <rect key="frame" x="193" y="184" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLaterAppointmentAM:" destination="IK7-9y-aum" eventType="touchUpInside" id="hvT-Sh-T83"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MON - SAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxi-X8-cVC">
+                                <rect key="frame" x="16" y="256" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.00 PM - 7.00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA8-1i-01Q">
+                                <rect key="frame" x="16" y="276" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25-Feb-2015  9.30 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGM-AH-LEK">
+                                <rect key="frame" x="16" y="314" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.28754471910000001" green="0.5" blue="0.12539032319999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="25-March-2015  9.30 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gy-cg-tLb">
+                                <rect key="frame" x="16" y="352" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvy-3j-fCf">
+                                <rect key="frame" x="213" y="262" width="90" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Book Online">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bookOnlinePM:" destination="IK7-9y-aum" eventType="touchUpInside" id="Wtc-q1-nrh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfb-CG-9lY">
+                                <rect key="frame" x="193" y="311" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeNextAppointmentPM:" destination="IK7-9y-aum" eventType="touchUpInside" id="IBs-rw-Kf4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfa-x5-Rah">
+                                <rect key="frame" x="258" y="311" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelNextPM:" destination="IK7-9y-aum" eventType="touchUpInside" id="5q6-8Q-pfZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si1-pB-8I9">
+                                <rect key="frame" x="193" y="349" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLaterAppointmentPM:" destination="IK7-9y-aum" eventType="touchUpInside" id="IJD-30-ktO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7C-ZF-Lsx">
+                                <rect key="frame" x="258" y="349" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelLaterPM:" destination="IK7-9y-aum" eventType="touchUpInside" id="uPe-gI-ZuC"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fu7-TQ-1ty">
+                                <rect key="frame" x="16" y="91" width="311" height="327"/>
+                                <connections>
+                                    <segue destination="VLW-rH-GHX" kind="embed" id="aJp-Td-eTg"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0c-Zb-WGO">
+                                <rect key="frame" x="258" y="184" width="57" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelLaterAM:" destination="IK7-9y-aum" eventType="touchUpInside" id="7xw-UL-ICh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="bookOnlineAMbutton" destination="Daq-lx-22t" id="Ufb-G0-gZ2"/>
+                        <outlet property="bookOnlinePMButton" destination="hvy-3j-fCf" id="XRz-0b-BpA"/>
+                        <outlet property="cancelLaterAMButton" destination="r0c-Zb-WGO" id="H2E-Zz-bPf"/>
+                        <outlet property="cancelLaterPMButton" destination="f7C-ZF-Lsx" id="XT4-Es-kbq"/>
+                        <outlet property="cancelNextAMButton" destination="vRR-kt-7NA" id="mEO-dd-oFH"/>
+                        <outlet property="cancelNextPMButton" destination="gfa-x5-Rah" id="o6f-3e-A7R"/>
+                        <outlet property="changeAppointmentView" destination="fu7-TQ-1ty" id="K0e-In-GpC"/>
+                        <outlet property="changeLaterAppointmentAMButton" destination="D3b-HY-QzY" id="K0E-GX-LsI"/>
+                        <outlet property="changeLaterAppointmentPMButton" destination="si1-pB-8I9" id="59O-BR-bTt"/>
+                        <outlet property="changeNextAppointmentAMButton" destination="dHX-R4-HML" id="R68-gN-HBF"/>
+                        <outlet property="changeNextAppointmentPMButton" destination="zfb-CG-9lY" id="t5e-4x-CHz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiF-m4-Tf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-25.5" y="-4014"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ujP-q8-WBF">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VLW-rH-GHX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rc2-P9-2m5"/>
+                        <viewControllerLayoutGuide type="bottom" id="x3p-gH-t5g"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fxw-g3-iCp">
+                        <rect key="frame" x="0.0" y="0.0" width="311" height="327"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVm-GH-EGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44.5" y="-4290"/>
         </scene>
     </scenes>
     <resources>
@@ -5339,6 +5551,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="unchechRadio.png" width="37" height="37"/>
         <image name="unchecked.png" width="21" height="18"/>
         <image name="upArrow.png" width="256" height="256"/>
+        <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rKr-LI-ZmT"/>

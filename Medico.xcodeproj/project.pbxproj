@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822A71D1BBE4BD500019B58 /* LoginPage.m */; };
+		1822C4501BD4FCC400DD24C0 /* uparrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */; };
+		1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */; };
+		1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */; };
 		182394E51BBD0DCE00D97366 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394E41BBD0DCE00D97366 /* main.m */; };
 		182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394E71BBD0DCE00D97366 /* AppDelegate.m */; };
 		182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182394EA1BBD0DCE00D97366 /* ViewController.m */; };
@@ -119,6 +122,11 @@
 /* Begin PBXFileReference section */
 		1822A71C1BBE4BD500019B58 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = ../LoginPage.h; sourceTree = "<group>"; };
 		1822A71D1BBE4BD500019B58 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = ../LoginPage.m; sourceTree = "<group>"; };
+		1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrowButton.png; sourceTree = "<group>"; };
+		1822C4511BD5054000DD24C0 /* ProfileContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileContainerViewController.h; sourceTree = "<group>"; };
+		1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileContainerViewController.m; sourceTree = "<group>"; };
+		1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppointmentContainerViewController.h; sourceTree = "<group>"; };
+		1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointmentContainerViewController.m; sourceTree = "<group>"; };
 		182394DF1BBD0DCE00D97366 /* Medico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182394E31BBD0DCE00D97366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182394E41BBD0DCE00D97366 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -319,6 +327,10 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */,
+				1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */,
+				1822C4511BD5054000DD24C0 /* ProfileContainerViewController.h */,
+				1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */,
 				183D1A4B1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.h */,
 				183D1A4C1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.m */,
 				1895A1DA1BC8CBF100C8647D /* DetailPatientProfileViewController.h */,
@@ -435,6 +447,7 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */,
 				183D1A431BD0F646003E0CFC /* arrowButton.png */,
 				18C7DB171BC7BC94005B93A9 /* search.png */,
 				187A0C7D1BC67F1F003AC5D9 /* checkRadio.png */,
@@ -612,6 +625,7 @@
 				182394F01BBD0DCE00D97366 /* Images.xcassets in Resources */,
 				18BB05671BC24DFE00D237CD /* default.png in Resources */,
 				1842F3211BC3A4AF0055597E /* create.png in Resources */,
+				1822C4501BD4FCC400DD24C0 /* uparrowButton.png in Resources */,
 				18BB05741BC24DFE00D237CD /* refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,10 +692,12 @@
 				1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
 				1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */,
+				1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
 				183511911BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m in Sources */,
 				1897CDA51BCD33DA0043F0FD /* ChangePasswordViewController.m in Sources */,
 				18327F3E1BC536DD002210BC /* EditTemplateView.m in Sources */,
+				1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
 				186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */,
 			);

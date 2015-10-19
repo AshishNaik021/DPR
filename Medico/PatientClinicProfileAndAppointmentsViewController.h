@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *appointmentsButton;
 - (IBAction)appointmentClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *appointmentView;
+@property (weak, nonatomic) IBOutlet UIButton *hideDetailsButton;
+- (IBAction)hideDetails:(id)sender;
 
 
 
