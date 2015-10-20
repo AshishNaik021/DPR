@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PatientDetailSearchDoctorViewController : UIViewController
-
+@property BOOL *radioButton;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 - (IBAction)searchDoctor:(id)sender;
@@ -19,7 +19,7 @@
 - (IBAction)mapRadio:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *listContentView;
 @property (weak, nonatomic) IBOutlet UIView *mapContentView;
-
+-(IBAction)radiobuttonSelected:(id)sender;
 
 
 

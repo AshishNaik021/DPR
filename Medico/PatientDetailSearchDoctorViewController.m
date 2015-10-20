@@ -13,17 +13,49 @@
 @end
 
 @implementation PatientDetailSearchDoctorViewController
+@synthesize listRadioButton;
+@synthesize mapRadioButton;
+@synthesize radioButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    radioButton = NO;
+    self.listContentView.hidden = FALSE;
+    self.mapContentView.hidden = TRUE;
+    
 }
+
+
+
+
+- (IBAction)searchDoctor:(id)sender {
+    
+}
+- (IBAction)listRadio:(id)sender {
+    
+    [listRadioButton setImage:[UIImage imageNamed:@"checkRadio.png"] forState:UIControlStateNormal];
+    [mapRadioButton setImage:[UIImage imageNamed:@"unchechRadio.png"] forState:UIControlStateNormal];
+    self.mapContentView.hidden = TRUE;
+    self.listContentView.hidden = FALSE;
+    
+}
+
+- (IBAction)mapRadio:(id)sender {
+    
+    [mapRadioButton setImage:[UIImage imageNamed:@"checkRadio.png"] forState:UIControlStateNormal];
+    [listRadioButton setImage:[UIImage imageNamed:@"unchechRadio.png"] forState:UIControlStateNormal];
+    self.listContentView.hidden = TRUE;
+    self.mapContentView.hidden = FALSE;
+
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+@end
 /*
 #pragma mark - Navigation
 
@@ -34,11 +66,3 @@
 }
 */
 
-- (IBAction)searchDoctor:(id)sender {
-}
-- (IBAction)listRadio:(id)sender {
-}
-
-- (IBAction)mapRadio:(id)sender {
-}
-@end
