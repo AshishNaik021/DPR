@@ -9,14 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface SMSConfirmationView : UIViewController
+
 @property (weak, nonatomic) IBOutlet UITextField *smsRegistrationCodeField;
 @property (weak, nonatomic) IBOutlet UITextField *emailRegistrationCodeField;
 @property (weak, nonatomic) IBOutlet UIButton *smsResendButton;
-
-- (IBAction)smsResend:(id)sender;
+@property (nonatomic, retain) NSDictionary *data;
 @property (weak, nonatomic) IBOutlet UIButton *emailResendButton;
-- (IBAction)emailResend:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *registrationConfirmedButton;
+
 - (IBAction)registrationConfirmed:(id)sender;
+- (IBAction)emailResend:(id)sender;
+- (IBAction)smsResend:(id)sender;
 
 @end

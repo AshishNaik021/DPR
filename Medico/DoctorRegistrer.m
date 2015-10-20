@@ -7,6 +7,7 @@
 //
 
 #import "DoctorRegistrer.h"
+#import "SMSConfirmationView.h"
 
 @interface DoctorRegistrer ()
 
@@ -28,7 +29,6 @@
 @synthesize specializationField;
 @synthesize readTCButton;
 @synthesize nextButton;
-
 @synthesize  keyboardVisible;
 @synthesize offset;
 @synthesize height;
@@ -83,6 +83,7 @@
 //}
 
 - (void)viewDidLoad {
+    self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     doctorchecked = NO;
@@ -97,7 +98,7 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
     
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -181,8 +182,8 @@
     }
     
     return YES;
-//    [textField resignFirstResponder];
-//    return YES;
+    //    [textField resignFirstResponder];
+    //    return YES;
 }
 
 
@@ -303,7 +304,7 @@
         }
     }
     
-        return returnvalue;
+    return returnvalue;
 }
 -(void)errorMessageDOBNotValid{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid date of birth." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -379,15 +380,55 @@
 
 -(void)callValidateAllFields{
     
-    [self validateAllFields:nameField.text
-                           :emailField.text
-                           :passwordField.text
-                           :mobileField.text
-                           :bloodGroupField.text
-                           :genderField.text
-                           :dateofBirthField.text
-                           :locationField.text
-                           :specializationField.text];
+    if([self validateAllFields:nameField.text
+                              :emailField.text
+                              :passwordField.text
+                              :mobileField.text
+                              :bloodGroupField.text
+                              :genderField.text
+                              :dateofBirthField.text
+                              :locationField.text
+                              :specializationField.text]){
+        NSLog(@"Sending data to next vc");
+        NSArray *objects=[[NSArray alloc]initWithObjects:
+                          nameField.text,
+                          emailField.text,
+                          passwordField.text,
+                          mobileField.text,
+                          bloodGroupField.text,
+                          genderField.text,
+                          dateofBirthField.text,
+                          locationField.text,
+                          specializationField.text,
+                          @"",
+                          @"",
+                          @"",
+                          nil];
+        NSArray *keys=[[NSArray alloc]initWithObjects:
+                       @"name",
+                       @"emailID",
+                       @"password",
+                       @"mobileNumber",
+                       @"bloodGroup",
+                       @"gender",
+                       @"dateOfBirth",
+                       @"location",
+                       @"speciality",
+                       @"cloudLoginId",
+                       @"cloudLoginPassword",
+                       @"cloudType",
+                       nil];
+        
+        NSDictionary *dict=[NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        SMSConfirmationView *viewController =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
+        viewController.data = dict;
+        NSLog(@"is dic copied? %@",viewController.data);
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    else {
+        NSLog(@"Data invalid");
+    }
 }
 -(void)errorMessaggeCheckBox{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
