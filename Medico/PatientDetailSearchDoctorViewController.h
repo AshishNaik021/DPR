@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface PatientDetailSearchDoctorViewController : UIViewController
+@interface PatientDetailSearchDoctorViewController : UIViewController{
+    MKMapView *map;
+}
+
+@property (strong, nonatomic) IBOutlet MKMapView *map;
+
 @property BOOL *radioButton;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;

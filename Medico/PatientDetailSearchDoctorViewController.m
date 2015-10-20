@@ -16,6 +16,7 @@
 @synthesize listRadioButton;
 @synthesize mapRadioButton;
 @synthesize radioButton;
+@synthesize map = _map;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

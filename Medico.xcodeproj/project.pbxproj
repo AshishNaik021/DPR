@@ -116,6 +116,7 @@
 		18C7DB1A1BC7C71B005B93A9 /* Patient.json in Resources */ = {isa = PBXBuildFile; fileRef = 18C7DB191BC7C71B005B93A9 /* Patient.json */; };
 		18C7DB1D1BC7D231005B93A9 /* PatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7DB1C1BC7D231005B93A9 /* PatientProfileViewController.m */; };
 		18C7DB201BC7D277005B93A9 /* PatientProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7DB1F1BC7D277005B93A9 /* PatientProfileTableViewCell.m */; };
+		18DB3C251BD6659C00A9C3E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB3C241BD6659C00A9C3E3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,6 +301,7 @@
 		18C7DB1C1BC7D231005B93A9 /* PatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientProfileViewController.m; sourceTree = "<group>"; };
 		18C7DB1E1BC7D277005B93A9 /* PatientProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientProfileTableViewCell.h; sourceTree = "<group>"; };
 		18C7DB1F1BC7D277005B93A9 /* PatientProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientProfileTableViewCell.m; sourceTree = "<group>"; };
+		18DB3C241BD6659C00A9C3E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DB3C251BD6659C00A9C3E3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +326,7 @@
 		182394D61BBD0DCE00D97366 = {
 			isa = PBXGroup;
 			children = (
+				18DB3C241BD6659C00A9C3E3 /* MapKit.framework */,
 				182394E11BBD0DCE00D97366 /* Medico */,
 				182394FB1BBD0DCE00D97366 /* MedicoTests */,
 				182394E01BBD0DCE00D97366 /* Products */,
