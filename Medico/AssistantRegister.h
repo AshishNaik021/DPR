@@ -9,7 +9,21 @@
 #import <UIKit/UIKit.h>
 BOOL assistantChecked;
 
-@interface AssistantRegister : UIViewController
+@interface AssistantRegister : UIViewController <UITextFieldDelegate>{
+    
+
+IBOutlet UIScrollView *scroll;
+}
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
+
+
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property IBOutlet UIButton *checkButton;
 -(IBAction)checkButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;

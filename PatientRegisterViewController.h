@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 BOOL checked;
-@interface PatientRegisterViewController : UIViewController{
+@interface PatientRegisterViewController : UIViewController<UITextFieldDelegate> {
     IBOutlet UIScrollView *scroll;
 
 }
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
+
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
 - (IBAction)changeImage:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -33,6 +41,8 @@ BOOL checked;
 - (IBAction)next:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 - (IBAction)addLocation:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+- (IBAction)addCalendar:(id)sender;
 
 @property IBOutlet UIButton *checkButton;
 -(IBAction)checkButton:(id)sender;
