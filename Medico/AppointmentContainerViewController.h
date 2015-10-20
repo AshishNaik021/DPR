@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelNextPMButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelLaterPMButton;
 
-@property (weak, nonatomic) IBOutlet UIView *changeAppointmentView;
 
 
 - (IBAction)changeNextAppointmentPM:(id)sender;

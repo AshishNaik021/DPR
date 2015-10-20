@@ -66,6 +66,15 @@
 		1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */; };
 		1897CDA21BCD2F320043F0FD /* DoctorChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CDA11BCD2F320043F0FD /* DoctorChangePasswordViewController.m */; };
 		1897CDA51BCD33DA0043F0FD /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CDA41BCD33DA0043F0FD /* ChangePasswordViewController.m */; };
+		189EDB8B1BD6121100AA9B96 /* BookAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */; };
+		189EDB921BD62FFE00AA9B96 /* dentist.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB8C1BD62FFE00AA9B96 /* dentist.png */; };
+		189EDB931BD62FFE00AA9B96 /* dermatologist.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB8D1BD62FFE00AA9B96 /* dermatologist.png */; };
+		189EDB941BD62FFE00AA9B96 /* generalPhysician.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB8E1BD62FFE00AA9B96 /* generalPhysician.png */; };
+		189EDB951BD62FFE00AA9B96 /* gynecologist.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB8F1BD62FFE00AA9B96 /* gynecologist.png */; };
+		189EDB961BD62FFE00AA9B96 /* homeopathy.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB901BD62FFE00AA9B96 /* homeopathy.png */; };
+		189EDB971BD62FFE00AA9B96 /* pediatrician.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB911BD62FFE00AA9B96 /* pediatrician.png */; };
+		189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */; };
+		189EDB9D1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */; };
 		18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */; };
 		18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05491BC24DC100D237CD /* manageAssistents.png */; };
 		18BB05621BC24DFE00D237CD /* appointment.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054B1BC24DFE00D237CD /* appointment.png */; };
@@ -225,6 +234,18 @@
 		1897CDA11BCD2F320043F0FD /* DoctorChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorChangePasswordViewController.m; sourceTree = "<group>"; };
 		1897CDA31BCD33DA0043F0FD /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		1897CDA41BCD33DA0043F0FD /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAppointmentViewController.h; sourceTree = "<group>"; };
+		189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAppointmentViewController.m; sourceTree = "<group>"; };
+		189EDB8C1BD62FFE00AA9B96 /* dentist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dentist.png; sourceTree = "<group>"; };
+		189EDB8D1BD62FFE00AA9B96 /* dermatologist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dermatologist.png; sourceTree = "<group>"; };
+		189EDB8E1BD62FFE00AA9B96 /* generalPhysician.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = generalPhysician.png; sourceTree = "<group>"; };
+		189EDB8F1BD62FFE00AA9B96 /* gynecologist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gynecologist.png; sourceTree = "<group>"; };
+		189EDB901BD62FFE00AA9B96 /* homeopathy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeopathy.png; sourceTree = "<group>"; };
+		189EDB911BD62FFE00AA9B96 /* pediatrician.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pediatrician.png; sourceTree = "<group>"; };
+		189EDB981BD6347900AA9B96 /* PatientSearchDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSearchDoctorViewController.h; sourceTree = "<group>"; };
+		189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientSearchDoctorViewController.m; sourceTree = "<group>"; };
+		189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailSearchDoctorViewController.h; sourceTree = "<group>"; };
+		189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailSearchDoctorViewController.m; sourceTree = "<group>"; };
 		18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientRegisterViewController.h; path = ../PatientRegisterViewController.h; sourceTree = "<group>"; };
 		18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientRegisterViewController.m; path = ../PatientRegisterViewController.m; sourceTree = "<group>"; };
 		18BB05491BC24DC100D237CD /* manageAssistents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageAssistents.png; sourceTree = "<group>"; };
@@ -327,6 +348,12 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */,
+				189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */,
+				189EDB981BD6347900AA9B96 /* PatientSearchDoctorViewController.h */,
+				189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */,
+				189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */,
+				189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */,
 				1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */,
 				1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */,
 				1822C4511BD5054000DD24C0 /* ProfileContainerViewController.h */,
@@ -447,6 +474,12 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				189EDB8C1BD62FFE00AA9B96 /* dentist.png */,
+				189EDB8D1BD62FFE00AA9B96 /* dermatologist.png */,
+				189EDB8E1BD62FFE00AA9B96 /* generalPhysician.png */,
+				189EDB8F1BD62FFE00AA9B96 /* gynecologist.png */,
+				189EDB901BD62FFE00AA9B96 /* homeopathy.png */,
+				189EDB911BD62FFE00AA9B96 /* pediatrician.png */,
 				1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */,
 				183D1A431BD0F646003E0CFC /* arrowButton.png */,
 				18C7DB171BC7BC94005B93A9 /* search.png */,
@@ -589,6 +622,7 @@
 				18327F361BC533EE002210BC /* downArrow.png in Resources */,
 				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				182394EE1BBD0DCE00D97366 /* Main.storyboard in Resources */,
+				189EDB941BD62FFE00AA9B96 /* generalPhysician.png in Resources */,
 				1842F3161BC398BA0055597E /* delete.png in Resources */,
 				18BB05651BC24DFE00D237CD /* check.png in Resources */,
 				18BB05751BC24DFE00D237CD /* searchDoctor.png in Resources */,
@@ -596,11 +630,15 @@
 				18BB05781BC24DFE00D237CD /* unchecked.png in Resources */,
 				18BB056F1BC24DFE00D237CD /* manageClinics.png in Resources */,
 				18BB05711BC24DFE00D237CD /* manageTemplates.png in Resources */,
+				189EDB951BD62FFE00AA9B96 /* gynecologist.png in Resources */,
 				18BB056B1BC24DFE00D237CD /* location.png in Resources */,
+				189EDB961BD62FFE00AA9B96 /* homeopathy.png in Resources */,
 				183D1A441BD0F646003E0CFC /* arrowButton.png in Resources */,
 				18BB05691BC24DFE00D237CD /* doctorLanding.png in Resources */,
+				189EDB931BD62FFE00AA9B96 /* dermatologist.png in Resources */,
 				187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */,
 				186BD6251BCFA87B00B43A8C /* HomeCountPatients.json in Resources */,
+				189EDB971BD62FFE00AA9B96 /* pediatrician.png in Resources */,
 				18327F3B1BC53615002210BC /* upArrow.png in Resources */,
 				18BB05731BC24DFE00D237CD /* patientProfile.png in Resources */,
 				187A0C821BC68ABD003AC5D9 /* ClinicList.json in Resources */,
@@ -617,6 +655,7 @@
 				18BB05661BC24DFE00D237CD /* checked.png in Resources */,
 				18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */,
 				18C7DB021BC798E6005B93A9 /* Dental.json in Resources */,
+				189EDB921BD62FFE00AA9B96 /* dentist.png in Resources */,
 				18BB05761BC24DFE00D237CD /* searchHospital.png in Resources */,
 				18BB056C1BC24DFE00D237CD /* logo.png in Resources */,
 				18C7DB1A1BC7C71B005B93A9 /* Patient.json in Resources */,
@@ -652,6 +691,7 @@
 				18327F331BC5234B002210BC /* TemplateDetailCell.m in Sources */,
 				18C7DB101BC7AD94005B93A9 /* SearchAssistantCell.m in Sources */,
 				1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */,
+				189EDB9D1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m in Sources */,
 				183D1A4A1BD0FC1D003E0CFC /* PatientClinicAndLabsCell.m in Sources */,
 				1842F36E1BC3E7850055597E /* EditTemplateDetailViewCell.m in Sources */,
 				184F01D81BCE593800913B23 /* SearchResultAssistantViewController.m in Sources */,
@@ -683,6 +723,7 @@
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
 				184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */,
 				18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */,
+				189EDB8B1BD6121100AA9B96 /* BookAppointmentViewController.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
 				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
 				186BD61D1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m in Sources */,
@@ -694,6 +735,7 @@
 				1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */,
 				1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
+				189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */,
 				183511911BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m in Sources */,
 				1897CDA51BCD33DA0043F0FD /* ChangePasswordViewController.m in Sources */,
 				18327F3E1BC536DD002210BC /* EditTemplateView.m in Sources */,

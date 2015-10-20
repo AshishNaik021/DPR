@@ -1,18 +1,18 @@
 //
-//  AppointmentContainerViewController.m
+//  PatientDetailSearchDoctorViewController.m
 //  Medico
 //
-//  Created by APPLE on 19/10/15.
+//  Created by APPLE on 20/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "AppointmentContainerViewController.h"
+#import "PatientDetailSearchDoctorViewController.h"
 
-@interface AppointmentContainerViewController ()
+@interface PatientDetailSearchDoctorViewController ()
 
 @end
 
-@implementation AppointmentContainerViewController
+@implementation PatientDetailSearchDoctorViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,33 +34,11 @@
 }
 */
 
-- (IBAction)changeNextAppointmentPM:(id)sender {
+- (IBAction)searchDoctor:(id)sender {
+}
+- (IBAction)listRadio:(id)sender {
 }
 
-- (IBAction)changeLaterAppointmentPM:(id)sender {
-}
-
-- (IBAction)cancelNextPM:(id)sender {
-}
-
-- (IBAction)cancelLaterPM:(id)sender {
-}
-
-- (IBAction)bookOnlineAM:(id)sender {
-}
-
-- (IBAction)bookOnlinePM:(id)sender {
-}
-
-- (IBAction)changeNextAppointmentAM:(id)sender {
-}
-
-- (IBAction)changeLaterAppointmentAM:(id)sender {
-}
-
-- (IBAction)cancelNextAM:(id)sender {
-}
-
-- (IBAction)cancelLaterAM:(id)sender {
+- (IBAction)mapRadio:(id)sender {
 }
 @end
