@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DoctorLandingPageView : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *doctorNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
 - (IBAction)settings:(id)sender;
@@ -26,9 +27,10 @@
 - (IBAction)manageFinance:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *manageAppointmentButton;
 - (IBAction)manageAppointments:(id)sender;
-
-
+@property (nonatomic, retain) NSString * doctorName;
 
 
 
 @end
+
+
