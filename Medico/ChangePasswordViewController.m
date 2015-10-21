@@ -109,18 +109,29 @@
         if ([self validateOldPassword:oldPasswordField.text] && [self validateNewPassword:writeNewPasswordField.text] && [self validateReEnterPassword:reEnterPasswordField.text]){
             //[self errorMessageEmailNotValid];
             NSLog(@"Password Changed.");
-                    LoginPage *forgotPass =
-                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
-                    [self.navigationController pushViewController:forgotPass animated:YES];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfuly Changed Password." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            alert.tag = 100;
+            [alert show];
+//                    LoginPage *forgotPass =
+//                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+//                    [self.navigationController pushViewController:forgotPass animated:YES];
         }
     }
     else{
         [self errorDoesNotMatchPassword];
     }
     
-    
-    
-    
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ( alertView.tag == 100 ) {
+        NSLog(@"Launching the store");
+        LoginPage *forgotPass =
+                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+        [self.navigationController pushViewController:forgotPass animated:YES];
+    }
+}
+
+
 @end
 

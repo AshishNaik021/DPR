@@ -1,26 +1,26 @@
 //
-//  SearchPatientViewController.m
+//  AddPatientViewController.m
 //  Medico
 //
 //  Created by APPLE on 21/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "SearchPatientViewController.h"
+#import "AddPatientViewController.h"
 #import "DoctorLandingPageView.h"
 
-@interface SearchPatientViewController ()
+@interface AddPatientViewController ()
 
 @end
 
-@implementation SearchPatientViewController
-
+@implementation AddPatientViewController
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
     
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
@@ -28,10 +28,10 @@
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
-    self.navigationItem.title = @"Search Patient";
+    self.navigationItem.title = @"Add Patient";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,19 +49,4 @@
 }
 */
 
-- (IBAction)searchPatient:(id)sender {
-}
-- (IBAction)puneRadio:(id)sender {
-}
-
-- (IBAction)bangloreRadio:(id)sender {
-}
-
-- (IBAction)mumbaiRadio:(id)sender {
-}
-
-- (IBAction)delhiRadio:(id)sender {
-}
-- (IBAction)addPatient:(id)sender {
-}
 @end

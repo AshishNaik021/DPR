@@ -1,0 +1,50 @@
+[
+    {
+        "patientId": "7",
+        "name": "ram",
+        "emailID": "r@gmail.com",
+        "mobileNumber": 913695845802,
+        "location": "pune",
+        "type": 1
+    },
+    {
+        "patientId": "8",
+        "name": "ravan",
+        "emailID": "ra@gmail.com",
+        "mobileNumber": 913669888808,
+        "location": "pune",
+        "type": 1
+    },
+    {
+        "patientId": "10",
+        "name": "anup",
+        "emailID": "ap@gmail.com",
+        "mobileNumber": 916695894852,
+        "location": "pune",
+        "type": 1
+    },
+    {
+        "patientId": "11",
+        "name": "shashu",
+        "emailID": "sha@gmail.com",
+        "mobileNumber": 916995807480,
+        "location": "pune",
+        "type": 1
+    },
+    {
+        "patientId": "13",
+        "name": "yuraj",
+        "emailID": "yu@gmail.com",
+        "mobileNumber": 913699589856,
+        "location": "pune",
+        "type": 1
+    },
+    {
+        "patientId": "1",
+        "name": "sarpanch",
+        "emailID": "sarpanch@gmail.com",
+        "mobileNumber": 911234567890,
+        "location": "pune",
+        "type": 2
+    }
+]
