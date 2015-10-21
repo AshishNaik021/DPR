@@ -7,7 +7,7 @@
 //
 
 #import "ChangePasswordViewController.h"
-#import "ForgotPasswordView.h"
+#import "LoginPage.h"
 
 @interface ChangePasswordViewController ()
 
@@ -109,8 +109,8 @@
         if ([self validateOldPassword:oldPasswordField.text] && [self validateNewPassword:writeNewPasswordField.text] && [self validateReEnterPassword:reEnterPasswordField.text]){
             //[self errorMessageEmailNotValid];
             NSLog(@"Password Changed.");
-                    ForgotPasswordView *forgotPass =
-                    [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordView"];
+                    LoginPage *forgotPass =
+                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
                     [self.navigationController pushViewController:forgotPass animated:YES];
         }
     }
