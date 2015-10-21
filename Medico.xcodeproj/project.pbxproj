@@ -55,6 +55,9 @@
 		185D87061BD796EC003B357C /* SearchPatientForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D87051BD796EC003B357C /* SearchPatientForDoctorCell.m */; };
 		185D87081BD7A0C7003B357C /* searchDoctor.json in Resources */ = {isa = PBXBuildFile; fileRef = 185D87071BD7A0C7003B357C /* searchDoctor.json */; };
 		185D870B1BD7A2AB003B357C /* PatientDetailSearchDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D870A1BD7A2AB003B357C /* PatientDetailSearchDoctorCell.m */; };
+		185D870E1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */; };
+		185D87111BD7B4FC003B357C /* DoctorManageAppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */; };
+		185D87131BD7B8E0003B357C /* manageAppointments.json in Resources */ = {isa = PBXBuildFile; fileRef = 185D87121BD7B8E0003B357C /* manageAppointments.json */; };
 		186BD61D1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */; };
 		186BD6201BCF7F8400B43A8C /* PatientChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61F1BCF7F8400B43A8C /* PatientChangePasswordViewController.m */; };
 		186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD6221BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m */; };
@@ -223,6 +226,11 @@
 		185D87071BD7A0C7003B357C /* searchDoctor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchDoctor.json; sourceTree = "<group>"; };
 		185D87091BD7A2AB003B357C /* PatientDetailSearchDoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailSearchDoctorCell.h; sourceTree = "<group>"; };
 		185D870A1BD7A2AB003B357C /* PatientDetailSearchDoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailSearchDoctorCell.m; sourceTree = "<group>"; };
+		185D870C1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorManageAppointmentsViewController.h; sourceTree = "<group>"; };
+		185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorManageAppointmentsViewController.m; sourceTree = "<group>"; };
+		185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorManageAppointmentCell.h; sourceTree = "<group>"; };
+		185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorManageAppointmentCell.m; sourceTree = "<group>"; };
+		185D87121BD7B8E0003B357C /* manageAppointments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manageAppointments.json; sourceTree = "<group>"; };
 		186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDoctorsClinicSettingsViewController.h; sourceTree = "<group>"; };
 		186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDoctorsClinicSettingsViewController.m; sourceTree = "<group>"; };
 		186BD61E1BCF7F8400B43A8C /* PatientChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientChangePasswordViewController.h; sourceTree = "<group>"; };
@@ -364,6 +372,7 @@
 		182394E11BBD0DCE00D97366 /* Medico */ = {
 			isa = PBXGroup;
 			children = (
+				185D87121BD7B8E0003B357C /* manageAppointments.json */,
 				185D87071BD7A0C7003B357C /* searchDoctor.json */,
 				185D86FF1BD79625003B357C /* searchPatient.json */,
 				186BD6241BCFA87B00B43A8C /* HomeCountPatients.json */,
@@ -373,6 +382,10 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				185D870C1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.h */,
+				185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */,
+				185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */,
+				185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */,
 				185D87011BD796AB003B357C /* SearchPatientForDoctorViewController.h */,
 				185D87021BD796AB003B357C /* SearchPatientForDoctorViewController.m */,
 				185D87041BD796EC003B357C /* SearchPatientForDoctorCell.h */,
@@ -658,6 +671,7 @@
 				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				182394EE1BBD0DCE00D97366 /* Main.storyboard in Resources */,
 				189EDB941BD62FFE00AA9B96 /* generalPhysician.png in Resources */,
+				185D87131BD7B8E0003B357C /* manageAppointments.json in Resources */,
 				1842F3161BC398BA0055597E /* delete.png in Resources */,
 				18BB05651BC24DFE00D237CD /* check.png in Resources */,
 				18BB05751BC24DFE00D237CD /* searchDoctor.png in Resources */,
@@ -771,6 +785,7 @@
 				183D1A4D1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.m in Sources */,
 				1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */,
 				185D86FE1BD78C97003B357C /* AddPatientViewController.m in Sources */,
+				185D87111BD7B4FC003B357C /* DoctorManageAppointmentCell.m in Sources */,
 				1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */,
 				1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
@@ -780,6 +795,7 @@
 				189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */,
 				183511911BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m in Sources */,
 				1897CDA51BCD33DA0043F0FD /* ChangePasswordViewController.m in Sources */,
+				185D870E1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m in Sources */,
 				18327F3E1BC536DD002210BC /* EditTemplateView.m in Sources */,
 				1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,

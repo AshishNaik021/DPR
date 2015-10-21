@@ -31,7 +31,7 @@ BOOL checked;
 
 @property (weak, nonatomic) IBOutlet UITextField *mobileField;
 @property (weak, nonatomic) IBOutlet UITextField *genderField;
-@property (weak, nonatomic) IBOutlet UITextField *dateodBirthField;
+@property (weak, nonatomic) IBOutlet UITextField *dateofBirthField;
 @property (weak, nonatomic) IBOutlet UITextField *locationField;
 @property (weak, nonatomic) IBOutlet UITextField *bloodGroupField;
 @property (weak, nonatomic) IBOutlet UITextField *allergicToField;

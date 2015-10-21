@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Ram Clinic",
+        "slot1": "6.00AMto8.00AM",
+        "slot2": "2.00PMto5.00PM",
+        "slot3": "6.00 PM to 9.00 PM"
+    },
+    {
+        "name": "Shradhha Clinic",
+        "slot1": "6.00AMto8.00AM",
+        "slot2": "",
+        "slot3": "6.00 PM to 9.00 PM"
+    },
+    {
+        "name": "Choudhari Clinic",
+        "slot1": "6.00AMto8.00AM",
+        "slot2": "",
+        "slot3": ""
+    },
+    {
+        "name": "Manakar Clinic",
+        "slot1": "",
+        "slot2": "",
+        "slot3": ""
+    }
+]

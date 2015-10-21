@@ -22,7 +22,7 @@
 @synthesize passwordField;
 @synthesize mobileField;
 @synthesize genderField;
-@synthesize dateodBirthField;
+@synthesize dateofBirthField;
 @synthesize calendarButton;
 @synthesize locationField;
 @synthesize readTCButton;
@@ -52,7 +52,7 @@
 - (void)viewDidLoad {
     self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
-    self.dateodBirthField.placeholder = @"YYYY-DD-MM";
+    self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     checked = NO;
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
@@ -332,7 +332,7 @@
                               :mobileField.text
                               :bloodGroupField.text
                               :genderField.text
-                              :dateodBirthField.text
+                              :dateofBirthField.text
                               :locationField.text]){
         NSLog(@"Sending data to next vc");
         NSArray *objects=[[NSArray alloc]initWithObjects:
@@ -342,7 +342,7 @@
                           mobileField.text,
                           bloodGroupField.text,
                           genderField.text,
-                          dateodBirthField.text,
+                          dateofBirthField.text,
                           locationField.text,
                           @"",
                           @"",
@@ -400,7 +400,7 @@
         && [mobileField.text isEqualToString:@""]
         && [bloodGroupField.text isEqualToString:@""]
         && [genderField.text isEqualToString:@""]
-        && [dateodBirthField.text isEqualToString:@""]
+        && [dateofBirthField.text isEqualToString:@""]
         && [locationField.text isEqualToString:@""]) {
         NSLog(@"All Empty");
         [self errorAllFieldsMandatory];
