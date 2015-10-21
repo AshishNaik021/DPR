@@ -48,6 +48,7 @@
 		1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3701BC3F1600055597E /* AddNewTemplateView.m */; };
 		184F01D81BCE593800913B23 /* SearchResultAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */; };
 		184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */; };
+		185D86FB1BD75F93003B357C /* SearchPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D86FA1BD75F93003B357C /* SearchPatientViewController.m */; };
 		186BD61D1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */; };
 		186BD6201BCF7F8400B43A8C /* PatientChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61F1BCF7F8400B43A8C /* PatientChangePasswordViewController.m */; };
 		186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD6221BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m */; };
@@ -204,6 +205,8 @@
 		184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultAssistantViewController.m; sourceTree = "<group>"; };
 		184F01DF1BCE7A1800913B23 /* DoctorLandingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorLandingCell.h; sourceTree = "<group>"; };
 		184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorLandingCell.m; sourceTree = "<group>"; };
+		185D86F91BD75F93003B357C /* SearchPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPatientViewController.h; sourceTree = "<group>"; };
+		185D86FA1BD75F93003B357C /* SearchPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPatientViewController.m; sourceTree = "<group>"; };
 		186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDoctorsClinicSettingsViewController.h; sourceTree = "<group>"; };
 		186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDoctorsClinicSettingsViewController.m; sourceTree = "<group>"; };
 		186BD61E1BCF7F8400B43A8C /* PatientChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientChangePasswordViewController.h; sourceTree = "<group>"; };
@@ -352,6 +355,8 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
+				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
 				189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */,
 				189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */,
 				189EDB981BD6347900AA9B96 /* PatientSearchDoctorViewController.h */,
@@ -705,6 +710,7 @@
 				186BD6201BCF7F8400B43A8C /* PatientChangePasswordViewController.m in Sources */,
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
+				185D86FB1BD75F93003B357C /* SearchPatientViewController.m in Sources */,
 				187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */,
 				186BD6281BCFB0FF00B43A8C /* PatientLandingPageViewController.m in Sources */,
 				18327F2D1BC521C8002210BC /* TemplateDetailViewController.m in Sources */,
