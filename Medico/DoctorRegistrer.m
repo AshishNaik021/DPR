@@ -15,6 +15,7 @@
 
 @implementation DoctorRegistrer
 
+
 @synthesize checkButton;
 @synthesize nameField;
 @synthesize emailField;
@@ -29,6 +30,7 @@
 @synthesize specializationField;
 @synthesize readTCButton;
 @synthesize nextButton;
+
 @synthesize  keyboardVisible;
 @synthesize offset;
 @synthesize height;
@@ -49,39 +51,6 @@
 }
 
 
-//-(BOOL)textFieldShouldReturn:(UITextField *)textField
-//{
-//    clearField = NO;
-//    return clearField;
-//}
-
-//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-//{
-//    if(clearField)
-//    {
-//        textField.text = @"";
-//        clearField = NO;
-//    }
-//    return clearField;
-//}
-
-//-(void)textFieldDidBeginEditing:(UITextField *)textField{
-//    //clearField = YES;
-//    if (textField == genderField || dateofBirthField || locationField || specializationField || bloodGroupField) {
-//
-//
-//        CGPoint scrollpoint = CGPointMake(0, textField.frame.origin.y-380);
-//        [scroll setContentOffset:scrollpoint animated:YES];
-//    }
-//}
-
-//-(void)textFieldDidEndEditing:(UITextField *)textField{
-//    clearField = NO;
-//
-//    [scroll setContentOffset:CGPointZero animated:YES];
-//
-//}
-
 - (void)viewDidLoad {
     self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
@@ -93,8 +62,6 @@
     //Bonus height.
     height = CGRectGetHeight(screen);
     scrollHeight = height + 200;
-    NSLog(@"Width is--- %f",width);
-    NSLog(@"Height is--- %f",height);
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
     

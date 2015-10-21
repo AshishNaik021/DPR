@@ -7,6 +7,7 @@
 //
 
 #import "AssistantRegister.h"
+#import "SMSConfirmationView.h"
 
 @interface AssistantRegister ()
 
@@ -24,6 +25,19 @@
 
 @synthesize checkButton;
 
+@synthesize nameField;
+@synthesize emailField;
+@synthesize changeImageButton;
+@synthesize passwordField;
+@synthesize mobileField;
+@synthesize genderField;
+@synthesize dateofBirthField;
+@synthesize calendarButton;
+@synthesize locationField;
+@synthesize specializationField;
+@synthesize readTCButton;
+@synthesize nextButton;
+
 -(IBAction)checkButton:(id)sender{
     if(!assistantChecked){
         [checkButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
@@ -38,7 +52,9 @@
 
 
 - (void)viewDidLoad {
+    self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
+    self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     
       assistantChecked = NO;
     keyboardVisible = NO;
@@ -141,6 +157,228 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)errorAllFieldsMandatory{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"All fields are mandatory." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(void)errorMessageNameNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateName:(NSString *) name{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:name]){
+        [self errorMessageNameNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+-(void)errorMessageEmailNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Email." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateEmail:(NSString *) email{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", emailRegex];
+    
+    if ([emailTest evaluateWithObject:email]){
+        return 1;
+    }
+    else{
+        [self errorMessageEmailNotValid];
+        return 0;
+    }
+}
+-(void)errorMessagePasswordNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Password." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validatePassword:(NSString *) password{
+    if ([password isEqualToString:@""]) {
+        [self errorMessagePasswordNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+-(void)errorMessageMobileNumberNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateMobileNumber:(NSString *) mobileNumber{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:mobileNumber]){
+        [self errorMessageMobileNumberNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+-(void)errorMessageBloodGroupNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Blood Group." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(BOOL)validateBloodGroup:(NSString *) bloodGroup{
+    if ([bloodGroup isEqualToString:@""]) {
+        [self errorMessageBloodGroupNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageGenderNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Gender." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateGender:(NSString *) gender{
+    BOOL returnvalue = 0;
+    if ([gender isEqualToString:@""]) {
+        returnvalue = 1;
+    }
+    else{
+        NSString *nameRegex = @"[a-z]+";
+        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+        if ([nameTest evaluateWithObject:gender]) {
+            returnvalue = 1;
+        }
+    }
+    
+    return returnvalue;
+}
+-(void)errorMessageDOBNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid date of birth." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(BOOL)validateDOB:(NSString *) DOB{
+    if (![DOB  isEqualToString:@""])
+        return 1;
+    else{
+        [self errorMessageDOBNotValid];
+        return 0;
+    }
+}
+
+-(void)errorMessageLocationNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateLocation:(NSString *) location{
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![location isEqualToString:@""] && [nameTest evaluateWithObject:location]){
+        return 1;
+    }
+    else
+        return 0;
+}
+
+-(void)errorMessaggeSpecialityNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Speciality." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(BOOL)validateSpeciality:(NSString *) speciality{
+    BOOL returnValue = 0;
+    if ([speciality isEqualToString:@""]) {
+        returnValue =  1;
+    }
+    else{
+        NSString *nameRegex = @"[a-z]+";
+        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+        
+        if([nameTest evaluateWithObject:speciality]){
+            returnValue = 1;
+        }
+        else
+            returnValue = 0;
+    }
+    return returnValue;
+}
+-(BOOL)validateAllFields:(NSString *)name : (NSString *)email : (NSString *)password :(NSString *) mobileNumber : (NSString *)gender : (NSString *)dateOfBirth : (NSString *)location :(NSString *)speciality{
+    if ([self validateName:name]
+        && [self validateEmail:email]
+        && [self validatePassword:password]
+        && [self validateMobileNumber:mobileNumber]
+        && [self validateGender:gender]
+        && [self validateDOB:dateOfBirth]
+        && [self validateLocation:location]
+        && [self validateSpeciality:speciality]) {
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+    -(void)callValidateAllFields{
+        
+        if([self validateAllFields:nameField.text
+                                  :emailField.text
+                                  :passwordField.text
+                                  :mobileField.text
+                                  :genderField.text
+                                  :dateofBirthField.text
+                                  :locationField.text
+                                  :specializationField.text]){
+            NSLog(@"Sending data to next vc");
+            NSArray *objects=[[NSArray alloc]initWithObjects:
+                              nameField.text,
+                              emailField.text,
+                              passwordField.text,
+                              mobileField.text,
+                              genderField.text,
+                              dateofBirthField.text,
+                              locationField.text,
+                              specializationField.text,
+                              @"",
+                              @"",
+                              @"",
+                              nil];
+            NSArray *keys=[[NSArray alloc]initWithObjects:
+                           @"name",
+                           @"emailID",
+                           @"password",
+                           @"mobileNumber",
+                           @"gender",
+                           @"dateOfBirth",
+                           @"location",
+                           @"speciality",
+                           @"cloudLoginId",
+                           @"cloudLoginPassword",
+                           @"cloudType",
+                           nil];
+            
+            NSDictionary *dict=[NSDictionary dictionaryWithObjects:objects forKeys:keys];
+            SMSConfirmationView *viewController =
+            [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
+            viewController.data = dict;
+            NSLog(@"is dic copied? %@",viewController.data);
+            [self.navigationController pushViewController:viewController animated:YES];
+        }
+        else {
+            NSLog(@"Data invalid");
+        }
+    }
+
+
+
 
 /*
 #pragma mark - Navigation
