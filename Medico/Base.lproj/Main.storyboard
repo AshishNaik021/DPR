@@ -1044,12 +1044,18 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MLe-cs-Wkb" id="8Zt-qc-lDz"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XTf-OR-5nA">
                                 <rect key="frame" x="138" y="381" width="221" height="23"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MLe-cs-Wkb" id="PsL-7B-mo5"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSr-3D-cor">
                                 <rect key="frame" x="73" y="429" width="228" height="33"/>
@@ -2160,7 +2166,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Forgot Password Verification View Controller-->
         <scene sceneID="dfL-ns-BV0">
             <objects>
-                <viewController id="pnb-Ma-kfx" customClass="ForgotPasswordVerificationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordVerificationViewController" id="pnb-Ma-kfx" customClass="ForgotPasswordVerificationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IhR-ix-s0W"/>
                         <viewControllerLayoutGuide type="bottom" id="tvm-3u-fRz"/>
@@ -2191,18 +2197,27 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <rect key="frame" x="16" y="329" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pnb-Ma-kfx" id="bVS-BS-kFQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKc-F5-Bi5">
                                 <rect key="frame" x="139" y="377" width="96" height="30"/>
                                 <state key="normal" title="Confirm Code">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="confirmCode:" destination="pnb-Ma-kfx" eventType="touchUpInside" id="Km0-Xy-6Hr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBs-yp-YYy">
-                                <rect key="frame" x="101" y="629" width="173" height="30"/>
+                                <rect key="frame" x="101" y="591" width="173" height="30"/>
                                 <state key="normal" title="Resend Verification Code">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="resendCode:" destination="pnb-Ma-kfx" eventType="touchUpInside" id="fKf-Au-cbs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2210,6 +2225,11 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     <navigationItem key="navigationItem" id="E2f-2L-iRL"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="confirmCodeButton" destination="wKc-F5-Bi5" id="RIP-HD-fnc"/>
+                        <outlet property="confirmCodeField" destination="bqG-TY-gYl" id="1Hc-xb-5dZ"/>
+                        <outlet property="resendCodeButton" destination="sBs-yp-YYy" id="5Cw-oy-R43"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcJ-Cy-6Es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3180,7 +3200,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Change Password View Controller-->
         <scene sceneID="JfL-N0-YoA">
             <objects>
-                <viewController id="ffm-WR-xY9" customClass="ChangePasswordViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="ffm-WR-xY9" customClass="ChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pA8-Qz-tQ6"/>
                         <viewControllerLayoutGuide type="bottom" id="Ref-9q-m6C"/>
@@ -6250,6 +6270,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rKr-LI-ZmT"/>
+        <segue reference="llE-oE-nCp"/>
     </inferredMetricsTieBreakers>
 </document>

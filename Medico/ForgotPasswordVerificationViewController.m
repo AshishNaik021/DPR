@@ -7,22 +7,53 @@
 //
 
 #import "ForgotPasswordVerificationViewController.h"
+#import "ChangePasswordViewController.h"
 
 @interface ForgotPasswordVerificationViewController ()
 
 @end
 
 @implementation ForgotPasswordVerificationViewController
+@synthesize confirmCodeButton;
+@synthesize confirmCodeField;
+@synthesize resendCodeButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)errorMessage{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Verification Code." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+- (BOOL)validateCode:(NSString *)verificationCode
+{
+    NSString *numberRegEx = @"[0-9]{4}";
+    NSPredicate *numberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", numberRegEx];
+    if ([numberTest evaluateWithObject:verificationCode] == YES)
+        return TRUE;
+    else
+        return FALSE;
+}
+-(void)errorMessageCodeNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Enter Correct Verification Code." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [textField resignFirstResponder];
+    return YES;
+}
+
 
 /*
 #pragma mark - Navigation
@@ -34,4 +65,24 @@
 }
 */
 
+- (IBAction)confirmCode:(id)sender {
+    if ([confirmCodeField.text isEqualToString:@""]) {
+        [self errorMessage];
+    }
+    else{
+    if (![self validateCode:confirmCodeField.text]){
+        [self errorMessageCodeNotValid];
+    }
+    else //if (![self validateCode:confirmCodeField.text])
+    {
+        NSLog(@"Send Password.");
+        ChangePasswordViewController *changePass =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+        [self.navigationController pushViewController:changePass animated:YES];
+    }
+    }
+
+}
+- (IBAction)resendCode:(id)sender {
+}
 @end

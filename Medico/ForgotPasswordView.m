@@ -7,6 +7,7 @@
 //
 
 #import "ForgotPasswordView.h"
+#import "ForgotPasswordVerificationViewController.h"
 
 @interface ForgotPasswordView ()
 
@@ -73,6 +74,7 @@
         if (![emailField.text isEqualToString:@""] && ![mobileNoField.text isEqualToString:@""]) {
             if ([self validatePhone:mobileNoField.text] && [self validateEmail:emailField.text]) {
                 NSLog(@"Send password on email and mobile");
+                
             }
             else if (![self validatePhone:mobileNoField.text] && ![self validateEmail:emailField.text]){
                 [self errorMessageBothFieldsNotValid];
@@ -80,21 +82,33 @@
             else if (![self validateEmail:emailField.text] && [self validatePhone:mobileNoField.text]){
                 //[self errorMessageEmailNotValid];
                 NSLog(@"Send SMS");
+                ForgotPasswordVerificationViewController *verification =
+                [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordVerificationViewController"];
+                [self.navigationController pushViewController:verification animated:YES];
             }
             else if (![self validatePhone:mobileNoField.text] && [self validateEmail:emailField.text]){
                 //[self errorMessageMobileNotValid];
                 NSLog(@"Send Email");
+                ForgotPasswordVerificationViewController *verification =
+                [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordVerificationViewController"];
+                [self.navigationController pushViewController:verification animated:YES];
             }
         }
         else {
             if ([emailField.text isEqualToString:@""] && [self validatePhone:mobileNoField.text]) {
                 NSLog(@"Send SMS");
+                ForgotPasswordVerificationViewController *verification =
+                [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordVerificationViewController"];
+                [self.navigationController pushViewController:verification animated:YES];
             }
             else if ([emailField.text isEqualToString:@""] && ![self validatePhone:mobileNoField.text]){
                 [self errorMessageMobileNotValid];
             }
             else if ([mobileNoField.text isEqualToString:@""] && [self validateEmail:emailField.text]){
                 NSLog(@"Send Email");
+                ForgotPasswordVerificationViewController *verification =
+                [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordVerificationViewController"];
+                [self.navigationController pushViewController:verification animated:YES];
             }
             else if ([mobileNoField.text isEqualToString:@""] && ![self validateEmail:emailField.text]){
                 [self errorMessageEmailNotValid];
@@ -103,6 +117,21 @@
 
     }
 }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+//    if(textField.returnKeyType==UIReturnKeyNext) {
+//        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
+//        [next becomeFirstResponder];
+//        //[textField resignFirstResponder];
+//    }else if (textField.returnKeyType==UIReturnKeyDone) {
+        [textField resignFirstResponder];
+   // }
+    
+    return YES;
+    //    [textField resignFirstResponder];
+    //    return YES;
+}
+
 
 /*
 #pragma mark - Navigation

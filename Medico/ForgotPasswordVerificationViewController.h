@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ForgotPasswordVerificationViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *confirmCodeField;
+@property (weak, nonatomic) IBOutlet UIButton *confirmCodeButton;
+- (IBAction)confirmCode:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *resendCodeButton;
+- (IBAction)resendCode:(id)sender;
+
+
+
 
 @end
