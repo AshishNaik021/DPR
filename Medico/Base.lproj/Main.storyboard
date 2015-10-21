@@ -3393,6 +3393,34 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
             </objects>
             <point key="canvasLocation" x="330.5" y="-1205.5"/>
         </scene>
+        <!--Doctor Detail Manage Appointment View Controller-->
+        <scene sceneID="YU4-Q6-dD3">
+            <objects>
+                <viewController storyboardIdentifier="DoctorDetailManageAppointmentViewController" id="q3g-G1-XSK" customClass="DoctorDetailManageAppointmentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tp9-jI-okq"/>
+                        <viewControllerLayoutGuide type="bottom" id="aHH-Y4-pUV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iyj-FW-R0P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile And Appointments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ai-Rv-KZD">
+                                <rect key="frame" x="89" y="323" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjG-DX-yza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786.5" y="-1205.5"/>
+        </scene>
         <!--Patient Register View Controller-->
         <scene sceneID="lhL-VL-xEt">
             <objects>

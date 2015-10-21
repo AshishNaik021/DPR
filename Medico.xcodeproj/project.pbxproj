@@ -58,6 +58,7 @@
 		185D870E1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */; };
 		185D87111BD7B4FC003B357C /* DoctorManageAppointmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */; };
 		185D87131BD7B8E0003B357C /* manageAppointments.json in Resources */ = {isa = PBXBuildFile; fileRef = 185D87121BD7B8E0003B357C /* manageAppointments.json */; };
+		185D87161BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D87151BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m */; };
 		186BD61D1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */; };
 		186BD6201BCF7F8400B43A8C /* PatientChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD61F1BCF7F8400B43A8C /* PatientChangePasswordViewController.m */; };
 		186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186BD6221BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m */; };
@@ -231,6 +232,8 @@
 		185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorManageAppointmentCell.h; sourceTree = "<group>"; };
 		185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorManageAppointmentCell.m; sourceTree = "<group>"; };
 		185D87121BD7B8E0003B357C /* manageAppointments.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manageAppointments.json; sourceTree = "<group>"; };
+		185D87141BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailManageAppointmentViewController.h; sourceTree = "<group>"; };
+		185D87151BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailManageAppointmentViewController.m; sourceTree = "<group>"; };
 		186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateDoctorsClinicSettingsViewController.h; sourceTree = "<group>"; };
 		186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateDoctorsClinicSettingsViewController.m; sourceTree = "<group>"; };
 		186BD61E1BCF7F8400B43A8C /* PatientChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientChangePasswordViewController.h; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				185D87141BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.h */,
+				185D87151BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m */,
 				185D870C1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.h */,
 				185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */,
 				185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */,
@@ -761,6 +766,7 @@
 				18C7DB0B1BC7AA75005B93A9 /* SearchAssistantView.m in Sources */,
 				18327F1D1BC4F1A0002210BC /* DoctorLandingPageView.m in Sources */,
 				187A0C851BC68B5D003AC5D9 /* SearchClinicCell.m in Sources */,
+				185D87161BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m in Sources */,
 				183D1A471BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.m in Sources */,
 				1835118E1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.m in Sources */,
 				1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */,

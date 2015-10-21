@@ -9,6 +9,7 @@
 #import "DoctorManageAppointmentsViewController.h"
 #import "DoctorManageAppointmentCell.h"
 #import "DoctorLandingPageView.h"
+#import "DoctorDetailManageAppointmentViewController.h"
 
 @interface DoctorManageAppointmentsViewController ()
 
@@ -71,11 +72,16 @@
      cell.slot2Label.text = [[jsonList objectAtIndex:row] objectForKey:@"slot2"];
      cell.slot3Label.text = [[jsonList objectAtIndex:row] objectForKey:@"slot3"];
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
-    
+    cell.downArrowButton.tag = indexPath.row;
+    [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
     
 }
-
+- (IBAction)downArrow:(id)sender {
+    DoctorDetailManageAppointmentViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {
