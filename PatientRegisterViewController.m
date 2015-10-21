@@ -14,6 +14,8 @@
 @end
 
 @implementation PatientRegisterViewController
+
+
 @synthesize checkButton;
 @synthesize nameField;
 @synthesize emailField;
@@ -25,6 +27,7 @@
 @synthesize dateofBirthField;
 @synthesize calendarButton;
 @synthesize locationField;
+@synthesize allergicToField;
 @synthesize readTCButton;
 @synthesize nextButton;
 
@@ -35,16 +38,15 @@
 @synthesize screen;
 @synthesize scrollHeight;
 
-
 -(IBAction)checkButton:(id)sender{
-    if(!checked){
+    if(!patientChecked){
         [checkButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
-        checked = YES;
+        patientChecked = YES;
     }
-    else if(checked){
+    else if(patientChecked){
         [checkButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
-        checked = NO;
-
+        patientChecked = NO;
+        
     }
 }
 
@@ -53,7 +55,7 @@
     self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
-    checked = NO;
+    patientChecked = NO;
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
     width = CGRectGetWidth(screen);
@@ -62,7 +64,11 @@
     scrollHeight = height + 200;
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
+    
+    
+    // Do any additional setup after loading the view.
 }
+
 
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -143,8 +149,8 @@
     }
     
     return YES;
-//    [textField resignFirstResponder];
-//    return YES;
+    //    [textField resignFirstResponder];
+    //    return YES;
 }
 
 
@@ -154,6 +160,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 -(void)errorAllFieldsMandatory{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"All fields are mandatory." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
@@ -180,6 +195,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Email." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
+
 -(BOOL)validateEmail:(NSString *) email{
     BOOL stricterFilter = NO;
     NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
@@ -248,7 +264,7 @@
         returnvalue = 1;
     }
     else{
-        NSString *nameRegex = @"[a-z]+";
+        NSString *nameRegex = @"[A-Za-z]+";
         NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
         if ([nameTest evaluateWithObject:gender]) {
             returnvalue = 1;
@@ -286,28 +302,28 @@
         return 0;
 }
 
-//-(void)errorMessaggeSpecialityNotValid{
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Speciality." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//    [alert show];
-//}
-//-(BOOL)validateSpeciality:(NSString *) speciality{
-//    BOOL returnValue = 0;
-//    if ([speciality isEqualToString:@""]) {
-//        returnValue =  1;
-//    }
-//    else{
-//        NSString *nameRegex = @"[a-z]+";
-//        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
-//        
-//        if([nameTest evaluateWithObject:speciality]){
-//            returnValue = 1;
-//        }
-//        else
-//            returnValue = 0;
-//    }
-//    return returnValue;
-//}
--(BOOL)validateAllFields:(NSString *)name : (NSString *)email : (NSString *)password :(NSString *) mobileNumber : (NSString *)bloodGroup : (NSString *)gender : (NSString *)dateOfBirth : (NSString *)location{
+-(void)errorMessaggeSpecialityNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Speciality." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(BOOL)validateAllergicTo:(NSString *) allergicTo{
+    BOOL returnValue = 0;
+    if ([allergicTo isEqualToString:@""]) {
+        returnValue =  1;
+    }
+    else{
+        NSString *nameRegex = @"[a-z]+";
+        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+        
+        if([nameTest evaluateWithObject:allergicTo]){
+            returnValue = 1;
+        }
+        else
+            returnValue = 0;
+    }
+    return returnValue;
+}
+-(BOOL)validateAllFields:(NSString *)name : (NSString *)email : (NSString *)password :(NSString *) mobileNumber : (NSString *)bloodGroup : (NSString *)gender : (NSString *)dateOfBirth : (NSString *)location :(NSString *)allergicTo{
     if ([self validateName:name]
         && [self validateEmail:email]
         && [self validatePassword:password]
@@ -316,7 +332,7 @@
         && [self validateGender:gender]
         && [self validateDOB:dateOfBirth]
         && [self validateLocation:location]
-        ) {
+        && [self validateAllergicTo:allergicTo]) {
         return 1;
     }
     else{
@@ -324,6 +340,11 @@
     }
     
 }
+- (IBAction)addCalendar:(id)sender {
+}
+- (IBAction)readTermsConditions:(id)sender {
+}
+
 -(void)callValidateAllFields{
     
     if([self validateAllFields:nameField.text
@@ -333,7 +354,8 @@
                               :bloodGroupField.text
                               :genderField.text
                               :dateofBirthField.text
-                              :locationField.text]){
+                              :locationField.text
+                              :allergicToField.text]){
         NSLog(@"Sending data to next vc");
         NSArray *objects=[[NSArray alloc]initWithObjects:
                           nameField.text,
@@ -344,6 +366,7 @@
                           genderField.text,
                           dateofBirthField.text,
                           locationField.text,
+                          allergicToField.text,
                           @"",
                           @"",
                           @"",
@@ -357,6 +380,7 @@
                        @"gender",
                        @"dateOfBirth",
                        @"location",
+                       @"allergicTo",
                        @"cloudLoginId",
                        @"cloudLoginPassword",
                        @"cloudType",
@@ -378,21 +402,6 @@
     [alert show];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)changeImage:(id)sender {
-}
-- (IBAction)readTermConditions:(id)sender {
-}
 - (IBAction)next:(id)sender {
     if ([nameField.text isEqualToString:@""]
         && [emailField.text isEqualToString:@""]
@@ -406,7 +415,7 @@
         [self errorAllFieldsMandatory];
     }
     else{
-        if (checked) {
+        if (patientChecked) {
             NSLog(@"Checked and calling func");
             [self callValidateAllFields];
         }
@@ -415,14 +424,13 @@
             [self errorMessaggeCheckBox];
         }
     }
-
+}
+- (IBAction)addLocation:(id)sender {
+}
+- (IBAction)changeImage:(id)sender {
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
-}
-- (IBAction)addLocation:(id)sender {
-}
-- (IBAction)addCalendar:(id)sender {
 }
 @end

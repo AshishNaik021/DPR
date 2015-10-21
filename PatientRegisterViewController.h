@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-BOOL checked;
+BOOL patientChecked;
 @interface PatientRegisterViewController : UIViewController<UITextFieldDelegate> {
+    
     IBOutlet UIScrollView *scroll;
-
+    
 }
 
 @property  BOOL *keyboardVisible;
@@ -21,14 +22,12 @@ BOOL checked;
 @property CGRect screen;
 
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
-- (IBAction)changeImage:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UITextField *cloudLoginField;
 @property (weak, nonatomic) IBOutlet UITextField *cloudPasswordField;
 @property (weak, nonatomic) IBOutlet UITextField *cloudTypeField;
-
 @property (weak, nonatomic) IBOutlet UITextField *mobileField;
 @property (weak, nonatomic) IBOutlet UITextField *genderField;
 @property (weak, nonatomic) IBOutlet UITextField *dateofBirthField;
@@ -36,15 +35,17 @@ BOOL checked;
 @property (weak, nonatomic) IBOutlet UITextField *bloodGroupField;
 @property (weak, nonatomic) IBOutlet UITextField *allergicToField;
 @property (weak, nonatomic) IBOutlet UIButton *readTCButton;
-- (IBAction)readTermConditions:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-- (IBAction)next:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
-- (IBAction)addLocation:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *calendarButton;
-- (IBAction)addCalendar:(id)sender;
-
 @property IBOutlet UIButton *checkButton;
+
 -(IBAction)checkButton:(id)sender;
+- (IBAction)changeImage:(id)sender;
+- (IBAction)readTermConditions:(id)sender;
+- (IBAction)next:(id)sender;
+- (IBAction)addCalendar:(id)sender;
+- (IBAction)addLocation:(id)sender;
+
 
 @end
