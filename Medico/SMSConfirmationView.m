@@ -7,7 +7,7 @@
 //
 
 #import "SMSConfirmationView.h"
-
+#import "LoginPage.h"
 
 @interface SMSConfirmationView ()
 
@@ -25,6 +25,12 @@
 @synthesize returnString;
 
 - (void)viewDidLoad {
+    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
+    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    spinner.color = [UIColor blueColor];
+    spinner.center=self.view.center;
+    [self.view addSubview:spinner];
+    
     registrationCode = @"";
     [super viewDidLoad];
     NSLog(@"Data dic: %@",_data);
@@ -73,14 +79,26 @@
 }
 - (IBAction)emailResend:(id)sender {
 }
+-(void)redirect{
+    LoginPage *confirmationView =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+    [self.navigationController pushViewController:confirmationView animated:YES];
+}
+- (void)alertView:(UIAlertView *)alertView
+clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 200 || alertView.tag == 201){
+        [self redirect];
+    }
+}
 -(void)parseJSON : (NSString *)responseData{
     NSString * jsonString = responseData;
     NSLog(@"responseData %@",responseData);
     NSLog(@"jsonString %@",jsonString);
     if ([jsonString intValue]) {
-        SMSConfirmationView *confirmationView =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
-        [self.navigationController pushViewController:confirmationView animated:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 200;
+        [spinner stopAnimating];
+        [alert show];
     }
     else{
         //NSStringEncoding  encoding;
@@ -96,6 +114,8 @@
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
+            [spinner stopAnimating];
+            alert.tag = 201;
             [alert show];
             
         }
@@ -124,7 +144,13 @@
     NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/registerDoctor"];
     NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
     //NSString * params =[NSString stringWithFormat:@"\{\"bloodGroup\":%@,\"cloudLoginId\":%@,\"cloudLoginPassword\":%@,\"cloudType\":%@,\"dateOfBirth\":\"%@\",\"emailID\":\"%@\",\"gender\":\"%@\",\"location\":\"%@\",\"mobileNumber\":\"%@\",\"name\":\"%@\",\"password\":\"%@\",\"speciality\":\"%@\"\}",[_data objectForKey:@"bloodGroup"],[_data objectForKey:@"cloudLoginId"],[_data objectForKey:@"cloudLoginPassword"],[_data objectForKey:@"cloudType"],[_data objectForKey:@"dateOfBirth"],[_data objectForKey:@"emailID"],[_data objectForKey:@"gender"],[_data objectForKey:@"location"],[_data objectForKey:@"mobileNumber"],[_data objectForKey:@"name"],[_data objectForKey:@"password"],[_data objectForKey:@"speciality"]];
-    NSString * params =[NSString stringWithFormat:@"\{\"bloodGroup\":\"A+\",\"cloudLoginId\":\"\",\"cloudLoginPassword\":\"\",\"cloudType\":\"3\",\"dateOfBirth\":\"2015-9-22\",\"emailID\":\"%@\",\"gender\":\"Male\",\"location\":\"pune\",\"mobileNumber\":\"+911234567890\",\"name\":\"rajiv\",\"password\":\"rajiv\",\"speciality\":\"pediatric\"}",[_data objectForKey:@"emailID"]];
+    
+    // imp  working copy=================================
+    
+    //NSString * params =[NSString stringWithFormat:@"\{\"bloodGroup\":\"A+\",\"cloudLoginId\":\"\",\"cloudLoginPassword\":\"\",\"cloudType\":\"3\",\"dateOfBirth\":\"2015-9-22\",\"emailID\":\"%@\",\"gender\":\"Male\",\"location\":\"pune\",\"mobileNumber\":\"+911234567890\",\"name\":\"rajiv\",\"password\":\"rajiv\",\"speciality\":\"pediatric\"}",[_data objectForKey:@"emailID"]];
+    
+    NSString * params =[NSString stringWithFormat:@"\{\"bloodGroup\":\"%@\",\"cloudLoginId\":\"\",\"cloudLoginPassword\":\"\",\"cloudType\":\"3\",\"dateOfBirth\":\"%@\",\"emailID\":\"%@\",\"gender\":\"%@\",\"location\":\"%@\",\"mobileNumber\":\"%@\",\"name\":\"%@\",\"password\":\"%@\",\"speciality\":\"%@\"}",[_data objectForKey:@"bloodGroup"],[_data objectForKey:@"dateOfBirth"],[_data objectForKey:@"emailID"],[_data objectForKey:@"gender"],[_data objectForKey:@"location"],[_data objectForKey:@"mobileNumber"],[_data objectForKey:@"name"],[_data objectForKey:@"password"],[_data objectForKey:@"speciality"]];
+    
     NSLog(@"params %@",params);
     [urlRequest setHTTPMethod:@"POST"];
     [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -149,6 +175,7 @@
                                                                                                                   delegate:self
                                                                                                          cancelButtonTitle:@"OK"
                                                                                                          otherButtonTitles:nil];
+                                                                   [spinner stopAnimating];
                                                                    [alert show];
                                                                    
                                                                }
@@ -159,6 +186,7 @@
                                                                                                               delegate:self
                                                                                                      cancelButtonTitle:@"OK"
                                                                                                      otherButtonTitles:nil];
+                                                               [spinner stopAnimating];
                                                                [alert show];
                                                            }
                                                            
@@ -168,6 +196,7 @@
 }
 -(void)verify:(NSString *)regCode{
     if ([registrationCode isEqualToString:@"1234"]) {
+        [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
         [self registerDoctor];
     }
     else{
@@ -195,7 +224,10 @@
     //    [NSURLConnection sendSynchronousRequest:request
     //                          returningResponse:&urlResponse error:&requestError];
 }
-
+-(void)threadStartAnimating:(id)data
+{
+    [spinner startAnimating];
+}
 - (IBAction)registrationConfirmed:(id)sender {
     if(![smsRegistrationCodeField.text isEqualToString:@""] && ![emailRegistrationCodeField.text isEqualToString:@""]){
         if ([smsRegistrationCodeField.text isEqualToString:emailRegistrationCodeField.text]) {

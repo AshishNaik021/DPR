@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SMSConfirmationView : UIViewController
+@interface SMSConfirmationView : UIViewController<UIAlertViewDelegate>{
+    UIActivityIndicatorView *spinner;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *smsRegistrationCodeField;
 @property (weak, nonatomic) IBOutlet UITextField *emailRegistrationCodeField;

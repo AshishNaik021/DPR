@@ -264,7 +264,7 @@
         returnvalue = 1;
     }
     else{
-        NSString *nameRegex = @"[a-z]+";
+        NSString *nameRegex = @"[A-Za-z]+";
         NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
         if ([nameTest evaluateWithObject:gender]) {
             returnvalue = 1;
