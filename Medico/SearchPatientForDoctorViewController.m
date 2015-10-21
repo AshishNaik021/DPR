@@ -35,7 +35,7 @@
     [[self navigationItem] setBackBarButtonItem:backButton];
     
     
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"searchpatient" ofType:@"json"];
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"searchPatient" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
@@ -62,9 +62,11 @@
     // Configure the cell...
     
     //for(int count = 0;count<_arr.count;count++){
-//    cell.showDetailsButton.tag = indexPath.row;
-//    [cell.showDetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
-    
+    int row = [indexPath row];
+    cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
+    cell.locationlabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
+    cell.patientImage.image = [UIImage imageNamed:@"patientProfile.png"];
+
     return cell;
     
 }

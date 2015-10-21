@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface PatientDetailSearchDoctorViewController : UIViewController{
+@interface PatientDetailSearchDoctorViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     MKMapView *map;
 }
 
@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIView *listContentView;
 @property (weak, nonatomic) IBOutlet UIView *mapContentView;
 -(IBAction)radiobuttonSelected:(id)sender;
-
+@property IBOutlet NSMutableArray *jsonList;
 
 
 

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchPatientForDoctorCell : UITableViewCell
-
+@property IBOutlet UILabel *nameLabel;
+@property IBOutlet UILabel *locationlabel;
+@property IBOutlet UIImageView *patientImage;
 @end

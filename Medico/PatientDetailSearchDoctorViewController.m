@@ -7,6 +7,8 @@
 //
 
 #import "PatientDetailSearchDoctorViewController.h"
+#import "PatientDetailSearchDoctorCell.h"
+#import "DoctorLandingPageView.h"
 
 @interface PatientDetailSearchDoctorViewController ()
 
@@ -17,14 +19,67 @@
 @synthesize mapRadioButton;
 @synthesize radioButton;
 @synthesize map = _map;
+@synthesize jsonList;
+
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     radioButton = NO;
     self.listContentView.hidden = FALSE;
     self.mapContentView.hidden = TRUE;
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    
+    self.navigationItem.title = @"Search Doctor";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    
+    
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"searchDoctor" ofType:@"json"];
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *e;
+    jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
+    
+
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return jsonList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"TableCell";
+    PatientDetailSearchDoctorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    //for(int count = 0;count<_arr.count;count++){
+    int row = [indexPath row];
+    cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
+    cell.locationLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
+    cell.specialtyLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"speciality"];
+    cell.doctorImage.image = [UIImage imageNamed:@"doctordefault.png"];
+    
+    return cell;
     
 }
+
 
 
 
