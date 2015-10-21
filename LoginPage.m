@@ -190,17 +190,6 @@
 {
     [spinner startAnimating];
 }
--(id)returnName: (NSString *)emailID{
-    if ([emailID isEqualToString:@"ahemad@gmail.com"])
-        return @"Ahemad";
-    else if ([emailID isEqualToString:@"ma@gmail.com"])
-        return @"Mayur Zambare";
-    else if([emailID isEqualToString:@"kb@gmail.com"])
-        return @"Kaustubh Bharambe";
-    else if([emailID isEqualToString:@"r@gmail.com"])
-        return @"Ram";
-    return @"Kaustubh Bharambe";
-}
 
 -(void)parseJSON : (NSString *)responseData{
     NSString * jsonString = responseData;
@@ -211,18 +200,20 @@
     NSLog(@"NSDictionery:%@",parsedData);
     NSString *userType = [NSString stringWithFormat:[parsedData valueForKey:@"type"]];
     NSLog(@"userType:%@",[parsedData valueForKey:@"type"]);
-    NSString *email = [parsedData valueForKey:@"emailID"];
+    //NSString *email = [NSString stringWithFormat:[parsedData valueForKey:@"emailID"]];
     if ([userType isEqualToString:@"Doctor"]) {
         DoctorLandingPageView *doctorHome =
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-        doctorHome.doctorName = [NSString stringWithFormat:[self returnName:email]];
+        doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
+                NSLog(@"email passing %@",doctorHome.doctorEmail);
         [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
     }
     else if ([userType isEqualToString:@"Patient"]){
         DoctorLandingPageView *doctorHome =
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-        doctorHome.doctorName = [NSString stringWithFormat:[self returnName:email]];
+        doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
+        NSLog(@"email passing %@",doctorHome.doctorEmail);
         [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
         // As Patient Page not not present, doctor page is displayed

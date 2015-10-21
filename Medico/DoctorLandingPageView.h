@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *manageAppointmentButton;
 - (IBAction)manageAppointments:(id)sender;
 @property (nonatomic, retain) NSString * doctorName;
+@property (nonatomic, retain) NSString * doctorEmail;
 
 
 

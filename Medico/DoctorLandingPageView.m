@@ -15,6 +15,7 @@
 
 @implementation DoctorLandingPageView
 @synthesize doctorName = _doctorName;
+@synthesize doctorEmail = _doctorEmail;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,12 +26,23 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSArray *arr = [json valueForKeyPath:@"demo"];
     //self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
-    self.doctorNameLabel.text = _doctorName;
+    //self.doctorNameLabel.text = _doctorName;
     
-    
+    [self setName];
     // Do any additional setup after loading the view.
 }
-
+-(void)setName{
+    NSLog(@"docemail %@",_doctorEmail);
+        NSLog(@"docname %@",_doctorName);
+        if ([_doctorEmail isEqualToString:@"ahemad@gmail.com"])
+            self.doctorNameLabel.text=  @"Ahemad";
+        else if ([_doctorEmail isEqualToString:@"ma@gmail.com"])
+            self.doctorNameLabel.text =  @"Mayur Zambare";
+        else if([_doctorEmail isEqualToString:@"kb@gmail.com"])
+            self.doctorNameLabel.text = @"Kaustubh Bharambe";
+        else if([_doctorEmail isEqualToString:@"r@gmail.com"])
+            self.doctorNameLabel.text = @"Ram";
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
