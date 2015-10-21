@@ -14,6 +14,7 @@
 @end
 
 @implementation DoctorLandingPageView
+@synthesize doctorName = _doctorName;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,8 +24,9 @@
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSArray *arr = [json valueForKeyPath:@"demo"];
-        self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
-   
+    //self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
+    self.doctorNameLabel.text = _doctorName;
+    
     
     // Do any additional setup after loading the view.
 }
@@ -35,22 +37,22 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)settings:(id)sender {
 }
 - (IBAction)logout:(id)sender {
-
-        LoginPage *loginPage =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
-        [self.navigationController pushViewController:loginPage animated:YES];
+    
+    LoginPage *loginPage =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+    [self.navigationController pushViewController:loginPage animated:YES];
 }
 
 - (IBAction)searchAppointment:(id)sender {
