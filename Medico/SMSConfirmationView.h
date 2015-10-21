@@ -16,6 +16,8 @@
 @property (nonatomic, retain) NSDictionary *data;
 @property (weak, nonatomic) IBOutlet UIButton *emailResendButton;
 @property (weak, nonatomic) IBOutlet UIButton *registrationConfirmedButton;
+@property(nonatomic,retain) NSString * registrationCode;
+@property (nonatomic,retain) NSString *returnString;
 
 - (IBAction)registrationConfirmed:(id)sender;
 - (IBAction)emailResend:(id)sender;
