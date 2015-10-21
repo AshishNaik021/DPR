@@ -16,8 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *patientNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *patientSpecialityField;
 @property (weak, nonatomic) IBOutlet UILabel *lastVisitedField;
-@property (weak, nonatomic) IBOutlet UIView *profileContainerView;
-@property (weak, nonatomic) IBOutlet UIView *appointmentContainerView;
+@property (weak, nonatomic) IBOutlet UIView *profileView;
+@property (weak, nonatomic) IBOutlet UIView *appointmentView;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *appointmentTabButton;
 @property (weak, nonatomic) IBOutlet UIButton *profileTabButton;
 
