@@ -1,14 +1,14 @@
 //
-//  SearchPatientForDoctorCell.m
+//  PatientAppointmentsForDoctorCell.m
 //  Medico
 //
-//  Created by APPLE on 21/10/15.
+//  Created by APPLE on 23/10/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "SearchPatientForDoctorCell.h"
+#import "PatientAppointmentsForDoctorCell.h"
 
-@implementation SearchPatientForDoctorCell
+@implementation PatientAppointmentsForDoctorCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -19,12 +19,5 @@
 
     // Configure the view for the selected state
 }
--(void)patientDetail:(id)sender{
-    
-}
--(void)showAppointment:(id)sender{
-    
-}
-
 
 @end

@@ -9,6 +9,7 @@
 #import "SearchPatientForDoctorViewController.h"
 #import "DoctorLandingPageView.h"
 #import "SearchPatientForDoctorCell.h"
+#import "PatientAppointmentsForDoctorViewController.h"
 
 @interface SearchPatientForDoctorViewController ()
 
@@ -66,10 +67,18 @@
     cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
     cell.locationlabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
     cell.patientImage.image = [UIImage imageNamed:@"patientProfile.png"];
+    cell.showAppointmentButton.tag = row;
+    [cell.showAppointmentButton addTarget:self action:@selector(showAppointment:) forControlEvents:UIControlEventTouchUpInside];
+
 
     return cell;
     
 }
+     - (IBAction)showAppointment:(id)sender {
+     PatientAppointmentsForDoctorViewController *patientAppoint =
+     [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAppointmentsForDoctorViewController"];
+     [self.navigationController pushViewController:patientAppoint animated:YES];
+     }
 
 
 - (void)didReceiveMemoryWarning {

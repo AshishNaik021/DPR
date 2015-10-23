@@ -1,0 +1,67 @@
+[
+    {
+        "id": 23,
+        "doctorId": 3,
+        "patientId": 11,
+        "clinicId": 7,
+        "shift": "shift1",
+        "bookTime": "10:30AM",
+        "timeSlot": "10:00 AM to 11:00 AM",
+        "appointmentDate": "25-Feb-2014",
+        "status": "Occupied",
+        "visitType": "New",
+        "isVisited": null
+    },
+    {
+        "id": 24,
+        "doctorId": 3,
+        "patientId": 11,
+        "clinicId": 6,
+        "shift": "shift1",
+        "bookTime": "4:45PM",
+        "timeSlot": "03:00 PM to 06:00 PM",
+        "appointmentDate": "26-Feb-2014",
+        "status": "Occupied",
+        "visitType": "FollowUp",
+        "isVisited": null
+    },
+    {
+        "id": 14,
+        "doctorId": 3,
+        "patientId": 11,
+        "clinicId": 1,
+        "shift": "shift1",
+        "bookTime": "6:30AM",
+        "timeSlot": "06:00 AM to 08:00 AM",
+        "appointmentDate": "25-March-2014",
+        "status": "Occupied",
+        "visitType": "New",
+        "isVisited": null
+    },
+    {
+        "id": 11,
+        "doctorId": 3,
+        "patientId": 11,
+        "clinicId": 1,
+        "shift": "shift3",
+        "bookTime": "7:45PM",
+        "timeSlot": "05:45 PM to 10:00 PM",
+        "appointmentDate": "25-Feb-2015",
+        "status": "Occupied",
+        "visitType": "FollowUp",
+        "isVisited": null
+    },
+    {
+        "id": 16,
+        "doctorId": 3,
+        "patientId": 11,
+        "clinicId": 1,
+        "shift": "shift2",
+        "bookTime": "2:0PM",
+        "timeSlot": "02:00 PM  to  05:00 PM",
+        "appointmentDate": "25-Feb-2013",
+        "status": "Occupied",
+        "visitType": "New",
+        "isVisited": null
+    }
+]
