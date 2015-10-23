@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailPatientProfileViewController : UIViewController
+@interface DetailPatientProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property IBOutlet NSArray *detailArr;
 
@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastVisitedField;
 @property (weak, nonatomic) IBOutlet UIView *profileView;
 @property (weak, nonatomic) IBOutlet UIView *appointmentView;
+@property IBOutlet NSArray *jsonList;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *appointmentTabButton;

@@ -8,12 +8,14 @@
 
 #import "DetailPatientProfileViewController.h"
 #import "DoctorLandingPageView.h"
+#import "DetailPatientProfileCell.h"
 
 @interface DetailPatientProfileViewController ()
 
 @end
 
 @implementation DetailPatientProfileViewController
+@synthesize jsonList;
 
 - (IBAction)profileTab:(id)sender {
 //    self.profileContainerView.hidden = FALSE;
@@ -66,9 +68,51 @@
     
     self.profileTabButton.titleLabel.textColor = [UIColor blackColor];
     [self.profileTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-
+  
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorPatientClinics" ofType:@"json"];
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *e;
+    jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
+    NSLog(@"The Array=================%@",jsonList);
+    NSLog(@"name of clinic===========%@",[[jsonList objectAtIndex:0]objectForKey:@"slot1"]);
     
 }
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+        return jsonList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"TableCell";
+    // DoctorManageAppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    //for(int count = 0;count<_arr.count;count++){
+    
+    DetailPatientProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    int row = [indexPath row];
+
+   
+    cell.clinicNameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicName"];
+    cell.clinicCityLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicLocation"];
+    cell.mobileNoLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"contactNumber"];
+    NSLog(@"Slot1:::%@",[[jsonList objectAtIndex:row] objectForKey:@"slot1"]);
+//    cell.slot1Text.text = [[jsonList objectAtIndex:row] objectForKey:@"slot1"];
+//    cell.slot2Text.text = [[jsonList objectAtIndex:row] objectForKey:@"slot2"];
+//    cell.slot3Text.text = [[jsonList objectAtIndex:row] objectForKey:@"slot3"];
+
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

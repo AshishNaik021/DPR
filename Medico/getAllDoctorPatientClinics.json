@@ -1,0 +1,74 @@
+[
+    {
+        "doctorId": "3",
+        "doctorName": "mayur zambare",
+        "clinicId": "1",
+        "clinicName": "nobel",
+        "clinicLocation": "pune",
+        "contactNumber": "123456789",
+        "slot1": {
+            "days": "Mon - Tue - Wed - Thu",
+            "startTimes": "06:00 AM",
+            "endTimes": "08:00 AM"
+        },
+        "slot2": {
+            "days": "Mon - Tue - Wed - Thu",
+            "startTimes": "02:00 PM",
+            "endTimes": "05:00 PM"
+        },
+        "slot3": {
+            "days": "Mon - Tue - Wed - Thu - Fri - Sat - Sun",
+            "startTimes": "05:45 PM",
+            "endTimes": "10:00 PM"
+        },
+        "onlineAppointment": "Always"
+    },
+    {
+        "doctorId": "3",
+        "doctorName": "mayur zambare",
+        "clinicId": "6",
+        "clinicName": "aditya birla",
+        "clinicLocation": "pune",
+        "contactNumber": "123456789",
+        "slot1": {
+            "days": "Mon - Tue - Wed - Thu",
+            "startTimes": "03:00 PM",
+            "endTimes": "06:00 PM"
+        },
+        "slot2": {
+            "days": "Mon - Tue - Wed - Thu",
+            "startTimes": "07:00 PM",
+            "endTimes": "10:00 PM"
+        },
+        "slot3": {
+            "days": null,
+            "startTimes": null,
+            "endTimes": null
+        },
+        "onlineAppointment": "Always"
+    },
+    {
+        "doctorId": "3",
+        "doctorName": "mayur zambare",
+        "clinicId": "7",
+        "clinicName": "zumritaliyya",
+        "clinicLocation": "hdufhdj",
+        "contactNumber": "123456789",
+        "slot1": {
+            "days": "Mon - Tue - Wed - Thu - Fri - Sat - Sun",
+            "startTimes": "10:00 AM",
+            "endTimes": "11:00 AM"
+        },
+        "slot2": {
+            "days": null,
+            "startTimes": null,
+            "endTimes": null
+        },
+        "slot3": {
+            "days": null,
+            "startTimes": null,
+            "endTimes": null
+        },
+        "onlineAppointment": "Always"
+    }
+]
