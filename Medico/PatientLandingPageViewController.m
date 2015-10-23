@@ -84,4 +84,6 @@
 }
 */
 
+- (IBAction)logout:(id)sender {
+}
 @end

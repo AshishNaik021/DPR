@@ -13,7 +13,9 @@
 @property IBOutlet NSArray *image;
 @property IBOutlet NSArray *titleName;
 @property IBOutlet NSArray *total;
+@property (weak, nonatomic) IBOutlet UILabel *pNameLabel;
 
+- (IBAction)logout:(id)sender;
 
 
 

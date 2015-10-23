@@ -3233,22 +3233,22 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-0f-kDx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cUu-0f-kDx">
                                 <rect key="frame" x="0.0" y="51" width="375" height="616"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="62" id="SQI-UX-CyD" customClass="SearchPatientForDoctorCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="71" id="SQI-UX-CyD" customClass="SearchPatientForDoctorCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SQI-UX-CyD" id="bqu-Jf-43V">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="patientProfile.png" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-vr-XZi">
-                                                    <rect key="frame" x="8" y="8" width="47" height="45"/>
+                                                    <rect key="frame" x="8" y="8" width="41" height="31"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgG-pJ-55X">
                                                     <rect key="frame" x="63" y="32" width="304" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -3258,12 +3258,33 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9T-mZ-wix">
+                                                    <rect key="frame" x="321" y="20" width="46" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="&gt;">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showAppointment:" destination="SQI-UX-CyD" eventType="touchUpInside" id="MKG-Zm-G4r"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bib-2y-KAj">
+                                                    <rect key="frame" x="8" y="39" width="41" height="23"/>
+                                                    <state key="normal" image="arrowButton.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="patientDetail:" destination="SQI-UX-CyD" eventType="touchUpInside" id="bZk-YN-eMn"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="locationlabel" destination="MgG-pJ-55X" id="BCf-xd-R8e"/>
                                             <outlet property="nameLabel" destination="elD-B3-Rb2" id="6Zu-pm-v5n"/>
+                                            <outlet property="patientDetailButton" destination="Bib-2y-KAj" id="v4l-ye-o6f"/>
                                             <outlet property="patientImage" destination="yuL-vr-XZi" id="ZaJ-oz-RyY"/>
+                                            <outlet property="showAppointmentButton" destination="A9T-mZ-wix" id="I4n-61-VSH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -5732,13 +5753,13 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="logout:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="AZu-oS-eUd"/>
+                                    <action selector="logout:" destination="1iT-x8-XNu" eventType="touchUpInside" id="iCp-0d-NJV"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorLanding.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-zX-DRR">
                                 <rect key="frame" x="160" y="78" width="55" height="52"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-zS-aAp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-zS-aAp">
                                 <rect key="frame" x="16" y="128" width="343" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
@@ -5788,6 +5809,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                     <navigationItem key="navigationItem" id="5rH-Pc-UAy"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="pNameLabel" destination="Na0-zS-aAp" id="2g2-jX-rwf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qk-lf-PZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -6733,7 +6757,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MSt-Qf-dsC"/>
+        <segue reference="Enf-1y-7gY"/>
         <segue reference="llE-oE-nCp"/>
     </inferredMetricsTieBreakers>
 </document>

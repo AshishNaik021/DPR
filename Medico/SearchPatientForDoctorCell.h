@@ -12,4 +12,10 @@
 @property IBOutlet UILabel *nameLabel;
 @property IBOutlet UILabel *locationlabel;
 @property IBOutlet UIImageView *patientImage;
+@property IBOutlet UIButton *patientDetailButton;
+@property IBOutlet UIButton *showAppointmentButton;
+
+-(IBAction)patientDetail:(id)sender;
+-(IBAction)showAppointment:(id)sender;
+
 @end
