@@ -38,7 +38,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)validate:(id)sender {
+- (IBAction)validate1:(id)sender {
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
@@ -59,7 +59,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
-- (IBAction)validate1:(id)sender {
+- (IBAction)validate:(id)sender {
     [self.passwordField resignFirstResponder];
     [self.emailField resignFirstResponder];
     
@@ -142,8 +142,9 @@
     NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"Data in Array==============%@",arratList);
     NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
-
+    
     NSString *nameOfDoctor = [arratList valueForKey:@"name"];
+    nameOfDoctor = [nameOfDoctor capitalizedString];
     return nameOfDoctor;
     
 }
@@ -167,6 +168,7 @@
     NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
     
     NSString *nameOfPatient = [arratList valueForKey:@"name"];
+    nameOfPatient = [nameOfPatient capitalizedString];
     return nameOfPatient;
     
 }
@@ -253,7 +255,7 @@
         DoctorLandingPageView *doctorHome =
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
         doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
-                NSLog(@"email passing %@",doctorHome.doctorEmail);
+        NSLog(@"email passing %@",doctorHome.doctorEmail);
         NSString *drName = [self getDoctorName];
         doctorHome.doctorName = drName;
         NSLog(@"Return block doctor name:========%@",drName);

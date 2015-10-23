@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DoctorLandingPageView.h"
-//#import "PatientLandingPageView.h"
+#import "PatientLandingPageViewController.h"
 //#import "AssistantLandingPageView.h"
 
 @interface LoginPage : UIViewController{
@@ -34,4 +34,3 @@
 -(void)parseJSON:(NSString *)responseData;
 
 @end
-

@@ -8,12 +8,16 @@
 
 #import "PatientLandingPageViewController.h"
 #import "PatientLandingCell.h"
+#import "LoginPage.h"
 
 @interface PatientLandingPageViewController ()
 
 @end
 
 @implementation PatientLandingPageViewController
+@synthesize patientName = _patientName;
+@synthesize patientEmail = _patientEmail;
+@synthesize pNameLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,8 +37,10 @@
                @"10",
                @"5"];
     self.navigationItem.title = @"Welcome";
+    pNameLabel.text = _patientName;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -67,7 +73,12 @@
 
 
 
-
+- (IBAction)logout:(id)sender {
+    
+    LoginPage *loginPage =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+    [self.navigationController pushViewController:loginPage animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -75,15 +86,13 @@
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)logout:(id)sender {
-}
 @end
