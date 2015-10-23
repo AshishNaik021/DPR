@@ -38,7 +38,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)validate:(id)sender {
+- (IBAction)validate1:(id)sender {
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
@@ -59,7 +59,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
-- (IBAction)validate1:(id)sender {
+- (IBAction)validate:(id)sender {
     [self.passwordField resignFirstResponder];
     [self.emailField resignFirstResponder];
     
@@ -125,6 +125,54 @@
     emailField.text = @"";
     passwordField.text = @"";
 }
+-(NSString *)getDoctorName{
+    NSLog(@"GetName Method is called....");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *emailid = emailField.text;
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getProfileDoctor?email=%@",emailid];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",arratList);
+    NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
+
+    NSString *nameOfDoctor = [arratList valueForKey:@"name"];
+    return nameOfDoctor;
+    
+}
+
+-(NSString *)getPatientName{
+    NSLog(@"GetName Method is called....");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *emailid = emailField.text;
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getProfilePatient?email=%@",emailid];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",arratList);
+    NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
+    
+    NSString *nameOfPatient = [arratList valueForKey:@"name"];
+    return nameOfPatient;
+    
+}
+
+
+
 -(void)loginRequest{
     //    [self.view endEditing:YES];
     returnString = @"";
@@ -206,6 +254,9 @@
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
         doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
                 NSLog(@"email passing %@",doctorHome.doctorEmail);
+        NSString *drName = [self getDoctorName];
+        doctorHome.doctorName = drName;
+        NSLog(@"Return block doctor name:========%@",drName);
         [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
     }
@@ -214,6 +265,9 @@
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
         doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
         NSLog(@"email passing %@",doctorHome.doctorEmail);
+        NSString *pName = [self getPatientName];
+        doctorHome.doctorName = pName;
+        NSLog(@"Return block doctor name:========%@",pName);
         [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
         // As Patient Page not not present, doctor page is displayed
