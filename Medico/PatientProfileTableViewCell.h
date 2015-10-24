@@ -11,8 +11,17 @@
 @interface PatientProfileTableViewCell : UITableViewCell
 
 @property IBOutlet UILabel *patientNameLabel;
-@property IBOutlet UILabel *specialistLabel;
-@property IBOutlet UILabel *lastVisitedLabel;
 @property IBOutlet UIImageView *patientPicture;
+@property (weak, nonatomic) IBOutlet UIButton *lastVisitedButton;
+- (IBAction)lastVisited:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *lastAppointmentButton;
+- (IBAction)lastAppointment:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *appointmentButton;
+- (IBAction)appointment:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *showPatientProfileButton;
+- (IBAction)showPatientProfile:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *getAllAppointmentButton;
+- (IBAction)getAllAppointmnet:(id)sender;
+
 
 @end

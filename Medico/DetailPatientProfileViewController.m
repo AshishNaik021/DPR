@@ -124,7 +124,7 @@
     cell.slot1DayLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"days"];
     cell.slot2DayLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"days"];
    cell.slot3DayLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"days"];
-//
+
     cell.slot1TimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"startTimes"];
     cell.slot2TimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"startTimes"];
    cell.slot3TimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"startTimes"];

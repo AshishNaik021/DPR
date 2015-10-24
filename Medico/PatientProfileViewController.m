@@ -16,6 +16,8 @@
 @end
 
 @implementation PatientProfileViewController
+@synthesize patientArr;
+@synthesize arrDoctor;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -36,14 +38,18 @@
     self.navigationItem.title = @"Patient Profile";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"Patient" ofType:@"json"];
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"HomeCountPatients" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    _patientArr = [json valueForKeyPath:@"PatientProfile"];
-    
-    
-    
+//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+//    _patientArr = [json valueForKeyPath:@"PatientProfile"];
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    patientArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    arrDoctor = [json1 valueForKeyPath:@"doctors"];
+    patientArr =[json1 valueForKey:@"appointmentVm"];
+    NSLog(@"The HomeCountPatients Json File Contains Data---------------%@",arrDoctor);
+  //  NSLog(@"Value of last visited..... %@",[[patientArr objectAtIndex:0] objectForKey:@"appointmentDate"]);
     
 }
 
@@ -55,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _patientArr.count;
+    return arrDoctor.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,14 +73,16 @@
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-    cell.patientNameLabel.text = [[_patientArr objectAtIndex:row] objectForKey:@"name"];
-    cell.specialistLabel.text = [[_patientArr objectAtIndex:row] objectForKey:@"speciality"];
-    cell.lastVisitedLabel.text = [[_patientArr objectAtIndex:row] objectForKey:@"lastVisited"];
-     cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
+       cell.patientNameLabel.text = [[arrDoctor objectAtIndex:row] objectForKey:@"name"];
+ [cell.lastVisitedButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"lastVisited"]] forState:UIControlStateNormal];
+    [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"previousAppointment"]] forState:UIControlStateNormal];
+   //[cell.appointmentButton setTitle:[NSString stringWithFormat:[[patientArr objectAtIndex:0] objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+    
+   cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
     return cell;
     
 }
-
+/*
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
@@ -85,7 +93,7 @@
     }
 
 }
-
+*/
 
 
 

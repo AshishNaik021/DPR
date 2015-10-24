@@ -10,6 +10,7 @@
 #import "DoctorLandingPageView.h"
 #import "SearchPatientForDoctorCell.h"
 #import "PatientAppointmentsForDoctorViewController.h"
+#import "DetailPatientProfileViewController.h"
 
 @interface SearchPatientForDoctorViewController ()
 
@@ -69,7 +70,8 @@
     cell.patientImage.image = [UIImage imageNamed:@"patientProfile.png"];
     cell.showAppointmentButton.tag = row;
     [cell.showAppointmentButton addTarget:self action:@selector(showAppointment:) forControlEvents:UIControlEventTouchUpInside];
-
+    cell.patientDetailButton.tag =row;
+    [cell.patientDetailButton addTarget:self action:@selector(patientDetail:) forControlEvents:UIControlEventTouchUpInside];
 
     return cell;
     
@@ -79,6 +81,13 @@
      [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAppointmentsForDoctorViewController"];
      [self.navigationController pushViewController:patientAppoint animated:YES];
      }
+
+-(void)patientDetail:(id)sender{
+    DetailPatientProfileViewController *patientAppoint =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientProfileViewController"];
+    [self.navigationController pushViewController:patientAppoint animated:YES];
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

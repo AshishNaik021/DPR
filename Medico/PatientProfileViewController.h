@@ -14,6 +14,7 @@
 }
 -(IBAction)homePage:(id)sender;
 @property IBOutlet NSArray *patientArr;
+@property IBOutlet NSArray *arrDoctor;
 
 
 @end

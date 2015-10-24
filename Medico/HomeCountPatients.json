@@ -10,7 +10,7 @@
         "shift": "shift3",
         "bookTime": "9:0PM",
         "timeSlot": "07:00 PM to 10:00 PM",
-        "appointmentDate": 1444867200000,
+        "appointmentDate": "25-Dec-2015",
         "status": null,
         "visitType": "Physical Exam",
         "isVisited": null
@@ -32,8 +32,8 @@
             "bookTime": null,
             "shift": null,
             "clinicId": null,
-            "lastVisited": null,
-            "previousAppointment": null,
+            "lastVisited": "25-Feb-2015",
+            "previousAppointment": "25-Dec-2014",
             "previousDate": null
         },
         {
@@ -52,8 +52,8 @@
             "bookTime": null,
             "shift": null,
             "clinicId": null,
-            "lastVisited": null,
-            "previousAppointment": null,
+            "lastVisited": "20-May-2014",
+            "previousAppointment": "25-Jan-2014",
             "previousDate": null
         }
     ]

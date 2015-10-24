@@ -20,4 +20,14 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)lastVisited:(id)sender {
+}
+- (IBAction)lastAppointment:(id)sender {
+}
+- (IBAction)appointment:(id)sender {
+}
+- (IBAction)showPatientProfile:(id)sender {
+}
+- (IBAction)getAllAppointmnet:(id)sender {
+}
 @end
