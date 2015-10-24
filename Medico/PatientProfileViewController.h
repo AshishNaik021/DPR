@@ -15,7 +15,7 @@
 -(IBAction)homePage:(id)sender;
 @property IBOutlet NSArray *patientArr;
 @property IBOutlet NSArray *arrDoctor;
-
+@property NSDictionary *args;
 
 @end
 

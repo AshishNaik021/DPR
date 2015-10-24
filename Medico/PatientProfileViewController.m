@@ -10,6 +10,9 @@
 #import "DoctorLandingPageView.h"
 #import "PatientProfileTableViewCell.h"
 #import "DetailPatientProfileViewController.h"
+#import "PatientAppointmentsForDoctorViewController.h"
+#import "LastVisitedConsultationViewController.h"
+#import "DoctorBookAppointmentViewController.h"
 
 @interface PatientProfileViewController ()
 
@@ -18,6 +21,7 @@
 @implementation PatientProfileViewController
 @synthesize patientArr;
 @synthesize arrDoctor;
+@synthesize args;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -46,10 +50,14 @@
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     patientArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
     NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
     arrDoctor = [json1 valueForKeyPath:@"doctors"];
-    patientArr =[json1 valueForKey:@"appointmentVm"];
+  //  NSDictionary *argsValues
+    args = [[NSDictionary alloc] initWithDictionary:[json1 objectForKey:@"appointmentVm"]];
+
+  // NSArray *patientArr1 =[json1 valueForKey:@"appointmentVm"];
     NSLog(@"The HomeCountPatients Json File Contains Data---------------%@",arrDoctor);
-  //  NSLog(@"Value of last visited..... %@",[[patientArr objectAtIndex:0] objectForKey:@"appointmentDate"]);
+    NSLog(@"Value of last visited..... %@",[args objectForKey:@"appointmentDate"]);//(unsigned long)patientArr1.count);//objectForKey:@"visitType");
     
 }
 
@@ -76,12 +84,47 @@
        cell.patientNameLabel.text = [[arrDoctor objectAtIndex:row] objectForKey:@"name"];
  [cell.lastVisitedButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"lastVisited"]] forState:UIControlStateNormal];
     [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"previousAppointment"]] forState:UIControlStateNormal];
-   //[cell.appointmentButton setTitle:[NSString stringWithFormat:[[patientArr objectAtIndex:0] objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+   [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
     
    cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
+    cell.showPatientProfileButton.tag =row;
+    [cell.showPatientProfileButton addTarget:self action:@selector(showPatientProfile:) forControlEvents:UIControlEventTouchUpInside];
+    cell.getAllAppointmentButton.tag =row;
+    [cell.getAllAppointmentButton addTarget:self action:@selector(getAllAppointmnet:) forControlEvents:UIControlEventTouchUpInside];
+    cell.lastAppointmentButton.tag =row;
+    [cell.lastAppointmentButton addTarget:self action:@selector(lastAppointment:) forControlEvents:UIControlEventTouchUpInside];
+    cell.appointmentButton.tag =row;
+    [cell.appointmentButton addTarget:self action:@selector(appointment:) forControlEvents:UIControlEventTouchUpInside];
+
+
     return cell;
     
 }
+- (void)appointment:(id)sender {
+    DoctorBookAppointmentViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+}
+
+
+- (void)lastAppointment:(id)sender {
+    LastVisitedConsultationViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"LastVisitedConsultationViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+}
+- (void)getAllAppointmnet:(id)sender {
+    PatientAppointmentsForDoctorViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAppointmentsForDoctorViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+}
+
+- (void)showPatientProfile:(id)sender {
+    DetailPatientProfileViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientProfileViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+}
+
+
 /*
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     

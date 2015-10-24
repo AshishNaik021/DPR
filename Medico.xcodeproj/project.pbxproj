@@ -73,6 +73,10 @@
 		186E579F1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E579E1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.m */; };
 		186E57A21BDB62F500F7CA72 /* DoctorFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57A11BDB62F500F7CA72 /* DoctorFeedBackViewController.m */; };
 		186E57A51BDB699500F7CA72 /* ManageReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57A41BDB699500F7CA72 /* ManageReminderViewController.m */; };
+		186E57A81BDB80A600F7CA72 /* LastVisitedConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57A71BDB80A600F7CA72 /* LastVisitedConsultationViewController.m */; };
+		186E57AB1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */; };
+		186E57AE1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */; };
+		186E57B11BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */; };
 		187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */; };
 		187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7B1BC67C78003AC5D9 /* searchButton.png */; };
 		187A0C7F1BC67F1F003AC5D9 /* checkRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7D1BC67F1F003AC5D9 /* checkRadio.png */; };
@@ -267,6 +271,14 @@
 		186E57A11BDB62F500F7CA72 /* DoctorFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorFeedBackViewController.m; sourceTree = "<group>"; };
 		186E57A31BDB699500F7CA72 /* ManageReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageReminderViewController.h; sourceTree = "<group>"; };
 		186E57A41BDB699500F7CA72 /* ManageReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageReminderViewController.m; sourceTree = "<group>"; };
+		186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastVisitedConsultationViewController.h; sourceTree = "<group>"; };
+		186E57A71BDB80A600F7CA72 /* LastVisitedConsultationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastVisitedConsultationViewController.m; sourceTree = "<group>"; };
+		186E57A91BDB88A400F7CA72 /* DoctorBookAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorBookAppointmentViewController.h; sourceTree = "<group>"; };
+		186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorBookAppointmentViewController.m; sourceTree = "<group>"; };
+		186E57AC1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorAddTreatmentViewController.h; sourceTree = "<group>"; };
+		186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorAddTreatmentViewController.m; sourceTree = "<group>"; };
+		186E57AF1BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailAddTreatmentViewController.h; sourceTree = "<group>"; };
+		186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailAddTreatmentViewController.m; sourceTree = "<group>"; };
 		187A0C781BC67BA0003AC5D9 /* SearchClinicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchClinicView.h; sourceTree = "<group>"; };
 		187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicView.m; sourceTree = "<group>"; };
 		187A0C7B1BC67C78003AC5D9 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
@@ -409,6 +421,14 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				186E57AC1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.h */,
+				186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */,
+				186E57AF1BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.h */,
+				186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */,
+				186E57A91BDB88A400F7CA72 /* DoctorBookAppointmentViewController.h */,
+				186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */,
+				186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */,
+				186E57A71BDB80A600F7CA72 /* LastVisitedConsultationViewController.m */,
 				186E57A31BDB699500F7CA72 /* ManageReminderViewController.h */,
 				186E57A41BDB699500F7CA72 /* ManageReminderViewController.m */,
 				186E579D1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.h */,
@@ -822,6 +842,7 @@
 				182394E81BBD0DCE00D97366 /* AppDelegate.m in Sources */,
 				18327F171BC4E57A002210BC /* ForgotPasswordView.m in Sources */,
 				18C7DB001BC792C1005B93A9 /* SearchTemplate.m in Sources */,
+				186E57AB1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m in Sources */,
 				18C7DB081BC7A047005B93A9 /* ClinicInformationView.m in Sources */,
 				1842F3651BC3E0300055597E /* TemplateDetailView.m in Sources */,
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
@@ -832,6 +853,8 @@
 				18C14F3F1BC2808E00AFF591 /* DoctorRegistrer.m in Sources */,
 				186BD61D1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m in Sources */,
 				183D1A4D1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.m in Sources */,
+				186E57B11BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m in Sources */,
+				186E57AE1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m in Sources */,
 				184C23571BDA5FC2004F3EF1 /* DetailPatientProfileCell.m in Sources */,
 				1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */,
 				185D86FE1BD78C97003B357C /* AddPatientViewController.m in Sources */,
@@ -843,6 +866,7 @@
 				1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
 				189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */,
+				186E57A81BDB80A600F7CA72 /* LastVisitedConsultationViewController.m in Sources */,
 				183511911BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m in Sources */,
 				1897CDA51BCD33DA0043F0FD /* ChangePasswordViewController.m in Sources */,
 				185D870E1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m in Sources */,
