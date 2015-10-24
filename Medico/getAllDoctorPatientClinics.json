@@ -41,9 +41,9 @@
             "endTimes": "10:00 PM"
         },
         "slot3": {
-            "days": null,
-            "startTimes": null,
-            "endTimes": null
+            "days": "Mon - Tue" ,
+            "startTimes": "8.00 PM",
+            "endTimes": "10.00 PM"
         },
         "onlineAppointment": "Always"
     },
@@ -60,14 +60,14 @@
             "endTimes": "11:00 AM"
         },
         "slot2": {
-            "days": null,
-            "startTimes": null,
-            "endTimes": null
+            "days": "Mon - Tue ",
+            "startTimes": "5.00 PM",
+            "endTimes": "7.00 PM"
         },
         "slot3": {
-            "days": null,
-            "startTimes": null,
-            "endTimes": null
+            "days": "Mon - Tue ",
+            "startTimes": "6.00 PM",
+            "endTimes": "10.00 PM"
         },
         "onlineAppointment": "Always"
     }

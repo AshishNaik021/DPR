@@ -16,6 +16,9 @@
 
 @implementation DetailPatientProfileViewController
 @synthesize jsonList;
+@synthesize arrayList1;
+@synthesize arrayList2;
+@synthesize arrayList3;
 
 - (IBAction)profileTab:(id)sender {
 //    self.profileContainerView.hidden = FALSE;
@@ -71,11 +74,24 @@
   
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorPatientClinics" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+   NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+   // NSMutableData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
     jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
-    NSLog(@"The Array=================%@",jsonList);
-    NSLog(@"name of clinic===========%@",[[jsonList objectAtIndex:0]objectForKey:@"slot1"]);
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&e];
+   arrayList1 = [json1 valueForKeyPath:@"slot1"];
+    arrayList2 = [json1 valueForKeyPath:@"slot2"];
+    arrayList3 = [json1 valueForKeyPath:@"slot3"];
+
+   NSLog(@"the data within slot3 array is--------- %@",[[arrayList3 objectAtIndex:0] objectForKey:@"days"]);
+    
+    
+    
+    /*NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
+     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+     NSError *error = nil;
+     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+     _dataArr = [json valueForKeyPath:@"ClinicList"];*/
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -104,10 +120,19 @@
     cell.clinicNameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicName"];
     cell.clinicCityLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicLocation"];
     cell.mobileNoLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"contactNumber"];
-    NSLog(@"Slot1:::%@",[[jsonList objectAtIndex:row] objectForKey:@"slot1"]);
-//    cell.slot1Text.text = [[jsonList objectAtIndex:row] objectForKey:@"slot1"];
-//    cell.slot2Text.text = [[jsonList objectAtIndex:row] objectForKey:@"slot2"];
-//    cell.slot3Text.text = [[jsonList objectAtIndex:row] objectForKey:@"slot3"];
+    
+    cell.slot1DayLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"days"];
+    cell.slot2DayLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"days"];
+   cell.slot3DayLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"days"];
+//
+    cell.slot1TimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"startTimes"];
+    cell.slot2TimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"startTimes"];
+   cell.slot3TimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"startTimes"];
+    
+    cell.slot1AppointmentLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    cell.slot2AppointmentLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    cell.slot3AppointmentLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"onlineAppointment"];
+
 
     
     return cell;

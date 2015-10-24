@@ -19,6 +19,11 @@
 @property (weak, nonatomic) IBOutlet UIView *profileView;
 @property (weak, nonatomic) IBOutlet UIView *appointmentView;
 @property IBOutlet NSArray *jsonList;
+@property IBOutlet NSArray *arrayList1;
+@property IBOutlet NSArray *arrayList2;
+@property IBOutlet NSArray *arrayList3;
+
+
 
 
 @property (weak, nonatomic) IBOutlet UIButton *appointmentTabButton;
