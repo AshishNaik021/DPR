@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RWx-wm-FQX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qo9-wJ-NWb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -320,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awP-ON-g6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-770.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-1379.5" y="-3048.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="RHO-aW-7AX">
@@ -569,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5s-0q-9fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-57.5" y="-3048.5"/>
         </scene>
         <!--Terms And Conditions-->
         <scene sceneID="soy-kq-ld9">
@@ -604,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hc-NE-Le9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-323.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-919.5" y="-3048.5"/>
         </scene>
         <!--Help-->
         <scene sceneID="Ea5-uT-wfZ">
@@ -636,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bex-BW-EKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.5" y="-2568.5"/>
+            <point key="canvasLocation" x="-483.5" y="-3048.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n4m-AW-yIc">
@@ -718,7 +718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppM-0V-f3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461.5" y="-2568.5"/>
+            <point key="canvasLocation" x="843.5" y="-3048.5"/>
         </scene>
         <!--About Medico-->
         <scene sceneID="YbF-NO-Hem">
@@ -4019,7 +4019,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9U-Pl-zzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008.5" y="-2568.5"/>
+            <point key="canvasLocation" x="388.5" y="-3048.5"/>
         </scene>
         <!--Manage Assistant-->
         <scene sceneID="6H0-3l-UoJ">
@@ -6200,7 +6200,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWr-uh-sMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1763.5" y="-3375.5"/>
+            <point key="canvasLocation" x="-1797.5" y="-3797.5"/>
         </scene>
         <!--Patient Clinic Profile And Appointments View Controller-->
         <scene sceneID="QEF-N2-peo">
@@ -6321,7 +6321,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwc-cQ-vqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1331.5" y="-3375.5"/>
+            <point key="canvasLocation" x="-1379.5" y="-3797.5"/>
         </scene>
         <!--Patient Landing Page View Controller-->
         <scene sceneID="UoD-yR-Dd7">
@@ -6451,7 +6451,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qk-lf-PZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1254.5" y="-2580.5"/>
+            <point key="canvasLocation" x="-1797.5" y="-3048.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qqz-Gj-TUm">
@@ -6471,7 +6471,408 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rd1-ov-kxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1763.5" y="-2580.5"/>
+            <point key="canvasLocation" x="-2223.5" y="-3048.5"/>
+        </scene>
+        <!--Symptoms History View Controller-->
+        <scene sceneID="zZg-e5-GJv">
+            <objects>
+                <viewController id="Vdv-gm-OsR" customClass="SymptomsHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eM1-eh-ptT"/>
+                        <viewControllerLayoutGuide type="bottom" id="nfe-qE-mjX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2g6-UY-MmU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symptoms History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa9-YP-Sxv">
+                                <rect key="frame" x="116" y="323" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4jY-sT-um0"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPH-s7-X7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2482.5" y="-2019.5"/>
+        </scene>
+        <!--Medicine Prescribed History View Controller-->
+        <scene sceneID="PEa-fm-MoB">
+            <objects>
+                <viewController id="Lct-Xh-62U" customClass="MedicinePrescribedHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rrE-4c-pCG"/>
+                        <viewControllerLayoutGuide type="bottom" id="vHR-fw-bW1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYU-0p-gPq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medicine Prescribed History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEd-WI-x4p">
+                                <rect key="frame" x="79" y="323" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vwp-qf-4a6"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80k-YK-V08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2482.5" y="-1277.5"/>
+        </scene>
+        <!--Test Prescirbed History View Controller-->
+        <scene sceneID="fGD-KM-c9P">
+            <objects>
+                <viewController id="DB4-yq-gSg" customClass="TestPrescirbedHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xhv-nC-obF"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ru-ZM-Ggf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nH0-TF-U9m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Prescribed History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLA-mQ-Buz">
+                                <rect key="frame" x="98" y="323" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nRq-04-Zgg"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMG-ib-4xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2904.5" y="-1277.5"/>
+        </scene>
+        <!--Diagnosis History View Controller-->
+        <scene sceneID="1Zz-J7-yNq">
+            <objects>
+                <viewController id="FYZ-R1-Oqr" customClass="DiagnosisHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ecB-nG-HSK"/>
+                        <viewControllerLayoutGuide type="bottom" id="WU9-QJ-HUs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PEN-HE-Vy1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diagnosis History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prY-nL-OsX">
+                                <rect key="frame" x="120" y="323" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bif-Wy-lQt"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gW-SW-Z2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2904.5" y="-2019.5"/>
+        </scene>
+        <!--All Detail Information View Controller-->
+        <scene sceneID="ySI-OM-iJy">
+            <objects>
+                <viewController id="xAO-xi-dRd" customClass="AllDetailInformationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QDi-kr-iA3"/>
+                        <viewControllerLayoutGuide type="bottom" id="lNy-zx-xZa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nfH-el-X4i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZV-ys-DQS">
+                                <rect key="frame" x="16" y="74" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Summary">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="summary:" destination="xAO-xi-dRd" eventType="touchUpInside" id="H6Y-dX-u8d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-WH-SLD">
+                                <rect key="frame" x="77" y="74" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Documents">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="documents:" destination="xAO-xi-dRd" eventType="touchUpInside" id="Zo7-rY-VGl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-wP-O1V">
+                                <rect key="frame" x="147" y="74" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Doctor's Note">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doctorsNote:" destination="xAO-xi-dRd" eventType="touchUpInside" id="o6h-nm-Hui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-b3-1qN">
+                                <rect key="frame" x="313" y="74" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Invoices">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="invoices:" destination="xAO-xi-dRd" eventType="touchUpInside" id="2J9-cU-MLp"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2C-pf-mcC">
+                                <rect key="frame" x="28" y="631" width="111" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPC-hV-7rb">
+                                        <rect key="frame" x="8" y="-112" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visite Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-o2-CrG">
+                                        <rect key="frame" x="8" y="-83" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visite Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mt8-x2-eRk">
+                                        <rect key="frame" x="8" y="-54" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Referred By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-6z-xcb">
+                                        <rect key="frame" x="8" y="-25" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72Y-2S-vu5">
+                                        <rect key="frame" x="103" y="-112" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMg-1r-IfP">
+                                        <rect key="frame" x="103" y="-83" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JyG-z1-nFR">
+                                        <rect key="frame" x="103" y="-54" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-EP-YkI">
+                                        <rect key="frame" x="103" y="-25" width="234" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GoD-6G-w80">
+                                        <rect key="frame" x="8" y="44" width="277" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-CG-SNZ">
+                                        <rect key="frame" x="291" y="44" width="37" height="51"/>
+                                        <state key="normal" image="history.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="summarySymptomsHistory:" destination="xAO-xi-dRd" eventType="touchUpInside" id="iEb-gm-hIG"/>
+                                            <segue destination="Vdv-gm-OsR" kind="push" id="nm9-nC-jXd"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diagnosis:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM5-N2-aup">
+                                        <rect key="frame" x="8" y="103" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6G-CQ-14g">
+                                        <rect key="frame" x="8" y="132" width="277" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMa-re-hyY">
+                                        <rect key="frame" x="291" y="132" width="37" height="51"/>
+                                        <state key="normal" image="history.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="summaryDiagnosisHistory:" destination="xAO-xi-dRd" eventType="touchUpInside" id="vKc-gN-AQD"/>
+                                            <segue destination="FYZ-R1-Oqr" kind="push" id="WWv-gh-et8"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medicine Prescribed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-ni-4md">
+                                        <rect key="frame" x="8" y="191" width="145" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bW-Z1-MEO">
+                                        <rect key="frame" x="8" y="220" width="277" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJC-up-PMs">
+                                        <rect key="frame" x="291" y="220" width="37" height="51"/>
+                                        <state key="normal" image="history.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="summaryMedicineHistory:" destination="xAO-xi-dRd" eventType="touchUpInside" id="ggs-t6-BiS"/>
+                                            <segue destination="Lct-Xh-62U" kind="push" id="DyP-V5-yUz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test prescribed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ9-xz-TmE">
+                                        <rect key="frame" x="8" y="279" width="110" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-vC-EqC">
+                                        <rect key="frame" x="8" y="308" width="277" height="51"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDz-z3-tm1">
+                                        <rect key="frame" x="291" y="308" width="37" height="51"/>
+                                        <state key="normal" image="history.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="summaryTestPrescribedHistory:" destination="xAO-xi-dRd" eventType="touchUpInside" id="O21-1E-2S8"/>
+                                            <segue destination="DB4-yq-gSg" kind="push" id="kAR-O9-gl8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSt-sB-tby">
+                                        <rect key="frame" x="268" y="376" width="34" height="21"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="summarySave:" destination="xAO-xi-dRd" eventType="touchUpInside" id="aen-pe-3GZ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symptoms:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-eC-fhy">
+                                        <rect key="frame" x="8" y="10" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.7537655875661875" blue="0.90228831945251231" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-om-Fex">
+                                <rect key="frame" x="196" y="637" width="25" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Document" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXV-ZF-cYB">
+                                        <rect key="frame" x="44" y="20" width="80" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.65762254184372271" green="0.72807974353740179" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOB-KP-Tb8">
+                                <rect key="frame" x="229" y="74" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Treatment Plan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="treatmentPlan:" destination="xAO-xi-dRd" eventType="touchUpInside" id="dXI-Kt-vbH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3A-GB-2XC">
+                                <rect key="frame" x="235" y="637" width="25" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treatment Plan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-36-lsL">
+                                        <rect key="frame" x="26" y="20" width="115" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.77810534491122951" blue="0.57094438420288229" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aer-cN-gDz">
+                                <rect key="frame" x="158" y="637" width="25" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invoices" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vG-su-ps9">
+                                        <rect key="frame" x="44" y="20" width="64" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.59933923892717345" blue="0.37540817410032012" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QM7-rv-0zs">
+                                <rect key="frame" x="16" y="103" width="343" height="520"/>
+                                <color key="backgroundColor" red="0.79033388095964063" green="1" blue="0.92117683429543051" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RlL-wq-0bp"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="doctorsNoteContentView" destination="QM7-rv-0zs" id="uVY-uk-cd5"/>
+                        <outlet property="doctorsNoteTagButton" destination="8aI-wP-O1V" id="huA-bY-0Cf"/>
+                        <outlet property="documentContentView" destination="HUp-om-Fex" id="FNB-KR-t9Q"/>
+                        <outlet property="documentTagButton" destination="6Wk-WH-SLD" id="AZQ-XL-ukV"/>
+                        <outlet property="invoiceContentView" destination="Aer-cN-gDz" id="PV9-JG-auR"/>
+                        <outlet property="invoicesTagButton" destination="Pon-b3-1qN" id="QD4-SN-NQG"/>
+                        <outlet property="summaryClinicNameField" destination="72Y-2S-vu5" id="JCV-nr-vek"/>
+                        <outlet property="summaryContentView" destination="j2C-pf-mcC" id="dN4-ek-P8B"/>
+                        <outlet property="summaryDiagnosisHistoryButton" destination="gMa-re-hyY" id="8sO-lY-dNp"/>
+                        <outlet property="summaryDiagnosisTextview" destination="L6G-CQ-14g" id="iOS-uh-vrm"/>
+                        <outlet property="summaryMedicineHistoryButton" destination="dJC-up-PMs" id="NVs-uk-EML"/>
+                        <outlet property="summaryMedicineTextView" destination="1bW-Z1-MEO" id="HXF-KF-fOG"/>
+                        <outlet property="summaryReferredbyField" destination="Emj-EP-YkI" id="w8V-VK-qdm"/>
+                        <outlet property="summarySaveButton" destination="bSt-sB-tby" id="cpG-eg-IEN"/>
+                        <outlet property="summarySymptomsHistoryButton" destination="RiU-CG-SNZ" id="eCN-39-zNv"/>
+                        <outlet property="summarySymptomsTextView" destination="GoD-6G-w80" id="e9i-9G-HVn"/>
+                        <outlet property="summaryTagButton" destination="zZV-ys-DQS" id="Ms2-jj-GVR"/>
+                        <outlet property="summaryTestPrescribedHistoryButton" destination="YDz-z3-tm1" id="7tN-J2-UUa"/>
+                        <outlet property="summaryTestPrescribedTextView" destination="rC1-vC-EqC" id="80K-ez-fLf"/>
+                        <outlet property="summaryVisiteDateField" destination="tMg-1r-IfP" id="kRH-2l-WXK"/>
+                        <outlet property="summaryVisiteTypeField" destination="JyG-z1-nFR" id="mgb-NV-il7"/>
+                        <outlet property="treatmentPlanContentView" destination="H3A-GB-2XC" id="IQo-fA-iBm"/>
+                        <outlet property="treatmentPlanTagButton" destination="ZOB-KP-Tb8" id="Lhb-Km-f9V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sQ-pD-nvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1566.5" y="-2019.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BbT-74-MCT">
@@ -6491,7 +6892,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVW-8b-tGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2205.5" y="-3375.5"/>
+            <point key="canvasLocation" x="-2223.5" y="-3797.5"/>
         </scene>
         <!--Profile Container View Controller-->
         <scene sceneID="81D-qN-y8b">
@@ -6599,7 +7000,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKn-CA-Qme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1747.5" y="-4092"/>
+            <point key="canvasLocation" x="-1747.5" y="-4408"/>
         </scene>
         <!--Appointment Container View Controller-->
         <scene sceneID="hFO-0O-S3p">
@@ -6791,7 +7192,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiF-m4-Tf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1337.5" y="-4092"/>
+            <point key="canvasLocation" x="-1363.5" y="-4408"/>
         </scene>
         <!--Book Appointment View Controller-->
         <scene sceneID="TcL-RP-KXy">
@@ -7043,7 +7444,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blL-wH-3E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-861.5" y="-3375.5"/>
+            <point key="canvasLocation" x="-919.5" y="-3797.5"/>
         </scene>
         <!--Patient Search Doctor View Controller-->
         <scene sceneID="AHU-jD-pz0">
@@ -7213,7 +7614,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNP-v3-1wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-387.5" y="-3375.5"/>
+            <point key="canvasLocation" x="-483.5" y="-3797.5"/>
         </scene>
         <!--Patient Detail Search Doctor View Controller-->
         <scene sceneID="2AJ-2t-QY0">
@@ -7356,7 +7757,27 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQh-BP-Stv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.5" y="-3375.5"/>
+            <point key="canvasLocation" x="-57.5" y="-3797.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O4K-MA-jb5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qo9-wJ-NWb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxq-Jq-SeP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xAO-xi-dRd" kind="relationship" relationship="rootViewController" id="hGc-VV-VE7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUw-9j-X8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1998.5" y="-2019.5"/>
         </scene>
     </scenes>
     <resources>
@@ -7373,6 +7794,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="downArrow.png" width="256" height="256"/>
         <image name="generalPhysician.png" width="81" height="83"/>
         <image name="gynecologist.png" width="60" height="57"/>
+        <image name="history.png" width="35" height="43"/>
         <image name="homeopathy.png" width="64" height="65"/>
         <image name="location.png" width="44" height="44"/>
         <image name="logo.png" width="84" height="88"/>
@@ -7393,7 +7815,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MSt-Qf-dsC"/>
-        <segue reference="llE-oE-nCp"/>
+        <segue reference="Enf-1y-7gY"/>
+        <segue reference="rKr-LI-ZmT"/>
     </inferredMetricsTieBreakers>
 </document>
