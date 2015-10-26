@@ -41,6 +41,7 @@
 @synthesize doctorsNoteNoteTextView;
 @synthesize doctorsNoteSaveButton;
 @synthesize doctorsNoteSymptomsTextView;
+@synthesize array;
 
 
 - (void) homePage:(id)sender{
@@ -73,9 +74,35 @@
      [doctorsNoteSymptomsTextView.layer setBorderWidth:1.0];
      [doctorsNoteNoteTextView.layer setBorderWidth:1.0];
      [doctorsNoteDiagnosisTextView.layer setBorderWidth:1.0];
+    array = [[NSMutableArray alloc]init];
+    [array addObject:@"Name"];
+    [array addObject:@"Total"];
+    [array addObject:@"Cost"];
+    [array addObject:@"Currency"];
+    [array addObject:@"Discount"];
+    [array addObject:@"Taxes"];
+    [array addObject:@"Total"];
+    [array addObject:@"Note"];
+    [array addObject:@"Cost Dollar"];
+    self.collection.layer.borderWidth = 1.0f;
 
 
+}
 
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return array.count;
+}
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    UILabel *l = (UILabel *)[cell viewWithTag:10];
+    l.text = [array objectAtIndex:indexPath.row];
+    return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

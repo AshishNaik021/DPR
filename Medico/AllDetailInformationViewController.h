@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllDetailInformationViewController : UIViewController
-
+@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>{
+}
+@property IBOutlet NSMutableArray *array;
+@property (weak, nonatomic) IBOutlet UICollectionView *collection;
 @property (weak, nonatomic) IBOutlet UIButton *summaryTagButton;
 @property (weak, nonatomic) IBOutlet UIButton *documentTagButton;
 @property (weak, nonatomic) IBOutlet UIButton *doctorsNoteTagButton;
