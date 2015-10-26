@@ -42,6 +42,8 @@
 		183D408A1BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */; };
 		183D40C71BDE112300AB4FA5 /* UploadDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */; };
 		183D40C91BDE117C00AB4FA5 /* behind_alert_view.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */; };
+		183D40CB1BDE1DCC00AB4FA5 /* medicinePrescribed.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D40CA1BDE1DCC00AB4FA5 /* medicinePrescribed.png */; };
+		183D40CE1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */; };
 		18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */; };
 		18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */; };
 		1842F3141BC38F970055597E /* ManageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3131BC38F970055597E /* ManageAssistant.m */; };
@@ -223,6 +225,9 @@
 		183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDocumentsViewController.h; sourceTree = "<group>"; };
 		183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDocumentsViewController.m; sourceTree = "<group>"; };
 		183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behind_alert_view.png; sourceTree = "<group>"; };
+		183D40CA1BDE1DCC00AB4FA5 /* medicinePrescribed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicinePrescribed.png; sourceTree = "<group>"; };
+		183D40CC1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicinePrescribedScheduleViewController.h; sourceTree = "<group>"; };
+		183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicinePrescribedScheduleViewController.m; sourceTree = "<group>"; };
 		18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateTableViewController.h; sourceTree = "<group>"; };
 		18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateTableViewController.m; sourceTree = "<group>"; };
 		18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateCell.h; sourceTree = "<group>"; };
@@ -443,6 +448,8 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				183D40CC1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.h */,
+				183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */,
 				183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */,
 				183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */,
 				183D407F1BDDF8D600AB4FA5 /* SymptomsHistoryViewController.h */,
@@ -617,6 +624,7 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				183D40CA1BDE1DCC00AB4FA5 /* medicinePrescribed.png */,
 				183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */,
 				183D407D1BDDF17600AB4FA5 /* history.png */,
 				189EDB8C1BD62FFE00AA9B96 /* dentist.png */,
@@ -764,6 +772,7 @@
 			files = (
 				18BB05641BC24DFE00D237CD /* calendar.png in Resources */,
 				18BB05701BC24DFE00D237CD /* manageFinance.png in Resources */,
+				183D40CB1BDE1DCC00AB4FA5 /* medicinePrescribed.png in Resources */,
 				18327F361BC533EE002210BC /* downArrow.png in Resources */,
 				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				182394EE1BBD0DCE00D97366 /* Main.storyboard in Resources */,
@@ -873,6 +882,7 @@
 				1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */,
 				184C234F1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m in Sources */,
 				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
+				183D40CE1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
 				186BD62B1BCFB5E100B43A8C /* PatientLandingCell.m in Sources */,
