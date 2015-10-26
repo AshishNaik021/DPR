@@ -40,6 +40,8 @@
 		183D40841BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40831BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m */; };
 		183D40871BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40861BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m */; };
 		183D408A1BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */; };
+		183D40C71BDE112300AB4FA5 /* UploadDocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */; };
+		183D40C91BDE117C00AB4FA5 /* behind_alert_view.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */; };
 		18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */; };
 		18427DC01BC23E12002A15FC /* ManageTemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */; };
 		1842F3141BC38F970055597E /* ManageAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842F3131BC38F970055597E /* ManageAssistant.m */; };
@@ -218,6 +220,9 @@
 		183D40861BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicinePrescribedHistoryViewController.m; sourceTree = "<group>"; };
 		183D40881BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrescirbedHistoryViewController.h; sourceTree = "<group>"; };
 		183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrescirbedHistoryViewController.m; sourceTree = "<group>"; };
+		183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadDocumentsViewController.h; sourceTree = "<group>"; };
+		183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadDocumentsViewController.m; sourceTree = "<group>"; };
+		183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = behind_alert_view.png; sourceTree = "<group>"; };
 		18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateTableViewController.h; sourceTree = "<group>"; };
 		18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateTableViewController.m; sourceTree = "<group>"; };
 		18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateCell.h; sourceTree = "<group>"; };
@@ -438,6 +443,8 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */,
+				183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */,
 				183D407F1BDDF8D600AB4FA5 /* SymptomsHistoryViewController.h */,
 				183D40801BDDF8D600AB4FA5 /* SymptomsHistoryViewController.m */,
 				183D40821BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.h */,
@@ -610,6 +617,7 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */,
 				183D407D1BDDF17600AB4FA5 /* history.png */,
 				189EDB8C1BD62FFE00AA9B96 /* dentist.png */,
 				189EDB8D1BD62FFE00AA9B96 /* dermatologist.png */,
@@ -773,6 +781,7 @@
 				189EDB961BD62FFE00AA9B96 /* homeopathy.png in Resources */,
 				183D1A441BD0F646003E0CFC /* arrowButton.png in Resources */,
 				18BB05691BC24DFE00D237CD /* doctorLanding.png in Resources */,
+				183D40C91BDE117C00AB4FA5 /* behind_alert_view.png in Resources */,
 				189EDB931BD62FFE00AA9B96 /* dermatologist.png in Resources */,
 				185D87001BD79625003B357C /* searchPatient.json in Resources */,
 				187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */,
@@ -826,6 +835,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183D40C71BDE112300AB4FA5 /* UploadDocumentsViewController.m in Sources */,
 				18327F201BC4F5D9002210BC /* DoctorSettingPageView.m in Sources */,
 				18C7DB201BC7D277005B93A9 /* PatientProfileTableViewCell.m in Sources */,
 				185D87061BD796EC003B357C /* SearchPatientForDoctorCell.m in Sources */,

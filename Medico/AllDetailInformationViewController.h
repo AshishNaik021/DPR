@@ -37,6 +37,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *summaryTestPrescribedHistoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *summarySaveButton;
 
+@property (weak, nonatomic) IBOutlet UITextView *doctorsNoteSymptomsTextView;
+@property (weak, nonatomic) IBOutlet UITextView *doctorsNoteDiagnosisTextView;
+@property (weak, nonatomic) IBOutlet UITextView *doctorsNoteNoteTextView;
+@property (weak, nonatomic) IBOutlet UIButton *doctorsNoteSaveButton;
+
+
 
 
 - (IBAction)summary:(id)sender;
@@ -49,6 +55,7 @@
 - (IBAction)summaryMedicineHistory:(id)sender;
 - (IBAction)summaryTestPrescribedHistory:(id)sender;
 - (IBAction)summarySave:(id)sender;
+- (IBAction)doctorsNoteSave:(id)sender;
 
 
 

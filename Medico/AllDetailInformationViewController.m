@@ -37,6 +37,11 @@
 @synthesize summaryTestPrescribedTextView;
 @synthesize summaryVisiteDateField;
 @synthesize summaryVisiteTypeField;
+@synthesize doctorsNoteDiagnosisTextView;
+@synthesize doctorsNoteNoteTextView;
+@synthesize doctorsNoteSaveButton;
+@synthesize doctorsNoteSymptomsTextView;
+
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -65,7 +70,38 @@
      [summaryTestPrescribedTextView.layer setBorderWidth:1.0];
      [summaryMedicineTextView.layer setBorderWidth:1.0];
      [summaryDiagnosisTextview.layer setBorderWidth:1.0];
+     [doctorsNoteSymptomsTextView.layer setBorderWidth:1.0];
+     [doctorsNoteNoteTextView.layer setBorderWidth:1.0];
+     [doctorsNoteDiagnosisTextView.layer setBorderWidth:1.0];
+
+
+
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *newVC = segue.destinationViewController;
+    
+    [AllDetailInformationViewController setPresentationStyleForSelfController:self presentingController:newVC];
+}
+
++ (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController
+{
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)])
+    {
+        //iOS 8.0 and above
+        presentingController.providesPresentationContextTransitionStyle = YES;
+        presentingController.definesPresentationContext = YES;
+        
+        [presentingController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    }
+    else
+    {
+        [selfController setModalPresentationStyle:UIModalPresentationCurrentContext];
+        [selfController.navigationController setModalPresentationStyle:UIModalPresentationCurrentContext];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -162,5 +198,8 @@
 }
 
 - (IBAction)summarySave:(id)sender {
+}
+
+- (IBAction)doctorsNoteSave:(id)sender {
 }
 @end
