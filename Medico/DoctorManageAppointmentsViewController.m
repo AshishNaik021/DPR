@@ -17,6 +17,9 @@
 
 @implementation DoctorManageAppointmentsViewController
 @synthesize jsonList;
+@synthesize slot1Arr;
+@synthesize slot2Arr;
+@synthesize slot3Arr;
 
 
 - (void) homePage:(id)sender{
@@ -40,12 +43,26 @@
     [[self navigationItem] setBackBarButtonItem:backButton];
     
     
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"manageAppointments" ofType:@"json"];
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorClinics" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
     jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
+   
+    NSDictionary *jsonSubDict = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&e];
+    slot1Arr = [jsonSubDict valueForKeyPath:@"shift1"];
+    slot2Arr = [jsonSubDict valueForKeyPath:@"shift2"];
+    slot3Arr = [jsonSubDict valueForKeyPath:@"shift3"];
     
+    //NSLog(@"total list of array.......%@",[[jsonList objectAtIndex:1] objectForKey:@"clinicName"]);
+    NSLog(@"total list of array.......%lu",(unsigned long)jsonList.count);
+    NSLog(@"total list of array.......%@",[jsonList valueForKey:@"clinicName"]);
+
+
+    NSLog(@"total list of shift1 array.......%@",[slot1Arr valueForKey:@"appointmentCount"]);
+    NSLog(@"total list of shift2 array.......%@",slot2Arr);
+    NSLog(@"total list of shift3 array.......%@",slot3Arr);
+
 
     // Do any additional setup after loading the view.
 }
@@ -56,7 +73,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return jsonList.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,10 +85,13 @@
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-    cell.clinicNameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
-    cell.slot1Label.text = [[jsonList objectAtIndex:row] objectForKey:@"slot1"];
-     cell.slot2Label.text = [[jsonList objectAtIndex:row] objectForKey:@"slot2"];
-     cell.slot3Label.text = [[jsonList objectAtIndex:row] objectForKey:@"slot3"];
+    cell.clinicNameLabel.text = [jsonList valueForKey:@"clinicName"];
+    cell.slot1Label.text = [slot1Arr valueForKey:@"shiftTime"];
+     cell.slot2Label.text = [slot2Arr valueForKey:@"shiftTime"];
+     cell.slot3Label.text = [slot3Arr valueForKey:@"shiftTime"];
+  [cell.slot1TotalAppointmentCountButton setTitle:[slot1Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
+//    [cell.slot2TotalAppointmentCountButton setTitle:[slot2Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
+//    [cell.slot3TotalAppointmentCountButton setTitle:[slot3Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
     cell.downArrowButton.tag = indexPath.row;
     [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];

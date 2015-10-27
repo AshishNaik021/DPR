@@ -3549,21 +3549,69 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldG-RD-MG1">
-                                                    <rect key="frame" x="108" y="36" width="145" height="18"/>
+                                                    <rect key="frame" x="108" y="36" width="186" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q71-Vj-OXM">
-                                                    <rect key="frame" x="108" y="50" width="145" height="18"/>
+                                                    <rect key="frame" x="108" y="50" width="186" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLn-jH-Anh">
-                                                    <rect key="frame" x="108" y="64" width="145" height="18"/>
+                                                    <rect key="frame" x="108" y="64" width="186" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcJ-E3-IPc">
+                                                    <rect key="frame" x="302" y="36" width="26" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="slot1TotalAppointmentCount:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="adO-nJ-2Vn"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udu-nW-rpZ">
+                                                    <rect key="frame" x="336" y="36" width="11" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkU-hE-Smo">
+                                                    <rect key="frame" x="302" y="50" width="26" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="slot2TotalAppointmentCount:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="8Ge-sT-93b"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-OX-omC">
+                                                    <rect key="frame" x="336" y="50" width="11" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2o-yt-NvJ">
+                                                    <rect key="frame" x="302" y="64" width="26" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="slot3TotalAppointmentCount:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="dJ2-Ds-FwP"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRA-Z8-aD1">
+                                                    <rect key="frame" x="336" y="64" width="11" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -3573,8 +3621,11 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                             <outlet property="clinicNameLabel" destination="PQc-Zi-fH5" id="way-of-iVo"/>
                                             <outlet property="downArrowButton" destination="RdV-kL-Txd" id="hWK-cB-tMA"/>
                                             <outlet property="slot1Label" destination="ldG-RD-MG1" id="mSh-ra-rOg"/>
+                                            <outlet property="slot1TotalAppointmentCountButton" destination="gcJ-E3-IPc" id="v9e-bh-qEL"/>
                                             <outlet property="slot2Label" destination="Q71-Vj-OXM" id="N3S-F7-ng6"/>
+                                            <outlet property="slot2TotalAppointmentCountButton" destination="zkU-hE-Smo" id="TUE-w8-rgo"/>
                                             <outlet property="slot3Label" destination="BLn-jH-Anh" id="ecM-gz-76A"/>
+                                            <outlet property="slot3TotalAppointmentCountButton" destination="S2o-yt-NvJ" id="Qmd-dw-aGu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

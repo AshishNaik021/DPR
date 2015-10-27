@@ -11,6 +11,10 @@
 @interface DoctorManageAppointmentsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property IBOutlet NSMutableArray *jsonList;
+@property IBOutlet NSMutableArray *slot1Arr;
+@property IBOutlet NSMutableArray *slot2Arr;
+@property IBOutlet NSMutableArray *slot3Arr;
+
 
 
 @end
