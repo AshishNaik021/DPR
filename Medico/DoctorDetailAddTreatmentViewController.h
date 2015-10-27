@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorDetailAddTreatmentViewController : UIViewController
+@interface DoctorDetailAddTreatmentViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property IBOutlet NSArray *subprocedureArr;
 
 @end
