@@ -17,6 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *slot1Label;
 @property (weak, nonatomic) IBOutlet UILabel *slot2Label;
 @property (weak, nonatomic) IBOutlet UILabel *slot3Label;
+@property IBOutlet UIButton *slot1TotalAppointmentCountButton;
+@property IBOutlet UIButton *slot2TotalAppointmentCountButton;
+@property IBOutlet UIButton *slot3TotalAppointmentCountButton;
+-(IBAction)slot1TotalAppointmentCount:(id)sender;
+-(IBAction)slot2TotalAppointmentCount:(id)sender;
+-(IBAction)slot3TotalAppointmentCount:(id)sender;
 
 
 

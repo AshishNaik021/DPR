@@ -83,6 +83,7 @@
    arrayList1 = [json1 valueForKeyPath:@"slot1"];
     arrayList2 = [json1 valueForKeyPath:@"slot2"];
     arrayList3 = [json1 valueForKeyPath:@"slot3"];
+    
 
    NSLog(@"the data within slot3 array is--------- %@",[[arrayList3 objectAtIndex:0] objectForKey:@"days"]);
     
