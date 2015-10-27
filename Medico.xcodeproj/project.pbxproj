@@ -7,6 +7,254 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180CF1711BDF52C700FA7D86 /* alarmOffgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1441BDF52C600FA7D86 /* alarmOffgrey@3x~iphone.png */; };
+		180CF1721BDF52C700FA7D86 /* alarmOngrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1451BDF52C600FA7D86 /* alarmOngrey@3x~iphone.png */; };
+		180CF1731BDF52C700FA7D86 /* appointmentsgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1461BDF52C600FA7D86 /* appointmentsgrey@3x~iphone.png */; };
+		180CF1741BDF52C700FA7D86 /* capturegrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1471BDF52C600FA7D86 /* capturegrey@3x~iphone.png */; };
+		180CF1751BDF52C700FA7D86 /* chatgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1481BDF52C600FA7D86 /* chatgrey@3x~iphone.png */; };
+		180CF1761BDF52C700FA7D86 /* clinicgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1491BDF52C600FA7D86 /* clinicgrey@3x~iphone.png */; };
+		180CF1771BDF52C700FA7D86 /* consultinggrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF14A1BDF52C600FA7D86 /* consultinggrey@3x~iphone.png */; };
+		180CF1781BDF52C700FA7D86 /* dependentsgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF14B1BDF52C600FA7D86 /* dependentsgrey@3x~iphone.png */; };
+		180CF1791BDF52C700FA7D86 /* doctorgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF14C1BDF52C600FA7D86 /* doctorgrey@3x~iphone.png */; };
+		180CF17A1BDF52C700FA7D86 /* downloadgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF14D1BDF52C600FA7D86 /* downloadgrey@3x~iphone.png */; };
+		180CF17B1BDF52C700FA7D86 /* filtergrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF14E1BDF52C600FA7D86 /* filtergrey@3x~iphone.png */; };
+		180CF17C1BDF52C700FA7D86 /* financegrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF14F1BDF52C600FA7D86 /* financegrey@3x~iphone.png */; };
+		180CF17D1BDF52C700FA7D86 /* firstaidgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1501BDF52C600FA7D86 /* firstaidgrey@3x~iphone.png */; };
+		180CF17E1BDF52C700FA7D86 /* labsgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1511BDF52C600FA7D86 /* labsgrey@3x~iphone.png */; };
+		180CF17F1BDF52C700FA7D86 /* locationgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1521BDF52C600FA7D86 /* locationgrey@3x~iphone.png */; };
+		180CF1801BDF52C700FA7D86 /* logoutgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1531BDF52C600FA7D86 /* logoutgrey@3x~iphone.png */; };
+		180CF1811BDF52C700FA7D86 /* medicineAlarmgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1541BDF52C600FA7D86 /* medicineAlarmgrey@3x~iphone.png */; };
+		180CF1821BDF52C700FA7D86 /* Medicinegrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1551BDF52C600FA7D86 /* Medicinegrey@3x~iphone.png */; };
+		180CF1831BDF52C700FA7D86 /* notesgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1561BDF52C600FA7D86 /* notesgrey@3x~iphone.png */; };
+		180CF1841BDF52C700FA7D86 /* nursegrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1571BDF52C600FA7D86 /* nursegrey@3x~iphone.png */; };
+		180CF1851BDF52C700FA7D86 /* patientgirlgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1581BDF52C600FA7D86 /* patientgirlgrey@3x~iphone.png */; };
+		180CF1861BDF52C700FA7D86 /* patientgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1591BDF52C600FA7D86 /* patientgrey@3x~iphone.png */; };
+		180CF1871BDF52C700FA7D86 /* searchangiographygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF15A1BDF52C600FA7D86 /* searchangiographygrey@3x~iphone.png */; };
+		180CF1881BDF52C700FA7D86 /* searchbiopsygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF15B1BDF52C600FA7D86 /* searchbiopsygrey@3x~iphone.png */; };
+		180CF1891BDF52C700FA7D86 /* searchbloodtestsgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF15C1BDF52C600FA7D86 /* searchbloodtestsgrey@3x~iphone.png */; };
+		180CF18A1BDF52C700FA7D86 /* searchcatgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF15D1BDF52C600FA7D86 /* searchcatgrey@3x~iphone.png */; };
+		180CF18B1BDF52C700FA7D86 /* searchcolonoscopygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF15E1BDF52C700FA7D86 /* searchcolonoscopygrey@3x~iphone.png */; };
+		180CF18C1BDF52C700FA7D86 /* searchdentistgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF15F1BDF52C700FA7D86 /* searchdentistgrey@3x~iphone.png */; };
+		180CF18D1BDF52C700FA7D86 /* searchdermatologygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1601BDF52C700FA7D86 /* searchdermatologygrey@3x~iphone.png */; };
+		180CF18E1BDF52C700FA7D86 /* searchECGgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1611BDF52C700FA7D86 /* searchECGgrey@3x~iphone.png */; };
+		180CF18F1BDF52C700FA7D86 /* searchechocardiographygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1621BDF52C700FA7D86 /* searchechocardiographygrey@3x~iphone.png */; };
+		180CF1901BDF52C700FA7D86 /* searchEEGgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1631BDF52C700FA7D86 /* searchEEGgrey@3x~iphone.png */; };
+		180CF1911BDF52C700FA7D86 /* searchgynecologistgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1641BDF52C700FA7D86 /* searchgynecologistgrey@3x~iphone.png */; };
+		180CF1921BDF52C700FA7D86 /* searchhomeopathygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1651BDF52C700FA7D86 /* searchhomeopathygrey@3x~iphone.png */; };
+		180CF1931BDF52C700FA7D86 /* searchLaparoscopygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1661BDF52C700FA7D86 /* searchLaparoscopygrey@3x~iphone.png */; };
+		180CF1941BDF52C700FA7D86 /* searchLipidProfilesgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1671BDF52C700FA7D86 /* searchLipidProfilesgrey@3x~iphone.png */; };
+		180CF1951BDF52C700FA7D86 /* searchMammographygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1681BDF52C700FA7D86 /* searchMammographygrey@3x~iphone.png */; };
+		180CF1961BDF52C700FA7D86 /* searchMRIgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1691BDF52C700FA7D86 /* searchMRIgrey@3x~iphone.png */; };
+		180CF1971BDF52C700FA7D86 /* searchPediatriciangrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF16A1BDF52C700FA7D86 /* searchPediatriciangrey@3x~iphone.png */; };
+		180CF1981BDF52C700FA7D86 /* searchPETgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF16B1BDF52C700FA7D86 /* searchPETgrey@3x~iphone.png */; };
+		180CF1991BDF52C700FA7D86 /* searchUltrasoundgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF16C1BDF52C700FA7D86 /* searchUltrasoundgrey@3x~iphone.png */; };
+		180CF19A1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF16D1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png */; };
+		180CF19B1BDF52C700FA7D86 /* settingsgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF16E1BDF52C700FA7D86 /* settingsgrey@3x~iphone.png */; };
+		180CF19C1BDF52C700FA7D86 /* templatesgrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF16F1BDF52C700FA7D86 /* templatesgrey@3x~iphone.png */; };
+		180CF19D1BDF52C700FA7D86 /* Timinggrey@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1701BDF52C700FA7D86 /* Timinggrey@3x~iphone.png */; };
+		180CF1A01BDF531E00FA7D86 /* chatblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF19F1BDF531E00FA7D86 /* chatblue@3x~iphone.png */; };
+		180CF1B01BDF535500FA7D86 /* consultingblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A11BDF535500FA7D86 /* consultingblue@3x~iphone.png */; };
+		180CF1B11BDF535500FA7D86 /* doctorblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A21BDF535500FA7D86 /* doctorblue@3x~iphone.png */; };
+		180CF1B21BDF535500FA7D86 /* doctorprofileblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A31BDF535500FA7D86 /* doctorprofileblue@3x~iphone.png */; };
+		180CF1B31BDF535500FA7D86 /* filterblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A41BDF535500FA7D86 /* filterblue@3x~iphone.png */; };
+		180CF1B41BDF535500FA7D86 /* notesblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A51BDF535500FA7D86 /* notesblue@3x~iphone.png */; };
+		180CF1B51BDF535500FA7D86 /* nurseprofileblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A61BDF535500FA7D86 /* nurseprofileblue@3x~iphone.png */; };
+		180CF1B61BDF535500FA7D86 /* patientblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A71BDF535500FA7D86 /* patientblue@3x~iphone.png */; };
+		180CF1B71BDF535500FA7D86 /* patientgirlblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A81BDF535500FA7D86 /* patientgirlblue@3x~iphone.png */; };
+		180CF1B81BDF535500FA7D86 /* patientgirlprofileblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1A91BDF535500FA7D86 /* patientgirlprofileblue@3x~iphone.png */; };
+		180CF1B91BDF535500FA7D86 /* patientprofileblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1AA1BDF535500FA7D86 /* patientprofileblue@3x~iphone.png */; };
+		180CF1BA1BDF535500FA7D86 /* refreshblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1AB1BDF535500FA7D86 /* refreshblue@3x~iphone.png */; };
+		180CF1BB1BDF535500FA7D86 /* searchclinicblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1AC1BDF535500FA7D86 /* searchclinicblue@3x~iphone.png */; };
+		180CF1BC1BDF535500FA7D86 /* searchdoctorblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1AD1BDF535500FA7D86 /* searchdoctorblue@3x~iphone.png */; };
+		180CF1BD1BDF535500FA7D86 /* searchpatientblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1AE1BDF535500FA7D86 /* searchpatientblue@3x~iphone.png */; };
+		180CF1BE1BDF535500FA7D86 /* settingsblue@3x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1AF1BDF535500FA7D86 /* settingsblue@3x~iphone.png */; };
+		180CF1EC1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1BF1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png */; };
+		180CF1ED1BDF539700FA7D86 /* alarmOngrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C01BDF539700FA7D86 /* alarmOngrey@2x~iphone.png */; };
+		180CF1EE1BDF539700FA7D86 /* appointmentsgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C11BDF539700FA7D86 /* appointmentsgrey@2x~iphone.png */; };
+		180CF1EF1BDF539700FA7D86 /* capturegrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C21BDF539700FA7D86 /* capturegrey@2x~iphone.png */; };
+		180CF1F01BDF539700FA7D86 /* chatgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C31BDF539700FA7D86 /* chatgrey@2x~iphone.png */; };
+		180CF1F11BDF539700FA7D86 /* clinicgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C41BDF539700FA7D86 /* clinicgrey@2x~iphone.png */; };
+		180CF1F21BDF539700FA7D86 /* consultinggrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C51BDF539700FA7D86 /* consultinggrey@2x~iphone.png */; };
+		180CF1F31BDF539700FA7D86 /* dependentsgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C61BDF539700FA7D86 /* dependentsgrey@2x~iphone.png */; };
+		180CF1F41BDF539700FA7D86 /* doctorgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C71BDF539700FA7D86 /* doctorgrey@2x~iphone.png */; };
+		180CF1F51BDF539700FA7D86 /* downloadgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C81BDF539700FA7D86 /* downloadgrey@2x~iphone.png */; };
+		180CF1F61BDF539700FA7D86 /* filtergrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1C91BDF539700FA7D86 /* filtergrey@2x~iphone.png */; };
+		180CF1F71BDF539700FA7D86 /* financegrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1CA1BDF539700FA7D86 /* financegrey@2x~iphone.png */; };
+		180CF1F81BDF539700FA7D86 /* firstaidgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1CB1BDF539700FA7D86 /* firstaidgrey@2x~iphone.png */; };
+		180CF1F91BDF539700FA7D86 /* labsgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1CC1BDF539700FA7D86 /* labsgrey@2x~iphone.png */; };
+		180CF1FA1BDF539700FA7D86 /* locationgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1CD1BDF539700FA7D86 /* locationgrey@2x~iphone.png */; };
+		180CF1FB1BDF539700FA7D86 /* logoutgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1CE1BDF539700FA7D86 /* logoutgrey@2x~iphone.png */; };
+		180CF1FC1BDF539700FA7D86 /* medicineAlarmgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1CF1BDF539700FA7D86 /* medicineAlarmgrey@2x~iphone.png */; };
+		180CF1FD1BDF539700FA7D86 /* Medicinegrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D01BDF539700FA7D86 /* Medicinegrey@2x~iphone.png */; };
+		180CF1FE1BDF539700FA7D86 /* notesgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D11BDF539700FA7D86 /* notesgrey@2x~iphone.png */; };
+		180CF1FF1BDF539700FA7D86 /* nursegrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D21BDF539700FA7D86 /* nursegrey@2x~iphone.png */; };
+		180CF2001BDF539700FA7D86 /* patientgirlgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D31BDF539700FA7D86 /* patientgirlgrey@2x~iphone.png */; };
+		180CF2011BDF539700FA7D86 /* patientgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D41BDF539700FA7D86 /* patientgrey@2x~iphone.png */; };
+		180CF2021BDF539700FA7D86 /* searchangiographygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D51BDF539700FA7D86 /* searchangiographygrey@2x~iphone.png */; };
+		180CF2031BDF539700FA7D86 /* searchbiopsygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D61BDF539700FA7D86 /* searchbiopsygrey@2x~iphone.png */; };
+		180CF2041BDF539700FA7D86 /* searchbloodtestsgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D71BDF539700FA7D86 /* searchbloodtestsgrey@2x~iphone.png */; };
+		180CF2051BDF539700FA7D86 /* searchcatgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D81BDF539700FA7D86 /* searchcatgrey@2x~iphone.png */; };
+		180CF2061BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1D91BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png */; };
+		180CF2071BDF539700FA7D86 /* searchdentistgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1DA1BDF539700FA7D86 /* searchdentistgrey@2x~iphone.png */; };
+		180CF2081BDF539700FA7D86 /* searchdermatologygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1DB1BDF539700FA7D86 /* searchdermatologygrey@2x~iphone.png */; };
+		180CF2091BDF539700FA7D86 /* searchECGgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1DC1BDF539700FA7D86 /* searchECGgrey@2x~iphone.png */; };
+		180CF20A1BDF539700FA7D86 /* searchechocardiographygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1DD1BDF539700FA7D86 /* searchechocardiographygrey@2x~iphone.png */; };
+		180CF20B1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1DE1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png */; };
+		180CF20C1BDF539700FA7D86 /* searchgynecologistgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1DF1BDF539700FA7D86 /* searchgynecologistgrey@2x~iphone.png */; };
+		180CF20D1BDF539700FA7D86 /* searchhomeopathygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E01BDF539700FA7D86 /* searchhomeopathygrey@2x~iphone.png */; };
+		180CF20E1BDF539700FA7D86 /* searchLaparoscopygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E11BDF539700FA7D86 /* searchLaparoscopygrey@2x~iphone.png */; };
+		180CF20F1BDF539700FA7D86 /* searchLipidProfilesgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E21BDF539700FA7D86 /* searchLipidProfilesgrey@2x~iphone.png */; };
+		180CF2101BDF539700FA7D86 /* searchMammographygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E31BDF539700FA7D86 /* searchMammographygrey@2x~iphone.png */; };
+		180CF2111BDF539700FA7D86 /* searchMRIgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E41BDF539700FA7D86 /* searchMRIgrey@2x~iphone.png */; };
+		180CF2121BDF539700FA7D86 /* searchPediatriciangrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E51BDF539700FA7D86 /* searchPediatriciangrey@2x~iphone.png */; };
+		180CF2131BDF539700FA7D86 /* searchPETgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E61BDF539700FA7D86 /* searchPETgrey@2x~iphone.png */; };
+		180CF2141BDF539700FA7D86 /* searchUltrasoundgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E71BDF539700FA7D86 /* searchUltrasoundgrey@2x~iphone.png */; };
+		180CF2151BDF539700FA7D86 /* searchXraygrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E81BDF539700FA7D86 /* searchXraygrey@2x~iphone.png */; };
+		180CF2161BDF539700FA7D86 /* settingsgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1E91BDF539700FA7D86 /* settingsgrey@2x~iphone.png */; };
+		180CF2171BDF539700FA7D86 /* templatesgrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1EA1BDF539700FA7D86 /* templatesgrey@2x~iphone.png */; };
+		180CF2181BDF539700FA7D86 /* Timinggrey@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF1EB1BDF539700FA7D86 /* Timinggrey@2x~iphone.png */; };
+		180CF2291BDF53B000FA7D86 /* chatblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2191BDF53B000FA7D86 /* chatblue@2x~iphone.png */; };
+		180CF22A1BDF53B000FA7D86 /* consultingblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF21A1BDF53B000FA7D86 /* consultingblue@2x~iphone.png */; };
+		180CF22B1BDF53B000FA7D86 /* doctorblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF21B1BDF53B000FA7D86 /* doctorblue@2x~iphone.png */; };
+		180CF22C1BDF53B000FA7D86 /* doctorprofileblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF21C1BDF53B000FA7D86 /* doctorprofileblue@2x~iphone.png */; };
+		180CF22D1BDF53B000FA7D86 /* filterblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF21D1BDF53B000FA7D86 /* filterblue@2x~iphone.png */; };
+		180CF22E1BDF53B000FA7D86 /* notesblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF21E1BDF53B000FA7D86 /* notesblue@2x~iphone.png */; };
+		180CF22F1BDF53B000FA7D86 /* nurseprofileblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF21F1BDF53B000FA7D86 /* nurseprofileblue@2x~iphone.png */; };
+		180CF2301BDF53B000FA7D86 /* patientblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2201BDF53B000FA7D86 /* patientblue@2x~iphone.png */; };
+		180CF2311BDF53B000FA7D86 /* patientgirlblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2211BDF53B000FA7D86 /* patientgirlblue@2x~iphone.png */; };
+		180CF2321BDF53B000FA7D86 /* patientgirlprofileblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2221BDF53B000FA7D86 /* patientgirlprofileblue@2x~iphone.png */; };
+		180CF2331BDF53B000FA7D86 /* patientprofileblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2231BDF53B000FA7D86 /* patientprofileblue@2x~iphone.png */; };
+		180CF2341BDF53B000FA7D86 /* refreshblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2241BDF53B000FA7D86 /* refreshblue@2x~iphone.png */; };
+		180CF2351BDF53B000FA7D86 /* searchclinicblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2251BDF53B000FA7D86 /* searchclinicblue@2x~iphone.png */; };
+		180CF2361BDF53B000FA7D86 /* searchdoctorblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2261BDF53B000FA7D86 /* searchdoctorblue@2x~iphone.png */; };
+		180CF2371BDF53B000FA7D86 /* searchpatientblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2271BDF53B000FA7D86 /* searchpatientblue@2x~iphone.png */; };
+		180CF2381BDF53B000FA7D86 /* settingsblue@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2281BDF53B000FA7D86 /* settingsblue@2x~iphone.png */; };
+		180CF2681BDF543400FA7D86 /* alarmOffgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF23B1BDF543400FA7D86 /* alarmOffgrey@2x~ipad.png */; };
+		180CF2691BDF543400FA7D86 /* alarmOngrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF23C1BDF543400FA7D86 /* alarmOngrey@2x~ipad.png */; };
+		180CF26A1BDF543400FA7D86 /* appointmentsgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF23D1BDF543400FA7D86 /* appointmentsgrey@2x~ipad.png */; };
+		180CF26B1BDF543400FA7D86 /* capturegrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF23E1BDF543400FA7D86 /* capturegrey@2x~ipad.png */; };
+		180CF26C1BDF543400FA7D86 /* chatgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF23F1BDF543400FA7D86 /* chatgrey@2x~ipad.png */; };
+		180CF26D1BDF543400FA7D86 /* clinicgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2401BDF543400FA7D86 /* clinicgrey@2x~ipad.png */; };
+		180CF26E1BDF543400FA7D86 /* consultinggrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2411BDF543400FA7D86 /* consultinggrey@2x~ipad.png */; };
+		180CF26F1BDF543400FA7D86 /* dependentsgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2421BDF543400FA7D86 /* dependentsgrey@2x~ipad.png */; };
+		180CF2701BDF543400FA7D86 /* doctorgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2431BDF543400FA7D86 /* doctorgrey@2x~ipad.png */; };
+		180CF2711BDF543400FA7D86 /* downloadgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2441BDF543400FA7D86 /* downloadgrey@2x~ipad.png */; };
+		180CF2721BDF543400FA7D86 /* filtergrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2451BDF543400FA7D86 /* filtergrey@2x~ipad.png */; };
+		180CF2731BDF543400FA7D86 /* financegrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2461BDF543400FA7D86 /* financegrey@2x~ipad.png */; };
+		180CF2741BDF543400FA7D86 /* firstaidgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2471BDF543400FA7D86 /* firstaidgrey@2x~ipad.png */; };
+		180CF2751BDF543400FA7D86 /* labsgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2481BDF543400FA7D86 /* labsgrey@2x~ipad.png */; };
+		180CF2761BDF543400FA7D86 /* locationgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2491BDF543400FA7D86 /* locationgrey@2x~ipad.png */; };
+		180CF2771BDF543400FA7D86 /* logoutgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF24A1BDF543400FA7D86 /* logoutgrey@2x~ipad.png */; };
+		180CF2781BDF543400FA7D86 /* medicineAlarmgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF24B1BDF543400FA7D86 /* medicineAlarmgrey@2x~ipad.png */; };
+		180CF2791BDF543400FA7D86 /* Medicinegrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF24C1BDF543400FA7D86 /* Medicinegrey@2x~ipad.png */; };
+		180CF27A1BDF543400FA7D86 /* notesgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF24D1BDF543400FA7D86 /* notesgrey@2x~ipad.png */; };
+		180CF27B1BDF543400FA7D86 /* nursegrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF24E1BDF543400FA7D86 /* nursegrey@2x~ipad.png */; };
+		180CF27C1BDF543400FA7D86 /* patientgirlgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF24F1BDF543400FA7D86 /* patientgirlgrey@2x~ipad.png */; };
+		180CF27D1BDF543400FA7D86 /* patientgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2501BDF543400FA7D86 /* patientgrey@2x~ipad.png */; };
+		180CF27E1BDF543400FA7D86 /* searchangiographygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2511BDF543400FA7D86 /* searchangiographygrey@2x~ipad.png */; };
+		180CF27F1BDF543400FA7D86 /* searchbiopsygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2521BDF543400FA7D86 /* searchbiopsygrey@2x~ipad.png */; };
+		180CF2801BDF543400FA7D86 /* searchbloodtestsgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2531BDF543400FA7D86 /* searchbloodtestsgrey@2x~ipad.png */; };
+		180CF2811BDF543400FA7D86 /* searchcatgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2541BDF543400FA7D86 /* searchcatgrey@2x~ipad.png */; };
+		180CF2821BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2551BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png */; };
+		180CF2831BDF543400FA7D86 /* searchdentistgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2561BDF543400FA7D86 /* searchdentistgrey@2x~ipad.png */; };
+		180CF2841BDF543400FA7D86 /* searchdermatologygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2571BDF543400FA7D86 /* searchdermatologygrey@2x~ipad.png */; };
+		180CF2851BDF543400FA7D86 /* searchECGgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2581BDF543400FA7D86 /* searchECGgrey@2x~ipad.png */; };
+		180CF2861BDF543400FA7D86 /* searchechocardiographygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2591BDF543400FA7D86 /* searchechocardiographygrey@2x~ipad.png */; };
+		180CF2871BDF543400FA7D86 /* searchEEGgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF25A1BDF543400FA7D86 /* searchEEGgrey@2x~ipad.png */; };
+		180CF2881BDF543400FA7D86 /* searchgynecologistgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF25B1BDF543400FA7D86 /* searchgynecologistgrey@2x~ipad.png */; };
+		180CF2891BDF543400FA7D86 /* searchhomeopathygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF25C1BDF543400FA7D86 /* searchhomeopathygrey@2x~ipad.png */; };
+		180CF28A1BDF543400FA7D86 /* searchLaparoscopygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF25D1BDF543400FA7D86 /* searchLaparoscopygrey@2x~ipad.png */; };
+		180CF28B1BDF543400FA7D86 /* searchLipidProfilesgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF25E1BDF543400FA7D86 /* searchLipidProfilesgrey@2x~ipad.png */; };
+		180CF28C1BDF543400FA7D86 /* searchMammographygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF25F1BDF543400FA7D86 /* searchMammographygrey@2x~ipad.png */; };
+		180CF28D1BDF543400FA7D86 /* searchMRIgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2601BDF543400FA7D86 /* searchMRIgrey@2x~ipad.png */; };
+		180CF28E1BDF543400FA7D86 /* searchPediatriciangrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2611BDF543400FA7D86 /* searchPediatriciangrey@2x~ipad.png */; };
+		180CF28F1BDF543400FA7D86 /* searchPETgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2621BDF543400FA7D86 /* searchPETgrey@2x~ipad.png */; };
+		180CF2901BDF543400FA7D86 /* searchUltrasoundgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2631BDF543400FA7D86 /* searchUltrasoundgrey@2x~ipad.png */; };
+		180CF2911BDF543400FA7D86 /* searchXraygrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2641BDF543400FA7D86 /* searchXraygrey@2x~ipad.png */; };
+		180CF2921BDF543400FA7D86 /* settingsgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2651BDF543400FA7D86 /* settingsgrey@2x~ipad.png */; };
+		180CF2931BDF543400FA7D86 /* templatesgrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2661BDF543400FA7D86 /* templatesgrey@2x~ipad.png */; };
+		180CF2941BDF543400FA7D86 /* Timinggrey@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2671BDF543400FA7D86 /* Timinggrey@2x~ipad.png */; };
+		180CF2C21BDF545C00FA7D86 /* alarmOffgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2951BDF545C00FA7D86 /* alarmOffgrey@1x~ipad.png */; };
+		180CF2C31BDF545C00FA7D86 /* alarmOngrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2961BDF545C00FA7D86 /* alarmOngrey@1x~ipad.png */; };
+		180CF2C41BDF545C00FA7D86 /* appointmentsgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2971BDF545C00FA7D86 /* appointmentsgrey@1x~ipad.png */; };
+		180CF2C51BDF545C00FA7D86 /* capturegrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2981BDF545C00FA7D86 /* capturegrey@1x~ipad.png */; };
+		180CF2C61BDF545C00FA7D86 /* chatgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2991BDF545C00FA7D86 /* chatgrey@1x~ipad.png */; };
+		180CF2C71BDF545C00FA7D86 /* clinicgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF29A1BDF545C00FA7D86 /* clinicgrey@1x~ipad.png */; };
+		180CF2C81BDF545C00FA7D86 /* consultinggrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF29B1BDF545C00FA7D86 /* consultinggrey@1x~ipad.png */; };
+		180CF2C91BDF545C00FA7D86 /* dependentsgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF29C1BDF545C00FA7D86 /* dependentsgrey@1x~ipad.png */; };
+		180CF2CA1BDF545C00FA7D86 /* doctorgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF29D1BDF545C00FA7D86 /* doctorgrey@1x~ipad.png */; };
+		180CF2CB1BDF545C00FA7D86 /* downloadgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF29E1BDF545C00FA7D86 /* downloadgrey@1x~ipad.png */; };
+		180CF2CC1BDF545C00FA7D86 /* filtergrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF29F1BDF545C00FA7D86 /* filtergrey@1x~ipad.png */; };
+		180CF2CD1BDF545C00FA7D86 /* financegrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A01BDF545C00FA7D86 /* financegrey@1x~ipad.png */; };
+		180CF2CE1BDF545C00FA7D86 /* firstaidgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A11BDF545C00FA7D86 /* firstaidgrey@1x~ipad.png */; };
+		180CF2CF1BDF545C00FA7D86 /* labsgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A21BDF545C00FA7D86 /* labsgrey@1x~ipad.png */; };
+		180CF2D01BDF545C00FA7D86 /* locationgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A31BDF545C00FA7D86 /* locationgrey@1x~ipad.png */; };
+		180CF2D11BDF545C00FA7D86 /* logoutgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A41BDF545C00FA7D86 /* logoutgrey@1x~ipad.png */; };
+		180CF2D21BDF545C00FA7D86 /* medicineAlarmgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A51BDF545C00FA7D86 /* medicineAlarmgrey@1x~ipad.png */; };
+		180CF2D31BDF545C00FA7D86 /* Medicinegrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A61BDF545C00FA7D86 /* Medicinegrey@1x~ipad.png */; };
+		180CF2D41BDF545C00FA7D86 /* notesgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A71BDF545C00FA7D86 /* notesgrey@1x~ipad.png */; };
+		180CF2D51BDF545C00FA7D86 /* nursegrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A81BDF545C00FA7D86 /* nursegrey@1x~ipad.png */; };
+		180CF2D61BDF545C00FA7D86 /* patientgirlgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2A91BDF545C00FA7D86 /* patientgirlgrey@1x~ipad.png */; };
+		180CF2D71BDF545C00FA7D86 /* patientgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2AA1BDF545C00FA7D86 /* patientgrey@1x~ipad.png */; };
+		180CF2D81BDF545C00FA7D86 /* searchangiographygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2AB1BDF545C00FA7D86 /* searchangiographygrey@1x~ipad.png */; };
+		180CF2D91BDF545C00FA7D86 /* searchbiopsygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2AC1BDF545C00FA7D86 /* searchbiopsygrey@1x~ipad.png */; };
+		180CF2DA1BDF545C00FA7D86 /* searchbloodtestsgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2AD1BDF545C00FA7D86 /* searchbloodtestsgrey@1x~ipad.png */; };
+		180CF2DB1BDF545C00FA7D86 /* searchcatgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2AE1BDF545C00FA7D86 /* searchcatgrey@1x~ipad.png */; };
+		180CF2DC1BDF545C00FA7D86 /* searchcolonoscopygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2AF1BDF545C00FA7D86 /* searchcolonoscopygrey@1x~ipad.png */; };
+		180CF2DD1BDF545C00FA7D86 /* searchdentistgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B01BDF545C00FA7D86 /* searchdentistgrey@1x~ipad.png */; };
+		180CF2DE1BDF545C00FA7D86 /* searchdermatologygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B11BDF545C00FA7D86 /* searchdermatologygrey@1x~ipad.png */; };
+		180CF2DF1BDF545C00FA7D86 /* searchECGgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B21BDF545C00FA7D86 /* searchECGgrey@1x~ipad.png */; };
+		180CF2E01BDF545C00FA7D86 /* searchechocardiographygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B31BDF545C00FA7D86 /* searchechocardiographygrey@1x~ipad.png */; };
+		180CF2E11BDF545C00FA7D86 /* searchEEGgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B41BDF545C00FA7D86 /* searchEEGgrey@1x~ipad.png */; };
+		180CF2E21BDF545C00FA7D86 /* searchgynecologistgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B51BDF545C00FA7D86 /* searchgynecologistgrey@1x~ipad.png */; };
+		180CF2E31BDF545C00FA7D86 /* searchhomeopathygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B61BDF545C00FA7D86 /* searchhomeopathygrey@1x~ipad.png */; };
+		180CF2E41BDF545C00FA7D86 /* searchLaparoscopygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B71BDF545C00FA7D86 /* searchLaparoscopygrey@1x~ipad.png */; };
+		180CF2E51BDF545C00FA7D86 /* searchLipidProfilesgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B81BDF545C00FA7D86 /* searchLipidProfilesgrey@1x~ipad.png */; };
+		180CF2E61BDF545C00FA7D86 /* searchMammographygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2B91BDF545C00FA7D86 /* searchMammographygrey@1x~ipad.png */; };
+		180CF2E71BDF545C00FA7D86 /* searchMRIgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2BA1BDF545C00FA7D86 /* searchMRIgrey@1x~ipad.png */; };
+		180CF2E81BDF545C00FA7D86 /* searchPediatriciangrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2BB1BDF545C00FA7D86 /* searchPediatriciangrey@1x~ipad.png */; };
+		180CF2E91BDF545C00FA7D86 /* searchPETgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2BC1BDF545C00FA7D86 /* searchPETgrey@1x~ipad.png */; };
+		180CF2EA1BDF545C00FA7D86 /* searchUltrasoundgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2BD1BDF545C00FA7D86 /* searchUltrasoundgrey@1x~ipad.png */; };
+		180CF2EB1BDF545C00FA7D86 /* searchXraygrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2BE1BDF545C00FA7D86 /* searchXraygrey@1x~ipad.png */; };
+		180CF2EC1BDF545C00FA7D86 /* settingsgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2BF1BDF545C00FA7D86 /* settingsgrey@1x~ipad.png */; };
+		180CF2ED1BDF545C00FA7D86 /* templatesgrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2C01BDF545C00FA7D86 /* templatesgrey@1x~ipad.png */; };
+		180CF2EE1BDF545C00FA7D86 /* Timinggrey@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2C11BDF545C00FA7D86 /* Timinggrey@1x~ipad.png */; };
+		180CF2FE1BDF547600FA7D86 /* chatblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2EF1BDF547600FA7D86 /* chatblue@2x~ipad.png */; };
+		180CF2FF1BDF547600FA7D86 /* consultingblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F01BDF547600FA7D86 /* consultingblue@2x~ipad.png */; };
+		180CF3001BDF547600FA7D86 /* doctorblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F11BDF547600FA7D86 /* doctorblue@2x~ipad.png */; };
+		180CF3011BDF547600FA7D86 /* doctorprofileblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F21BDF547600FA7D86 /* doctorprofileblue@2x~ipad.png */; };
+		180CF3021BDF547600FA7D86 /* filterblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F31BDF547600FA7D86 /* filterblue@2x~ipad.png */; };
+		180CF3031BDF547600FA7D86 /* nurseprofileblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F41BDF547600FA7D86 /* nurseprofileblue@2x~ipad.png */; };
+		180CF3041BDF547600FA7D86 /* patientblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F51BDF547600FA7D86 /* patientblue@2x~ipad.png */; };
+		180CF3051BDF547600FA7D86 /* patientgirlblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F61BDF547600FA7D86 /* patientgirlblue@2x~ipad.png */; };
+		180CF3061BDF547600FA7D86 /* patientgirlprofileblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F71BDF547600FA7D86 /* patientgirlprofileblue@2x~ipad.png */; };
+		180CF3071BDF547600FA7D86 /* patientprofileblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F81BDF547600FA7D86 /* patientprofileblue@2x~ipad.png */; };
+		180CF3081BDF547600FA7D86 /* refreshblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2F91BDF547600FA7D86 /* refreshblue@2x~ipad.png */; };
+		180CF3091BDF547600FA7D86 /* searchclinicblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2FA1BDF547600FA7D86 /* searchclinicblue@2x~ipad.png */; };
+		180CF30A1BDF547600FA7D86 /* searchdoctorblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2FB1BDF547600FA7D86 /* searchdoctorblue@2x~ipad.png */; };
+		180CF30B1BDF547600FA7D86 /* searchpatientblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2FC1BDF547600FA7D86 /* searchpatientblue@2x~ipad.png */; };
+		180CF30C1BDF547600FA7D86 /* settingsblue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF2FD1BDF547600FA7D86 /* settingsblue@2x~ipad.png */; };
+		180CF31D1BDF549100FA7D86 /* chatblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF30D1BDF549000FA7D86 /* chatblue@1x~ipad.png */; };
+		180CF31E1BDF549100FA7D86 /* consultingblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF30E1BDF549000FA7D86 /* consultingblue@1x~ipad.png */; };
+		180CF31F1BDF549100FA7D86 /* doctorblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF30F1BDF549000FA7D86 /* doctorblue@1x~ipad.png */; };
+		180CF3201BDF549100FA7D86 /* doctorprofileblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3101BDF549000FA7D86 /* doctorprofileblue@1x~ipad.png */; };
+		180CF3211BDF549100FA7D86 /* filterblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3111BDF549000FA7D86 /* filterblue@1x~ipad.png */; };
+		180CF3221BDF549100FA7D86 /* notesblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3121BDF549000FA7D86 /* notesblue@1x~ipad.png */; };
+		180CF3231BDF549100FA7D86 /* nurseprofileblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3131BDF549000FA7D86 /* nurseprofileblue@1x~ipad.png */; };
+		180CF3241BDF549100FA7D86 /* patientblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3141BDF549000FA7D86 /* patientblue@1x~ipad.png */; };
+		180CF3251BDF549100FA7D86 /* patientgirlblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3151BDF549000FA7D86 /* patientgirlblue@1x~ipad.png */; };
+		180CF3261BDF549100FA7D86 /* patientgirlprofileblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3161BDF549000FA7D86 /* patientgirlprofileblue@1x~ipad.png */; };
+		180CF3271BDF549100FA7D86 /* patientprofileblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3171BDF549000FA7D86 /* patientprofileblue@1x~ipad.png */; };
+		180CF3281BDF549100FA7D86 /* refreshblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3181BDF549100FA7D86 /* refreshblue@1x~ipad.png */; };
+		180CF3291BDF549100FA7D86 /* searchclinicblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3191BDF549100FA7D86 /* searchclinicblue@1x~ipad.png */; };
+		180CF32A1BDF549100FA7D86 /* searchdoctorblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF31A1BDF549100FA7D86 /* searchdoctorblue@1x~ipad.png */; };
+		180CF32B1BDF549100FA7D86 /* searchpatientblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF31B1BDF549100FA7D86 /* searchpatientblue@1x~ipad.png */; };
+		180CF32C1BDF549100FA7D86 /* settingsblue@1x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF31C1BDF549100FA7D86 /* settingsblue@1x~ipad.png */; };
+		180CF32E1BDF585B00FA7D86 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 180CF32D1BDF585B00FA7D86 /* background.png */; };
+		180CF3351BDF657A00FA7D86 /* procedureTitle.json in Resources */ = {isa = PBXBuildFile; fileRef = 180CF3341BDF657A00FA7D86 /* procedureTitle.json */; };
+		180CF3381BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CF3371BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m */; };
+		180CF33B1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CF33A1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m */; };
+		180CF33D1BDF7C1900FA7D86 /* subProcedures.json in Resources */ = {isa = PBXBuildFile; fileRef = 180CF33C1BDF7C1900FA7D86 /* subProcedures.json */; };
 		1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822A71D1BBE4BD500019B58 /* LoginPage.m */; };
 		1822C4501BD4FCC400DD24C0 /* uparrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */; };
 		1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */; };
@@ -163,6 +411,256 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180CF1441BDF52C600FA7D86 /* alarmOffgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOffgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1451BDF52C600FA7D86 /* alarmOngrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOngrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1461BDF52C600FA7D86 /* appointmentsgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appointmentsgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1471BDF52C600FA7D86 /* capturegrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capturegrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1481BDF52C600FA7D86 /* chatgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1491BDF52C600FA7D86 /* clinicgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinicgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF14A1BDF52C600FA7D86 /* consultinggrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultinggrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF14B1BDF52C600FA7D86 /* dependentsgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dependentsgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF14C1BDF52C600FA7D86 /* doctorgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF14D1BDF52C600FA7D86 /* downloadgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downloadgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF14E1BDF52C600FA7D86 /* filtergrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filtergrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF14F1BDF52C600FA7D86 /* financegrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financegrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1501BDF52C600FA7D86 /* firstaidgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstaidgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1511BDF52C600FA7D86 /* labsgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "labsgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1521BDF52C600FA7D86 /* locationgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1531BDF52C600FA7D86 /* logoutgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1541BDF52C600FA7D86 /* medicineAlarmgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicineAlarmgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1551BDF52C600FA7D86 /* Medicinegrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medicinegrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1561BDF52C600FA7D86 /* notesgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1571BDF52C600FA7D86 /* nursegrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nursegrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1581BDF52C600FA7D86 /* patientgirlgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1591BDF52C600FA7D86 /* patientgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF15A1BDF52C600FA7D86 /* searchangiographygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchangiographygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF15B1BDF52C600FA7D86 /* searchbiopsygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbiopsygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF15C1BDF52C600FA7D86 /* searchbloodtestsgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbloodtestsgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF15D1BDF52C600FA7D86 /* searchcatgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcatgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF15E1BDF52C700FA7D86 /* searchcolonoscopygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcolonoscopygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF15F1BDF52C700FA7D86 /* searchdentistgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdentistgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1601BDF52C700FA7D86 /* searchdermatologygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdermatologygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1611BDF52C700FA7D86 /* searchECGgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchECGgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1621BDF52C700FA7D86 /* searchechocardiographygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchechocardiographygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1631BDF52C700FA7D86 /* searchEEGgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchEEGgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1641BDF52C700FA7D86 /* searchgynecologistgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchgynecologistgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1651BDF52C700FA7D86 /* searchhomeopathygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchhomeopathygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1661BDF52C700FA7D86 /* searchLaparoscopygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLaparoscopygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1671BDF52C700FA7D86 /* searchLipidProfilesgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLipidProfilesgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1681BDF52C700FA7D86 /* searchMammographygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMammographygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1691BDF52C700FA7D86 /* searchMRIgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMRIgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF16A1BDF52C700FA7D86 /* searchPediatriciangrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPediatriciangrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF16B1BDF52C700FA7D86 /* searchPETgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPETgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF16C1BDF52C700FA7D86 /* searchUltrasoundgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchUltrasoundgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF16D1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchXraygrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF16E1BDF52C700FA7D86 /* settingsgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF16F1BDF52C700FA7D86 /* templatesgrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "templatesgrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1701BDF52C700FA7D86 /* Timinggrey@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Timinggrey@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF19F1BDF531E00FA7D86 /* chatblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A11BDF535500FA7D86 /* consultingblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultingblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A21BDF535500FA7D86 /* doctorblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A31BDF535500FA7D86 /* doctorprofileblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorprofileblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A41BDF535500FA7D86 /* filterblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filterblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A51BDF535500FA7D86 /* notesblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A61BDF535500FA7D86 /* nurseprofileblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nurseprofileblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A71BDF535500FA7D86 /* patientblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A81BDF535500FA7D86 /* patientgirlblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1A91BDF535500FA7D86 /* patientgirlprofileblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlprofileblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1AA1BDF535500FA7D86 /* patientprofileblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientprofileblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1AB1BDF535500FA7D86 /* refreshblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1AC1BDF535500FA7D86 /* searchclinicblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchclinicblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1AD1BDF535500FA7D86 /* searchdoctorblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdoctorblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1AE1BDF535500FA7D86 /* searchpatientblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchpatientblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1AF1BDF535500FA7D86 /* settingsblue@3x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsblue@3x~iphone.png"; sourceTree = "<group>"; };
+		180CF1BF1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOffgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C01BDF539700FA7D86 /* alarmOngrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOngrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C11BDF539700FA7D86 /* appointmentsgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appointmentsgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C21BDF539700FA7D86 /* capturegrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capturegrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C31BDF539700FA7D86 /* chatgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C41BDF539700FA7D86 /* clinicgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinicgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C51BDF539700FA7D86 /* consultinggrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultinggrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C61BDF539700FA7D86 /* dependentsgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dependentsgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C71BDF539700FA7D86 /* doctorgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C81BDF539700FA7D86 /* downloadgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downloadgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1C91BDF539700FA7D86 /* filtergrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filtergrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1CA1BDF539700FA7D86 /* financegrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financegrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1CB1BDF539700FA7D86 /* firstaidgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstaidgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1CC1BDF539700FA7D86 /* labsgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "labsgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1CD1BDF539700FA7D86 /* locationgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1CE1BDF539700FA7D86 /* logoutgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1CF1BDF539700FA7D86 /* medicineAlarmgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicineAlarmgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D01BDF539700FA7D86 /* Medicinegrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medicinegrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D11BDF539700FA7D86 /* notesgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D21BDF539700FA7D86 /* nursegrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nursegrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D31BDF539700FA7D86 /* patientgirlgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D41BDF539700FA7D86 /* patientgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D51BDF539700FA7D86 /* searchangiographygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchangiographygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D61BDF539700FA7D86 /* searchbiopsygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbiopsygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D71BDF539700FA7D86 /* searchbloodtestsgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbloodtestsgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D81BDF539700FA7D86 /* searchcatgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcatgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1D91BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcolonoscopygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1DA1BDF539700FA7D86 /* searchdentistgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdentistgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1DB1BDF539700FA7D86 /* searchdermatologygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdermatologygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1DC1BDF539700FA7D86 /* searchECGgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchECGgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1DD1BDF539700FA7D86 /* searchechocardiographygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchechocardiographygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1DE1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchEEGgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1DF1BDF539700FA7D86 /* searchgynecologistgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchgynecologistgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E01BDF539700FA7D86 /* searchhomeopathygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchhomeopathygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E11BDF539700FA7D86 /* searchLaparoscopygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLaparoscopygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E21BDF539700FA7D86 /* searchLipidProfilesgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLipidProfilesgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E31BDF539700FA7D86 /* searchMammographygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMammographygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E41BDF539700FA7D86 /* searchMRIgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMRIgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E51BDF539700FA7D86 /* searchPediatriciangrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPediatriciangrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E61BDF539700FA7D86 /* searchPETgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPETgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E71BDF539700FA7D86 /* searchUltrasoundgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchUltrasoundgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E81BDF539700FA7D86 /* searchXraygrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchXraygrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1E91BDF539700FA7D86 /* settingsgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1EA1BDF539700FA7D86 /* templatesgrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "templatesgrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF1EB1BDF539700FA7D86 /* Timinggrey@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Timinggrey@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2191BDF53B000FA7D86 /* chatblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF21A1BDF53B000FA7D86 /* consultingblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultingblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF21B1BDF53B000FA7D86 /* doctorblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF21C1BDF53B000FA7D86 /* doctorprofileblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorprofileblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF21D1BDF53B000FA7D86 /* filterblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filterblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF21E1BDF53B000FA7D86 /* notesblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF21F1BDF53B000FA7D86 /* nurseprofileblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nurseprofileblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2201BDF53B000FA7D86 /* patientblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2211BDF53B000FA7D86 /* patientgirlblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2221BDF53B000FA7D86 /* patientgirlprofileblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlprofileblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2231BDF53B000FA7D86 /* patientprofileblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientprofileblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2241BDF53B000FA7D86 /* refreshblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2251BDF53B000FA7D86 /* searchclinicblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchclinicblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2261BDF53B000FA7D86 /* searchdoctorblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdoctorblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2271BDF53B000FA7D86 /* searchpatientblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchpatientblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF2281BDF53B000FA7D86 /* settingsblue@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsblue@2x~iphone.png"; sourceTree = "<group>"; };
+		180CF23B1BDF543400FA7D86 /* alarmOffgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOffgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF23C1BDF543400FA7D86 /* alarmOngrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOngrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF23D1BDF543400FA7D86 /* appointmentsgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appointmentsgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF23E1BDF543400FA7D86 /* capturegrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capturegrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF23F1BDF543400FA7D86 /* chatgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2401BDF543400FA7D86 /* clinicgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinicgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2411BDF543400FA7D86 /* consultinggrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultinggrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2421BDF543400FA7D86 /* dependentsgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dependentsgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2431BDF543400FA7D86 /* doctorgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2441BDF543400FA7D86 /* downloadgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downloadgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2451BDF543400FA7D86 /* filtergrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filtergrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2461BDF543400FA7D86 /* financegrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financegrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2471BDF543400FA7D86 /* firstaidgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstaidgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2481BDF543400FA7D86 /* labsgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "labsgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2491BDF543400FA7D86 /* locationgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF24A1BDF543400FA7D86 /* logoutgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF24B1BDF543400FA7D86 /* medicineAlarmgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicineAlarmgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF24C1BDF543400FA7D86 /* Medicinegrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medicinegrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF24D1BDF543400FA7D86 /* notesgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF24E1BDF543400FA7D86 /* nursegrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nursegrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF24F1BDF543400FA7D86 /* patientgirlgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2501BDF543400FA7D86 /* patientgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2511BDF543400FA7D86 /* searchangiographygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchangiographygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2521BDF543400FA7D86 /* searchbiopsygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbiopsygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2531BDF543400FA7D86 /* searchbloodtestsgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbloodtestsgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2541BDF543400FA7D86 /* searchcatgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcatgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2551BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcolonoscopygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2561BDF543400FA7D86 /* searchdentistgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdentistgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2571BDF543400FA7D86 /* searchdermatologygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdermatologygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2581BDF543400FA7D86 /* searchECGgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchECGgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2591BDF543400FA7D86 /* searchechocardiographygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchechocardiographygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF25A1BDF543400FA7D86 /* searchEEGgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchEEGgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF25B1BDF543400FA7D86 /* searchgynecologistgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchgynecologistgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF25C1BDF543400FA7D86 /* searchhomeopathygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchhomeopathygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF25D1BDF543400FA7D86 /* searchLaparoscopygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLaparoscopygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF25E1BDF543400FA7D86 /* searchLipidProfilesgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLipidProfilesgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF25F1BDF543400FA7D86 /* searchMammographygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMammographygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2601BDF543400FA7D86 /* searchMRIgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMRIgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2611BDF543400FA7D86 /* searchPediatriciangrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPediatriciangrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2621BDF543400FA7D86 /* searchPETgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPETgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2631BDF543400FA7D86 /* searchUltrasoundgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchUltrasoundgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2641BDF543400FA7D86 /* searchXraygrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchXraygrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2651BDF543400FA7D86 /* settingsgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2661BDF543400FA7D86 /* templatesgrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "templatesgrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2671BDF543400FA7D86 /* Timinggrey@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Timinggrey@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2951BDF545C00FA7D86 /* alarmOffgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOffgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2961BDF545C00FA7D86 /* alarmOngrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarmOngrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2971BDF545C00FA7D86 /* appointmentsgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appointmentsgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2981BDF545C00FA7D86 /* capturegrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capturegrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2991BDF545C00FA7D86 /* chatgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF29A1BDF545C00FA7D86 /* clinicgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clinicgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF29B1BDF545C00FA7D86 /* consultinggrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultinggrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF29C1BDF545C00FA7D86 /* dependentsgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dependentsgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF29D1BDF545C00FA7D86 /* doctorgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF29E1BDF545C00FA7D86 /* downloadgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downloadgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF29F1BDF545C00FA7D86 /* filtergrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filtergrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A01BDF545C00FA7D86 /* financegrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "financegrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A11BDF545C00FA7D86 /* firstaidgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstaidgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A21BDF545C00FA7D86 /* labsgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "labsgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A31BDF545C00FA7D86 /* locationgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A41BDF545C00FA7D86 /* logoutgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A51BDF545C00FA7D86 /* medicineAlarmgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "medicineAlarmgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A61BDF545C00FA7D86 /* Medicinegrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Medicinegrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A71BDF545C00FA7D86 /* notesgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A81BDF545C00FA7D86 /* nursegrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nursegrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2A91BDF545C00FA7D86 /* patientgirlgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2AA1BDF545C00FA7D86 /* patientgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2AB1BDF545C00FA7D86 /* searchangiographygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchangiographygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2AC1BDF545C00FA7D86 /* searchbiopsygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbiopsygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2AD1BDF545C00FA7D86 /* searchbloodtestsgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbloodtestsgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2AE1BDF545C00FA7D86 /* searchcatgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcatgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2AF1BDF545C00FA7D86 /* searchcolonoscopygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchcolonoscopygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B01BDF545C00FA7D86 /* searchdentistgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdentistgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B11BDF545C00FA7D86 /* searchdermatologygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdermatologygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B21BDF545C00FA7D86 /* searchECGgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchECGgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B31BDF545C00FA7D86 /* searchechocardiographygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchechocardiographygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B41BDF545C00FA7D86 /* searchEEGgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchEEGgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B51BDF545C00FA7D86 /* searchgynecologistgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchgynecologistgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B61BDF545C00FA7D86 /* searchhomeopathygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchhomeopathygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B71BDF545C00FA7D86 /* searchLaparoscopygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLaparoscopygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B81BDF545C00FA7D86 /* searchLipidProfilesgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchLipidProfilesgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2B91BDF545C00FA7D86 /* searchMammographygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMammographygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2BA1BDF545C00FA7D86 /* searchMRIgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchMRIgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2BB1BDF545C00FA7D86 /* searchPediatriciangrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPediatriciangrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2BC1BDF545C00FA7D86 /* searchPETgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchPETgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2BD1BDF545C00FA7D86 /* searchUltrasoundgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchUltrasoundgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2BE1BDF545C00FA7D86 /* searchXraygrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchXraygrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2BF1BDF545C00FA7D86 /* settingsgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2C01BDF545C00FA7D86 /* templatesgrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "templatesgrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2C11BDF545C00FA7D86 /* Timinggrey@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Timinggrey@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF2EF1BDF547600FA7D86 /* chatblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F01BDF547600FA7D86 /* consultingblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultingblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F11BDF547600FA7D86 /* doctorblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F21BDF547600FA7D86 /* doctorprofileblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorprofileblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F31BDF547600FA7D86 /* filterblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filterblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F41BDF547600FA7D86 /* nurseprofileblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nurseprofileblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F51BDF547600FA7D86 /* patientblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F61BDF547600FA7D86 /* patientgirlblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F71BDF547600FA7D86 /* patientgirlprofileblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlprofileblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F81BDF547600FA7D86 /* patientprofileblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientprofileblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2F91BDF547600FA7D86 /* refreshblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2FA1BDF547600FA7D86 /* searchclinicblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchclinicblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2FB1BDF547600FA7D86 /* searchdoctorblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdoctorblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2FC1BDF547600FA7D86 /* searchpatientblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchpatientblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF2FD1BDF547600FA7D86 /* settingsblue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsblue@2x~ipad.png"; sourceTree = "<group>"; };
+		180CF30D1BDF549000FA7D86 /* chatblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chatblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF30E1BDF549000FA7D86 /* consultingblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "consultingblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF30F1BDF549000FA7D86 /* doctorblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3101BDF549000FA7D86 /* doctorprofileblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctorprofileblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3111BDF549000FA7D86 /* filterblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filterblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3121BDF549000FA7D86 /* notesblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notesblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3131BDF549000FA7D86 /* nurseprofileblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nurseprofileblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3141BDF549000FA7D86 /* patientblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3151BDF549000FA7D86 /* patientgirlblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3161BDF549000FA7D86 /* patientgirlprofileblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientgirlprofileblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3171BDF549000FA7D86 /* patientprofileblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patientprofileblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3181BDF549100FA7D86 /* refreshblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF3191BDF549100FA7D86 /* searchclinicblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchclinicblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF31A1BDF549100FA7D86 /* searchdoctorblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchdoctorblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF31B1BDF549100FA7D86 /* searchpatientblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchpatientblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF31C1BDF549100FA7D86 /* settingsblue@1x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingsblue@1x~ipad.png"; sourceTree = "<group>"; };
+		180CF32D1BDF585B00FA7D86 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		180CF3341BDF657A00FA7D86 /* procedureTitle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = procedureTitle.json; sourceTree = "<group>"; };
+		180CF3361BDF6ED400FA7D86 /* DoctorAddTreatmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorAddTreatmentCell.h; sourceTree = "<group>"; };
+		180CF3371BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorAddTreatmentCell.m; sourceTree = "<group>"; };
+		180CF3391BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailAddTreatmentCell.h; sourceTree = "<group>"; };
+		180CF33A1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailAddTreatmentCell.m; sourceTree = "<group>"; };
+		180CF33C1BDF7C1900FA7D86 /* subProcedures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subProcedures.json; sourceTree = "<group>"; };
 		1822A71C1BBE4BD500019B58 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = ../LoginPage.h; sourceTree = "<group>"; };
 		1822A71D1BBE4BD500019B58 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = ../LoginPage.m; sourceTree = "<group>"; };
 		1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrowButton.png; sourceTree = "<group>"; };
@@ -414,6 +912,277 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180CF1431BDF528700FA7D86 /* iphoneGrey */ = {
+			isa = PBXGroup;
+			children = (
+				180CF1BF1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png */,
+				180CF1C01BDF539700FA7D86 /* alarmOngrey@2x~iphone.png */,
+				180CF1C11BDF539700FA7D86 /* appointmentsgrey@2x~iphone.png */,
+				180CF1C21BDF539700FA7D86 /* capturegrey@2x~iphone.png */,
+				180CF1C31BDF539700FA7D86 /* chatgrey@2x~iphone.png */,
+				180CF1C41BDF539700FA7D86 /* clinicgrey@2x~iphone.png */,
+				180CF1C51BDF539700FA7D86 /* consultinggrey@2x~iphone.png */,
+				180CF1C61BDF539700FA7D86 /* dependentsgrey@2x~iphone.png */,
+				180CF1C71BDF539700FA7D86 /* doctorgrey@2x~iphone.png */,
+				180CF1C81BDF539700FA7D86 /* downloadgrey@2x~iphone.png */,
+				180CF1C91BDF539700FA7D86 /* filtergrey@2x~iphone.png */,
+				180CF1CA1BDF539700FA7D86 /* financegrey@2x~iphone.png */,
+				180CF1CB1BDF539700FA7D86 /* firstaidgrey@2x~iphone.png */,
+				180CF1CC1BDF539700FA7D86 /* labsgrey@2x~iphone.png */,
+				180CF1CD1BDF539700FA7D86 /* locationgrey@2x~iphone.png */,
+				180CF1CE1BDF539700FA7D86 /* logoutgrey@2x~iphone.png */,
+				180CF1CF1BDF539700FA7D86 /* medicineAlarmgrey@2x~iphone.png */,
+				180CF1D01BDF539700FA7D86 /* Medicinegrey@2x~iphone.png */,
+				180CF1D11BDF539700FA7D86 /* notesgrey@2x~iphone.png */,
+				180CF1D21BDF539700FA7D86 /* nursegrey@2x~iphone.png */,
+				180CF1D31BDF539700FA7D86 /* patientgirlgrey@2x~iphone.png */,
+				180CF1D41BDF539700FA7D86 /* patientgrey@2x~iphone.png */,
+				180CF1D51BDF539700FA7D86 /* searchangiographygrey@2x~iphone.png */,
+				180CF1D61BDF539700FA7D86 /* searchbiopsygrey@2x~iphone.png */,
+				180CF1D71BDF539700FA7D86 /* searchbloodtestsgrey@2x~iphone.png */,
+				180CF1D81BDF539700FA7D86 /* searchcatgrey@2x~iphone.png */,
+				180CF1D91BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png */,
+				180CF1DA1BDF539700FA7D86 /* searchdentistgrey@2x~iphone.png */,
+				180CF1DB1BDF539700FA7D86 /* searchdermatologygrey@2x~iphone.png */,
+				180CF1DC1BDF539700FA7D86 /* searchECGgrey@2x~iphone.png */,
+				180CF1DD1BDF539700FA7D86 /* searchechocardiographygrey@2x~iphone.png */,
+				180CF1DE1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png */,
+				180CF1DF1BDF539700FA7D86 /* searchgynecologistgrey@2x~iphone.png */,
+				180CF1E01BDF539700FA7D86 /* searchhomeopathygrey@2x~iphone.png */,
+				180CF1E11BDF539700FA7D86 /* searchLaparoscopygrey@2x~iphone.png */,
+				180CF1E21BDF539700FA7D86 /* searchLipidProfilesgrey@2x~iphone.png */,
+				180CF1E31BDF539700FA7D86 /* searchMammographygrey@2x~iphone.png */,
+				180CF1E41BDF539700FA7D86 /* searchMRIgrey@2x~iphone.png */,
+				180CF1E51BDF539700FA7D86 /* searchPediatriciangrey@2x~iphone.png */,
+				180CF1E61BDF539700FA7D86 /* searchPETgrey@2x~iphone.png */,
+				180CF1E71BDF539700FA7D86 /* searchUltrasoundgrey@2x~iphone.png */,
+				180CF1E81BDF539700FA7D86 /* searchXraygrey@2x~iphone.png */,
+				180CF1E91BDF539700FA7D86 /* settingsgrey@2x~iphone.png */,
+				180CF1EA1BDF539700FA7D86 /* templatesgrey@2x~iphone.png */,
+				180CF1EB1BDF539700FA7D86 /* Timinggrey@2x~iphone.png */,
+				180CF1441BDF52C600FA7D86 /* alarmOffgrey@3x~iphone.png */,
+				180CF1451BDF52C600FA7D86 /* alarmOngrey@3x~iphone.png */,
+				180CF1461BDF52C600FA7D86 /* appointmentsgrey@3x~iphone.png */,
+				180CF1471BDF52C600FA7D86 /* capturegrey@3x~iphone.png */,
+				180CF1481BDF52C600FA7D86 /* chatgrey@3x~iphone.png */,
+				180CF1491BDF52C600FA7D86 /* clinicgrey@3x~iphone.png */,
+				180CF14A1BDF52C600FA7D86 /* consultinggrey@3x~iphone.png */,
+				180CF14B1BDF52C600FA7D86 /* dependentsgrey@3x~iphone.png */,
+				180CF14C1BDF52C600FA7D86 /* doctorgrey@3x~iphone.png */,
+				180CF14D1BDF52C600FA7D86 /* downloadgrey@3x~iphone.png */,
+				180CF14E1BDF52C600FA7D86 /* filtergrey@3x~iphone.png */,
+				180CF14F1BDF52C600FA7D86 /* financegrey@3x~iphone.png */,
+				180CF1501BDF52C600FA7D86 /* firstaidgrey@3x~iphone.png */,
+				180CF1511BDF52C600FA7D86 /* labsgrey@3x~iphone.png */,
+				180CF1521BDF52C600FA7D86 /* locationgrey@3x~iphone.png */,
+				180CF1531BDF52C600FA7D86 /* logoutgrey@3x~iphone.png */,
+				180CF1541BDF52C600FA7D86 /* medicineAlarmgrey@3x~iphone.png */,
+				180CF1551BDF52C600FA7D86 /* Medicinegrey@3x~iphone.png */,
+				180CF1561BDF52C600FA7D86 /* notesgrey@3x~iphone.png */,
+				180CF1571BDF52C600FA7D86 /* nursegrey@3x~iphone.png */,
+				180CF1581BDF52C600FA7D86 /* patientgirlgrey@3x~iphone.png */,
+				180CF1591BDF52C600FA7D86 /* patientgrey@3x~iphone.png */,
+				180CF15A1BDF52C600FA7D86 /* searchangiographygrey@3x~iphone.png */,
+				180CF15B1BDF52C600FA7D86 /* searchbiopsygrey@3x~iphone.png */,
+				180CF15C1BDF52C600FA7D86 /* searchbloodtestsgrey@3x~iphone.png */,
+				180CF15D1BDF52C600FA7D86 /* searchcatgrey@3x~iphone.png */,
+				180CF15E1BDF52C700FA7D86 /* searchcolonoscopygrey@3x~iphone.png */,
+				180CF15F1BDF52C700FA7D86 /* searchdentistgrey@3x~iphone.png */,
+				180CF1601BDF52C700FA7D86 /* searchdermatologygrey@3x~iphone.png */,
+				180CF1611BDF52C700FA7D86 /* searchECGgrey@3x~iphone.png */,
+				180CF1621BDF52C700FA7D86 /* searchechocardiographygrey@3x~iphone.png */,
+				180CF1631BDF52C700FA7D86 /* searchEEGgrey@3x~iphone.png */,
+				180CF1641BDF52C700FA7D86 /* searchgynecologistgrey@3x~iphone.png */,
+				180CF1651BDF52C700FA7D86 /* searchhomeopathygrey@3x~iphone.png */,
+				180CF1661BDF52C700FA7D86 /* searchLaparoscopygrey@3x~iphone.png */,
+				180CF1671BDF52C700FA7D86 /* searchLipidProfilesgrey@3x~iphone.png */,
+				180CF1681BDF52C700FA7D86 /* searchMammographygrey@3x~iphone.png */,
+				180CF1691BDF52C700FA7D86 /* searchMRIgrey@3x~iphone.png */,
+				180CF16A1BDF52C700FA7D86 /* searchPediatriciangrey@3x~iphone.png */,
+				180CF16B1BDF52C700FA7D86 /* searchPETgrey@3x~iphone.png */,
+				180CF16C1BDF52C700FA7D86 /* searchUltrasoundgrey@3x~iphone.png */,
+				180CF16D1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png */,
+				180CF16E1BDF52C700FA7D86 /* settingsgrey@3x~iphone.png */,
+				180CF16F1BDF52C700FA7D86 /* templatesgrey@3x~iphone.png */,
+				180CF1701BDF52C700FA7D86 /* Timinggrey@3x~iphone.png */,
+			);
+			name = iphoneGrey;
+			sourceTree = "<group>";
+		};
+		180CF19E1BDF52F900FA7D86 /* iphoneBlue */ = {
+			isa = PBXGroup;
+			children = (
+				180CF2191BDF53B000FA7D86 /* chatblue@2x~iphone.png */,
+				180CF21A1BDF53B000FA7D86 /* consultingblue@2x~iphone.png */,
+				180CF21B1BDF53B000FA7D86 /* doctorblue@2x~iphone.png */,
+				180CF21C1BDF53B000FA7D86 /* doctorprofileblue@2x~iphone.png */,
+				180CF21D1BDF53B000FA7D86 /* filterblue@2x~iphone.png */,
+				180CF21E1BDF53B000FA7D86 /* notesblue@2x~iphone.png */,
+				180CF21F1BDF53B000FA7D86 /* nurseprofileblue@2x~iphone.png */,
+				180CF2201BDF53B000FA7D86 /* patientblue@2x~iphone.png */,
+				180CF2211BDF53B000FA7D86 /* patientgirlblue@2x~iphone.png */,
+				180CF2221BDF53B000FA7D86 /* patientgirlprofileblue@2x~iphone.png */,
+				180CF2231BDF53B000FA7D86 /* patientprofileblue@2x~iphone.png */,
+				180CF2241BDF53B000FA7D86 /* refreshblue@2x~iphone.png */,
+				180CF2251BDF53B000FA7D86 /* searchclinicblue@2x~iphone.png */,
+				180CF2261BDF53B000FA7D86 /* searchdoctorblue@2x~iphone.png */,
+				180CF2271BDF53B000FA7D86 /* searchpatientblue@2x~iphone.png */,
+				180CF2281BDF53B000FA7D86 /* settingsblue@2x~iphone.png */,
+				180CF1A11BDF535500FA7D86 /* consultingblue@3x~iphone.png */,
+				180CF1A21BDF535500FA7D86 /* doctorblue@3x~iphone.png */,
+				180CF1A31BDF535500FA7D86 /* doctorprofileblue@3x~iphone.png */,
+				180CF1A41BDF535500FA7D86 /* filterblue@3x~iphone.png */,
+				180CF1A51BDF535500FA7D86 /* notesblue@3x~iphone.png */,
+				180CF1A61BDF535500FA7D86 /* nurseprofileblue@3x~iphone.png */,
+				180CF1A71BDF535500FA7D86 /* patientblue@3x~iphone.png */,
+				180CF1A81BDF535500FA7D86 /* patientgirlblue@3x~iphone.png */,
+				180CF1A91BDF535500FA7D86 /* patientgirlprofileblue@3x~iphone.png */,
+				180CF1AA1BDF535500FA7D86 /* patientprofileblue@3x~iphone.png */,
+				180CF1AB1BDF535500FA7D86 /* refreshblue@3x~iphone.png */,
+				180CF1AC1BDF535500FA7D86 /* searchclinicblue@3x~iphone.png */,
+				180CF1AD1BDF535500FA7D86 /* searchdoctorblue@3x~iphone.png */,
+				180CF1AE1BDF535500FA7D86 /* searchpatientblue@3x~iphone.png */,
+				180CF1AF1BDF535500FA7D86 /* settingsblue@3x~iphone.png */,
+				180CF19F1BDF531E00FA7D86 /* chatblue@3x~iphone.png */,
+			);
+			name = iphoneBlue;
+			sourceTree = "<group>";
+		};
+		180CF2391BDF53E800FA7D86 /* ipadGrey */ = {
+			isa = PBXGroup;
+			children = (
+				180CF2951BDF545C00FA7D86 /* alarmOffgrey@1x~ipad.png */,
+				180CF2961BDF545C00FA7D86 /* alarmOngrey@1x~ipad.png */,
+				180CF2971BDF545C00FA7D86 /* appointmentsgrey@1x~ipad.png */,
+				180CF2981BDF545C00FA7D86 /* capturegrey@1x~ipad.png */,
+				180CF2991BDF545C00FA7D86 /* chatgrey@1x~ipad.png */,
+				180CF29A1BDF545C00FA7D86 /* clinicgrey@1x~ipad.png */,
+				180CF29B1BDF545C00FA7D86 /* consultinggrey@1x~ipad.png */,
+				180CF29C1BDF545C00FA7D86 /* dependentsgrey@1x~ipad.png */,
+				180CF29D1BDF545C00FA7D86 /* doctorgrey@1x~ipad.png */,
+				180CF29E1BDF545C00FA7D86 /* downloadgrey@1x~ipad.png */,
+				180CF29F1BDF545C00FA7D86 /* filtergrey@1x~ipad.png */,
+				180CF2A01BDF545C00FA7D86 /* financegrey@1x~ipad.png */,
+				180CF2A11BDF545C00FA7D86 /* firstaidgrey@1x~ipad.png */,
+				180CF2A21BDF545C00FA7D86 /* labsgrey@1x~ipad.png */,
+				180CF2A31BDF545C00FA7D86 /* locationgrey@1x~ipad.png */,
+				180CF2A41BDF545C00FA7D86 /* logoutgrey@1x~ipad.png */,
+				180CF2A51BDF545C00FA7D86 /* medicineAlarmgrey@1x~ipad.png */,
+				180CF2A61BDF545C00FA7D86 /* Medicinegrey@1x~ipad.png */,
+				180CF2A71BDF545C00FA7D86 /* notesgrey@1x~ipad.png */,
+				180CF2A81BDF545C00FA7D86 /* nursegrey@1x~ipad.png */,
+				180CF2A91BDF545C00FA7D86 /* patientgirlgrey@1x~ipad.png */,
+				180CF2AA1BDF545C00FA7D86 /* patientgrey@1x~ipad.png */,
+				180CF2AB1BDF545C00FA7D86 /* searchangiographygrey@1x~ipad.png */,
+				180CF2AC1BDF545C00FA7D86 /* searchbiopsygrey@1x~ipad.png */,
+				180CF2AD1BDF545C00FA7D86 /* searchbloodtestsgrey@1x~ipad.png */,
+				180CF2AE1BDF545C00FA7D86 /* searchcatgrey@1x~ipad.png */,
+				180CF2AF1BDF545C00FA7D86 /* searchcolonoscopygrey@1x~ipad.png */,
+				180CF2B01BDF545C00FA7D86 /* searchdentistgrey@1x~ipad.png */,
+				180CF2B11BDF545C00FA7D86 /* searchdermatologygrey@1x~ipad.png */,
+				180CF2B21BDF545C00FA7D86 /* searchECGgrey@1x~ipad.png */,
+				180CF2B31BDF545C00FA7D86 /* searchechocardiographygrey@1x~ipad.png */,
+				180CF2B41BDF545C00FA7D86 /* searchEEGgrey@1x~ipad.png */,
+				180CF2B51BDF545C00FA7D86 /* searchgynecologistgrey@1x~ipad.png */,
+				180CF2B61BDF545C00FA7D86 /* searchhomeopathygrey@1x~ipad.png */,
+				180CF2B71BDF545C00FA7D86 /* searchLaparoscopygrey@1x~ipad.png */,
+				180CF2B81BDF545C00FA7D86 /* searchLipidProfilesgrey@1x~ipad.png */,
+				180CF2B91BDF545C00FA7D86 /* searchMammographygrey@1x~ipad.png */,
+				180CF2BA1BDF545C00FA7D86 /* searchMRIgrey@1x~ipad.png */,
+				180CF2BB1BDF545C00FA7D86 /* searchPediatriciangrey@1x~ipad.png */,
+				180CF2BC1BDF545C00FA7D86 /* searchPETgrey@1x~ipad.png */,
+				180CF2BD1BDF545C00FA7D86 /* searchUltrasoundgrey@1x~ipad.png */,
+				180CF2BE1BDF545C00FA7D86 /* searchXraygrey@1x~ipad.png */,
+				180CF2BF1BDF545C00FA7D86 /* settingsgrey@1x~ipad.png */,
+				180CF2C01BDF545C00FA7D86 /* templatesgrey@1x~ipad.png */,
+				180CF2C11BDF545C00FA7D86 /* Timinggrey@1x~ipad.png */,
+				180CF23B1BDF543400FA7D86 /* alarmOffgrey@2x~ipad.png */,
+				180CF23C1BDF543400FA7D86 /* alarmOngrey@2x~ipad.png */,
+				180CF23D1BDF543400FA7D86 /* appointmentsgrey@2x~ipad.png */,
+				180CF23E1BDF543400FA7D86 /* capturegrey@2x~ipad.png */,
+				180CF23F1BDF543400FA7D86 /* chatgrey@2x~ipad.png */,
+				180CF2401BDF543400FA7D86 /* clinicgrey@2x~ipad.png */,
+				180CF2411BDF543400FA7D86 /* consultinggrey@2x~ipad.png */,
+				180CF2421BDF543400FA7D86 /* dependentsgrey@2x~ipad.png */,
+				180CF2431BDF543400FA7D86 /* doctorgrey@2x~ipad.png */,
+				180CF2441BDF543400FA7D86 /* downloadgrey@2x~ipad.png */,
+				180CF2451BDF543400FA7D86 /* filtergrey@2x~ipad.png */,
+				180CF2461BDF543400FA7D86 /* financegrey@2x~ipad.png */,
+				180CF2471BDF543400FA7D86 /* firstaidgrey@2x~ipad.png */,
+				180CF2481BDF543400FA7D86 /* labsgrey@2x~ipad.png */,
+				180CF2491BDF543400FA7D86 /* locationgrey@2x~ipad.png */,
+				180CF24A1BDF543400FA7D86 /* logoutgrey@2x~ipad.png */,
+				180CF24B1BDF543400FA7D86 /* medicineAlarmgrey@2x~ipad.png */,
+				180CF24C1BDF543400FA7D86 /* Medicinegrey@2x~ipad.png */,
+				180CF24D1BDF543400FA7D86 /* notesgrey@2x~ipad.png */,
+				180CF24E1BDF543400FA7D86 /* nursegrey@2x~ipad.png */,
+				180CF24F1BDF543400FA7D86 /* patientgirlgrey@2x~ipad.png */,
+				180CF2501BDF543400FA7D86 /* patientgrey@2x~ipad.png */,
+				180CF2511BDF543400FA7D86 /* searchangiographygrey@2x~ipad.png */,
+				180CF2521BDF543400FA7D86 /* searchbiopsygrey@2x~ipad.png */,
+				180CF2531BDF543400FA7D86 /* searchbloodtestsgrey@2x~ipad.png */,
+				180CF2541BDF543400FA7D86 /* searchcatgrey@2x~ipad.png */,
+				180CF2551BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png */,
+				180CF2561BDF543400FA7D86 /* searchdentistgrey@2x~ipad.png */,
+				180CF2571BDF543400FA7D86 /* searchdermatologygrey@2x~ipad.png */,
+				180CF2581BDF543400FA7D86 /* searchECGgrey@2x~ipad.png */,
+				180CF2591BDF543400FA7D86 /* searchechocardiographygrey@2x~ipad.png */,
+				180CF25A1BDF543400FA7D86 /* searchEEGgrey@2x~ipad.png */,
+				180CF25B1BDF543400FA7D86 /* searchgynecologistgrey@2x~ipad.png */,
+				180CF25C1BDF543400FA7D86 /* searchhomeopathygrey@2x~ipad.png */,
+				180CF25D1BDF543400FA7D86 /* searchLaparoscopygrey@2x~ipad.png */,
+				180CF25E1BDF543400FA7D86 /* searchLipidProfilesgrey@2x~ipad.png */,
+				180CF25F1BDF543400FA7D86 /* searchMammographygrey@2x~ipad.png */,
+				180CF2601BDF543400FA7D86 /* searchMRIgrey@2x~ipad.png */,
+				180CF2611BDF543400FA7D86 /* searchPediatriciangrey@2x~ipad.png */,
+				180CF2621BDF543400FA7D86 /* searchPETgrey@2x~ipad.png */,
+				180CF2631BDF543400FA7D86 /* searchUltrasoundgrey@2x~ipad.png */,
+				180CF2641BDF543400FA7D86 /* searchXraygrey@2x~ipad.png */,
+				180CF2651BDF543400FA7D86 /* settingsgrey@2x~ipad.png */,
+				180CF2661BDF543400FA7D86 /* templatesgrey@2x~ipad.png */,
+				180CF2671BDF543400FA7D86 /* Timinggrey@2x~ipad.png */,
+			);
+			name = ipadGrey;
+			sourceTree = "<group>";
+		};
+		180CF23A1BDF53FB00FA7D86 /* ipadBlue */ = {
+			isa = PBXGroup;
+			children = (
+				180CF30D1BDF549000FA7D86 /* chatblue@1x~ipad.png */,
+				180CF30E1BDF549000FA7D86 /* consultingblue@1x~ipad.png */,
+				180CF30F1BDF549000FA7D86 /* doctorblue@1x~ipad.png */,
+				180CF3101BDF549000FA7D86 /* doctorprofileblue@1x~ipad.png */,
+				180CF3111BDF549000FA7D86 /* filterblue@1x~ipad.png */,
+				180CF3121BDF549000FA7D86 /* notesblue@1x~ipad.png */,
+				180CF3131BDF549000FA7D86 /* nurseprofileblue@1x~ipad.png */,
+				180CF3141BDF549000FA7D86 /* patientblue@1x~ipad.png */,
+				180CF3151BDF549000FA7D86 /* patientgirlblue@1x~ipad.png */,
+				180CF3161BDF549000FA7D86 /* patientgirlprofileblue@1x~ipad.png */,
+				180CF3171BDF549000FA7D86 /* patientprofileblue@1x~ipad.png */,
+				180CF3181BDF549100FA7D86 /* refreshblue@1x~ipad.png */,
+				180CF3191BDF549100FA7D86 /* searchclinicblue@1x~ipad.png */,
+				180CF31A1BDF549100FA7D86 /* searchdoctorblue@1x~ipad.png */,
+				180CF31B1BDF549100FA7D86 /* searchpatientblue@1x~ipad.png */,
+				180CF31C1BDF549100FA7D86 /* settingsblue@1x~ipad.png */,
+				180CF2EF1BDF547600FA7D86 /* chatblue@2x~ipad.png */,
+				180CF2F01BDF547600FA7D86 /* consultingblue@2x~ipad.png */,
+				180CF2F11BDF547600FA7D86 /* doctorblue@2x~ipad.png */,
+				180CF2F21BDF547600FA7D86 /* doctorprofileblue@2x~ipad.png */,
+				180CF2F31BDF547600FA7D86 /* filterblue@2x~ipad.png */,
+				180CF2F41BDF547600FA7D86 /* nurseprofileblue@2x~ipad.png */,
+				180CF2F51BDF547600FA7D86 /* patientblue@2x~ipad.png */,
+				180CF2F61BDF547600FA7D86 /* patientgirlblue@2x~ipad.png */,
+				180CF2F71BDF547600FA7D86 /* patientgirlprofileblue@2x~ipad.png */,
+				180CF2F81BDF547600FA7D86 /* patientprofileblue@2x~ipad.png */,
+				180CF2F91BDF547600FA7D86 /* refreshblue@2x~ipad.png */,
+				180CF2FA1BDF547600FA7D86 /* searchclinicblue@2x~ipad.png */,
+				180CF2FB1BDF547600FA7D86 /* searchdoctorblue@2x~ipad.png */,
+				180CF2FC1BDF547600FA7D86 /* searchpatientblue@2x~ipad.png */,
+				180CF2FD1BDF547600FA7D86 /* settingsblue@2x~ipad.png */,
+			);
+			name = ipadBlue;
+			sourceTree = "<group>";
+		};
 		182394D61BBD0DCE00D97366 = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +1205,8 @@
 		182394E11BBD0DCE00D97366 /* Medico */ = {
 			isa = PBXGroup;
 			children = (
+				180CF33C1BDF7C1900FA7D86 /* subProcedures.json */,
+				180CF3341BDF657A00FA7D86 /* procedureTitle.json */,
 				184C23581BDA608F004F3EF1 /* getAllDoctorPatientClinics.json */,
 				184C23531BDA4D04004F3EF1 /* getAllPatientAppointment.json */,
 				185D87121BD7B8E0003B357C /* manageAppointments.json */,
@@ -448,6 +1219,14 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				186E57AC1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.h */,
+				186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */,
+				180CF3361BDF6ED400FA7D86 /* DoctorAddTreatmentCell.h */,
+				180CF3371BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m */,
+				186E57AF1BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.h */,
+				186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */,
+				180CF3391BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.h */,
+				180CF33A1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m */,
 				183D40CC1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.h */,
 				183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */,
 				183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */,
@@ -462,10 +1241,6 @@
 				183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */,
 				183D407A1BDDE56C00AB4FA5 /* AllDetailInformationViewController.h */,
 				183D407B1BDDE56C00AB4FA5 /* AllDetailInformationViewController.m */,
-				186E57AC1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.h */,
-				186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */,
-				186E57AF1BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.h */,
-				186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */,
 				186E57A91BDB88A400F7CA72 /* DoctorBookAppointmentViewController.h */,
 				186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */,
 				186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */,
@@ -624,6 +1399,11 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				180CF32D1BDF585B00FA7D86 /* background.png */,
+				180CF23A1BDF53FB00FA7D86 /* ipadBlue */,
+				180CF2391BDF53E800FA7D86 /* ipadGrey */,
+				180CF19E1BDF52F900FA7D86 /* iphoneBlue */,
+				180CF1431BDF528700FA7D86 /* iphoneGrey */,
 				183D40CA1BDE1DCC00AB4FA5 /* medicinePrescribed.png */,
 				183D40C81BDE117C00AB4FA5 /* behind_alert_view.png */,
 				183D407D1BDDF17600AB4FA5 /* history.png */,
@@ -770,63 +1550,309 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180CF1F81BDF539700FA7D86 /* firstaidgrey@2x~iphone.png in Resources */,
+				180CF31F1BDF549100FA7D86 /* doctorblue@1x~ipad.png in Resources */,
+				180CF1EF1BDF539700FA7D86 /* capturegrey@2x~iphone.png in Resources */,
+				180CF1821BDF52C700FA7D86 /* Medicinegrey@3x~iphone.png in Resources */,
 				18BB05641BC24DFE00D237CD /* calendar.png in Resources */,
+				180CF1F11BDF539700FA7D86 /* clinicgrey@2x~iphone.png in Resources */,
+				180CF1FE1BDF539700FA7D86 /* notesgrey@2x~iphone.png in Resources */,
+				180CF2711BDF543400FA7D86 /* downloadgrey@2x~ipad.png in Resources */,
+				180CF1721BDF52C700FA7D86 /* alarmOngrey@3x~iphone.png in Resources */,
+				180CF3091BDF547600FA7D86 /* searchclinicblue@2x~ipad.png in Resources */,
 				18BB05701BC24DFE00D237CD /* manageFinance.png in Resources */,
 				183D40CB1BDE1DCC00AB4FA5 /* medicinePrescribed.png in Resources */,
+				180CF3271BDF549100FA7D86 /* patientprofileblue@1x~ipad.png in Resources */,
+				180CF20E1BDF539700FA7D86 /* searchLaparoscopygrey@2x~iphone.png in Resources */,
+				180CF1F51BDF539700FA7D86 /* downloadgrey@2x~iphone.png in Resources */,
+				180CF32E1BDF585B00FA7D86 /* background.png in Resources */,
+				180CF1F91BDF539700FA7D86 /* labsgrey@2x~iphone.png in Resources */,
+				180CF2EB1BDF545C00FA7D86 /* searchXraygrey@1x~ipad.png in Resources */,
 				18327F361BC533EE002210BC /* downArrow.png in Resources */,
+				180CF2E51BDF545C00FA7D86 /* searchLipidProfilesgrey@1x~ipad.png in Resources */,
+				180CF1F61BDF539700FA7D86 /* filtergrey@2x~iphone.png in Resources */,
+				180CF2D11BDF545C00FA7D86 /* logoutgrey@1x~ipad.png in Resources */,
+				180CF2D61BDF545C00FA7D86 /* patientgirlgrey@1x~ipad.png in Resources */,
+				180CF1901BDF52C700FA7D86 /* searchEEGgrey@3x~iphone.png in Resources */,
+				180CF2041BDF539700FA7D86 /* searchbloodtestsgrey@2x~iphone.png in Resources */,
+				180CF2C71BDF545C00FA7D86 /* clinicgrey@1x~ipad.png in Resources */,
 				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				182394EE1BBD0DCE00D97366 /* Main.storyboard in Resources */,
 				189EDB941BD62FFE00AA9B96 /* generalPhysician.png in Resources */,
+				180CF17E1BDF52C700FA7D86 /* labsgrey@3x~iphone.png in Resources */,
+				180CF18A1BDF52C700FA7D86 /* searchcatgrey@3x~iphone.png in Resources */,
 				185D87131BD7B8E0003B357C /* manageAppointments.json in Resources */,
+				180CF2D51BDF545C00FA7D86 /* nursegrey@1x~ipad.png in Resources */,
+				180CF1971BDF52C700FA7D86 /* searchPediatriciangrey@3x~iphone.png in Resources */,
+				180CF1811BDF52C700FA7D86 /* medicineAlarmgrey@3x~iphone.png in Resources */,
+				180CF3081BDF547600FA7D86 /* refreshblue@2x~ipad.png in Resources */,
 				1842F3161BC398BA0055597E /* delete.png in Resources */,
+				180CF1B21BDF535500FA7D86 /* doctorprofileblue@3x~iphone.png in Resources */,
+				180CF3241BDF549100FA7D86 /* patientblue@1x~ipad.png in Resources */,
+				180CF2EA1BDF545C00FA7D86 /* searchUltrasoundgrey@1x~ipad.png in Resources */,
+				180CF2C21BDF545C00FA7D86 /* alarmOffgrey@1x~ipad.png in Resources */,
+				180CF2091BDF539700FA7D86 /* searchECGgrey@2x~iphone.png in Resources */,
+				180CF2321BDF53B000FA7D86 /* patientgirlprofileblue@2x~iphone.png in Resources */,
+				180CF1951BDF52C700FA7D86 /* searchMammographygrey@3x~iphone.png in Resources */,
+				180CF27C1BDF543400FA7D86 /* patientgirlgrey@2x~ipad.png in Resources */,
+				180CF28E1BDF543400FA7D86 /* searchPediatriciangrey@2x~ipad.png in Resources */,
+				180CF2721BDF543400FA7D86 /* filtergrey@2x~ipad.png in Resources */,
+				180CF2E91BDF545C00FA7D86 /* searchPETgrey@1x~ipad.png in Resources */,
+				180CF2DB1BDF545C00FA7D86 /* searchcatgrey@1x~ipad.png in Resources */,
+				180CF19B1BDF52C700FA7D86 /* settingsgrey@3x~iphone.png in Resources */,
+				180CF2931BDF543400FA7D86 /* templatesgrey@2x~ipad.png in Resources */,
 				18BB05651BC24DFE00D237CD /* check.png in Resources */,
+				180CF31E1BDF549100FA7D86 /* consultingblue@1x~ipad.png in Resources */,
+				180CF2801BDF543400FA7D86 /* searchbloodtestsgrey@2x~ipad.png in Resources */,
+				180CF2111BDF539700FA7D86 /* searchMRIgrey@2x~iphone.png in Resources */,
+				180CF1BB1BDF535500FA7D86 /* searchclinicblue@3x~iphone.png in Resources */,
+				180CF2851BDF543400FA7D86 /* searchECGgrey@2x~ipad.png in Resources */,
+				180CF1FA1BDF539700FA7D86 /* locationgrey@2x~iphone.png in Resources */,
+				180CF2691BDF543400FA7D86 /* alarmOngrey@2x~ipad.png in Resources */,
+				180CF1B51BDF535500FA7D86 /* nurseprofileblue@3x~iphone.png in Resources */,
+				180CF2CF1BDF545C00FA7D86 /* labsgrey@1x~ipad.png in Resources */,
 				18BB05751BC24DFE00D237CD /* searchDoctor.png in Resources */,
+				180CF17C1BDF52C700FA7D86 /* financegrey@3x~iphone.png in Resources */,
+				180CF1ED1BDF539700FA7D86 /* alarmOngrey@2x~iphone.png in Resources */,
+				180CF2361BDF53B000FA7D86 /* searchdoctorblue@2x~iphone.png in Resources */,
+				180CF3221BDF549100FA7D86 /* notesblue@1x~ipad.png in Resources */,
 				18BB05631BC24DFE00D237CD /* assistance.png in Resources */,
 				18BB05781BC24DFE00D237CD /* unchecked.png in Resources */,
+				180CF30B1BDF547600FA7D86 /* searchpatientblue@2x~ipad.png in Resources */,
+				180CF2891BDF543400FA7D86 /* searchhomeopathygrey@2x~ipad.png in Resources */,
+				180CF2131BDF539700FA7D86 /* searchPETgrey@2x~iphone.png in Resources */,
 				18BB056F1BC24DFE00D237CD /* manageClinics.png in Resources */,
+				180CF28A1BDF543400FA7D86 /* searchLaparoscopygrey@2x~ipad.png in Resources */,
+				180CF28C1BDF543400FA7D86 /* searchMammographygrey@2x~ipad.png in Resources */,
+				180CF27A1BDF543400FA7D86 /* notesgrey@2x~ipad.png in Resources */,
 				18BB05711BC24DFE00D237CD /* manageTemplates.png in Resources */,
+				180CF1EE1BDF539700FA7D86 /* appointmentsgrey@2x~iphone.png in Resources */,
+				180CF2351BDF53B000FA7D86 /* searchclinicblue@2x~iphone.png in Resources */,
+				180CF2151BDF539700FA7D86 /* searchXraygrey@2x~iphone.png in Resources */,
 				189EDB951BD62FFE00AA9B96 /* gynecologist.png in Resources */,
+				180CF3261BDF549100FA7D86 /* patientgirlprofileblue@1x~ipad.png in Resources */,
+				180CF26B1BDF543400FA7D86 /* capturegrey@2x~ipad.png in Resources */,
+				180CF3011BDF547600FA7D86 /* doctorprofileblue@2x~ipad.png in Resources */,
+				180CF2DA1BDF545C00FA7D86 /* searchbloodtestsgrey@1x~ipad.png in Resources */,
+				180CF20C1BDF539700FA7D86 /* searchgynecologistgrey@2x~iphone.png in Resources */,
+				180CF3251BDF549100FA7D86 /* patientgirlblue@1x~ipad.png in Resources */,
+				180CF2311BDF53B000FA7D86 /* patientgirlblue@2x~iphone.png in Resources */,
+				180CF2D21BDF545C00FA7D86 /* medicineAlarmgrey@1x~ipad.png in Resources */,
+				180CF26C1BDF543400FA7D86 /* chatgrey@2x~ipad.png in Resources */,
+				180CF2881BDF543400FA7D86 /* searchgynecologistgrey@2x~ipad.png in Resources */,
+				180CF2841BDF543400FA7D86 /* searchdermatologygrey@2x~ipad.png in Resources */,
+				180CF1A01BDF531E00FA7D86 /* chatblue@3x~iphone.png in Resources */,
+				180CF2381BDF53B000FA7D86 /* settingsblue@2x~iphone.png in Resources */,
 				18BB056B1BC24DFE00D237CD /* location.png in Resources */,
 				189EDB961BD62FFE00AA9B96 /* homeopathy.png in Resources */,
+				180CF3281BDF549100FA7D86 /* refreshblue@1x~ipad.png in Resources */,
+				180CF33D1BDF7C1900FA7D86 /* subProcedures.json in Resources */,
+				180CF1F21BDF539700FA7D86 /* consultinggrey@2x~iphone.png in Resources */,
+				180CF17D1BDF52C700FA7D86 /* firstaidgrey@3x~iphone.png in Resources */,
+				180CF27D1BDF543400FA7D86 /* patientgrey@2x~ipad.png in Resources */,
 				183D1A441BD0F646003E0CFC /* arrowButton.png in Resources */,
+				180CF2861BDF543400FA7D86 /* searchechocardiographygrey@2x~ipad.png in Resources */,
 				18BB05691BC24DFE00D237CD /* doctorLanding.png in Resources */,
 				183D40C91BDE117C00AB4FA5 /* behind_alert_view.png in Resources */,
+				180CF22E1BDF53B000FA7D86 /* notesblue@2x~iphone.png in Resources */,
+				180CF1961BDF52C700FA7D86 /* searchMRIgrey@3x~iphone.png in Resources */,
 				189EDB931BD62FFE00AA9B96 /* dermatologist.png in Resources */,
+				180CF2E21BDF545C00FA7D86 /* searchgynecologistgrey@1x~ipad.png in Resources */,
+				180CF2291BDF53B000FA7D86 /* chatblue@2x~iphone.png in Resources */,
+				180CF27F1BDF543400FA7D86 /* searchbiopsygrey@2x~ipad.png in Resources */,
+				180CF19D1BDF52C700FA7D86 /* Timinggrey@3x~iphone.png in Resources */,
+				180CF32C1BDF549100FA7D86 /* settingsblue@1x~ipad.png in Resources */,
+				180CF2CC1BDF545C00FA7D86 /* filtergrey@1x~ipad.png in Resources */,
+				180CF2681BDF543400FA7D86 /* alarmOffgrey@2x~ipad.png in Resources */,
+				180CF2E71BDF545C00FA7D86 /* searchMRIgrey@1x~ipad.png in Resources */,
+				180CF1991BDF52C700FA7D86 /* searchUltrasoundgrey@3x~iphone.png in Resources */,
 				185D87001BD79625003B357C /* searchPatient.json in Resources */,
+				180CF22D1BDF53B000FA7D86 /* filterblue@2x~iphone.png in Resources */,
+				180CF19A1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png in Resources */,
 				187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */,
+				180CF1FD1BDF539700FA7D86 /* Medicinegrey@2x~iphone.png in Resources */,
 				186BD6251BCFA87B00B43A8C /* HomeCountPatients.json in Resources */,
+				180CF2EC1BDF545C00FA7D86 /* settingsgrey@1x~ipad.png in Resources */,
+				180CF1BE1BDF535500FA7D86 /* settingsblue@3x~iphone.png in Resources */,
 				189EDB971BD62FFE00AA9B96 /* pediatrician.png in Resources */,
 				18327F3B1BC53615002210BC /* upArrow.png in Resources */,
 				18BB05731BC24DFE00D237CD /* patientProfile.png in Resources */,
+				180CF2DD1BDF545C00FA7D86 /* searchdentistgrey@1x~ipad.png in Resources */,
+				180CF1BD1BDF535500FA7D86 /* searchpatientblue@3x~iphone.png in Resources */,
+				180CF2731BDF543400FA7D86 /* financegrey@2x~ipad.png in Resources */,
+				180CF3201BDF549100FA7D86 /* doctorprofileblue@1x~ipad.png in Resources */,
+				180CF2751BDF543400FA7D86 /* labsgrey@2x~ipad.png in Resources */,
 				187A0C821BC68ABD003AC5D9 /* ClinicList.json in Resources */,
 				184C23541BDA4D04004F3EF1 /* getAllPatientAppointment.json in Resources */,
+				180CF1851BDF52C700FA7D86 /* patientgirlgrey@3x~iphone.png in Resources */,
+				180CF18D1BDF52C700FA7D86 /* searchdermatologygrey@3x~iphone.png in Resources */,
+				180CF1931BDF52C700FA7D86 /* searchLaparoscopygrey@3x~iphone.png in Resources */,
 				18BB056E1BC24DFE00D237CD /* manageAppointments.png in Resources */,
+				180CF22B1BDF53B000FA7D86 /* doctorblue@2x~iphone.png in Resources */,
+				180CF1921BDF52C700FA7D86 /* searchhomeopathygrey@3x~iphone.png in Resources */,
 				187A0C801BC67F1F003AC5D9 /* unchechRadio.png in Resources */,
 				18BB05721BC24DFE00D237CD /* notifications.png in Resources */,
+				180CF1871BDF52C700FA7D86 /* searchangiographygrey@3x~iphone.png in Resources */,
+				180CF2741BDF543400FA7D86 /* firstaidgrey@2x~ipad.png in Resources */,
+				180CF2941BDF543400FA7D86 /* Timinggrey@2x~ipad.png in Resources */,
+				180CF3031BDF547600FA7D86 /* nurseprofileblue@2x~ipad.png in Resources */,
+				180CF2791BDF543400FA7D86 /* Medicinegrey@2x~ipad.png in Resources */,
+				180CF26D1BDF543400FA7D86 /* clinicgrey@2x~ipad.png in Resources */,
+				180CF2E01BDF545C00FA7D86 /* searchechocardiographygrey@1x~ipad.png in Resources */,
+				180CF2921BDF543400FA7D86 /* settingsgrey@2x~ipad.png in Resources */,
 				18BB05621BC24DFE00D237CD /* appointment.png in Resources */,
+				180CF19C1BDF52C700FA7D86 /* templatesgrey@3x~iphone.png in Resources */,
+				180CF1711BDF52C700FA7D86 /* alarmOffgrey@3x~iphone.png in Resources */,
+				180CF2C51BDF545C00FA7D86 /* capturegrey@1x~ipad.png in Resources */,
+				180CF2181BDF539700FA7D86 /* Timinggrey@2x~iphone.png in Resources */,
+				180CF2831BDF543400FA7D86 /* searchdentistgrey@2x~ipad.png in Resources */,
+				180CF2DC1BDF545C00FA7D86 /* searchcolonoscopygrey@1x~ipad.png in Resources */,
+				180CF2E31BDF545C00FA7D86 /* searchhomeopathygrey@1x~ipad.png in Resources */,
 				187A0C7F1BC67F1F003AC5D9 /* checkRadio.png in Resources */,
 				184C23591BDA608F004F3EF1 /* getAllDoctorPatientClinics.json in Resources */,
+				180CF3061BDF547600FA7D86 /* patientgirlprofileblue@2x~ipad.png in Resources */,
 				18BB056D1BC24DFE00D237CD /* logout.png in Resources */,
+				180CF2D31BDF545C00FA7D86 /* Medicinegrey@1x~ipad.png in Resources */,
+				180CF18B1BDF52C700FA7D86 /* searchcolonoscopygrey@3x~iphone.png in Resources */,
+				180CF1B71BDF535500FA7D86 /* patientgirlblue@3x~iphone.png in Resources */,
+				180CF3041BDF547600FA7D86 /* patientblue@2x~ipad.png in Resources */,
 				18C7DB0D1BC7AC92005B93A9 /* Assistant.json in Resources */,
+				180CF17B1BDF52C700FA7D86 /* filtergrey@3x~iphone.png in Resources */,
+				180CF2781BDF543400FA7D86 /* medicineAlarmgrey@2x~ipad.png in Resources */,
+				180CF3021BDF547600FA7D86 /* filterblue@2x~ipad.png in Resources */,
 				182394F31BBD0DCE00D97366 /* LaunchScreen.xib in Resources */,
+				180CF2E11BDF545C00FA7D86 /* searchEEGgrey@1x~ipad.png in Resources */,
+				180CF2CB1BDF545C00FA7D86 /* downloadgrey@1x~ipad.png in Resources */,
+				180CF2341BDF53B000FA7D86 /* refreshblue@2x~iphone.png in Resources */,
+				180CF3071BDF547600FA7D86 /* patientprofileblue@2x~ipad.png in Resources */,
+				180CF1911BDF52C700FA7D86 /* searchgynecologistgrey@3x~iphone.png in Resources */,
+				180CF1FF1BDF539700FA7D86 /* nursegrey@2x~iphone.png in Resources */,
+				180CF2CE1BDF545C00FA7D86 /* firstaidgrey@1x~ipad.png in Resources */,
+				180CF2DF1BDF545C00FA7D86 /* searchECGgrey@1x~ipad.png in Resources */,
+				180CF22C1BDF53B000FA7D86 /* doctorprofileblue@2x~iphone.png in Resources */,
+				180CF1881BDF52C700FA7D86 /* searchbiopsygrey@3x~iphone.png in Resources */,
 				18BB05681BC24DFE00D237CD /* doctordefault.png in Resources */,
+				180CF32B1BDF549100FA7D86 /* searchpatientblue@1x~ipad.png in Resources */,
+				180CF28B1BDF543400FA7D86 /* searchLipidProfilesgrey@2x~ipad.png in Resources */,
+				180CF17A1BDF52C700FA7D86 /* downloadgrey@3x~iphone.png in Resources */,
 				18327F221BC4FD79002210BC /* MyDemo.json in Resources */,
+				180CF27E1BDF543400FA7D86 /* searchangiographygrey@2x~ipad.png in Resources */,
+				180CF2761BDF543400FA7D86 /* locationgrey@2x~ipad.png in Resources */,
+				180CF2D91BDF545C00FA7D86 /* searchbiopsygrey@1x~ipad.png in Resources */,
+				180CF1B61BDF535500FA7D86 /* patientblue@3x~iphone.png in Resources */,
+				180CF2161BDF539700FA7D86 /* settingsgrey@2x~iphone.png in Resources */,
+				180CF1791BDF52C700FA7D86 /* doctorgrey@3x~iphone.png in Resources */,
+				180CF2001BDF539700FA7D86 /* patientgirlgrey@2x~iphone.png in Resources */,
+				180CF2ED1BDF545C00FA7D86 /* templatesgrey@1x~ipad.png in Resources */,
+				180CF1761BDF52C700FA7D86 /* clinicgrey@3x~iphone.png in Resources */,
+				180CF2C91BDF545C00FA7D86 /* dependentsgrey@1x~ipad.png in Resources */,
 				18BB05661BC24DFE00D237CD /* checked.png in Resources */,
 				18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */,
+				180CF1831BDF52C700FA7D86 /* notesgrey@3x~iphone.png in Resources */,
+				180CF1B31BDF535500FA7D86 /* filterblue@3x~iphone.png in Resources */,
+				180CF26A1BDF543400FA7D86 /* appointmentsgrey@2x~ipad.png in Resources */,
+				180CF2C61BDF545C00FA7D86 /* chatgrey@1x~ipad.png in Resources */,
+				180CF1B81BDF535500FA7D86 /* patientgirlprofileblue@3x~iphone.png in Resources */,
+				180CF28D1BDF543400FA7D86 /* searchMRIgrey@2x~ipad.png in Resources */,
+				180CF2CD1BDF545C00FA7D86 /* financegrey@1x~ipad.png in Resources */,
+				180CF3351BDF657A00FA7D86 /* procedureTitle.json in Resources */,
+				180CF1F01BDF539700FA7D86 /* chatgrey@2x~iphone.png in Resources */,
+				180CF22A1BDF53B000FA7D86 /* consultingblue@2x~iphone.png in Resources */,
+				180CF1861BDF52C700FA7D86 /* patientgrey@3x~iphone.png in Resources */,
+				180CF2D01BDF545C00FA7D86 /* locationgrey@1x~ipad.png in Resources */,
+				180CF2171BDF539700FA7D86 /* templatesgrey@2x~iphone.png in Resources */,
+				180CF2871BDF543400FA7D86 /* searchEEGgrey@2x~ipad.png in Resources */,
 				18C7DB021BC798E6005B93A9 /* Dental.json in Resources */,
+				180CF3051BDF547600FA7D86 /* patientgirlblue@2x~ipad.png in Resources */,
+				180CF26F1BDF543400FA7D86 /* dependentsgrey@2x~ipad.png in Resources */,
+				180CF2071BDF539700FA7D86 /* searchdentistgrey@2x~iphone.png in Resources */,
 				189EDB921BD62FFE00AA9B96 /* dentist.png in Resources */,
+				180CF28F1BDF543400FA7D86 /* searchPETgrey@2x~ipad.png in Resources */,
+				180CF2D71BDF545C00FA7D86 /* patientgrey@1x~ipad.png in Resources */,
 				18BB05761BC24DFE00D237CD /* searchHospital.png in Resources */,
 				185D87081BD7A0C7003B357C /* searchDoctor.json in Resources */,
+				180CF2CA1BDF545C00FA7D86 /* doctorgrey@1x~ipad.png in Resources */,
 				18BB056C1BC24DFE00D237CD /* logo.png in Resources */,
+				180CF2771BDF543400FA7D86 /* logoutgrey@2x~ipad.png in Resources */,
+				180CF2141BDF539700FA7D86 /* searchUltrasoundgrey@2x~iphone.png in Resources */,
+				180CF27B1BDF543400FA7D86 /* nursegrey@2x~ipad.png in Resources */,
+				180CF2FF1BDF547600FA7D86 /* consultingblue@2x~ipad.png in Resources */,
+				180CF17F1BDF52C700FA7D86 /* locationgrey@3x~iphone.png in Resources */,
+				180CF2C41BDF545C00FA7D86 /* appointmentsgrey@1x~ipad.png in Resources */,
 				18C7DB1A1BC7C71B005B93A9 /* Patient.json in Resources */,
+				180CF2811BDF543400FA7D86 /* searchcatgrey@2x~ipad.png in Resources */,
+				180CF22F1BDF53B000FA7D86 /* nurseprofileblue@2x~iphone.png in Resources */,
+				180CF2FE1BDF547600FA7D86 /* chatblue@2x~ipad.png in Resources */,
+				180CF3231BDF549100FA7D86 /* nurseprofileblue@1x~ipad.png in Resources */,
+				180CF2371BDF53B000FA7D86 /* searchpatientblue@2x~iphone.png in Resources */,
+				180CF3001BDF547600FA7D86 /* doctorblue@2x~ipad.png in Resources */,
+				180CF2D41BDF545C00FA7D86 /* notesgrey@1x~ipad.png in Resources */,
+				180CF1F31BDF539700FA7D86 /* dependentsgrey@2x~iphone.png in Resources */,
+				180CF1FB1BDF539700FA7D86 /* logoutgrey@2x~iphone.png in Resources */,
+				180CF2121BDF539700FA7D86 /* searchPediatriciangrey@2x~iphone.png in Resources */,
 				183D407E1BDDF17600AB4FA5 /* history.png in Resources */,
+				180CF18E1BDF52C700FA7D86 /* searchECGgrey@3x~iphone.png in Resources */,
+				180CF32A1BDF549100FA7D86 /* searchdoctorblue@1x~ipad.png in Resources */,
+				180CF30A1BDF547600FA7D86 /* searchdoctorblue@2x~ipad.png in Resources */,
 				18BB056A1BC24DFE00D237CD /* home.png in Resources */,
+				180CF3211BDF549100FA7D86 /* filterblue@1x~ipad.png in Resources */,
+				180CF1B41BDF535500FA7D86 /* notesblue@3x~iphone.png in Resources */,
+				180CF1741BDF52C700FA7D86 /* capturegrey@3x~iphone.png in Resources */,
+				180CF26E1BDF543400FA7D86 /* consultinggrey@2x~ipad.png in Resources */,
+				180CF1751BDF52C700FA7D86 /* chatgrey@3x~iphone.png in Resources */,
+				180CF1941BDF52C700FA7D86 /* searchLipidProfilesgrey@3x~iphone.png in Resources */,
+				180CF2E61BDF545C00FA7D86 /* searchMammographygrey@1x~ipad.png in Resources */,
+				180CF2911BDF543400FA7D86 /* searchXraygrey@2x~ipad.png in Resources */,
+				180CF2D81BDF545C00FA7D86 /* searchangiographygrey@1x~ipad.png in Resources */,
+				180CF2031BDF539700FA7D86 /* searchbiopsygrey@2x~iphone.png in Resources */,
+				180CF1771BDF52C700FA7D86 /* consultinggrey@3x~iphone.png in Resources */,
+				180CF20F1BDF539700FA7D86 /* searchLipidProfilesgrey@2x~iphone.png in Resources */,
+				180CF2C31BDF545C00FA7D86 /* alarmOngrey@1x~ipad.png in Resources */,
+				180CF2701BDF543400FA7D86 /* doctorgrey@2x~ipad.png in Resources */,
+				180CF2DE1BDF545C00FA7D86 /* searchdermatologygrey@1x~ipad.png in Resources */,
+				180CF2061BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png in Resources */,
+				180CF3291BDF549100FA7D86 /* searchclinicblue@1x~ipad.png in Resources */,
+				180CF1EC1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png in Resources */,
+				180CF2821BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png in Resources */,
+				180CF1B01BDF535500FA7D86 /* consultingblue@3x~iphone.png in Resources */,
+				180CF20B1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png in Resources */,
+				180CF1F71BDF539700FA7D86 /* financegrey@2x~iphone.png in Resources */,
+				180CF20A1BDF539700FA7D86 /* searchechocardiographygrey@2x~iphone.png in Resources */,
+				180CF2331BDF53B000FA7D86 /* patientprofileblue@2x~iphone.png in Resources */,
 				18C7DB181BC7BC94005B93A9 /* search.png in Resources */,
+				180CF2E41BDF545C00FA7D86 /* searchLaparoscopygrey@1x~ipad.png in Resources */,
+				180CF2101BDF539700FA7D86 /* searchMammographygrey@2x~iphone.png in Resources */,
+				180CF1F41BDF539700FA7D86 /* doctorgrey@2x~iphone.png in Resources */,
+				180CF1801BDF52C700FA7D86 /* logoutgrey@3x~iphone.png in Resources */,
+				180CF1B91BDF535500FA7D86 /* patientprofileblue@3x~iphone.png in Resources */,
+				180CF2EE1BDF545C00FA7D86 /* Timinggrey@1x~ipad.png in Resources */,
+				180CF2011BDF539700FA7D86 /* patientgrey@2x~iphone.png in Resources */,
+				180CF2C81BDF545C00FA7D86 /* consultinggrey@1x~ipad.png in Resources */,
+				180CF1731BDF52C700FA7D86 /* appointmentsgrey@3x~iphone.png in Resources */,
 				182394F01BBD0DCE00D97366 /* Images.xcassets in Resources */,
 				18BB05671BC24DFE00D237CD /* default.png in Resources */,
+				180CF20D1BDF539700FA7D86 /* searchhomeopathygrey@2x~iphone.png in Resources */,
+				180CF2301BDF53B000FA7D86 /* patientblue@2x~iphone.png in Resources */,
+				180CF18F1BDF52C700FA7D86 /* searchechocardiographygrey@3x~iphone.png in Resources */,
+				180CF2081BDF539700FA7D86 /* searchdermatologygrey@2x~iphone.png in Resources */,
+				180CF2E81BDF545C00FA7D86 /* searchPediatriciangrey@1x~ipad.png in Resources */,
+				180CF1781BDF52C700FA7D86 /* dependentsgrey@3x~iphone.png in Resources */,
+				180CF1B11BDF535500FA7D86 /* doctorblue@3x~iphone.png in Resources */,
+				180CF2021BDF539700FA7D86 /* searchangiographygrey@2x~iphone.png in Resources */,
+				180CF1FC1BDF539700FA7D86 /* medicineAlarmgrey@2x~iphone.png in Resources */,
+				180CF1841BDF52C700FA7D86 /* nursegrey@3x~iphone.png in Resources */,
+				180CF1981BDF52C700FA7D86 /* searchPETgrey@3x~iphone.png in Resources */,
+				180CF31D1BDF549100FA7D86 /* chatblue@1x~ipad.png in Resources */,
+				180CF30C1BDF547600FA7D86 /* settingsblue@2x~ipad.png in Resources */,
 				1842F3211BC3A4AF0055597E /* create.png in Resources */,
+				180CF1BC1BDF535500FA7D86 /* searchdoctorblue@3x~iphone.png in Resources */,
 				1822C4501BD4FCC400DD24C0 /* uparrowButton.png in Resources */,
+				180CF2901BDF543400FA7D86 /* searchUltrasoundgrey@2x~ipad.png in Resources */,
 				18BB05741BC24DFE00D237CD /* refresh.png in Resources */,
+				180CF18C1BDF52C700FA7D86 /* searchdentistgrey@3x~iphone.png in Resources */,
+				180CF1891BDF52C700FA7D86 /* searchbloodtestsgrey@3x~iphone.png in Resources */,
+				180CF2051BDF539700FA7D86 /* searchcatgrey@2x~iphone.png in Resources */,
+				180CF1BA1BDF535500FA7D86 /* refreshblue@3x~iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +1902,7 @@
 				184C23521BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.m in Sources */,
 				187A0C851BC68B5D003AC5D9 /* SearchClinicCell.m in Sources */,
 				186E57A51BDB699500F7CA72 /* ManageReminderViewController.m in Sources */,
+				180CF33B1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m in Sources */,
 				185D87161BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m in Sources */,
 				183D1A471BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.m in Sources */,
 				1835118E1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.m in Sources */,
@@ -914,6 +1941,7 @@
 				1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */,
 				1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
+				180CF3381BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m in Sources */,
 				183D408A1BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m in Sources */,
 				1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */,
 				1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */,

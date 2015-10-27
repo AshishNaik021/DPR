@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorAddTreatmentViewController : UIViewController
+@interface DoctorAddTreatmentViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *searchProcedureField;
+@property (weak, nonatomic) IBOutlet UITextField *categoryField;
+@property (weak, nonatomic) IBOutlet UIButton *searchProcedureButton;
+- (IBAction)searchProcedure:(id)sender;
+
+@property IBOutlet NSArray *procedureArr;
+@property (weak, nonatomic) IBOutlet UITableView *procedureTable;
+
+
+
+
 
 @end

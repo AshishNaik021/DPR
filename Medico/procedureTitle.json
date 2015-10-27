@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "doctorId": "3",
+        "procedureName": "dental",
+        "numberOfTemplate": "3",
+        "category": "Category4"
+    },
+    {
+        "id": "2",
+        "doctorId": "3",
+        "procedureName": "head",
+        "numberOfTemplate": "3",
+        "category": "Category5"
+    },
+    {
+        "id": "5",
+        "doctorId": "3",
+        "procedureName": "stomach",
+        "numberOfTemplate": "1",
+        "category": "Category2"
+    },
+    {
+        "id": "13",
+        "doctorId": "3",
+        "procedureName": "Shubhu",
+        "numberOfTemplate": "1",
+        "category": "CMS"
+    },
+    {
+        "id": "14",
+        "doctorId": "3",
+        "procedureName": "Procdure10",
+        "numberOfTemplate": "1",
+        "category": "Category 10"
+    }
+]

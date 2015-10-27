@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qo9-wJ-NWb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RWx-wm-FQX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -16,50 +16,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K9A-pI-A3r">
-                                <rect key="frame" x="0.0" y="64" width="375" height="152"/>
-                                <color key="backgroundColor" red="0.43310546875" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="0lb-79-hBR"/>
-                                    <constraint firstAttribute="height" constant="152" id="2Ls-bY-NhD"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="152" id="YdN-yO-Ihs"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="375" height="151"/>
-                                </variation>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqI-tB-z8t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqI-tB-z8t">
                                 <rect key="frame" x="16" y="236" width="88" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0K-2l-WAS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0K-2l-WAS">
                                 <rect key="frame" x="16" y="275" width="88" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jz-qq-Drp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot Password?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jz-qq-Drp">
                                 <rect key="frame" x="16" y="347" width="118" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Register as:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik9-Rx-ljQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register as:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik9-Rx-ljQ">
                                 <rect key="frame" x="16" y="410" width="83" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not registered? Register now, it is FREE." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-6v-ogn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not registered? Register now, it is FREE." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-6v-ogn">
                                 <rect key="frame" x="16" y="390" width="279" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="abc@gmail.com" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GCT-gW-WTS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="abc@gmail.com" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GCT-gW-WTS">
                                 <rect key="frame" x="116" y="236" width="243" height="23"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-Tg-91c">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwb-Tg-91c">
                                 <rect key="frame" x="285" y="306" width="74" height="33"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Login">
@@ -69,7 +57,7 @@
                                     <action selector="validate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aZx-hg-2Ya"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-cN-8Hd">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-cN-8Hd">
                                 <rect key="frame" x="142" y="347" width="89" height="23"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Click here...">
@@ -79,7 +67,7 @@
                                     <segue destination="MLe-cs-Wkb" kind="push" id="Rpz-ZT-Bbt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-gs-ZDu">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-gs-ZDu">
                                 <rect key="frame" x="63" y="429" width="55" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="Patient,">
@@ -89,7 +77,7 @@
                                     <segue destination="lXI-Px-rx8" kind="push" id="SSY-RP-i1u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLa-hn-dze">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLa-hn-dze">
                                 <rect key="frame" x="116" y="429" width="59" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="Assistant">
@@ -99,20 +87,20 @@
                                     <segue destination="y3W-hf-Nnx" kind="push" id="UAM-Su-euv"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="You need to register only once, you can change profile after login. Do yu want to more?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0a-H6-6N6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You need to register only once, you can change profile after login. Do yu want to more?" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0a-H6-6N6">
                                 <rect key="frame" x="15" y="467" width="343" height="51"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-QP-LVy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-QP-LVy">
                                 <rect key="frame" x="116" y="275" width="243" height="23"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJV-yM-lMA">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJV-yM-lMA">
                                 <rect key="frame" x="16" y="429" width="50" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                 <state key="normal" title="Doctor,">
@@ -122,14 +110,7 @@
                                     <segue destination="0cL-gk-Fiz" kind="push" id="qsd-pZ-N3J"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="re6-tB-LUg">
-                                <rect key="frame" x="146" y="104" width="82" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="Fwy-41-tsj"/>
-                                    <constraint firstAttribute="width" constant="82" id="RfO-r9-WeU"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIR-qH-vVN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIR-qH-vVN">
                                 <rect key="frame" x="259" y="526" width="100" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Know more">
@@ -141,64 +122,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="GCT-gW-WTS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="116" id="3P9-WO-HO3"/>
-                            <constraint firstAttribute="trailing" secondItem="K9A-pI-A3r" secondAttribute="trailing" id="4P2-RJ-Z60"/>
-                            <constraint firstItem="3jz-qq-Drp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="4rR-ay-lOu"/>
-                            <constraint firstItem="I0K-2l-WAS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="275" id="5Ks-L4-QUb"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="centerX" secondItem="re6-tB-LUg" secondAttribute="centerX" constant="0.5" id="89B-86-3IA"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="top" secondItem="re6-tB-LUg" secondAttribute="bottom" constant="-112" id="9Gp-5E-T8f"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="centerY" secondItem="re6-tB-LUg" secondAttribute="centerY" id="AfD-MF-Bgj"/>
-                            <constraint firstItem="I0K-2l-WAS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="BrK-U2-Gvy"/>
-                            <constraint firstItem="Ik9-Rx-ljQ" firstAttribute="top" secondItem="eK7-6v-ogn" secondAttribute="bottom" constant="-3" id="DVw-Da-FPG"/>
-                            <constraint firstItem="8Yh-QP-LVy" firstAttribute="leading" secondItem="I0K-2l-WAS" secondAttribute="trailing" constant="12" id="E5s-ta-n58"/>
-                            <constraint firstAttribute="bottom" secondItem="GIR-qH-vVN" secondAttribute="bottom" constant="111" id="F1a-je-sC7"/>
-                            <constraint firstItem="qwb-Tg-91c" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="306" id="Fl5-WP-aQu"/>
-                            <constraint firstItem="iqI-tB-z8t" firstAttribute="top" secondItem="K9A-pI-A3r" secondAttribute="bottom" constant="20" id="IhW-yA-xQU"/>
-                            <constraint firstItem="PLa-hn-dze" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="116" id="IwO-he-azj"/>
-                            <constraint firstItem="GCT-gW-WTS" firstAttribute="top" secondItem="K9A-pI-A3r" secondAttribute="bottom" constant="20" id="Jwm-cy-WJg"/>
-                            <constraint firstItem="PLa-hn-dze" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="443" id="KF2-1o-eKX"/>
-                            <constraint firstItem="eK7-6v-ogn" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="404" id="MCK-nS-D3Q"/>
-                            <constraint firstItem="eK7-6v-ogn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="NKc-uH-YNW"/>
-                            <constraint firstItem="GIR-qH-vVN" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="526" id="NW7-ip-Ncf"/>
-                            <constraint firstItem="GCT-gW-WTS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="236" id="NkP-0k-KBT"/>
-                            <constraint firstItem="I0K-2l-WAS" firstAttribute="top" secondItem="iqI-tB-z8t" secondAttribute="bottom" constant="16" id="QZb-CS-GqC"/>
-                            <constraint firstAttribute="trailing" secondItem="GIR-qH-vVN" secondAttribute="trailing" constant="16" id="RWu-V8-TZu"/>
-                            <constraint firstItem="8Yh-QP-LVy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="275" id="S7n-8W-DS1"/>
-                            <constraint firstItem="S0a-H6-6N6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="TBJ-M6-Iii"/>
-                            <constraint firstItem="WFd-gs-ZDu" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="443" id="TfI-Uh-bqE"/>
-                            <constraint firstItem="8Yh-QP-LVy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="116" id="TsX-Sh-wej"/>
-                            <constraint firstItem="sL8-cN-8Hd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="142" id="UPj-Fz-oZq"/>
-                            <constraint firstItem="3jz-qq-Drp" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="361" id="WbF-cb-rL6"/>
-                            <constraint firstAttribute="trailing" secondItem="qwb-Tg-91c" secondAttribute="trailing" constant="16" id="X8C-pi-BHT"/>
-                            <constraint firstItem="WJV-yM-lMA" firstAttribute="top" secondItem="Ik9-Rx-ljQ" secondAttribute="bottom" constant="-4" id="Xta-Ck-n1v"/>
-                            <constraint firstItem="WFd-gs-ZDu" firstAttribute="leading" secondItem="WJV-yM-lMA" secondAttribute="trailing" constant="-3" id="Yl0-vm-xqF"/>
-                            <constraint firstItem="S0a-H6-6N6" firstAttribute="top" secondItem="WFd-gs-ZDu" secondAttribute="bottom" constant="8" id="ZXb-KA-JHX"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="centerY" secondItem="re6-tB-LUg" secondAttribute="centerY" id="b1x-Hs-Bvz"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ba0-bj-eOX"/>
-                            <constraint firstItem="WFd-gs-ZDu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="63" id="d0l-ri-8qX"/>
-                            <constraint firstAttribute="trailing" secondItem="S0a-H6-6N6" secondAttribute="trailing" constant="16" id="egO-VM-VjT"/>
-                            <constraint firstItem="eK7-6v-ogn" firstAttribute="top" secondItem="3jz-qq-Drp" secondAttribute="bottom" constant="20" id="fvs-53-OM0"/>
-                            <constraint firstItem="WJV-yM-lMA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="443" id="gsL-Ec-BXi"/>
-                            <constraint firstItem="PLa-hn-dze" firstAttribute="leading" secondItem="WFd-gs-ZDu" secondAttribute="trailing" constant="-2" id="hEO-ed-1k5"/>
-                            <constraint firstItem="sL8-cN-8Hd" firstAttribute="top" secondItem="8Yh-QP-LVy" secondAttribute="bottom" constant="63" id="hlW-RT-Nl9"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="centerX" secondItem="re6-tB-LUg" secondAttribute="centerX" constant="0.5" id="iCE-FF-b3H"/>
-                            <constraint firstItem="Ik9-Rx-ljQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="iO8-Ar-uGK"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="64" id="imH-NS-KdQ"/>
-                            <constraint firstItem="GIR-qH-vVN" firstAttribute="top" secondItem="S0a-H6-6N6" secondAttribute="bottom" constant="8" id="kCB-7a-F9I"/>
-                            <constraint firstItem="sL8-cN-8Hd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="361" id="rDw-VJ-fhL"/>
-                            <constraint firstItem="iqI-tB-z8t" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="rEt-3U-8bW"/>
-                            <constraint firstItem="GCT-gW-WTS" firstAttribute="leading" secondItem="iqI-tB-z8t" secondAttribute="trailing" constant="12" id="rS8-Ny-104"/>
-                            <constraint firstItem="K9A-pI-A3r" firstAttribute="top" secondItem="re6-tB-LUg" secondAttribute="bottom" constant="-112" id="rUY-Kf-5LV"/>
-                            <constraint firstItem="WJV-yM-lMA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="tOf-eh-0wL"/>
-                            <constraint firstAttribute="trailing" secondItem="GCT-gW-WTS" secondAttribute="trailing" constant="16" id="ter-Z5-dnG"/>
-                            <constraint firstItem="iqI-tB-z8t" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="236" id="toc-P5-bf5"/>
-                            <constraint firstItem="re6-tB-LUg" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="104" id="vmD-jf-56B"/>
-                            <constraint firstItem="qwb-Tg-91c" firstAttribute="top" secondItem="8Yh-QP-LVy" secondAttribute="bottom" constant="8" id="wUf-eh-re4"/>
-                            <constraint firstItem="Ik9-Rx-ljQ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="424" id="y6f-2x-0SB"/>
-                            <constraint firstAttribute="trailing" secondItem="8Yh-QP-LVy" secondAttribute="trailing" constant="16" id="yyO-Qf-FmV"/>
-                            <constraint firstItem="8Yh-QP-LVy" firstAttribute="top" secondItem="GCT-gW-WTS" secondAttribute="bottom" constant="16" id="zCj-sa-Pp7"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="MEDICO" id="mNf-e0-AX7">
                         <barButtonItem key="backBarButtonItem" title="Back" id="o7a-3H-Ge3"/>
@@ -206,7 +129,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="K9A-pI-A3r" id="LvQ-Ic-FhW"/>
                         <outlet property="emailField" destination="GCT-gW-WTS" id="uh0-xO-D17"/>
                         <outlet property="forgotButton" destination="sL8-cN-8Hd" id="S4U-cs-XtQ"/>
                         <outlet property="knowMore" destination="GIR-qH-vVN" id="q9N-g2-Pxa"/>
@@ -2600,23 +2522,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-e0-0iE">
-                                <rect key="frame" x="16" y="216" width="343" height="308"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="2V7-XY-zyk">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2V7-XY-zyk" id="2Wl-Vo-37V">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="FXG-k3-ksu" id="Fp8-OI-tEd"/>
-                                    <outlet property="delegate" destination="FXG-k3-ksu" id="0W6-ma-HxA"/>
-                                </connections>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Procedure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qO7-3F-FTg">
                                 <rect key="frame" x="121" y="72" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2656,17 +2561,61 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" image="search.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchProcedure:" destination="FXG-k3-ksu" eventType="touchUpInside" id="Qle-dO-VoI"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ib7-e0-0iE">
+                                <rect key="frame" x="16" y="216" width="343" height="308"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="53" id="2V7-XY-zyk" customClass="DoctorAddTreatmentCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2V7-XY-zyk" id="2Wl-Vo-37V">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MI-lr-uX3">
+                                                    <rect key="frame" x="8" y="15" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6y-MI-Jgs">
+                                                    <rect key="frame" x="311" y="15" width="24" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="procedureName" destination="1MI-lr-uX3" id="XOK-HH-V7w"/>
+                                            <segue destination="geO-SW-zYi" kind="show" identifier="Show" id="2AS-ub-ZXs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FXG-k3-ksu" id="Fp8-OI-tEd"/>
+                                    <outlet property="delegate" destination="FXG-k3-ksu" id="0W6-ma-HxA"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZCG-Gu-lHX"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="categoryField" destination="tdc-86-bO9" id="KYp-wg-JVl"/>
+                        <outlet property="procedureTable" destination="ib7-e0-0iE" id="6WJ-NG-yb0"/>
+                        <outlet property="searchProcedureButton" destination="9A0-41-Yb7" id="bMV-cq-n4N"/>
+                        <outlet property="searchProcedureField" destination="ujG-6m-ARo" id="Ky6-eY-84W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHl-Df-nLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-209.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-215.5" y="-2019.5"/>
         </scene>
         <!--Doctor Detail Add Treatment View Controller-->
         <scene sceneID="Fz2-yg-vkm">
@@ -2684,17 +2633,34 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <rect key="frame" x="0.0" y="68" width="375" height="297"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="EPs-sf-sjv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="EPs-sf-sjv" customClass="DoctorDetailAddTreatmentCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EPs-sf-sjv" id="UWy-lr-b9k">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou2-iX-Na2">
+                                                    <rect key="frame" x="8" y="14" width="259" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV4-1v-S1M">
+                                                    <rect key="frame" x="351" y="14" width="16" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subProcedureName" destination="ou2-iX-Na2" id="B8p-TS-rwf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="geO-SW-zYi" id="OUu-4Q-EIs"/>
-                                    <outlet property="delegate" destination="geO-SW-zYi" id="wnd-El-6OS"/>
+                                    <outlet property="dataSource" destination="geO-SW-zYi" id="cYC-24-uZg"/>
+                                    <outlet property="delegate" destination="geO-SW-zYi" id="Hmn-nC-q0f"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -6798,56 +6764,6 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.7537655875661875" blue="0.90228831945251231" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZV-ys-DQS">
-                                <rect key="frame" x="16" y="74" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Summary">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="summary:" destination="xAO-xi-dRd" eventType="touchUpInside" id="H6Y-dX-u8d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-WH-SLD">
-                                <rect key="frame" x="77" y="74" width="62" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Documents">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="documents:" destination="xAO-xi-dRd" eventType="touchUpInside" id="Zo7-rY-VGl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-wP-O1V">
-                                <rect key="frame" x="147" y="74" width="74" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Doctor's Note">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doctorsNote:" destination="xAO-xi-dRd" eventType="touchUpInside" id="o6h-nm-Hui"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-b3-1qN">
-                                <rect key="frame" x="313" y="74" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Invoices">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="invoices:" destination="xAO-xi-dRd" eventType="touchUpInside" id="2J9-cU-MLp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOB-KP-Tb8">
-                                <rect key="frame" x="229" y="74" width="81" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="Treatment Plan">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="treatmentPlan:" destination="xAO-xi-dRd" eventType="touchUpInside" id="dXI-Kt-vbH"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUp-om-Fex">
                                 <rect key="frame" x="13" y="103" width="346" height="544"/>
                                 <subviews>
@@ -6977,17 +6893,171 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <color key="backgroundColor" red="1" green="0.77810534491122951" blue="0.57094438420288229" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aer-cN-gDz">
-                                <rect key="frame" x="158" y="637" width="25" height="25"/>
+                                <rect key="frame" x="13" y="103" width="346" height="544"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invoices" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vG-su-ps9">
-                                        <rect key="frame" x="44" y="20" width="64" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpH-3x-F3B">
+                                        <rect key="frame" x="292" y="8" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="FXG-k3-ksu" kind="push" id="uIc-gH-mMb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpc-ze-tsq">
+                                        <rect key="frame" x="13" y="44" width="21" height="22"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share with the Patient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-HZ-gCe">
+                                        <rect key="frame" x="42" y="44" width="189" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total                       :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-ZH-A9d">
+                                        <rect key="frame" x="8" y="118" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="( - ) Discount (%)    :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otw-Hf-B8j">
+                                        <rect key="frame" x="8" y="147" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="( + ) Tax (%)            :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2D-PP-lLH">
+                                        <rect key="frame" x="8" y="176" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="( - ) Advance           :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53f-rL-gEP">
+                                        <rect key="frame" x="8" y="263" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Due                :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-HP-fbs">
+                                        <rect key="frame" x="8" y="292" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grand Total            :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGF-5m-l5v">
+                                        <rect key="frame" x="8" y="205" width="143" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-------------------------------------------------------" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJa-nB-YkC">
+                                        <rect key="frame" x="8" y="234" width="330" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-eg-z1n">
+                                        <rect key="frame" x="257" y="118" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEy-Rp-WX5">
+                                        <rect key="frame" x="257" y="147" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zKM-DH-uFv">
+                                        <rect key="frame" x="257" y="176" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M2o-h4-UVN">
+                                        <rect key="frame" x="257" y="205" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IfT-OQ-QuB">
+                                        <rect key="frame" x="159" y="147" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LL0-al-tc8">
+                                        <rect key="frame" x="159" y="176" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0l-PH-sAl">
+                                        <rect key="frame" x="257" y="263" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBB-sR-2sz">
+                                        <rect key="frame" x="257" y="292" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbP-Pe-eKB">
+                                        <rect key="frame" x="274" y="369" width="34" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.59933923892717345" blue="0.37540817410032012" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZV-ys-DQS">
+                                <rect key="frame" x="16" y="74" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Summary">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="summary:" destination="xAO-xi-dRd" eventType="touchUpInside" id="H6Y-dX-u8d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wk-WH-SLD">
+                                <rect key="frame" x="77" y="74" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Documents">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="documents:" destination="xAO-xi-dRd" eventType="touchUpInside" id="Zo7-rY-VGl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aI-wP-O1V">
+                                <rect key="frame" x="147" y="74" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Doctor's Note">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doctorsNote:" destination="xAO-xi-dRd" eventType="touchUpInside" id="o6h-nm-Hui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pon-b3-1qN">
+                                <rect key="frame" x="313" y="74" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Invoices">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="invoices:" destination="xAO-xi-dRd" eventType="touchUpInside" id="2J9-cU-MLp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOB-KP-Tb8">
+                                <rect key="frame" x="229" y="74" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Treatment Plan">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="treatmentPlan:" destination="xAO-xi-dRd" eventType="touchUpInside" id="dXI-Kt-vbH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -8306,7 +8376,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Enf-1y-7gY"/>
+        <segue reference="MSt-Qf-dsC"/>
         <segue reference="rKr-LI-ZmT"/>
+        <segue reference="uIc-gH-mMb"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,0 +1,17 @@
+[
+    {
+        "templateName": "teeth cleaning",
+        "procedureName": "dental",
+        "templateId": 1
+    },
+    {
+        "templateName": "teeth sliver",
+        "procedureName": "dental",
+        "templateId": 7
+    },
+    {
+        "templateName": "abc",
+        "procedureName": "dental",
+        "templateId": 13
+    }
+]
