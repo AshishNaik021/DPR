@@ -22,4 +22,14 @@
 
 - (IBAction)downArrow:(id)sender {
 }
+
+-(IBAction)slot1TotalAppointmentCount:(id)sender{
+    
+}
+-(IBAction)slot2TotalAppointmentCount:(id)sender{
+    
+}
+-(IBAction)slot3TotalAppointmentCount:(id)sender{
+    
+}
 @end
