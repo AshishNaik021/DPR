@@ -8,7 +8,7 @@
 
 #import "LoginPage.h"
 #import "DoctorLandingPageView.h"
-
+#import "PatientLandingPageViewController.h"
 
 @interface LoginPage ()
 
@@ -153,6 +153,12 @@
     
     NSString *nameOfDoctor = [arratList valueForKey:@"name"];
     nameOfDoctor = [nameOfDoctor capitalizedString];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:emailField.text forKey:@"loggedInEmail"];
+    [ud setObject:@"Doctor" forKey:@"loggedInUserType"];
+    [ud setObject:nameOfDoctor forKey:@"loggedInDoctor"];
+    [ud setObject:@"" forKey:@"loggedInPatient"];
+    [ud synchronize];
     return nameOfDoctor;
     
 }
@@ -177,6 +183,12 @@
     
     NSString *nameOfPatient = [arratList valueForKey:@"name"];
     nameOfPatient = [nameOfPatient capitalizedString];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:emailField.text forKey:@"loggedInEmail"];
+    [ud setObject:@"Patient" forKey:@"loggedInUserType"];
+    [ud setObject:@"" forKey:@"loggedInDoctor"];
+    [ud setObject:nameOfPatient forKey:@"loggedInPatient"];
+    [ud synchronize];
     return nameOfPatient;
     
 }
@@ -271,19 +283,19 @@
         [spinner stopAnimating];
     }
     else if ([userType isEqualToString:@"Patient"]){
-        DoctorLandingPageView *doctorHome =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-        doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
-        NSLog(@"email passing %@",doctorHome.doctorEmail);
-        NSString *pName = [self getPatientName];
-        doctorHome.doctorName = pName;
-        NSLog(@"Return block doctor name:========%@",pName);
-        [self.navigationController pushViewController:doctorHome animated:YES];
+//        DoctorLandingPageView *doctorHome =
+//        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+//        doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
+//        NSLog(@"email passing %@",doctorHome.doctorEmail);
+//        NSString *pName = [self getPatientName];
+//        doctorHome.doctorName = pName;
+//        NSLog(@"Return block doctor name:========%@",pName);
+//        [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
-        // As Patient Page not not present, doctor page is displayed
-        //            PatientLandingPageView *patientHome =
-        //            [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
-        //            [self.navigationController pushViewController:patientHome animated:YES];
+         //As Patient Page not not present, doctor page is displayed
+                    PatientLandingPageViewController *patientHome =
+                    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+                    [self.navigationController pushViewController:patientHome animated:YES];
     }
     //    else {
     //        AssistantLandingPageView *assistantHome =

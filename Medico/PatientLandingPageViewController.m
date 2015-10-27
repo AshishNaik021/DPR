@@ -19,6 +19,22 @@
 @synthesize patientEmail = _patientEmail;
 @synthesize pNameLabel;
 
+-(void)setName{
+    //    NSString *cameFrom = [self navigationController.v]
+    //    NSLog(@"%@",[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]);
+    //
+    //    NSString *string = [NSString stringWithFormat:[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    if ([[ud objectForKey:@"loggedInUserType"] isEqualToString:@"Patient"]) {
+        pNameLabel.text = [ud objectForKey:@"loggedInPatient"];
+        self.patientName = [ud objectForKey:@"loggedInPatient"];
+        NSLog(@"Login name was set");
+    }
+    else
+        NSLog(@"Name Not Set");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -37,10 +53,13 @@
                @"10",
                @"5"];
     self.navigationItem.title = @"Welcome";
-    pNameLabel.text = _patientName;
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
-    [[self navigationItem] setBackBarButtonItem:backButton];
-    
+//    pNameLabel.text = _patientName;
+    self.navigationItem.hidesBackButton = YES;
+
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+  //  [[self navigationItem] setBackBarButtonItem:backButton];
+    [self setName];
+
     // Do any additional setup after loading the view.
 }
 
@@ -78,6 +97,7 @@
     LoginPage *loginPage =
     [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
     [self.navigationController pushViewController:loginPage animated:YES];
+    NSLog(@"Logged Out");    
 }
 
 - (void)didReceiveMemoryWarning {

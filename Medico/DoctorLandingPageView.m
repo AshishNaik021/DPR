@@ -27,16 +27,17 @@
 }
 -(void)setName{
     //    NSString *cameFrom = [self navigationController.v]
-    NSLog(@"%@",[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]);
-    
-    NSString *string = [NSString stringWithFormat:[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]];
-    if ([string rangeOfString:@"LoginPage"].location == NSNotFound) {
-        self.doctorNameLabel.text = _doctorName;
+//    NSLog(@"%@",[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]);
+//    
+//    NSString *string = [NSString stringWithFormat:[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud synchronize];
+    if ([[ud objectForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+        self.doctorNameLabel.text = [ud objectForKey:@"loggedInDoctor"];
         NSLog(@"Login name was set");
-    } else {
-        NSLog(@"No need to change login name");
-        
     }
+    else
+        NSLog(@"Name Not Set");
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,6 +61,7 @@
     LoginPage *loginPage =
     [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
     [self.navigationController pushViewController:loginPage animated:YES];
+    NSLog(@"Logged Out");
 }
 
 - (IBAction)searchAppointment:(id)sender {
