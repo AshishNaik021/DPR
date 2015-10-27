@@ -90,8 +90,8 @@
      cell.slot2Label.text = [slot2Arr valueForKey:@"shiftTime"];
      cell.slot3Label.text = [slot3Arr valueForKey:@"shiftTime"];
   [cell.slot1TotalAppointmentCountButton setTitle:[slot1Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
-//    [cell.slot2TotalAppointmentCountButton setTitle:[slot2Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
-//    [cell.slot3TotalAppointmentCountButton setTitle:[slot3Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
+    [cell.slot2TotalAppointmentCountButton setTitle:[slot2Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
+    [cell.slot3TotalAppointmentCountButton setTitle:[slot3Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
     cell.downArrowButton.tag = indexPath.row;
     [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];

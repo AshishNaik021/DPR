@@ -15,19 +15,19 @@
     "shift1": {
         "shiftTime": "06:00 AM to 08:00 AM",
         "days": "Mon - Tue - Wed - Thu",
-        "appointmentCount": 1,
+        "appointmentCount": "1",
         "shiftAvailability": "Available"
     },
     "shift2": {
         "shiftTime": "02:00 PM to 05:00 PM",
         "days": "Mon - Tue - Wed - Thu",
-        "appointmentCount": 2,
+        "appointmentCount": "2",
         "shiftAvailability": "Available"
     },
     "shift3": {
         "shiftTime": "06:00 PM to 10:00 PM",
         "days": "Mon - Tue - Wed - Thu",
-        "appointmentCount": 1,
+        "appointmentCount": "1",
         "shiftAvailability": "Available"
     }
 }
