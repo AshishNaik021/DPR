@@ -335,6 +335,7 @@
 		186E57AB1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */; };
 		186E57AE1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */; };
 		186E57B11BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */; };
+		187330391BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187330381BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m */; };
 		187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */; };
 		187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7B1BC67C78003AC5D9 /* searchButton.png */; };
 		187A0C7F1BC67F1F003AC5D9 /* checkRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7D1BC67F1F003AC5D9 /* checkRadio.png */; };
@@ -804,6 +805,8 @@
 		186E57AD1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorAddTreatmentViewController.m; sourceTree = "<group>"; };
 		186E57AF1BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailAddTreatmentViewController.h; sourceTree = "<group>"; };
 		186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailAddTreatmentViewController.m; sourceTree = "<group>"; };
+		187330371BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkAndCreateAppointmentViewController.h; sourceTree = "<group>"; };
+		187330381BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkAndCreateAppointmentViewController.m; sourceTree = "<group>"; };
 		187A0C781BC67BA0003AC5D9 /* SearchClinicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchClinicView.h; sourceTree = "<group>"; };
 		187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicView.m; sourceTree = "<group>"; };
 		187A0C7B1BC67C78003AC5D9 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
@@ -1219,6 +1222,8 @@
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
 				182394EC1BBD0DCE00D97366 /* Main.storyboard */,
+				187330371BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.h */,
+				187330381BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m */,
 				185D870C1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.h */,
 				185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */,
 				185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */,
@@ -1926,6 +1931,7 @@
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
 				183D40871BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m in Sources */,
 				184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */,
+				187330391BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m in Sources */,
 				18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */,
 				189EDB8B1BD6121100AA9B96 /* BookAppointmentViewController.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
