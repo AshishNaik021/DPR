@@ -161,6 +161,7 @@
     [ud synchronize];
     return nameOfDoctor;
     
+    
 }
 
 -(NSString *)getPatientName{

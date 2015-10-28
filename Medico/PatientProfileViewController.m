@@ -32,7 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self fetchJson];
+
    // gridViewTable.backgroundColor = [UIColor clearColor];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
@@ -42,8 +43,16 @@
     self.navigationItem.title = @"Patient Profile";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"HomeCountPatients" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/testing.json"];
+   // NSString *dataFile = [NSString stringWithContentsOfFile:docPath usedEncoding:NSUTF8StringEncoding error:NULL];
+    
+    
+    
+   // NSString *fileName = [[NSBundle mainBundle] pathForResource:@"HomeCountPatients" ofType:@"json"];
+    NSLog(@"path====%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
 //    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
 //    _patientArr = [json valueForKeyPath:@"PatientProfile"];
@@ -59,8 +68,52 @@
     NSLog(@"The HomeCountPatients Json File Contains Data---------------%@",arrDoctor);
     NSLog(@"Value of last visited..... %@",[args objectForKey:@"appointmentDate"]);//(unsigned long)patientArr1.count);//objectForKey:@"visitType");
     
+    
 }
 
+-(void)fetchJson{
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+   // NSString *emailid = emailField.text;
+    NSString *emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    NSLog(@"email id for logged in user...%@",emailid);
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/homeCountPatient?id=ak@gmail.com"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",arratList);
+    
+    NSString * datafile = [arratList description];
+   
+    NSLog(@"%@",datafile);
+    
+//   NSString *dataFile = [[NSBundle mainBundle] pathForResource:@"testing" ofType:@"json"];
+//   NSLog(@"File edited......%@",dataFile);
+//  [arratList writeToURL:dataFile atomically:YES];
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"my data----------%@",documentsDirectory);
+    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"testing"];
+    //[arratList writeToFile:appFile atomically:YES];
+   // NSString *doc = [[NSBundle mainBundle] pathForResource:@"testing" ofType:@"json"];
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/testing.json"];
+    [datafile writeToFile:docPath
+               atomically:YES
+                 encoding:NSUTF8StringEncoding
+                    error:NULL];
+
+
+    
+}
+/*
 -(void)fetchDetails{
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
@@ -78,6 +131,7 @@
     NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
         
 }
+*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
