@@ -64,6 +64,7 @@
     NSLog(@"total list of shift3 array.......%@",slot3Arr);
 
 
+    
     // Do any additional setup after loading the view.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

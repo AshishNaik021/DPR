@@ -176,7 +176,34 @@
     
    
  // [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
-    [cell.appointmentButton setTitle:[NSString stringWithFormat:@"%@",[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+
+    NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
+
+    NSLog(@"Appointment Date----- %@",appointmentDate);
+   NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
+        NSLog(@"before-----%@", date);
+
+    NSRange range = [date rangeOfString:@"+"];
+    date = [date substringToIndex:range.location];
+    
+    NSLog(@"after-----%@", date);
+
+   /* --------------- different methods to remove subString form string ----------------
+    if ([date length] > 0)
+    {
+        date = [date substringToIndex:[date length] - 5];
+    }
+    
+    
+    NSRange tldr = [date rangeOfString:@"+0000"];
+    
+    if (tldr.location != NSNotFound) {
+        date = [date stringByReplacingCharactersInRange:tldr withString:@""];
+        NSLog(@"removed-----%@", date);
+    }
+    */
+    
+    [cell.appointmentButton setTitle:[NSString stringWithFormat:date] forState:UIControlStateNormal];
     //cell.appointmentButton.titleLabel.text = [args objectForKey:@"appointmentDate"];
     
    cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
