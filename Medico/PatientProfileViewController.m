@@ -33,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fetchJson];
-
+    
    // gridViewTable.backgroundColor = [UIColor clearColor];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
@@ -44,32 +44,42 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    /* ----------------- Read File For Parse JSON Data -------------------- */
     
-    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/testing.json"];
-   // NSString *dataFile = [NSString stringWithContentsOfFile:docPath usedEncoding:NSUTF8StringEncoding error:NULL];
-    
-    
-    
-   // NSString *fileName = [[NSBundle mainBundle] pathForResource:@"HomeCountPatients" ofType:@"json"];
-    NSLog(@"path====%@",docPath);
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountPatient.json"];
+    NSLog(@"%@",docPath);
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
     NSError *error = nil;
-//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-//    _patientArr = [json valueForKeyPath:@"PatientProfile"];
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    patientArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    arrDoctor = [json1 valueForKeyPath:@"doctors"];
+    args = [[NSDictionary alloc] initWithDictionary:[json1 objectForKey:@"appointmentVm"]];
+    NSLog(@"arrrDoctor-----%@",arrDoctor);
+    NSLog(@"args-----%@",args);
+
+
+    /*
+    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"HomeCountPatients" ofType:@"json"];
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    NSError *error = nil;
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     patientArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
     NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     arrDoctor = [json1 valueForKeyPath:@"doctors"];
-  //  NSDictionary *argsValues
     args = [[NSDictionary alloc] initWithDictionary:[json1 objectForKey:@"appointmentVm"]];
 
   // NSArray *patientArr1 =[json1 valueForKey:@"appointmentVm"];
     NSLog(@"The HomeCountPatients Json File Contains Data---------------%@",arrDoctor);
-    NSLog(@"Value of last visited..... %@",[args objectForKey:@"appointmentDate"]);//(unsigned long)patientArr1.count);//objectForKey:@"visitType");
-    
-    
+    NSLog(@"Value of last visited..... %@",[args objectForKey:@"appointmentDate"]);
+    */
 }
+
+
 
 -(void)fetchJson{
     NSLog(@"The fetchJson method is called.........");
@@ -87,30 +97,19 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-    NSLog(@"Data in Array==============%@",arratList);
-    
-    NSString * datafile = [arratList description];
    
-    NSLog(@"%@",datafile);
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
     
-//   NSString *dataFile = [[NSBundle mainBundle] pathForResource:@"testing" ofType:@"json"];
-//   NSLog(@"File edited......%@",dataFile);
-//  [arratList writeToURL:dataFile atomically:YES];
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountPatient.json"];
+    NSLog(@"%@",docPath);
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
 
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSLog(@"my data----------%@",documentsDirectory);
-    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:@"testing"];
-    //[arratList writeToFile:appFile atomically:YES];
-   // NSString *doc = [[NSBundle mainBundle] pathForResource:@"testing" ofType:@"json"];
-    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/testing.json"];
-    [datafile writeToFile:docPath
-               atomically:YES
-                 encoding:NSUTF8StringEncoding
-                    error:NULL];
-
-
+    
     
 }
 /*
@@ -153,9 +152,32 @@
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
        cell.patientNameLabel.text = [[arrDoctor objectAtIndex:row] objectForKey:@"name"];
- [cell.lastVisitedButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"lastVisited"]] forState:UIControlStateNormal];
-    [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"previousAppointment"]] forState:UIControlStateNormal];
-   [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+    if (![[arrDoctor objectAtIndex:row] objectForKey:@"lastVisited"]) {
+        [cell.lastVisitedButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"lastVisited"]] forState:UIControlStateNormal];
+    }
+    else
+    {
+        NSLog(@"aat");
+        [cell.lastVisitedButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        NSLog(@"baher");
+    }
+    
+    if (![[arrDoctor objectAtIndex:row] objectForKey:@"previousAppointment"]) {
+         [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:[[arrDoctor objectAtIndex:row] objectForKey:@"previousAppointment"]] forState:UIControlStateNormal];
+    }
+    else
+    {
+        NSLog(@"aat");
+        [cell.lastAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        NSLog(@"baher");
+    }
+
+    
+    
+   
+ // [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+    [cell.appointmentButton setTitle:[NSString stringWithFormat:@"%@",[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+    //cell.appointmentButton.titleLabel.text = [args objectForKey:@"appointmentDate"];
     
    cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
     cell.showPatientProfileButton.tag =row;
