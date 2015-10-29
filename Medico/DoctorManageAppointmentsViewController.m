@@ -100,6 +100,15 @@
     
 }
 - (IBAction)downArrow:(id)sender {
+    
+//    DoctorDetailManageAppointmentViewController *cliniInformation;
+//        NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
+//        int row = [myIndex row];
+//        cliniInformation.detailAppArr = @[jsonList[row]];
+//        cliniInformation.detailSlot1 = @[slot1Arr[row]];
+//        cliniInformation.detailSlot2 = @[slot2Arr[row]];
+//        cliniInformation.detailSlot3 = @[slot3Arr[row]];
+    
     DoctorDetailManageAppointmentViewController *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
     [self.navigationController pushViewController:DoctorHome animated:YES];

@@ -13,9 +13,31 @@
 @end
 
 @implementation DoctorDetailManageAppointmentViewController
+@synthesize clinicNameLabel;
+@synthesize slot1AppLabel;
+@synthesize slot1totalAppButton;
+@synthesize slot2AppLabel;
+@synthesize slot2TotalAppButton;
+@synthesize slot3AppLabel;
+@synthesize slot3TotalAppButton;
+@synthesize detailAppArr;
+@synthesize detailSlot1;
+@synthesize detailSlot2;
+@synthesize detailSlot3;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    clinicNameLabel.text = [detailAppArr[0] objectForKey:@"clinicName"];
+//    slot1AppLabel.text = [detailSlot1[0] objectForKey:@"shiftTime"];
+//    slot2AppLabel.text = [detailSlot2[0] objectForKey:@"shiftTime"];
+//     slot3AppLabel.text = [detailSlot3[0] objectForKey:@"shiftTime"];
+//    [slot1totalAppButton setTitle:[detailSlot1[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
+//    [slot2TotalAppButton setTitle:[detailSlot2[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
+//    [slot3TotalAppButton setTitle:[detailSlot3[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
+//
+    
+
     // Do any additional setup after loading the view.
 }
 

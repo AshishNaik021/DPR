@@ -14,6 +14,7 @@
 @property IBOutlet NSMutableArray *slot1Arr;
 @property IBOutlet NSMutableArray *slot2Arr;
 @property IBOutlet NSMutableArray *slot3Arr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 
