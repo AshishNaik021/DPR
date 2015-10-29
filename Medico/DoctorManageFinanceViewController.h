@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorManageFinanceViewController : UIViewController
+@interface DoctorManageFinanceViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property IBOutlet NSArray *dateArr;
+@property IBOutlet NSArray *amountArr;
+@property IBOutlet NSArray *totalArr;
 
 @end
+

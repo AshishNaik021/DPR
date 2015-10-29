@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManageReminderViewController : UIViewController
+@interface ManageReminderViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+
+@property IBOutlet NSArray *reminderArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
