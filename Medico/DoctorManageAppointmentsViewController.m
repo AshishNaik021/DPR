@@ -29,10 +29,54 @@
     
 }
 
+-(void)fetchAppointmentJson{
+    NSLog(@"-------------------------------------------------------");
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    // NSString *emailid = emailField.text;
+    NSString *emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    
+    NSLog(@"email id for logged in user...%@",emailid);
+    NSDateFormatter *dateformate=[[NSDateFormatter alloc]init];
+    [dateformate setDateFormat:@"YYYY-MM-dd"];
+    NSString *date_String=[dateformate stringFromDate:[NSDate date]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllDoctorClinics?doctorId=%@&date=%@",emailid,date_String];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSLog(@"Data from web Service in responceStr------%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllDoctorClinics.json"];
+    NSLog(@"%@",docPath);
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+
+    
+//
+//    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+//    NSLog(@"Data in Array==============%@",responseStr);
+//    
+    
+    
+}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self fetchAppointmentJson];
+    
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -42,10 +86,16 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    /* ----------------- Read File For Parse JSON Data -------------------- */
     
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorClinics" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllDoctorClinics.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+//    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorClinics" ofType:@"json"];
+//    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+//    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
     jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
    
@@ -53,7 +103,7 @@
     slot1Arr = [jsonSubDict valueForKeyPath:@"shift1"];
     slot2Arr = [jsonSubDict valueForKeyPath:@"shift2"];
     slot3Arr = [jsonSubDict valueForKeyPath:@"shift3"];
-    
+  /*
     NSLog(@"total list of array.......%@",[jsonList objectAtIndex:0]);
     NSLog(@"total list of array.......%lu",(unsigned long)jsonList.count);
     NSLog(@"total list of shift1 array.......%@",slot1Arr);
@@ -63,7 +113,7 @@
     NSLog(@"count slot1 array.......%lu",(unsigned long)slot2Arr.count);
     NSLog(@"count slot1 array.......%lu",(unsigned long)slot3Arr.count);
 
-    
+    */
     // Do any additional setup after loading the view.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
