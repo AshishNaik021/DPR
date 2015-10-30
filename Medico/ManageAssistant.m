@@ -108,14 +108,14 @@
     ManageAssistantCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+   /*
     int row = [indexPath row];
     cell.assistantNameLabel.text = _assistantNameArr[row];
     cell.assistantCityLabel.text = _assistantCityArr[row];
     cell.assistantProfileLabel.text = _assistantProfileArr[row];
     cell.assistantImg.image = [UIImage imageNamed:@"assistance.png"];
     cell.deleteAssistantButton = _assistantNameArr[row];
-    
+    */
     return cell;
     
 }

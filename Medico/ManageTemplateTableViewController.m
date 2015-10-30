@@ -49,7 +49,7 @@
 
     
     //UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithImage:@"home.png" style:nil target:self action:nil];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,searchButton, nil];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
     
@@ -83,11 +83,11 @@
     
     static NSString *CellIdentifier = @"TableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+   /*
     // Configure the cell...
     cell.textLabel.text = [_templateArr objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+    */
     
     return cell;
     
@@ -100,9 +100,9 @@
         DetailManageTemplate *detailmanagetemplate = [segue destinationViewController];
         NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
         int row = [myIndex row];
-        detailmanagetemplate.DetailArr = @[_templateArr[row]]
+      /*  detailmanagetemplate.DetailArr = @[_templateArr[row]]
         ;
-       detailmanagetemplate.pid = myIndex.row;
+       detailmanagetemplate.pid = myIndex.row;*/
    // }
 }
 

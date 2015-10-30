@@ -50,13 +50,13 @@
     ManageDoctorsClinicSettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+   /*
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
     cell.clinicNameLabel.text = [[_dataArr objectAtIndex:row] objectForKey:@"Name"];
     cell.clinicCityLabel.text = [[_dataArr objectAtIndex:row] objectForKey:@"Location"];
     cell.doctorImage.image = [UIImage imageNamed:@"manageClinics.png"];
-    
+    */
     return cell;
     
 }

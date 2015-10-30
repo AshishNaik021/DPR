@@ -83,7 +83,7 @@
     int row = [indexPath row];
     
     DoctorManageFinanceCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    /*
     if (indexPath.section == 0)
         cell.dateLabel.text = dateArr[row];
     cell.amountLabel.text = amountArr[row];
@@ -93,7 +93,7 @@
     cell.dateLabel.text = dateArr[row];
     cell.amountLabel.text =amountArr[row];
     cell.totalLabel.text =totalArr[row];
-    
+ */
     return cell;
 }
 

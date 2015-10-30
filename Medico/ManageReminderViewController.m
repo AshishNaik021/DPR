@@ -70,7 +70,20 @@
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-    cell.reminderTitleLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"title"];
+    
+    if (![[[reminderArr objectAtIndex:row] objectForKey:@"title"] isEqual:[NSNull null]]) {
+       cell.reminderTitleLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"title"];
+    }
+    else
+    {
+        NSLog(@"aat");
+        cell.reminderTitleLabel.text = @"";
+        NSLog(@"baher");
+    }
+
+    
+  //  cell.reminderTitleLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"title"];
+    
     cell.reminderDateLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"date"];
     cell.reminderTimeLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"time"];
     
