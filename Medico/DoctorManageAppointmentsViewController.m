@@ -54,15 +54,14 @@
     slot2Arr = [jsonSubDict valueForKeyPath:@"shift2"];
     slot3Arr = [jsonSubDict valueForKeyPath:@"shift3"];
     
-    //NSLog(@"total list of array.......%@",[[jsonList objectAtIndex:1] objectForKey:@"clinicName"]);
+    NSLog(@"total list of array.......%@",[jsonList objectAtIndex:0]);
     NSLog(@"total list of array.......%lu",(unsigned long)jsonList.count);
-    NSLog(@"total list of array.......%@",[jsonList valueForKey:@"clinicName"]);
-
-
-    NSLog(@"total list of shift1 array.......%@",[slot1Arr valueForKey:@"appointmentCount"]);
+    NSLog(@"total list of shift1 array.......%@",slot1Arr);
     NSLog(@"total list of shift2 array.......%@",slot2Arr);
     NSLog(@"total list of shift3 array.......%@",slot3Arr);
-
+    NSLog(@"count slot1 array.......%lu",(unsigned long)slot1Arr.count);
+    NSLog(@"count slot1 array.......%lu",(unsigned long)slot2Arr.count);
+    NSLog(@"count slot1 array.......%lu",(unsigned long)slot3Arr.count);
 
     
     // Do any additional setup after loading the view.
@@ -74,28 +73,90 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return jsonList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
     DoctorManageAppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-    cell.clinicNameLabel.text = [jsonList valueForKey:@"clinicName"];
-    cell.slot1Label.text = [slot1Arr valueForKey:@"shiftTime"];
-     cell.slot2Label.text = [slot2Arr valueForKey:@"shiftTime"];
-     cell.slot3Label.text = [slot3Arr valueForKey:@"shiftTime"];
-  [cell.slot1TotalAppointmentCountButton setTitle:[slot1Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
-    [cell.slot2TotalAppointmentCountButton setTitle:[slot2Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
-    [cell.slot3TotalAppointmentCountButton setTitle:[slot3Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
+    
+    cell.clinicNameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicName"];
+    
+    if (![[slot1Arr objectAtIndex:row] isEqual:[NSNull null]]) {
+        if (![[[slot1Arr objectAtIndex:row] objectForKey:@"shiftTime"] isEqual:[NSNull null]]) {
+            cell.slot1Label.text = [[slot1Arr objectAtIndex:row] objectForKey:@"shiftTime"];
+        }
+    }
+    else
+    {
+        cell.slot1Label.text = @"";
+    }
+
+    if (![[slot2Arr objectAtIndex:row] isEqual:[NSNull null]]) {
+        if (![[[slot2Arr objectAtIndex:row] objectForKey:@"shiftTime"] isEqual:[NSNull null]]) {
+            cell.slot2Label.text = [[slot2Arr objectAtIndex:row] objectForKey:@"shiftTime"];
+        }
+    }
+    else
+    {
+        cell.slot2Label.text = @"";
+    }
+    
+    if (![[slot3Arr objectAtIndex:row] isEqual:[NSNull null]]) {
+        if (![[[slot3Arr objectAtIndex:row] objectForKey:@"shiftTime"] isEqual:[NSNull null]]) {
+            cell.slot3Label.text = [[slot1Arr objectAtIndex:row] objectForKey:@"shiftTime"];
+        }
+    }
+    else
+    {
+        cell.slot3Label.text = @"";
+    }
+    
+    
+    
+    if (![[slot1Arr objectAtIndex:row] isEqual:[NSNull null]]) {
+        if (![[[slot1Arr objectAtIndex:row] objectForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
+             [cell.slot1TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[[slot1Arr objectAtIndex:row] objectForKey:@"appointmentCount"]] forState:UIControlStateNormal];
+        }
+    }
+    else
+    {
+        [cell.slot1TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+    }
+    
+    if (![[slot2Arr objectAtIndex:row] isEqual:[NSNull null]]) {
+        if (![[[slot2Arr objectAtIndex:row] objectForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
+            [cell.slot2TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[[slot2Arr objectAtIndex:row] objectForKey:@"appointmentCount"]] forState:UIControlStateNormal];
+        }
+    }
+    else
+    {
+        [cell.slot2TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+    }
+
+    if (![[slot3Arr objectAtIndex:row] isEqual:[NSNull null]]) {
+        if (![[[slot3Arr objectAtIndex:row] objectForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
+            [cell.slot3TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[[slot3Arr objectAtIndex:row] objectForKey:@"appointmentCount"]] forState:UIControlStateNormal];
+        }
+    }
+    else
+    {
+        [cell.slot3TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+    }
+    
+
+    
+    
+
+//  [cell.slot1TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[slot1Arr valueForKey:@"appointmentCount"]] forState:UIControlStateNormal];
+    
+//    [cell.slot2TotalAppointmentCountButton setTitle:[slot2Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
+//    [cell.slot3TotalAppointmentCountButton setTitle:[slot3Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
-    cell.downArrowButton.tag = indexPath.row;
-    [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];
+   cell.downArrowButton.tag = indexPath.row;
+  [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
     
 }
