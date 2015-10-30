@@ -72,6 +72,7 @@
     
     self.profileTabButton.titleLabel.textColor = [UIColor blackColor];
     [self.profileTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
   
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorPatientClinics" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];

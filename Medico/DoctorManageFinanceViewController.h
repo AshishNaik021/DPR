@@ -13,6 +13,7 @@
 @property IBOutlet NSArray *dateArr;
 @property IBOutlet NSArray *amountArr;
 @property IBOutlet NSArray *totalArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

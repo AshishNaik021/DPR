@@ -9,6 +9,7 @@
 #import "DoctorManageFinanceViewController.h"
 #import "DoctorManageFinanceCell.h"
 #import "DoctorLandingPageView.h"
+#import "DoctorDetailManageFinanceViewController.h"
 
 @interface DoctorManageFinanceViewController ()
 
@@ -105,6 +106,16 @@
     if (section == 1)
         return @"Year 2014";
     return @"undefined";
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"Details"]) {
+        DoctorDetailManageFinanceViewController *cliniInformation = [segue destinationViewController];
+        NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
+        int row = [myIndex row];
+        //cliniInformation.detailReminderArray = @[reminderArr[row]];
+    }
 }
 
 
