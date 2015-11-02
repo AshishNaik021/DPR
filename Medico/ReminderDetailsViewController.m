@@ -40,8 +40,10 @@
     
     dateLabel.text = [detailReminderArray[0] objectForKey:@"date"];
     timeLabel.text = [detailReminderArray[0] objectForKey:@"time"];
-    discussionLabel.text = [detailReminderArray[0] objectForKey:@"title"];
-
+    if ([detailReminderArray[0] objectForKey:@"title"]) {
+        discussionLabel.text = [detailReminderArray[0] objectForKey:@"title"];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,14 +52,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)setDateTimeAlarm:(id)sender {
 }
