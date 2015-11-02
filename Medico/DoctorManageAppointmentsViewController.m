@@ -222,8 +222,8 @@
     int n = senderButton.tag;
    // NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
     NSLog(@"jsonlist---------------------------------------%@",_jsonList[0]);
-    detailManage.passDataArr = _jsonList[n];
     detailManage = [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
+    detailManage.passDataArr = _jsonList[n];
     [self.navigationController pushViewController:detailManage animated:YES];
 }
 
