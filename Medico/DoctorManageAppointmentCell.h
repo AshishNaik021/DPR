@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *clinicImage;
 @property (weak, nonatomic) IBOutlet UIButton *downArrowButton;
-- (IBAction)downArrow:(id)sender;
+- (IBAction)downArrow:(NSInteger *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *clinicNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot1Label;
 @property (weak, nonatomic) IBOutlet UILabel *slot2Label;

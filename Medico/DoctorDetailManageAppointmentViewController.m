@@ -8,12 +8,16 @@
 
 #import "DoctorDetailManageAppointmentViewController.h"
 #import "DoctorLandingPageView.h"
+#import "DoctorManageAppointmentsViewController.h"
 
 @interface DoctorDetailManageAppointmentViewController ()
 
 @end
 
 @implementation DoctorDetailManageAppointmentViewController
+@synthesize passDataArr = _passDataArr;
+@synthesize passDataDict = _passDataDict;
+
 @synthesize clinicNameLabel;
 @synthesize slot1AppLabel;
 @synthesize slot1totalAppButton;
@@ -39,6 +43,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"Data copied into the array/........................%@",_passDataArr);
+
 //    clinicNameLabel.text = [detailAppArr[0] objectForKey:@"clinicName"];
 //    slot1AppLabel.text = [detailSlot1[0] objectForKey:@"shiftTime"];
 //    slot2AppLabel.text = [detailSlot2[0] objectForKey:@"shiftTime"];

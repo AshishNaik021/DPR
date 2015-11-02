@@ -20,7 +20,7 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)downArrow:(id)sender {
+- (IBAction)downArrow:(NSInteger *)sender {
 }
 
 -(IBAction)slot1TotalAppointmentCount:(id)sender{

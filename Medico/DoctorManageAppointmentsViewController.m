@@ -11,15 +11,18 @@
 #import "DoctorLandingPageView.h"
 #import "DoctorDetailManageAppointmentViewController.h"
 
-@interface DoctorManageAppointmentsViewController ()
+@interface DoctorManageAppointmentsViewController (){
+    NSInteger _selectedRow;
+}
 
 @end
 
 @implementation DoctorManageAppointmentsViewController
-@synthesize jsonList;
+@synthesize jsonList = _jsonList;
 @synthesize slot1Arr;
 @synthesize slot2Arr;
 @synthesize slot3Arr;
+@synthesize detailManage;
 
 
 - (void) homePage:(id)sender{
@@ -97,7 +100,7 @@
 //    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
 //    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
-    jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
+    _jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
    
     NSDictionary *jsonSubDict = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&e];
     slot1Arr = [jsonSubDict valueForKeyPath:@"shift1"];
@@ -123,7 +126,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return jsonList.count;
+    return _jsonList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -132,7 +135,7 @@
     DoctorManageAppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     int row = [indexPath row];
     
-    cell.clinicNameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicName"];
+    cell.clinicNameLabel.text = [[_jsonList objectAtIndex:row] objectForKey:@"clinicName"];
     
     if (![[slot1Arr objectAtIndex:row] isEqual:[NSNull null]]) {
         if (![[[slot1Arr objectAtIndex:row] objectForKey:@"shiftTime"] isEqual:[NSNull null]]) {
@@ -197,32 +200,31 @@
     }
     
 
-    
-    
-
-//  [cell.slot1TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[slot1Arr valueForKey:@"appointmentCount"]] forState:UIControlStateNormal];
-    
-//    [cell.slot2TotalAppointmentCountButton setTitle:[slot2Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
-//    [cell.slot3TotalAppointmentCountButton setTitle:[slot3Arr valueForKey:@"appointmentCount"] forState:UIControlStateNormal];
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
    cell.downArrowButton.tag = indexPath.row;
+    
+  //  NSArray *newArray = [NSMutableArray arrayWithArray:oldArray];
+  
+//    detailManage.passDataArr = [NSArray arrayWithArray:jsonList];
+    NSLog(@"row======================%d",row);
+    
   [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
     
 }
+
+
+
 - (IBAction)downArrow:(id)sender {
     
-//    DoctorDetailManageAppointmentViewController *cliniInformation;
-//        NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
-//        int row = [myIndex row];
-//        cliniInformation.detailAppArr = @[jsonList[row]];
-//        cliniInformation.detailSlot1 = @[slot1Arr[row]];
-//        cliniInformation.detailSlot2 = @[slot2Arr[row]];
-//        cliniInformation.detailSlot3 = @[slot3Arr[row]];
-    
-    DoctorDetailManageAppointmentViewController *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
+    UIButton *senderButton = (UIButton *)sender;
+       NSLog(@"current Row=%ld",(long)senderButton.tag);
+    int n = senderButton.tag;
+   // NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
+    NSLog(@"jsonlist---------------------------------------%@",_jsonList[0]);
+    detailManage.passDataArr = _jsonList[n];
+    detailManage = [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
+    [self.navigationController pushViewController:detailManage animated:YES];
 }
 
 

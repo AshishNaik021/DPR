@@ -13,6 +13,7 @@
 
 @end
 
+
 @implementation DoctorLandingPageView
 @synthesize doctorName = _doctorName;
 @synthesize doctorEmail = _doctorEmail;

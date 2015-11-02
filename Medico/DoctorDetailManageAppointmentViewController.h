@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DoctorDetailManageAppointmentViewController : UIViewController
+
+@property IBOutlet NSMutableArray *passDataArr;
+@property IBOutlet NSDictionary *passDataDict;
+
 @property IBOutlet NSArray *detailAppArr;
 @property IBOutlet NSArray *detailSlot1;
 
@@ -36,6 +40,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *profileLocationField;
 @property (weak, nonatomic) IBOutlet UITextField *profilePracticeNameField;
 @property (weak, nonatomic) IBOutlet UITextView *profileServicesTextView;
+
 
 
 
