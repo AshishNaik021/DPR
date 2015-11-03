@@ -81,8 +81,20 @@
     [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
     NSDate *date = [dateFormatter dateFromString:patientDate];
+    NSString *copy = [NSString stringWithFormat:@"%@",date];
+    [dateFormatter setDateFormat:@"dd-MM-YYYY"];
     
-    NSLog(@" *******************%@",date);
+    NSString *d = [dateFormatter stringFromDate:date];
+    NSLog(@" *******************%@",d);
+    
+    /*NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
+     NSLog(@"before-----%@", date);
+     
+     NSRange range = [date rangeOfString:@"+"];
+     date = [date substringToIndex:range.location];
+     
+     NSLog(@"after-----%@", date);*/
+    
     
     if (![[_passPatientData valueForKey:@"emailID"] isEqual:[NSNull null]]){
         
@@ -110,7 +122,14 @@
     
     if (![[_passPatientData valueForKey:@"dateOfBirth"] isEqual:[NSNull null]]){
         
-        dateofBirthField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"dateOfBirth"]];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
+        [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+        NSDate *date = [dateFormatter dateFromString:patientDate];
+        NSString *copy = [NSString stringWithFormat:@"%@",date];
+        [dateFormatter setDateFormat:@"dd-MM-YYYY"];
+        NSString *d = [dateFormatter stringFromDate:date];
+        dateofBirthField.text = [NSString stringWithFormat:@"%@",d];
     }
     else{
         [dateofBirthField setText:@"Unknown"];
