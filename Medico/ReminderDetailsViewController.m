@@ -40,8 +40,11 @@
     
     dateLabel.text = [detailReminderArray[0] objectForKey:@"date"];
     timeLabel.text = [detailReminderArray[0] objectForKey:@"time"];
-    if ([detailReminderArray[0] objectForKey:@"title"]) {
+    if (![[detailReminderArray[0] objectForKey:@"title"] isEqual:[NSNull null]]) {
         discussionLabel.text = [detailReminderArray[0] objectForKey:@"title"];
+    }
+    else{
+        discussionLabel.text = [NSString stringWithFormat:@"Unknown"];
     }
     
 }

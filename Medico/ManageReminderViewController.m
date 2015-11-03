@@ -101,7 +101,7 @@
     else
     {
         // NSLog(@"aat");
-        cell.reminderTitleLabel.text = @"";
+        cell.reminderTitleLabel.text = @"Unknown";
         //rNSLog(@"baher");
     }
     
