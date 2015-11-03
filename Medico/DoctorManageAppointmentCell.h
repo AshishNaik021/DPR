@@ -23,6 +23,8 @@
 -(IBAction)slot1TotalAppointmentCount:(id)sender;
 -(IBAction)slot2TotalAppointmentCount:(id)sender;
 -(IBAction)slot3TotalAppointmentCount:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *doctorTotalAppButton;
+- (IBAction)doctorTotalApp:(id)sender;
 
 
 

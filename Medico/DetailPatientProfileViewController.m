@@ -27,6 +27,7 @@
 @synthesize mobileField;
 @synthesize dateofBirthField;
 @synthesize bloodGroupField;
+@synthesize genderField;
 
 
 - (IBAction)profileTab:(id)sender {
@@ -38,6 +39,9 @@
     self.appointmentView.hidden = TRUE;
     [self.profileTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.appointmentTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    
+    
+    
 }
 
 
@@ -68,6 +72,77 @@
 //    _patientNameLabel.text = [[_detailArr objectAtIndex:0] objectForKey:@"name"];
 //    _patientSpecialityField.text = [[_detailArr objectAtIndex:0] objectForKey:@"speciality"];
 //    _lastVisitedField.text = [[_detailArr objectAtIndex:0] objectForKey:@"lastVisited"];
+    
+    NSString *patientDate =[_passPatientData valueForKey:@"dateOfBirth"];
+    NSLog(@"Date is-------%@",patientDate);
+    
+   //    [format setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    NSDate *date = [dateFormatter dateFromString:patientDate];
+    
+    NSLog(@" *******************%@",date);
+    
+    if (![[_passPatientData valueForKey:@"emailID"] isEqual:[NSNull null]]){
+        
+        emailField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"emailID"]];
+    }
+    else{
+        [emailField setText:@"Unknown"];
+    }
+    
+    if (![[_passPatientData valueForKey:@"mobileNumber"] isEqual:[NSNull null]]){
+        
+        mobileField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"mobileNumber"]];
+    }
+    else{
+        [mobileField setText:@"Unknown"];
+    }
+    
+    if (![[_passPatientData valueForKey:@"gender"] isEqual:[NSNull null]]){
+        
+        genderField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"gender"]];
+    }
+    else{
+        [genderField setText:@"Unknown"];
+    }
+    
+    if (![[_passPatientData valueForKey:@"dateOfBirth"] isEqual:[NSNull null]]){
+        
+        dateofBirthField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"dateOfBirth"]];
+    }
+    else{
+        [dateofBirthField setText:@"Unknown"];
+    }
+    
+    if (![[_passPatientData valueForKey:@"location"] isEqual:[NSNull null]]){
+        
+        locationField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"location"]];
+    }
+    else{
+        [locationField setText:@"Unknown"];
+    }
+    
+    if (![[_passPatientData valueForKey:@"blood_group"] isEqual:[NSNull null]]){
+        
+        bloodGroupField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"blood_group"]];
+    }
+    else{
+        [bloodGroupField setText:@"Unknown"];
+    }
+    
+    if (![[_passPatientData valueForKey:@"allergic_to"] isEqual:[NSNull null]]){
+        
+        allergicTextView.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"allergic_to"]];
+    }
+    else{
+        [allergicTextView setText:@"Unknown"];
+    }
+    
+    [allergicTextView.layer setBorderWidth:1.0];
+
+    
    _patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];

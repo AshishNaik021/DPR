@@ -4221,11 +4221,21 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4Z-z3-HiT">
+                                                    <rect key="frame" x="302" y="6" width="34" height="21"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="doctorTotalApp:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="qct-S5-B6J"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="clinicImage" destination="GpK-WE-H9j" id="T8e-M7-Fho"/>
                                             <outlet property="clinicNameLabel" destination="PQc-Zi-fH5" id="way-of-iVo"/>
+                                            <outlet property="doctorTotalAppButton" destination="r4Z-z3-HiT" id="bzC-Kl-D2S"/>
                                             <outlet property="downArrowButton" destination="RdV-kL-Txd" id="hWK-cB-tMA"/>
                                             <outlet property="slot1Label" destination="ldG-RD-MG1" id="mSh-ra-rOg"/>
                                             <outlet property="slot1TotalAppointmentCountButton" destination="gcJ-E3-IPc" id="v9e-bh-qEL"/>

@@ -201,6 +201,17 @@
     }
     
 
+    if (![[[_jsonList objectAtIndex:row] objectForKey:@"totalAppointmentCount"] isEqual:[NSNull null]]) {
+            [cell.doctorTotalAppButton setTitle:[NSString stringWithFormat:@"%@",[[_jsonList objectAtIndex:row] objectForKey:@"totalAppointmentCount"]] forState:UIControlStateNormal];
+        
+    }
+    else
+    {
+        [cell.doctorTotalAppButton setTitle:@"0" forState:UIControlStateNormal];
+    }
+
+    
+
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
    cell.downArrowButton.tag = indexPath.row;
     
@@ -247,4 +258,6 @@
 }
 */
 
+- (IBAction)doctorTotalAppointment:(id)sender {
+}
 @end

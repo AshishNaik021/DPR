@@ -32,4 +32,6 @@
 -(IBAction)slot3TotalAppointmentCount:(id)sender{
     
 }
+- (IBAction)doctorTotalApp:(id)sender {
+}
 @end
