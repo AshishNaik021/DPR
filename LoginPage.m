@@ -27,6 +27,7 @@
 @synthesize returnString;
 
 - (void)viewDidLoad {
+    NSLog(@"LoginPage.m");
     spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
     [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     spinner.color = [UIColor blueColor];

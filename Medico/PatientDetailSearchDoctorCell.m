@@ -11,6 +11,7 @@
 @implementation PatientDetailSearchDoctorCell
 
 - (void)awakeFromNib {
+    NSLog(@"PatientDetailSearchDoctorCell.m");
     // Initialization code
 }
 

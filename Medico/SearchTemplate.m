@@ -24,6 +24,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"SearchTemplate.m");
     [super viewDidLoad];
     gridTableView.backgroundColor = [UIColor clearColor];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];

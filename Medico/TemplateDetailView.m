@@ -23,6 +23,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"TemplateDetailView.m");
     [super viewDidLoad];
     
     [self.tableView registerClass:[TemplateDetailViewCell class] forCellReuseIdentifier:@"Cell"];

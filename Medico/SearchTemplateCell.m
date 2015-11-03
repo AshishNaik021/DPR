@@ -11,6 +11,7 @@
 @implementation SearchTemplateCell
 
 - (void)awakeFromNib {
+    NSLog(@"SearchTemplateCell.m");
     // Initialization code
 }
 

@@ -19,6 +19,7 @@
 @synthesize doctorEmail = _doctorEmail;
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorLandingPageView.m");
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     NSLog(@"Name:%@ Email :%@" ,_doctorName,_doctorEmail);

@@ -30,6 +30,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"PatientDetailSearchDoctorViewController.m");
     [super viewDidLoad];
     radioButton = NO;
     self.listContentView.hidden = FALSE;

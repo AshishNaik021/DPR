@@ -15,6 +15,7 @@
 @implementation UploadDocumentsViewController
 
 - (void)viewDidLoad {
+    NSLog(@"UploadDocumentsViewController.m");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

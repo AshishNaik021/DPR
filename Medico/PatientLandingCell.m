@@ -11,6 +11,7 @@
 @implementation PatientLandingCell
 
 - (void)awakeFromNib {
+    NSLog(@"PatientLandingCell.m");
     // Initialization code
 }
 

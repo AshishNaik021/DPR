@@ -15,6 +15,7 @@
 @implementation DoctorFeedBackViewController
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorFeedBackViewController.m");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

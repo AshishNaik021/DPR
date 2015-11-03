@@ -31,6 +31,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"AddAssistantView.m");
     [super viewDidLoad];
     [_specializationField.layer setBorderWidth:1.0];
     CreateNew = NO;

@@ -12,6 +12,7 @@
 @implementation PatientClinicAndLabsCell
 
 - (void)awakeFromNib {
+    NSLog(@"PatientClinicAndLabsCell.m");
     // Initialization code
 }
 

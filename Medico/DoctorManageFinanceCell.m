@@ -11,6 +11,7 @@
 @implementation DoctorManageFinanceCell
 
 - (void)awakeFromNib {
+    NSLog(@"DoctorManageFinanceCell.m");
     // Initialization code
 }
 

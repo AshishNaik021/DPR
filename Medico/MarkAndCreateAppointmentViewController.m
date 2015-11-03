@@ -15,6 +15,7 @@
 @implementation MarkAndCreateAppointmentViewController
 
 - (void)viewDidLoad {
+    NSLog(@"MarkAndCreateAppointmentViewController.m");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

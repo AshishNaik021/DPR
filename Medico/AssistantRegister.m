@@ -52,6 +52,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"AssistantRegister.m");
     self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";

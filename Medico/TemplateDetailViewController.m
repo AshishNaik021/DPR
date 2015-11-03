@@ -35,6 +35,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"TemplateDetailViewController.m");
     [super viewDidLoad];
    // gridTableView.backgroundColor = [UIColor clearColor];
     self.navigationItem.title = _subArr[0];

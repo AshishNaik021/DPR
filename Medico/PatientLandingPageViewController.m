@@ -37,6 +37,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"PatientLandingPageViewController.m");
     [super viewDidLoad];
     
     _image = @[@"default.png",

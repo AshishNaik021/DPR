@@ -33,6 +33,7 @@
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    NSLog(@"TemplateDetailCell.m");
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     self.separatorInset = UIEdgeInsetsZero;
     self.layoutMargins = UIEdgeInsetsZero;

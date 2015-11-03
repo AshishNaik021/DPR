@@ -27,6 +27,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorSettingPageView.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Settings";
     UIImage *myImage = [UIImage imageNamed:@"home.png"];

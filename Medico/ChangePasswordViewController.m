@@ -19,6 +19,7 @@
 @synthesize reEnterPasswordField;
 
 - (void)viewDidLoad {
+    NSLog(@"ChangePasswordViewController.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Change Password";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];

@@ -15,6 +15,7 @@
 @implementation PatientTerms_ConditionsViewController
 
 - (void)viewDidLoad {
+    NSLog(@"PatientTerms&ConditionsViewController.m");
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
 

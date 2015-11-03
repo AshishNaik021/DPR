@@ -11,6 +11,7 @@
 @implementation DetailManageTemplateCell
 
 - (void)awakeFromNib {
+    NSLog(@"DetailManageTemplateCell.m");
     // Initialization code
 }
 

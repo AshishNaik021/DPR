@@ -24,6 +24,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"DetailManageTemplate.m");
         [super viewDidLoad];
     //self.tableView.backgroundColor = [ UIColor colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
     

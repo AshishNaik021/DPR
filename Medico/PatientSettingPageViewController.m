@@ -15,6 +15,7 @@
 @implementation PatientSettingPageViewController
 
 - (void)viewDidLoad {
+    NSLog(@"PatientSettingPageViewController.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Settings";
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"MyDemo" ofType:@"json"];

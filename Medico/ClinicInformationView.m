@@ -15,6 +15,7 @@
 @implementation ClinicInformationView
 
 - (void)viewDidLoad {
+    NSLog(@"ClinicInformationView.m");
     [super viewDidLoad];
    // _clinicNameField.text = _totalDetail[0];
     _clinicNameField.text = [[_totalDetail objectAtIndex:0] objectForKey:@"Name"];

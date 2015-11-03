@@ -11,6 +11,7 @@
 @implementation DoctorManageAppointmentCell
 
 - (void)awakeFromNib {
+    NSLog(@"DoctorManageAppointmentCell.m");
     // Initialization code
 }
 

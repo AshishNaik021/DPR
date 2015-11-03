@@ -11,6 +11,7 @@
 @implementation ManageAssistantCell
 
 - (void)awakeFromNib {
+    NSLog(@"ManageAssistantCell.m");
     // Initialization code
 }
 

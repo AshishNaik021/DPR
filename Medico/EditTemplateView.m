@@ -36,6 +36,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"EditTemplateView.m");
     [super viewDidLoad];
     gridTableView.backgroundColor = [UIColor clearColor];
     self.navigationItem.title = @"Edit Fields";

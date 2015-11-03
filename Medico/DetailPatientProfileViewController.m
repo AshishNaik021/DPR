@@ -66,6 +66,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"DetailPatientProfileViewController.m");
     [super viewDidLoad];
     
     NSLog(@"Data in pass deta array------------%@",_passPatientData);

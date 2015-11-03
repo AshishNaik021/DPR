@@ -11,6 +11,7 @@
 @implementation DoctorAddTreatmentCell
 
 - (void)awakeFromNib {
+    NSLog(@"DoctorAddTreatmentCell.m");
     // Initialization code
 }
 

@@ -11,6 +11,7 @@
 @implementation PatientProfileTableViewCell
 
 - (void)awakeFromNib {
+    NSLog(@"PatientProfileTableViewCell.m");
     // Initialization code
 }
 

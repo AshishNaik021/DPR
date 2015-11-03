@@ -28,6 +28,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"SearchClinicView.m");
     [super viewDidLoad];
     
     nameRadioClicked = NO;

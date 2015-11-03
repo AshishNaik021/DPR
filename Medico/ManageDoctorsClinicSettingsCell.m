@@ -11,6 +11,7 @@
 @implementation ManageDoctorsClinicSettingsCell
 
 - (void)awakeFromNib {
+    NSLog(@"ManageDoctorsClinicSettingsCell.m");
     // Initialization code
 }
 

@@ -31,6 +31,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"DayWeekMonthAppointmentViewController.m");
     [super viewDidLoad];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
      UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];

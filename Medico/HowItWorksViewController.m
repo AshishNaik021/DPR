@@ -15,6 +15,7 @@
 @implementation HowItWorksViewController
 
 - (void)viewDidLoad {
+    NSLog(@"HowItWorksViewController.m");
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
 

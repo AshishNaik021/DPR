@@ -11,6 +11,7 @@
 @implementation SearchClinicCell
 
 - (void)awakeFromNib {
+    NSLog(@"SearchClinicCell.m");
     // Initialization code
 }
 

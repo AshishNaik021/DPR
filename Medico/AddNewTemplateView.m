@@ -22,6 +22,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"AddNewTemplateView.m");
     [super viewDidLoad];
     
     

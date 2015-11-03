@@ -24,6 +24,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"PatientClinicAndLabsViewController.m");
     [super viewDidLoad];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];

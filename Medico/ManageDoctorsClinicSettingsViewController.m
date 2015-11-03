@@ -16,6 +16,7 @@
 @implementation ManageDoctorsClinicSettingsViewController
 
 - (void)viewDidLoad {
+    NSLog(@"ManageDoctorsClinicSettingsViewController.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Manage Clinics";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];

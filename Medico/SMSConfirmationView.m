@@ -25,6 +25,7 @@
 @synthesize returnString;
 
 - (void)viewDidLoad {
+    NSLog(@"SMSConfirmationView.m");
     spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
     [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     spinner.color = [UIColor blueColor];

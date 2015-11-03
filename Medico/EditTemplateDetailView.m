@@ -16,6 +16,7 @@
 @implementation EditTemplateDetailView
 
 - (void)viewDidLoad {
+    NSLog(@"EditTemplateDetailView.m");
     [super viewDidLoad];
     [self.tableView registerClass:[EditTemplateDetailViewCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.separatorColor = [UIColor lightGrayColor];

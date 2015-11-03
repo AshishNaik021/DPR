@@ -16,6 +16,7 @@
 @synthesize checkButton;
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorChangePasswordViewController.m");
     [super viewDidLoad];
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(375, 1000)];

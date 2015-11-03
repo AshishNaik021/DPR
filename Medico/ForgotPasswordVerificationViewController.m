@@ -19,6 +19,7 @@
 @synthesize resendCodeButton;
 
 - (void)viewDidLoad {
+    NSLog(@"ForgotPasswordVerificationViewController.m");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

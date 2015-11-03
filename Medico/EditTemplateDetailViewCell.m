@@ -58,6 +58,7 @@
 }
 
 - (void)awakeFromNib {
+    NSLog(@"EditTemplateDetailViewCell.m");
     // Initialization code
 }
 

@@ -91,6 +91,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorDetailManageAppointmentViewController.m");
     [super viewDidLoad];
     
     clinicNameLabel.text = [_passDataArr valueForKey:@"clinicName"];

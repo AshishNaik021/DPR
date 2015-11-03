@@ -11,6 +11,7 @@
 @implementation ManageReminderCell
 
 - (void)awakeFromNib {
+    NSLog(@"ManageReminderCell.m");
     // Initialization code
 }
 

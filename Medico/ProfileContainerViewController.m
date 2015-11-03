@@ -15,6 +15,7 @@
 @implementation ProfileContainerViewController
 
 - (void)viewDidLoad {
+    NSLog(@"ProfileContainerViewController.m");
     [super viewDidLoad];
     [_specialtyField.layer setBorderWidth:1.0];
 

@@ -24,6 +24,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"SearchAssistantView.m");
     [super viewDidLoad];
     
    // gridTableView.backgroundColor = [UIColor clearColor];

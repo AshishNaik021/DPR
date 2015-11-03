@@ -16,6 +16,7 @@
 @implementation SearchResultAssistantViewController
 
 - (void)viewDidLoad {
+    NSLog(@"SearchResultAssistantViewController.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Search Assistants";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];

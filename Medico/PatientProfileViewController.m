@@ -31,6 +31,7 @@
 }
 
 - (void)viewDidLoad {
+    NSLog(@"PatientProfileViewController.m");
     [super viewDidLoad];
     [self fetchJson];
     

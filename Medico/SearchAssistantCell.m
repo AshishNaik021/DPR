@@ -11,6 +11,7 @@
 @implementation SearchAssistantCell
 
 - (void)awakeFromNib {
+    NSLog(@"SearchAssistantCell.m");
     // Initialization code
 }
 

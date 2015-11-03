@@ -76,6 +76,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorManageAppointmentsViewController.m");
     [super viewDidLoad];
     
     [self fetchAppointmentJson];

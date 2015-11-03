@@ -29,6 +29,7 @@
 
 
 - (void)viewDidLoad {
+    NSLog(@"DoctorManageFinanceViewController.m");
     [super viewDidLoad];
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];

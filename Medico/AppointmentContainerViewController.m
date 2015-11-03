@@ -15,6 +15,7 @@
 @implementation AppointmentContainerViewController
 
 - (void)viewDidLoad {
+    NSLog(@"AppointmentContainerViewController.m");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

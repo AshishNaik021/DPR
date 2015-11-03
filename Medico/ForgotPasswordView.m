@@ -20,7 +20,7 @@
 @synthesize mobileNoField;
 
 - (void)viewDidLoad {
-    
+    NSLog(@"ForgotPasswordView.m");
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
