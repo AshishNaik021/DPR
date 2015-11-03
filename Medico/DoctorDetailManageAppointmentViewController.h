@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface DoctorDetailManageAppointmentViewController : UIViewController
+    @property IBOutlet NSString *clinicName;
 
 @property IBOutlet NSMutableArray *passDataArr;
 
 @property IBOutlet NSDictionary *passDataDict;
+@property IBOutlet NSArray *clinicJson;
 
 @property IBOutlet NSArray *detailAppArr;
 @property IBOutlet NSArray *detailSlot1;
@@ -29,7 +31,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *slot1totalAppButton;
 @property (weak, nonatomic) IBOutlet UIButton *slot2TotalAppButton;
 @property (weak, nonatomic) IBOutlet UIButton *slot3TotalAppButton;
-@property (weak, nonatomic) IBOutlet UIView *addressTextView;
+@property (weak, nonatomic) IBOutlet UITextView *addressTextView;
+@property (weak, nonatomic) IBOutlet UITextField *profileMobileField;
+@property (weak, nonatomic) IBOutlet UITextField *mobile;
 
 @property (weak, nonatomic) IBOutlet UIButton *profileTabButton;
 - (IBAction)profileTab:(id)sender;
@@ -39,7 +43,6 @@
 @property (weak, nonatomic) IBOutlet UIView *appointmentContentView;
 @property (weak, nonatomic) IBOutlet UITextField *profileAssistantField;
 @property (weak, nonatomic) IBOutlet UITextField *profileEmailField;
-@property (weak, nonatomic) IBOutlet UITextField *profileMobileField;
 @property (weak, nonatomic) IBOutlet UITextField *profileLandlineField;
 @property (weak, nonatomic) IBOutlet UITextField *profileLocationField;
 @property (weak, nonatomic) IBOutlet UITextField *profilePracticeNameField;

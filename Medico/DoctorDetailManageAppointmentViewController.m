@@ -47,9 +47,12 @@
 @synthesize profileEmailField;
 @synthesize profileLandlineField;
 @synthesize profileLocationField;
-@synthesize profileMobileField;
 @synthesize profilePracticeNameField;
 @synthesize profileServicesTextView;
+@synthesize clinicName = _clinicName;
+@synthesize clinicJson;
+@synthesize mobile;
+
 
 
 - (void) homePage:(id)sender{
@@ -59,16 +62,170 @@
     
 }
 
+-(void)fetchCliniProfile{
+    NSLog(@"-------------------------------------------------------");
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSLog(@"email id for logged in user...%@",_clinicName);
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/searchClinic?clinicName=%@",_clinicName];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+  //  NSLog(@"Data from web Service in responceStr------%@",responseStr);
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/searchClinic.json"];
+    NSLog(@"%@",docPath);
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Data copied into the array........................%@",_passDataArr);
-    NSLog(@"Data copied into the slo1 array........................%@",_detailSlot1);
-    NSLog(@"Data copied into the slot2 array........................%@",_detailSlot2);
-    NSLog(@"Data copied into the slot3 array........................%@",_detailSlot3);
-
-
+    
     clinicNameLabel.text = [_passDataArr valueForKey:@"clinicName"];
-   
+    _clinicName = [_passDataArr valueForKey:@"clinicName"];
+   // NSLog(@"name Of Clinic:---------------%@",_clinicName);
+    [self fetchCliniProfile];
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/searchClinic.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *e;
+    clinicJson = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
+    
+    NSLog(@"CliniJson------------%@",clinicJson);
+    
+    NSLog(@"Count for the array--------%lu",(unsigned long)clinicJson.count);
+    
+    int n = clinicJson.count;
+    
+    if (n > 1) {
+        NSLog(@"More than 1 array object.....");
+        NSLog(@"%@",clinicJson[0]);
+       // [profileEmailField setText:@"value"];
+   /*    if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
+
+           [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
+        }
+        else{
+            [profileEmailField setText:@""];
+        }
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
+            
+            profileLandlineField.text = [NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]];
+            NSLog(@"%@",profileLandlineField.text);
+        }
+        else{
+            [profileLandlineField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
+            
+            [profileMobileField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]]];
+            NSLog(@"%@",profileMobileField.text);
+
+        }
+        else{
+            [profileMobileField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
+            
+            [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
+        }
+        else{
+            [profileLocationField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
+           
+            [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
+        }
+        else{
+            [profileMobileField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
+            
+            [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
+        }
+        else{
+            [profileServicesTextView setText:@""];
+        }
+        */
+      
+        
+    }
+
+    else{
+        NSLog(@"array contains only one object....");
+        NSLog(@"%@",clinicJson[0]);
+     /*   if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
+            
+            [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
+        }
+        else{
+            [profileEmailField setText:@""];
+        }
+
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
+            
+            [profileLandlineField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]]];
+        }
+        else{
+            [profileLandlineField setText:@""];
+        }
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
+            
+            [profileMobileField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]]];
+        }
+        else{
+            [profileMobileField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
+            
+            [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
+        }
+        else{
+            [profileLocationField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
+            
+            [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
+        }
+        else{
+            [profileMobileField setText:@""];
+        }
+        
+        if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
+            
+            [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
+        }
+        else{
+            [profileServicesTextView setText:@""];
+        }
+        */
+
+    }
+    
+    
+    
+    
+    
     if (![_detailSlot1 isEqual:[NSNull null]]) {
         if (![[_detailSlot1 valueForKey:@"shiftTime"] isEqual:[NSNull null]]) {
             slot1AppLabel.text = [_detailSlot1 valueForKey:@"shiftTime"];
@@ -281,6 +438,58 @@
     self.appointmentContentView.hidden = TRUE;
     [self.profileTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.appointmentTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
+        
+        [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
+    }
+    else{
+        [profileEmailField setText:@"Unknown"];
+    }
+    
+    if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
+        
+        profileLandlineField.text = [NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]];
+        NSLog(@"%@",profileLandlineField.text);
+    }
+    else{
+        [profileLandlineField setText:@"Unknown"];
+    }
+    
+    if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
+        
+        mobile.text = [NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]];
+        NSLog(@"%@",mobile.text);
+    }
+    else{
+        [mobile setText:@"Unknown"];
+    }
+    
+    if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
+        
+        [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
+    }
+    else{
+        [profileLocationField setText:@"Unknown"];
+    }
+    
+    if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
+        
+        [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
+    }
+    else{
+        [addressTextView setText:@"Unknown"];
+    }
+    
+    if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
+        
+        [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
+    }
+    else{
+        [profileServicesTextView setText:@"Unknown"];
+    }
+
+    
+    
 }
 - (IBAction)appointmentTab:(id)sender {
     self.appointmentContentView.hidden = FALSE;
