@@ -102,6 +102,7 @@
     NSError *e;
     _jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
    
+    NSLog(@"--------------------------------------------88888888888888888888888-----------------%@",_jsonList);
     NSDictionary *jsonSubDict = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&e];
     slot1Arr = [jsonSubDict valueForKeyPath:@"shift1"];
     slot2Arr = [jsonSubDict valueForKeyPath:@"shift2"];

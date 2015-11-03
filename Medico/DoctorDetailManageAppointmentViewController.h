@@ -34,6 +34,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *addressTextView;
 @property (weak, nonatomic) IBOutlet UITextField *profileMobileField;
 @property (weak, nonatomic) IBOutlet UITextField *mobile;
+@property (weak, nonatomic) IBOutlet UIButton *totalAppointmentButton;
+- (IBAction)totalAppointment:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *profileTabButton;
 - (IBAction)profileTab:(id)sender;

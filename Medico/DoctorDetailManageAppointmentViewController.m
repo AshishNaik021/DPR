@@ -52,6 +52,7 @@
 @synthesize clinicName = _clinicName;
 @synthesize clinicJson;
 @synthesize mobile;
+@synthesize totalAppointmentButton;
 
 
 
@@ -94,7 +95,20 @@
     
     clinicNameLabel.text = [_passDataArr valueForKey:@"clinicName"];
     _clinicName = [_passDataArr valueForKey:@"clinicName"];
-   // NSLog(@"name Of Clinic:---------------%@",_clinicName);
+    NSLog(@"name Of Clinic:---------------%@",[_passDataArr valueForKey:@"totalAppointmentCount"]);
+    
+    if (![[_passDataArr valueForKey:@"totalAppointmentCount"] isEqual:[NSNull null]]) {
+            [totalAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[_passDataArr valueForKey:@"totalAppointmentCount"]] forState:UIControlStateNormal];
+        
+    }
+    else
+    {
+        [totalAppointmentButton setTitle:@"0" forState:UIControlStateNormal];
+    }
+
+    
+    
+    
     [self fetchCliniProfile];
     /* ----------------- Read File For Parse JSON Data -------------------- */
     
@@ -509,5 +523,7 @@
 - (IBAction)slot2TotalApp:(id)sender {
 }
 - (IBAction)slot3TotalApp:(id)sender {
+}
+- (IBAction)totalAppointment:(id)sender {
 }
 @end

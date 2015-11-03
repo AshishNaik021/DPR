@@ -230,6 +230,7 @@
 - (void)lastAppointment:(id)sender {
     LastVisitedConsultationViewController *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"LastVisitedConsultationViewController"];
+    
     [self.navigationController pushViewController:DoctorHome animated:YES];
 }
 - (void)getAllAppointmnet:(id)sender {
@@ -239,8 +240,14 @@
 }
 
 - (void)showPatientProfile:(id)sender {
+    UIButton *senderButton = (UIButton *)sender;
+    NSLog(@"current Row=%ld",(long)senderButton.tag);
+    int n = senderButton.tag;
+
     DetailPatientProfileViewController *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientProfileViewController"];
+    DoctorHome.passPatientData = arrDoctor[n];
+
     [self.navigationController pushViewController:DoctorHome animated:YES];
 }
 

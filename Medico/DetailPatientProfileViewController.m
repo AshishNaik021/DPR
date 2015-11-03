@@ -19,6 +19,15 @@
 @synthesize arrayList1;
 @synthesize arrayList2;
 @synthesize arrayList3;
+@synthesize passPatientData = _passPatientData;
+@synthesize emailField;
+@synthesize allergicTextView;
+@synthesize lastVisitedField;
+@synthesize locationField;
+@synthesize mobileField;
+@synthesize dateofBirthField;
+@synthesize bloodGroupField;
+
 
 - (IBAction)profileTab:(id)sender {
 //    self.profileContainerView.hidden = FALSE;
@@ -54,9 +63,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _patientNameLabel.text = [[_detailArr objectAtIndex:0] objectForKey:@"name"];
-    _patientSpecialityField.text = [[_detailArr objectAtIndex:0] objectForKey:@"speciality"];
-    _lastVisitedField.text = [[_detailArr objectAtIndex:0] objectForKey:@"lastVisited"];
+    
+    NSLog(@"Data in pass deta array------------%@",_passPatientData);
+//    _patientNameLabel.text = [[_detailArr objectAtIndex:0] objectForKey:@"name"];
+//    _patientSpecialityField.text = [[_detailArr objectAtIndex:0] objectForKey:@"speciality"];
+//    _lastVisitedField.text = [[_detailArr objectAtIndex:0] objectForKey:@"lastVisited"];
    _patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
@@ -69,6 +80,7 @@
     [[self navigationItem] setBackBarButtonItem:backButton];
     
     self.appointmentView.hidden = TRUE;
+    
     
     self.profileTabButton.titleLabel.textColor = [UIColor blackColor];
     [self.profileTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
