@@ -224,6 +224,9 @@
     NSLog(@"jsonlist---------------------------------------%@",_jsonList[0]);
     detailManage = [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
     detailManage.passDataArr = _jsonList[n];
+    detailManage.detailSlot1 = slot1Arr[n];
+    detailManage.detailSlot2 = slot2Arr[n];
+    detailManage.detailSlot3 = slot3Arr[n];
     [self.navigationController pushViewController:detailManage animated:YES];
 }
 
