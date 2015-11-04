@@ -10,6 +10,7 @@
 #import "DoctorManageAppointmentCell.h"
 #import "DoctorLandingPageView.h"
 #import "DoctorDetailManageAppointmentViewController.h"
+#import "DayWeekMonthAppointmentViewController.h"
 
 @interface DoctorManageAppointmentsViewController (){
     NSInteger _selectedRow;
@@ -64,12 +65,12 @@
     
     /* ---------- End of Code for Writing response data into the file -------------- */
     
-
     
-//
-//    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-//    NSLog(@"Data in Array==============%@",responseStr);
-//    
+    
+    //
+    //    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    //    NSLog(@"Data in Array==============%@",responseStr);
+    //
     
     
 }
@@ -97,28 +98,28 @@
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     
-//    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorClinics" ofType:@"json"];
-//    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-//    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    //    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorClinics" ofType:@"json"];
+    //    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    //    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
     _jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
-   
+    
     NSLog(@"--------------------------------------------88888888888888888888888-----------------%@",_jsonList);
     NSDictionary *jsonSubDict = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&e];
     slot1Arr = [jsonSubDict valueForKeyPath:@"shift1"];
     slot2Arr = [jsonSubDict valueForKeyPath:@"shift2"];
     slot3Arr = [jsonSubDict valueForKeyPath:@"shift3"];
-  /*
-    NSLog(@"total list of array.......%@",[jsonList objectAtIndex:0]);
-    NSLog(@"total list of array.......%lu",(unsigned long)jsonList.count);
-    NSLog(@"total list of shift1 array.......%@",slot1Arr);
-    NSLog(@"total list of shift2 array.......%@",slot2Arr);
-    NSLog(@"total list of shift3 array.......%@",slot3Arr);
-    NSLog(@"count slot1 array.......%lu",(unsigned long)slot1Arr.count);
-    NSLog(@"count slot1 array.......%lu",(unsigned long)slot2Arr.count);
-    NSLog(@"count slot1 array.......%lu",(unsigned long)slot3Arr.count);
-
-    */
+    /*
+     NSLog(@"total list of array.......%@",[jsonList objectAtIndex:0]);
+     NSLog(@"total list of array.......%lu",(unsigned long)jsonList.count);
+     NSLog(@"total list of shift1 array.......%@",slot1Arr);
+     NSLog(@"total list of shift2 array.......%@",slot2Arr);
+     NSLog(@"total list of shift3 array.......%@",slot3Arr);
+     NSLog(@"count slot1 array.......%lu",(unsigned long)slot1Arr.count);
+     NSLog(@"count slot1 array.......%lu",(unsigned long)slot2Arr.count);
+     NSLog(@"count slot1 array.......%lu",(unsigned long)slot3Arr.count);
+     
+     */
     // Do any additional setup after loading the view.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -148,7 +149,7 @@
     {
         cell.slot1Label.text = @"";
     }
-
+    
     if (![[slot2Arr objectAtIndex:row] isEqual:[NSNull null]]) {
         if (![[[slot2Arr objectAtIndex:row] objectForKey:@"shiftTime"] isEqual:[NSNull null]]) {
             cell.slot2Label.text = [[slot2Arr objectAtIndex:row] objectForKey:@"shiftTime"];
@@ -173,12 +174,12 @@
     
     if (![[slot1Arr objectAtIndex:row] isEqual:[NSNull null]]) {
         if (![[[slot1Arr objectAtIndex:row] objectForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
-             [cell.slot1TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[[slot1Arr objectAtIndex:row] objectForKey:@"appointmentCount"]] forState:UIControlStateNormal];
+            [cell.slot1TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[[slot1Arr objectAtIndex:row] objectForKey:@"appointmentCount"]] forState:UIControlStateNormal];
         }
     }
     else
     {
-        [cell.slot1TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
+        [cell.slot1TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
     }
     
     if (![[slot2Arr objectAtIndex:row] isEqual:[NSNull null]]) {
@@ -188,9 +189,9 @@
     }
     else
     {
-        [cell.slot2TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
+        [cell.slot2TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
     }
-
+    
     if (![[slot3Arr objectAtIndex:row] isEqual:[NSNull null]]) {
         if (![[[slot3Arr objectAtIndex:row] objectForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
             [cell.slot3TotalAppointmentCountButton setTitle:[NSString stringWithFormat:@"%@",[[slot3Arr objectAtIndex:row] objectForKey:@"appointmentCount"]] forState:UIControlStateNormal];
@@ -198,30 +199,33 @@
     }
     else
     {
-        [cell.slot3TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
+        [cell.slot3TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
     }
     
-
+    
     if (![[[_jsonList objectAtIndex:row] objectForKey:@"totalAppointmentCount"] isEqual:[NSNull null]]) {
-            [cell.doctorTotalAppButton setTitle:[NSString stringWithFormat:@"%@",[[_jsonList objectAtIndex:row] objectForKey:@"totalAppointmentCount"]] forState:UIControlStateNormal];
+        [cell.doctorTotalAppButton setTitle:[NSString stringWithFormat:@"%@",[[_jsonList objectAtIndex:row] objectForKey:@"totalAppointmentCount"]] forState:UIControlStateNormal];
+        cell.doctorTotalAppButton.tag = indexPath.row;
         
     }
     else
     {
         [cell.doctorTotalAppButton setTitle:@"0" forState:UIControlStateNormal];
+        cell.doctorTotalAppButton.tag = indexPath.row;
+        
     }
-
     
-
+    
+    
     cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
-   cell.downArrowButton.tag = indexPath.row;
+    cell.downArrowButton.tag = indexPath.row;
     
-  //  NSArray *newArray = [NSMutableArray arrayWithArray:oldArray];
-  
-//    detailManage.passDataArr = [NSArray arrayWithArray:jsonList];
+    //  NSArray *newArray = [NSMutableArray arrayWithArray:oldArray];
+    //    detailManage.passDataArr = [NSArray arrayWithArray:jsonList];
     NSLog(@"row======================%d",row);
+    NSLog(@"tag:%d",cell.doctorTotalAppButton.tag);
     
-  [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.downArrowButton addTarget:self action:@selector(downArrow:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
     
 }
@@ -231,9 +235,9 @@
 - (IBAction)downArrow:(id)sender {
     
     UIButton *senderButton = (UIButton *)sender;
-       NSLog(@"current Row=%ld",(long)senderButton.tag);
+    NSLog(@"current Row=%ld",(long)senderButton.tag);
     int n = senderButton.tag;
-   // NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
+    // NSIndexPath *path = [NSIndexPath indexPathForRow:senderButton.tag inSection:0];
     NSLog(@"jsonlist---------------------------------------%@",_jsonList[0]);
     detailManage = [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorDetailManageAppointmentViewController"];
     detailManage.passDataArr = _jsonList[n];
@@ -250,15 +254,19 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)doctorTotalAppointment:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test" message:@"Test Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    DayWeekMonthAppointmentViewController *detailAppointment = [self.storyboard instantiateViewControllerWithIdentifier:@"DayWeekMonthAppointmentViewController"];
+    [self.navigationController pushViewController:detailAppointment animated:YES];
 }
 @end
