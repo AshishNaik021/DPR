@@ -42,6 +42,10 @@
 @synthesize doctorsNoteSaveButton;
 @synthesize doctorsNoteSymptomsTextView;
 @synthesize array;
+@synthesize summaryDatePassData = _summaryDatePassData;
+@synthesize summaryPatientEmailPassData = _summaryPatientEmailPassData;
+@synthesize summaryTimePassData =_summaryTimePassData;
+@synthesize summaryDoctorIDPassData = _summaryDoctorIDPassData;
 
 
 - (void) homePage:(id)sender{
@@ -53,7 +57,34 @@
 
 -(void)fetchPatientReminder{
     
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
+    // NSString *emailid = emailField.text;
+   
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getPatientReminder?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array+++++++++++++++++++++++++++++++++++++++++++++++++++%@",responseStr);
+    
+//    /* ---------- Code for Writing response data into the file -------------- */
+//    
+//    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientInformation.json"];
+//    NSLog(@"%@",docPath);
+//    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+//    
+//    /* ---------- End of Code for Writing response data into the file -------------- */
+//    
+    
+
     
 }
 
@@ -65,12 +96,13 @@
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
     
+   
+    NSLog(@"Date----------------%@",_summaryDatePassData);
+    NSLog(@"Time-----------------%@",_summaryTimePassData);
+    NSLog(@"patient Email----------%@",_summaryPatientEmailPassData);
+    NSLog(@"DoctorId---------------%@",_summaryDoctorIDPassData);
+    
     [self fetchPatientReminder];
-    
-    
-    
-    
-    
     [self fetchAllClinics];
     
     

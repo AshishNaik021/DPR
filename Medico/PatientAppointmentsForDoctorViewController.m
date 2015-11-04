@@ -217,7 +217,17 @@
     AllDetailInformationViewController *allInfo =
     [self.storyboard instantiateViewControllerWithIdentifier:@"AllDetailInformationViewController"];
     /* ------------------------------------------ */
+    allInfo.summaryTimePassData = [[patientAppointmentArr objectAtIndex:n] valueForKey:@"bookTime"];
+    allInfo.summaryDoctorIDPassData = [[patientAppointmentArr objectAtIndex:n] valueForKey:@"doctorId"];
+    appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:n] objectForKey:@"appointmentDate"]];
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"dd-MM-yyyy"];
+    date = [formatter stringFromDate:appointmentDate];
+    
+    allInfo.summaryDatePassData = date;
+    allInfo.summaryPatientEmailPassData = _patientEmailIdForCallAPI;
+
     [self.navigationController pushViewController:allInfo animated:YES];
 }
 

@@ -59,7 +59,10 @@
 - (IBAction)summarySave:(id)sender;
 - (IBAction)doctorsNoteSave:(id)sender;
 
-
+@property IBOutlet NSString *summaryDatePassData;
+@property IBOutlet NSString *summaryTimePassData;
+@property IBOutlet NSString *summaryPatientEmailPassData;
+@property IBOutlet NSString *summaryDoctorIDPassData;
 
 
 
