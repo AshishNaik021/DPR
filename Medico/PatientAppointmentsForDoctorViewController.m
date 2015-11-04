@@ -16,6 +16,12 @@
 
 @implementation PatientAppointmentsForDoctorViewController
 @synthesize jsonList;
+@synthesize doctorIdForCallAPI = _doctorIdForCallAPI;
+@synthesize patientEmailIdForCallAPI = _patientEmailIdForCallAPI;
+@synthesize patientAppointmentArr;
+@synthesize appointmentDate;
+@synthesize date;
+@synthesize tableView;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -24,9 +30,42 @@
     
 }
 
+-(void)fetchAllPatientAppointment{
+    
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllPatientAppointment?doctorId=%@&patientId=%@",_doctorIdForCallAPI,_patientEmailIdForCallAPI];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientAppointment.json"];
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+    
+}
+
 - (void)viewDidLoad {
     NSLog(@"PatientAppointmentsForDoctorViewController.m");
     [super viewDidLoad];
+    
+    
+    NSLog(@"PatientID>>>>>>>>>>>>>>>%@",_patientEmailIdForCallAPI);
+    NSLog(@"DoctorID>>>>>>>>>>>>>>>>>%@",_doctorIdForCallAPI);
+    
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -36,65 +75,144 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    [self fetchAllPatientAppointment];
     
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllPatientAppointment" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientAppointment.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *e;
-    jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
     
-
+    patientAppointmentArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    
+    
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if (section == 0)
-        return jsonList.count;
+    if (section == 0) {
+        return 0;
+    }
     if (section == 1)
-        return jsonList.count;
+        return patientAppointmentArr.count;
+    if (section == 2)
+        return patientAppointmentArr.count;
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
-   // DoctorManageAppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
 
     PatientAppointmentsForDoctorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    if (indexPath.section == 0)
-        cell.bookDateLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"appointmentDate"];
-        cell.bookTimeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"bookTime"];
-        cell.visitTypeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"visitType"];
+    if (indexPath.section == 1){
+        
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+            
+            appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
+           
+//            NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
+//            
+//            NSLog(@"Appointment Date----- %@",appointmentDate);
+//            NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
+//            NSLog(@"before-----%@", date);
+//            
+//            NSRange range = [date rangeOfString:@"+"];
+//            date = [date substringToIndex:range.location];
+//            
+//            NSLog(@"after-----%@", date);
+
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            
+            [formatter setDateFormat:@"dd-MM-yyyy"];
+            date = [formatter stringFromDate:appointmentDate];
+            
+            cell.bookDateLabel.text = date;
+        }
+        else{
+            cell.bookDateLabel.text = @"";
+        }
+
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]){
+            cell.bookTimeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"];
+
+        }
+            else{
+                cell.bookTimeLabel.text = @"";
+            }
+        
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"] isEqual:[NSNull null]]){
+            cell.visitTypeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"];
+            
+        }
+        else{
+            cell.visitTypeLabel.text = @"";
+        }
     
-    if (indexPath.section == 1)
-        cell.bookDateLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"appointmentDate"];
-    cell.bookTimeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"bookTime"];
-    cell.visitTypeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"visitType"];
     
+      //  cell.bookDateLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"appointmentDate"];
+       // cell.bookTimeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"bookTime"];
+       // cell.visitTypeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"visitType"];
+    }
+    if (indexPath.section == 2){
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+            
+            appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
+            
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"dd-MM-yyyy"];
+            date = [formatter stringFromDate:appointmentDate];
+            
+            cell.bookDateLabel.text = date;
+        }
+        else{
+            cell.bookDateLabel.text = @"";
+        }
+        
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]){
+            cell.bookTimeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"];
+            
+        }
+        else{
+            cell.bookTimeLabel.text = @"";
+        }
+        
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"] isEqual:[NSNull null]]){
+            cell.visitTypeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"];
+            
+        }
+        else{
+            cell.visitTypeLabel.text = @"";
+        }
+
+    }
+        
     return cell;
 }
 
 
-
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+-(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
     if (section == 0)
         return @"Year 2015";
     if (section == 1)
         return @"Year 2014";
-    return @"undefined";
+    return @"";
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    return @"";
 }
 
 

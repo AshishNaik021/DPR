@@ -14,14 +14,17 @@
 @property (weak, nonatomic) IBOutlet UILabel *clinicCityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mobileNoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot1DayLabel;
-@property (weak, nonatomic) IBOutlet UILabel *slot1TimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *slot1StartTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot1AppointmentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot2DayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot3DayLabel;
-@property (weak, nonatomic) IBOutlet UILabel *slot2TimeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *slot3TimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *slot2StartTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *slot3StartTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot2AppointmentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot3AppointmentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *slot1EndTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *slot2EndTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *slot3EndTimeLabel;
 
 
 @end

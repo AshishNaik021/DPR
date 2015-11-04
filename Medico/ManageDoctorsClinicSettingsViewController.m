@@ -14,6 +14,7 @@
 @end
 
 @implementation ManageDoctorsClinicSettingsViewController
+@synthesize allClinicArr;
 
 - (void)viewDidLoad {
     NSLog(@"ManageDoctorsClinicSettingsViewController.m");
@@ -25,7 +26,7 @@
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    _dataArr = [json valueForKeyPath:@"ClinicList"];
+    allClinicArr = [json valueForKeyPath:@"ClinicList"];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
@@ -42,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _dataArr.count;
+    return allClinicArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

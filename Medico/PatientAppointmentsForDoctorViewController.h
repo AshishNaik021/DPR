@@ -10,6 +10,11 @@
 
 @interface PatientAppointmentsForDoctorViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property IBOutlet NSArray *jsonList;
-
+@property IBOutlet NSString *doctorIdForCallAPI;
+@property IBOutlet NSString *patientEmailIdForCallAPI;
+@property IBOutlet NSArray *patientAppointmentArr;
+@property IBOutlet NSDate *appointmentDate;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property IBOutlet NSString *date;
 @end
 

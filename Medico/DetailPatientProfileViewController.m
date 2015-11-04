@@ -9,6 +9,7 @@
 #import "DetailPatientProfileViewController.h"
 #import "DoctorLandingPageView.h"
 #import "DetailPatientProfileCell.h"
+#import "PatientProfileViewController.h"
 
 @interface DetailPatientProfileViewController ()
 
@@ -28,6 +29,11 @@
 @synthesize dateofBirthField;
 @synthesize bloodGroupField;
 @synthesize genderField;
+@synthesize hidePatientDetailButton;
+@synthesize patientNameLabel;
+@synthesize patientSpecialityField;
+@synthesize locationTextView;
+@synthesize getAllClinic;
 
 
 - (IBAction)profileTab:(id)sender {
@@ -65,15 +71,85 @@
     
 }
 
+-(void)fetchAllDoctorPatientClinic{
+    
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    // NSString *emailid = emailField.text;
+    NSString *emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    NSLog(@"email id for logged in user...%@",emailid);
+    NSString *patientID = [_passPatientData valueForKey:@"patientId"];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllDoctorPatientClinics?doctorId=%@&patientId=%@",emailid,patientID];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllDoctorPatientClinics.json"];
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+  
+    
+}
+
 - (void)viewDidLoad {
     NSLog(@"DetailPatientProfileViewController.m");
     [super viewDidLoad];
+    [self fetchAllDoctorPatientClinic];
     
-    NSLog(@"Data in pass deta array------------%@",_passPatientData);
-//    _patientNameLabel.text = [[_detailArr objectAtIndex:0] objectForKey:@"name"];
-//    _patientSpecialityField.text = [[_detailArr objectAtIndex:0] objectForKey:@"speciality"];
-//    _lastVisitedField.text = [[_detailArr objectAtIndex:0] objectForKey:@"lastVisited"];
+    /* ----------------- Read File For Parse JSON Data -------------------- */
     
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllDoctorPatientClinics.json"];
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    getAllClinic = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    arrayList1 = [json1 valueForKeyPath:@"slot1"];
+    arrayList2 = [json1 valueForKeyPath:@"slot2"];
+    arrayList3 = [json1 valueForKeyPath:@"slot3"];
+    NSLog(@"Slot1>>>>>>>>>>>>>>>>>%@",arrayList1);
+        NSLog(@"Slot2>>>>>>>>>>>>>>>>>%@",arrayList2);
+        NSLog(@"Slot3>>>>>>>>>>>>>>>>>%@",arrayList3);
+
+    /* ----------------------------------------------------------------------------- */
+    patientNameLabel.text = [_passPatientData valueForKey:@"name"];
+    
+    if (![[_passPatientData valueForKey:@"speciality"] isEqual:[NSNull null]]){
+        
+        patientSpecialityField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"speciality"]];
+    }
+    else{
+        patientSpecialityField.text = @"";
+    }
+    
+    if (![[_passPatientData valueForKey:@"lastVisited"] isEqual:[NSNull null]]){
+        
+        lastVisitedField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"lastVisited"]];
+    }
+    else{
+        lastVisitedField.text = @"";
+    }
+
+    
+    /*
     NSString *patientDate =[_passPatientData valueForKey:@"dateOfBirth"];
     NSLog(@"Date is-------%@",patientDate);
     
@@ -86,7 +162,7 @@
     [dateFormatter setDateFormat:@"dd-MM-YYYY"];
     
     NSString *d = [dateFormatter stringFromDate:date];
-    NSLog(@" *******************%@",d);
+    NSLog(@" *******************%@",d);*/
     
     /*NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
      NSLog(@"before-----%@", date);
@@ -122,15 +198,15 @@
     }
     
     if (![[_passPatientData valueForKey:@"dateOfBirth"] isEqual:[NSNull null]]){
-        
+       /*
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
         [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
         NSDate *date = [dateFormatter dateFromString:patientDate];
         NSString *copy = [NSString stringWithFormat:@"%@",date];
         [dateFormatter setDateFormat:@"dd-MM-YYYY"];
-        NSString *d = [dateFormatter stringFromDate:date];
-        dateofBirthField.text = [NSString stringWithFormat:@"%@",d];
+        NSString *d = [dateFormatter stringFromDate:date];*/
+        dateofBirthField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"dateOfBirth"]];
     }
     else{
         [dateofBirthField setText:@"Unknown"];
@@ -138,10 +214,10 @@
     
     if (![[_passPatientData valueForKey:@"location"] isEqual:[NSNull null]]){
         
-        locationField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"location"]];
+        locationTextView.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"location"]];
     }
     else{
-        [locationField setText:@"Unknown"];
+        [locationTextView setText:@"Unknown"];
     }
     
     if (![[_passPatientData valueForKey:@"blood_group"] isEqual:[NSNull null]]){
@@ -161,6 +237,7 @@
     }
     
     [allergicTextView.layer setBorderWidth:1.0];
+    [locationTextView.layer setBorderWidth:1.0];
 
     
    _patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
@@ -180,24 +257,6 @@
     self.profileTabButton.titleLabel.textColor = [UIColor blackColor];
     [self.profileTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
-  
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"getAllDoctorPatientClinics" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-   NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
-   // NSMutableData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *e;
-    jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
-    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&e];
-   arrayList1 = [json1 valueForKeyPath:@"slot1"];
-    arrayList2 = [json1 valueForKeyPath:@"slot2"];
-    arrayList3 = [json1 valueForKeyPath:@"slot3"];
- 
-    
-
-   NSLog(@"the data within slot3 array is--------- %@",[[arrayList3 objectAtIndex:0] objectForKey:@"days"]);
-    
-    
-    
     /*NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
      NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
      NSError *error = nil;
@@ -212,37 +271,139 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-        return jsonList.count;
+        return getAllClinic.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
-    // DoctorManageAppointmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    //for(int count = 0;count<_arr.count;count++){
     
     DetailPatientProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     int row = [indexPath row];
 
-   
-    cell.clinicNameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicName"];
-    cell.clinicCityLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"clinicLocation"];
-    cell.mobileNoLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"contactNumber"];
-    
-    cell.slot1DayLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"days"];
-    cell.slot2DayLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"days"];
-   cell.slot3DayLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"days"];
+    if (![[[getAllClinic objectAtIndex:row] objectForKey:@"clinicName"] isEqual:[NSNull null]]){
+        cell.clinicNameLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"clinicName"];
+    }
+    else{
+        cell.clinicNameLabel.text = @"";
+    }
+    if (![[[getAllClinic objectAtIndex:row] objectForKey:@"clinicLocation"] isEqual:[NSNull null]]){
+        cell.clinicCityLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"clinicLocation"];
+    }
+    else{
+        cell.clinicCityLabel.text = @"";
+    }
+    if (![[[getAllClinic objectAtIndex:row] objectForKey:@"contactNumber"] isEqual:[NSNull null]]){
+        cell.mobileNoLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"contactNumber"];
+    }
+    else{
+        cell.mobileNoLabel.text = @"";
+    }
 
-    cell.slot1TimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"startTimes"];
-    cell.slot2TimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"startTimes"];
-   cell.slot3TimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"startTimes"];
+    //cell.clinicNameLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"clinicName"];
+   // cell.clinicCityLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"clinicLocation"];
+   // cell.mobileNoLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"contactNumber"];
     
-    cell.slot1AppointmentLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"onlineAppointment"];
-    cell.slot2AppointmentLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"onlineAppointment"];
-    cell.slot3AppointmentLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    if (![[[arrayList1 objectAtIndex:row] objectForKey:@"days"] isEqual:[NSNull null]]){
+        cell.slot1DayLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"days"];
+    }
+    else{
+        cell.slot1DayLabel.text = @"";
+    }
+    
+    if (![[[arrayList2 objectAtIndex:row] objectForKey:@"days"] isEqual:[NSNull null]]){
+        cell.slot2DayLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"days"];
+    }
+    else{
+        cell.slot2DayLabel.text = @"";
+    }
+    if (![[[arrayList3 objectAtIndex:row] objectForKey:@"days"] isEqual:[NSNull null]]){
+        cell.slot3DayLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"days"];
+    }
+    else{
+        cell.slot3DayLabel.text = @"";
+    }
+    
+    
+    //cell.slot1DayLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"days"];
+   // cell.slot2DayLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"days"];
+   //cell.slot3DayLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"days"];
+
+    if (![[[arrayList1 objectAtIndex:row] objectForKey:@"startTimes"] isEqual:[NSNull null]]){
+        cell.slot1StartTimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"startTimes"];
+    }
+    else{
+        cell.slot1StartTimeLabel.text = @"";
+    }
+    if (![[[arrayList2 objectAtIndex:row] objectForKey:@"startTimes"] isEqual:[NSNull null]]){
+        cell.slot2StartTimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"startTimes"];
+    }
+    else{
+        cell.slot2StartTimeLabel.text = @"";
+    }
+    if (![[[arrayList3 objectAtIndex:row] objectForKey:@"startTimes"] isEqual:[NSNull null]]){
+        cell.slot3StartTimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"startTimes"];
+    }
+    else{
+        cell.slot3StartTimeLabel.text = @"";
+    }
+
+
+    
+   // cell.slot1StartTimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"startTimes"];
+   // cell.slot2StartTimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"startTimes"];
+ //  cell.slot3StartTimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"startTimes"];
+    
+    if (![[[arrayList1 objectAtIndex:row] objectForKey:@"endTimes"] isEqual:[NSNull null]]){
+        cell.slot1EndTimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"endTimes"];
+    }
+    else{
+        cell.slot1EndTimeLabel.text = @"";
+    }
+    if (![[[arrayList2 objectAtIndex:row] objectForKey:@"endTimes"] isEqual:[NSNull null]]){
+        cell.slot2EndTimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"endTimes"];
+    }
+    else{
+        cell.slot2EndTimeLabel.text = @"";
+    }
+    if (![[[arrayList3 objectAtIndex:row] objectForKey:@"endTimes"] isEqual:[NSNull null]]){
+        cell.slot3EndTimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"endTimes"];
+    }
+    else{
+        cell.slot3EndTimeLabel.text = @"";
+    }
+
+
+    
+   // cell.slot1EndTimeLabel.text = [[arrayList1 objectAtIndex:row] objectForKey:@"endTimes"];
+    //cell.slot2EndTimeLabel.text = [[arrayList2 objectAtIndex:row] objectForKey:@"endTimes"];
+    //cell.slot3EndTimeLabel.text = [[arrayList3 objectAtIndex:row] objectForKey:@"endTimes"];
+
+    
+    if (![[[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"] isEqual:[NSNull null]]){
+        cell.slot1AppointmentLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    }
+    else{
+        cell.slot1AppointmentLabel.text = @"";
+    }
+    if (![[[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"] isEqual:[NSNull null]]){
+        cell.slot2AppointmentLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    }
+    else{
+        cell.slot2AppointmentLabel.text = @"";
+    }
+    if (![[[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"] isEqual:[NSNull null]]){
+        cell.slot3AppointmentLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    }
+    else{
+        cell.slot3AppointmentLabel.text = @"";
+    }
+
+
+    
+   // cell.slot1AppointmentLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    //cell.slot2AppointmentLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"];
+    //cell.slot3AppointmentLabel.text = [[getAllClinic objectAtIndex:row] objectForKey:@"onlineAppointment"];
 
 
     
@@ -266,4 +427,12 @@
 }
 */
 
+- (IBAction)hidePatientDetail:(id)sender {
+    PatientProfileViewController *patientProfile =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientProfileViewController"];
+    [self.navigationController pushViewController:patientProfile animated:YES];
+    
+
+    
+}
 @end

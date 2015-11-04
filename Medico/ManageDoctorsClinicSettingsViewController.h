@@ -12,6 +12,7 @@
 {
     IBOutlet UITableView *gridViewTable;
 }
-@property IBOutlet NSArray *dataArr;
+@property IBOutlet NSArray *allClinicArr;
 
 @end
+

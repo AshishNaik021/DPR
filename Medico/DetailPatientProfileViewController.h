@@ -11,6 +11,7 @@
 @interface DetailPatientProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property IBOutlet NSArray *detailArr;
+@property IBOutlet NSArray *getAllClinic;
 
 @property (weak, nonatomic) IBOutlet UIImageView *patientPicture;
 @property (weak, nonatomic) IBOutlet UILabel *patientNameLabel;
@@ -28,8 +29,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *genderField;
 @property (weak, nonatomic) IBOutlet UITextField *dateofBirthField;
 @property (weak, nonatomic) IBOutlet UITextField *locationField;
+
+@property (weak, nonatomic) IBOutlet UITextView *locationTextView;
+
 @property (weak, nonatomic) IBOutlet UITextField *bloodGroupField;
 @property (weak, nonatomic) IBOutlet UITextView *allergicTextView;
+@property (weak, nonatomic) IBOutlet UIButton *hidePatientDetailButton;
+- (IBAction)hidePatientDetail:(id)sender;
 
 
 
