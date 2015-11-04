@@ -178,7 +178,7 @@
     }
     else
     {
-        [cell.slot1TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.slot1TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
     }
     
     if (![[slot2Arr objectAtIndex:row] isEqual:[NSNull null]]) {
@@ -188,7 +188,7 @@
     }
     else
     {
-        [cell.slot2TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.slot2TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
     }
 
     if (![[slot3Arr objectAtIndex:row] isEqual:[NSNull null]]) {
@@ -198,7 +198,7 @@
     }
     else
     {
-        [cell.slot3TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.slot3TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
     }
     
 

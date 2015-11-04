@@ -9,6 +9,8 @@
 #import "ManageDoctorsClinicSettingsCell.h"
 
 @implementation ManageDoctorsClinicSettingsCell
+@synthesize checkDelete;
+@synthesize deleteClinicButton;
 
 - (void)awakeFromNib {
     NSLog(@"ManageDoctorsClinicSettingsCell.m");
@@ -20,5 +22,16 @@
 
     // Configure the view for the selected state
 }
+-(IBAction)deleteClinic:(id)sender{
+    if(!checkDelete){
+        [deleteClinicButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        checkDelete = YES;
+    }
+    else if(checkDelete){
+        [deleteClinicButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        checkDelete = NO;
+        
+    }
 
+}
 @end

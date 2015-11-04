@@ -15,6 +15,7 @@
 
 @implementation ManageDoctorsClinicSettingsViewController
 @synthesize allClinicArr;
+@synthesize checkDelete;
 
 -(void)fetchAllClinics{
     NSLog(@"The fetchJson method is called.........");
@@ -78,7 +79,7 @@
     
     NSLog(@"MY Clinics--------------%@",allClinicArr);
     
-    
+    checkDelete = NO;
     
     
     
@@ -125,6 +126,8 @@
     
 }
 
+-(void)deleteClinic:(id)sender{
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

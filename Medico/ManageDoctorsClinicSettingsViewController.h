@@ -13,6 +13,6 @@
     IBOutlet UITableView *gridViewTable;
 }
 @property IBOutlet NSArray *allClinicArr;
-
+@property BOOL *checkDelete;
 @end
 

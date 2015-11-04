@@ -51,6 +51,7 @@
 }
 
 
+
 - (void)viewDidLoad {
     NSLog(@"PatientRegisterViewController.m");
     self.view.userInteractionEnabled = YES;

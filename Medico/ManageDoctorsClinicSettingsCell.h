@@ -14,4 +14,5 @@
 @property IBOutlet UIImageView *doctorImage;
 @property IBOutlet UIButton *deleteClinicButton;
 -(IBAction)deleteClinic:(id)sender;
+@property BOOL checkDelete;
 @end

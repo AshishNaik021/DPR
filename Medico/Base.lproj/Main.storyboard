@@ -947,7 +947,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Forgot Password-->
         <scene sceneID="FR8-TX-Kud">
             <objects>
-                <viewController id="MLe-cs-Wkb" customClass="ForgotPasswordView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordView" id="MLe-cs-Wkb" customClass="ForgotPasswordView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GUR-pr-uQ3"/>
                         <viewControllerLayoutGuide type="bottom" id="M2r-yq-ACv"/>
@@ -1299,7 +1299,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Registration-->
         <scene sceneID="mqI-La-QUi">
             <objects>
-                <viewController id="0cL-gk-Fiz" customClass="DoctorRegistrer" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorRegistrer" id="0cL-gk-Fiz" customClass="DoctorRegistrer" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NzA-J3-LGw"/>
                         <viewControllerLayoutGuide type="bottom" id="WSB-Dr-6bd"/>
@@ -1549,7 +1549,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Registration-->
         <scene sceneID="Tc4-Md-c2m">
             <objects>
-                <viewController id="y3W-hf-Nnx" customClass="AssistantRegister" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AssistantRegister" id="y3W-hf-Nnx" customClass="AssistantRegister" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tdm-Q7-lzB"/>
                         <viewControllerLayoutGuide type="bottom" id="j8y-Lm-1nX"/>
@@ -2208,7 +2208,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Doctor Change Password View Controller-->
         <scene sceneID="o8Y-Rt-xIe">
             <objects>
-                <viewController id="rur-Ft-b1n" customClass="DoctorChangePasswordViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorChangePasswordViewController" id="rur-Ft-b1n" customClass="DoctorChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="78I-IA-Nlc"/>
                         <viewControllerLayoutGuide type="bottom" id="U4J-id-t34"/>
@@ -2455,7 +2455,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Doctor Feed Back View Controller-->
         <scene sceneID="SCZ-ie-IVb">
             <objects>
-                <viewController id="VPs-cC-Lhg" customClass="DoctorFeedBackViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorFeedBackViewController" id="VPs-cC-Lhg" customClass="DoctorFeedBackViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uEg-eZ-ldk"/>
                         <viewControllerLayoutGuide type="bottom" id="mFW-Hk-Vec"/>
@@ -2484,7 +2484,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Manage Reminder View Controller-->
         <scene sceneID="gS7-WD-KbL">
             <objects>
-                <viewController id="wXD-7j-uQN" customClass="ManageReminderViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManageReminderViewController" id="wXD-7j-uQN" customClass="ManageReminderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zL0-7C-Hem"/>
                         <viewControllerLayoutGuide type="bottom" id="yGa-Ki-DCM"/>
@@ -2565,7 +2565,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Reminder Details View Controller-->
         <scene sceneID="58n-pE-SeO">
             <objects>
-                <viewController id="QGq-N5-obS" customClass="ReminderDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReminderDetailsViewController" id="QGq-N5-obS" customClass="ReminderDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jvl-Y3-Yj9"/>
                         <viewControllerLayoutGuide type="bottom" id="NEM-PN-Qah"/>
@@ -2644,7 +2644,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Doctor Add Treatment View Controller-->
         <scene sceneID="7hI-uy-RYY">
             <objects>
-                <viewController id="FXG-k3-ksu" customClass="DoctorAddTreatmentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorAddTreatmentViewController" id="FXG-k3-ksu" customClass="DoctorAddTreatmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TOn-aE-ch1"/>
                         <viewControllerLayoutGuide type="bottom" id="JTj-NV-iSM"/>
@@ -2751,7 +2751,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Doctor Detail Add Treatment View Controller-->
         <scene sceneID="Fz2-yg-vkm">
             <objects>
-                <viewController id="geO-SW-zYi" customClass="DoctorDetailAddTreatmentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorDetailAddTreatmentViewController" id="geO-SW-zYi" customClass="DoctorDetailAddTreatmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vsm-XY-ZoD"/>
                         <viewControllerLayoutGuide type="bottom" id="diO-jW-IAA"/>
@@ -2807,7 +2807,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Mark And Create Appointment View Controller-->
         <scene sceneID="Q3i-yY-OAx">
             <objects>
-                <viewController id="Eal-Yg-FZR" customClass="MarkAndCreateAppointmentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MarkAndCreateAppointmentViewController" id="Eal-Yg-FZR" customClass="MarkAndCreateAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xhv-cX-Wn9"/>
                         <viewControllerLayoutGuide type="bottom" id="Xbt-JV-oEb"/>
@@ -2998,7 +2998,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Day Week Month Appointment View Controller-->
         <scene sceneID="JDK-Ew-GO4">
             <objects>
-                <viewController id="EY5-vO-39x" customClass="DayWeekMonthAppointmentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DayWeekMonthAppointmentViewController" id="EY5-vO-39x" customClass="DayWeekMonthAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vUm-sD-uwk"/>
                         <viewControllerLayoutGuide type="bottom" id="Jk3-WX-sLt"/>
@@ -3276,7 +3276,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Manage Profile-->
         <scene sceneID="tPx-lR-CY8">
             <objects>
-                <viewController id="Exi-cC-6vI" customClass="DoctorSettingPageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorSettingPageView" id="Exi-cC-6vI" customClass="DoctorSettingPageView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hgA-uo-rKm"/>
                         <viewControllerLayoutGuide type="bottom" id="hEv-Xl-3vm"/>
@@ -3901,7 +3901,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Search Patient View Controller-->
         <scene sceneID="zKC-jd-nmy">
             <objects>
-                <viewController id="5kp-ev-dGM" customClass="SearchPatientViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchPatientViewController" id="5kp-ev-dGM" customClass="SearchPatientViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R97-sz-mpW"/>
                         <viewControllerLayoutGuide type="bottom" id="kLP-9T-5un"/>
@@ -4256,7 +4256,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="slot1TotalAppointmentCount:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="adO-nJ-2Vn"/>
+                                                        <action selector="doctorTotalAppointment:" destination="McF-sr-ViV" eventType="touchUpInside" id="ZjR-FX-neh"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udu-nW-rpZ">
@@ -4272,7 +4272,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="slot2TotalAppointmentCount:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="8Ge-sT-93b"/>
+                                                        <action selector="doctorTotalAppointment:" destination="McF-sr-ViV" eventType="touchUpInside" id="ZvV-jb-pWj"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqb-OX-omC">
@@ -4288,7 +4288,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="slot3TotalAppointmentCount:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="dJ2-Ds-FwP"/>
+                                                        <action selector="doctorTotalAppointment:" destination="McF-sr-ViV" eventType="touchUpInside" id="Mfl-on-GrD"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRA-Z8-aD1">
@@ -4798,7 +4798,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Patient Register View Controller-->
         <scene sceneID="lhL-VL-xEt">
             <objects>
-                <viewController id="lXI-Px-rx8" customClass="PatientRegisterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientRegisterViewController" id="lXI-Px-rx8" customClass="PatientRegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cNC-h8-aG0"/>
                         <viewControllerLayoutGuide type="bottom" id="5SI-JT-bKd"/>
@@ -5133,7 +5133,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Manage Assistant-->
         <scene sceneID="6H0-3l-UoJ">
             <objects>
-                <tableViewController id="ZOx-Yl-mse" customClass="ManageAssistant" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ManageAssistant" id="ZOx-Yl-mse" customClass="ManageAssistant" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="6tI-Ym-9oh">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5201,7 +5201,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Create Assistant-->
         <scene sceneID="oaa-Gb-Aih">
             <objects>
-                <viewController id="Vha-Gx-tDF" customClass="AddAssistantView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAssistantView" id="Vha-Gx-tDF" customClass="AddAssistantView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bne-bz-P6x"/>
                         <viewControllerLayoutGuide type="bottom" id="EeI-lu-Iiy"/>
@@ -5400,7 +5400,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Template Detail View Controller-->
         <scene sceneID="6KX-v1-qdT">
             <objects>
-                <viewController id="LaN-Wy-S9o" customClass="TemplateDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TemplateDetailViewController" id="LaN-Wy-S9o" customClass="TemplateDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MeJ-74-Qp6"/>
                         <viewControllerLayoutGuide type="bottom" id="eiJ-Zu-tXE"/>
@@ -5562,7 +5562,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Doctor Manage Finance View Controller-->
         <scene sceneID="9if-14-q9T">
             <objects>
-                <viewController id="CuX-X1-W1D" customClass="DoctorManageFinanceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorManageFinanceViewController" id="CuX-X1-W1D" customClass="DoctorManageFinanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j64-Yk-kNE"/>
                         <viewControllerLayoutGuide type="bottom" id="ZGM-wG-e2G"/>
@@ -5637,7 +5637,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Doctor Detail Manage Finance View Controller-->
         <scene sceneID="KOg-Pe-JXo">
             <objects>
-                <viewController id="U3c-JK-Gdv" customClass="DoctorDetailManageFinanceViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DoctorDetailManageFinanceViewController" id="U3c-JK-Gdv" customClass="DoctorDetailManageFinanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kP5-3K-HoE"/>
                         <viewControllerLayoutGuide type="bottom" id="pSI-Si-8Qe"/>
@@ -5961,7 +5961,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Manage Template-->
         <scene sceneID="NAN-IT-ThK">
             <objects>
-                <tableViewController id="zmp-eV-Mht" customClass="ManageTemplateTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ManageTemplateTableViewController" id="zmp-eV-Mht" customClass="ManageTemplateTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" id="sXB-by-Mab">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5996,7 +5996,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Detail Manage Template-->
         <scene sceneID="BFA-Lf-829">
             <objects>
-                <tableViewController id="OTs-NO-nPZ" customClass="DetailManageTemplate" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailManageTemplate" id="OTs-NO-nPZ" customClass="DetailManageTemplate" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" id="2bR-sZ-AF0">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6184,7 +6184,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Search Result Assistant View Controller-->
         <scene sceneID="rEO-Xi-Yw3">
             <objects>
-                <viewController id="txz-dY-uqp" customClass="SearchResultAssistantViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchResultAssistantViewController" id="txz-dY-uqp" customClass="SearchResultAssistantViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y1W-ow-UW6"/>
                         <viewControllerLayoutGuide type="bottom" id="sZa-zm-yi3"/>
@@ -6591,7 +6591,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Edit Template View-->
         <scene sceneID="0dw-dH-Zeq">
             <objects>
-                <viewController id="0Df-cG-S9M" customClass="EditTemplateView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditTemplateView" id="0Df-cG-S9M" customClass="EditTemplateView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vd5-NK-deV"/>
                         <viewControllerLayoutGuide type="bottom" id="aaC-8q-xFv"/>
@@ -6693,7 +6693,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Add New Fields-->
         <scene sceneID="qir-s1-by7">
             <objects>
-                <viewController id="Lek-vj-FLP" customClass="AddNewTemplateView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddNewTemplateView" id="Lek-vj-FLP" customClass="AddNewTemplateView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nmm-f2-riw"/>
                         <viewControllerLayoutGuide type="bottom" id="TYA-xn-tod"/>
@@ -7306,6 +7306,12 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-F4-NvH">
                                                     <rect key="frame" x="8" y="8" width="52" height="46"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbd-9Z-hln">
+                                                    <rect key="frame" x="68" y="8" width="249" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinic City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gM-IR-zxj">
                                                     <rect key="frame" x="68" y="33" width="249" height="19"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -7313,20 +7319,14 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xea-Xa-KKt">
-                                                    <rect key="frame" x="328" y="15" width="39" height="32"/>
-                                                    <state key="normal">
+                                                    <rect key="frame" x="334" y="20" width="21" height="22"/>
+                                                    <state key="normal" image="unchecked.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="deleteClinic:" destination="8X4-yh-bYH" eventType="touchUpInside" id="RQg-Uj-Jnr"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbd-9Z-hln">
-                                                    <rect key="frame" x="68" y="8" width="249" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -7873,7 +7873,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Symptoms History View Controller-->
         <scene sceneID="zZg-e5-GJv">
             <objects>
-                <viewController id="Vdv-gm-OsR" customClass="SymptomsHistoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SymptomsHistoryViewController" id="Vdv-gm-OsR" customClass="SymptomsHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eM1-eh-ptT"/>
                         <viewControllerLayoutGuide type="bottom" id="nfe-qE-mjX"/>
@@ -7902,7 +7902,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Medicine Prescribed History View Controller-->
         <scene sceneID="PEa-fm-MoB">
             <objects>
-                <viewController id="Lct-Xh-62U" customClass="MedicinePrescribedHistoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedicinePrescribedHistoryViewController" id="Lct-Xh-62U" customClass="MedicinePrescribedHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rrE-4c-pCG"/>
                         <viewControllerLayoutGuide type="bottom" id="vHR-fw-bW1"/>
@@ -7931,7 +7931,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Test Prescirbed History View Controller-->
         <scene sceneID="fGD-KM-c9P">
             <objects>
-                <viewController id="DB4-yq-gSg" customClass="TestPrescirbedHistoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestPrescirbedHistoryViewController" id="DB4-yq-gSg" customClass="TestPrescirbedHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xhv-nC-obF"/>
                         <viewControllerLayoutGuide type="bottom" id="5ru-ZM-Ggf"/>
@@ -7960,7 +7960,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Diagnosis History View Controller-->
         <scene sceneID="1Zz-J7-yNq">
             <objects>
-                <viewController id="FYZ-R1-Oqr" customClass="DiagnosisHistoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiagnosisHistoryViewController" id="FYZ-R1-Oqr" customClass="DiagnosisHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ecB-nG-HSK"/>
                         <viewControllerLayoutGuide type="bottom" id="WU9-QJ-HUs"/>
@@ -8492,7 +8492,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Upload Documents View Controller-->
         <scene sceneID="KdO-TN-4kj">
             <objects>
-                <viewController id="hgg-hU-vU3" customClass="UploadDocumentsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadDocumentsViewController" id="hgg-hU-vU3" customClass="UploadDocumentsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wEL-t0-Leo"/>
                         <viewControllerLayoutGuide type="bottom" id="FdU-4m-5j5"/>
@@ -8644,7 +8644,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <!--Medicine Prescribed Schedule View Controller-->
         <scene sceneID="xFr-7a-ahs">
             <objects>
-                <viewController id="5C2-cg-Vx5" customClass="MedicinePrescribedScheduleViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedicinePrescribedScheduleViewController" id="5C2-cg-Vx5" customClass="MedicinePrescribedScheduleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1bg-r1-wgs"/>
                         <viewControllerLayoutGuide type="bottom" id="YcX-eP-ebb"/>
@@ -9765,9 +9765,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
         <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MSt-Qf-dsC"/>
         <segue reference="uIc-gH-mMb"/>
-        <segue reference="rKr-LI-ZmT"/>
+        <segue reference="MSt-Qf-dsC"/>
+        <segue reference="llE-oE-nCp"/>
         <segue reference="wIh-Nq-vqk"/>
     </inferredMetricsTieBreakers>
 </document>
