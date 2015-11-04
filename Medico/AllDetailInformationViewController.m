@@ -51,9 +51,29 @@
     
 }
 
+-(void)fetchPatientReminder{
+    
+    
+    
+}
+
+-(void)fetchAllClinics{
+    
+}
+
 - (void)viewDidLoad {
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
+    
+    [self fetchPatientReminder];
+    
+    
+    
+    
+    
+    [self fetchAllClinics];
+    
+    
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -88,6 +108,7 @@
     self.collection.layer.borderWidth = 1.0f;
 
 
+    
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

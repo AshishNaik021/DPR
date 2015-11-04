@@ -10,6 +10,7 @@
 #import "DoctorLandingPageView.h"
 #import "DetailPatientProfileCell.h"
 #import "PatientProfileViewController.h"
+#import "PatientAppointmentsForDoctorViewController.h"
 
 @interface DetailPatientProfileViewController ()
 
@@ -34,6 +35,7 @@
 @synthesize patientSpecialityField;
 @synthesize locationTextView;
 @synthesize getAllClinic;
+@synthesize allAppointmentButton;
 
 
 - (IBAction)profileTab:(id)sender {
@@ -236,6 +238,8 @@
         [allergicTextView setText:@"Unknown"];
     }
     
+    [allAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"totalAppointment"]] forState:UIControlStateNormal];
+    
     [allergicTextView.layer setBorderWidth:1.0];
     [locationTextView.layer setBorderWidth:1.0];
 
@@ -434,5 +438,13 @@
     
 
     
+}
+- (IBAction)allAppointment:(id)sender {
+    PatientAppointmentsForDoctorViewController *appForDoctor =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAppointmentsForDoctorViewController"];
+    /* ------------------------------------------ */
+    appForDoctor.patientEmailIdForCallAPI = [_passPatientData valueForKey:@"emailID"];
+    appForDoctor.doctorIdForCallAPI = [_passPatientData valueForKey:@"doctorId"];
+    [self.navigationController pushViewController:appForDoctor animated:YES];
 }
 @end

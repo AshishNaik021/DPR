@@ -14,5 +14,6 @@
 @property IBOutlet UILabel *bookDateLabel;
 @property IBOutlet UILabel *visitTypeLabel;
 @property IBOutlet UIButton *detailsButton;
+- (IBAction)detail:(id)sender;
 
 @end

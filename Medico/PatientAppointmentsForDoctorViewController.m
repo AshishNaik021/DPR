@@ -9,6 +9,7 @@
 #import "PatientAppointmentsForDoctorViewController.h"
 #import "DoctorLandingPageView.h"
 #import "PatientAppointmentsForDoctorCell.h"
+#import "AllDetailInformationViewController.h"
 
 @interface PatientAppointmentsForDoctorViewController ()
 
@@ -87,7 +88,7 @@
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     
     patientAppointmentArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
-    
+    NSLog(@"dsfhgdfhgsfgfghsdfghjfg%@",patientAppointmentArr);
     
     
 }
@@ -159,6 +160,9 @@
         else{
             cell.visitTypeLabel.text = @"";
         }
+        
+        cell.detailsButton.tag =row;
+        [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];
     
     
       //  cell.bookDateLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"appointmentDate"];
@@ -195,11 +199,28 @@
         else{
             cell.visitTypeLabel.text = @"";
         }
+        
+        cell.detailsButton.tag =row;
+        [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];
 
     }
+    
+    
         
     return cell;
 }
+
+- (void)detail:(id)sender {
+    UIButton *senderButton = (UIButton *)sender;
+    int n = senderButton.tag;
+    
+    AllDetailInformationViewController *allInfo =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"AllDetailInformationViewController"];
+    /* ------------------------------------------ */
+    
+    [self.navigationController pushViewController:allInfo animated:YES];
+}
+
 
 
 -(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{

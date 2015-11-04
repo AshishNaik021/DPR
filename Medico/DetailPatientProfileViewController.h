@@ -37,6 +37,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *hidePatientDetailButton;
 - (IBAction)hidePatientDetail:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *allAppointmentButton;
+- (IBAction)allAppointment:(id)sender;
 
 
 
