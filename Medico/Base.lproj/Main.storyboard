@@ -4312,7 +4312,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="doctorTotalApp:" destination="ElX-Mr-2nC" eventType="touchUpInside" id="qct-S5-B6J"/>
+                                                        <action selector="doctorTotalAppointment:" destination="McF-sr-ViV" eventType="touchUpInside" id="zBK-gm-1HF"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

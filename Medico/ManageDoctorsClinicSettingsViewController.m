@@ -16,26 +16,76 @@
 @implementation ManageDoctorsClinicSettingsViewController
 @synthesize allClinicArr;
 
+-(void)fetchAllClinics{
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllClinics"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+
+}
+
+
 - (void)viewDidLoad {
     NSLog(@"ManageDoctorsClinicSettingsViewController.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Manage Clinics";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
       [[self navigationItem] setBackBarButtonItem:backButton];
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error = nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    allClinicArr = [json valueForKeyPath:@"ClinicList"];
+//    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
+//    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+//    NSError *error = nil;
+//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+//    allClinicArr = [json valueForKeyPath:@"ClinicList"];
+
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
-
+    
+    [self fetchAllClinics];
+    
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    allClinicArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
     
     
-    // Do any additional setup after loading the view.
+    NSLog(@"MY Clinics--------------%@",allClinicArr);
+    
+    
+    
+    
+    
+    
+    
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -51,14 +101,26 @@
     static NSString *CellIdentifier = @"TableCell";
     ManageDoctorsClinicSettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-   /*
-    //for(int count = 0;count<_arr.count;count++){
+
     int row = [indexPath row];
-    cell.clinicNameLabel.text = [[_dataArr objectAtIndex:row] objectForKey:@"Name"];
-    cell.clinicCityLabel.text = [[_dataArr objectAtIndex:row] objectForKey:@"Location"];
+    
+    if (![[[allClinicArr objectAtIndex:row] objectForKey:@"clinicName"] isEqual:[NSNull null]]){
+        cell.clinicNameLabel.text = [[allClinicArr objectAtIndex:row] objectForKey:@"clinicName"];
+    }
+    else{
+        cell.clinicNameLabel.text = @"";
+    }
+    
+    if (![[[allClinicArr objectAtIndex:row] objectForKey:@"location"] isEqual:[NSNull null]]){
+        cell.clinicCityLabel.text = [[allClinicArr objectAtIndex:row] objectForKey:@"location"];
+    }
+    else{
+        cell.clinicCityLabel.text = @"";
+    }
+    
+    
     cell.doctorImage.image = [UIImage imageNamed:@"manageClinics.png"];
-    */
+    
     return cell;
     
 }
