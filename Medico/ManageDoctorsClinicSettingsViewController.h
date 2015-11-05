@@ -12,6 +12,10 @@
 {
     IBOutlet UITableView *gridViewTable;
 }
+- (IBAction)remove:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *removeButton;
+- (IBAction)addNew:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addNewButton;
 @property IBOutlet NSArray *allClinicArr;
 @property BOOL *checkDelete;
 @end
