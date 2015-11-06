@@ -1981,6 +1981,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HYX-nD-mvb"/>
+                                    <segue destination="Exi-cC-6vI" kind="push" id="SSe-dA-hog"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-Ct-KuB">
