@@ -280,9 +280,12 @@
  */
 
 - (IBAction)doctorTotalAppointment:(id)sender {
+    NSLog(@"Entered doctorTotalAppointment");
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test" message:@"Test Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
     DayWeekMonthAppointmentViewController *detailAppointment = [self.storyboard instantiateViewControllerWithIdentifier:@"DayWeekMonthAppointmentViewController"];
+    NSLog(@"initialised");
     [self.navigationController pushViewController:detailAppointment animated:YES];
+    NSLog(@"Pushed");
 }
 @end

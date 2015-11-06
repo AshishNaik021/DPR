@@ -660,13 +660,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="bKw-Va-aIK">
                                 <rect key="frame" x="16" y="213" width="343" height="434"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Medico provides the highest quality concierge medicine services and assistance navigating today’s complex healthcare environment for any individual desiring personalized medical care from their physician.  
-
-Medico provides ongoing primary care and consultative services for adolescent, adult and geriatric patients. Medico provides constant access and encourages communication via whatever mode the patient is comfortable with, telephone, email, skype, or visits.
-
-Medico offers Executive Physicals for busy individuals or individuals who desire an effecient and cost-effective way to manage their health.  The physical is convenient and comprehensive and is done at Medico's office.
-
-</string>
+                                <string key="text">Medico provides the highest quality concierge medicine services and assistance navigating today’s complex healthcare environment for any individual desiring personalized medical care from their physician.
+                                    
+                                    Medico provides ongoing primary care and consultative services for adolescent, adult and geriatric patients. Medico provides constant access and encourages communication via whatever mode the patient is comfortable with, telephone, email, skype, or visits.
+                                    
+                                    Medico offers Executive Physicals for busy individuals or individuals who desire an effecient and cost-effective way to manage their health.  The physical is convenient and comprehensive and is done at Medico's office.
+                                    
+                                </string>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1963,6 +1963,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="searchDoctor:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="UDF-5v-DRW"/>
+                                    <segue destination="0gw-fd-a6R" kind="push" id="MSt-Qf-dsC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jt-jQ-xGH">
@@ -1981,7 +1982,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HYX-nD-mvb"/>
-                                    <segue destination="Exi-cC-6vI" kind="push" id="SSe-dA-hog"/>
+                                    <segue destination="Exi-cC-6vI" kind="push" id="kLt-Ed-yds"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-Ct-KuB">
@@ -2004,6 +2005,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="patientprofile:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="GCq-CD-Xwv"/>
+                                    <segue destination="9mz-sv-bNt" kind="push" id="ZL5-7i-LTL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-Up-uVU">
@@ -2014,6 +2016,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 </state>
                                 <connections>
                                     <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="h37-qt-qg7"/>
+                                    <segue destination="CuX-X1-W1D" kind="push" id="oBr-SS-aXl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpE-P4-vpi">
@@ -2022,6 +2025,10 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="SWE-qM-e3q"/>
+                                    <segue destination="VPs-cC-Lhg" kind="push" id="MVy-sD-QjG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-VQ-4ua">
                                 <rect key="frame" x="16" y="124" width="343" height="25"/>
@@ -2034,6 +2041,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="searchDoctor:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="8GF-mq-66g"/>
                                     <segue destination="5kp-ev-dGM" kind="push" id="mnE-v1-Aj7"/>
                                 </connections>
                             </button>
@@ -2044,7 +2052,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="axX-U5-kS0"/>
+                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="ISm-Bx-wfL"/>
+                                    <segue destination="McF-sr-ViV" kind="push" id="QaN-xs-pTX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qox-Eu-1WM">
@@ -2053,7 +2062,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchAppointment:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="QrG-0h-WF3"/>
+                                    <action selector="searchAppointment:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="XRk-Cj-2F7"/>
+                                    <segue destination="wXD-7j-uQN" kind="push" id="BRl-9X-2Wg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -7912,6 +7922,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" image="appointment.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchAppointment:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="N86-Ry-1mg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-o7-cbW">
                                 <rect key="frame" x="165" y="167" width="45" height="50"/>
@@ -7919,6 +7932,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="searchDoctor:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="3pf-fl-P3M"/>
                                     <segue destination="0gw-fd-a6R" kind="push" id="Enf-1y-7gY"/>
                                 </connections>
                             </button>
@@ -7927,6 +7941,9 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                 <state key="normal" image="searchHospital.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchClinic:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HTE-sA-jls"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iuk-ue-FAr">
                                 <rect key="frame" x="293" y="66" width="29" height="30"/>
@@ -7934,6 +7951,7 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="tjn-3J-KDs"/>
                                     <segue destination="Dtp-uY-QKh" kind="push" id="TZe-vp-yR2"/>
                                 </connections>
                             </button>
@@ -9923,7 +9941,8 @@ Medico offers Executive Physicals for busy individuals or individuals who desire
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wIh-Nq-vqk"/>
-        <segue reference="rKr-LI-ZmT"/>
         <segue reference="uIc-gH-mMb"/>
+        <segue reference="MSt-Qf-dsC"/>
+        <segue reference="rKr-LI-ZmT"/>
     </inferredMetricsTieBreakers>
 </document>
