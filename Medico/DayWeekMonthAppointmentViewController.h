@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DayWeekMonthAppointmentViewController : UIViewController
+@interface DayWeekMonthAppointmentViewController : UIViewController<NSURLConnectionDelegate>{
+    UIActivityIndicatorView *spinner;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *dayTabButton;
 @property (weak, nonatomic) IBOutlet UIButton *weekTabButton;

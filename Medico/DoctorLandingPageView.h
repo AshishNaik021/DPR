@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorLandingPageView : UIViewController
+@interface DoctorLandingPageView : UIViewController{
+    UIActivityIndicatorView *spinner;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *doctorNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;
@@ -33,5 +35,3 @@
 
 
 @end
-
-

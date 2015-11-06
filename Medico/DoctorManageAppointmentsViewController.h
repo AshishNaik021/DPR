@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "DoctorDetailManageAppointmentViewController.h"
 
-@interface DoctorManageAppointmentsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface DoctorManageAppointmentsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+    UIActivityIndicatorView *spinner;
+}
 
 @property IBOutlet NSMutableArray *jsonList;
 @property IBOutlet NSMutableArray *slot1Arr;

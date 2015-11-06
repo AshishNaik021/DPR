@@ -36,13 +36,13 @@
     self.navigationItem.hidesBackButton = YES;
     [super viewDidLoad];
     //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
-   // self.view.backgroundColor = [UIColor clearColor];
-//    UIGraphicsBeginImageContext(self.view.frame.size);
-//    [[UIImage imageNamed:@"background.png"] drawInRect:self.view.bounds];
-//    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    
-//    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    // self.view.backgroundColor = [UIColor clearColor];
+    //    UIGraphicsBeginImageContext(self.view.frame.size);
+    //    [[UIImage imageNamed:@"background.png"] drawInRect:self.view.bounds];
+    //    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    //    UIGraphicsEndImageContext();
+    //
+    //    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
     // Do any additional setup after loading the view.
 }
@@ -69,6 +69,7 @@
     return [emailTest evaluateWithObject:checkString];
 }
 - (IBAction)validate:(id)sender {
+    self.loginButton.enabled = NO;
     [self.passwordField resignFirstResponder];
     [self.emailField resignFirstResponder];
     
@@ -122,6 +123,8 @@
     [alert show];
     emailField.text = @"";
     passwordField.text = @"";
+    self.loginButton.enabled = YES;
+    
 }
 -(void)requestTimeOut{
     [spinner stopAnimating];
@@ -133,6 +136,8 @@
     [alert show];
     emailField.text = @"";
     passwordField.text = @"";
+    self.loginButton.enabled = YES;
+    
 }
 -(NSString *)getDoctorName{
     NSLog(@"GetName Method is called....");
@@ -261,6 +266,11 @@
 -(void)threadStartAnimating:(id)data
 {
     [spinner startAnimating];
+    self.loginButton.enabled = NO;
+    
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    self.loginButton.enabled = YES;
 }
 
 -(void)parseJSON : (NSString *)responseData{
@@ -285,19 +295,19 @@
         [spinner stopAnimating];
     }
     else if ([userType isEqualToString:@"Patient"]){
-//        DoctorLandingPageView *doctorHome =
-//        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-//        doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
-//        NSLog(@"email passing %@",doctorHome.doctorEmail);
-//        NSString *pName = [self getPatientName];
-//        doctorHome.doctorName = pName;
-//        NSLog(@"Return block doctor name:========%@",pName);
-//        [self.navigationController pushViewController:doctorHome animated:YES];
+        //        DoctorLandingPageView *doctorHome =
+        //        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        //        doctorHome.doctorEmail = [NSString stringWithFormat:emailField.text];
+        //        NSLog(@"email passing %@",doctorHome.doctorEmail);
+        //        NSString *pName = [self getPatientName];
+        //        doctorHome.doctorName = pName;
+        //        NSLog(@"Return block doctor name:========%@",pName);
+        //        [self.navigationController pushViewController:doctorHome animated:YES];
         [spinner stopAnimating];
-         //As Patient Page not not present, doctor page is displayed
-                    PatientLandingPageViewController *patientHome =
-                    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
-                    [self.navigationController pushViewController:patientHome animated:YES];
+        //As Patient Page not not present, doctor page is displayed
+        PatientLandingPageViewController *patientHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+        [self.navigationController pushViewController:patientHome animated:YES];
     }
     //    else {
     //        AssistantLandingPageView *assistantHome =

@@ -32,10 +32,20 @@
     [self.navigationController pushViewController:DoctorHome animated:YES];
     
 }
+-(void)viewWillAppear:(BOOL)animated{
+    //    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
+    //    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    //    spinner.color = [UIColor blueColor];
+    //    spinner.center=self.view.center;
+    //    [self.view addSubview:spinner];
+    //    [spinner startAnimating];
+    [self fetchAppointmentJson];
+}
 
 -(void)fetchAppointmentJson{
+    [spinner startAnimating];
     NSLog(@"-------------------------------------------------------");
-    NSLog(@"The fetchJson method is called.........");
+    NSLog(@"The fetchJson method is called.....DoctorManageAppointmentsViewController.m....");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -71,8 +81,6 @@
     //    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     //    NSLog(@"Data in Array==============%@",responseStr);
     //
-    
-    
 }
 
 
@@ -80,8 +88,14 @@
     NSLog(@"DoctorManageAppointmentsViewController.m");
     [super viewDidLoad];
     
-    [self fetchAppointmentJson];
-    
+    //[self fetchAppointmentJson];
+    //    [spinner stopAnimating];
+    //    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
+    //    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    //    spinner.color = [UIColor blueColor];
+    //    spinner.center=self.view.center;
+    //    [self.view addSubview:spinner];
+    //
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -121,6 +135,8 @@
      
      */
     // Do any additional setup after loading the view.
+    [spinner stopAnimating];
+    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -179,7 +195,7 @@
     }
     else
     {
-        [cell.slot1TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.slot1TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
     }
     
     if (![[slot2Arr objectAtIndex:row] isEqual:[NSNull null]]) {
@@ -189,7 +205,7 @@
     }
     else
     {
-        [cell.slot2TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.slot2TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
     }
     
     if (![[slot3Arr objectAtIndex:row] isEqual:[NSNull null]]) {
@@ -199,7 +215,7 @@
     }
     else
     {
-        [cell.slot3TotalAppointmentCountButton setTitle:@"" forState:UIControlStateNormal];
+        [cell.slot3TotalAppointmentCountButton setTitle:@"0" forState:UIControlStateNormal];
     }
     
     

@@ -65,7 +65,7 @@
 
 -(void)fetchCliniProfile{
     NSLog(@"-------------------------------------------------------");
-    NSLog(@"The fetchJson method is called.........");
+    NSLog(@"The fetchJson method is called....DoctorDetailManageAppointmentViewController.m.....");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -79,7 +79,7 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-  //  NSLog(@"Data from web Service in responceStr------%@",responseStr);
+    //  NSLog(@"Data from web Service in responceStr------%@",responseStr);
     /* ---------- Code for Writing response data into the file -------------- */
     
     NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/searchClinic.json"];
@@ -87,7 +87,7 @@
     [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
     
     /* ---------- End of Code for Writing response data into the file -------------- */
-
+    
 }
 
 - (void)viewDidLoad {
@@ -99,14 +99,14 @@
     NSLog(@"name Of Clinic:---------------%@",[_passDataArr valueForKey:@"totalAppointmentCount"]);
     
     if (![[_passDataArr valueForKey:@"totalAppointmentCount"] isEqual:[NSNull null]]) {
-            [totalAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[_passDataArr valueForKey:@"totalAppointmentCount"]] forState:UIControlStateNormal];
+        [totalAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[_passDataArr valueForKey:@"totalAppointmentCount"]] forState:UIControlStateNormal];
         
     }
     else
     {
         [totalAppointmentButton setTitle:@"0" forState:UIControlStateNormal];
     }
-
+    
     
     
     
@@ -129,112 +129,112 @@
     if (n > 1) {
         NSLog(@"More than 1 array object.....");
         NSLog(@"%@",clinicJson[0]);
-       // [profileEmailField setText:@"value"];
-   /*    if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
-
-           [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
-        }
-        else{
-            [profileEmailField setText:@""];
-        }
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
-            
-            profileLandlineField.text = [NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]];
-            NSLog(@"%@",profileLandlineField.text);
-        }
-        else{
-            [profileLandlineField setText:@""];
-        }
+        // [profileEmailField setText:@"value"];
+        /*    if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
+         
+         [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
+         }
+         else{
+         [profileEmailField setText:@""];
+         }
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
+         
+         profileLandlineField.text = [NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]];
+         NSLog(@"%@",profileLandlineField.text);
+         }
+         else{
+         [profileLandlineField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
+         
+         [profileMobileField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]]];
+         NSLog(@"%@",profileMobileField.text);
+         
+         }
+         else{
+         [profileMobileField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
+         
+         [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
+         }
+         else{
+         [profileLocationField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
+         
+         [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
+         }
+         else{
+         [profileMobileField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
+         
+         [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
+         }
+         else{
+         [profileServicesTextView setText:@""];
+         }
+         */
         
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
-            
-            [profileMobileField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]]];
-            NSLog(@"%@",profileMobileField.text);
-
-        }
-        else{
-            [profileMobileField setText:@""];
-        }
-        
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
-            
-            [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
-        }
-        else{
-            [profileLocationField setText:@""];
-        }
-        
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
-           
-            [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
-        }
-        else{
-            [profileMobileField setText:@""];
-        }
-        
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
-            
-            [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
-        }
-        else{
-            [profileServicesTextView setText:@""];
-        }
-        */
-      
         
     }
-
+    
     else{
         NSLog(@"array contains only one object....");
         NSLog(@"%@",clinicJson[0]);
-     /*   if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
-            
-            [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
-        }
-        else{
-            [profileEmailField setText:@""];
-        }
-
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
-            
-            [profileLandlineField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]]];
-        }
-        else{
-            [profileLandlineField setText:@""];
-        }
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
-            
-            [profileMobileField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]]];
-        }
-        else{
-            [profileMobileField setText:@""];
-        }
+        /*   if (![[[clinicJson objectAtIndex:0] objectForKey:@"email"] isEqual:[NSNull null]]){
+         
+         [profileEmailField setText:[[clinicJson objectAtIndex:0] objectForKey:@"email"]];
+         }
+         else{
+         [profileEmailField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"] isEqual:[NSNull null]]){
+         
+         [profileLandlineField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"landLineNumber"]]];
+         }
+         else{
+         [profileLandlineField setText:@""];
+         }
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"] isEqual:[NSNull null]]){
+         
+         [profileMobileField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"mobileNumber"]]];
+         }
+         else{
+         [profileMobileField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
+         
+         [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
+         }
+         else{
+         [profileLocationField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
+         
+         [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
+         }
+         else{
+         [profileMobileField setText:@""];
+         }
+         
+         if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
+         
+         [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
+         }
+         else{
+         [profileServicesTextView setText:@""];
+         }
+         */
         
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"location"] isEqual:[NSNull null]]){
-            
-            [profileLocationField setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"location"]]];
-        }
-        else{
-            [profileLocationField setText:@""];
-        }
-        
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"address"] isEqual:[NSNull null]]){
-            
-            [addressTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"address"]]];
-        }
-        else{
-            [profileMobileField setText:@""];
-        }
-        
-        if (![[[clinicJson objectAtIndex:0] objectForKey:@"speciality"] isEqual:[NSNull null]]){
-            
-            [profileServicesTextView setText:[NSString stringWithFormat:@"%@",[[clinicJson objectAtIndex:0] objectForKey:@"speciality"]]];
-        }
-        else{
-            [profileServicesTextView setText:@""];
-        }
-        */
-
     }
     
     
@@ -304,7 +304,7 @@
     
     
     
-
+    
     if (![_detailSlot1 isEqual:[NSNull null]]) {
         if (![[_detailSlot1 valueForKey:@"shiftTime"] isEqual:[NSNull null]]) {
             slot1TimeLabel.text = [_detailSlot1 valueForKey:@"shiftTime"];
@@ -335,13 +335,13 @@
     {
         slot3TimeLabel.text = @"";
     }
-
     
-   // slot1AppLabel.text = [_detailSlot1[0] objectForKey:@"shiftTime"];
-   // slot2AppLabel.text = [_detailSlot2[0] objectForKey:@"shiftTime"];
-   //  slot3AppLabel.text = [_detailSlot3[0] objectForKey:@"shiftTime"];
     
-  
+    // slot1AppLabel.text = [_detailSlot1[0] objectForKey:@"shiftTime"];
+    // slot2AppLabel.text = [_detailSlot2[0] objectForKey:@"shiftTime"];
+    //  slot3AppLabel.text = [_detailSlot3[0] objectForKey:@"shiftTime"];
+    
+    
     if (![_detailSlot1 isEqual:[NSNull null]]) {
         if (![[_detailSlot1 valueForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
             [slot1totalAppButton setTitle:[NSString stringWithFormat:@"%@",[_detailSlot1 valueForKey:@"appointmentCount"]] forState:UIControlStateNormal];
@@ -384,7 +384,7 @@
     {
         [slot1AppButton setTitle:@"" forState:UIControlStateNormal];
     }
-
+    
     if (![_detailSlot2 isEqual:[NSNull null]]) {
         if (![[_detailSlot2 valueForKey:@"appointmentCount"] isEqual:[NSNull null]]) {
             [slot2AppButton setTitle:[NSString stringWithFormat:@"%@",[_detailSlot2 valueForKey:@"appointmentCount"]] forState:UIControlStateNormal];
@@ -403,13 +403,13 @@
     {
         [slot3AppButton setTitle:@"" forState:UIControlStateNormal];
     }
-
-
+    
+    
     
     //[slot1totalAppButton setTitle:[_detailSlot1[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
-   // [slot2TotalAppButton setTitle:[_detailSlot2[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
-  //  [slot3TotalAppButton setTitle:[_detailSlot3[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
-
+    // [slot2TotalAppButton setTitle:[_detailSlot2[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
+    //  [slot3TotalAppButton setTitle:[_detailSlot3[0] objectForKey:@"appointmentCount"] forState:UIControlStateNormal];
+    
     profileContentView.hidden = TRUE;
     appointmentContentView.hidden = FALSE;
     self.appointmentTabButton.titleLabel.textColor = [UIColor blackColor];
@@ -426,10 +426,10 @@
     
     [profileServicesTextView.layer setBorderWidth:1.0];
     [addressTextView.layer setBorderWidth:1.0];
-
-
     
-
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -439,14 +439,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)profileTab:(id)sender {
     self.profileContentView.hidden = FALSE;
@@ -502,7 +502,7 @@
     else{
         [profileServicesTextView setText:@"Unknown"];
     }
-
+    
     
     
 }
@@ -512,7 +512,7 @@
     [self.profileTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [self.appointmentTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
-
+    
 }
 - (IBAction)hideDetails:(id)sender {
     DoctorManageAppointmentsViewController *manageApp =
