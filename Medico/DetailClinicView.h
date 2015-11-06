@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *mobileField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneNoField;
 @property (weak, nonatomic) IBOutlet UITextField *locationField;
+@property (weak, nonatomic) IBOutlet UITextView *locationTextView;
+
 @property (weak, nonatomic) IBOutlet UITextView *specialityField;
 @property (weak, nonatomic) IBOutlet UITextView *slotsField;
 @property (weak, nonatomic) IBOutlet UIButton *alwaysButton;
@@ -31,5 +33,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 - (IBAction)save:(id)sender;
 -(IBAction)homePage:(id)sender;
-
+@property IBOutlet NSArray *editClinicPassArr;
+@property IBOutlet NSString *passClinicName;
+@property IBOutlet NSString *passClinicId;
+@property IBOutlet NSMutableArray *CopyEditArr;
+@property IBOutlet NSNumber *clinicId;
 @end

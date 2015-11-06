@@ -8,6 +8,8 @@
 
 #import "ManageDoctorsClinicSettingsViewController.h"
 #import "ManageDoctorsClinicSettingsCell.h"
+#import "SearchClinicView.h"
+#import "CreateDoctorsClinicSettingsViewController.h"
 
 @interface ManageDoctorsClinicSettingsViewController ()
 
@@ -42,23 +44,30 @@
     
     /* ---------- End of Code for Writing response data into the file -------------- */
     
-
+    
 }
 
+-(IBAction)searchClinicFunction:(id)sender{
+    
+    SearchClinicView *searchClinic =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"SearchClinicView"];
+    [self.navigationController pushViewController:searchClinic animated:YES];
+    
+}
 
 - (void)viewDidLoad {
     NSLog(@"ManageDoctorsClinicSettingsViewController.m");
     [super viewDidLoad];
     self.navigationItem.title = @"Manage Clinics";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
-      [[self navigationItem] setBackBarButtonItem:backButton];
-//    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
-//    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-//    NSError *error = nil;
-//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-//    allClinicArr = [json valueForKeyPath:@"ClinicList"];
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    //    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"ClinicList" ofType:@"json"];
+    //    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+    //    NSError *error = nil;
+    //    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    //    allClinicArr = [json valueForKeyPath:@"ClinicList"];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchClinicFunction:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
@@ -102,7 +111,7 @@
     static NSString *CellIdentifier = @"TableCell";
     ManageDoctorsClinicSettingsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-
+    
     int row = [indexPath row];
     
     if (![[[allClinicArr objectAtIndex:row] objectForKey:@"clinicName"] isEqual:[NSNull null]]){
@@ -127,7 +136,7 @@
 }
 
 -(void)deleteClinic:(id)sender{
-   }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -135,13 +144,17 @@
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)addNew:(id)sender {
 }
-*/
-
+- (IBAction)remove:(id)sender {
+}
 @end

@@ -7,30 +7,38 @@
 //
 
 #import <UIKit/UIKit.h>
-BOOL nameRadioClicked;
-BOOL phoneRadioClicked;
-BOOL emailradioClicked;
 
-@interface SearchClinicView : UIViewController <UITableViewDataSource , UITableViewDelegate> {
-   
-    IBOutlet UITableView *gridTableView;
-    
-}
+
+@interface SearchClinicView : UIViewController
 
 @property IBOutlet NSArray *dataArr;
 
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
-@property (weak, nonatomic) IBOutlet UIButton *nameRadiobutton;
-@property (weak, nonatomic) IBOutlet UIButton *phoneRadioButton;
-@property (weak, nonatomic) IBOutlet UIButton *emailRadioButton;
-@property (weak, nonatomic) IBOutlet UIImageView *totalClinicImage;
-@property (weak, nonatomic) IBOutlet UILabel *totalClinicLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *pediatritionButton;
+- (IBAction)pediatrician:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *dentistButton;
+- (IBAction)dentist:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *generalPhysicianButton;
+- (IBAction)generalPhysician:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *accupunctureButton;
+- (IBAction)accupuncture:(id)sender;
+- (IBAction)dermatologist:(id)sender;
+
+- (IBAction)aurveda:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addClinicButton;
+- (IBAction)addClinic:(id)sender;
 
 - (IBAction)search:(id)sender;
-- (IBAction)nameRadio:(id)sender;
-- (IBAction)phoneRadio:(id)sender;
-- (IBAction)emailRadio:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *dermatologist;
+- (IBAction)homeopathy:(id)sender;
+
 -(IBAction)homePage:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *dermatologistButton;
+@property (weak, nonatomic) IBOutlet UIButton *gynecologistButton;
+- (IBAction)gynecologist:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *homeopathyButton;
+@property (weak, nonatomic) IBOutlet UIButton *ayurvedaButton;
 
 @end

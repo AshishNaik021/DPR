@@ -26,13 +26,26 @@
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)always:(id)sender {
 }
-*/
 
+- (IBAction)exceptCurrentSlot:(id)sender {
+}
+
+- (IBAction)exceptCurrentDay:(id)sender {
+}
+
+- (IBAction)confirmByDoctor:(id)sender {
+}
+- (IBAction)createClinic:(id)sender {
+}
 @end
