@@ -1981,6 +1981,7 @@
                                 </state>
                                 <connections>
                                     <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HYX-nD-mvb"/>
+                                    <segue destination="Exi-cC-6vI" kind="push" id="Wse-Ka-fsS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-Ct-KuB">
@@ -7427,13 +7428,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="bZo-s7-AO1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZo-s7-AO1">
                                 <rect key="frame" x="156" y="278" width="203" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-i6-ZYX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-i6-ZYX">
                                 <rect key="frame" x="156" y="343" width="203" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -7508,7 +7509,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="Hdk-CC-eUG">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdk-CC-eUG">
                                 <rect key="frame" x="156" y="210" width="203" height="57"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -7540,6 +7541,7 @@
                         <outlet property="createLocationTextView" destination="Hdk-CC-eUG" id="nyw-64-K4n"/>
                         <outlet property="createMobileField" destination="PUE-5S-wO4" id="9aj-3A-NfH"/>
                         <outlet property="createSlotTextView" destination="1B0-i6-ZYX" id="ozA-uA-UvT"/>
+                        <outlet property="createSpecialtyTextView" destination="bZo-s7-AO1" id="ELZ-uF-cX7"/>
                         <outlet property="exceptCurrentDayButton" destination="xsU-GS-T54" id="6Sk-pn-JbN"/>
                         <outlet property="exceptCurrentSlotButton" destination="m8p-zi-4jK" id="Rms-ap-BWn"/>
                     </connections>

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *createEmailField;
 @property (weak, nonatomic) IBOutlet UITextField *createMobileField;
 @property (weak, nonatomic) IBOutlet UITextField *createLandLineField;
+@property (weak, nonatomic) IBOutlet UITextView *createSpecialtyTextView;
 
 @property (weak, nonatomic) IBOutlet UITextView *createLocationTextView;
 @property (weak, nonatomic) IBOutlet UIButton *createClinicButton;
