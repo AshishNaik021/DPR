@@ -39,11 +39,11 @@
     //    spinner.center=self.view.center;
     //    [self.view addSubview:spinner];
     //    [spinner startAnimating];
-    [self fetchAppointmentJson];
+    //[self fetchAppointmentJson];
 }
 
 -(void)fetchAppointmentJson{
-    [spinner startAnimating];
+    //[spinner startAnimating];
     NSLog(@"-------------------------------------------------------");
     NSLog(@"The fetchJson method is called.....DoctorManageAppointmentsViewController.m....");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -88,7 +88,7 @@
     NSLog(@"DoctorManageAppointmentsViewController.m");
     [super viewDidLoad];
     
-    //[self fetchAppointmentJson];
+    [self fetchAppointmentJson];
     //    [spinner stopAnimating];
     //    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
     //    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
@@ -135,7 +135,7 @@
      
      */
     // Do any additional setup after loading the view.
-    [spinner stopAnimating];
+    //[spinner stopAnimating];
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

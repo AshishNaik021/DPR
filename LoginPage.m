@@ -69,7 +69,7 @@
     return [emailTest evaluateWithObject:checkString];
 }
 - (IBAction)validate:(id)sender {
-    self.loginButton.enabled = NO;
+    [self.view setUserInteractionEnabled:NO];
     [self.passwordField resignFirstResponder];
     [self.emailField resignFirstResponder];
     
@@ -83,6 +83,7 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
+        [self.view setUserInteractionEnabled:YES];
     } else{
         if (isEmailValid) {
             BOOL isConnected = [self checkInternetConnection];
@@ -97,6 +98,7 @@
                 [alert show];
                 emailField.text = @"";
                 passwordField.text = @"";
+                [self.view setUserInteractionEnabled:YES];
                 
             }
         }
@@ -107,6 +109,7 @@
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
+            [self.view setUserInteractionEnabled:YES];
         }
         
     }
@@ -123,7 +126,7 @@
     [alert show];
     emailField.text = @"";
     passwordField.text = @"";
-    self.loginButton.enabled = YES;
+    [self.view setUserInteractionEnabled:YES];
     
 }
 -(void)requestTimeOut{
@@ -136,7 +139,7 @@
     [alert show];
     emailField.text = @"";
     passwordField.text = @"";
-    self.loginButton.enabled = YES;
+    [self.view setUserInteractionEnabled:YES];
     
 }
 -(NSString *)getDoctorName{
@@ -266,7 +269,7 @@
 -(void)threadStartAnimating:(id)data
 {
     [spinner startAnimating];
-    self.loginButton.enabled = NO;
+    [self.view setUserInteractionEnabled:NO];
     
 }
 -(void)viewDidDisappear:(BOOL)animated{
