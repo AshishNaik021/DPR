@@ -25,6 +25,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *exceptCurrentSlotButton;
 @property (weak, nonatomic) IBOutlet UIButton *exceptCurrentDayButton;
 @property (weak, nonatomic) IBOutlet UIButton *confirmByDoctorButton;
+@property BOOL *alwaysRadioButton;
+@property BOOL *exceptSlotRadioButton;
+@property BOOL *exceptDayRadioButton;
+@property BOOL *confirmDoctorRadioButton;
+@property IBOutlet NSString *appointment;
 - (IBAction)always:(id)sender;
 - (IBAction)exceptCurrentSlot:(id)sender;
 - (IBAction)exceptCurrentDay:(id)sender;

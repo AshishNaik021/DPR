@@ -26,6 +26,11 @@
 @synthesize exceptCurrentSlotButton;
 @synthesize confirmByDoctorButton;
 @synthesize createSpecialtyTextView;
+@synthesize exceptDayRadioButton;
+@synthesize exceptSlotRadioButton;
+@synthesize alwaysRadioButton;
+@synthesize confirmDoctorRadioButton;
+@synthesize appointment;
 
 - (void)viewDidLoad {
     NSLog(@"CreateDoctorsClinicSettingsViewController.m");
@@ -33,6 +38,10 @@
     [createSpecialtyTextView.layer setBorderWidth:1.0];
     [createLocationTextView.layer setBorderWidth:1.0];
     [createSlotTextView.layer setBorderWidth:1.0];
+    exceptSlotRadioButton = NO;
+    exceptDayRadioButton = NO;
+    alwaysRadioButton = NO;
+    confirmDoctorRadioButton = NO;
     // Do any additional setup after loading the view.
 }
 
@@ -232,8 +241,8 @@
 
 
 
--(void)errorMessaggeCheckBox{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+-(void)errorMessaggeRadioBox{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please select slot for Clinic." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -253,15 +262,68 @@
  */
 
 - (IBAction)always:(id)sender {
+    if (!alwaysRadioButton) {
+        [alwaysButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        alwaysRadioButton = YES;
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        exceptDayRadioButton = NO;
+        exceptSlotRadioButton = NO;
+        confirmDoctorRadioButton = NO;
+        appointment =@"Always";
+    }
 }
 
 - (IBAction)exceptCurrentSlot:(id)sender {
+    if (!exceptSlotRadioButton) {
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        exceptSlotRadioButton = YES;
+        
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        exceptDayRadioButton = NO;
+        alwaysRadioButton = NO;
+        confirmDoctorRadioButton = NO;
+        appointment =@"Always Except Current Slot";
+        
+    }
+    
 }
 
 - (IBAction)exceptCurrentDay:(id)sender {
+    if (!exceptDayRadioButton) {
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        exceptDayRadioButton = YES;
+        
+        
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        exceptSlotRadioButton = NO;
+        alwaysRadioButton = NO;
+        confirmDoctorRadioButton = NO;
+        appointment = @"Always except Day Slot";
+    }
+    
 }
 
 - (IBAction)confirmByDoctor:(id)sender {
+    if (!confirmDoctorRadioButton) {
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        confirmDoctorRadioButton = YES;
+        
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        exceptDayRadioButton = NO;
+        exceptSlotRadioButton = NO;
+        alwaysRadioButton = NO;
+        appointment = @"Always Confirm By Doctor";
+    }
+    
+    
 }
 - (IBAction)createClinic:(id)sender {
     if ([createClinicNameField.text isEqualToString:@""]
@@ -274,18 +336,14 @@
         [self errorAllFieldsMandatory];
     }
     else{
-        /*  if (doctorchecked) {
-         NSLog(@"Checked and calling func");
-         [self callValidateAllFields];
-         }
-         else{
-         NSLog(@"Check button");
-         [self errorMessaggeCheckBox];
-         }
-         }*/
-        NSLog(@"In Else Part.......");
-        [self callValidateAllFields];
-        
+        if (alwaysRadioButton || exceptDayRadioButton || exceptSlotRadioButton || confirmDoctorRadioButton) {
+            NSLog(@"Checked and calling func");
+            [self callValidateAllFields];
+        }
+        else{
+            NSLog(@"Check button");
+            [self errorMessaggeRadioBox];
+        }
     }
     
 }
