@@ -15,6 +15,37 @@
 
 @implementation SearchResultAssistantViewController
 @synthesize assistantName = _assistantName;
+@synthesize assistantTotal;
+
+-(void)fetchSearchAssistants{
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/searchAssistants?name=%@",_assistantName];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+ 
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/searchAssistants.json"];
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+    
+}
+
 
 - (void)viewDidLoad {
     NSLog(@"SearchResultAssistantViewController.m");
@@ -24,7 +55,25 @@
     [[self navigationItem] setBackBarButtonItem:backButton];
     
     NSLog(@"The name of assistant is----------%@",_assistantName);
-
+    [self fetchSearchAssistants];
+    
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/searchAssistants.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    assistantTotal = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    
+    
+    NSLog(@"MY Assistants--------------%@",assistantTotal);
+    
+    
+    
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -34,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _assistantTotal.count;
+    return assistantTotal.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,16 +91,10 @@
     static NSString *CellIdentifier = @"TableCell";
     SearchAssistantCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
     
-    //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-   /* cell.assistantNameLabel.text = [[_assistantTotal objectAtIndex:row] objectForKey:@"Name"];
-    cell.assistantCityLabel.text = [[_assistantTotal objectAtIndex:row] objectForKey:@"Location"];
-    NSString *nm = [[NSString alloc]init];
-    nm = [[_assistantTotal objectAtIndex:row] objectForKey:@"Image"];
-    UIImage *img = [UIImage imageNamed:nm];
-    cell.assistantImage.image = img;*/
+    cell.assistantNameLabel.text = [[assistantTotal objectAtIndex:row] objectForKey:@"name"];
+    cell.assistantCityLabel.text = [[assistantTotal objectAtIndex:row] objectForKey:@"location"];
     return cell;
     
 }
