@@ -31,6 +31,9 @@
 @synthesize alwaysRadioButton;
 @synthesize confirmDoctorRadioButton;
 @synthesize appointment;
+@synthesize returnString;
+@synthesize dict;
+@synthesize emailid;
 
 - (void)viewDidLoad {
     NSLog(@"CreateDoctorsClinicSettingsViewController.m");
@@ -42,6 +45,8 @@
     exceptDayRadioButton = NO;
     alwaysRadioButton = NO;
     confirmDoctorRadioButton = NO;
+    emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    NSLog(@"email id for logged in user...%@",emailid);
     // Do any additional setup after loading the view.
 }
 
@@ -213,6 +218,8 @@
                           createLandLineField.text,
                           createLocationTextView.text,
                           createSpecialtyTextView.text,
+                          appointment,
+                          emailid,
                           @"false",
                           @"null",
                           nil];
@@ -223,11 +230,29 @@
                        @"landLineNumber",
                        @"location",
                        @"speciality",
+                       @"onlineAppointment",
+                       @"doctorId",
                        @"selected",
                        @"parameter",
                        nil];
         
-        NSDictionary *dict=[NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        
+        NSLog(@"The data in the dictionary is************************%@",dict);
+        
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                           options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                             error:&error];
+        
+        if (! jsonData) {
+            NSLog(@"Got an error: %@", error);
+        } else {
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            NSLog(@"jsonstring %@",jsonString);
+            [self addClinic];
+        }
+        
         /*   SMSConfirmationView *viewController =
          [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
          viewController.data = dict;
@@ -237,6 +262,106 @@
     else {
         NSLog(@"Data invalid");
     }
+}
+
+
+-(void)parseJSON : (NSString *)responseData{
+    NSString * jsonString = responseData;
+    NSLog(@"responseData %@",responseData);
+    NSLog(@"jsonString %@",jsonString);
+    if ([jsonString intValue]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 200;
+        [alert show];
+    }
+    else{
+        //NSStringEncoding  encoding;
+        NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError * error=nil;
+        NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+        NSLog(@"NSDictionery:%@",parsedData);
+        /*  NSString *message = [NSString stringWithFormat:[parsedData valueForKey:@"message"]];
+         //NSLog(@"userType:%@",[parsedData valueForKey:@"type"]);
+         if ([message isEqualToString:@"User Already Exist!"]) {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
+         message:@"User already exists. Please try to Login!"
+         delegate:self
+         cancelButtonTitle:@"OK"
+         otherButtonTitles:nil]; */
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
+                                                        message:@"Try again later!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        alert.tag = 201;
+        [alert show];
+        
+        
+        //    else if ([userType isEqualToString:@"Patient"]){
+        //        PatientLandingPageView *patientHome =
+        //        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
+        //        [self.navigationController pushViewController:patientHome animated:YES];
+        //    }
+        //    else {
+        //        AssistantLandingPageView *assistantHome =
+        //        [self.storyboard instantiateViewControllerWithIdentifier:@"AssistantHome"];
+        //        [self.navigationController pushViewController:assistantHome animated:YES];
+        //    }
+    }
+}
+
+-(void)addClinic{
+    //returnString = @"";
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    
+    NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/addClinic"];
+    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
+    
+    // NSString * params =[NSString stringWithFormat:@"\{\"bloodGroup\":\"%@\",\"cloudLoginId\":\"\",\"cloudLoginPassword\":\"\",\"cloudType\":\"3\",\"dateOfBirth\":\"%@\",\"emailID\":\"%@\",\"gender\":\"%@\",\"location\":\"%@\",\"mobileNumber\":\"%@\",\"name\":\"%@\",\"password\":\"%@\",\"speciality\":\"%@\"}",[_data objectForKey:@"bloodGroup"],[_data objectForKey:@"dateOfBirth"],[_data objectForKey:@"emailID"],[_data objectForKey:@"gender"],[_data objectForKey:@"location"],[_data objectForKey:@"mobileNumber"],[_data objectForKey:@"name"],[_data objectForKey:@"password"],[_data objectForKey:@"speciality"]];
+    
+    NSString *params = [NSString stringWithFormat:@"\{\"clinicName\":\"%@\",\"email\":\"%@\",\"mobileNumber\":\"%@\",\"landLineNumber\":\"%@\",\"location\":\"%@\",\"speciality\":\"%@\",\"onlineAppointment\":\"%@\",\"selected\":\"%@\",\"doctorId\":\"%@\",\"parameter\":\"%@\"}",[dict objectForKey:@"clinicName"],[dict objectForKey:@"email"],[dict objectForKey:@"mobileNumber"],[dict objectForKey:@"landLineNumber"],[dict objectForKey:@"location"],[dict objectForKey:@"speciality"],[dict objectForKey:@"onlineAppointment"],[dict objectForKey:@"selected"],[dict objectForKey:@"doctorId"],[dict objectForKey:@"parameter"]];
+    
+    NSLog(@"params %@",params);
+    [urlRequest setHTTPMethod:@"POST"];
+    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
+                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                           NSLog(@"Response:%@ Error : %@\n", response, error);
+                                                           //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           if(error == nil)
+                                                           {
+                                                               returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+                                                               NSLog(@"Data = %@",returnString);
+                                                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                               NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+                                                               if ([httpResponse statusCode] == 200) {
+                                                                   [self parseJSON:returnString];
+                                                               } else {
+                                                                   //[self reportError:[httpResponse statusCode]];
+                                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                                   message:@"An error occured. Please try again later."
+                                                                                                                  delegate:self
+                                                                                                         cancelButtonTitle:@"OK"
+                                                                                                         otherButtonTitles:nil];
+                                                                   [alert show];
+                                                                   
+                                                               }
+                                                           }
+                                                           else{
+                                                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                               message:@"An error occured. Please try again later."
+                                                                                                              delegate:self
+                                                                                                     cancelButtonTitle:@"OK"
+                                                                                                     otherButtonTitles:nil];
+                                                               [alert show];
+                                                           }
+                                                           
+                                                       }];
+    [dataTask resume];
+    
 }
 
 

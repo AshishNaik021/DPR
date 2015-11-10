@@ -19,7 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *createLocationTextView;
 @property (weak, nonatomic) IBOutlet UIButton *createClinicButton;
 - (IBAction)createClinic:(id)sender;
-
+@property NSString *returnString;
+@property NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UITextView *createSlotTextView;
 @property (weak, nonatomic) IBOutlet UIButton *alwaysButton;
 @property (weak, nonatomic) IBOutlet UIButton *exceptCurrentSlotButton;
@@ -35,5 +36,5 @@
 - (IBAction)exceptCurrentDay:(id)sender;
 - (IBAction)confirmByDoctor:(id)sender;
 
-
+@property NSString *emailid;
 @end
