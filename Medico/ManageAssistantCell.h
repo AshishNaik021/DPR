@@ -13,5 +13,7 @@
 @property IBOutlet UIButton *deleteAssistantButton;
 @property IBOutlet UILabel *assistantNameLabel;
 @property IBOutlet UILabel *assistantCityLabel;
+- (IBAction)deleteAssistant:(id)sender;
 @property IBOutlet UILabel *assistantProfileLabel;
+@property BOOL *deleteCheck;
 @end

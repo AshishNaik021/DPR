@@ -10,5 +10,6 @@
 
 @interface SearchResultAssistantViewController : UIViewController
 @property IBOutlet NSArray *assistantTotal;
+@property NSString *assistantName;
 
 @end

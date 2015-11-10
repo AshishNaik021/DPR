@@ -14,6 +14,7 @@
 @end
 
 @implementation SearchResultAssistantViewController
+@synthesize assistantName = _assistantName;
 
 - (void)viewDidLoad {
     NSLog(@"SearchResultAssistantViewController.m");
@@ -21,13 +22,9 @@
     self.navigationItem.title = @"Search Assistants";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"Assistant" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error = nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    _assistantTotal = [json valueForKeyPath:@"AssistantList"];
+    
+    NSLog(@"The name of assistant is----------%@",_assistantName);
 
-    // Do any additional setup after loading the view.
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -49,12 +46,12 @@
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-    cell.assistantNameLabel.text = [[_assistantTotal objectAtIndex:row] objectForKey:@"Name"];
+   /* cell.assistantNameLabel.text = [[_assistantTotal objectAtIndex:row] objectForKey:@"Name"];
     cell.assistantCityLabel.text = [[_assistantTotal objectAtIndex:row] objectForKey:@"Location"];
     NSString *nm = [[NSString alloc]init];
     nm = [[_assistantTotal objectAtIndex:row] objectForKey:@"Image"];
     UIImage *img = [UIImage imageNamed:nm];
-    cell.assistantImage.image = img;
+    cell.assistantImage.image = img;*/
     return cell;
     
 }

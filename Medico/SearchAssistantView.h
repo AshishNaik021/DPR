@@ -17,6 +17,10 @@
 
 @property IBOutlet NSArray *assistantTotal;
 -(IBAction)homePage:(id)sender;
+@property NSString *assistantName;
+@property (weak, nonatomic) IBOutlet UITextField *searchNameField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+- (IBAction)search:(id)sender;
 
 
 @end

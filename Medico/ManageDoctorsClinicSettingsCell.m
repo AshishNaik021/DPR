@@ -22,6 +22,7 @@
 
     // Configure the view for the selected state
 }
+
 -(IBAction)deleteClinic:(id)sender{
     if(!checkDelete){
         [deleteClinicButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];

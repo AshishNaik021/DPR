@@ -16,6 +16,7 @@
 @end
 
 @implementation ManageAssistant
+@synthesize getAssistantArr;
 
 
 -(void)searchPage:(id)sender{
@@ -35,34 +36,60 @@
     
 }
 
+-(void)fetchAllAssistants{
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+   NSString *emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    NSLog(@"email id for logged in user...%@",emailid);
+
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getDoctorAssistant?id=%@",emailid];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getDoctorAssistant.json"];
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+    
+}
+
 
 - (void)viewDidLoad {
     NSLog(@"ManageAssistant.m");
     [super viewDidLoad];
+    [self fetchAllAssistants];
+    
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getDoctorAssistant.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    getAssistantArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    
+    
+    NSLog(@"MY Assistants--------------%@",getAssistantArr);
+    
     
     self.tableView.backgroundColor = [ UIColor whiteColor ];//colorWithRed:(145/255.0) green:(207/255.0) blue:(79/255.0) alpha:1];
     
-    _assistantNameArr = @[@"Pooja Shah",
-                     @"Ankita Oza",
-                     @"Priya Sonone",
-                     @"Neha Dhawale"];
-    
-    _assistantCityArr = @[@"Pune, India",
-                          @"Pune, India",
-                          @"Mumbai, India",
-                          @"Nagpur, India"];
-    
-    _assistantProfileArr = @[@"Lab Assistent",
-                             @"Nurse",
-                             @"Nurse",
-                             @"Lab Assistent"];
-    
-   /* UIImage *assistantImage = [UIImage imageNamed: @"assistance.png"];
-    [_assistantImg setImage:assistantImage];
-    
-    UIImage *btnImage = [UIImage imageNamed:@"delete.png"];
-    [_deleteAssistantButton setImage:btnImage forState:UIControlStateNormal];
-    */
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchPage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
@@ -99,7 +126,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return _assistantNameArr.count;
+    return getAssistantArr.count;
 }
 
 
@@ -109,52 +136,29 @@
     ManageAssistantCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-   /*
+   
     int row = [indexPath row];
-    cell.assistantNameLabel.text = _assistantNameArr[row];
-    cell.assistantCityLabel.text = _assistantCityArr[row];
-    cell.assistantProfileLabel.text = _assistantProfileArr[row];
-    cell.assistantImg.image = [UIImage imageNamed:@"assistance.png"];
-    cell.deleteAssistantButton = _assistantNameArr[row];
-    */
+    
+    if (![[[getAssistantArr objectAtIndex:row] objectForKey:@"name"] isEqual:[NSNull null]]){
+        cell.assistantNameLabel.text = [[getAssistantArr objectAtIndex:row] objectForKey:@"name"];
+    }
+    else{
+        cell.assistantNameLabel.text = @"Unknown";
+    }
+    
+    if (![[[getAssistantArr objectAtIndex:row] objectForKey:@"location"] isEqual:[NSNull null]]){
+        cell.assistantCityLabel.text = [[getAssistantArr objectAtIndex:row] objectForKey:@"location"];
+    }
+    else{
+        cell.assistantCityLabel.text = @"Unknown";
+    }
+
+    
     return cell;
     
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

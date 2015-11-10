@@ -9,13 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ManageAssistant : UITableViewController
-@property IBOutlet NSArray *assistantNameArr;
-@property IBOutlet NSArray *assistantCityArr;
-@property IBOutlet NSArray *assistantProfileArr;
+@property IBOutlet NSArray *getAssistantArr;
 
 -(IBAction)searchPage:(id)sender;
 -(IBAction)homePage:(id)sender;
-
 
 
 @end
