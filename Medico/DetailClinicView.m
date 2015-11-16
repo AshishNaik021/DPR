@@ -60,7 +60,6 @@
     [super viewDidLoad];
     [specialityField.layer setBorderWidth:1.0];
     [locationTextView.layer setBorderWidth:1.0];
-    [slotsField.layer setBorderWidth:1.0];
     NSLog(@"nameeeeeeeeeeeeeeeeeeeeeee=%@",_passClinicName);
     NSLog(@"idddddd=%@",_passClinicId);
     
@@ -129,5 +128,7 @@
 - (IBAction)addLocation:(id)sender {
 }
 - (IBAction)save:(id)sender {
+}
+- (IBAction)addSlots:(id)sender {
 }
 @end

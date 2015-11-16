@@ -7,6 +7,7 @@
 //
 
 #import "CreateDoctorsClinicSettingsViewController.h"
+#import "AddSlotsForDoctorClinicSettingViewController.h"
 
 @interface CreateDoctorsClinicSettingsViewController ()
 
@@ -334,7 +335,7 @@
                                                            if(error == nil)
                                                            {
                                                                returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-                                                               NSLog(@"Data = %@",returnString);
+                                                               NSLog(@"Poonam Data = %@",returnString);
                                                                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                                NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
                                                                if ([httpResponse statusCode] == 200) {
@@ -364,7 +365,7 @@
     
 }
 
-
+//Return String....
 
 -(void)errorMessaggeRadioBox{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please select slot for Clinic." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -471,5 +472,11 @@
         }
     }
     
+}
+- (IBAction)addSlots:(id)sender {
+    AddSlotsForDoctorClinicSettingViewController *slots =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"AddSlotsForDoctorClinicSettingViewController"];
+    
+    [self.navigationController pushViewController:slots animated:YES];
 }
 @end

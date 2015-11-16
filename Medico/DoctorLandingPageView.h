@@ -11,6 +11,8 @@
 @interface DoctorLandingPageView : UIViewController{
     UIActivityIndicatorView *spinner;
 }
+@property (weak, nonatomic) IBOutlet UIButton *feedBackButton;
+- (IBAction)feedBck:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *doctorNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *settingButton;

@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneNoField;
 @property (weak, nonatomic) IBOutlet UITextField *locationField;
 @property (weak, nonatomic) IBOutlet UITextView *locationTextView;
+@property (weak, nonatomic) IBOutlet UIButton *addSlotsButton;
+- (IBAction)addSlots:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextView *specialityField;
 @property (weak, nonatomic) IBOutlet UITextView *slotsField;

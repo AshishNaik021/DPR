@@ -9,6 +9,9 @@
 #import "DoctorLandingPageView.h"
 #import "LoginPage.h"
 #import "DoctorManageAppointmentsViewController.h"
+#import "PatientProfileViewController.h"
+#import "DoctorManageFinanceViewController.h"
+#import "DoctorFeedBackViewController.h"
 
 @interface DoctorLandingPageView ()
 
@@ -83,12 +86,22 @@
 - (IBAction)searchClinic:(id)sender {
 }
 - (IBAction)patientprofile:(id)sender {
+    PatientProfileViewController *objDoctorManageAppointmentsViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"PatientProfileViewController"];
+    [self.navigationController pushViewController:objDoctorManageAppointmentsViewController animated:YES];
 }
 - (IBAction)manageFinance:(id)sender {
+    DoctorManageFinanceViewController *objDoctorManageAppointmentsViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"DoctorManageFinanceViewController"];
+    [self.navigationController pushViewController:objDoctorManageAppointmentsViewController animated:YES];
+    
 }
 - (IBAction)manageAppointments:(id)sender {
     // [spinner startAnimating];
     DoctorManageAppointmentsViewController *objDoctorManageAppointmentsViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"DoctorManageAppointmentsViewController"];
     [self.navigationController pushViewController:objDoctorManageAppointmentsViewController animated:YES];
+}
+- (IBAction)feedBck:(id)sender {
+    DoctorFeedBackViewController *objDoctorManageAppointmentsViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"DoctorFeedBackViewController"];
+    [self.navigationController pushViewController:objDoctorManageAppointmentsViewController animated:YES];
+    
 }
 @end

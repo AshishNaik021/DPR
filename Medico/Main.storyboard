@@ -2022,6 +2022,9 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="feedBck:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="rfU-Dj-lF6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-VQ-4ua">
                                 <rect key="frame" x="16" y="124" width="343" height="25"/>
@@ -2066,6 +2069,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="doctorNameLabel" destination="qBt-VQ-4ua" id="11s-Vj-SnI"/>
+                        <outlet property="feedBackButton" destination="GpE-P4-vpi" id="eBC-Ax-kth"/>
                         <outlet property="logoutButton" destination="PuM-Ct-KuB" id="x2h-8i-oaK"/>
                         <outlet property="manageAppointmentButton" destination="Ys5-4y-i5e" id="kcW-d0-DSb"/>
                         <outlet property="manageFinanceButton" destination="mcV-Up-uVU" id="ccV-qH-Lt8"/>
@@ -7144,12 +7148,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-X1-d62">
-                                <rect key="frame" x="156" y="347" width="203" height="57"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXD-Eo-bjK">
                                 <rect key="frame" x="16" y="446" width="19" height="20"/>
                                 <state key="normal" image="unchechRadio.png">
@@ -7245,6 +7243,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfj-YJ-nB0">
+                                <rect key="frame" x="156" y="340" width="154" height="36"/>
+                                <state key="normal" title="Add Slots">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSlots:" destination="cX5-dE-l2x" eventType="touchUpInside" id="W6i-HW-H4l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -7253,6 +7260,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="NameField" destination="mcO-e5-oaV" id="2f5-vt-Nc3"/>
+                        <outlet property="addSlotsButton" destination="hfj-YJ-nB0" id="yMc-Xz-aeZ"/>
                         <outlet property="alwaysButton" destination="nXD-Eo-bjK" id="zTg-nT-sVs"/>
                         <outlet property="currentDayButton" destination="Qld-6Z-PEp" id="0gf-TL-pqD"/>
                         <outlet property="currentSlotButton" destination="b74-Bx-f1m" id="9Iz-6S-WYk"/>
@@ -7264,13 +7272,670 @@
                         <outlet property="mobileField" destination="qWR-wo-o4M" id="x6t-68-ukb"/>
                         <outlet property="phoneNoField" destination="39d-b0-gTL" id="a6m-Ke-bue"/>
                         <outlet property="saveButton" destination="jAG-Kg-QCc" id="hFf-As-jrU"/>
-                        <outlet property="slotsField" destination="2HH-X1-d62" id="UNQ-uS-eml"/>
                         <outlet property="specialityField" destination="SvC-29-YrZ" id="AYN-5P-p89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-qN-HUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88.5" y="1852.5"/>
+        </scene>
+        <!--Add Slots For Doctor Clinic Setting View Controller-->
+        <scene sceneID="jhh-Kh-jjY">
+            <objects>
+                <viewController storyboardIdentifier="AddSlotsForDoctorClinicSettingViewController" id="UyL-nV-oEz" customClass="AddSlotsForDoctorClinicSettingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUX-28-Z7O"/>
+                        <viewControllerLayoutGuide type="bottom" id="vV4-vp-afd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S1I-D0-unI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Plw-xH-IIy">
+                                <rect key="frame" x="0.0" y="82" width="375" height="183"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhD-Xs-xcK">
+                                        <rect key="frame" x="12" y="42" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbS-Xf-ev4">
+                                        <rect key="frame" x="12" y="71" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phj-Qs-06v">
+                                        <rect key="frame" x="129" y="42" width="7" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pit-He-kDD">
+                                        <rect key="frame" x="129" y="71" width="7" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-5F-GRu">
+                                        <rect key="frame" x="60" y="42" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsH-tj-Frw">
+                                        <rect key="frame" x="140" y="42" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qyy-dh-rCm">
+                                        <rect key="frame" x="219" y="42" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvW-tr-Zaz">
+                                        <rect key="frame" x="60" y="71" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjR-Nl-rNk">
+                                        <rect key="frame" x="140" y="71" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaT-Rd-YO7">
+                                        <rect key="frame" x="219" y="71" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTQ-Ff-rF9">
+                                        <rect key="frame" x="12" y="105" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Mon:" destination="UyL-nV-oEz" eventType="touchUpInside" id="0hX-zc-DUv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufn-39-PVK">
+                                        <rect key="frame" x="12" y="141" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Fri:" destination="UyL-nV-oEz" eventType="touchUpInside" id="FOy-nq-2hI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWQ-PH-LHi">
+                                        <rect key="frame" x="41" y="105" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO6-6J-Jdj">
+                                        <rect key="frame" x="41" y="141" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agF-RV-tAq">
+                                        <rect key="frame" x="99" y="105" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Tue:" destination="UyL-nV-oEz" eventType="touchUpInside" id="SA7-Ry-j4G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoH-SI-ft5">
+                                        <rect key="frame" x="99" y="141" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Sat:" destination="UyL-nV-oEz" eventType="touchUpInside" id="HeZ-Vr-9Pu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQP-Ha-bAV">
+                                        <rect key="frame" x="128" y="105" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlU-5X-zxJ">
+                                        <rect key="frame" x="128" y="141" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vp-Wz-ZXm">
+                                        <rect key="frame" x="188" y="105" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Wed:" destination="UyL-nV-oEz" eventType="touchUpInside" id="TG5-bw-ZN1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqA-VL-6Aa">
+                                        <rect key="frame" x="188" y="141" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Sun:" destination="UyL-nV-oEz" eventType="touchUpInside" id="SHO-zN-FS8"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjD-wt-cn5">
+                                        <rect key="frame" x="217" y="105" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggx-Y0-HpW">
+                                        <rect key="frame" x="278" y="105" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Thu:" destination="UyL-nV-oEz" eventType="touchUpInside" id="x8n-aH-YDD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msS-yq-KXY">
+                                        <rect key="frame" x="307" y="105" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypZ-eF-G3Z">
+                                        <rect key="frame" x="217" y="141" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-9E-vwj">
+                                        <rect key="frame" x="336" y="42" width="21" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Add:" destination="UyL-nV-oEz" eventType="touchUpInside" id="Iz3-i5-Iaw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slot 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ub-yz-sHQ">
+                                        <rect key="frame" x="12" y="8" width="55" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY6-zg-xLX">
+                                        <rect key="frame" x="265" y="138" width="95" height="30"/>
+                                        <state key="normal" title="Select All">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOW-x4-8Yt">
+                                <rect key="frame" x="0.0" y="448" width="375" height="183"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKU-2I-AEo">
+                                        <rect key="frame" x="12" y="47" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shB-cq-uG6">
+                                        <rect key="frame" x="12" y="76" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtF-Ys-kWf">
+                                        <rect key="frame" x="129" y="47" width="7" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op9-I3-M84">
+                                        <rect key="frame" x="129" y="76" width="7" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-8J-7qS">
+                                        <rect key="frame" x="60" y="47" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSp-eP-UTp">
+                                        <rect key="frame" x="140" y="47" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GRL-uN-szf">
+                                        <rect key="frame" x="219" y="47" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YpR-8p-lKb">
+                                        <rect key="frame" x="60" y="76" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vEj-KR-ggO">
+                                        <rect key="frame" x="140" y="76" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-pq-B5Z">
+                                        <rect key="frame" x="219" y="76" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA6-My-NZv">
+                                        <rect key="frame" x="12" y="110" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Mon:" destination="UyL-nV-oEz" eventType="touchUpInside" id="tSp-Ve-LXW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-HC-F9X">
+                                        <rect key="frame" x="12" y="146" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Fri:" destination="UyL-nV-oEz" eventType="touchUpInside" id="hRH-zF-MDl"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUj-Dq-Qlb">
+                                        <rect key="frame" x="41" y="110" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiQ-GH-CKx">
+                                        <rect key="frame" x="41" y="146" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kz-zz-Bdq">
+                                        <rect key="frame" x="99" y="110" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Tue:" destination="UyL-nV-oEz" eventType="touchUpInside" id="jvH-y4-blS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22y-MI-FhL">
+                                        <rect key="frame" x="99" y="146" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Sat:" destination="UyL-nV-oEz" eventType="touchUpInside" id="VTg-iX-ybB"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osg-of-6H9">
+                                        <rect key="frame" x="128" y="110" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkY-Fy-TdN">
+                                        <rect key="frame" x="128" y="146" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0T-K0-TMM">
+                                        <rect key="frame" x="188" y="110" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Wed:" destination="UyL-nV-oEz" eventType="touchUpInside" id="lpE-g2-NsC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRI-Sl-m1a">
+                                        <rect key="frame" x="188" y="146" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Sun:" destination="UyL-nV-oEz" eventType="touchUpInside" id="AQl-xu-NPt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doy-2X-FFv">
+                                        <rect key="frame" x="217" y="110" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rV-eb-dH0">
+                                        <rect key="frame" x="278" y="110" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Thu:" destination="UyL-nV-oEz" eventType="touchUpInside" id="1d4-go-2lU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6j-L2-iiL">
+                                        <rect key="frame" x="307" y="110" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-df-URm">
+                                        <rect key="frame" x="217" y="146" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w15-et-PYT">
+                                        <rect key="frame" x="265" y="143" width="95" height="30"/>
+                                        <state key="normal" title="Select All">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ins-ka-TVK">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
+                                        <color key="backgroundColor" red="0.41568627450000001" green="0.71764705880000002" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWE-O8-1LW">
+                                        <rect key="frame" x="338" y="47" width="21" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot3Remove:" destination="UyL-nV-oEz" eventType="touchUpInside" id="Ngr-Mz-5az"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slot 3:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ8-u8-8Hg">
+                                        <rect key="frame" x="8" y="15" width="55" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-h0-tcN">
+                                <rect key="frame" x="0.0" y="264" width="375" height="183"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xl6-rg-u6C">
+                                        <rect key="frame" x="12" y="48" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-Vx-pb6">
+                                        <rect key="frame" x="12" y="77" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbR-wU-OAQ">
+                                        <rect key="frame" x="129" y="48" width="7" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnG-um-AaA">
+                                        <rect key="frame" x="129" y="77" width="7" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCM-hr-QQj">
+                                        <rect key="frame" x="60" y="48" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7y-P1-ftm">
+                                        <rect key="frame" x="140" y="48" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEo-Rq-Xp1">
+                                        <rect key="frame" x="219" y="48" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8g-os-7BJ">
+                                        <rect key="frame" x="60" y="77" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VUw-lo-dIa">
+                                        <rect key="frame" x="140" y="77" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pN-DC-2g5">
+                                        <rect key="frame" x="219" y="77" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-h8-D1e">
+                                        <rect key="frame" x="12" y="111" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Mon:" destination="UyL-nV-oEz" eventType="touchUpInside" id="OcW-4r-TKk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-xp-QJo">
+                                        <rect key="frame" x="12" y="147" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Fri:" destination="UyL-nV-oEz" eventType="touchUpInside" id="PWZ-E5-lAw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-P9-0oq">
+                                        <rect key="frame" x="41" y="111" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fri" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp9-Hn-0y6">
+                                        <rect key="frame" x="41" y="147" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX7-hv-TYy">
+                                        <rect key="frame" x="99" y="111" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Tue:" destination="UyL-nV-oEz" eventType="touchUpInside" id="lQj-Jm-INe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-L2-ebj">
+                                        <rect key="frame" x="99" y="147" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Sat:" destination="UyL-nV-oEz" eventType="touchUpInside" id="KH3-EE-8em"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-Iy-Jcb">
+                                        <rect key="frame" x="128" y="111" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ0-5Y-41O">
+                                        <rect key="frame" x="128" y="147" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy3-5e-6Il">
+                                        <rect key="frame" x="188" y="111" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Wed:" destination="UyL-nV-oEz" eventType="touchUpInside" id="arW-f4-Pap"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYk-O7-fK6">
+                                        <rect key="frame" x="188" y="147" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Sun:" destination="UyL-nV-oEz" eventType="touchUpInside" id="77X-mS-Jeh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp0-Bk-4n1">
+                                        <rect key="frame" x="217" y="111" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-8c-fjJ">
+                                        <rect key="frame" x="278" y="111" width="21" height="21"/>
+                                        <state key="normal" image="unchecked.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Thu:" destination="UyL-nV-oEz" eventType="touchUpInside" id="rIt-Nl-qvO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwg-ag-kAt">
+                                        <rect key="frame" x="307" y="111" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sun" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qy-0L-a0G">
+                                        <rect key="frame" x="217" y="147" width="40" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqc-fJ-0Qb">
+                                        <rect key="frame" x="265" y="144" width="95" height="30"/>
+                                        <state key="normal" title="Select All">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-2s-UJ3">
+                                        <rect key="frame" x="315" y="48" width="21" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Add:" destination="UyL-nV-oEz" eventType="touchUpInside" id="Y88-54-c9U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-az-Nb5">
+                                        <rect key="frame" x="344" y="48" width="21" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot2Remove:" destination="UyL-nV-oEz" eventType="touchUpInside" id="EFH-T8-JMC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-x5-r9j">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
+                                        <color key="backgroundColor" red="0.41568627450000001" green="0.71764705880000002" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slot 2:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lam-bR-kdI">
+                                        <rect key="frame" x="8" y="15" width="55" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="slot1AddButton" destination="ehm-9E-vwj" id="p8d-Ur-QUT"/>
+                        <outlet property="slot1ContentView" destination="Plw-xH-IIy" id="GCi-XQ-21A"/>
+                        <outlet property="slot1FriButton" destination="Ufn-39-PVK" id="By4-Xi-a06"/>
+                        <outlet property="slot1FromAmPmField" destination="Qyy-dh-rCm" id="1U7-C9-b4t"/>
+                        <outlet property="slot1FromHourField" destination="QvZ-5F-GRu" id="NcA-Bu-DnZ"/>
+                        <outlet property="slot1FromMinuteField" destination="jsH-tj-Frw" id="Q9j-SX-xTh"/>
+                        <outlet property="slot1MonButton" destination="XTQ-Ff-rF9" id="FIa-2t-Rdn"/>
+                        <outlet property="slot1SatButton" destination="QoH-SI-ft5" id="3pe-yN-NNJ"/>
+                        <outlet property="slot1SelectAllButton" destination="IY6-zg-xLX" id="QYo-v0-XIo"/>
+                        <outlet property="slot1SunButton" destination="zqA-VL-6Aa" id="R1R-LI-XC5"/>
+                        <outlet property="slot1ThuButton" destination="ggx-Y0-HpW" id="aDz-0a-zb7"/>
+                        <outlet property="slot1ToAmPmField" destination="TaT-Rd-YO7" id="rLt-SZ-S0N"/>
+                        <outlet property="slot1ToHourField" destination="xvW-tr-Zaz" id="ZO9-CF-JoN"/>
+                        <outlet property="slot1ToMinuteField" destination="bjR-Nl-rNk" id="way-U5-kIH"/>
+                        <outlet property="slot1TueButton" destination="agF-RV-tAq" id="ZaE-bm-HSH"/>
+                        <outlet property="slot1WedButton" destination="5vp-Wz-ZXm" id="xbB-19-nNj"/>
+                        <outlet property="slot2AddButton" destination="yqc-2s-UJ3" id="LfX-Oc-di1"/>
+                        <outlet property="slot2ContentView" destination="fiw-h0-tcN" id="eT5-JC-jDe"/>
+                        <outlet property="slot2FriButton" destination="kg9-xp-QJo" id="Re7-Fz-flW"/>
+                        <outlet property="slot2FromAmPmField" destination="uEo-Rq-Xp1" id="xtS-BJ-gR8"/>
+                        <outlet property="slot2FromHourField" destination="LCM-hr-QQj" id="AFH-ry-aAg"/>
+                        <outlet property="slot2FromMinuteField" destination="a7y-P1-ftm" id="aCM-Py-xlJ"/>
+                        <outlet property="slot2MonButton" destination="fN2-h8-D1e" id="FOL-5z-0pR"/>
+                        <outlet property="slot2RemoveButton" destination="i1q-az-Nb5" id="Luj-mk-vam"/>
+                        <outlet property="slot2SatButton" destination="3ke-L2-ebj" id="fbV-JT-bTm"/>
+                        <outlet property="slot2SelectAllButton" destination="Aqc-fJ-0Qb" id="XeO-hH-BUj"/>
+                        <outlet property="slot2SunButton" destination="iYk-O7-fK6" id="Oma-25-wUR"/>
+                        <outlet property="slot2ThuButton" destination="KbZ-8c-fjJ" id="2ll-dK-IsM"/>
+                        <outlet property="slot2ToAmPmField" destination="4pN-DC-2g5" id="rXe-dd-2YO"/>
+                        <outlet property="slot2ToHourField" destination="N8g-os-7BJ" id="M90-B1-Rsq"/>
+                        <outlet property="slot2ToMinuteField" destination="VUw-lo-dIa" id="ssK-Yv-chZ"/>
+                        <outlet property="slot2TueButton" destination="wX7-hv-TYy" id="02g-DJ-EH2"/>
+                        <outlet property="slot2WedButton" destination="sy3-5e-6Il" id="BPA-Pn-n3S"/>
+                        <outlet property="slot3ContentView" destination="DOW-x4-8Yt" id="ocF-Cx-82G"/>
+                        <outlet property="slot3FriButton" destination="Kjg-HC-F9X" id="i6f-Fo-7NP"/>
+                        <outlet property="slot3FromAmPmField" destination="GRL-uN-szf" id="Hix-wu-Qo2"/>
+                        <outlet property="slot3FromHourField" destination="P5v-8J-7qS" id="Jf1-PX-4OC"/>
+                        <outlet property="slot3FromMinuteField" destination="nSp-eP-UTp" id="quJ-rl-5ZB"/>
+                        <outlet property="slot3MonButton" destination="XA6-My-NZv" id="cG2-5O-Quh"/>
+                        <outlet property="slot3RemoveButton" destination="dWE-O8-1LW" id="6YD-TG-wkR"/>
+                        <outlet property="slot3SatButton" destination="22y-MI-FhL" id="Cm8-61-TiW"/>
+                        <outlet property="slot3SelectAllButton" destination="w15-et-PYT" id="ahX-yt-peW"/>
+                        <outlet property="slot3SunButton" destination="rRI-Sl-m1a" id="Ogm-X9-EY3"/>
+                        <outlet property="slot3ThuButton" destination="5rV-eb-dH0" id="yhw-KG-96t"/>
+                        <outlet property="slot3ToAmPmField" destination="PZe-pq-B5Z" id="Dk4-ur-hBz"/>
+                        <outlet property="slot3ToHourField" destination="YpR-8p-lKb" id="i8I-U8-8lL"/>
+                        <outlet property="slot3ToMinuteField" destination="vEj-KR-ggO" id="dqL-94-cyd"/>
+                        <outlet property="slot3TueButton" destination="5Kz-zz-Bdq" id="HhT-98-ZB8"/>
+                        <outlet property="slot3WedButton" destination="D0T-K0-TMM" id="1s0-Tb-2bK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhZ-Nt-El3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.5" y="2602.5"/>
         </scene>
         <!--Manage Doctors Clinic Settings View Controller-->
         <scene sceneID="ccN-oR-AGg">
@@ -7440,12 +8105,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-i6-ZYX">
-                                <rect key="frame" x="156" y="343" width="203" height="57"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-zn-dKN">
                                 <rect key="frame" x="16" y="442" width="19" height="20"/>
                                 <state key="normal" image="unchechRadio.png">
@@ -7531,6 +8190,15 @@
                                     <action selector="createClinic:" destination="aUT-lw-Xyb" eventType="touchUpInside" id="TSk-Q6-N2e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6K-qE-gEf">
+                                <rect key="frame" x="156" y="343" width="67" height="30"/>
+                                <state key="normal" title="Add Slots">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSlots:" destination="aUT-lw-Xyb" eventType="touchUpInside" id="yYN-Nt-fhg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -7538,6 +8206,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="addSlotsButton" destination="Z6K-qE-gEf" id="asV-Cl-goz"/>
                         <outlet property="alwaysButton" destination="HfH-zn-dKN" id="8Sd-Ao-FzX"/>
                         <outlet property="confirmByDoctorButton" destination="Pfx-dJ-he6" id="faT-Ao-4WJ"/>
                         <outlet property="createClinicButton" destination="shI-ah-pWG" id="LQ3-cL-Yyt"/>
@@ -7546,7 +8215,6 @@
                         <outlet property="createLandLineField" destination="iZb-EV-Pay" id="BE2-2o-d3m"/>
                         <outlet property="createLocationTextView" destination="Hdk-CC-eUG" id="nyw-64-K4n"/>
                         <outlet property="createMobileField" destination="PUE-5S-wO4" id="9aj-3A-NfH"/>
-                        <outlet property="createSlotTextView" destination="1B0-i6-ZYX" id="ozA-uA-UvT"/>
                         <outlet property="createSpecialtyTextView" destination="bZo-s7-AO1" id="ELZ-uF-cX7"/>
                         <outlet property="exceptCurrentDayButton" destination="xsU-GS-T54" id="6Sk-pn-JbN"/>
                         <outlet property="exceptCurrentSlotButton" destination="m8p-zi-4jK" id="Rms-ap-BWn"/>
