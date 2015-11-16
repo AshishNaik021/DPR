@@ -10,6 +10,7 @@
 
 @interface DayWeekMonthAppointmentViewController : UIViewController<NSURLConnectionDelegate>{
     UIActivityIndicatorView *spinner;
+    NSString *clinicIDNumber;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *dayTabButton;
@@ -34,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *weekDay6Button;
 @property (weak, nonatomic) IBOutlet UIButton *weekDay7Button;
 @property (weak, nonatomic) IBOutlet UITableView *weekTableView;
-
+@property (nonatomic,retain) NSString *clinicIDNumber;
 
 - (IBAction)dayTab:(id)sender;
 - (IBAction)weekTab:(id)sender;

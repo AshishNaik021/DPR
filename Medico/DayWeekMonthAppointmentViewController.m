@@ -20,7 +20,7 @@
 @synthesize weekTabButton;
 @synthesize monthContentView;
 @synthesize monthTabButton;
-
+@synthesize clinicIDNumber ;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -60,14 +60,16 @@
 -(void)displayAppointment{
     // [spinner startAnimating];
     if (!dayContentView.hidden && weekContentView.hidden && monthContentView.hidden) {
-        NSString *todaysDate =  [NSString stringWithFormat:[self todaysDate]];
-        NSLog(@"Day View displaed: %@",todaysDate);
+        NSString *objTodaysDateYYYYMMDD =  [NSString stringWithFormat:[self todaysDateYYYYMMDD]];
+        NSLog(@"Day View displaed: %@",objTodaysDateYYYYMMDD);
+        NSString *objTodaysDateDDMMYYYY = [NSString stringWithFormat:[self todaysDateDDMMYYYY]];
+        self.DayDateLabel.text = [NSString stringWithFormat:objTodaysDateDDMMYYYY];
         NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
         
         NSString *emailid = [[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInEmail"];
         NSString *clinicId = @"58";
-        NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllClinicsAppointment?doctorId=%@&clinicId=%@&appointmentDate=%@",emailid,clinicId,todaysDate];
+        NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllClinicsAppointment?doctorId=%@&clinicId=%@&appointmentDate=%@",emailid,clinicId,objTodaysDateYYYYMMDD];
         NSLog(@"url:%@",urlStr);
         NSURL *url = [NSURL URLWithString:urlStr];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -81,6 +83,7 @@
         int statusCode =[responseCode statusCode];
         NSLog(@"Response code:%@",statusCode);
         NSLog(@"Dictionry day=%@",dict);
+        NSLog(@"day view exit");
         // [spinner stopAnimating];
     }
     else if(!weekContentView.hidden && dayContentView.hidden && monthContentView.hidden){
@@ -105,10 +108,18 @@
  // Pass the selected object to the new view controller.
  }
  */
--(NSString *)todaysDate{
+-(NSString *)todaysDateYYYYMMDD{
     NSDate *todayDate = [NSDate date]; // get today date
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; // here we create NSDateFormatter object for change the Format of date..
     [dateFormatter setDateFormat:@"yyyy-MM-dd"]; //Here we can set the format which we need
+    NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];// here convert date in
+    NSLog(@"Today's formatted date is %@",convertedDateString);
+    return convertedDateString;
+}
+-(NSString *)todaysDateDDMMYYYY{
+    NSDate *todayDate = [NSDate date]; // get today date
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; // here we create NSDateFormatter object for change the Format of date..
+    [dateFormatter setDateFormat:@"dd-mm-yyyy"]; //Here we can set the format which we need
     NSString *convertedDateString = [dateFormatter stringFromDate:todayDate];// here convert date in
     NSLog(@"Today's formatted date is %@",convertedDateString);
     return convertedDateString;
