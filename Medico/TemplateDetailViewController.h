@@ -15,5 +15,8 @@
 }
 @property NSArray *subArr;
 
-
+@property (weak, nonatomic) IBOutlet UILabel *templateNameLabel;
+@property IBOutlet NSString *templateName;
+@property IBOutlet NSString *templateId;
+@property IBOutlet NSArray *templateDataArr;
 @end

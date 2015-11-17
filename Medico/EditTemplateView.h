@@ -13,6 +13,10 @@
     IBOutlet UITableView *gridTableView;
     
 }
-
+@property NSArray *editFieldArr;
+@property (weak, nonatomic) IBOutlet UIButton *addTemplateFieldButton;
+- (IBAction)addTemplateField:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *removeTemplateFieldButton;
+- (IBAction)removeTemplateField:(id)sender;
 
 @end

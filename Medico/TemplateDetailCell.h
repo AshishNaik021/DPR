@@ -12,5 +12,6 @@
 @property IBOutlet UILabel *nameLabel;
 @property IBOutlet UILabel *systemNameLabel;
 @property IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *defaultValueLabel;
 
 @end

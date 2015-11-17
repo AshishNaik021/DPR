@@ -9,15 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface AddNewTemplateView : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *systemNameField;
 @property (weak, nonatomic) IBOutlet UITextField *typeField;
 @property (weak, nonatomic) IBOutlet UITextField *displayNameField;
 @property (weak, nonatomic) IBOutlet UITextField *defaultValueField;
 @property (weak, nonatomic) IBOutlet UIButton *addFieldsButton;
 - (IBAction)addFields:(id)sender;
+@property NSString *returnString;
 
--(IBAction)homePage:(id)sender;
-
-
-
+@property IBOutlet NSString *passTemplateId;
+@property IBOutlet NSDictionary *dict;
 @end

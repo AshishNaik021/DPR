@@ -115,12 +115,12 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
-//    DetailManageTemplateForDoctorViewController *detailmanagetemplate = [segue destinationViewController];
-//    NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
-//    int row = [myIndex row];
-//    /*  detailmanagetemplate.DetailArr = @[_templateArr[row]]
-//     ;
-    // detailmanagetemplate.pid = myIndex.row;*/
+    DetailManageTemplateForDoctorViewController *detailmanagetemplate = [segue destinationViewController];
+    NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
+    
+        int row = [myIndex row];
+        
+     detailmanagetemplate.procedureName = [NSString stringWithFormat:@"%@",[[allProcedureArr objectAtIndex:row]objectForKey:@"procedureName"]];
      }
 }
 

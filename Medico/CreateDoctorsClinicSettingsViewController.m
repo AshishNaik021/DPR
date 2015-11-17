@@ -56,6 +56,7 @@
     [alert show];
 }
 
+
 -(void)errorMessageNameNotValid{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];

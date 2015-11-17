@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailManageTemplateForDoctorViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property IBOutlet NSString *procedureName;
-
+@property IBOutlet NSArray *templateArr;
 @end
