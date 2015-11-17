@@ -12,6 +12,7 @@
 #import "PatientProfileViewController.h"
 #import "DoctorManageFinanceViewController.h"
 #import "DoctorFeedBackViewController.h"
+#import "ManageReminderViewController.h"
 
 @interface DoctorLandingPageView ()
 
@@ -80,6 +81,8 @@
 }
 
 - (IBAction)searchAppointment:(id)sender {
+    ManageReminderViewController *objManageReminderViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"ManageReminderViewController"];
+    [self.navigationController pushViewController:objManageReminderViewController animated:YES];
 }
 - (IBAction)searchDoctor:(id)sender {
 }
