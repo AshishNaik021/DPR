@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *slot2AddButton;
 @property (weak, nonatomic) IBOutlet UIButton *slot2RemoveButton;
 @property (weak, nonatomic) IBOutlet UIButton *slot3RemoveButton;
+- (IBAction)slot1SelectAll:(id)sender;
+- (IBAction)slot2SelectAll:(id)sender;
+- (IBAction)slot3SelectAll:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *slot1SelectAllButton;
 @property (weak, nonatomic) IBOutlet UIButton *slot2SelectAllButton;
@@ -100,6 +103,9 @@
 - (IBAction)slot2Remove:(id)sender;
 - (IBAction)slot3Remove:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+
+- (IBAction)done:(id)sender;
 
 @property BOOL *slot1MonBool;
 @property BOOL *slot1TueBool;

@@ -96,89 +96,673 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view.
+
+    slot1ContentView.hidden = FALSE;
+    slot2ContentView.hidden = TRUE;
+    slot3ContentView.hidden = TRUE;
 }
 
+
+-(void)errorAllFieldsMandatory{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"All fields are mandatory." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+/*------------------------------------Slot1 Validations-------------------------------------------------*/
+
+-(void)errorMessageSlot1FromHourNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot1FromHr:(NSString *) slot1FromHr{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot1FromHr]){
+        [self errorMessageSlot1FromHourNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot1ToHourNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot1ToHr:(NSString *) slot1ToHr{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot1ToHr]){
+        [self errorMessageSlot1ToHourNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+
+-(void)errorMessageSlot1FromMinuteNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot1FromMin:(NSString *) slot1FromMin{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot1FromMin]){
+        [self errorMessageSlot1FromMinuteNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot1ToMinuteNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot1ToMin:(NSString *) slot1ToMin{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot1ToMin]){
+        [self errorMessageSlot1ToMinuteNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot1FromAmPmNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot1FromAmPm:(NSString *) slot1FromAmPm{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot1FromAmPm]){
+        [self errorMessageSlot1FromAmPmNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot1ToAmPmNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot1ToAmPm:(NSString *) slot1ToAmPm{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot1ToAmPm]){
+        [self errorMessageSlot1FromAmPmNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessaggeSlot1CheckBox{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------Slot2 Validations-------------------------------------------------*/
+
+-(void)errorMessageSlot2FromHourNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot2FromHr:(NSString *) slot2FromHr{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot2FromHr]){
+        [self errorMessageSlot2FromHourNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot2ToHourNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot2ToHr:(NSString *) slot2ToHr{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot2ToHr]){
+        [self errorMessageSlot2ToHourNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+
+-(void)errorMessageSlot2FromMinuteNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot2FromMin:(NSString *) slot2FromMin{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot2FromMin]){
+        [self errorMessageSlot2FromMinuteNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot2ToMinuteNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot2ToMin:(NSString *) slot2ToMin{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot2ToMin]){
+        [self errorMessageSlot2ToMinuteNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot2FromAmPmNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot2FromAmPm:(NSString *) slot2FromAmPm{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot2FromAmPm]){
+        [self errorMessageSlot2FromAmPmNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot2ToAmPmNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot2ToAmPm:(NSString *) slot2ToAmPm{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot2ToAmPm]){
+        [self errorMessageSlot2FromAmPmNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessaggeSlot2CheckBox{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------Slot3 Validations-------------------------------------------------*/
+
+-(void)errorMessageSlot3FromHourNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot3FromHr:(NSString *) slot3FromHr{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot3FromHr]){
+        [self errorMessageSlot3FromHourNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot3ToHourNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot3ToHr:(NSString *) slot3ToHr{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot3ToHr]){
+        [self errorMessageSlot3ToHourNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+
+-(void)errorMessageSlot3FromMinuteNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot3FromMin:(NSString *) slot3FromMin{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot3FromMin]){
+        [self errorMessageSlot3FromMinuteNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot3ToMinuteNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot3ToMin:(NSString *) slot3ToMin{
+    NSString *nameRegex = @"[0-9]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot3ToMin]){
+        [self errorMessageSlot3ToMinuteNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot3FromAmPmNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot3FromAmPm:(NSString *) slot3FromAmPm{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot3FromAmPm]){
+        [self errorMessageSlot3FromAmPmNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessageSlot3ToAmPmNotValid{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(BOOL)validateSlot3ToAmPm:(NSString *) slot3ToAmPm{
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:slot3ToAmPm]){
+        [self errorMessageSlot3FromAmPmNotValid];
+        return 0;
+    }
+    else
+        return 1;
+}
+
+-(void)errorMessaggeSlot3CheckBox{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+
+- (IBAction)done:(id)sender {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (IBAction)slot1Mon:(id)sender{
+    if(!slot1MonBool){
+        [slot1MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1MonBool = YES;
+    }
+    else if(slot1MonBool){
+        [slot1MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1MonBool = NO;
+        
+    }
+
     
 }
 - (IBAction)slot1Tue:(id)sender{
+    if(!slot1TueBool){
+        [slot1TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1TueBool = YES;
+    }
+    else if(slot1TueBool){
+        [slot1TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1TueBool = NO;
+        
+    }
     
 }
 - (IBAction)slot1Wed:(id)sender{
-    
+    if(!slot1WedBool){
+        [slot1WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1WedBool = YES;
+    }
+    else if(slot1WedBool){
+        [slot1WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1WedBool = NO;
+        
+    }
 }
 - (IBAction)slot1Thu:(id)sender{
-    
+    if(!slot1ThuBool){
+        [slot1ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1ThuBool = YES;
+    }
+    else if(slot1ThuBool){
+        [slot1ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1ThuBool = NO;
+        
+    }
 }
 - (IBAction)slot1Fri:(id)sender{
+    if(!slot1FriBool){
+        [slot1FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1FriBool = YES;
+    }
+    else if(slot1FriBool){
+        [slot1FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1FriBool = NO;
+        
+    }
     
 }
 - (IBAction)slot1Sat:(id)sender{
-    
+    if(!slot1SatBool){
+        [slot1SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1SatBool = YES;
+    }
+    else if(slot1SatBool){
+        [slot1SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1SatBool = NO;
+        
+    }
 }
 - (IBAction)slot1Sun:(id)sender{
-    
+    if(!slot1SunBool){
+        [slot1SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot1SunBool = YES;
+    }
+    else if(slot1SunBool){
+        [slot1SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot1SunBool = NO;
+        
+    }
 }
 
 
 - (IBAction)slot2Mon:(id)sender{
+    if(!slot2MonBool){
+        [slot2MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2MonBool = YES;
+    }
+    else if(slot2MonBool){
+        [slot2MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2MonBool = NO;
+        
+    }
     
 }
 - (IBAction)slot2Tue:(id)sender{
+    if(!slot2TueBool){
+        [slot2TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2TueBool = YES;
+    }
+    else if(slot2TueBool){
+        [slot2TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2TueBool = NO;
+        
+    }
     
 }
 - (IBAction)slot2Wed:(id)sender{
+    if(!slot2WedBool){
+        [slot2WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2WedBool = YES;
+    }
+    else if(slot2WedBool){
+        [slot2WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2WedBool = NO;
+        
+    }
     
 }
 - (IBAction)slot2Thu:(id)sender{
     
+    if(!slot2ThuBool){
+        [slot2ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2ThuBool = YES;
+    }
+    else if(slot2ThuBool){
+        [slot2ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2ThuBool = NO;
+        
+    }
 }
 - (IBAction)slot2Fri:(id)sender{
-    
+    if(!slot2FriBool){
+        [slot2FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2FriBool = YES;
+    }
+    else if(slot2FriBool){
+        [slot2FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2FriBool = NO;
+        
+    }
+
 }
 - (IBAction)slot2Sat:(id)sender{
-    
+    if(!slot2SatBool){
+        [slot2SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2SatBool = YES;
+    }
+    else if(slot2SatBool){
+        [slot2SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2SatBool = NO;
+        
+    }
 }
 - (IBAction)slot2Sun:(id)sender{
-    
+    if(!slot2SunBool){
+        [slot2SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot2SunBool = YES;
+    }
+    else if(slot2SunBool){
+        [slot2SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot2SunBool = NO;
+        
+    }
 }
 
 
 - (IBAction)slot3Mon:(id)sender{
-    
+    if(!slot3MonBool){
+        [slot3MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3MonBool = YES;
+    }
+    else if(slot3MonBool){
+        [slot3MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3MonBool = NO;
+        
+    }
 }
 - (IBAction)slot3Tue:(id)sender{
-    
+    if(!slot3TueBool){
+        [slot3TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3TueBool = YES;
+    }
+    else if(slot3TueBool){
+        [slot3TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3TueBool = NO;
+        
+    }
 }
 - (IBAction)slot3Wed:(id)sender{
-    
+    if(!slot3WedBool){
+        [slot3WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3WedBool = YES;
+    }
+    else if(slot3WedBool){
+        [slot3WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3WedBool = NO;
+        
+    }
 }
 - (IBAction)slot3Thu:(id)sender{
-    
+    if(!slot3ThuBool){
+        [slot3ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3ThuBool = YES;
+    }
+    else if(slot3ThuBool){
+        [slot3ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3ThuBool = NO;
+        
+    }
+
 }
 - (IBAction)slot3Fri:(id)sender{
-    
+    if(!slot3FriBool){
+        [slot3FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3FriBool = YES;
+    }
+    else if(slot3FriBool){
+        [slot3FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3FriBool = NO;
+        
+    }
+
 }
 - (IBAction)slot3Sat:(id)sender{
-    
+    if(!slot3SatBool){
+        [slot3SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3SatBool = YES;
+    }
+    else if(slot3SatBool){
+        [slot3SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3SatBool = NO;
+        
+    }
 }
 - (IBAction)slot3Sun:(id)sender{
-    
+    if(!slot3SunBool){
+        [slot3SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        slot3SunBool = YES;
+    }
+    else if(slot3SunBool){
+        [slot3SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        slot3SunBool = NO;
+        
+    }
 }
 
 
 - (IBAction)slot1Add:(id)sender{
     
+    slot2ContentView.hidden = FALSE;
+    
 }
 - (IBAction)slot2Add:(id)sender{
+    
+    slot3ContentView.hidden = FALSE;
     
 }
 - (IBAction)slot2Remove:(id)sender{
     
+    slot2ContentView.hidden = TRUE;
+    
 }
 - (IBAction)slot3Remove:(id)sender{
+    slot3ContentView.hidden = TRUE;
     
 }
 
@@ -197,5 +781,90 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)slot1SelectAll:(id)sender {
+    if (!slot1SelectAllBool) {
+        
+        [slot1MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1SelectAllButton setTitle:@"DeSelect All" forState:UIControlStateNormal];
+        slot1SelectAllBool = YES;
+    }
+    
+    else if(slot1SelectAllBool){
+        [slot1MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1SelectAllButton setTitle:@"Select All" forState:UIControlStateNormal];
+        slot1SelectAllBool = NO;
+    }
+    
+
+}
+
+- (IBAction)slot2SelectAll:(id)sender {
+    if (!slot2SelectAllBool) {
+        
+        [slot2MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2SelectAllButton setTitle:@"DeSelect All" forState:UIControlStateNormal];
+        slot2SelectAllBool = YES;
+    }
+    
+    else if(slot2SelectAllBool){
+        [slot2MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2SelectAllButton setTitle:@"Select All" forState:UIControlStateNormal];
+        slot2SelectAllBool = NO;
+    }
+
+}
+
+- (IBAction)slot3SelectAll:(id)sender {
+    if (!slot3SelectAllBool) {
+        
+        [slot3MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3SelectAllButton setTitle:@"DeSelect All" forState:UIControlStateNormal];
+        slot3SelectAllBool = YES;
+    }
+    
+    else if(slot3SelectAllBool){
+        [slot3MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3SelectAllButton setTitle:@"Select All" forState:UIControlStateNormal];
+        slot3SelectAllBool = NO;
+    }
+
+}
 
 @end
