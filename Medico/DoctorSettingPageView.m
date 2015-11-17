@@ -8,12 +8,17 @@
 
 #import "DoctorSettingPageView.h"
 #import "DoctorLandingPageView.h"
+#import "ManageTemplateForDoctorViewController.h"
 
 @interface DoctorSettingPageView ()
 
 @end
 
 @implementation DoctorSettingPageView
+@synthesize manageTemplatebutton;
+@synthesize manageAssistantButton;
+@synthesize manageClinicsButton;
+@synthesize manageProfileButton;
 
 - (IBAction)manageProfile:(id)sender {
 }
@@ -34,7 +39,7 @@
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
-
+    
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"MyDemo" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
@@ -42,7 +47,7 @@
     NSArray *arr = [json valueForKeyPath:@"demo"];
     self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
     
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -52,21 +57,26 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)manageAssistant:(id)sender {
 }
 - (IBAction)manageTemplate:(id)sender {
+    ManageTemplateForDoctorViewController *template =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ManageTemplateForDoctorViewController"];
+    [self.navigationController pushViewController:template animated:YES];
 }
 - (IBAction)manageClinics:(id)sender {
 }
 - (IBAction)smsNotification:(id)sender {
 }
 @end
+
+

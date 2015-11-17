@@ -351,6 +351,10 @@
 		187A0C851BC68B5D003AC5D9 /* SearchClinicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */; };
 		188B90C11BEBA363003F425F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B90C01BEBA363003F425F /* Main.storyboard */; };
 		188B90C41BEBA473003F425F /* SearchResultClinicForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B90C31BEBA473003F425F /* SearchResultClinicForDoctorViewController.m */; };
+		189086541BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */; };
+		189086551BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */; };
+		189086561BFAF5D300669969 /* ManageTemplateForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189086511BFAF5D300669969 /* ManageTemplateForDoctorCell.m */; };
+		189086571BFAF5D300669969 /* ManageTemplateForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189086531BFAF5D300669969 /* ManageTemplateForDoctorViewController.m */; };
 		1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */; };
 		1897CD991BCCC5570043F0FD /* PatientSettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */; };
 		1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */; };
@@ -840,6 +844,14 @@
 		188B90C01BEBA363003F425F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		188B90C21BEBA473003F425F /* SearchResultClinicForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultClinicForDoctorViewController.h; sourceTree = "<group>"; };
 		188B90C31BEBA473003F425F /* SearchResultClinicForDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultClinicForDoctorViewController.m; sourceTree = "<group>"; };
+		1890864C1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplateForDoctorCell.h; sourceTree = "<group>"; };
+		1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplateForDoctorCell.m; sourceTree = "<group>"; };
+		1890864E1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplateForDoctorViewController.h; sourceTree = "<group>"; };
+		1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplateForDoctorViewController.m; sourceTree = "<group>"; };
+		189086501BFAF5D300669969 /* ManageTemplateForDoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateForDoctorCell.h; sourceTree = "<group>"; };
+		189086511BFAF5D300669969 /* ManageTemplateForDoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateForDoctorCell.m; sourceTree = "<group>"; };
+		189086521BFAF5D300669969 /* ManageTemplateForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateForDoctorViewController.h; sourceTree = "<group>"; };
+		189086531BFAF5D300669969 /* ManageTemplateForDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateForDoctorViewController.m; sourceTree = "<group>"; };
 		1895A1DA1BC8CBF100C8647D /* DetailPatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPatientProfileViewController.h; sourceTree = "<group>"; };
 		1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPatientProfileViewController.m; sourceTree = "<group>"; };
 		1897CD971BCCC5570043F0FD /* PatientSettingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSettingPageViewController.h; sourceTree = "<group>"; };
@@ -1249,6 +1261,14 @@
 				18C7DB011BC798E6005B93A9 /* Dental.json */,
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
+				189086521BFAF5D300669969 /* ManageTemplateForDoctorViewController.h */,
+				189086531BFAF5D300669969 /* ManageTemplateForDoctorViewController.m */,
+				189086501BFAF5D300669969 /* ManageTemplateForDoctorCell.h */,
+				189086511BFAF5D300669969 /* ManageTemplateForDoctorCell.m */,
+				1890864E1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.h */,
+				1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */,
+				1890864C1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.h */,
+				1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */,
 				184F01D61BCE593800913B23 /* SearchResultAssistantViewController.h */,
 				184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */,
 				18C7DB091BC7AA75005B93A9 /* SearchAssistantView.h */,
@@ -1942,6 +1962,7 @@
 				186E579F1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.m in Sources */,
 				183D36D21BE338B5004328F9 /* DoctorDetailManageFinanceViewController.m in Sources */,
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
+				189086571BFAF5D300669969 /* ManageTemplateForDoctorViewController.m in Sources */,
 				1854A2131BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,
 				185D86FB1BD75F93003B357C /* SearchPatientViewController.m in Sources */,
@@ -1981,6 +2002,7 @@
 				184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */,
 				188B90C41BEBA473003F425F /* SearchResultClinicForDoctorViewController.m in Sources */,
 				187330391BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m in Sources */,
+				189086541BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m in Sources */,
 				18C7DAFA1BC78767005B93A9 /* DetailClinicView.m in Sources */,
 				189EDB8B1BD6121100AA9B96 /* BookAppointmentViewController.m in Sources */,
 				1842F3141BC38F970055597E /* ManageAssistant.m in Sources */,
@@ -1993,11 +2015,13 @@
 				1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */,
 				185D86FE1BD78C97003B357C /* AddPatientViewController.m in Sources */,
 				185D87111BD7B4FC003B357C /* DoctorManageAppointmentCell.m in Sources */,
+				189086561BFAF5D300669969 /* ManageTemplateForDoctorCell.m in Sources */,
 				1842F36B1BC3E7600055597E /* EditTemplateDetailView.m in Sources */,
 				1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */,
 				182394E51BBD0DCE00D97366 /* main.m in Sources */,
 				180CF3381BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m in Sources */,
 				183D408A1BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m in Sources */,
+				189086551BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m in Sources */,
 				1842F3681BC3E0530055597E /* TemplateDetailViewCell.m in Sources */,
 				1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,

@@ -33,7 +33,9 @@
 - (IBAction)manageAppointments:(id)sender;
 @property (nonatomic, retain) NSString * doctorName;
 @property (nonatomic, retain) NSString * doctorEmail;
+- (IBAction)searchPatient:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *searchPatientButton;
 
 
 @end

@@ -107,4 +107,6 @@
     [self.navigationController pushViewController:objDoctorManageAppointmentsViewController animated:YES];
     
 }
+- (IBAction)searchPatient:(id)sender {
+}
 @end
