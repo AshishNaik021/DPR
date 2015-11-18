@@ -50,7 +50,7 @@
     
     //reminderArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
     [self fetchNotification];
-    
+    [self scheduleNotificationForDate];
 }
 -(void)fetchNotification{
     NSLog(@"fetchNotification Method is called....");
@@ -126,8 +126,19 @@
         cliniInformation.detailReminderArray = @[reminderArr[row]];
     }
 }
-
-
+//test for alarm
+- (void)scheduleNotificationForDate
+{
+    
+    NSLog(@"alarm");
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil) return;
+    NSDate *fireTime = [[NSDate date] addTimeInterval:10]; // adds 10 secs
+    localNotif.fireDate = fireTime;
+    localNotif.alertBody = @"Alert!";
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    NSLog(@"alarm1");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

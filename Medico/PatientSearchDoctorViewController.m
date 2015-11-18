@@ -8,6 +8,7 @@
 
 #import "PatientSearchDoctorViewController.h"
 #import "PatientLandingPageViewController.h"
+#import "DoctorLandingPageView.h"
 
 @interface PatientSearchDoctorViewController ()
 
@@ -35,22 +36,30 @@
 }
 
 - (void) homePage:(id)sender{
-    PatientLandingPageViewController *PatientHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
-    [self.navigationController pushViewController:PatientHome animated:YES];
-    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *type = [NSString stringWithFormat:[ud valueForKey:@"loggedInUserType"]];
+    if ([type isEqualToString:@"Patient"]) {
+        PatientLandingPageViewController *PatientHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+        [self.navigationController pushViewController:PatientHome animated:YES];
+    }
+    else{
+        DoctorLandingPageView *docHome = [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:docHome animated:YES];
+        
+    }
 }
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)search:(id)sender {
 }

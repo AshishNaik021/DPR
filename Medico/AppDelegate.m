@@ -17,7 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"AppDelegate.m");
-    // Override point for customization after application launch.
+    if([application respondsToSelector:@selector(registerUserNotificationSettings:)]) //ios 8+
+    {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+        [application registerForRemoteNotifications];
+    }
     return YES;
 }
 

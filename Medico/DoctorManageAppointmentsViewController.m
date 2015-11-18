@@ -281,8 +281,9 @@
 
 - (IBAction)doctorTotalAppointment:(id)sender {
     NSLog(@"Entered doctorTotalAppointment");
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test" message:@"Test Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test" message:@"Test Message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    //    [alert show];
+    NSLog(@"Pushing day view");
     DayWeekMonthAppointmentViewController *detailAppointment = [self.storyboard instantiateViewControllerWithIdentifier:@"DayWeekMonthAppointmentViewController"];
     NSLog(@"initialised");
     [self.navigationController pushViewController:detailAppointment animated:YES];

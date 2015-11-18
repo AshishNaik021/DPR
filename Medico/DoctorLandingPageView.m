@@ -13,6 +13,9 @@
 #import "DoctorManageFinanceViewController.h"
 #import "DoctorFeedBackViewController.h"
 #import "ManageReminderViewController.h"
+#import "SearchPatientViewController.h"
+#import "PatientSearchDoctorViewController.h"
+
 
 @interface DoctorLandingPageView ()
 
@@ -84,7 +87,10 @@
     ManageReminderViewController *objManageReminderViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"ManageReminderViewController"];
     [self.navigationController pushViewController:objManageReminderViewController animated:YES];
 }
+
 - (IBAction)searchDoctor:(id)sender {
+    PatientSearchDoctorViewController *objPatientSearchDoctorViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatientSearchDoctorViewController"];
+    [self.navigationController pushViewController:objPatientSearchDoctorViewController animated:YES];
 }
 - (IBAction)searchClinic:(id)sender {
 }
@@ -108,5 +114,7 @@
     
 }
 - (IBAction)searchPatient:(id)sender {
+    SearchPatientViewController *objSearchPatientViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchPatientViewController"];
+    [self.navigationController pushViewController:objSearchPatientViewController animated:YES];
 }
 @end
