@@ -86,7 +86,7 @@
 @synthesize slot3TueButton;
 @synthesize slot3WedBool;
 @synthesize slot3WedButton;
-
+@synthesize dict;
 
 
 
@@ -216,9 +216,80 @@
 }
 
 -(void)errorMessaggeSlot1CheckBox{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please Agree with terms and conditions to proceed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please select the slot Day." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
+
+
+-(BOOL)validateSlot1AllFields:(NSString *)slot1fromhr : (NSString *)slot1frommin : (NSString *)slot1fromampm :(NSString *) slot1tohr : (NSString *)slot1tomin :(NSString *)slot1toampm{
+    if ([self validateSlot1FromHr:slot1fromhr]
+        && [self validateSlot1FromMin:slot1frommin]
+        && [self validateSlot1FromAmPm:slot1fromampm]
+        && [self validateSlot1ToHr:slot1tohr]
+        && [self validateSlot1ToMin:slot1tomin]
+        && [self validateSlot1ToAmPm:slot1toampm]) {
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    
+}
+
+-(void)callValidateSlot1AllFields{
+    
+    if([self validateSlot1AllFields:slot1FromHourField.text
+                              :slot1FromMinuteField.text
+                              :slot1FromAmPmField.text
+                              :slot1ToHourField.text
+                              :slot1ToMinuteField.text
+                              :slot1ToAmPmField.text]){
+        NSLog(@"Sending data to next vc");
+        NSString *slot1From = [NSString stringWithFormat:@"%@:%@ %@",slot1FromHourField.text,slot1FromMinuteField.text,slot1FromAmPmField.text];
+        NSLog(@"the concatenation of string-----------%@",slot1From);
+        
+        NSArray *objects=[[NSArray alloc]initWithObjects:
+                          slot1FromHourField.text,
+                          slot1FromMinuteField.text,
+                          slot1FromAmPmField.text,
+                          slot1ToHourField.text,
+                          slot1ToMinuteField.text,
+                          slot1ToAmPmField.text,
+                          nil];
+        NSArray *keys=[[NSArray alloc]initWithObjects:
+                       @"clinicName",
+                       @"email",
+                       @"mobileNumber",
+                       @"landLineNumber",
+                       @"location",
+                       @"speciality",
+                       nil];
+        
+        dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        
+        NSLog(@"The Slot1 data in the dictionary is************************%@",dict);
+        
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                           options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                             error:&error];
+        
+        if (! jsonData) {
+            NSLog(@"Got an error: %@", error);
+        } else {
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            NSLog(@"jsonstring %@",jsonString);
+        }
+        
+    }
+    else {
+        NSLog(@"Data invalid");
+    }
+}
+
+
+
+
 
 /*-------------------------------------------------------------------------------------------------------*/
 
@@ -452,6 +523,43 @@
 
 
 - (IBAction)done:(id)sender {
+    
+    if (slot1ContentView.hidden == FALSE && slot2ContentView.hidden == FALSE && slot3ContentView.hidden == FALSE) {
+        
+        NSLog(@"All the view are not hidden....");
+    }
+    else if (slot1ContentView.hidden == FALSE && slot2ContentView.hidden == FALSE && slot3ContentView.hidden == TRUE){
+        NSLog(@"Slot1 and Slot2 shown....");
+
+    }
+    else if (slot1ContentView.hidden == FALSE && slot2ContentView.hidden == TRUE && slot3ContentView.hidden == FALSE){
+        NSLog(@"Slot1 and slot3 shown....");
+        
+    }
+    
+    else{
+        NSLog(@"slot1 shown....");
+        if ([slot1FromHourField.text isEqualToString:@""]
+            && [slot1FromMinuteField.text isEqualToString:@""]
+            && [slot1FromAmPmField.text isEqualToString:@""]
+            && [slot1ToHourField.text isEqualToString:@""]
+            && [slot1ToMinuteField.text isEqualToString:@""]
+            && [slot1ToAmPmField.text isEqualToString:@""]) {
+            NSLog(@"All Empty");
+            [self errorAllFieldsMandatory];
+        }
+        else{
+            if (slot1MonBool || slot1TueBool || slot1WedBool || slot1ThuBool || slot1FriBool || slot1SatBool || slot1SunBool) {
+                NSLog(@"Checked and calling func");
+                [self callValidateSlot1AllFields];
+            }
+            else{
+                NSLog(@"Check button");
+                [self errorMessaggeSlot1CheckBox];
+            }
+        }
+
+    }
     
 }
 

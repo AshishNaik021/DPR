@@ -104,6 +104,7 @@
 - (IBAction)slot3Remove:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
+@property IBOutlet NSDictionary *dict;
 
 - (IBAction)done:(id)sender;
 
