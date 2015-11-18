@@ -87,9 +87,16 @@
 @synthesize slot3WedBool;
 @synthesize slot3WedButton;
 @synthesize dict;
-
-
-
+@synthesize shift1;
+@synthesize shift2;
+@synthesize shift3;
+@synthesize slot1MonDay;
+@synthesize slot1TueDay;
+@synthesize slot1WedDay;
+@synthesize slot1ThuDay;
+@synthesize slot1FriDay;
+@synthesize slot1SatDay;
+@synthesize slot1SunDay;
 
 
 
@@ -246,23 +253,30 @@
                               :slot1ToAmPmField.text]){
         NSLog(@"Sending data to next vc");
         NSString *slot1From = [NSString stringWithFormat:@"%@:%@ %@",slot1FromHourField.text,slot1FromMinuteField.text,slot1FromAmPmField.text];
-        NSLog(@"the concatenation of string-----------%@",slot1From);
+
+        NSString *slot1To = [NSString stringWithFormat:@"%@:%@ %@",slot1ToHourField.text,slot1ToMinuteField.text,slot1ToAmPmField.text];
+        
+        NSMutableArray *arr = [[NSMutableArray alloc]init];
+        [arr addObject:slot1MonDay];
+        [arr addObject:slot1TueDay];
+        [arr addObject:slot1WedDay];
+        [arr addObject:slot1ThuDay];
+        [arr addObject:slot1FriDay];
+        [arr addObject:slot1SatDay];
+        [arr addObject:slot1SunDay];
+      
+
+        NSLog(@"The day array............%@",arr);
         
         NSArray *objects=[[NSArray alloc]initWithObjects:
-                          slot1FromHourField.text,
-                          slot1FromMinuteField.text,
-                          slot1FromAmPmField.text,
-                          slot1ToHourField.text,
-                          slot1ToMinuteField.text,
-                          slot1ToAmPmField.text,
+                          slot1From,
+                          slot1To,
+                          shift1,
                           nil];
         NSArray *keys=[[NSArray alloc]initWithObjects:
-                       @"clinicName",
-                       @"email",
-                       @"mobileNumber",
-                       @"landLineNumber",
-                       @"location",
-                       @"speciality",
+                       @"from",
+                       @"to",
+                       @"shift",
                        nil];
         
         dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
@@ -539,6 +553,7 @@
     
     else{
         NSLog(@"slot1 shown....");
+        shift1 = @"shift1";
         if ([slot1FromHourField.text isEqualToString:@""]
             && [slot1FromMinuteField.text isEqualToString:@""]
             && [slot1FromAmPmField.text isEqualToString:@""]
@@ -570,51 +585,17 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - (IBAction)slot1Mon:(id)sender{
     if(!slot1MonBool){
         [slot1MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1MonBool = YES;
+        slot1MonDay = @"Mon";
+        
     }
     else if(slot1MonBool){
         [slot1MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1MonBool = NO;
-        
+        slot1MonDay = @"";
     }
 
     
@@ -623,10 +604,12 @@
     if(!slot1TueBool){
         [slot1TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1TueBool = YES;
+        slot1TueDay = @"Tue";
     }
     else if(slot1TueBool){
         [slot1TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1TueBool = NO;
+        slot1TueDay = @"";
         
     }
     
@@ -635,10 +618,12 @@
     if(!slot1WedBool){
         [slot1WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1WedBool = YES;
+        slot1WedDay = @"Wed";
     }
     else if(slot1WedBool){
         [slot1WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1WedBool = NO;
+        slot1WedDay = @"";
         
     }
 }
@@ -646,10 +631,12 @@
     if(!slot1ThuBool){
         [slot1ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1ThuBool = YES;
+        slot1ThuDay = @"Thu";
     }
     else if(slot1ThuBool){
         [slot1ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1ThuBool = NO;
+        slot1ThuDay = @"";
         
     }
 }
@@ -657,10 +644,12 @@
     if(!slot1FriBool){
         [slot1FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1FriBool = YES;
+        slot1FriDay = @"Fri";
     }
     else if(slot1FriBool){
         [slot1FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1FriBool = NO;
+        slot1FriDay = @"";
         
     }
     
@@ -669,10 +658,12 @@
     if(!slot1SatBool){
         [slot1SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1SatBool = YES;
+        slot1SatDay = @"Sat";
     }
     else if(slot1SatBool){
         [slot1SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1SatBool = NO;
+        slot1SatDay = @"";
         
     }
 }
@@ -680,10 +671,12 @@
     if(!slot1SunBool){
         [slot1SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         slot1SunBool = YES;
+        slot1SunDay = @"Sun";
     }
     else if(slot1SunBool){
         [slot1SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         slot1SunBool = NO;
+        slot1SunDay = @"";
         
     }
 }
@@ -902,6 +895,7 @@
         [slot1SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         [slot1SelectAllButton setTitle:@"DeSelect All" forState:UIControlStateNormal];
         slot1SelectAllBool = YES;
+        
     }
     
     else if(slot1SelectAllBool){

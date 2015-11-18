@@ -105,6 +105,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 @property IBOutlet NSDictionary *dict;
+@property IBOutlet NSString *shift1;
+@property IBOutlet NSString *shift2;
+@property IBOutlet NSString *shift3;
 
 - (IBAction)done:(id)sender;
 
@@ -116,6 +119,14 @@
 @property BOOL *slot1SatBool;
 @property BOOL *slot1SunBool;
 @property BOOL *slot1SelectAllBool;
+
+@property IBOutlet NSString *slot1MonDay;
+@property IBOutlet NSString *slot1TueDay;
+@property IBOutlet NSString *slot1WedDay;
+@property IBOutlet NSString *slot1ThuDay;
+@property IBOutlet NSString *slot1FriDay;
+@property IBOutlet NSString *slot1SatDay;
+@property IBOutlet NSString *slot1SunDay;
 
 @property BOOL *slot2MonBool;
 @property BOOL *slot2TueBool;
