@@ -32,10 +32,13 @@
 @synthesize alwaysRadioButton;
 @synthesize confirmDoctorRadioButton;
 @synthesize appointment;
-@synthesize returnString;
+@synthesize returnStringClinic;
 @synthesize dict;
 @synthesize emailid;
-@synthesize returnString1;
+@synthesize returnStringSlot;
+@synthesize clinicFlag;
+@synthesize slotFlag;
+@synthesize returnArr;
 @synthesize passDictionaryForSlots = _passDictionaryForSlots;
 
 - (void)viewDidLoad {
@@ -44,6 +47,9 @@
     [createSpecialtyTextView.layer setBorderWidth:1.0];
     [createLocationTextView.layer setBorderWidth:1.0];
     [createSlotTextView.layer setBorderWidth:1.0];
+    
+    clinicFlag = NO;
+    slotFlag = NO;
     
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addSlots:)];
     
@@ -54,20 +60,22 @@
     alwaysRadioButton = NO;
     confirmDoctorRadioButton = NO;
     
+    
+    
     emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
     NSLog(@"email id for logged in user...%@",emailid);
     // Do any additional setup after loading the view.
   
-    NSArray *checkArr = [_passDictionaryForSlots valueForKeyPath:@"schedules"];
-    if (checkArr.count == 0) {
+     returnArr = [_passDictionaryForSlots valueForKeyPath:@"schedules"];
+    if (returnArr.count == 0) {
         createSlotTextView.text = @"To Add Slots, Click Here!";
     }
     else{
         createSlotTextView.text = @"Slots are added. To change the slots, Click again!";
-    }
-    NSLog(@"my checking arrr========%@",checkArr);
-   // self.patientNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
-    NSLog(@"checking value for particular key........%@",[[checkArr objectAtIndex:0] objectForKey:@"day"]);
+            }
+    NSLog(@"my checking arrr========%@",returnArr);
+
+    //NSLog(@"checking value for particular key........%@",[[checkArr objectAtIndex:0] objectForKey:@"day"]);
     
 }
 
@@ -271,6 +279,7 @@
         } else {
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
+            
             [self addClinic];
         }
         
@@ -285,11 +294,96 @@
     }
 }
 
--(void)parseJSON : (NSString *)responseData{
+-(void)callAddSlotsForClinic :(NSString *)clinicId{
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *clinicAdded = clinicId;
+    
+    
+    NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/saveDoctorClinicScheduleTime"];
+    
+    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
+    
+    //returnArray
+    //clinicAdded
+    //emailid
+    NSDictionary *slotDict = [[NSDictionary alloc]init];
+    
+    slotDict = @{@"clinicId" : clinicAdded,
+                 @"doctorId" : emailid,
+                 @"schedules" : returnArr};
+    
+    NSLog(@"my slotDict-----------%@",slotDict);
+    
+    NSString *params = [NSString stringWithFormat:@"\{\"clinicId\":\"%@\",\"doctorId\":\"%@\",\"schedules\":\"%@\"}",[slotDict objectForKey:@"clinicId"],[slotDict objectForKey:@"doctorId"],[slotDict objectForKey:@"schedules"]];
+    
+    NSLog(@"params %@",params);
+    [urlRequest setHTTPMethod:@"POST"];
+    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
+                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                           NSLog(@"Response:%@ Error : %@\n", response, error);
+                                                           //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           if(error == nil)
+                                                           {
+                                                               returnStringSlot = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+                                                               NSLog(@"Poonam Data = %@",returnStringSlot);
+                                                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                               NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+                                                               if ([httpResponse statusCode] == 200) {
+                                                                   
+                                                                   [self parseJSONForSlot:returnStringSlot];
+                                                                   
+                                                               } else {
+                                                                   //[self reportError:[httpResponse statusCode]];
+                                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                                   message:@"An error occured. Please try again later."
+                                                                                                                  delegate:self
+                                                                                                         cancelButtonTitle:@"OK"
+                                                                                                         otherButtonTitles:nil];
+                                                                   [alert show];
+                                                                   
+                                                               }
+                                                           }
+                                                           else{
+                                                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                               message:@"An error occured. Please try again later."
+                                                                                                              delegate:self
+                                                                                                     cancelButtonTitle:@"OK"
+                                                                                                     otherButtonTitles:nil];
+                                                               [alert show];
+                                                           }
+                                                           
+                                                       }];
+    [dataTask resume];
+
+}
+
+-(void)parseJSONForSlot : (NSString *)responseData{
+    NSString * jsonString = responseData;
+    //NSStringEncoding  encoding;
+    NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError * error=nil;
+    NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSLog(@"NSDictionery:%@",parsedData);
+    NSString *code = [NSString stringWithFormat:@"%@",[parsedData valueForKey:@"code"]];
+    NSString *message = [NSString stringWithFormat:@"%@",[parsedData valueForKey:@"message"]];
+    NSLog(@"code:%@",[parsedData valueForKey:@"code"]);
+    NSLog(@"message:%@",[parsedData valueForKey:@"message"]);
+}
+
+-(void)parseJSONForClinic : (NSString *)responseData{
     NSString * jsonString = responseData;
     NSLog(@"responseData %@",responseData);
     NSLog(@"jsonString %@",jsonString);
     if ([jsonString intValue]) {
+        
+        [self callAddSlotsForClinic:jsonString];
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         alert.tag = 200;
         [alert show];
@@ -353,12 +447,14 @@
                                                            //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
                                                            if(error == nil)
                                                            {
-                                                               returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-                                                               NSLog(@"Poonam Data = %@",returnString);
+                                                               returnStringClinic = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+                                                               NSLog(@"Poonam Data = %@",returnStringClinic);
                                                                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                                NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
                                                                if ([httpResponse statusCode] == 200) {
-                                                                [self parseJSON:returnString];
+
+                                                                [self parseJSONForClinic:returnStringClinic];
+                                                                   
                                                                } else {
                                                                    //[self reportError:[httpResponse statusCode]];
                                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"

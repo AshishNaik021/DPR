@@ -17,12 +17,15 @@
 @property (weak, nonatomic) IBOutlet UITextView *createSpecialtyTextView;
 @property (weak, nonatomic) IBOutlet UIButton *addSlotsButton;
 - (IBAction)addSlots:(id)sender;
+@property IBOutlet NSArray *returnArr;
+@property BOOL *clinicFlag;
+@property BOOL *slotFlag;
 
 @property (weak, nonatomic) IBOutlet UITextView *createLocationTextView;
 @property (weak, nonatomic) IBOutlet UIButton *createClinicButton;
 - (IBAction)createClinic:(id)sender;
-@property NSString *returnString;
-@property NSString *returnString1;
+@property NSString *returnStringClinic;
+@property NSString *returnStringSlot;
 @property NSDictionary *dict;
 @property (weak, nonatomic) IBOutlet UITextView *createSlotTextView;
 @property (weak, nonatomic) IBOutlet UIButton *alwaysButton;
