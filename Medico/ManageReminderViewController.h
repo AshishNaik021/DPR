@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManageReminderViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ManageReminderViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+    UIActivityIndicatorView *spinner;
+}
 
 
 @property IBOutlet NSArray *reminderArr;

@@ -27,6 +27,7 @@
 @synthesize returnString;
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     NSLog(@"LoginPage.m");
     spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
     [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
@@ -34,7 +35,7 @@
     spinner.center=self.view.center;
     [self.view addSubview:spinner];
     self.navigationItem.hidesBackButton = YES;
-    [super viewDidLoad];
+
     //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     // self.view.backgroundColor = [UIColor clearColor];
     //    UIGraphicsBeginImageContext(self.view.frame.size);
@@ -253,7 +254,7 @@
 -(BOOL)checkInternetConnection{
     //        [self.view endEditing:YES];
     [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
-    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.google.com/m"];
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.msftncsi.com/ncsi.txt"];
     NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
     if (data){
         NSLog(@"Device is connected to the internet");

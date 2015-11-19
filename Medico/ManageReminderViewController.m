@@ -29,6 +29,14 @@
 - (void)viewDidLoad {
     NSLog(@"ManageReminderViewController.m");
     [super viewDidLoad];
+
+    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
+    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    spinner.color = [UIColor blueColor];
+    spinner.center=self.view.center;
+    [self.view addSubview:spinner];
+
+    
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -52,6 +60,29 @@
     [self fetchNotification];
     [self scheduleNotificationForDate];
 }
+-(BOOL)checkInternetConnection{
+    //        [self.view endEditing:YES];
+    [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.msftncsi.com/ncsi.txt"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data){
+        NSLog(@"Device is connected to the internet");
+//        [spinner stopAnimating];
+        return 1;
+    } else{
+        [spinner stopAnimating];
+        NSLog(@"Device is not connected to the internet");
+        return 0;
+    }
+}
+
+-(void)threadStartAnimating:(id)data
+{
+    [spinner startAnimating];
+    [self.view setUserInteractionEnabled:NO];
+    
+}
+
 -(void)fetchNotification{
     NSLog(@"fetchNotification Method is called....");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -135,7 +166,7 @@
     if (localNotif == nil) return;
     NSDate *fireTime = [[NSDate date] addTimeInterval:10]; // adds 10 secs
     localNotif.fireDate = fireTime;
-    localNotif.alertBody = @"Alert!";
+    localNotif.alertBody = @"Reminder!";
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
     NSLog(@"alarm1");
 }
@@ -156,7 +187,32 @@
  */
 
 - (IBAction)add:(id)sender {
+    NSLog(@"Add");
+    if([self checkInternetConnection]){
+        [spinner stopAnimating];
+    }
+    else{
+        [spinner stopAnimating];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 - (IBAction)remove:(id)sender {
+    NSLog(@"Remove");
+    if([self checkInternetConnection]){
+        [spinner stopAnimating];
+    }
+    else{
+        [spinner stopAnimating];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+-(void)addNotification{
+    
+}
+-(void)removeNotification{
+    
 }
 @end
