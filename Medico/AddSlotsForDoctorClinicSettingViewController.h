@@ -104,10 +104,20 @@
 - (IBAction)slot3Remove:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
-@property IBOutlet NSDictionary *dict;
+@property IBOutlet NSMutableDictionary *dict;
 @property IBOutlet NSString *shift1;
 @property IBOutlet NSString *shift2;
 @property IBOutlet NSString *shift3;
+
+@property IBOutlet NSMutableArray *mondaySlot1Arr;
+@property IBOutlet NSMutableArray *tuesdaySlot1Arr;
+@property IBOutlet NSMutableArray *wednesdaySlot1Arr;
+@property IBOutlet NSMutableArray *thursdaySlot1Arr;
+@property IBOutlet NSMutableArray *fridaySlot1Arr;
+@property IBOutlet NSMutableArray *saturdaySlot1Arr;
+@property IBOutlet NSMutableArray *sundaySlot1Arr;
+@property  int *indexCount;
+@property int *integer;
 
 - (IBAction)done:(id)sender;
 

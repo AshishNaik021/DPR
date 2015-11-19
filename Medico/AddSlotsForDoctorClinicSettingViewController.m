@@ -97,16 +97,38 @@
 @synthesize slot1FriDay;
 @synthesize slot1SatDay;
 @synthesize slot1SunDay;
-
-
+@synthesize mondaySlot1Arr;
+@synthesize tuesdaySlot1Arr;
+@synthesize wednesdaySlot1Arr;
+@synthesize thursdaySlot1Arr;
+@synthesize fridaySlot1Arr;
+@synthesize saturdaySlot1Arr;
+@synthesize sundaySlot1Arr;
+@synthesize indexCount;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     slot1ContentView.hidden = FALSE;
     slot2ContentView.hidden = TRUE;
     slot3ContentView.hidden = TRUE;
+    slot1MonDay = @"";
+    slot1ThuDay = @"";
+    slot1WedDay = @"";
+    slot1TueDay = @"";
+    slot1FriDay = @"";
+    slot1SatDay = @"";
+    slot1SunDay = @"";
+    
+    
+    mondaySlot1Arr = [[NSMutableArray alloc]init];
+    thursdaySlot1Arr = [[NSMutableArray alloc]init];
+    tuesdaySlot1Arr = [[NSMutableArray alloc]init];
+    wednesdaySlot1Arr = [[NSMutableArray alloc]init];
+    fridaySlot1Arr = [[NSMutableArray alloc]init];
+    saturdaySlot1Arr = [[NSMutableArray alloc]init];
+    sundaySlot1Arr = [[NSMutableArray alloc]init];
 }
 
 
@@ -246,40 +268,145 @@
 -(void)callValidateSlot1AllFields{
     
     if([self validateSlot1AllFields:slot1FromHourField.text
-                              :slot1FromMinuteField.text
-                              :slot1FromAmPmField.text
-                              :slot1ToHourField.text
-                              :slot1ToMinuteField.text
-                              :slot1ToAmPmField.text]){
+                                   :slot1FromMinuteField.text
+                                   :slot1FromAmPmField.text
+                                   :slot1ToHourField.text
+                                   :slot1ToMinuteField.text
+                                   :slot1ToAmPmField.text]){
         NSLog(@"Sending data to next vc");
         NSString *slot1From = [NSString stringWithFormat:@"%@:%@ %@",slot1FromHourField.text,slot1FromMinuteField.text,slot1FromAmPmField.text];
-
+        
         NSString *slot1To = [NSString stringWithFormat:@"%@:%@ %@",slot1ToHourField.text,slot1ToMinuteField.text,slot1ToAmPmField.text];
         
         NSMutableArray *arr = [[NSMutableArray alloc]init];
-        [arr addObject:slot1MonDay];
-        [arr addObject:slot1TueDay];
-        [arr addObject:slot1WedDay];
-        [arr addObject:slot1ThuDay];
-        [arr addObject:slot1FriDay];
-        [arr addObject:slot1SatDay];
-        [arr addObject:slot1SunDay];
-      
-
-        NSLog(@"The day array............%@",arr);
+        if (![slot1MonDay isEqualToString:@""]) {
+            [arr addObject:slot1MonDay];
+            
+            NSDictionary *matchInfo = @{@"day" : slot1MonDay,
+                                        @"from"  : slot1From,
+                                        @"to" : slot1To,
+                                        @"shift" :shift1};
+            
+            NSLog(@"The checking monday slot for dictionary.....%@",matchInfo);
+            
+            [mondaySlot1Arr addObject:slot1MonDay];
+            [mondaySlot1Arr addObject:slot1From];
+            [mondaySlot1Arr addObject:slot1To];
+            [mondaySlot1Arr addObject:shift1];
+            
+        }
+        if (![slot1TueDay isEqualToString:@""]){
+            [arr addObject:slot1TueDay];
+            [tuesdaySlot1Arr addObject:slot1TueDay];
+            [tuesdaySlot1Arr addObject:slot1From];
+            [tuesdaySlot1Arr addObject:slot1To];
+            [tuesdaySlot1Arr addObject:shift1];
+        }
+        if (![slot1WedDay isEqualToString:@""]){
+            [arr addObject:slot1WedDay];
+            [wednesdaySlot1Arr addObject:slot1WedDay];
+            [wednesdaySlot1Arr addObject:slot1From];
+            [wednesdaySlot1Arr addObject:slot1To];
+            [wednesdaySlot1Arr addObject:shift1];
+        }
+        if (![slot1ThuDay isEqualToString:@""]){
+            [arr addObject:slot1ThuDay];
+            [thursdaySlot1Arr addObject:slot1ThuDay];
+            [thursdaySlot1Arr addObject:slot1From];
+            [thursdaySlot1Arr addObject:slot1To];
+            [thursdaySlot1Arr addObject:shift1];
+            
+        }
+        if (![slot1FriDay isEqualToString:@""]){
+            [arr addObject:slot1FriDay];
+            [fridaySlot1Arr addObject:slot1FriDay];
+            [fridaySlot1Arr addObject:slot1From];
+            [fridaySlot1Arr addObject:slot1To];
+            [fridaySlot1Arr addObject:shift1];
+        }
+        if (![slot1SatDay isEqualToString:@""]){
+            [arr addObject:slot1SatDay];
+            [saturdaySlot1Arr addObject:slot1SatDay];
+            [saturdaySlot1Arr addObject:slot1From];
+            [saturdaySlot1Arr addObject:slot1To];
+            [saturdaySlot1Arr addObject:shift1];
+        }
+        if (![slot1SunDay isEqualToString:@""]){
+            [arr addObject:slot1SunDay];
+            [sundaySlot1Arr addObject:slot1SunDay];
+            [sundaySlot1Arr addObject:slot1From];
+            [sundaySlot1Arr addObject:slot1To];
+            [sundaySlot1Arr addObject:shift1];
+        }
         
-        NSArray *objects=[[NSArray alloc]initWithObjects:
-                          slot1From,
-                          slot1To,
-                          shift1,
-                          nil];
-        NSArray *keys=[[NSArray alloc]initWithObjects:
-                       @"from",
-                       @"to",
-                       @"shift",
-                       nil];
+        NSLog(@"Total days selected.......%@",arr);
+        NSLog(@"count======%lu",(unsigned long)arr.count);
         
-        dict = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        NSMutableArray *objects = [[NSMutableArray alloc]init];
+        NSMutableArray *keys = [[NSMutableArray alloc]init];
+        
+        indexCount = 0;
+        
+        
+        NSMutableArray *objectArr = [[NSMutableArray alloc]initWithCapacity:arr.count];
+        
+        
+        if (![mondaySlot1Arr count] == 0) {
+            [objectArr insertObject:mondaySlot1Arr atIndex:(int)indexCount/4];
+            indexCount++;
+        }
+        
+        if (![tuesdaySlot1Arr count] == 0) {
+            [objectArr insertObject:tuesdaySlot1Arr atIndex:(int)indexCount/4];
+            indexCount++;
+        }
+        if (![wednesdaySlot1Arr count] == 0) {
+            [objectArr insertObject:wednesdaySlot1Arr atIndex:(int)indexCount/4];
+            indexCount++;
+        }
+        if (![thursdaySlot1Arr count] == 0) {
+            [objectArr insertObject:mondaySlot1Arr atIndex:(int)indexCount/4];
+            indexCount++;
+        }
+        if (![fridaySlot1Arr count] == 0) {
+            [objectArr insertObject:mondaySlot1Arr atIndex:(int)indexCount/4];
+            indexCount++;
+        }
+        if (![saturdaySlot1Arr count] == 0) {
+            [objectArr insertObject:mondaySlot1Arr atIndex:(int)indexCount/4];
+            indexCount++;
+        }
+        if (![sundaySlot1Arr count] == 0) {
+            [objectArr insertObject:mondaySlot1Arr atIndex:(int)indexCount/4];
+        }
+        
+        
+        NSLog(@"objectarrrrrrrrrrrrrrr%@",objectArr);
+        
+        NSMutableArray *keyArr = [[NSMutableArray alloc]init];
+        [keyArr addObject:@"day"];
+        [keyArr addObject:@"from"];
+        [keyArr addObject:@"to"];
+        [keyArr addObject:@"shift"];
+        
+        
+        NSLog(@"The day array............%lu",(unsigned long)arr.count);
+        for (int i = 0; i<arr.count; i++) {
+            [keys insertObject:keyArr atIndex:i];
+        }
+        
+        NSLog(@"keys%@",keys);
+        
+        for (int i = 0; i < [arr count]; i++)
+        {
+            // [dict setValue:friMainDicArray[i] forKey:[friMainDicArray[i] valueForKey:@"start_time" ] ]
+            dict = [NSDictionary dictionaryWithObjects:objectArr[i] forKeys:keys[i]];
+            // [dict setObject:objectArr[i] forKey:keys[i]];
+            
+        }
+        
+        //  dict = [NSDictionary dictionaryWithObjects:objectArr[0] forKeys:keys[0]];
+        
         
         NSLog(@"The Slot1 data in the dictionary is************************%@",dict);
         
@@ -544,7 +671,7 @@
     }
     else if (slot1ContentView.hidden == FALSE && slot2ContentView.hidden == FALSE && slot3ContentView.hidden == TRUE){
         NSLog(@"Slot1 and Slot2 shown....");
-
+        
     }
     else if (slot1ContentView.hidden == FALSE && slot2ContentView.hidden == TRUE && slot3ContentView.hidden == FALSE){
         NSLog(@"Slot1 and slot3 shown....");
@@ -564,7 +691,7 @@
             [self errorAllFieldsMandatory];
         }
         else{
-            if (slot1MonBool || slot1TueBool || slot1WedBool || slot1ThuBool || slot1FriBool || slot1SatBool || slot1SunBool) {
+            if (slot1MonBool || slot1TueBool || slot1WedBool || slot1ThuBool || slot1FriBool || slot1SatBool || slot1SunBool || slot1SelectAllBool) {
                 NSLog(@"Checked and calling func");
                 [self callValidateSlot1AllFields];
             }
@@ -573,7 +700,7 @@
                 [self errorMessaggeSlot1CheckBox];
             }
         }
-
+        
     }
     
 }
@@ -597,7 +724,7 @@
         slot1MonBool = NO;
         slot1MonDay = @"";
     }
-
+    
     
 }
 - (IBAction)slot1Tue:(id)sender{
@@ -740,7 +867,7 @@
         slot2FriBool = NO;
         
     }
-
+    
 }
 - (IBAction)slot2Sat:(id)sender{
     if(!slot2SatBool){
@@ -809,7 +936,7 @@
         slot3ThuBool = NO;
         
     }
-
+    
 }
 - (IBAction)slot3Fri:(id)sender{
     if(!slot3FriBool){
@@ -821,7 +948,7 @@
         slot3FriBool = NO;
         
     }
-
+    
 }
 - (IBAction)slot3Sat:(id)sender{
     if(!slot3SatBool){
@@ -874,14 +1001,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)slot1SelectAll:(id)sender {
     if (!slot1SelectAllBool) {
@@ -895,7 +1022,13 @@
         [slot1SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
         [slot1SelectAllButton setTitle:@"DeSelect All" forState:UIControlStateNormal];
         slot1SelectAllBool = YES;
-        
+        slot1MonDay = @"Mon";
+        slot1TueDay = @"Tue";
+        slot1WedDay = @"Wed";
+        slot1ThuDay = @"Thu";
+        slot1FriDay = @"Fri";
+        slot1SatDay = @"Sat";
+        slot1SunDay = @"Sun";
     }
     
     else if(slot1SelectAllBool){
@@ -908,9 +1041,16 @@
         [slot1SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         [slot1SelectAllButton setTitle:@"Select All" forState:UIControlStateNormal];
         slot1SelectAllBool = NO;
+        slot1MonDay = @"";
+        slot1TueDay = @"";
+        slot1WedDay = @"";
+        slot1ThuDay = @"";
+        slot1FriDay = @"";
+        slot1SatDay = @"";
+        slot1SunDay = @"";
     }
     
-
+    
 }
 
 - (IBAction)slot2SelectAll:(id)sender {
@@ -938,7 +1078,7 @@
         [slot2SelectAllButton setTitle:@"Select All" forState:UIControlStateNormal];
         slot2SelectAllBool = NO;
     }
-
+    
 }
 
 - (IBAction)slot3SelectAll:(id)sender {
@@ -966,7 +1106,7 @@
         [slot3SelectAllButton setTitle:@"Select All" forState:UIControlStateNormal];
         slot3SelectAllBool = NO;
     }
-
+    
 }
 
 @end
