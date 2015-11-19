@@ -35,6 +35,8 @@
 @synthesize returnString;
 @synthesize dict;
 @synthesize emailid;
+@synthesize returnString1;
+@synthesize passDictionaryForSlots = _passDictionaryForSlots;
 
 - (void)viewDidLoad {
     NSLog(@"CreateDoctorsClinicSettingsViewController.m");
@@ -42,13 +44,31 @@
     [createSpecialtyTextView.layer setBorderWidth:1.0];
     [createLocationTextView.layer setBorderWidth:1.0];
     [createSlotTextView.layer setBorderWidth:1.0];
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addSlots:)];
+    
+    [createSlotTextView addGestureRecognizer:gestureRecognizer];
+    
     exceptSlotRadioButton = NO;
     exceptDayRadioButton = NO;
     alwaysRadioButton = NO;
     confirmDoctorRadioButton = NO;
+    
     emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
     NSLog(@"email id for logged in user...%@",emailid);
     // Do any additional setup after loading the view.
+  
+    NSArray *checkArr = [_passDictionaryForSlots valueForKeyPath:@"schedules"];
+    if (checkArr.count == 0) {
+        createSlotTextView.text = @"To Add Slots, Click Here!";
+    }
+    else{
+        createSlotTextView.text = @"Slots are added. To change the slots, Click again!";
+    }
+    NSLog(@"my checking arrr========%@",checkArr);
+   // self.patientNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
+    NSLog(@"checking value for particular key........%@",[[checkArr objectAtIndex:0] objectForKey:@"day"]);
+    
 }
 
 -(void)errorAllFieldsMandatory{
@@ -113,7 +133,7 @@
 }
 
 -(void)errorMessageLandlineNumberNotValid{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Mobile Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Phone Number." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -129,44 +149,43 @@
         return 1;
 }
 
-
 -(void)errorMessageLocationNotValid{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter the location name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
 -(BOOL)validateLocation:(NSString *) location{
+    
     NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
-    if(![location isEqualToString:@""] && [nameTest evaluateWithObject:location]){
-        return 1;
+    if(![nameTest evaluateWithObject:location]){
+        [self errorMessageLocationNotValid];
+        return 0;
     }
     else
-        return 0;
+        return 1;
 }
 
 -(void)errorMessaggeSpecialityNotValid{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid Speciality." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter the Speciality." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
+
 -(BOOL)validateSpeciality:(NSString *) speciality{
-    BOOL returnValue = 0;
-    if ([speciality isEqualToString:@""]) {
-        returnValue =  1;
+    
+    NSString *nameRegex = @"[a-z]+";
+    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    
+    if(![nameTest evaluateWithObject:speciality]){
+        [self errorMessaggeSpecialityNotValid];
+        return 0;
     }
-    else{
-        NSString *nameRegex = @"[a-z]+";
-        NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
-        
-        if([nameTest evaluateWithObject:speciality]){
-            returnValue = 1;
-        }
-        else
-            returnValue = 0;
-    }
-    return returnValue;
+    else
+        return 1;
 }
+
+
 
 -(void)errorMessageOnlineAppointmentNotValid{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please enter valid name." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -266,7 +285,6 @@
     }
 }
 
-
 -(void)parseJSON : (NSString *)responseData{
     NSString * jsonString = responseData;
     NSLog(@"responseData %@",responseData);
@@ -340,7 +358,7 @@
                                                                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                                NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
                                                                if ([httpResponse statusCode] == 200) {
-                                                                   [self parseJSON:returnString];
+                                                                [self parseJSON:returnString];
                                                                } else {
                                                                    //[self reportError:[httpResponse statusCode]];
                                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"

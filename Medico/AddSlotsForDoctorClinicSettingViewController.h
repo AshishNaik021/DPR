@@ -104,19 +104,39 @@
 - (IBAction)slot3Remove:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
-@property IBOutlet NSMutableDictionary *dict;
+@property IBOutlet NSDictionary *dict;
 @property IBOutlet NSString *shift1;
 @property IBOutlet NSString *shift2;
 @property IBOutlet NSString *shift3;
 
-@property IBOutlet NSMutableArray *mondaySlot1Arr;
-@property IBOutlet NSMutableArray *tuesdaySlot1Arr;
-@property IBOutlet NSMutableArray *wednesdaySlot1Arr;
-@property IBOutlet NSMutableArray *thursdaySlot1Arr;
-@property IBOutlet NSMutableArray *fridaySlot1Arr;
-@property IBOutlet NSMutableArray *saturdaySlot1Arr;
-@property IBOutlet NSMutableArray *sundaySlot1Arr;
+@property IBOutlet NSDictionary *mondaySlot1Arr;
+@property IBOutlet NSDictionary *tuesdaySlot1Arr;
+@property IBOutlet NSDictionary *wednesdaySlot1Arr;
+@property IBOutlet NSDictionary *thursdaySlot1Arr;
+@property IBOutlet NSDictionary *fridaySlot1Arr;
+@property IBOutlet NSDictionary *saturdaySlot1Arr;
+@property IBOutlet NSDictionary *sundaySlot1Arr;
+
+@property IBOutlet NSDictionary *mondaySlot2Arr;
+@property IBOutlet NSDictionary *tuesdaySlot2Arr;
+@property IBOutlet NSDictionary *wednesdaySlot2Arr;
+@property IBOutlet NSDictionary *thursdaySlot2Arr;
+@property IBOutlet NSDictionary *fridaySlot2Arr;
+@property IBOutlet NSDictionary *saturdaySlot2Arr;
+@property IBOutlet NSDictionary *sundaySlot2Arr;
+
+@property IBOutlet NSDictionary *mondaySlot3Arr;
+@property IBOutlet NSDictionary *tuesdaySlot3Arr;
+@property IBOutlet NSDictionary *wednesdaySlot3Arr;
+@property IBOutlet NSDictionary *thursdaySlot3Arr;
+@property IBOutlet NSDictionary *fridaySlot3Arr;
+@property IBOutlet NSDictionary *saturdaySlot3Arr;
+@property IBOutlet NSDictionary *sundaySlot3Arr;
+
 @property  int *indexCount;
+@property int *indexCount1;
+@property int *indexCount2;
+
 @property int *integer;
 
 - (IBAction)done:(id)sender;
@@ -130,6 +150,7 @@
 @property BOOL *slot1SunBool;
 @property BOOL *slot1SelectAllBool;
 
+
 @property IBOutlet NSString *slot1MonDay;
 @property IBOutlet NSString *slot1TueDay;
 @property IBOutlet NSString *slot1WedDay;
@@ -137,6 +158,22 @@
 @property IBOutlet NSString *slot1FriDay;
 @property IBOutlet NSString *slot1SatDay;
 @property IBOutlet NSString *slot1SunDay;
+
+@property IBOutlet NSString *slot2MonDay;
+@property IBOutlet NSString *slot2TueDay;
+@property IBOutlet NSString *slot2WedDay;
+@property IBOutlet NSString *slot2ThuDay;
+@property IBOutlet NSString *slot2FriDay;
+@property IBOutlet NSString *slot2SatDay;
+@property IBOutlet NSString *slot2SunDay;
+
+@property IBOutlet NSString *slot3MonDay;
+@property IBOutlet NSString *slot3TueDay;
+@property IBOutlet NSString *slot3WedDay;
+@property IBOutlet NSString *slot3ThuDay;
+@property IBOutlet NSString *slot3FriDay;
+@property IBOutlet NSString *slot3SatDay;
+@property IBOutlet NSString *slot3SunDay;
 
 @property BOOL *slot2MonBool;
 @property BOOL *slot2TueBool;
