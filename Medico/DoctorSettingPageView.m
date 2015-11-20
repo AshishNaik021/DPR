@@ -45,12 +45,26 @@
     NSError *error = nil;
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSArray *arr = [json valueForKeyPath:@"demo"];
-    self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
+  //  self.doctorNameLabel.text = [[arr objectAtIndex:0] objectForKey:@"Name"];
     
-    
+    [self setName];
     // Do any additional setup after loading the view.
 }
 
+-(void)setName{
+    //    NSString *cameFrom = [self navigationController.v]
+    //    NSLog(@"%@",[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]);
+    //
+    //    NSString *string = [NSString stringWithFormat:[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2]];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud synchronize];
+    if ([[ud objectForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+        self.doctorNameLabel.text = [ud objectForKey:@"loggedInDoctor"];
+        NSLog(@"Login name was set");
+    }
+    else
+        NSLog(@"Name Not Set");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

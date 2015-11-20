@@ -118,7 +118,7 @@
     static NSString *CellIdentifier = @"TableCell";
     PatientProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    int row = [indexPath row];
+    int row = (int)[indexPath row];
     
        cell.patientNameLabel.text = [[patientArr objectAtIndex:row] objectForKey:@"name"];
     
