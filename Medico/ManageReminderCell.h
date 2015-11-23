@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *reminderTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reminderDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reminderTimeLabel;
-
+@property (weak, nonatomic) IBOutlet UIButton *checkForDeleteReminderButton;
+- (IBAction)checkFroDeleteReminder:(id)sender;
 
 
 @end

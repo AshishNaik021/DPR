@@ -13,6 +13,7 @@
 }
 
 
+
 @property IBOutlet NSArray *reminderArr;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;

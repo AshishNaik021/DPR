@@ -349,6 +349,8 @@
 		187A0C801BC67F1F003AC5D9 /* unchechRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7E1BC67F1F003AC5D9 /* unchechRadio.png */; };
 		187A0C821BC68ABD003AC5D9 /* ClinicList.json in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C811BC68ABD003AC5D9 /* ClinicList.json */; };
 		187A0C851BC68B5D003AC5D9 /* SearchClinicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */; };
+		18875A1B1C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18875A1A1C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.m */; };
+		18875A1D1C02FC7300EA8D2D /* Timing.png in Resources */ = {isa = PBXBuildFile; fileRef = 18875A1C1C02FC7300EA8D2D /* Timing.png */; };
 		188B90C11BEBA363003F425F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B90C01BEBA363003F425F /* Main.storyboard */; };
 		188B90C41BEBA473003F425F /* SearchResultClinicForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B90C31BEBA473003F425F /* SearchResultClinicForDoctorViewController.m */; };
 		189086541BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */; };
@@ -841,6 +843,9 @@
 		187A0C811BC68ABD003AC5D9 /* ClinicList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClinicList.json; sourceTree = "<group>"; };
 		187A0C831BC68B5D003AC5D9 /* SearchClinicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchClinicCell.h; sourceTree = "<group>"; };
 		187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicCell.m; sourceTree = "<group>"; };
+		18875A191C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewReminderForDoctorViewController.h; sourceTree = "<group>"; };
+		18875A1A1C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewReminderForDoctorViewController.m; sourceTree = "<group>"; };
+		18875A1C1C02FC7300EA8D2D /* Timing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Timing.png; sourceTree = "<group>"; };
 		188B90C01BEBA363003F425F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		188B90C21BEBA473003F425F /* SearchResultClinicForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultClinicForDoctorViewController.h; sourceTree = "<group>"; };
 		188B90C31BEBA473003F425F /* SearchResultClinicForDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultClinicForDoctorViewController.m; sourceTree = "<group>"; };
@@ -1261,6 +1266,8 @@
 				18C7DB011BC798E6005B93A9 /* Dental.json */,
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
+				18875A191C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.h */,
+				18875A1A1C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.m */,
 				189086521BFAF5D300669969 /* ManageTemplateForDoctorViewController.h */,
 				189086531BFAF5D300669969 /* ManageTemplateForDoctorViewController.m */,
 				189086501BFAF5D300669969 /* ManageTemplateForDoctorCell.h */,
@@ -1465,6 +1472,7 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18875A1C1C02FC7300EA8D2D /* Timing.png */,
 				180CF32D1BDF585B00FA7D86 /* background.png */,
 				180CF23A1BDF53FB00FA7D86 /* ipadBlue */,
 				180CF2391BDF53E800FA7D86 /* ipadGrey */,
@@ -1771,6 +1779,7 @@
 				180CF19C1BDF52C700FA7D86 /* templatesgrey@3x~iphone.png in Resources */,
 				180CF1711BDF52C700FA7D86 /* alarmOffgrey@3x~iphone.png in Resources */,
 				180CF2C51BDF545C00FA7D86 /* capturegrey@1x~ipad.png in Resources */,
+				18875A1D1C02FC7300EA8D2D /* Timing.png in Resources */,
 				180CF2181BDF539700FA7D86 /* Timinggrey@2x~iphone.png in Resources */,
 				180CF2831BDF543400FA7D86 /* searchdentistgrey@2x~ipad.png in Resources */,
 				180CF2DC1BDF545C00FA7D86 /* searchcolonoscopygrey@1x~ipad.png in Resources */,
@@ -1962,6 +1971,7 @@
 				186E579F1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.m in Sources */,
 				183D36D21BE338B5004328F9 /* DoctorDetailManageFinanceViewController.m in Sources */,
 				18C14F421BC2870F00AFF591 /* AssistantRegister.m in Sources */,
+				18875A1B1C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.m in Sources */,
 				189086571BFAF5D300669969 /* ManageTemplateForDoctorViewController.m in Sources */,
 				1854A2131BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m in Sources */,
 				182394EB1BBD0DCE00D97366 /* ViewController.m in Sources */,

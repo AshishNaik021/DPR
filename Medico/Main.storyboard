@@ -2516,25 +2516,28 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsn-lj-5Tq">
-                                                    <rect key="frame" x="323" y="13" width="12" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xI-n4-Zn0">
                                                     <rect key="frame" x="183" y="27" width="81" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-z8-iNJ">
+                                                    <rect key="frame" x="346" y="8" width="21" height="22"/>
+                                                    <state key="normal" image="unchecked.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="checkFroDeleteReminder:" destination="0HB-pi-VdD" eventType="touchUpInside" id="snD-1D-j9u"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="checkForDeleteReminderButton" destination="ETU-z8-iNJ" id="61D-sA-9xV"/>
                                             <outlet property="reminderDateLabel" destination="QID-lV-cRh" id="aQS-9c-5Xa"/>
                                             <outlet property="reminderTimeLabel" destination="4xI-n4-Zn0" id="dU0-3i-LmH"/>
                                             <outlet property="reminderTitleLabel" destination="4t3-km-e8G" id="qye-lc-p1M"/>
-                                            <segue destination="QGq-N5-obS" kind="show" identifier="Details" id="fBQ-St-Gd6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2550,6 +2553,7 @@
                                 </state>
                                 <connections>
                                     <action selector="add:" destination="wXD-7j-uQN" eventType="touchUpInside" id="Ye1-vJ-REm"/>
+                                    <segue destination="C4l-SR-ARZ" kind="push" id="F23-TG-4ep"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxG-mF-JJE">
@@ -2576,6 +2580,175 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MR-20-rD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1231.5" y="1084.5"/>
+        </scene>
+        <!--Add New Reminder For Doctor View Controller-->
+        <scene sceneID="DEa-2u-4bk">
+            <objects>
+                <viewController storyboardIdentifier="AddNewReminderForDoctorViewController" id="C4l-SR-ARZ" customClass="AddNewReminderForDoctorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cNy-ep-T8d"/>
+                        <viewControllerLayoutGuide type="bottom" id="HPh-94-rye"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoB-Jg-IiS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiH-jx-Oqd">
+                                <rect key="frame" x="16" y="98" width="87" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmT-IT-ZQg">
+                                <rect key="frame" x="16" y="126" width="87" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iH-fQ-VdQ">
+                                <rect key="frame" x="16" y="154" width="87" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odX-Xa-Mfp">
+                                <rect key="frame" x="16" y="182" width="87" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-fs-IVj">
+                                <rect key="frame" x="92" y="98" width="267" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwC-0d-TB2">
+                                <rect key="frame" x="92" y="127" width="190" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mG-PD-aED">
+                                <rect key="frame" x="92" y="154" width="190" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wL-n8-4cz">
+                                <rect key="frame" x="92" y="182" width="190" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQX-Rb-usG">
+                                <rect key="frame" x="92" y="386" width="66" height="30"/>
+                                <state key="normal" title="Add Time">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2C-Ub-kve">
+                                <rect key="frame" x="216" y="386" width="66" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-c5-J8R">
+                                <rect key="frame" x="308" y="122" width="31" height="27"/>
+                                <state key="normal" image="calendar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDateCalendar:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="7lU-cJ-8Fd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R0-RN-d6G">
+                                <rect key="frame" x="308" y="150" width="31" height="27"/>
+                                <state key="normal" image="calendar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endDateCalendar:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="Gc0-6R-aZr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O95-fE-dLn">
+                                <rect key="frame" x="308" y="178" width="31" height="27"/>
+                                <state key="normal" image="Timing.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTime1:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="1vf-K4-Nsg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKQ-vT-exv">
+                                <rect key="frame" x="344" y="181" width="20" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTimeSlot1:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="MqW-gP-f8S"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Op1-o6-ZVb">
+                                <rect key="frame" x="92" y="213" width="190" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s87-HS-y56">
+                                <rect key="frame" x="308" y="209" width="31" height="27"/>
+                                <state key="normal" image="Timing.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTime2:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="hGo-0g-riu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-at-Ca5">
+                                <rect key="frame" x="344" y="212" width="20" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTimeSlot2:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="3aY-Ai-VL8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F8v-7x-JFJ">
+                                <rect key="frame" x="92" y="244" width="190" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGt-8Y-974">
+                                <rect key="frame" x="308" y="240" width="31" height="27"/>
+                                <state key="normal" image="Timing.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setTime3:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="usx-bD-HnT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KTg-cB-Adx"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="addTimeSlot1Button" destination="NKQ-vT-exv" id="agL-Y9-2Zw"/>
+                        <outlet property="addTimeSlot2Button" destination="seQ-at-Ca5" id="fqK-Ij-UQN"/>
+                        <outlet property="endDateCalendarButton" destination="8R0-RN-d6G" id="diW-Qy-Hme"/>
+                        <outlet property="reminderEndDateField" destination="7mG-PD-aED" id="QN6-sK-WdU"/>
+                        <outlet property="reminderSetTime1Field" destination="0wL-n8-4cz" id="teT-Ak-f4r"/>
+                        <outlet property="reminderSetTime2Field" destination="Op1-o6-ZVb" id="3vS-Te-GNJ"/>
+                        <outlet property="reminderSetTime3Field" destination="F8v-7x-JFJ" id="Tew-Bf-W9o"/>
+                        <outlet property="reminderStartDateField" destination="EwC-0d-TB2" id="pYb-s8-62k"/>
+                        <outlet property="reminderTitleText" destination="8gm-fs-IVj" id="yVc-kg-Vvp"/>
+                        <outlet property="setTime1Button" destination="O95-fE-dLn" id="Uef-aV-hFw"/>
+                        <outlet property="setTime2Button" destination="s87-HS-y56" id="jui-Eg-o6i"/>
+                        <outlet property="setTime3Button" destination="aGt-8Y-974" id="Anb-54-9JT"/>
+                        <outlet property="startDateCalendarButton" destination="Fcj-c5-J8R" id="0ig-2N-ZT0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSu-t4-8CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1701.5" y="1084.5"/>
         </scene>
         <!--Reminder Details View Controller-->
         <scene sceneID="58n-pE-SeO">
@@ -2654,7 +2827,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOu-Fa-o1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710.5" y="1084.5"/>
+            <point key="canvasLocation" x="2143.5" y="1084.5"/>
         </scene>
         <!--Doctor Add Treatment View Controller-->
         <scene sceneID="7hI-uy-RYY">
@@ -10643,6 +10816,26 @@
             </objects>
             <point key="canvasLocation" x="-57.5" y="-3797.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="RiK-sD-Npg">
+            <objects>
+                <viewController id="eVf-o2-XKh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mne-GV-o6d"/>
+                        <viewControllerLayoutGuide type="bottom" id="SoM-fp-iOC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZfH-mr-cGI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t06-1S-ZdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431.5" y="-3797.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="O4K-MA-jb5">
             <objects>
@@ -10807,6 +11000,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Timing.png" width="50" height="50"/>
         <image name="appointment.png" width="251" height="303"/>
         <image name="arrowButton.png" width="50" height="32"/>
         <image name="assistance.png" width="89" height="89"/>

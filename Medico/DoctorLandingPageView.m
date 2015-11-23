@@ -15,6 +15,7 @@
 #import "ManageReminderViewController.h"
 #import "SearchPatientViewController.h"
 #import "PatientSearchDoctorViewController.h"
+#import "SearchClinicView.h"
 
 
 @interface DoctorLandingPageView ()
@@ -93,6 +94,8 @@
     [self.navigationController pushViewController:objPatientSearchDoctorViewController animated:YES];
 }
 - (IBAction)searchClinic:(id)sender {
+    SearchClinicView *clinic = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchClinicView"];
+    [self.navigationController pushViewController:clinic animated:YES];
 }
 - (IBAction)patientprofile:(id)sender {
     PatientProfileViewController *objDoctorManageAppointmentsViewController =[self.storyboard instantiateViewControllerWithIdentifier:@"PatientProfileViewController"];
