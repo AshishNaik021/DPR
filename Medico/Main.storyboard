@@ -6113,7 +6113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlv-OL-Frd">
-                                <rect key="frame" x="16" y="335" width="17" height="18"/>
+                                <rect key="frame" x="16" y="392" width="17" height="18"/>
                                 <state key="normal" image="unchechRadio.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -6145,29 +6145,80 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Visit Summary" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-Uz-Uew">
-                                <rect key="frame" x="48" y="240" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Visited" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-N7-4JT">
-                                <rect key="frame" x="48" y="333" width="84" height="21"/>
+                                <rect key="frame" x="48" y="390" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kF9-j0-qx9">
+                                <rect key="frame" x="289" y="470" width="41" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="hGf-lD-dk2" eventType="touchUpInside" id="mL9-ng-REc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-oQ-EEu">
+                                <rect key="frame" x="138" y="164" width="29" height="24"/>
+                                <state key="normal" image="emptyStar.jpeg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ratingOne:" destination="hGf-lD-dk2" eventType="touchUpInside" id="Kxa-zQ-hGS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYJ-mf-ass">
+                                <rect key="frame" x="175" y="164" width="29" height="24"/>
+                                <state key="normal" image="emptyStar.jpeg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ratingTwo:" destination="hGf-lD-dk2" eventType="touchUpInside" id="aDw-pE-nh1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmW-vd-6zE">
+                                <rect key="frame" x="212" y="164" width="29" height="24"/>
+                                <state key="normal" image="emptyStar.jpeg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ratingThree:" destination="hGf-lD-dk2" eventType="touchUpInside" id="V8S-cM-Nz7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B29-zG-5RA">
+                                <rect key="frame" x="249" y="164" width="29" height="24"/>
+                                <state key="normal" image="emptyStar.jpeg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ratingFour:" destination="hGf-lD-dk2" eventType="touchUpInside" id="34t-N2-ZWo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-BH-41y">
+                                <rect key="frame" x="286" y="164" width="29" height="24"/>
+                                <state key="normal" image="emptyStar.jpeg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ratingFive:" destination="hGf-lD-dk2" eventType="touchUpInside" id="Pbh-YM-n5h"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add Summary" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-vc-R8E">
-                                <rect key="frame" x="187" y="240" width="172" height="72"/>
+                                <rect key="frame" x="138" y="204" width="202" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kF9-j0-qx9">
-                                <rect key="frame" x="289" y="411" width="41" height="30"/>
-                                <state key="normal" title="Done">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-K1-aE3">
+                                <rect key="frame" x="205" y="292" width="149" height="30"/>
+                                <state key="normal" title="Add Visit Summary  &gt;">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addVisiteSummary:" destination="hGf-lD-dk2" eventType="touchUpInside" id="myV-hh-t98"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6175,7 +6226,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="addVisiteSummaryButton" destination="DIZ-K1-aE3" id="gef-jx-b92"/>
+                        <outlet property="doneButton" destination="kF9-j0-qx9" id="V2r-F3-2H4"/>
                         <outlet property="notVisitedButton" destination="dlv-OL-Frd" id="ALO-K2-oys"/>
+                        <outlet property="ratingFiveButton" destination="PkV-BH-41y" id="KjX-9Z-oJy"/>
+                        <outlet property="ratingFourButton" destination="B29-zG-5RA" id="bPx-lN-k01"/>
+                        <outlet property="ratingOneButton" destination="J7H-oQ-EEu" id="lzp-UA-Tpn"/>
+                        <outlet property="ratingThreeButton" destination="VmW-vd-6zE" id="ShP-0R-XoW"/>
+                        <outlet property="ratingTwoButton" destination="rYJ-mf-ass" id="ZzW-QK-twr"/>
+                        <outlet property="reviewsTextField" destination="Vz4-vc-R8E" id="01X-MB-w39"/>
                         <outlet property="visitedButton" destination="cXA-JT-ZsX" id="rVt-ah-dNV"/>
                     </connections>
                 </viewController>
@@ -11795,6 +11854,7 @@
         <image name="doctorLanding.png" width="144" height="145"/>
         <image name="doctordefault.png" width="76" height="76"/>
         <image name="downArrow.png" width="256" height="256"/>
+        <image name="emptyStar.jpeg" width="113" height="106"/>
         <image name="generalPhysician.png" width="81" height="83"/>
         <image name="gynecologist.png" width="60" height="57"/>
         <image name="history.png" width="35" height="43"/>

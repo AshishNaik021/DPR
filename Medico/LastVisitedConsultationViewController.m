@@ -19,6 +19,7 @@
 @synthesize isVisited;
 @synthesize isNotVisitedClicked;
 @synthesize isVisitedClicked;
+@synthesize reviewsTextField;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -37,6 +38,8 @@
     self.navigationItem.title = @"Consultations";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
+    
+    [reviewsTextField.layer setBorderWidth:1.0];
     
 
     
@@ -61,5 +64,19 @@
 }
 
 - (IBAction)notVisitedClicked:(id)sender {
+}
+- (IBAction)ratingOne:(id)sender {
+}
+- (IBAction)ratingTwo:(id)sender {
+}
+- (IBAction)ratingThree:(id)sender {
+}
+- (IBAction)ratingFour:(id)sender {
+}
+- (IBAction)ratingFive:(id)sender {
+}
+- (IBAction)addVisiteSummary:(id)sender {
+}
+- (IBAction)done:(id)sender {
 }
 @end

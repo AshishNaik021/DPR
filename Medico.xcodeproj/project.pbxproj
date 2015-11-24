@@ -357,6 +357,8 @@
 		188E5E4F1C0437460001E400 /* PatientDoctorConsultationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5E4E1C0437460001E400 /* PatientDoctorConsultationsCell.m */; };
 		188E5E521C043F150001E400 /* DetailPatientDoctorConsultationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5E511C043F150001E400 /* DetailPatientDoctorConsultationsViewController.m */; };
 		188E5E551C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E5E541C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m */; };
+		188E5E581C04863F0001E400 /* emptyStar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 188E5E561C04863F0001E400 /* emptyStar.jpeg */; };
+		188E5E591C04863F0001E400 /* filledStar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 188E5E571C04863F0001E400 /* filledStar.jpeg */; };
 		189086541BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */; };
 		189086551BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */; };
 		189086561BFAF5D300669969 /* ManageTemplateForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189086511BFAF5D300669969 /* ManageTemplateForDoctorCell.m */; };
@@ -861,6 +863,8 @@
 		188E5E511C043F150001E400 /* DetailPatientDoctorConsultationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPatientDoctorConsultationsViewController.m; sourceTree = "<group>"; };
 		188E5E531C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPatientDoctorConsultationsCell.h; sourceTree = "<group>"; };
 		188E5E541C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPatientDoctorConsultationsCell.m; sourceTree = "<group>"; };
+		188E5E561C04863F0001E400 /* emptyStar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = emptyStar.jpeg; sourceTree = "<group>"; };
+		188E5E571C04863F0001E400 /* filledStar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = filledStar.jpeg; sourceTree = "<group>"; };
 		1890864C1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplateForDoctorCell.h; sourceTree = "<group>"; };
 		1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailManageTemplateForDoctorCell.m; sourceTree = "<group>"; };
 		1890864E1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailManageTemplateForDoctorViewController.h; sourceTree = "<group>"; };
@@ -1492,6 +1496,8 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				188E5E561C04863F0001E400 /* emptyStar.jpeg */,
+				188E5E571C04863F0001E400 /* filledStar.jpeg */,
 				18875A1C1C02FC7300EA8D2D /* Timing.png */,
 				180CF32D1BDF585B00FA7D86 /* background.png */,
 				180CF23A1BDF53FB00FA7D86 /* ipadBlue */,
@@ -1689,6 +1695,7 @@
 				180CF2321BDF53B000FA7D86 /* patientgirlprofileblue@2x~iphone.png in Resources */,
 				180CF1951BDF52C700FA7D86 /* searchMammographygrey@3x~iphone.png in Resources */,
 				180CF27C1BDF543400FA7D86 /* patientgirlgrey@2x~ipad.png in Resources */,
+				188E5E581C04863F0001E400 /* emptyStar.jpeg in Resources */,
 				180CF28E1BDF543400FA7D86 /* searchPediatriciangrey@2x~ipad.png in Resources */,
 				180CF2721BDF543400FA7D86 /* filtergrey@2x~ipad.png in Resources */,
 				180CF2E91BDF545C00FA7D86 /* searchPETgrey@1x~ipad.png in Resources */,
@@ -1900,6 +1907,7 @@
 				180CF1941BDF52C700FA7D86 /* searchLipidProfilesgrey@3x~iphone.png in Resources */,
 				180CF2E61BDF545C00FA7D86 /* searchMammographygrey@1x~ipad.png in Resources */,
 				180CF2911BDF543400FA7D86 /* searchXraygrey@2x~ipad.png in Resources */,
+				188E5E591C04863F0001E400 /* filledStar.jpeg in Resources */,
 				180CF2D81BDF545C00FA7D86 /* searchangiographygrey@1x~ipad.png in Resources */,
 				180CF2031BDF539700FA7D86 /* searchbiopsygrey@2x~iphone.png in Resources */,
 				180CF1771BDF52C700FA7D86 /* consultinggrey@3x~iphone.png in Resources */,
