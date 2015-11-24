@@ -14,6 +14,11 @@
 @end
 
 @implementation LastVisitedConsultationViewController
+@synthesize visitedButton;
+@synthesize notVisitedButton;
+@synthesize isVisited;
+@synthesize isNotVisitedClicked;
+@synthesize isVisitedClicked;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
