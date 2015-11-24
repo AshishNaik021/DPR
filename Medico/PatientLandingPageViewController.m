@@ -7,8 +7,10 @@
 //
 
 #import "PatientLandingPageViewController.h"
-#import "PatientLandingCell.h"
 #import "LoginPage.h"
+#import "PatientSettingPageViewController.h"
+#import "PatientDoctorConsultationsViewController.h"
+
 
 @interface PatientLandingPageViewController ()
 
@@ -40,57 +42,17 @@
     NSLog(@"PatientLandingPageViewController.m");
     [super viewDidLoad];
     
-    _image = @[@"default.png",
-               @"default.png",
-               @"default.png",
-               @"default.png"];
-    
-    _titleName = @[@"Doctor Consultations",
-                   @"Manage Appointments",
-                   @"Clinics and Labs",
-                   @"Medicine Alarm"];
-    
-    _total = @[@"2",
-               @"4",
-               @"10",
-               @"5"];
+ 
     self.navigationItem.title = @"Welcome";
-//    pNameLabel.text = _patientName;
     self.navigationItem.hidesBackButton = YES;
 
-//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
-  //  [[self navigationItem] setBackBarButtonItem:backButton];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    
     [self setName];
 
     // Do any additional setup after loading the view.
 }
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return _titleName.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"TableCell";
-    PatientLandingCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    //for(int count = 0;count<_arr.count;count++){
-    int row = [indexPath row];
-    cell.titleLabel.text = _titleName[row];
-    cell.numberLabel.text = _total[row];
-    cell.image.image = [UIImage imageNamed:_image[row]];
-    return cell;
-    
-}
-
 
 
 
@@ -117,4 +79,25 @@
  }
  */
 
+- (IBAction)doctorConsultations:(id)sender {
+    PatientDoctorConsultationsViewController *consultation =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientDoctorConsultationsViewController"];
+    [self.navigationController pushViewController:consultation animated:YES];
+}
+- (IBAction)diagnosticClinicsLabs:(id)sender {
+}
+- (IBAction)appointment:(id)sender {
+}
+- (IBAction)reminder:(id)sender {
+}
+- (IBAction)searchDoctor:(id)sender {
+}
+- (IBAction)searchClinic:(id)sender {
+}
+- (IBAction)setting:(id)sender {
+    PatientSettingPageViewController *setting =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientSettingPageViewController"];
+    [self.navigationController pushViewController:setting animated:YES];
+
+}
 @end
