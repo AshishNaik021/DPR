@@ -19,13 +19,16 @@
 @synthesize isVisited;
 @synthesize isNotVisitedClicked;
 @synthesize isVisitedClicked;
-@synthesize reviewsTextField;
 
 - (void) homePage:(id)sender{
-    DoctorLandingPageView *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
-    
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+        DoctorLandingPageView *DoctorHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:DoctorHome animated:YES];
+    }
+    else{
+        NSLog(@"Navigate to patient");
+    }
 }
 - (void)viewDidLoad {
     NSLog(@"LastVisitedConsultationViewController.m");
@@ -39,44 +42,31 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
-    [reviewsTextField.layer setBorderWidth:1.0];
-    
-
+    isVisited = NO;
+    isNotVisitedClicked = NO;
+    isVisitedClicked = NO;
     
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-   }
+}
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)visitedClicked:(id)sender {
+    
 }
 
 - (IBAction)notVisitedClicked:(id)sender {
-}
-- (IBAction)ratingOne:(id)sender {
-}
-- (IBAction)ratingTwo:(id)sender {
-}
-- (IBAction)ratingThree:(id)sender {
-}
-- (IBAction)ratingFour:(id)sender {
-}
-- (IBAction)ratingFive:(id)sender {
-}
-- (IBAction)addVisiteSummary:(id)sender {
-}
-- (IBAction)done:(id)sender {
 }
 @end
