@@ -52,4 +52,9 @@
 }
 */
 
+- (IBAction)visitedClicked:(id)sender {
+}
+
+- (IBAction)notVisitedClicked:(id)sender {
+}
 @end
