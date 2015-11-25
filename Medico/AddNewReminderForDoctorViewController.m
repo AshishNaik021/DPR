@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"AddNewReminderForDoctorViewController.m");
     reminderSetTime2Field.hidden = TRUE;
     reminderSetTime3Field.hidden = TRUE;
     setTime2Button.hidden = TRUE;

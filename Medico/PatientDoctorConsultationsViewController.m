@@ -10,6 +10,7 @@
 #import "PatientDoctorConsultationsCell.h"
 #import "PatientLandingPageViewController.h"
 #import "DetailPatientDoctorConsultationsViewController.h"
+#import "YearlyCountAppointmentForPatientDoctorConsultationViewController.h"
 
 @interface PatientDoctorConsultationsViewController ()
 
@@ -27,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"PatientDoctorConsultationsViewController.m");
     self.navigationItem.title = @"Consultations";
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
@@ -63,11 +65,35 @@
     int row = [indexPath row];
 
     cell.showDetailsButton.tag =row;
+    cell.totalCountButton.tag = row;
+    [cell.totalCountButton addTarget:self action:@selector(totalCount:) forControlEvents:UIControlEventTouchUpInside];
     [cell.showDetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
 
     return cell;
     
 }
+
+- (void)totalCount:(id)sender {
+    UIButton *senderButton = (UIButton *)sender;
+    int n = senderButton.tag;
+    /*
+     AllDetailInformationViewController *allInfo =
+     [self.storyboard instantiateViewControllerWithIdentifier:@"AllDetailInformationViewController"];
+     allInfo.summaryTimePassData = [[patientAppointmentArr objectAtIndex:n] valueForKey:@"bookTime"];
+     allInfo.summaryDoctorIDPassData = [[patientAppointmentArr objectAtIndex:n] valueForKey:@"doctorId"];
+     appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:n] objectForKey:@"appointmentDate"]];
+     
+     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+     [formatter setDateFormat:@"dd-MM-yyyy"];
+     date = [formatter stringFromDate:appointmentDate];
+     */
+    
+    YearlyCountAppointmentForPatientDoctorConsultationViewController *details =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"YearlyCountAppointmentForPatientDoctorConsultationViewController"];
+    
+    [self.navigationController pushViewController:details animated:YES];
+}
+
 - (void)showDetails:(id)sender {
     UIButton *senderButton = (UIButton *)sender;
     int n = senderButton.tag;

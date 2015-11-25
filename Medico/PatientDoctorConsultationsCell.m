@@ -11,6 +11,7 @@
 @implementation PatientDoctorConsultationsCell
 
 - (void)awakeFromNib {
+    NSLog(@"PatientDoctorConsultationsCell.m");
     // Initialization code
 }
 

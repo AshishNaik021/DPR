@@ -56,6 +56,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"DetailManageTemplateForDoctorViewController.m");
+
     NSLog(@"Name======%@",_procedureName);
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];

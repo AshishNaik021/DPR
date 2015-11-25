@@ -8,6 +8,7 @@
 
 #import "AllDetailInformationViewController.h"
 #import "DoctorLandingPageView.h"
+#import "AllDetailInformationCell.h"
 
 @interface AllDetailInformationViewController ()
 
@@ -97,6 +98,8 @@
     [super viewDidLoad];
     
    
+    self.summaryMedicinTableView.layer.borderWidth = 1.0;
+    
     NSLog(@"Date----------------%@",_summaryDatePassData);
     NSLog(@"Time-----------------%@",_summaryTimePassData);
     NSLog(@"patient Email----------%@",_summaryPatientEmailPassData);
@@ -142,6 +145,32 @@
 
     
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"TableCell";
+    AllDetailInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    //for(int count = 0;count<_arr.count;count++){
+    int row = [indexPath row];
+   // cell.subProcedureName.text = [[subprocedureArr objectAtIndex:row] objectForKey:@"templateName"];
+    
+    return cell;
+    
+}
+
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;

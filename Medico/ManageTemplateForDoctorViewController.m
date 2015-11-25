@@ -63,7 +63,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"ManageTemplateForDoctorViewController.m");
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchTemplateFunction:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;

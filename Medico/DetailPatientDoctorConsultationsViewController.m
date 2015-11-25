@@ -32,7 +32,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"DetailPatientDoctorConsultationsViewController.m");
+
     [profileSpecializationField.layer setBorderWidth:1.0];
     self.navigationItem.title = @"Clinic Name";
     

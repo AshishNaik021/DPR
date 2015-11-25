@@ -363,6 +363,10 @@
 		189086551BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */; };
 		189086561BFAF5D300669969 /* ManageTemplateForDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189086511BFAF5D300669969 /* ManageTemplateForDoctorCell.m */; };
 		189086571BFAF5D300669969 /* ManageTemplateForDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189086531BFAF5D300669969 /* ManageTemplateForDoctorViewController.m */; };
+		189125361C05753E00136C97 /* AllDetailInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189125351C05753E00136C97 /* AllDetailInformationCell.m */; };
+		189125391C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189125381C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m */; };
+		1891253C1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891253B1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m */; };
+		1891253F1C058CF500136C97 /* PatientAllDetailInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */; };
 		1895A1DC1BC8CBF100C8647D /* DetailPatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */; };
 		1897CD991BCCC5570043F0FD /* PatientSettingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */; };
 		1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */; };
@@ -873,6 +877,14 @@
 		189086511BFAF5D300669969 /* ManageTemplateForDoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateForDoctorCell.m; sourceTree = "<group>"; };
 		189086521BFAF5D300669969 /* ManageTemplateForDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTemplateForDoctorViewController.h; sourceTree = "<group>"; };
 		189086531BFAF5D300669969 /* ManageTemplateForDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTemplateForDoctorViewController.m; sourceTree = "<group>"; };
+		189125341C05753E00136C97 /* AllDetailInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllDetailInformationCell.h; sourceTree = "<group>"; };
+		189125351C05753E00136C97 /* AllDetailInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllDetailInformationCell.m; sourceTree = "<group>"; };
+		189125371C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyCountAppointmentForPatientDoctorConsultationViewController.h; sourceTree = "<group>"; };
+		189125381C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyCountAppointmentForPatientDoctorConsultationViewController.m; sourceTree = "<group>"; };
+		1891253A1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YearlyCountAppointmentForPatientDoctorConsultationCell.h; sourceTree = "<group>"; };
+		1891253B1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YearlyCountAppointmentForPatientDoctorConsultationCell.m; sourceTree = "<group>"; };
+		1891253D1C058CF500136C97 /* PatientAllDetailInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientAllDetailInformationViewController.h; sourceTree = "<group>"; };
+		1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientAllDetailInformationViewController.m; sourceTree = "<group>"; };
 		1895A1DA1BC8CBF100C8647D /* DetailPatientProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPatientProfileViewController.h; sourceTree = "<group>"; };
 		1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPatientProfileViewController.m; sourceTree = "<group>"; };
 		1897CD971BCCC5570043F0FD /* PatientSettingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSettingPageViewController.h; sourceTree = "<group>"; };
@@ -1282,6 +1294,8 @@
 				18C7DB011BC798E6005B93A9 /* Dental.json */,
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
+				1891253D1C058CF500136C97 /* PatientAllDetailInformationViewController.h */,
+				1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */,
 				186BD6261BCFB0FF00B43A8C /* PatientLandingPageViewController.h */,
 				186BD6271BCFB0FF00B43A8C /* PatientLandingPageViewController.m */,
 				188E5E471C0431C70001E400 /* PatientDoctorConsultationsViewController.h */,
@@ -1292,6 +1306,10 @@
 				188E5E511C043F150001E400 /* DetailPatientDoctorConsultationsViewController.m */,
 				188E5E531C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.h */,
 				188E5E541C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m */,
+				189125371C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.h */,
+				189125381C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m */,
+				1891253A1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.h */,
+				1891253B1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m */,
 				18875A191C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.h */,
 				18875A1A1C02DB0500EA8D2D /* AddNewReminderForDoctorViewController.m */,
 				189086521BFAF5D300669969 /* ManageTemplateForDoctorViewController.h */,
@@ -1334,6 +1352,8 @@
 				183511901BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m */,
 				183D407A1BDDE56C00AB4FA5 /* AllDetailInformationViewController.h */,
 				183D407B1BDDE56C00AB4FA5 /* AllDetailInformationViewController.m */,
+				189125341C05753E00136C97 /* AllDetailInformationCell.h */,
+				189125351C05753E00136C97 /* AllDetailInformationCell.m */,
 				184C234D1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.h */,
 				184C234E1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m */,
 				184C23501BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.h */,
@@ -1982,6 +2002,7 @@
 				18C7DB051BC799ED005B93A9 /* SearchTemplateCell.m in Sources */,
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
 				188E5E491C0431C70001E400 /* PatientDoctorConsultationsViewController.m in Sources */,
+				1891253C1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m in Sources */,
 				1897CD991BCCC5570043F0FD /* PatientSettingPageViewController.m in Sources */,
 				185D87031BD796AB003B357C /* SearchPatientForDoctorViewController.m in Sources */,
 				18327F331BC5234B002210BC /* TemplateDetailCell.m in Sources */,
@@ -2040,6 +2061,7 @@
 				1842F31C1BC399A80055597E /* ManageAssistantCell.m in Sources */,
 				188E5E551C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m in Sources */,
 				183D40871BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m in Sources */,
+				189125391C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m in Sources */,
 				184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */,
 				188B90C41BEBA473003F425F /* SearchResultClinicForDoctorViewController.m in Sources */,
 				187330391BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m in Sources */,
@@ -2074,10 +2096,12 @@
 				183D40841BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m in Sources */,
 				185D870E1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m in Sources */,
 				18327F3E1BC536DD002210BC /* EditTemplateView.m in Sources */,
+				1891253F1C058CF500136C97 /* PatientAllDetailInformationViewController.m in Sources */,
 				186D36971BE201EF00EBA634 /* DoctorManageFinanceCell.m in Sources */,
 				1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
 				186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */,
+				189125361C05753E00136C97 /* AllDetailInformationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

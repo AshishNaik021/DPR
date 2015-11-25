@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>{
+@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate>{
 }
 @property IBOutlet NSMutableArray *array;
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *doctorsNoteTagButton;
 @property (weak, nonatomic) IBOutlet UIButton *treatmentPlanTagButton;
 @property (weak, nonatomic) IBOutlet UIButton *invoicesTagButton;
+@property (weak, nonatomic) IBOutlet UITableView *summaryMedicinTableView;
 
 @property (weak, nonatomic) IBOutlet UIView *summaryContentView;
 @property (weak, nonatomic) IBOutlet UIView *documentContentView;
