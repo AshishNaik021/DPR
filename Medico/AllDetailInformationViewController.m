@@ -142,6 +142,7 @@
     [array addObject:@"Cost Dollar"];
     self.collection.layer.borderWidth = 1.0f;
 
+    
 
     
 }

@@ -1,14 +1,14 @@
 //
-//  UploadDocumentsViewController.h
+//  PatientUploadDocumentsViewController.h
 //  Medico
 //
-//  Created by APPLE on 26/10/15.
+//  Created by Apple on 25/11/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UploadDocumentsViewController : UIViewController
+@interface PatientUploadDocumentsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *uploadContentView;
 @property (weak, nonatomic) IBOutlet UITextField *categoryField;
@@ -24,7 +24,5 @@
 - (IBAction)save:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *closeButton;
 - (IBAction)close:(id)sender;
-
-
 
 @end

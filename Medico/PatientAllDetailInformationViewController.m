@@ -7,23 +7,117 @@
 //
 
 #import "PatientAllDetailInformationViewController.h"
+#import "PatientLandingPageViewController.h"
+#import "PatientSymptomHistoryViewController.h"
+#import "PatientDiagnosisHistoryViewController.h"
+#import "PatientMedicineHistoryViewController.h"
+#import "PatientTestPrescribedHistoryViewController.h"
+#import "PatientAllDetailSummaryInformationCell.h"
+#import "PatientUploadDocumentsViewController.h"
 
 @interface PatientAllDetailInformationViewController ()
 
 @end
 
 @implementation PatientAllDetailInformationViewController
+@synthesize summaryContentView;
+@synthesize doctorNoteContentView;
+@synthesize treatmentPlanContentView;
+@synthesize invoiceContentView;
+@synthesize documentContentView;
+@synthesize summaryTabButton;
+@synthesize doctorNoteTabButton;
+@synthesize documentTabButton;
+@synthesize invoiceTabButton;
+@synthesize treatmentPlanTabButton;
+@synthesize summarySymptomsTextView;
+@synthesize summaryDiagnosisTextView;
+@synthesize summaryTestPrescribedTextView;
+
+- (void) patientHomePage:(id)sender{
+    PatientLandingPageViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"PatientAllDetailInformationViewController.m");
+    self.navigationItem.title = @"Doctors Name";
+    
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(patientHomePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    
+    [summarySymptomsTextView.layer setBorderWidth:1.0];
+    [summaryDiagnosisTextView.layer setBorderWidth:1.0];
+    [summaryTestPrescribedTextView.layer setBorderWidth:1.0];
+    self.summaryTableView.layer.borderWidth = 1.0;
+    
+    documentContentView.hidden = TRUE;
+    doctorNoteContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    invoiceContentView.hidden = TRUE;
+    [summaryTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    PatientAllDetailSummaryInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    int row = [indexPath row];
+    
+    return cell;
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *newVC = segue.destinationViewController;
+    
+    [PatientAllDetailInformationViewController setPresentationStyleForSelfController:self presentingController:newVC];
+}
+
++ (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController
+{
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)])
+    {
+        //iOS 8.0 and above
+        presentingController.providesPresentationContextTransitionStyle = YES;
+        presentingController.definesPresentationContext = YES;
+        
+        [presentingController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    }
+    else
+    {
+        [selfController setModalPresentationStyle:UIModalPresentationCurrentContext];
+        [selfController.navigationController setModalPresentationStyle:UIModalPresentationCurrentContext];
+    }
+}
+
+
 
 /*
 #pragma mark - Navigation
@@ -35,4 +129,108 @@
 }
 */
 
+- (IBAction)summaryTab:(id)sender {
+    summaryContentView.hidden = FALSE;
+    documentContentView.hidden = TRUE;
+    doctorNoteContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    invoiceContentView.hidden = TRUE;
+    [summaryTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [documentTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [doctorNoteTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [treatmentPlanTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [invoiceTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    
+
+}
+- (IBAction)documentTab:(id)sender {
+    documentContentView.hidden = FALSE;
+    summaryContentView.hidden = TRUE;
+    doctorNoteContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    invoiceContentView.hidden = TRUE;
+    [documentTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [summaryTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [doctorNoteTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [treatmentPlanTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [invoiceTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+
+}
+- (IBAction)treatmentPlanTab:(id)sender {
+    treatmentPlanContentView.hidden = FALSE;
+    summaryContentView.hidden = TRUE;
+    doctorNoteContentView.hidden = TRUE;
+    documentContentView.hidden = TRUE;
+    invoiceContentView.hidden = TRUE;
+    [treatmentPlanTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [documentTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [doctorNoteTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [summaryTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [invoiceTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+
+}
+- (IBAction)invoiceTab:(id)sender {
+    invoiceContentView.hidden = FALSE;
+    summaryContentView.hidden = TRUE;
+    doctorNoteContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    documentContentView.hidden = TRUE;
+    [invoiceTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [documentTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [doctorNoteTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [treatmentPlanTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [summaryTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+}
+- (IBAction)doctorNoteTab:(id)sender {
+    doctorNoteContentView.hidden = FALSE;
+    summaryContentView.hidden = TRUE;
+    documentContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    invoiceContentView.hidden = TRUE;
+    [doctorNoteTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [documentTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [summaryTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [treatmentPlanTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [invoiceTabButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+}
+- (IBAction)summarySave:(id)sender {
+}
+
+- (IBAction)summarySymptoms:(id)sender {
+    
+    PatientSymptomHistoryViewController *symptoms =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientSymptomHistoryViewController"];
+    [self.navigationController pushViewController:symptoms animated:YES];
+    
+}
+
+- (IBAction)summaryDiagnosis:(id)sender {
+    
+    PatientDiagnosisHistoryViewController *diagnosis =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientDiagnosisHistoryViewController"];
+    [self.navigationController pushViewController:diagnosis animated:YES];
+
+}
+
+- (IBAction)summaryMedicinePrescribed:(id)sender {
+    
+    PatientMedicineHistoryViewController *medicine =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientMedicineHistoryViewController"];
+    [self.navigationController pushViewController:medicine animated:YES];
+    
+}
+
+- (IBAction)summaryTestPrescribed:(id)sender {
+    
+    PatientTestPrescribedHistoryViewController *medicine =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientTestPrescribedHistoryViewController"];
+    [self.navigationController pushViewController:medicine animated:YES];
+    
+}
+- (IBAction)documentAddFiles:(id)sender {
+    
+//    UploadDocumentsViewController *upload =
+//    [self.storyboard instantiateViewControllerWithIdentifier:@"UploadDocumentsViewController"];
+//    [self.navigationController pushViewController:upload animated:YES];
+}
 @end

@@ -9,6 +9,7 @@
 #import "YearlyCountAppointmentForPatientDoctorConsultationViewController.h"
 #import "YearlyCountAppointmentForPatientDoctorConsultationCell.h"
 #import "PatientLandingPageViewController.h"
+#import "PatientAllDetailInformationViewController.h"
 
 @interface YearlyCountAppointmentForPatientDoctorConsultationViewController ()
 
@@ -69,15 +70,29 @@
     
     if (indexPath.section == 1){
         
+        cell.detailButton.tag =row;
+        [cell.detailButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];
+
+        
     }
     if (indexPath.section == 2){
         
+        cell.detailButton.tag =row;
+        [cell.detailButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];
+        
+
     }
     
-    
-    
-    
     return cell;
+}
+
+- (void)detail:(id)sender {
+    UIButton *senderButton = (UIButton *)sender;
+    int n = senderButton.tag;
+    
+    PatientAllDetailInformationViewController *allInfo =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAllDetailInformationViewController"];
+    [self.navigationController pushViewController:allInfo animated:YES];
 }
 
 
