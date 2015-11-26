@@ -6205,9 +6205,9 @@
                                     <action selector="ratingFive:" destination="hGf-lD-dk2" eventType="touchUpInside" id="Pbh-YM-n5h"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add Summary" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-vc-R8E">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-vc-R8E">
                                 <rect key="frame" x="138" y="204" width="202" height="72"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.86975220959595956" green="0.86975220959595956" blue="0.86975220959595956" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -6228,6 +6228,8 @@
                     <connections>
                         <outlet property="addVisiteSummaryButton" destination="DIZ-K1-aE3" id="gef-jx-b92"/>
                         <outlet property="doneButton" destination="kF9-j0-qx9" id="V2r-F3-2H4"/>
+                        <outlet property="labelRating" destination="oCU-Zj-kVt" id="4tf-DN-hWP"/>
+                        <outlet property="labelReviews" destination="FCu-ni-YKA" id="sJB-SU-KCq"/>
                         <outlet property="notVisitedButton" destination="dlv-OL-Frd" id="ALO-K2-oys"/>
                         <outlet property="ratingFiveButton" destination="PkV-BH-41y" id="KjX-9Z-oJy"/>
                         <outlet property="ratingFourButton" destination="B29-zG-5RA" id="bPx-lN-k01"/>
