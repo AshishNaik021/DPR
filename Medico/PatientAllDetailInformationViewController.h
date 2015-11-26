@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *summaryTestPrescribedTextView;
 @property (weak, nonatomic) IBOutlet UIButton *summarySaveButton;
 @property (weak, nonatomic) IBOutlet UITableView *summaryTableView;
+@property (weak, nonatomic) IBOutlet UITableView *documentTableView;
 
 - (IBAction)summarySave:(id)sender;
 - (IBAction)summarySymptoms:(id)sender;

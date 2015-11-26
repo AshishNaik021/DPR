@@ -10,6 +10,7 @@
 #import "LoginPage.h"
 #import "PatientSettingPageViewController.h"
 #import "PatientDoctorConsultationsViewController.h"
+#import "PatientClinicAndLabsViewController.h"
 
 
 @interface PatientLandingPageViewController ()
@@ -85,6 +86,9 @@
     [self.navigationController pushViewController:consultation animated:YES];
 }
 - (IBAction)diagnosticClinicsLabs:(id)sender {
+    PatientClinicAndLabsViewController *clinic =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientClinicAndLabsViewController"];
+    [self.navigationController pushViewController:clinic animated:YES];
 }
 - (IBAction)appointment:(id)sender {
 }

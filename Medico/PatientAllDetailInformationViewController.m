@@ -14,6 +14,7 @@
 #import "PatientTestPrescribedHistoryViewController.h"
 #import "PatientAllDetailSummaryInformationCell.h"
 #import "PatientUploadDocumentsViewController.h"
+#import "PatientAllDetailDocumentInformationCell.h"
 
 @interface PatientAllDetailInformationViewController ()
 
@@ -33,6 +34,8 @@
 @synthesize summarySymptomsTextView;
 @synthesize summaryDiagnosisTextView;
 @synthesize summaryTestPrescribedTextView;
+@synthesize documentTableView;
+@synthesize summaryTableView;
 
 - (void) patientHomePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
@@ -64,16 +67,33 @@
     treatmentPlanContentView.hidden = TRUE;
     invoiceContentView.hidden = TRUE;
     [summaryTabButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    summaryTableView.tag = 1;
+    documentTableView.tag = 2;
+    
     // Do any additional setup after loading the view.
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
+    if (tableView == summaryTableView) {
+        return 1;
+    }
+    if (tableView == documentTableView) {
+        return 1;
+    }
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    if (tableView == summaryTableView) {
+        return 1;
+    }
+    if (tableView == documentTableView) {
+        return 1;
+    }
+
     return 1;
 }
 
@@ -81,11 +101,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
-    PatientAllDetailSummaryInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     int row = [indexPath row];
+
     
-    return cell;
+    if (tableView.tag == 1) {
+        PatientAllDetailSummaryInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell.summaryMedicineNameLabel.text = @"Summary";
+        return cell;
+    }
+    if(tableView.tag == 2)
+    {
+        
+        PatientAllDetailDocumentInformationCell *cell1 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        cell1.testLabel.text = @"Document";
+        
+        return cell1;
+        
+    }
     
+    return 0;
 }
 
 

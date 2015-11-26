@@ -33,4 +33,8 @@
 
 - (IBAction)nextAppointments:(id)sender {
 }
+- (IBAction)totalCount:(id)sender {
+}
+- (IBAction)lastVisiteTotalCount:(id)sender {
+}
 @end

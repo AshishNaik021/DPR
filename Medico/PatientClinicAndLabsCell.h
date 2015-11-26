@@ -19,6 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
 - (IBAction)lastAppointments:(id)sender;
 - (IBAction)nextAppointments:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *totalCountButton;
+- (IBAction)totalCount:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *lastVisiteTotalCountButton;
+- (IBAction)lastVisiteTotalCount:(id)sender;
 
 
 @end
