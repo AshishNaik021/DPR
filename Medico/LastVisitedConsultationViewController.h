@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface LastVisitedConsultationViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIButton *visitedButton;
 @property (weak, nonatomic) IBOutlet UIButton *notVisitedButton;
 @property (nonatomic) BOOL isVisitedClicked;
 @property (nonatomic) BOOL isNotVisitedClicked;
 @property (nonatomic) BOOL isVisited;
+@property (nonatomic,assign) int rating;
 - (IBAction)visitedClicked:(id)sender;
 - (IBAction)notVisitedClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *reviewsTextField;
@@ -27,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *ratingThreeButton;
 @property (weak, nonatomic) IBOutlet UIButton *ratingFourButton;
 @property (weak, nonatomic) IBOutlet UIButton *ratingFiveButton;
+@property (weak, nonatomic) IBOutlet UILabel *labelRating;
+@property (weak, nonatomic) IBOutlet UILabel *labelReviews;
+
 
 - (IBAction)ratingOne:(id)sender;
 - (IBAction)ratingTwo:(id)sender;
