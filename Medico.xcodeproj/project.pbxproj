@@ -313,6 +313,12 @@
 		184F01D81BCE593800913B23 /* SearchResultAssistantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */; };
 		184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */; };
 		185306831C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185306821C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m */; };
+		185306851C0704030058C6CE /* pdf.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 185306841C0704030058C6CE /* pdf.jpeg */; };
+		185306881C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185306871C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m */; };
+		1853068B1C0707960058C6CE /* PatientYearlyPDFListOfClinicLabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853068A1C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.m */; };
+		1853068E1C070E8F0058C6CE /* PatientPDFDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853068D1C070E8F0058C6CE /* PatientPDFDocumentViewController.m */; };
+		185306911C070F870058C6CE /* PatientPDFDocumentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185306901C070F870058C6CE /* PatientPDFDocumentCell.m */; };
+		185306941C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185306931C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m */; };
 		1854A2131BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2121BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m */; };
 		185D86FB1BD75F93003B357C /* SearchPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D86FA1BD75F93003B357C /* SearchPatientViewController.m */; };
 		185D86FE1BD78C97003B357C /* AddPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D86FD1BD78C97003B357C /* AddPatientViewController.m */; };
@@ -799,6 +805,17 @@
 		184F01E01BCE7A1800913B23 /* DoctorLandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorLandingCell.m; sourceTree = "<group>"; };
 		185306811C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientAllDetailDocumentInformationCell.h; sourceTree = "<group>"; };
 		185306821C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientAllDetailDocumentInformationCell.m; sourceTree = "<group>"; };
+		185306841C0704030058C6CE /* pdf.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pdf.jpeg; sourceTree = "<group>"; };
+		185306861C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientYearlyPDFListOfClinicLabViewController.h; sourceTree = "<group>"; };
+		185306871C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientYearlyPDFListOfClinicLabViewController.m; sourceTree = "<group>"; };
+		185306891C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientYearlyPDFListOfClinicLabCell.h; sourceTree = "<group>"; };
+		1853068A1C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientYearlyPDFListOfClinicLabCell.m; sourceTree = "<group>"; };
+		1853068C1C070E8F0058C6CE /* PatientPDFDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientPDFDocumentViewController.h; sourceTree = "<group>"; };
+		1853068D1C070E8F0058C6CE /* PatientPDFDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientPDFDocumentViewController.m; sourceTree = "<group>"; };
+		1853068F1C070F870058C6CE /* PatientPDFDocumentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientPDFDocumentCell.h; sourceTree = "<group>"; };
+		185306901C070F870058C6CE /* PatientPDFDocumentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientPDFDocumentCell.m; sourceTree = "<group>"; };
+		185306921C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientUploadPDFDocumentViewController.h; sourceTree = "<group>"; };
+		185306931C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientUploadPDFDocumentViewController.m; sourceTree = "<group>"; };
 		1854A2111BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSlotsForDoctorClinicSettingViewController.h; sourceTree = "<group>"; };
 		1854A2121BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSlotsForDoctorClinicSettingViewController.m; sourceTree = "<group>"; };
 		185D86F91BD75F93003B357C /* SearchPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPatientViewController.h; sourceTree = "<group>"; };
@@ -1328,6 +1345,18 @@
 				183D1A461BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.m */,
 				183D1A481BD0FC1D003E0CFC /* PatientClinicAndLabsCell.h */,
 				183D1A491BD0FC1D003E0CFC /* PatientClinicAndLabsCell.m */,
+				183D1A4B1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.h */,
+				183D1A4C1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.m */,
+				185306861C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.h */,
+				185306871C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m */,
+				185306891C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.h */,
+				1853068A1C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.m */,
+				1853068C1C070E8F0058C6CE /* PatientPDFDocumentViewController.h */,
+				1853068D1C070E8F0058C6CE /* PatientPDFDocumentViewController.m */,
+				1853068F1C070F870058C6CE /* PatientPDFDocumentCell.h */,
+				185306901C070F870058C6CE /* PatientPDFDocumentCell.m */,
+				185306921C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.h */,
+				185306931C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m */,
 				1891254F1C05C0E500136C97 /* PatientUploadDocumentsViewController.h */,
 				189125501C05C0E500136C97 /* PatientUploadDocumentsViewController.m */,
 				189125521C05CB7700136C97 /* PatientMedicinePrescribedScheduleViewController.h */,
@@ -1472,8 +1501,6 @@
 				1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */,
 				1822C4511BD5054000DD24C0 /* ProfileContainerViewController.h */,
 				1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */,
-				183D1A4B1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.h */,
-				183D1A4C1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.m */,
 				186BD6291BCFB5E100B43A8C /* PatientLandingCell.h */,
 				186BD62A1BCFB5E100B43A8C /* PatientLandingCell.m */,
 				186BD61E1BCF7F8400B43A8C /* PatientChangePasswordViewController.h */,
@@ -1556,6 +1583,7 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				185306841C0704030058C6CE /* pdf.jpeg */,
 				188E5E561C04863F0001E400 /* emptyStar.jpeg */,
 				188E5E571C04863F0001E400 /* filledStar.jpeg */,
 				18875A1C1C02FC7300EA8D2D /* Timing.png */,
@@ -1829,6 +1857,7 @@
 				180CF2E71BDF545C00FA7D86 /* searchMRIgrey@1x~ipad.png in Resources */,
 				180CF1991BDF52C700FA7D86 /* searchUltrasoundgrey@3x~iphone.png in Resources */,
 				185D87001BD79625003B357C /* searchPatient.json in Resources */,
+				185306851C0704030058C6CE /* pdf.jpeg in Resources */,
 				180CF22D1BDF53B000FA7D86 /* filterblue@2x~iphone.png in Resources */,
 				180CF19A1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png in Resources */,
 				187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */,
@@ -2042,6 +2071,7 @@
 				18C7DB051BC799ED005B93A9 /* SearchTemplateCell.m in Sources */,
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
 				188E5E491C0431C70001E400 /* PatientDoctorConsultationsViewController.m in Sources */,
+				1853068B1C0707960058C6CE /* PatientYearlyPDFListOfClinicLabCell.m in Sources */,
 				1891253C1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m in Sources */,
 				1897CD991BCCC5570043F0FD /* PatientSettingPageViewController.m in Sources */,
 				185D87031BD796AB003B357C /* SearchPatientForDoctorViewController.m in Sources */,
@@ -2079,12 +2109,14 @@
 				180CF33B1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m in Sources */,
 				189125511C05C0E500136C97 /* PatientUploadDocumentsViewController.m in Sources */,
 				185306831C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m in Sources */,
+				185306941C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m in Sources */,
 				185D87161BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m in Sources */,
 				183D1A471BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.m in Sources */,
 				1835118E1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.m in Sources */,
 				1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */,
 				184C234F1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m in Sources */,
 				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
+				185306911C070F870058C6CE /* PatientPDFDocumentCell.m in Sources */,
 				183D40CE1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
@@ -2120,6 +2152,7 @@
 				186E57B11BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m in Sources */,
 				186E57AE1BDB8D0900F7CA72 /* DoctorAddTreatmentViewController.m in Sources */,
 				184C23571BDA5FC2004F3EF1 /* DetailPatientProfileCell.m in Sources */,
+				1853068E1C070E8F0058C6CE /* PatientPDFDocumentViewController.m in Sources */,
 				1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */,
 				185D86FE1BD78C97003B357C /* AddPatientViewController.m in Sources */,
 				185D87111BD7B4FC003B357C /* DoctorManageAppointmentCell.m in Sources */,
@@ -2135,6 +2168,7 @@
 				188E5E4F1C0437460001E400 /* PatientDoctorConsultationsCell.m in Sources */,
 				1822C4561BD50CD500DD24C0 /* AppointmentContainerViewController.m in Sources */,
 				18C14F3C1BC2567900AFF591 /* DetailManageTemplateCell.m in Sources */,
+				185306881C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m in Sources */,
 				189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */,
 				186E57A81BDB80A600F7CA72 /* LastVisitedConsultationViewController.m in Sources */,
 				183511911BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m in Sources */,

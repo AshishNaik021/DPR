@@ -9,12 +9,19 @@
 #import "PatientClinicProfileAndAppointmentsViewController.h"
 #import "PatientLandingPageViewController.h"
 #import "PatientClinicAndLabsViewController.h"
+#import "PatientYearlyPDFListOfClinicLabViewController.h"
 
 @interface PatientClinicProfileAndAppointmentsViewController ()
 
 @end
 
 @implementation PatientClinicProfileAndAppointmentsViewController
+@synthesize appointmentView;
+@synthesize profileView;
+@synthesize bookAppointmentView;
+@synthesize appointmentsButton;
+@synthesize profileButton;
+@synthesize profileSpecialtyField;
 
 - (void) homePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
@@ -34,10 +41,12 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
-    self.appointmentView.hidden = TRUE;
-    self.profileButton.titleLabel.textColor = [UIColor blackColor];
-    [self.profileButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    //[cancelButton setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
+    appointmentView.hidden = TRUE;
+    profileView.hidden = FALSE;
+    bookAppointmentView.hidden = TRUE;
+    [profileButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [profileSpecialtyField.layer setBorderWidth:1.0];
 
     // Do any additional setup after loading the view.
 }
@@ -60,26 +69,21 @@
 - (IBAction)nextAppointment:(id)sender {
 }
 - (IBAction)profileClicked:(id)sender {
-    self.profileView.hidden = FALSE;
-    self.appointmentView.hidden = TRUE;
-    [self.profileButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [self.appointmentsButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    profileView.hidden = FALSE;
+    appointmentView.hidden = TRUE;
+    bookAppointmentView.hidden = TRUE;
+    [profileButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [appointmentsButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
 
 
 }
 
-    
-   // self.profileButton.backgroundColor = [UIColor clearColor];
-    //self.appointmentButton.backgroundColor = [UIColor colorWithRed:(212/255.0) green:(255/255.0) blue:(203/255.0) alpha:1];
-   // self.profileButton.titleLabel.textColor = [UIColor redColor];
-
-
-
 - (IBAction)appointmentClicked:(id)sender {
-    self.appointmentView.hidden = FALSE;
-    self.profileView.hidden = TRUE;
-    [self.profileButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
-    [self.appointmentsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    appointmentView.hidden = FALSE;
+    profileView.hidden = TRUE;
+    bookAppointmentView.hidden = TRUE;
+    [profileButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [appointmentsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
 
 }
@@ -89,5 +93,20 @@
     [self.navigationController pushViewController:DoctorHome animated:YES];
     
 
+}
+- (IBAction)appointmentBookOnlineAM:(id)sender{
+    
+    bookAppointmentView.hidden = FALSE;
+    appointmentView.hidden = TRUE;
+    profileView.hidden = TRUE;
+    
+}
+- (IBAction)bookNow:(id)sender {
+}
+- (IBAction)countDocument:(id)sender {
+    PatientYearlyPDFListOfClinicLabViewController *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientYearlyPDFListOfClinicLabViewController"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
 }
 @end

@@ -1,22 +1,22 @@
 //
-//  PatientClinicAndLabsViewController.m
+//  PatientPDFDocumentViewController.m
 //  Medico
 //
-//  Created by APPLE on 16/10/15.
+//  Created by Apple on 26/11/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "PatientClinicAndLabsViewController.h"
-#import "PatientClinicAndLabsCell.h"
-#import "PatientClinicProfileAndAppointmentsViewController.h"
+#import "PatientPDFDocumentViewController.h"
+#import "PatientPDFDocumentCell.h"
 #import "PatientLandingPageViewController.h"
-#import "PatientYearlyPDFListOfClinicLabViewController.h"
+#import "PatientUploadPDFDocumentViewController.h"
 
-@interface PatientClinicAndLabsViewController ()
+@interface PatientPDFDocumentViewController ()
 
 @end
 
-@implementation PatientClinicAndLabsViewController
+@implementation PatientPDFDocumentViewController
+
 - (void) homePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
@@ -24,20 +24,31 @@
     
 }
 
+- (void) addDocument:(id)sender{
+    PatientUploadPDFDocumentViewController *upload =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientUploadPDFDocumentViewController"];
+    [self.navigationController pushViewController:upload animated:YES];
+    
+}
+
 - (void)viewDidLoad {
-    NSLog(@"PatientClinicAndLabsViewController.m");
     [super viewDidLoad];
+    NSLog(@"PatientPDFDocumentViewController.m");
+    self.navigationItem.title = @"Doctor's Name";
+    
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDocument:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
-
-    self.navigationItem.title = @"Clinics And Labs";
+    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
 
+    
     // Do any additional setup after loading the view.
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -50,37 +61,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"TableCell";
-    PatientClinicAndLabsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    //for(int count = 0;count<_arr.count;count++){
-    cell.showDetailsButton.tag = indexPath.row;
-    [cell.showDetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
-    cell.totalCountButton.tag = indexPath.row;
-    [cell.totalCountButton addTarget:self action:@selector(totalCount:) forControlEvents:UIControlEventTouchUpInside];
+    static NSString *CellIdentifier = @"Cell";
+    PatientPDFDocumentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     return cell;
     
 }
-- (IBAction)showDetails:(id)sender {
-    PatientClinicProfileAndAppointmentsViewController *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientClinicProfileAndAppointmentsViewController"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
-    
 
-    
-}
 
-- (IBAction)totalCount:(id)sender {
-    PatientYearlyPDFListOfClinicLabViewController *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientYearlyPDFListOfClinicLabViewController"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
-    
-    
-    
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
