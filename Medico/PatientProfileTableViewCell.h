@@ -22,6 +22,9 @@
 - (IBAction)showPatientProfile:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *getAllAppointmentButton;
 - (IBAction)getAllAppointmnet:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
+- (IBAction)nextAppointment:(id)sender;
+
 
 
 @end

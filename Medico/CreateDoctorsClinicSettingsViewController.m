@@ -40,6 +40,7 @@
 @synthesize slotFlag;
 @synthesize returnArr;
 @synthesize passDictionaryForSlots = _passDictionaryForSlots;
+@synthesize passString = _passString;
 
 - (void)viewDidLoad {
     NSLog(@"CreateDoctorsClinicSettingsViewController.m");
@@ -65,7 +66,7 @@
     emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
     NSLog(@"email id for logged in user...%@",emailid);
     // Do any additional setup after loading the view.
-  
+   
      returnArr = [_passDictionaryForSlots valueForKeyPath:@"schedules"];
     if (returnArr.count == 0) {
         createSlotTextView.text = @"To Add Slots, Click Here!";
@@ -76,6 +77,28 @@
     NSLog(@"my checking arrr========%@",returnArr);
 
     //NSLog(@"checking value for particular key........%@",[[checkArr objectAtIndex:0] objectForKey:@"day"]);
+       if (_passString) {
+        
+           NSArray *a = _passString;
+           NSLog(@"aaaaaaaaaaaaaaaaaaaaaaaa%@",a);
+    NSDictionary *slotDict = [[NSDictionary alloc]init];
+    
+    slotDict = @{@"clinicId" : @"9",
+                 @"doctorId" : emailid,
+                 @"schedules" : a};
+    
+    NSLog(@"my slotDict-----------%@",slotDict);
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 
@@ -280,7 +303,7 @@
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
             
-            [self addClinic];
+           // [self addClinic];
         }
         
         /*   SMSConfirmationView *viewController =
@@ -320,7 +343,7 @@
     NSString *params = [NSString stringWithFormat:@"\{\"clinicId\":\"%@\",\"doctorId\":\"%@\",\"schedules\":\"%@\"}",[slotDict objectForKey:@"clinicId"],[slotDict objectForKey:@"doctorId"],[slotDict objectForKey:@"schedules"]];
     
     NSLog(@"params %@",params);
-    [urlRequest setHTTPMethod:@"POST"];
+   [urlRequest setHTTPMethod:@"POST"];
     [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
     

@@ -31,4 +31,6 @@
 }
 - (IBAction)getAllAppointmnet:(id)sender {
 }
+- (IBAction)nextAppointment:(id)sender {
+}
 @end

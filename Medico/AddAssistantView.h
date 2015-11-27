@@ -29,8 +29,9 @@ BOOL CreateNew;
 - (IBAction)createAssistant:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 - (IBAction)addLocation:(id)sender;
-
-
-
+@property (weak, nonatomic) IBOutlet UITextField *bloodGroupField;
+@property IBOutlet NSString *loggedInUserEmailId;
+@property IBOutlet NSDictionary *dict;
+@property IBOutlet NSString *returnString;
 
 @end

@@ -42,5 +42,6 @@
 - (IBAction)exceptCurrentDay:(id)sender;
 - (IBAction)confirmByDoctor:(id)sender;
 @property IBOutlet NSDictionary *passDictionaryForSlots;
+@property IBOutlet NSString *passString;
 @property NSString *emailid;
 @end

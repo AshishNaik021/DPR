@@ -436,22 +436,30 @@
         
         
         NSLog(@"The Slot1 data in the dictionary is************************%@",dict);
-        CreateDoctorsClinicSettingsViewController *createClinic =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
-        createClinic.passDictionaryForSlots = dict;
-        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
-        [self.navigationController pushViewController:createClinic animated:YES];
+//        CreateDoctorsClinicSettingsViewController *createClinic =
+//        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+//        createClinic.passDictionaryForSlots = dict;
+//        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
+//        [self.navigationController pushViewController:createClinic animated:YES];
         
         NSError *error;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
                                                            options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
                                                              error:&error];
+        NSLog(@"Checking valid JSON..................%@",jsonData);
         
         if (! jsonData) {
             NSLog(@"Got an error: %@", error);
         } else {
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
+            CreateDoctorsClinicSettingsViewController *createClinic =
+            [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+            createClinic.passDictionaryForSlots = dict;
+            createClinic.passString = jsonString;
+            NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
+            [self.navigationController pushViewController:createClinic animated:YES];
+
         }
         
     }
