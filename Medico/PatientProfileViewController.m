@@ -13,6 +13,7 @@
 #import "PatientAppointmentsForDoctorViewController.h"
 #import "LastVisitedConsultationViewController.h"
 #import "DoctorBookAppointmentViewController.h"
+#import "LastVisitedConsultationViewController.h"
 
 @interface PatientProfileViewController ()
 
@@ -30,12 +31,15 @@
     NSLog(@"calling home page of dr");
 }
 
+- (IBAction)nextAppointment:(id)sender {
+}
+
 - (void)viewDidLoad {
     NSLog(@"PatientProfileViewController.m");
     [super viewDidLoad];
     [self fetchJson];
     
-   // gridViewTable.backgroundColor = [UIColor clearColor];
+    // gridViewTable.backgroundColor = [UIColor clearColor];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -60,13 +64,13 @@
     
     NSLog(@">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>%@",patientArr);
     
-//    arrDoctor = [json1 valueForKeyPath:@"doctors"];
-//    args = [[NSDictionary alloc] initWithDictionary:[json1 objectForKey:@"appointmentVm"]];
-//    NSLog(@"arrrDoctor-----%@",arrDoctor);
-//    NSLog(@"args-----%@",args);
-
-
-   }
+    //    arrDoctor = [json1 valueForKeyPath:@"doctors"];
+    //    args = [[NSDictionary alloc] initWithDictionary:[json1 objectForKey:@"appointmentVm"]];
+    //    NSLog(@"arrrDoctor-----%@",arrDoctor);
+    //    NSLog(@"args-----%@",args);
+    
+    
+}
 
 
 
@@ -75,7 +79,7 @@
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
-   // NSString *emailid = emailField.text;
+    // NSString *emailid = emailField.text;
     NSString *emailid = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
     NSLog(@"email id for logged in user...%@",emailid);
     NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllPatientInformation?doctorId=%@",emailid];
@@ -86,7 +90,7 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-   
+    
     //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"Data in Array==============%@",responseStr);
     
@@ -97,7 +101,7 @@
     [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
     
     /* ---------- End of Code for Writing response data into the file -------------- */
-
+    
     
     
     
@@ -120,10 +124,13 @@
     
     int row = (int)[indexPath row];
     
-       cell.patientNameLabel.text = [[patientArr objectAtIndex:row] objectForKey:@"name"];
+    cell.patientNameLabel.text = [[patientArr objectAtIndex:row] objectForKey:@"name"];
     
     if (![[[patientArr objectAtIndex:row] objectForKey:@"lastVisited"] isEqual:[NSNull null]]) {
         [cell.lastVisitedButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"lastVisited"]] forState:UIControlStateNormal];
+        if ([cell.lastVisitedButton.titleLabel.text length] == 0) {
+            [cell.lastVisitedButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        }
     }
     else
     {
@@ -132,7 +139,11 @@
     
     
     if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]) {
-         [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+        [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+        if ([cell.lastAppointmentButton.titleLabel.text length] == 0) {
+            [cell.lastAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        }
+        
     }
     else
     {
@@ -141,48 +152,52 @@
     
     if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"] isEqual:[NSNull null]]) {
         [cell.appointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"]] forState:UIControlStateNormal];
+        if ([cell.appointmentButton.titleLabel.text length] == 0) {
+            [cell.appointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        }
+        
     }
     else
     {
         [cell.appointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
     }
-
     
     
-   
- // [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
-/*
-    NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
-
-    NSLog(@"Appointment Date----- %@",appointmentDate);
-   NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
-        NSLog(@"before-----%@", date);
-
-    NSRange range = [date rangeOfString:@"+"];
-    date = [date substringToIndex:range.location];
-    
-    NSLog(@"after-----%@", date);
-*/
-   /* --------------- different methods to remove subString form string ----------------
-    if ([date length] > 0)
-    {
-        date = [date substringToIndex:[date length] - 5];
-    }
     
     
-    NSRange tldr = [date rangeOfString:@"+0000"];
-    
-    if (tldr.location != NSNotFound) {
-        date = [date stringByReplacingCharactersInRange:tldr withString:@""];
-        NSLog(@"removed-----%@", date);
-    }
-    */
+    // [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
+    /*
+     NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
+     
+     NSLog(@"Appointment Date----- %@",appointmentDate);
+     NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
+     NSLog(@"before-----%@", date);
+     
+     NSRange range = [date rangeOfString:@"+"];
+     date = [date substringToIndex:range.location];
+     
+     NSLog(@"after-----%@", date);
+     */
+    /* --------------- different methods to remove subString form string ----------------
+     if ([date length] > 0)
+     {
+     date = [date substringToIndex:[date length] - 5];
+     }
+     
+     
+     NSRange tldr = [date rangeOfString:@"+0000"];
+     
+     if (tldr.location != NSNotFound) {
+     date = [date stringByReplacingCharactersInRange:tldr withString:@""];
+     NSLog(@"removed-----%@", date);
+     }
+     */
     
     [cell.getAllAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"totalAppointment"]] forState:UIControlStateNormal];
     
-   // [cell.appointmentButton setTitle:[NSString stringWithFormat:date] forState:UIControlStateNormal];
+    // [cell.appointmentButton setTitle:[NSString stringWithFormat:date] forState:UIControlStateNormal];
     
-   cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
+    cell.patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
     cell.showPatientProfileButton.tag =row;
     [cell.showPatientProfileButton addTarget:self action:@selector(showPatientProfile:) forControlEvents:UIControlEventTouchUpInside];
     cell.getAllAppointmentButton.tag =row;
@@ -191,8 +206,8 @@
     [cell.lastAppointmentButton addTarget:self action:@selector(lastAppointment:) forControlEvents:UIControlEventTouchUpInside];
     cell.appointmentButton.tag =row;
     [cell.appointmentButton addTarget:self action:@selector(appointment:) forControlEvents:UIControlEventTouchUpInside];
-
-
+    
+    
     return cell;
     
 }
@@ -204,15 +219,19 @@
 
 
 - (void)lastAppointment:(id)sender {
+    UIButton *senderButton = (UIButton *)sender;
+    NSLog(@"current Row=%ld",(long)senderButton.tag);
+    int n = (int)senderButton.tag;
     LastVisitedConsultationViewController *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"LastVisitedConsultationViewController"];
-    
+    DoctorHome.patientArr = patientArr[n];
+    NSLog(@"patientArr printing :%@",DoctorHome.patientArr);
     [self.navigationController pushViewController:DoctorHome animated:YES];
 }
 - (void)getAllAppointmnet:(id)sender {
     UIButton *senderButton = (UIButton *)sender;
-    int n = senderButton.tag;
-
+    int n = (int)senderButton.tag;
+    
     PatientAppointmentsForDoctorViewController *appForDoctor =
     [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAppointmentsForDoctorViewController"];
     /* ------------------------------------------ */
@@ -224,28 +243,27 @@
 - (void)showPatientProfile:(id)sender {
     UIButton *senderButton = (UIButton *)sender;
     NSLog(@"current Row=%ld",(long)senderButton.tag);
-    int n = senderButton.tag;
-
+    int n = (int)senderButton.tag;
+    
     DetailPatientProfileViewController *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientProfileViewController"];
     DoctorHome.passPatientData = patientArr[n];
-
     [self.navigationController pushViewController:DoctorHome animated:YES];
 }
 
 
 /*
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
-        DetailPatientProfileViewController *detailPatientProfile = [segue destinationViewController];
-        NSIndexPath *myIndex = [gridViewTable indexPathForSelectedRow];
-        int row = [myIndex row];
-        detailPatientProfile.detailArr = @[_patientArr[row]];
-    }
-
-}
-*/
+ -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+ 
+ if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+ DetailPatientProfileViewController *detailPatientProfile = [segue destinationViewController];
+ NSIndexPath *myIndex = [gridViewTable indexPathForSelectedRow];
+ int row = [myIndex row];
+ detailPatientProfile.detailArr = @[_patientArr[row]];
+ }
+ 
+ }
+ */
 
 
 
@@ -255,13 +273,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

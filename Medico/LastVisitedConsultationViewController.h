@@ -15,8 +15,9 @@
 @property (nonatomic) BOOL isVisitedClicked;
 @property (nonatomic) BOOL isNotVisitedClicked;
 @property (nonatomic) BOOL isVisited;
-@property (nonatomic,assign) int rating;
+@property (nonatomic,retain) NSString *star;
 - (IBAction)visitedClicked:(id)sender;
+@property(nonatomic,retain) NSString *returnString;
 - (IBAction)notVisitedClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *reviewsTextField;
 @property (weak, nonatomic) IBOutlet UIButton *addVisiteSummaryButton;
@@ -31,6 +32,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *ratingFiveButton;
 @property (weak, nonatomic) IBOutlet UILabel *labelRating;
 @property (weak, nonatomic) IBOutlet UILabel *labelReviews;
+@property NSArray *patientArr;
+
 
 
 - (IBAction)ratingOne:(id)sender;
