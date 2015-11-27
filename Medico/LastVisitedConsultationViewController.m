@@ -51,6 +51,7 @@
     isVisitedClicked = NO;
     star = [NSString stringWithFormat:@"0"];
     [self notVisitedClickedChangeRadioButton];
+    self.addVisiteSummaryButton.hidden = YES;
     // Do any additional setup after loading the view.
 }
 
