@@ -6133,13 +6133,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCU-Zj-kVt">
-                                <rect key="frame" x="48" y="167" width="50" height="21"/>
+                                <rect key="frame" x="48" y="178" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCu-ni-YKA">
-                                <rect key="frame" x="48" y="204" width="65" height="21"/>
+                                <rect key="frame" x="48" y="249" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -6160,7 +6160,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-oQ-EEu">
-                                <rect key="frame" x="138" y="164" width="29" height="24"/>
+                                <rect key="frame" x="138" y="175" width="29" height="24"/>
                                 <state key="normal" image="emptyStar.jpeg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -6169,7 +6169,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYJ-mf-ass">
-                                <rect key="frame" x="175" y="164" width="29" height="24"/>
+                                <rect key="frame" x="175" y="175" width="29" height="24"/>
                                 <state key="normal" image="emptyStar.jpeg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -6178,7 +6178,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmW-vd-6zE">
-                                <rect key="frame" x="212" y="164" width="29" height="24"/>
+                                <rect key="frame" x="212" y="175" width="29" height="24"/>
                                 <state key="normal" image="emptyStar.jpeg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -6187,7 +6187,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B29-zG-5RA">
-                                <rect key="frame" x="249" y="164" width="29" height="24"/>
+                                <rect key="frame" x="249" y="175" width="29" height="24"/>
                                 <state key="normal" image="emptyStar.jpeg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -6196,7 +6196,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkV-BH-41y">
-                                <rect key="frame" x="286" y="164" width="29" height="24"/>
+                                <rect key="frame" x="286" y="175" width="29" height="24"/>
                                 <state key="normal" image="emptyStar.jpeg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -6205,27 +6205,17 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-vc-R8E">
-                                <rect key="frame" x="138" y="204" width="202" height="72"/>
+                                <rect key="frame" x="138" y="249" width="202" height="72"/>
                                 <color key="backgroundColor" red="0.86975220959595956" green="0.86975220959595956" blue="0.86975220959595956" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-K1-aE3">
-                                <rect key="frame" x="205" y="292" width="149" height="30"/>
-                                <state key="normal" title="Add Visit Summary  &gt;">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addVisiteSummary:" destination="hGf-lD-dk2" eventType="touchUpInside" id="myV-hh-t98"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="addVisiteSummaryButton" destination="DIZ-K1-aE3" id="gef-jx-b92"/>
                         <outlet property="doneButton" destination="kF9-j0-qx9" id="V2r-F3-2H4"/>
                         <outlet property="labelRating" destination="oCU-Zj-kVt" id="4tf-DN-hWP"/>
                         <outlet property="labelReviews" destination="FCu-ni-YKA" id="sJB-SU-KCq"/>

@@ -20,8 +20,6 @@
 @property(nonatomic,retain) NSString *returnString;
 - (IBAction)notVisitedClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextView *reviewsTextField;
-@property (weak, nonatomic) IBOutlet UIButton *addVisiteSummaryButton;
-- (IBAction)addVisiteSummary:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *doneButton;
 - (IBAction)done:(id)sender;
 

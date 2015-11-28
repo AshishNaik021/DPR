@@ -161,7 +161,17 @@
     {
         [cell.appointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
     }
-    
+    if (![[[patientArr objectAtIndex:row] objectForKey:@"bookDate"] isEqual:[NSNull null]]) {
+        [cell.nextAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"bookDate"]] forState:UIControlStateNormal];
+        if ([cell.nextAppointmentButton.titleLabel.text length] == 0) {
+            [cell.nextAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        }
+        
+    }
+    else
+    {
+        [cell.nextAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+    }
     
     
     

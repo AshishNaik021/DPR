@@ -51,7 +51,6 @@
     isVisitedClicked = NO;
     star = [NSString stringWithFormat:@"0"];
     [self notVisitedClickedChangeRadioButton];
-    self.addVisiteSummaryButton.hidden = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -130,9 +129,6 @@
     [self visitedClickedChangeRadioButton];
 }
 
--(IBAction)addVisiteSummary:(id)sender{
-}
-
 - (IBAction)notVisitedClicked:(id)sender {
     [self notVisitedClickedChangeRadioButton];
 }
@@ -145,7 +141,6 @@
     self.ratingTwoButton.hidden = value;
     self.ratingOneButton.hidden = value;
     self.reviewsTextField.hidden = value;
-    self.addVisiteSummaryButton.hidden = value;
     if (value) {
         star = [NSString stringWithFormat:@"0"];
         UIImage *unckbtnImage = [UIImage imageNamed:@"emptyStar.jpeg"];
