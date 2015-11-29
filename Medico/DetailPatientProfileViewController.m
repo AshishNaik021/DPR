@@ -119,7 +119,10 @@
     NSLog(@"DetailPatientProfileViewController.m");
     [super viewDidLoad];
     [self fetchAllDoctorPatientClinic];
+    [self readAndDisplayData];
     
+}
+-(void)readAndDisplayData{
     /* ----------------- Read File For Parse JSON Data -------------------- */
     
     NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllDoctorPatientClinics.json"];
@@ -136,9 +139,9 @@
     arrayList2 = [json1 valueForKeyPath:@"slot2"];
     arrayList3 = [json1 valueForKeyPath:@"slot3"];
     NSLog(@"Slot1>>>>>>>>>>>>>>>>>%@",arrayList1);
-        NSLog(@"Slot2>>>>>>>>>>>>>>>>>%@",arrayList2);
-        NSLog(@"Slot3>>>>>>>>>>>>>>>>>%@",arrayList3);
-
+    NSLog(@"Slot2>>>>>>>>>>>>>>>>>%@",arrayList2);
+    NSLog(@"Slot3>>>>>>>>>>>>>>>>>%@",arrayList3);
+    
     /* ----------------------------------------------------------------------------- */
     patientNameLabel.text = [_passPatientData valueForKey:@"name"];
     
@@ -157,22 +160,22 @@
     else{
         lastVisitedField.text = @"";
     }
-
+    
     
     /*
-    NSString *patientDate =[_passPatientData valueForKey:@"dateOfBirth"];
-    NSLog(@"Date is-------%@",patientDate);
-    
-   //    [format setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
-    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
-    NSDate *date = [dateFormatter dateFromString:patientDate];
-    NSString *copy = [NSString stringWithFormat:@"%@",date];
-    [dateFormatter setDateFormat:@"dd-MM-YYYY"];
-    
-    NSString *d = [dateFormatter stringFromDate:date];
-    NSLog(@" *******************%@",d);*/
+     NSString *patientDate =[_passPatientData valueForKey:@"dateOfBirth"];
+     NSLog(@"Date is-------%@",patientDate);
+     
+     //    [format setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
+     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+     [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
+     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+     NSDate *date = [dateFormatter dateFromString:patientDate];
+     NSString *copy = [NSString stringWithFormat:@"%@",date];
+     [dateFormatter setDateFormat:@"dd-MM-YYYY"];
+     
+     NSString *d = [dateFormatter stringFromDate:date];
+     NSLog(@" *******************%@",d);*/
     
     /*NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
      NSLog(@"before-----%@", date);
@@ -208,14 +211,14 @@
     }
     
     if (![[_passPatientData valueForKey:@"dateOfBirth"] isEqual:[NSNull null]]){
-       /*
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
-        [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
-        NSDate *date = [dateFormatter dateFromString:patientDate];
-        NSString *copy = [NSString stringWithFormat:@"%@",date];
-        [dateFormatter setDateFormat:@"dd-MM-YYYY"];
-        NSString *d = [dateFormatter stringFromDate:date];*/
+        /*
+         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+         [dateFormatter setDateFormat:@"E MMM dd HH:mm:ss Z yyyy"];
+         [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+         NSDate *date = [dateFormatter dateFromString:patientDate];
+         NSString *copy = [NSString stringWithFormat:@"%@",date];
+         [dateFormatter setDateFormat:@"dd-MM-YYYY"];
+         NSString *d = [dateFormatter stringFromDate:date];*/
         dateofBirthField.text = [NSString stringWithFormat:@"%@",[_passPatientData valueForKey:@"dateOfBirth"]];
     }
     else{
@@ -250,9 +253,9 @@
     
     [allergicTextView.layer setBorderWidth:1.0];
     [locationTextView.layer setBorderWidth:1.0];
-
     
-   _patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
+    
+    _patientPicture.image = [UIImage imageNamed:@"patientProfile.png"];
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
