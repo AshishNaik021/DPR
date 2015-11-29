@@ -9,6 +9,8 @@
 #import "LastVisitedConsultationViewController.h"
 #import "DoctorLandingPageView.h"
 #import "PatientProfileViewController.h"
+#import "PatientAllDetailInformationViewController.h"
+#import "DetailPatientProfileViewController.h"
 
 @interface LastVisitedConsultationViewController ()
 
@@ -33,6 +35,10 @@
     else{
         NSLog(@"Navigate to patient");
     }
+}
+-(void)viewDidLoad1{
+    PatientAllDetailInformationViewController *objPatientAllDetailInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAllDetailInformationViewController"];
+    [self.navigationController pushViewController:objPatientAllDetailInformationViewController animated:YES];
 }
 - (void)viewDidLoad {
     NSLog(@"LastVisitedConsultationViewController.m");
@@ -157,13 +163,20 @@
         [self validateRating];
     }
     else{
-        NSLog(@"Not Visited");
+        NSLog(@"Not Visited, Submitted");
+        DetailPatientProfileViewController *objDetailPatientProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientProfileViewController"];
+        NSLog(@"patientarr:%@",self.patientArr);
+        objDetailPatientProfileViewController.patientDetailsArray = _patientArr;
+        [self.navigationController pushViewController:objDetailPatientProfileViewController animated:YES];
     }
 }
 -(void)validateRating{
     if (![star isEqualToString:@"0"]) {
-        if(![self.reviewsTextField.text isEqualToString:@""])
-            [self submitReview];
+        if(![self.reviewsTextField.text isEqualToString:@""]){
+            // Temporarily commenting it remove at the time of commit. and check for other minor changes also.
+            //[self submitReview];
+            [self temporaryRedirect];
+        }
         else
             [self alertForTextReview];
     }
@@ -224,6 +237,7 @@
                                                        }];
     [dataTask resume];
 }
+
 -(void)errorMessage{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
@@ -232,6 +246,13 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
+-(void)temporaryRedirect{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"@Vitthal!" message:@"Temporarily redirecting without submiting." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    PatientAllDetailInformationViewController *objPatientAllDetailInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAllDetailInformationViewController"];
+    [self.navigationController pushViewController:objPatientAllDetailInformationViewController animated:YES];
+    
+}
 -(void)parseJSON : (NSString *)responseData{
     NSString * jsonString = responseData;
     //NSStringEncoding  encoding;
@@ -239,6 +260,10 @@
     NSError * error=nil;
     NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
     NSLog(@"NSDictionery:%@",parsedData);
+    if (![parsedData isKindOfClass:[NSNull null]]) {
+        PatientAllDetailInformationViewController *objPatientAllDetailInformationViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatientAllDetailInformationViewController"];
+        [self.navigationController pushViewController:objPatientAllDetailInformationViewController animated:YES];
+    }
     //    //NSString *email = [NSString stringWithFormat:[parsedData valueForKey:@"emailID"]];
     //    if ([userType isEqualToString:@"Doctor"]) {
     //        DoctorLandingPageView *doctorHome =

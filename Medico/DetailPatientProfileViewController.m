@@ -11,6 +11,7 @@
 #import "DetailPatientProfileCell.h"
 #import "PatientProfileViewController.h"
 #import "PatientAppointmentsForDoctorViewController.h"
+#import "LastVisitedConsultationViewController.h"
 
 @interface DetailPatientProfileViewController ()
 
@@ -36,6 +37,13 @@
 @synthesize locationTextView;
 @synthesize getAllClinic;
 @synthesize allAppointmentButton;
+@synthesize patientDetailsArray = _patientDetailsArray;
+@synthesize patientDetailsDict = _patientDetailsDict;
+@synthesize appointmentTabButton;
+@synthesize appointmentView;
+@synthesize description;
+@synthesize debugDescription;
+@synthesize patientPicture = _patientPicture;
 
 
 - (IBAction)profileTab:(id)sender {

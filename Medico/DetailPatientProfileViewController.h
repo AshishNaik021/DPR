@@ -12,7 +12,8 @@
 
 @property IBOutlet NSArray *detailArr;
 @property IBOutlet NSArray *getAllClinic;
-
+@property NSArray *patientDetailsArray;
+@property NSDictionary *patientDetailsDict;
 @property (weak, nonatomic) IBOutlet UIImageView *patientPicture;
 @property (weak, nonatomic) IBOutlet UILabel *patientNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *patientSpecialityField;
