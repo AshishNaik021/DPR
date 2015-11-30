@@ -44,7 +44,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *doctorsNoteDiagnosisTextView;
 @property (weak, nonatomic) IBOutlet UITextView *doctorsNoteNoteTextView;
 @property (weak, nonatomic) IBOutlet UIButton *doctorsNoteSaveButton;
-
+@property NSArray *patientAppointmentArray;
 
 
 
@@ -64,10 +64,5 @@
 @property IBOutlet NSString *summaryTimePassData;
 @property IBOutlet NSString *summaryPatientEmailPassData;
 @property IBOutlet NSString *summaryDoctorIDPassData;
-
-
-
-
-
 
 @end

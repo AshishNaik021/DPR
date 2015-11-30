@@ -47,7 +47,7 @@
 @synthesize summaryPatientEmailPassData = _summaryPatientEmailPassData;
 @synthesize summaryTimePassData =_summaryTimePassData;
 @synthesize summaryDoctorIDPassData = _summaryDoctorIDPassData;
-
+@synthesize patientAppointmentArray = _patientAppointmentArray;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -97,7 +97,8 @@
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
     
-   
+    NSLog(@"Data came from PatientAppointmentsForDoctorViewController (self.pa) :%@",self.patientAppointmentArray);
+    NSLog(@"Data came from PatientAppointmentsForDoctorViewController (_pa):%@",_patientAppointmentArray);
     self.summaryMedicinTableView.layer.borderWidth = 1.0;
     
     NSLog(@"Date----------------%@",_summaryDatePassData);
@@ -241,7 +242,11 @@
     [treatmentPlanTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [invoicesTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
 
-    
+    [self setSummery];
+}
+
+-(void)setSummery{
+    self.summaryClinicNameField.text = @"Vitthal";
 }
 
 - (IBAction)documents:(id)sender {

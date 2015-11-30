@@ -231,7 +231,7 @@
     
     allInfo.summaryDatePassData = date;
     allInfo.summaryPatientEmailPassData = _patientEmailIdForCallAPI;
-
+    allInfo.patientAppointmentArray = patientAppointmentArr;
     [self.navigationController pushViewController:allInfo animated:YES];
 }
 
