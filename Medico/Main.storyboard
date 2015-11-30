@@ -10230,7 +10230,7 @@
                         <outlet property="documentTagButton" destination="6Wk-WH-SLD" id="AZQ-XL-ukV"/>
                         <outlet property="invoiceContentView" destination="Aer-cN-gDz" id="PV9-JG-auR"/>
                         <outlet property="invoicesTagButton" destination="Pon-b3-1qN" id="QD4-SN-NQG"/>
-                        <outlet property="summaryClinicNameField" destination="72Y-2S-vu5" id="JCV-nr-vek"/>
+                        <outlet property="summaryClinicNameField" destination="72Y-2S-vu5" id="xMx-AQ-nrS"/>
                         <outlet property="summaryContentView" destination="j2C-pf-mcC" id="dN4-ek-P8B"/>
                         <outlet property="summaryDiagnosisHistoryButton" destination="gMa-re-hyY" id="8sO-lY-dNp"/>
                         <outlet property="summaryDiagnosisTextview" destination="L6G-CQ-14g" id="iOS-uh-vrm"/>
