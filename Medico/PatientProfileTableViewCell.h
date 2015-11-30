@@ -24,6 +24,9 @@
 - (IBAction)getAllAppointmnet:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
 - (IBAction)nextAppointment:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *nextTimeAppointmentButton;
+- (IBAction)nextTimeAppointment:(id)sender;
+
 
 
 

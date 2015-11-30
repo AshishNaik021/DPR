@@ -21,4 +21,10 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)slot1BookOnline:(id)sender {
+}
+- (IBAction)slot2BookOnline:(id)sender {
+}
+- (IBAction)slot3BookOnline:(id)sender {
+}
 @end

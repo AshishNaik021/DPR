@@ -33,4 +33,6 @@
 }
 - (IBAction)nextAppointment:(id)sender {
 }
+- (IBAction)nextTimeAppointment:(id)sender {
+}
 @end

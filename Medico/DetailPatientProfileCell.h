@@ -25,6 +25,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *slot1EndTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot2EndTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *slot3EndTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *slot1BookOnlineButton;
+- (IBAction)slot1BookOnline:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *slot2BookOnlineButton;
+- (IBAction)slot2BookOnline:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *slot3BookOnlineButton;
+- (IBAction)slot3BookOnline:(id)sender;
 
 
 @end
