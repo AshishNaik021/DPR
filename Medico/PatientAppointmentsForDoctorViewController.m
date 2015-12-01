@@ -124,7 +124,7 @@
         
         if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
             
-            appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
+           // appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
            
 //            NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
 //            
@@ -137,12 +137,12 @@
 //            
 //            NSLog(@"after-----%@", date);
 
-            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-            
-            [formatter setDateFormat:@"dd-MM-yyyy"];
-            date = [formatter stringFromDate:appointmentDate];
-            
-            cell.bookDateLabel.text = date;
+//            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//            
+//            [formatter setDateFormat:@"dd-MM-yyyy"];
+//            date = [formatter stringFromDate:appointmentDate];
+//            
+            cell.bookDateLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"];
         }
         else{
             cell.bookDateLabel.text = @"";
@@ -173,7 +173,7 @@
        // cell.visitTypeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"visitType"];
     }
     if (indexPath.section == 2){
-        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+       /* if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
             
             appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
             
@@ -204,7 +204,7 @@
         }
         
         cell.detailsButton.tag =row;
-        [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];*/
 
     }
     
