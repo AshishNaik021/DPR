@@ -9,6 +9,7 @@
 #import "DoctorDetailAddTreatmentViewController.h"
 #import "DoctorDetailAddTreatmentCell.h"
 #import "DoctorLandingPageView.h"
+#import "TemplateDetailViewController.h"
 
 @interface DoctorDetailAddTreatmentViewController ()
 
@@ -72,6 +73,20 @@
     return cell;
     
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
+        TemplateDetailViewController *detailmanagetemplate = [segue destinationViewController];
+        NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
+        
+        int row = [myIndex row];
+        
+       // detailmanagetemplate.templateName = [NSString stringWithFormat:@"%@",[[templateArr objectAtIndex:row]objectForKey:@"templateName"]];
+       // detailmanagetemplate.templateId = [NSString stringWithFormat:@"%@",[[templateArr objectAtIndex:row]objectForKey:@"templateId"]];
+    }
+}
+
 
 
 - (void)didReceiveMemoryWarning {

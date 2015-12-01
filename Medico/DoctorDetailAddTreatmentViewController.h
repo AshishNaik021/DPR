@@ -11,5 +11,6 @@
 @interface DoctorDetailAddTreatmentViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property IBOutlet NSArray *subprocedureArr;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
