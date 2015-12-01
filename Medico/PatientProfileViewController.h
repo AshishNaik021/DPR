@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PatientProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-{
-    IBOutlet UITableView *gridViewTable;
-}
+
 -(IBAction)homePage:(id)sender;
 - (IBAction)nextAppointment:(id)sender;
 @property IBOutlet NSArray *patientArr;
@@ -19,5 +17,6 @@
 @property NSDictionary *args;
 @property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

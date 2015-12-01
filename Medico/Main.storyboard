@@ -3564,7 +3564,7 @@
         <!--Patient Profile View Controller-->
         <scene sceneID="VD2-to-KOv">
             <objects>
-                <viewController storyboardIdentifier="PatientProfileViewController" id="9mz-sv-bNt" customClass="PatientProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientProfileViewController" automaticallyAdjustsScrollViewInsets="NO" id="9mz-sv-bNt" customClass="PatientProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ny3-4a-nBH"/>
                         <viewControllerLayoutGuide type="bottom" id="oTN-mu-hYZ"/>
@@ -3714,7 +3714,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="gridViewTable" destination="EGd-fo-OFb" id="EOU-ed-Pnt"/>
+                        <outlet property="tableView" destination="EGd-fo-OFb" id="cup-l8-HBx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2X-Y0-iEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4973,7 +4973,7 @@
         <!--Patient Appointments For Doctor View Controller-->
         <scene sceneID="uwF-Ll-C65">
             <objects>
-                <viewController storyboardIdentifier="PatientAppointmentsForDoctorViewController" id="dd4-ji-pPO" customClass="PatientAppointmentsForDoctorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientAppointmentsForDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="dd4-ji-pPO" customClass="PatientAppointmentsForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TMQ-gf-NDy"/>
                         <viewControllerLayoutGuide type="bottom" id="atn-Wa-inK"/>
