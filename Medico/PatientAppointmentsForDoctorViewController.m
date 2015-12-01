@@ -258,8 +258,8 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"dd-MM-yyyy"];
     date = [formatter stringFromDate:appointmentDate];
-    
-    allInfo.summaryDatePassData = date;
+    allInfo.summaryDatePassData = [[patientAppointmentArr objectAtIndex:n] objectForKey:@"appointmentDateIos"];
+    //allInfo.summaryDatePassData = date; Poonam
     allInfo.summaryPatientEmailPassData = _patientEmailIdForCallAPI;
     allInfo.patientAppointmentArray = patientAppointmentArr;
     [self.navigationController pushViewController:allInfo animated:YES];
