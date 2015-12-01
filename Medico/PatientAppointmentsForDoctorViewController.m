@@ -23,6 +23,7 @@
 @synthesize appointmentDate;
 @synthesize date;
 @synthesize tableView;
+@synthesize s;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -63,6 +64,7 @@
     NSLog(@"PatientAppointmentsForDoctorViewController.m");
     [super viewDidLoad];
     
+    s = [[NSSet alloc]init];
     
     NSLog(@"PatientID>>>>>>>>>>>>>>>%@",_patientEmailIdForCallAPI);
     NSLog(@"DoctorID>>>>>>>>>>>>>>>>>%@",_doctorIdForCallAPI);
@@ -90,6 +92,26 @@
     patientAppointmentArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"dsfhgdfhgsfgfghsdfghjfg%@",patientAppointmentArr);
     
+    for (int i = 0; i<patientAppointmentArr.count; i++) {
+        
+        NSString *str = [NSString stringWithFormat:@"%@",[patientAppointmentArr[i] objectForKey:@"appointmentDateIos"]];
+        
+        NSArray* components = [str componentsSeparatedByString:@"-"];
+        
+        NSLog(@"Year only:%@",components[2]);
+        NSString *yr = [NSString stringWithFormat:@"%@",components[2]];
+//        s = [NSSet setWithArray:components[2]];
+        s = [s setByAddingObject:yr];
+        NSLog(@"nsSet Array---------%@",s);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 
@@ -97,7 +119,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 3;
+    return s.count+1;
     
 }
 
@@ -122,7 +144,7 @@
     
     if (indexPath.section == 1){
         
-        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"] isEqual:[NSNull null]]){
             
            // appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
            
@@ -143,6 +165,14 @@
 //            date = [formatter stringFromDate:appointmentDate];
 //            
             cell.bookDateLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"];
+        }
+        else if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+            appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            
+            [formatter setDateFormat:@"dd-MM-yyyy"];
+                        date = [formatter stringFromDate:appointmentDate];
+            cell.bookDateLabel.text = date;
         }
         else{
             cell.bookDateLabel.text = @"";
@@ -238,16 +268,19 @@
 
 
 -(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-    if (section == 0)
-        return @"Year 2015";
-    if (section == 1)
-        return @"Year 2014";
-    return @"";
+//    if (section == 0)
+//        return @"Year 2015";
+//    if (section == 1)
+//        return @"Year 2014";
+  return @"";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
+    if (section == 1)
+        return @"Year 2015";
     return @"";
+
 }
 
 

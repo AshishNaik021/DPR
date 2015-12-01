@@ -16,5 +16,6 @@
 @property IBOutlet NSDate *appointmentDate;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property IBOutlet NSString *date;
+@property IBOutlet NSSet *s;
 @end
 
