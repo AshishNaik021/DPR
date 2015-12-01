@@ -397,6 +397,7 @@
 		189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */; };
 		189EDB9D1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */; };
 		18A135B71C0C38CC0057E820 /* ic_clear_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A135B61C0C38CC0057E820 /* ic_clear_3x.png */; };
+		18A135BB1C0D5C4B0057E820 /* ic_add_2x copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A135BA1C0D5C4B0057E820 /* ic_add_2x copy.png */; };
 		18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */; };
 		18BB054A1BC24DC100D237CD /* manageAssistents.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB05491BC24DC100D237CD /* manageAssistents.png */; };
 		18BB05621BC24DFE00D237CD /* appointment.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BB054B1BC24DFE00D237CD /* appointment.png */; };
@@ -952,6 +953,7 @@
 		189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailSearchDoctorViewController.h; sourceTree = "<group>"; };
 		189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailSearchDoctorViewController.m; sourceTree = "<group>"; };
 		18A135B61C0C38CC0057E820 /* ic_clear_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_clear_3x.png; sourceTree = "<group>"; };
+		18A135BA1C0D5C4B0057E820 /* ic_add_2x copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_add_2x copy.png"; sourceTree = "<group>"; };
 		18AD4AEC1BBD51BE009308AC /* PatientRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PatientRegisterViewController.h; path = ../PatientRegisterViewController.h; sourceTree = "<group>"; };
 		18AD4AED1BBD51BE009308AC /* PatientRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PatientRegisterViewController.m; path = ../PatientRegisterViewController.m; sourceTree = "<group>"; };
 		18BB05491BC24DC100D237CD /* manageAssistents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manageAssistents.png; sourceTree = "<group>"; };
@@ -1585,6 +1587,7 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18A135BA1C0D5C4B0057E820 /* ic_add_2x copy.png */,
 				18A135B61C0C38CC0057E820 /* ic_clear_3x.png */,
 				185306841C0704030058C6CE /* pdf.jpeg */,
 				188E5E561C04863F0001E400 /* emptyStar.jpeg */,
@@ -1769,6 +1772,7 @@
 				180CF2C71BDF545C00FA7D86 /* clinicgrey@1x~ipad.png in Resources */,
 				18BB05771BC24DFE00D237CD /* setting.png in Resources */,
 				189EDB941BD62FFE00AA9B96 /* generalPhysician.png in Resources */,
+				18A135BB1C0D5C4B0057E820 /* ic_add_2x copy.png in Resources */,
 				180CF17E1BDF52C700FA7D86 /* labsgrey@3x~iphone.png in Resources */,
 				180CF18A1BDF52C700FA7D86 /* searchcatgrey@3x~iphone.png in Resources */,
 				185D87131BD7B8E0003B357C /* getAllDoctorClinics.json in Resources */,
