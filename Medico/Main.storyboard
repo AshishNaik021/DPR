@@ -10165,12 +10165,6 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypk-pQ-8Ye">
-                                        <rect key="frame" x="311" y="3" width="25" height="25"/>
-                                        <state key="normal" image="ic_add_2x copy.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
