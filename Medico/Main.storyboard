@@ -10070,14 +10070,6 @@
                                                     <outlet property="delegate" destination="xAO-xi-dRd" id="irz-6p-ZNd"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JyG-z1-nFR">
-                                                <rect key="frame" x="104" y="77" width="234" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="xAO-xi-dRd" id="dvZ-18-Gk5"/>
-                                                </connections>
-                                            </textField>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMg-1r-IfP">
                                                 <rect key="frame" x="104" y="48" width="234" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -10187,6 +10179,18 @@
                                                     <segue destination="5C2-cg-Vx5" kind="push" id="4II-Cm-eIh"/>
                                                 </connections>
                                             </button>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toa-wp-e7B">
+                                                <rect key="frame" x="104" y="135" width="234" height="21"/>
+                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9t-NA-8Lh">
+                                                <rect key="frame" x="104" y="77" width="234" height="21"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="summaryVisiteType:" destination="xAO-xi-dRd" eventType="touchUpInside" id="b4K-TE-3eC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </scrollView>
                                 </subviews>
@@ -10267,6 +10271,7 @@
                         <outlet property="summaryDiagnosisTextview" destination="L6G-CQ-14g" id="iOS-uh-vrm"/>
                         <outlet property="summaryMedicinTableView" destination="K6b-Re-mF6" id="sfa-qh-7tN"/>
                         <outlet property="summaryMedicineHistoryButton" destination="dJC-up-PMs" id="NVs-uk-EML"/>
+                        <outlet property="summaryPicker" destination="toa-wp-e7B" id="I3X-h9-qc0"/>
                         <outlet property="summaryReferredbyField" destination="Emj-EP-YkI" id="w8V-VK-qdm"/>
                         <outlet property="summarySaveButton" destination="bSt-sB-tby" id="cpG-eg-IEN"/>
                         <outlet property="summarySymptomsHistoryButton" destination="RiU-CG-SNZ" id="eCN-39-zNv"/>
@@ -10275,7 +10280,7 @@
                         <outlet property="summaryTestPrescribedHistoryButton" destination="YDz-z3-tm1" id="7tN-J2-UUa"/>
                         <outlet property="summaryTestPrescribedTextView" destination="rC1-vC-EqC" id="80K-ez-fLf"/>
                         <outlet property="summaryVisiteDateField" destination="tMg-1r-IfP" id="kRH-2l-WXK"/>
-                        <outlet property="summaryVisiteTypeField" destination="JyG-z1-nFR" id="mgb-NV-il7"/>
+                        <outlet property="summaryVisiteTypeButton" destination="Y9t-NA-8Lh" id="D4H-Y3-RSX"/>
                         <outlet property="treatmentPlanContentView" destination="H3A-GB-2XC" id="IQo-fA-iBm"/>
                         <outlet property="treatmentPlanTagButton" destination="ZOB-KP-Tb8" id="Lhb-Km-f9V"/>
                     </connections>

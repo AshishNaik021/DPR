@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate>{
+@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
     
     IBOutlet UIScrollView *scroll;
 
 }
+@property (weak, nonatomic) IBOutlet UIPickerView *summaryPicker;
+@property IBOutlet NSArray *pickerArr;
+@property (weak, nonatomic) IBOutlet UIButton *summaryVisiteTypeButton;
+- (IBAction)summaryVisiteType:(id)sender;
 
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;
