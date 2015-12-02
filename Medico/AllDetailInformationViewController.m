@@ -78,7 +78,7 @@
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
     // NSString *emailid = emailField.text;
-   
+    
     NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getPatientReminder?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -111,22 +111,6 @@
 - (void)viewDidLoad {
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
-    
-//    keyboardVisible = NO;
-//    screen = [[UIScreen mainScreen] bounds];
-//    width = CGRectGetWidth(screen);
-//    //Bonus height.
-//    height = CGRectGetHeight(screen);
-//    scrollHeight = height + 200;
-//    [scroll setScrollEnabled:YES];
-//    [scroll setContentSize:CGSizeMake(width, scrollHeight)];
-    
-
-    pickerArr = @[@"New Profile", @"Regular Visite", @"Follow Up", @"Physical Exam"];
-    
-    self.summaryPicker.dataSource = self;
-    self.summaryPicker.delegate = self;
-    self.summaryPicker.hidden = TRUE;
     
     // NSLog(@"Data came from PatientAppointmentsForDoctorViewController (self.pa) :%@",self.patientAppointmentArray);
     //NSLog(@"Data came from PatientAppointmentsForDoctorViewController (_pa):%@",_patientAppointmentArray);
@@ -178,25 +162,6 @@
     
 }
 
-- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 1;
-}
-
-// The number of rows of data
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return pickerArr.count;
-}
-
-// The data to return for the row and component (column) that's being passed in
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return pickerArr[row];
-}
-
-
-
 -(void)setAllValuesInSummary{
     NSLog(@"_patientAppointmentArray:%@",_patientAppointmentArray);
     if ([self checkInternetConnection]){
@@ -236,7 +201,9 @@
     self.summarySymptomsTextView.text = [NSString stringWithFormat:symptom];
 }
 -(void)setVisitType:(NSString *)type{
-    self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
+    //temporary commented for crash once uipicker up it will work
+//    self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
+    self.summaryVisiteTypeButton.userInteractionEnabled = false;
 }
 -(void)setVisitedDate:(NSString *)date{
     self.summaryVisiteDateField.text = [NSString stringWithFormat:date];
@@ -286,7 +253,7 @@
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-   // cell.subProcedureName.text = [[subprocedureArr objectAtIndex:row] objectForKey:@"templateName"];
+    // cell.subProcedureName.text = [[subprocedureArr objectAtIndex:row] objectForKey:@"templateName"];
     
     return cell;
     
@@ -387,8 +354,52 @@
     [summaryTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [treatmentPlanTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [invoicesTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [self setDoctorsNote];
 }
 
+-(void)setDoctorsNote{
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getDoctorNotes?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,[self.patientAppointmentArray[0] valueForKey:@"patientId"],_summaryDatePassData,_summaryTimePassData];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        NSLog(@"Error : %@",error.localizedDescription);
+    }
+    else if([arratList isKindOfClass:[NSNull class]]){
+        self.doctorsNoteSymptomsTextView.text = @"NA";
+        self.doctorsNoteDiagnosisTextView.text = @"NA";
+        self.doctorsNoteNoteTextView.text = @"NA";
+    }
+    else {
+        if ([[arratList valueForKey:@"symptoms"] isKindOfClass:[NSNull class]]) {
+        self.doctorsNoteSymptomsTextView.text = @"NA";
+        }
+        else{
+        self.doctorsNoteSymptomsTextView.text = [arratList valueForKey:@"symptoms"];
+        }
+        if ([[arratList valueForKey:@"diagnosis"] isKindOfClass:[NSNull class]]) {
+            self.doctorsNoteDiagnosisTextView.text = @"";
+        }
+        else{
+            self.doctorsNoteDiagnosisTextView.text = [arratList valueForKey:@"diagnosis"];
+        }
+        if ([[arratList valueForKey:@"doctorNotes"] isKindOfClass:[NSNull class]]) {
+            self.doctorsNoteNoteTextView.text = @"";
+        }
+        else{
+            self.doctorsNoteNoteTextView.text = [arratList valueForKey:@"doctorNotes"];
+        }
+
+    }
+}
 - (IBAction)treatmentPlan:(id)sender {
     treatmentPlanContentView.hidden = FALSE;
     summaryContentView.hidden = TRUE;
@@ -431,6 +442,7 @@
 }
 
 - (IBAction)doctorsNoteSave:(id)sender {
+    
 }
 -(void)getSummaryDetails{
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -451,6 +463,12 @@
     else{
         if ([array isKindOfClass:[NSNull class]]) {
             NSLog(@"Empty array");
+            self.summaryTestPrescribedTextView.text = @"NA";
+            self.summaryDiagnosisTextview.text = @"NA";
+            self.summarySymptomsTextView.text = @"NA";
+            self.summaryVisiteTypeField.text = @"NA";
+            self.summaryVisiteDateField.text = @"NA";
+            self.summaryClinicNameField.text = @"NA";
         }
         NSLog(@"arraylist%@",arratList);
         if (![[arratList valueForKey:@"testsPrescribed"]isKindOfClass:[NSNull class]]) {
@@ -496,112 +514,4 @@
 }
 
 
-/*----------------------------------------- Hide/Show Keyboard Code-------------------------------------*/
-
-//- (void) viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//    NSLog(@"Registering for keyboard events");
-//    
-//    // Register for the events
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidShow:)
-//                                                 name: UIKeyboardDidShowNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidHide:)
-//                                                 name: UIKeyboardDidHideNotification object:nil];
-//    
-//    //Initially the keyboard is hidden
-//    keyboardVisible = NO;
-//}
-//
-//-(void) viewWillDisappear:(BOOL)animated
-//{
-//    NSLog (@"Unregister for keyboard events");
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
-//}
-//
-//-(void) keyboardDidShow: (NSNotification *)notif
-//{
-//    // If keyboard is visible, return
-//    if (keyboardVisible)
-//    {
-//        NSLog(@"Keyboard is already visible. Ignore notification.");
-//        return;
-//    }
-//    
-//    // Get the size of the keyboard.
-//    NSDictionary* info = [notif userInfo];
-//    NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
-//    CGSize keyboardSize = [aValue CGRectValue].size;
-//    
-//    // Save the current location so we can restore
-//    // when keyboard is dismissed
-//    offset = scroll.contentOffset;
-//    
-//    // Resize the scroll view to make room for the keyboard
-//    CGRect viewFrame = scroll.frame;
-//    viewFrame.size.height -= keyboardSize.height;
-//    scroll.frame = viewFrame;
-//    
-//    // Keyboard is now visible
-//    keyboardVisible = YES;
-//}
-//
-//-(void) keyboardDidHide: (NSNotification *)notif
-//{
-//    // Is the keyboard already shown
-//    if (!keyboardVisible)
-//    {
-//        NSLog(@"Keyboard is already hidden. Ignore notification.");
-//        return;
-//    }
-//    
-//    // Reset the frame scroll view to its original value
-//    scroll.frame = CGRectMake(0, 0, width, scrollHeight);
-//    
-//    // Reset the scrollview to previous location
-//    scroll.contentOffset = offset;
-//    
-//    // Keyboard is no longer visible
-//    keyboardVisible = NO;
-//    
-//}
-//
-//- (BOOL)textFieldShouldReturn:(UITextField *)textField
-//{
-//    if(textField.returnKeyType==UIReturnKeyNext) {
-//        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
-//        [next becomeFirstResponder];
-//        //[textField resignFirstResponder];
-//    }else if (textField.returnKeyType==UIReturnKeyDone) {
-//        [textField resignFirstResponder];
-//    }
-//    
-//    return YES;
-//    //    [textField resignFirstResponder];
-//    //    return YES;
-//}
-//
-//- (BOOL)textViewShouldReturn:(UITextView *)textView
-//{
-//    if(textView.returnKeyType==UIReturnKeyNext) {
-//        UIView *next = [[textView superview] viewWithTag:textView.tag+1];
-//        [next becomeFirstResponder];
-//        //[textField resignFirstResponder];
-//    }else if (textView.returnKeyType==UIReturnKeyDone) {
-//        [textView resignFirstResponder];
-//    }
-//    
-//    return YES;
-//    //    [textField resignFirstResponder];
-//    //    return YES;
-//}
-//
-//
-//
-//
-//
-/*------------------------------------------------------------------------------------------------------*/
-- (IBAction)summaryVisiteType:(id)sender {
-    self.summaryPicker.hidden = FALSE;
-}
 @end
