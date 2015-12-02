@@ -24,7 +24,7 @@
 @synthesize scrollHeight;
 @synthesize pickerArr;
 @synthesize returnString;
-
+@synthesize objForMedicine;
 @synthesize summaryTagButton;
 @synthesize summaryContentView;
 @synthesize documentContentView;
@@ -161,7 +161,7 @@
     [self setAllValuesInSummary];
     
 }
-
+#pragma mark Summary Start
 -(void)setAllValuesInSummary{
     NSLog(@"_patientAppointmentArray:%@",_patientAppointmentArray);
     if ([self checkInternetConnection]){
@@ -204,6 +204,7 @@
     //temporary commented for crash once uipicker up it will work
 //    self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
     self.summaryVisiteTypeButton.userInteractionEnabled = false;
+    self.summaryVisiteTypeButton.titleLabel.text = [NSString stringWithFormat:type];
 }
 -(void)setVisitedDate:(NSString *)date{
     self.summaryVisiteDateField.text = [NSString stringWithFormat:date];
@@ -220,20 +221,22 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-    NSLog(@"cliniclist call:%@",arratList);
+    NSMutableArray *arrayList1 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"cliniclist call:%@",arrayList1);
 
-    for (int i = 0; i < arratList.count; i++) {
-        NSLog(@"typeofidclinic %@",[[arratList[i] valueForKey:@"idClinic"] class]);
+    for (int i = 0; i < arrayList1.count; i++) {
+        NSLog(@"typeofidclinic %@",[[arrayList1[i] valueForKey:@"idClinic"] class]);
         NSLog(@"typeofclinicid::%@",[[self.patientAppointmentArray[0] valueForKey:@"clinicId"] class]);
-        if ([[arratList[i] valueForKey:@"idClinic"] isEqualToNumber:[self.patientAppointmentArray[0] valueForKey:@"clinicId"]]) {
-            self.summaryClinicNameField.text = [arratList[i] valueForKey:@"clinicName"];
+        if ([[arrayList1[i] valueForKey:@"idClinic"] isEqualToNumber:[self.patientAppointmentArray[0] valueForKey:@"clinicId"]]) {
+            self.summaryClinicNameField.text = [arrayList1[i] valueForKey:@"clinicName"];
         }
     }
     if ([self.summaryClinicNameField.text isEqualToString:@""]) {
     self.summaryClinicNameField.text = [NSString stringWithFormat:@"NA"];
     }
 }
+#pragma mark Summary End
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -255,6 +258,12 @@
     int row = [indexPath row];
     // cell.subProcedureName.text = [[subprocedureArr objectAtIndex:row] objectForKey:@"templateName"];
     
+    if (![[objForMedicine valueForKey:@"medicinName"]isKindOfClass:[NSNull class]]) {
+        NSLog(@"type:%@",[[objForMedicine valueForKey:@"medicinName"] class]);
+        NSLog(@"objmed%@",objForMedicine);
+        cell.medicineNameLabel.text = [objForMedicine valueForKey:@"medicinName"];
+    }
+
     return cell;
     
 }
@@ -369,33 +378,33 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSMutableArray *arrayList2 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
     }
-    else if([arratList isKindOfClass:[NSNull class]]){
+    else if([arrayList2 isKindOfClass:[NSNull class]]){
         self.doctorsNoteSymptomsTextView.text = @"NA";
         self.doctorsNoteDiagnosisTextView.text = @"NA";
         self.doctorsNoteNoteTextView.text = @"NA";
     }
     else {
-        if ([[arratList valueForKey:@"symptoms"] isKindOfClass:[NSNull class]]) {
+        if ([[arrayList2 valueForKey:@"symptoms"] isKindOfClass:[NSNull class]]) {
         self.doctorsNoteSymptomsTextView.text = @"NA";
         }
         else{
-        self.doctorsNoteSymptomsTextView.text = [arratList valueForKey:@"symptoms"];
+        self.doctorsNoteSymptomsTextView.text = [arrayList2 valueForKey:@"symptoms"];
         }
-        if ([[arratList valueForKey:@"diagnosis"] isKindOfClass:[NSNull class]]) {
+        if ([[arrayList2 valueForKey:@"diagnosis"] isKindOfClass:[NSNull class]]) {
             self.doctorsNoteDiagnosisTextView.text = @"";
         }
         else{
-            self.doctorsNoteDiagnosisTextView.text = [arratList valueForKey:@"diagnosis"];
+            self.doctorsNoteDiagnosisTextView.text = [arrayList2 valueForKey:@"diagnosis"];
         }
-        if ([[arratList valueForKey:@"doctorNotes"] isKindOfClass:[NSNull class]]) {
+        if ([[arrayList2 valueForKey:@"doctorNotes"] isKindOfClass:[NSNull class]]) {
             self.doctorsNoteNoteTextView.text = @"";
         }
         else{
-            self.doctorsNoteNoteTextView.text = [arratList valueForKey:@"doctorNotes"];
+            self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
         }
 
     }
@@ -411,6 +420,12 @@
     [doctorsNoteTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [summaryTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [invoicesTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    if ([self checkInternetConnection]) {
+        [self getTreatmentPlan];
+    }
+    else {
+        [self noNetworkAlert];
+    }
 }
 
 - (IBAction)invoices:(id)sender {
@@ -449,6 +464,7 @@
         [self noNetworkAlert];
     }
 }
+#pragma mark Summary Start
 -(void)getSummaryDetails{
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
@@ -461,7 +477,7 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
     }
@@ -475,50 +491,46 @@
             self.summaryVisiteDateField.text = @"NA";
             self.summaryClinicNameField.text = @"NA";
         }
-        NSLog(@"arraylist%@",arratList);
-        if (![[arratList valueForKey:@"testsPrescribed"]isKindOfClass:[NSNull class]]) {
-            [self setPrescription:[arratList valueForKey:@"testsPrescribed"]];
+        NSLog(@"arraylist3%@",arrayList3);
+        if (![[arrayList3 valueForKey:@"testsPrescribed"]isKindOfClass:[NSNull class]]) {
+            [self setPrescription:[arrayList3 valueForKey:@"testsPrescribed"]];
         }
         else{
             [self setPrescription:@"NA"];
         }
-//        if (![[arratList valueForKey:@"medicinePrescribed"]isKindOfClass:[NSNull class]]) {
-//            [self :[arratList valueForKey:@"medicinePrescribed"]];
-//        }
-//        else{
-//            [self setPrescription:@"NA"];
-//        }
-        if (![[arratList valueForKey:@"diagnosis"]isKindOfClass:[NSNull class]]) {
-            [self setDiagnosis:[arratList valueForKey:@"diagnosis"]];
+        if (![[arrayList3 valueForKey:@"diagnosis"]isKindOfClass:[NSNull class]]) {
+            [self setDiagnosis:[arrayList3 valueForKey:@"diagnosis"]];
         }
         else{
             [self setDiagnosis:@"NA"];
         }
-        if (![[arratList valueForKey:@"symptoms"]isKindOfClass:[NSNull class]]) {
-            [self setSymptom:[arratList valueForKey:@"symptoms"]];
+        if (![[arrayList3 valueForKey:@"symptoms"]isKindOfClass:[NSNull class]]) {
+            [self setSymptom:[arrayList3 valueForKey:@"symptoms"]];
         }
         else{
             [self setSymptom:@"NA"];
         }
-        if (![[arratList valueForKey:@"visitType"]isKindOfClass:[NSNull class]]) {
-            [self setVisitType:[arratList valueForKey:@"visitType"]];
+        if (![[arrayList3 valueForKey:@"visitType"]isKindOfClass:[NSNull class]]) {
+            [self setVisitType:[arrayList3 valueForKey:@"visitType"]];
         }
         else{
             [self setVisitType:@"NA"];
         }
-        if (![[arratList valueForKey:@"visitDate"]isKindOfClass:[NSNull class]]) {
-            [self setVisitedDate:[arratList valueForKey:@"visitDate"]];
+        if (![[arrayList3 valueForKey:@"visitDate"]isKindOfClass:[NSNull class]]) {
+            [self setVisitedDate:[arrayList3 valueForKey:@"visitDate"]];
         }
         else{
             [self setVisitedDate:@"NA"];
         }
+        objForMedicine = [arrayList3 copy];
         
     }
     
     
 }
+#pragma mark Summary End
 
-//save doc note
+#pragma mark DoctorNoteStart
 -(void)submitNotes{
     //    [self.view endEditing:YES];
     returnString = @"";
@@ -602,6 +614,39 @@
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
 }
+
+#pragma mark DoctorNoteEnd
+
+#pragma mark Treatment Plan Start
+
+-(void)getTreatmentPlan{
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllTreatmentPlan?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"],_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
+    if (error) {
+        NSLog(@"Error : %@",error.localizedDescription);
+    }
+    else if ([dict isKindOfClass:[NSNull class]])
+    {
+        NSLog(@"Empty Array");
+    }
+    else{
+        NSLog(@"response form traetment :%@",dict);
+    }
+
+}
+
+#pragma mark Treatment Plan End
 
 
 

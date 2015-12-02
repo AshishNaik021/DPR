@@ -61,6 +61,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *doctorsNoteNoteTextView;
 @property (weak, nonatomic) IBOutlet UIButton *doctorsNoteSaveButton;
 @property NSArray *patientAppointmentArray;
+@property NSMutableArray *objForMedicine;
 
 
 
