@@ -9998,6 +9998,9 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xAO-xi-dRd" id="caq-Pp-qsK"/>
+                                                </connections>
                                             </textView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test prescribed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ9-xz-TmE">
                                                 <rect key="frame" x="9" y="399" width="110" height="21"/>
@@ -10063,21 +10066,33 @@
                                                 <rect key="frame" x="104" y="106" width="234" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xAO-xi-dRd" id="irz-6p-ZNd"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JyG-z1-nFR">
                                                 <rect key="frame" x="104" y="77" width="234" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xAO-xi-dRd" id="dvZ-18-Gk5"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMg-1r-IfP">
                                                 <rect key="frame" x="104" y="48" width="234" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xAO-xi-dRd" id="Cdn-Ug-xvw"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72Y-2S-vu5">
                                                 <rect key="frame" x="104" y="19" width="234" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="xAO-xi-dRd" id="TBC-jq-ijR"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Symptoms:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-eC-fhy">
                                                 <rect key="frame" x="9" y="135" width="87" height="21"/>
@@ -10245,6 +10260,7 @@
                         <outlet property="documentTagButton" destination="6Wk-WH-SLD" id="AZQ-XL-ukV"/>
                         <outlet property="invoiceContentView" destination="Aer-cN-gDz" id="PV9-JG-auR"/>
                         <outlet property="invoicesTagButton" destination="Pon-b3-1qN" id="QD4-SN-NQG"/>
+                        <outlet property="scroll" destination="YMt-aY-0Zt" id="nF0-y1-mk8"/>
                         <outlet property="summaryClinicNameField" destination="72Y-2S-vu5" id="xMx-AQ-nrS"/>
                         <outlet property="summaryContentView" destination="j2C-pf-mcC" id="dN4-ek-P8B"/>
                         <outlet property="summaryDiagnosisHistoryButton" destination="gMa-re-hyY" id="8sO-lY-dNp"/>

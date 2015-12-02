@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate>{
+@interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate>{
+    
+    IBOutlet UIScrollView *scroll;
+
 }
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
+
+
 @property IBOutlet NSMutableArray *array;
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
 @property (weak, nonatomic) IBOutlet UIButton *summaryTagButton;

@@ -58,6 +58,7 @@
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     patientChecked = NO;
+    
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
     width = CGRectGetWidth(screen);
