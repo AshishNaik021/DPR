@@ -80,5 +80,6 @@
 @property IBOutlet NSString *summaryTimePassData;
 @property IBOutlet NSString *summaryPatientEmailPassData;
 @property IBOutlet NSString *summaryDoctorIDPassData;
+@property NSString *returnString;
 
 @end

@@ -23,7 +23,7 @@
 @synthesize screen;
 @synthesize scrollHeight;
 @synthesize pickerArr;
-
+@synthesize returnString;
 
 @synthesize summaryTagButton;
 @synthesize summaryContentView;
@@ -442,7 +442,12 @@
 }
 
 - (IBAction)doctorsNoteSave:(id)sender {
-    
+    if ([self checkInternetConnection]) {
+        [self submitNotes];
+    }
+    else{
+        [self noNetworkAlert];
+    }
 }
 -(void)getSummaryDetails{
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -512,6 +517,93 @@
     
     
 }
+
+//save doc note
+-(void)submitNotes{
+    //    [self.view endEditing:YES];
+    returnString = @"";
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/saveDoctorNotes"];
+    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSString * params =[NSString stringWithFormat:@"\{\"appointmentDate\":\"%@\",\"appointmentTime\":\"%@\",\"diagnosis\":\"%@\",\"doctorId\":\"%@\",\"doctorNotes\":\"%@\",\"patientId\":\"%@\",\"symptoms\":\"%@\"}",[self.patientAppointmentArray[0] valueForKey:@"appointmentDateIos"],[self.patientAppointmentArray[0] valueForKey:@"bookTime"],self.doctorsNoteDiagnosisTextView.text,[self.patientAppointmentArray[0] valueForKey:@"doctorId"],self.doctorsNoteNoteTextView.text,[self.patientAppointmentArray[0] valueForKey:@"patientId"],self.doctorsNoteSymptomsTextView.text];
+    NSLog(@"%@",params);
+    [urlRequest setHTTPMethod:@"POST"];
+    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
+                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                           NSLog(@"Response:%@ Error : %@\n", response, error);
+                                                           //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           if(error == nil)
+                                                           {
+                                                               returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+                                                               NSLog(@"Data = %@",returnString);
+                                                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                               NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+                                                               if ([httpResponse statusCode] == 200) {
+                                                                   [self parseJSON:returnString];
+                                                               } else {
+                                                                   [self errorMessage];
+                                                               }
+                                                           }
+                                                           else if ([error.localizedDescription isEqualToString:@"The request timed out."]){
+                                                               [self requestTimeOut];
+                                                           }
+                                                           else {
+                                                               [self errorMessage];
+                                                           }
+                                                           
+                                                       }];
+    [dataTask resume];
+    
+}
+
+-(void)errorMessage{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+-(void)requestTimeOut{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(void)threadStartAnimating:(id)data
+{
+ //   [spinner startAnimating];
+    [self.view setUserInteractionEnabled:NO];
+    
+}
+-(void)viewDidDisappear:(BOOL)animated{
+   // self.loginButton.enabled = YES;
+}
+
+
+-(void)parseJSON : (NSString *)responseData{
+    NSString * jsonString = responseData;
+    //NSStringEncoding  encoding;
+    NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError * error=nil;
+    NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSLog(@"NSDictionery:%@",parsedData);
+    if ([parsedData isKindOfClass:[NSNull class]]) {
+        [self errorMessage];
+    }
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Awesome!" message:@"Dcotor's Note Has been Updated." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
+
+
 
 
 @end
