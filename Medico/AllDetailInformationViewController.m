@@ -667,7 +667,9 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSLog(@"sssssssssssssssssssss%@",responseStr);
+   // NSLog(@"sssssssssssssssssssss%@",responseStr);
+    
+    
    /*
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
@@ -675,10 +677,11 @@
     __procedureArr = [json valueForKeyPath:@"DentalPro"];
 
     */
-    NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-   // NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseStr options:NSJSONReadingMutableContainers error:&error];
+   NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+   
+    //NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseStr options:NSJSONReadingMutableContainers error:&error];
     
-    NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
+ //   NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
     
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
@@ -689,11 +692,35 @@
     }
     else{
         NSLog(@"response form traetment :%@",dict);
-        NSDictionary *procedureArr = [dict valueForKeyPath:@"procedure"];
-        NSDictionary *allTemplateArr = [procedureArr valueForKeyPath:@"allTemplate"];
-        collectionArray = [allTemplateArr valueForKey:@"templates"];
-        NSLog(@"gahdgjhasgdhgshajgdhgdhagdjhgajhgasgjh-------------%@",collectionArray);
-        NSLog(@"value print----------%@",[collectionArray valueForKey:@"fieldDefaultValue"]);
+        NSDictionary *procedureArr = [dict valueForKey:@"procedure"];
+      //  NSLog(@"procedurebvbvbvbvbvbvbvbv-------%@",procedureArr);
+        
+        NSDictionary *allTemplateArr = [procedureArr valueForKey:@"allTemplate"];
+       // NSLog(@"Before------------%@",allTemplateArr);
+       
+        NSDictionary *temp = [allTemplateArr valueForKey:@"templates"];
+        
+//        NSString *coll = [collectionArray description];
+//        NSLog(@"my string is------------%@",coll);
+//        NSString *newStr = [coll substringFromIndex:50];
+//        NSLog(@"Newstring------------%@",newStr);
+//        if ([newStr length] > 0) {
+//           NSString *finalString = [newStr substringToIndex:[newStr length] - 17];
+//            NSLog(@"final--------------------%@",finalString);
+//            NSDictionary *d = [NSJSONSerialization JSONObjectWithData:[finalString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+//            //collectionArray = [d allValues];
+//            NSLog(@"finally array is ----------%@",d);
+//        }
+        
+         collectionArray = [NSArray arrayWithArray:[temp valueForKey:@"fieldDefaultValue"]];
+        
+        NSLog(@"values-------------%lu",(unsigned long)collectionArray.count);
+        
+       // NSLog(@"gahdgjhasgdhgshajgdhgdhagdjhgajhgasgjh-------------%@",collectionArray);
+    //    NSLog(@"%lu",(unsigned long)collectionArray.count);
+        
+      //  NSLog(@"value print----------%@",[collectionArray valueForKey:@"fieldDefaultValue"]);
+        
     }
 
 }
