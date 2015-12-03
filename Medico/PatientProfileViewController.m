@@ -143,48 +143,48 @@
     if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]) {
         [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
         if ([cell.lastAppointmentButton.titleLabel.text length] == 0) {
-            [cell.lastAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+            [cell.lastAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
         }
         
     }
     else
     {
-        [cell.lastAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        [cell.lastAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
     }
     
     if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"] isEqual:[NSNull null]]) {
         [cell.appointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"]] forState:UIControlStateNormal];
         if ([cell.appointmentButton.titleLabel.text length] == 0) {
-            [cell.appointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+            [cell.appointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
         }
         
     }
     else
     {
-        [cell.appointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        [cell.appointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
     }
     if (![[[patientArr objectAtIndex:row] objectForKey:@"bookDate"] isEqual:[NSNull null]]) {
         [cell.nextAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"bookDate"]] forState:UIControlStateNormal];
         if ([cell.nextAppointmentButton.titleLabel.text length] == 0) {
-            [cell.nextAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+            [cell.nextAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
         }
         
     }
     else
     {
-        [cell.nextAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        [cell.nextAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
     }
     
     if (![[[patientArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]) {
         [cell.nextTimeAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"bookTime"]] forState:UIControlStateNormal];
         if ([cell.nextTimeAppointmentButton.titleLabel.text length] == 0) {
-            [cell.nextTimeAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+            [cell.nextTimeAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
         }
         
     }
     else
     {
-        [cell.nextTimeAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        [cell.nextTimeAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
     }
     
     
