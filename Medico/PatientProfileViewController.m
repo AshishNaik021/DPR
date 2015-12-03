@@ -262,11 +262,34 @@
     [self.navigationController pushViewController:DoctorHome animated:YES];
 }
 
+
+
 - (void)lastVisited:(id)sender {
-    AllDetailInformationViewController *summary =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"AllDetailInformationViewController"];
-    [self.navigationController pushViewController:summary animated:YES];
+    UIButton *senderButton = (UIButton *)sender;
+    int n = (int)senderButton.tag;
+    
+    if (![[[patientArr objectAtIndex:n] objectForKey:@"lastVisited"] isEqual:[NSNull null]]){
+        
+       // if (![[[patientArr objectAtIndex:n] objectForKey:@"lastVisitedTime"] isEqual:[NSNull null]] ) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"There is no last visited summary." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+
+    
+  //  }
+    }
+    else{
+        AllDetailInformationViewController *summary =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"AllDetailInformationViewController"];
+        summary.summaryPatientEmailPassData = [[patientArr objectAtIndex:n] valueForKey:@"emailID"];
+        summary.summaryDoctorIDPassData = [[patientArr objectAtIndex:n] valueForKey:@"doctorId"];
+        summary.summaryDatePassData = [[patientArr objectAtIndex:n] valueForKey:@"lastVisited"];
+        summary.summaryTimePassData = [[patientArr objectAtIndex:n] valueForKey:@"lastVisitedTime"];
+        [self.navigationController pushViewController:summary animated:YES];
+        
+    }
 }
+
+
 
 
 - (void)lastAppointment:(id)sender {
