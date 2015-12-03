@@ -440,43 +440,6 @@
         [self noNetworkAlert];
     }
 }
-
-- (IBAction)invoices:(id)sender {
-    invoiceContentView.hidden = FALSE;
-    summaryContentView.hidden = TRUE;
-    doctorsNoteContentView.hidden = TRUE;
-    treatmentPlanContentView.hidden = TRUE;
-    documentContentView.hidden = TRUE;
-    [invoicesTagButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [documentTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
-    [doctorsNoteTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
-    [treatmentPlanTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
-    [summaryTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
-    if ([self checkInternetConnection]) {
-        [self setInvoices];
-    }
-    else{
-        [self noNetworkAlert];
-    }
-}
-
--(void)setInvoices{
-    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllInvoices?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
-    NSURL *url = [NSURL URLWithString:urlStr];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    NSURLResponse *response;
-    NSError *error;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-    if (error) {
-        NSLog(@"Error : %@",error.localizedDescription);
-    }
-}
 - (IBAction)summarySymptomsHistory:(id)sender {
 }
 
@@ -727,7 +690,65 @@
 
 #pragma mark Treatment Plan End
 
+#pragma mark Invoice Start
 
+- (IBAction)invoices:(id)sender {
+    invoiceContentView.hidden = FALSE;
+    summaryContentView.hidden = TRUE;
+    doctorsNoteContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    documentContentView.hidden = TRUE;
+    [invoicesTagButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [documentTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [doctorsNoteTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [treatmentPlanTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    [summaryTagButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
+    if ([self checkInternetConnection]) {
+        [self setInvoices];
+    }
+    else{
+        [self noNetworkAlert];
+    }
+}
 
+-(void)setInvoices{
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllInvoices?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInEmail"],_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableDictionary *invoiceResponse = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        NSLog(@"Error : %@",error.localizedDescription);
+    }
+    else if([invoiceResponse isKindOfClass:[NSNull class]]){
+        NSLog(@"Emprty Response");
+    }
+    else{
+        NSLog(@"Invoice response :%@",invoiceResponse);
+        if ([[invoiceResponse valueForKey:@"total"] isKindOfClass:[NSNull class]]) {
+            self.invoiceTotalField.text = @"NA";
+            self.invoiceTotalField.userInteractionEnabled = false;
+        }
+        else {
+            self.invoiceTotalField.text = [invoiceResponse valueForKey:@"total"];
+            self.invoiceTotalField.userInteractionEnabled = false;
+        }
+        NSLog(@"TYpe of response :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
+        NSDictionary *dic = [invoiceResponse dictionaryWithValuesForKeys:@"allTemplate"];
+        NSArray *result = [invoiceResponse valueForKeyPath:@"fieldDefaultValue"];
+        
+    }
+    
+    
+}
+
+#pragma mark Invoice End
 
 @end
