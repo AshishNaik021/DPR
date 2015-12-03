@@ -157,6 +157,7 @@
     [array addObject:@"Note"];
     [array addObject:@"Cost Dollar"];
     self.collection.layer.borderWidth = 1.0f;
+    self.invoiceCollection.layer.borderWidth = 1.0f;
     
     [self setAllValuesInSummary];
     
@@ -309,6 +310,7 @@
 }
 - (void)viewDidLayoutSubviews {
     self.treatmentScrollView.contentSize = self.collection.frame.size;
+    self.invoiceScrollCollection.contentSize = self.invoiceCollection.frame.size;
 }
 
 - (void)didReceiveMemoryWarning {

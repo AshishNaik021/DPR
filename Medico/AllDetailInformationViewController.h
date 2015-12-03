@@ -79,7 +79,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *invoiceTotalDueField;
 @property (weak, nonatomic) IBOutlet UIButton *invoiceSaveButton;
 - (IBAction)invoiceSave:(id)sender;
+@property (weak, nonatomic) IBOutlet UIScrollView *invoiceScrollCollection;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *invoiceCollection;
 
 
 
