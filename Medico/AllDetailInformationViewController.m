@@ -201,10 +201,9 @@
     self.summarySymptomsTextView.text = [NSString stringWithFormat:symptom];
 }
 -(void)setVisitType:(NSString *)type{
-    //temporary commented for crash once uipicker up it will work
-//    self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
-    self.summaryVisiteTypeButton.userInteractionEnabled = false;
-    self.summaryVisiteTypeButton.titleLabel.text = [NSString stringWithFormat:type];
+    self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
+//    self.summaryVisiteTypeButton.userInteractionEnabled = false;
+//    self.summaryVisiteTypeButton.titleLabel.text = [NSString stringWithFormat:type];
 }
 -(void)setVisitedDate:(NSString *)date{
     self.summaryVisiteDateField.text = [NSString stringWithFormat:date];
@@ -450,21 +449,21 @@
 }
 
 -(void)setInvoices{
-//    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
-//    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
-//    
-//    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllInvoices?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
-//    NSURL *url = [NSURL URLWithString:urlStr];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    
-//    NSURLResponse *response;
-//    NSError *error;
-//    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-//    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-//    NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-//    if (error) {
-//        NSLog(@"Error : %@",error.localizedDescription);
-//    }
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllInvoices?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        NSLog(@"Error : %@",error.localizedDescription);
+    }
 }
 - (IBAction)summarySymptomsHistory:(id)sender {
 }
