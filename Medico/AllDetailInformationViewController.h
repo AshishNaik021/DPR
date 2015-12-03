@@ -25,6 +25,7 @@
 @property CGFloat scrollHeight;
 @property CGRect screen;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *treatmentScrollView;
 
 @property IBOutlet NSMutableArray *array;
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;

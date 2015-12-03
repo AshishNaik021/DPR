@@ -270,7 +270,7 @@
 
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
+    return array.count;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -308,7 +308,9 @@
         [selfController.navigationController setModalPresentationStyle:UIModalPresentationCurrentContext];
     }
 }
-
+- (void)viewDidLayoutSubviews {
+    self.treatmentScrollView.contentSize = self.collection.frame.size;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
