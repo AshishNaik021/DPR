@@ -14,6 +14,7 @@
 #import "LastVisitedConsultationViewController.h"
 #import "DoctorBookAppointmentViewController.h"
 #import "LastVisitedConsultationViewController.h"
+#import "AllDetailInformationViewController.h"
 
 @interface PatientProfileViewController ()
 
@@ -31,8 +32,7 @@
     NSLog(@"calling home page of dr");
 }
 
-- (IBAction)nextAppointment:(id)sender {
-}
+
 
 - (void)viewDidLoad {
     NSLog(@"PatientProfileViewController.m");
@@ -175,6 +175,18 @@
         [cell.nextAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
     }
     
+    if (![[[patientArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]) {
+        [cell.nextTimeAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"bookTime"]] forState:UIControlStateNormal];
+        if ([cell.nextTimeAppointmentButton.titleLabel.text length] == 0) {
+            [cell.nextTimeAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+        }
+        
+    }
+    else
+    {
+        [cell.nextTimeAppointmentButton setTitle:@"Not Visited" forState:UIControlStateNormal];
+    }
+    
     
     
     // [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
@@ -219,14 +231,41 @@
     cell.appointmentButton.tag =row;
     [cell.appointmentButton addTarget:self action:@selector(appointment:) forControlEvents:UIControlEventTouchUpInside];
     
+    cell.lastVisitedButton.tag =row;
+    [cell.lastVisitedButton addTarget:self action:@selector(lastVisited:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.nextAppointmentButton.tag =row;
+    [cell.nextAppointmentButton addTarget:self action:@selector(nextAppointment:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.nextTimeAppointmentButton.tag =row;
+    [cell.nextTimeAppointmentButton addTarget:self action:@selector(nextTimeAppointment:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     return cell;
     
 }
+
+- (void)nextAppointment:(id)sender {
+    DoctorBookAppointmentViewController *summary =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
+    [self.navigationController pushViewController:summary animated:YES];
+}
+- (void)nextTimeAppointment:(id)sender {
+    DoctorBookAppointmentViewController *summary =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
+    [self.navigationController pushViewController:summary animated:YES];
+}
+
 - (void)appointment:(id)sender {
     DoctorBookAppointmentViewController *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
+}
+
+- (void)lastVisited:(id)sender {
+    AllDetailInformationViewController *summary =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"AllDetailInformationViewController"];
+    [self.navigationController pushViewController:summary animated:YES];
 }
 
 
