@@ -326,6 +326,15 @@
 }
 */
 
+- (IBAction)invoiceAdd:(id)sender {
+}
+
+- (IBAction)invoiceCheck:(id)sender {
+}
+
+- (IBAction)invoiceSave:(id)sender {
+}
+
 - (IBAction)summary:(id)sender {
     summaryContentView.hidden = FALSE;
     documentContentView.hidden = TRUE;

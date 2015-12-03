@@ -14,6 +14,11 @@
 @end
 
 @implementation DoctorBookAppointmentViewController
+@synthesize doctorIdPassData = _doctorIdPassData;
+@synthesize patientEmailPassData = _patientEmailPassData;
+@synthesize appointmentDatePassData = _appointmentDatePassData;
+@synthesize appointmentTimePassData = _appointmentTimePassData;
+
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];

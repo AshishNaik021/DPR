@@ -10,4 +10,9 @@
 
 @interface DoctorBookAppointmentViewController : UIViewController
 
+@property IBOutlet NSString *doctorIdPassData;
+@property IBOutlet NSString *patientEmailPassData;
+@property IBOutlet NSString *appointmentDatePassData;
+@property IBOutlet NSString *appointmentTimePassData;
+
 @end

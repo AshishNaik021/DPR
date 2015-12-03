@@ -65,6 +65,32 @@
 @property NSMutableArray *objForMedicine;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *invoiceAddButton;
+- (IBAction)invoiceAdd:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *invoiceCheckButton;
+- (IBAction)invoiceCheck:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTotalField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceDiscountMinusField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceDiscountTotalField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTaxMinusField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTaxTotalField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceGrandTotalField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceAdvanceField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTotalDueField;
+@property (weak, nonatomic) IBOutlet UIButton *invoiceSaveButton;
+- (IBAction)invoiceSave:(id)sender;
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (IBAction)summary:(id)sender;
 - (IBAction)documents:(id)sender;

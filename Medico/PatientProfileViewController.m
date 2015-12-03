@@ -238,7 +238,7 @@
     [cell.nextAppointmentButton addTarget:self action:@selector(nextAppointment:) forControlEvents:UIControlEventTouchUpInside];
     
     cell.nextTimeAppointmentButton.tag =row;
-    [cell.nextTimeAppointmentButton addTarget:self action:@selector(nextTimeAppointment:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.nextTimeAppointmentButton addTarget:self action:@selector(nextAppointment:) forControlEvents:UIControlEventTouchUpInside];
     
     
     return cell;
@@ -246,10 +246,34 @@
 }
 
 - (void)nextAppointment:(id)sender {
-    DoctorBookAppointmentViewController *summary =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
-    [self.navigationController pushViewController:summary animated:YES];
+    UIButton *senderButton = (UIButton *)sender;
+    int n = (int)senderButton.tag;
+    
+    if (![[[patientArr objectAtIndex:n] objectForKey:@"lastVisited"] isEqual:[NSNull null]]){
+        
+        // if (![[[patientArr objectAtIndex:n] objectForKey:@"lastVisitedTime"] isEqual:[NSNull null]] ) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"There is no last visited summary." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+        
+        //  }
+    }
+    else{
+        DoctorBookAppointmentViewController *summary =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
+        summary.patientEmailPassData = [[patientArr objectAtIndex:n] valueForKey:@"emailID"];
+        summary.doctorIdPassData = [[patientArr objectAtIndex:n] valueForKey:@"doctorId"];
+        summary.appointmentDatePassData = [[patientArr objectAtIndex:n] valueForKey:@"lastVisited"];
+        summary.appointmentTimePassData = [[patientArr objectAtIndex:n] valueForKey:@"lastVisitedTime"];
+        
+        [self.navigationController pushViewController:summary animated:YES];
+        
+    }
+
 }
+
+
+
 - (void)nextTimeAppointment:(id)sender {
     DoctorBookAppointmentViewController *summary =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
