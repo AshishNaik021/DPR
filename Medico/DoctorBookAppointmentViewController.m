@@ -20,10 +20,14 @@
 @synthesize appointmentTimePassData = _appointmentTimePassData;
 
 - (void) homePage:(id)sender{
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInUserType"]){
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
-    
+    }
+    else{
+        NSLog(@"Redirect to patient landing page");
+    }
 }
 
 - (void)viewDidLoad {
