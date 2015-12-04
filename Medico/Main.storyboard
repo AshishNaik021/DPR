@@ -6594,12 +6594,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25J-H1-VN1">
                                 <rect key="frame" x="16" y="78" width="48" height="52"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-HC-XNG">
-                                <rect key="frame" x="72" y="74" width="287" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Visited:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfy-8u-dpY">
                                 <rect key="frame" x="72" y="92" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -6850,11 +6844,28 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-HC-XNG">
+                                <rect key="frame" x="72" y="76" width="287" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="appointmentLabel" destination="lMi-4l-3Ms" id="7bP-U8-tVG"/>
+                        <outlet property="appointmentNameLable" destination="J9X-HC-XNG" id="1ts-Zv-h0H"/>
+                        <outlet property="currentBookedAppointment" destination="lMi-4l-3Ms" id="F9M-Uf-m9R"/>
+                        <outlet property="dateTextField" destination="HWy-gn-vPC" id="Ots-mF-j4O"/>
+                        <outlet property="lastVisitedDate" destination="AH1-Oi-3i0" id="pM9-tn-KQ2"/>
+                        <outlet property="lastVisitedDateLabel" destination="AH1-Oi-3i0" id="afA-yV-4qQ"/>
+                        <outlet property="nextAppointment" destination="G6K-UG-LwA" id="sCa-ZK-9WB"/>
+                        <outlet property="nextAppointmentDateLabel" destination="G6K-UG-LwA" id="ULd-bv-uqW"/>
+                        <outlet property="typeTextField" destination="ZED-fI-sKB" id="otd-8V-ilA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE1-89-k7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -100,7 +100,7 @@
         
         NSLog(@"Year only:%@",components[2]);
         NSString *yr = [NSString stringWithFormat:@"%@",components[2]];
-//        s = [NSSet setWithArray:components[2]];
+        //        s = [NSSet setWithArray:components[2]];
         s = [s setByAddingObject:yr];
         NSLog(@"nsSet Array---------%@",s);
     }
@@ -139,108 +139,119 @@
     
     static NSString *CellIdentifier = @"TableCell";
     int row = [indexPath row];
-
+    
     PatientAppointmentsForDoctorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (indexPath.section == 1){
         
-        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"] isEqual:[NSNull null]]){
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"] isEqual:[NSNull class]]){
             
-           // appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
-           
-//            NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
-//            
-//            NSLog(@"Appointment Date----- %@",appointmentDate);
-//            NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
-//            NSLog(@"before-----%@", date);
-//            
-//            NSRange range = [date rangeOfString:@"+"];
-//            date = [date substringToIndex:range.location];
-//            
-//            NSLog(@"after-----%@", date);
-
-//            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//            
-//            [formatter setDateFormat:@"dd-MM-yyyy"];
-//            date = [formatter stringFromDate:appointmentDate];
-//            
+            // appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
+            
+            //            NSDate *appointmentDate = [NSDate dateWithTimeIntervalSince1970:(int)[args objectForKey:@"appointmentDate"]];
+            //
+            //            NSLog(@"Appointment Date----- %@",appointmentDate);
+            //            NSString *date = [NSString stringWithFormat:@"%@",appointmentDate];
+            //            NSLog(@"before-----%@", date);
+            //
+            //            NSRange range = [date rangeOfString:@"+"];
+            //            date = [date substringToIndex:range.location];
+            //
+            //            NSLog(@"after-----%@", date);
+            
+            //            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            //
+            //            [formatter setDateFormat:@"dd-MM-yyyy"];
+            //            date = [formatter stringFromDate:appointmentDate];
+            //
             cell.bookDateLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"];
+            if ([cell.bookDateLabel.text length] == 0) {
+                cell.bookDateLabel.text = [NSString stringWithFormat:@"Not Booked"];
+            }
+            
         }
-        else if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+        else if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull class]]){
             appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
             
             [formatter setDateFormat:@"dd-MM-yyyy"];
-                        date = [formatter stringFromDate:appointmentDate];
+            date = [formatter stringFromDate:appointmentDate];
             cell.bookDateLabel.text = date;
+            if ([cell.bookDateLabel.text length] == 0) {
+                cell.bookDateLabel.text = [NSString stringWithFormat:@"Not Booked"];
+            }
         }
         else{
-            cell.bookDateLabel.text = @"";
+            cell.bookDateLabel.text = @"Not Booked";
         }
-
-        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]){
+        
+        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull class]]){
             cell.bookTimeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"];
-
-        }
-            else{
-                cell.bookTimeLabel.text = @"";
+            if ([cell.bookTimeLabel.text length] == 0) {
+                cell.bookTimeLabel.text = [NSString stringWithFormat:@"Not Booked"];
             }
+        }
+        else{
+            cell.bookTimeLabel.text = @"Not Booked";
+        }
         
         if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"] isEqual:[NSNull null]]){
             cell.visitTypeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"];
-            
+            if ([cell.visitTypeLabel.text length] == 0) {
+                cell.visitTypeLabel.text = [NSString stringWithFormat:@"Unknown"];
+            }
         }
         else{
-            cell.visitTypeLabel.text = @"";
+            cell.visitTypeLabel.text = @"Unknown";
         }
         
         cell.detailsButton.tag =row;
         [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-      //  cell.bookDateLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"appointmentDate"];
-       // cell.bookTimeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"bookTime"];
-       // cell.visitTypeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"visitType"];
+        
+        
+        //  cell.bookDateLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"appointmentDate"];
+        // cell.bookTimeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"bookTime"];
+        // cell.visitTypeLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"visitType"];
     }
     if (indexPath.section == 2){
-       /* if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
-            
-            appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
-            
-            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-            [formatter setDateFormat:@"dd-MM-yyyy"];
-            date = [formatter stringFromDate:appointmentDate];
-            
-            cell.bookDateLabel.text = date;
-        }
-        else{
-            cell.bookDateLabel.text = @"";
-        }
+        /* if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]){
+         
+         appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
+         
+         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+         [formatter setDateFormat:@"dd-MM-yyyy"];
+         date = [formatter stringFromDate:appointmentDate];
+         
+         cell.bookDateLabel.text = date;
+         }
+         else{
+         cell.bookDateLabel.text = @"";
+         }
+         
+         if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]){
+         cell.bookTimeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"];
+         
+         }
+         else{
+         cell.bookTimeLabel.text = @"";
+         }
+         
+         if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"] isEqual:[NSNull null]]){
+         cell.visitTypeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"];
+         
+         }
+         else{
+         cell.visitTypeLabel.text = @"";
+         }
+         
+         cell.detailsButton.tag =row;
+         [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];*/
         
-        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]){
-            cell.bookTimeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"bookTime"];
-            
-        }
-        else{
-            cell.bookTimeLabel.text = @"";
-        }
-        
-        if (![[[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"] isEqual:[NSNull null]]){
-            cell.visitTypeLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"visitType"];
-            
-        }
-        else{
-            cell.visitTypeLabel.text = @"";
-        }
-        
-        cell.detailsButton.tag =row;
-        [cell.detailsButton addTarget:self action:@selector(detail:) forControlEvents:UIControlEventTouchUpInside];*/
-
     }
     
- 
     
-        
+    
+    
     return cell;
 }
 
@@ -268,11 +279,11 @@
 
 
 -(NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section{
-//    if (section == 0)
-//        return @"Year 2015";
-//    if (section == 1)
-//        return @"Year 2014";
-  return @"";
+    //    if (section == 0)
+    //        return @"Year 2015";
+    //    if (section == 1)
+    //        return @"Year 2014";
+    return @"";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -280,7 +291,7 @@
     if (section == 1)
         return @"Year 2015";
     return @"";
-
+    
 }
 
 
@@ -290,13 +301,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

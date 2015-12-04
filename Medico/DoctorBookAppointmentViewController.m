@@ -40,6 +40,11 @@
     
 
     
+    NSLog(@"_doctorIdPassData:%@",_doctorIdPassData);
+    NSLog(@"_patientEmailPassData:%@",_patientEmailPassData);
+    NSLog(@"_appointmentDatePassData:%@",_appointmentDatePassData);
+    NSLog(@"_appointmentTimePassData:%@",_appointmentTimePassData);
+
     // Do any additional setup after loading the view.
 }
 
