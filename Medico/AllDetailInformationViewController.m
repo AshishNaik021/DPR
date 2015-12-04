@@ -9,6 +9,7 @@
 #import "AllDetailInformationViewController.h"
 #import "DoctorLandingPageView.h"
 #import "AllDetailInformationCell.h"
+#import "MedicinePrescribedScheduleViewController.h" //Need to add by Vitthal Sir
 
 @interface AllDetailInformationViewController ()
 
@@ -60,6 +61,15 @@
 @synthesize patientAppointmentArray = _patientAppointmentArray;
 @synthesize collectionArray;
 
+//need to add
+@synthesize summaryDiagnosis;
+@synthesize summaryReferredBy;
+@synthesize summarySymptoms;
+@synthesize summaryTestPres;
+@synthesize summaryViDate;
+@synthesize summaryViType;
+//end
+
 - (void) homePage:(id)sender{
     if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
         DoctorLandingPageView *DoctorHome =
@@ -92,16 +102,16 @@
     //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"Data in Array+++++++++++++++++++++++++++++++++++++++++++++++++++%@",responseStr);
     
-//    /* ---------- Code for Writing response data into the file -------------- */
-//    
-//    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientInformation.json"];
-//    NSLog(@"%@",docPath);
-//    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
-//    
-//    /* ---------- End of Code for Writing response data into the file -------------- */
-//    
+    //    /* ---------- Code for Writing response data into the file -------------- */
+    //
+    //    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientInformation.json"];
+    //    NSLog(@"%@",docPath);
+    //    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    //
+    //    /* ---------- End of Code for Writing response data into the file -------------- */
+    //
     
-
+    
     
 }
 
@@ -134,19 +144,19 @@
     self.navigationItem.title = @"Manage Template";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-   
-     documentContentView.hidden = TRUE;
-     doctorsNoteContentView.hidden = TRUE;
-     treatmentPlanContentView.hidden = TRUE;
-     invoiceContentView.hidden = TRUE;
+    
+    documentContentView.hidden = TRUE;
+    doctorsNoteContentView.hidden = TRUE;
+    treatmentPlanContentView.hidden = TRUE;
+    invoiceContentView.hidden = TRUE;
     [summaryTagButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-     [summarySymptomsTextView.layer setBorderWidth:1.0];
-     [summaryTestPrescribedTextView.layer setBorderWidth:1.0];
-     [summaryMedicineTextView.layer setBorderWidth:1.0];
-     [summaryDiagnosisTextview.layer setBorderWidth:1.0];
-     [doctorsNoteSymptomsTextView.layer setBorderWidth:1.0];
-     [doctorsNoteNoteTextView.layer setBorderWidth:1.0];
-     [doctorsNoteDiagnosisTextView.layer setBorderWidth:1.0];
+    [summarySymptomsTextView.layer setBorderWidth:1.0];
+    [summaryTestPrescribedTextView.layer setBorderWidth:1.0];
+    [summaryMedicineTextView.layer setBorderWidth:1.0];
+    [summaryDiagnosisTextview.layer setBorderWidth:1.0];
+    [doctorsNoteSymptomsTextView.layer setBorderWidth:1.0];
+    [doctorsNoteNoteTextView.layer setBorderWidth:1.0];
+    [doctorsNoteDiagnosisTextView.layer setBorderWidth:1.0];
     array = [[NSMutableArray alloc]init];
     [array addObject:@"Name"];
     [array addObject:@"Total"];
@@ -204,8 +214,8 @@
 }
 -(void)setVisitType:(NSString *)type{
     self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
-//    self.summaryVisiteTypeButton.userInteractionEnabled = false;
-//    self.summaryVisiteTypeButton.titleLabel.text = [NSString stringWithFormat:type];
+    //    self.summaryVisiteTypeButton.userInteractionEnabled = false;
+    //    self.summaryVisiteTypeButton.titleLabel.text = [NSString stringWithFormat:type];
 }
 -(void)setVisitedDate:(NSString *)date{
     self.summaryVisiteDateField.text = [NSString stringWithFormat:date];
@@ -224,7 +234,7 @@
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSMutableArray *arrayList1 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"cliniclist call:%@",arrayList1);
-
+    
     for (int i = 0; i < arrayList1.count; i++) {
         NSLog(@"typeofidclinic %@",[[arrayList1[i] valueForKey:@"idClinic"] class]);
         NSLog(@"typeofclinicid::%@",[[self.patientAppointmentArray[0] valueForKey:@"clinicId"] class]);
@@ -233,7 +243,7 @@
         }
     }
     if ([self.summaryClinicNameField.text isEqualToString:@""]) {
-    self.summaryClinicNameField.text = [NSString stringWithFormat:@"NA"];
+        self.summaryClinicNameField.text = [NSString stringWithFormat:@"NA"];
     }
 }
 #pragma mark Summary End
@@ -264,7 +274,7 @@
         NSLog(@"objmed%@",objForMedicine);
         cell.medicineNameLabel.text = [objForMedicine valueForKey:@"medicinName"];
     }
-
+    
     return cell;
     
 }
@@ -320,14 +330,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)invoiceAdd:(id)sender {
 }
@@ -337,6 +347,8 @@
 
 - (IBAction)invoiceSave:(id)sender {
 }
+
+
 
 - (IBAction)summary:(id)sender {
     summaryContentView.hidden = FALSE;
@@ -402,10 +414,10 @@
     }
     else {
         if ([[arrayList2 valueForKey:@"symptoms"] isKindOfClass:[NSNull class]]) {
-        self.doctorsNoteSymptomsTextView.text = @"NA";
+            self.doctorsNoteSymptomsTextView.text = @"NA";
         }
         else{
-        self.doctorsNoteSymptomsTextView.text = [arrayList2 valueForKey:@"symptoms"];
+            self.doctorsNoteSymptomsTextView.text = [arrayList2 valueForKey:@"symptoms"];
         }
         if ([[arrayList2 valueForKey:@"diagnosis"] isKindOfClass:[NSNull class]]) {
             self.doctorsNoteDiagnosisTextView.text = @"";
@@ -419,7 +431,7 @@
         else{
             self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
         }
-
+        
     }
 }
 - (IBAction)treatmentPlan:(id)sender {
@@ -477,6 +489,8 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"pihu pihu pihu pihu pihu pihu-------%@",arrayList3);
+    
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
     }
@@ -492,33 +506,47 @@
         }
         NSLog(@"arraylist3%@",arrayList3);
         if (![[arrayList3 valueForKey:@"testsPrescribed"]isKindOfClass:[NSNull class]]) {
+            summaryTestPres = [arrayList3 valueForKey:@"testsPrescribed"];
             [self setPrescription:[arrayList3 valueForKey:@"testsPrescribed"]];
+            
         }
         else{
+            summaryTestPres = @"NA";
             [self setPrescription:@"NA"];
         }
         if (![[arrayList3 valueForKey:@"diagnosis"]isKindOfClass:[NSNull class]]) {
+            summaryDiagnosis = [arrayList3 valueForKey:@"diagnosis"];
+            
             [self setDiagnosis:[arrayList3 valueForKey:@"diagnosis"]];
         }
         else{
+            summaryDiagnosis = @"NA";
             [self setDiagnosis:@"NA"];
         }
         if (![[arrayList3 valueForKey:@"symptoms"]isKindOfClass:[NSNull class]]) {
+            summarySymptoms = [arrayList3 valueForKey:@"symptoms"];
             [self setSymptom:[arrayList3 valueForKey:@"symptoms"]];
         }
         else{
+            summarySymptoms = @"NA";
             [self setSymptom:@"NA"];
         }
         if (![[arrayList3 valueForKey:@"visitType"]isKindOfClass:[NSNull class]]) {
+            summaryViType = [arrayList3 valueForKey:@"visitType"];
+            
             [self setVisitType:[arrayList3 valueForKey:@"visitType"]];
         }
         else{
+            summaryViType = @"NA";
             [self setVisitType:@"NA"];
         }
         if (![[arrayList3 valueForKey:@"visitDate"]isKindOfClass:[NSNull class]]) {
+            summaryViDate = [arrayList3 valueForKey:@"visitDate"];
             [self setVisitedDate:[arrayList3 valueForKey:@"visitDate"]];
+            
         }
         else{
+            summaryViDate = @"NA";
             [self setVisitedDate:@"NA"];
         }
         objForMedicine = [arrayList3 copy];
@@ -584,12 +612,12 @@
 }
 -(void)threadStartAnimating:(id)data
 {
- //   [spinner startAnimating];
+    //   [spinner startAnimating];
     [self.view setUserInteractionEnabled:NO];
     
 }
 -(void)viewDidDisappear:(BOOL)animated{
-   // self.loginButton.enabled = YES;
+    // self.loginButton.enabled = YES;
 }
 
 
@@ -630,21 +658,21 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-   // NSLog(@"sssssssssssssssssssss%@",responseStr);
+    // NSLog(@"sssssssssssssssssssss%@",responseStr);
     
     
-   /*
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-    NSError *error = nil;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    __procedureArr = [json valueForKeyPath:@"DentalPro"];
-
-    */
-   NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-   
+    /*
+     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
+     NSError *error = nil;
+     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+     __procedureArr = [json valueForKeyPath:@"DentalPro"];
+     
+     */
+    NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
     //NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseStr options:NSJSONReadingMutableContainers error:&error];
     
- //   NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
+    //   NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
     
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
@@ -656,36 +684,36 @@
     else{
         NSLog(@"response form traetment :%@",dict);
         NSDictionary *procedureArr = [dict valueForKey:@"procedure"];
-      //  NSLog(@"procedurebvbvbvbvbvbvbvbv-------%@",procedureArr);
+        //  NSLog(@"procedurebvbvbvbvbvbvbvbv-------%@",procedureArr);
         
         NSDictionary *allTemplateArr = [procedureArr valueForKey:@"allTemplate"];
-       // NSLog(@"Before------------%@",allTemplateArr);
-       
+        // NSLog(@"Before------------%@",allTemplateArr);
+        
         NSDictionary *temp = [allTemplateArr valueForKey:@"templates"];
         
-//        NSString *coll = [collectionArray description];
-//        NSLog(@"my string is------------%@",coll);
-//        NSString *newStr = [coll substringFromIndex:50];
-//        NSLog(@"Newstring------------%@",newStr);
-//        if ([newStr length] > 0) {
-//           NSString *finalString = [newStr substringToIndex:[newStr length] - 17];
-//            NSLog(@"final--------------------%@",finalString);
-//            NSDictionary *d = [NSJSONSerialization JSONObjectWithData:[finalString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-//            //collectionArray = [d allValues];
-//            NSLog(@"finally array is ----------%@",d);
-//        }
+        //        NSString *coll = [collectionArray description];
+        //        NSLog(@"my string is------------%@",coll);
+        //        NSString *newStr = [coll substringFromIndex:50];
+        //        NSLog(@"Newstring------------%@",newStr);
+        //        if ([newStr length] > 0) {
+        //           NSString *finalString = [newStr substringToIndex:[newStr length] - 17];
+        //            NSLog(@"final--------------------%@",finalString);
+        //            NSDictionary *d = [NSJSONSerialization JSONObjectWithData:[finalString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+        //            //collectionArray = [d allValues];
+        //            NSLog(@"finally array is ----------%@",d);
+        //        }
         
-         collectionArray = [NSArray arrayWithArray:[temp valueForKey:@"fieldDefaultValue"]];
+        collectionArray = [NSArray arrayWithArray:[temp valueForKey:@"fieldDefaultValue"]];
         
         NSLog(@"values-------------%lu",(unsigned long)collectionArray.count);
         
-       // NSLog(@"gahdgjhasgdhgshajgdhgdhagdjhgajhgasgjh-------------%@",collectionArray);
-    //    NSLog(@"%lu",(unsigned long)collectionArray.count);
+        // NSLog(@"gahdgjhasgdhgshajgdhgdhagdjhgajhgasgjh-------------%@",collectionArray);
+        //    NSLog(@"%lu",(unsigned long)collectionArray.count);
         
-      //  NSLog(@"value print----------%@",[collectionArray valueForKey:@"fieldDefaultValue"]);
+        //  NSLog(@"value print----------%@",[collectionArray valueForKey:@"fieldDefaultValue"]);
         
     }
-
+    
 }
 
 #pragma mark Treatment Plan End
@@ -712,6 +740,7 @@
 }
 
 -(void)setInvoices{
+    NSLog(@"SET INVOICE METHOD IS CALLED.........");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -740,15 +769,52 @@
             self.invoiceTotalField.text = [invoiceResponse valueForKey:@"total"];
             self.invoiceTotalField.userInteractionEnabled = false;
         }
-//        NSLog(@"TYpe of response :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
-//        NSDictionary *dic = [invoiceResponse dictionaryWithValuesForKeys:@"allTemplate"];
-//        NSArray *result = [invoiceResponse valueForKeyPath:@"fieldDefaultValue"];
-//        
+        NSLog(@"TYpe of response :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
+        // NSDictionary *dic = [invoiceResponse dictionaryWithValuesForKeys:@"allTemplate"];
+        //  NSArray *result = [invoiceResponse valueForKeyPath:@"fieldDefaultValue"];
+        
     }
     
     
 }
 
 #pragma mark Invoice End
+
+
+
+- (IBAction)summaryPrescribed:(id)sender {
+    
+    MedicinePrescribedScheduleViewController *medicine =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"MedicinePrescribedScheduleViewController"];
+    
+    medicine.passAppointmentDate = _summaryDatePassData;
+    medicine.passAppointmentTime = _summaryTimePassData;
+    medicine.passDiagnosis = summaryDiagnosis;
+    medicine.passDoctorId = _summaryDoctorIDPassData;
+    medicine.passOwnerType = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"]];
+    medicine.passPatientEmail = _summaryPatientEmailPassData;
+    medicine.passReferredBy = summaryReferredBy;
+    medicine.passSymptoms = summarySymptoms;
+    medicine.passTestsPrescribed = summaryTestPres;
+    medicine.passVisitDate = summaryViDate;
+    medicine.passvisitType = summaryViType;
+    
+    NSLog(@"_summaryDatePassData----%@",_summaryDatePassData);
+    NSLog(@"_summaryTimePassData----%@",_summaryTimePassData);
+    NSLog(@"summaryDiagnosis----%@",summaryDiagnosis);
+    NSLog(@"_summaryDoctorIDPassData----%@",_summaryDoctorIDPassData);
+    NSLog(@"passOwnerType----%@",[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"]]);
+    NSLog(@"_summaryPatientEmailPassData----%@",_summaryPatientEmailPassData);
+    NSLog(@"summaryReferredBy----%@",summaryReferredBy);
+    NSLog(@"summarySymptoms----%@",summarySymptoms);
+    NSLog(@"summaryTestPres----%@",summaryTestPres);
+    NSLog(@"summaryViDate----%@",summaryViDate);
+    NSLog(@"summaryViType----%@",summaryViType);
+    
+    
+    [self.navigationController pushViewController:medicine animated:YES];
+    
+    
+}
 
 @end

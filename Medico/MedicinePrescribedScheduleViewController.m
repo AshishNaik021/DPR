@@ -30,6 +30,21 @@
 @synthesize endDateField;
 @synthesize dict;
 
+//need to add
+@synthesize passAppointmentDate = _passAppointmentDate;
+@synthesize passAppointmentTime = _passAppointmentTime;
+@synthesize passDiagnosis = _passDiagnosis;
+@synthesize passDoctorId = _passDoctorId;
+@synthesize passOwnerType = _passOwnerType;
+@synthesize passPatientEmail = _passPatientEmail;
+@synthesize passReferredBy =_passReferredBy;
+@synthesize passSymptoms = _passSymptoms;
+@synthesize passTestsPrescribed = _passTestsPrescribed;
+@synthesize passVisitDate = _passVisitDate;
+@synthesize passvisitType = _passvisitType;
+
+//end
+
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
@@ -51,6 +66,20 @@
     [doctorsInstructionTextView.layer setBorderWidth:1.0];
     [scheduleTimeTextView.layer setBorderWidth:1.0];
     check = NO;
+    
+    NSLog(@"_summaryDatePassData----%@",_passAppointmentDate);
+    NSLog(@"_summaryTimePassData----%@",_passAppointmentTime);
+    NSLog(@"summaryDiagnosis----%@",_passDiagnosis);
+    NSLog(@"_summaryDoctorIDPassData----%@",_passDoctorId);
+    NSLog(@"passOwnerType----%@",_passOwnerType);
+    NSLog(@"_summaryPatientEmailPassData----%@",_passPatientEmail);
+    NSLog(@"summaryReferredBy----%@",_passReferredBy);
+    NSLog(@"summarySymptoms----%@",_passSymptoms);
+    NSLog(@"summaryTestPres----%@",_passTestsPrescribed);
+    NSLog(@"summaryViDate----%@",_passVisitDate);
+    NSLog(@"summaryViType----%@",_passvisitType);
+    
+    
     
     // Do any additional setup after loading the view.
 }
@@ -233,6 +262,16 @@
                               :scheduleTimeTextView.text
                               :doctorsInstructionTextView.text]){
         NSLog(@"Sending data to next vc");
+        
+        NSLog(@"Medicine Name = %@",medicineNameField.text);
+        NSLog(@"Schedule Name = %@",scheduleField.text);
+        NSLog(@"Number of Doses = %@",numberOfDosesField.text);
+        NSLog(@"Total Medication Duration = %@",totalMedicationDurationField.text);
+        NSLog(@"Start Date = %@",startDateField.text);
+        NSLog(@"End Date = %@",endDateField.text);
+        NSLog(@"Schedule Time for medicine = %@",scheduleTimeTextView.text);
+        NSLog(@"Doctor instruction = %@",doctorsInstructionTextView.text);
+        
         NSArray *objects=[[NSArray alloc]initWithObjects:
                           medicineNameField.text,
                           scheduleField.text,
@@ -259,14 +298,6 @@
         NSLog(@"The data in the dictionary is************************%@",dict);
         
         NSError *error;
-        NSLog(@"Medicine Name = %@",medicineNameField.text);
-        NSLog(@"Schedule Name = %@",scheduleField.text);
-        NSLog(@"Number of Doses = %@",numberOfDosesField.text);
-        NSLog(@"Total Medication Duration = %@",totalMedicationDurationField.text);
-        NSLog(@"Start Date = %@",startDateField.text);
-        NSLog(@"End Date = %@",endDateField.text);
-        NSLog(@"Schedule Time for medicine = %@",scheduleTimeTextView.text);
-        NSLog(@"Doctor instruction = %@",doctorsInstructionTextView.text);
         //   NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
         // options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
         //  error:&error];
@@ -313,7 +344,6 @@
     else{
         if (check) {
             NSLog(@"Checked and calling func");
-            
             [self callValidateAllFields];
         }
         else{

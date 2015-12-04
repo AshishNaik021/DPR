@@ -90,9 +90,17 @@
 
 
 
+//need to add
+@property (weak, nonatomic) IBOutlet UIButton *summaryPrescribedButton;
+- (IBAction)summaryPrescribed:(id)sender;
+@property IBOutlet NSString *summaryDiagnosis;
+@property IBOutlet NSString *summarySymptoms;
+@property IBOutlet NSString *summaryReferredBy;
+@property IBOutlet NSString *summaryTestPres;
+@property IBOutlet NSString *summaryViDate;
+@property IBOutlet NSString *summaryViType;
 
-
-
+//end
 
 
 - (IBAction)summary:(id)sender;

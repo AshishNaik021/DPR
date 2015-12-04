@@ -30,5 +30,17 @@
 - (IBAction)startDate:(id)sender;
 - (IBAction)endDate:(id)sender;
 
-
+// need to add......
+@property IBOutlet NSString *passAppointmentDate;
+@property IBOutlet NSString *passAppointmentTime;
+@property IBOutlet NSString *passDiagnosis;
+@property IBOutlet NSString *passDoctorId;
+@property IBOutlet NSString *passOwnerType;
+@property IBOutlet NSString *passPatientEmail;
+@property IBOutlet NSString *passReferredBy;
+@property IBOutlet NSString *passSymptoms;
+@property IBOutlet NSString *passTestsPrescribed;
+@property IBOutlet NSString *passVisitDate;
+@property IBOutlet NSString *passvisitType;
+// end......
 @end

@@ -10260,7 +10260,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="5C2-cg-Vx5" kind="push" id="4II-Cm-eIh"/>
+                                                    <action selector="summaryPrescribed:" destination="xAO-xi-dRd" eventType="touchUpInside" id="oFK-K6-Ep8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -10356,6 +10356,7 @@
                         <outlet property="summaryDiagnosisTextview" destination="L6G-CQ-14g" id="iOS-uh-vrm"/>
                         <outlet property="summaryMedicinTableView" destination="K6b-Re-mF6" id="sfa-qh-7tN"/>
                         <outlet property="summaryMedicineHistoryButton" destination="dJC-up-PMs" id="NVs-uk-EML"/>
+                        <outlet property="summaryPrescribedButton" destination="Zpt-yh-TTx" id="kwV-c5-xP8"/>
                         <outlet property="summaryReferredbyField" destination="Emj-EP-YkI" id="w8V-VK-qdm"/>
                         <outlet property="summarySaveButton" destination="bSt-sB-tby" id="cpG-eg-IEN"/>
                         <outlet property="summarySymptomsHistoryButton" destination="RiU-CG-SNZ" id="eCN-39-zNv"/>
