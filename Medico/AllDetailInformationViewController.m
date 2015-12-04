@@ -232,6 +232,13 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+    if ([httpResponse statusCode] != 200) {
+        [self errorMessage];
+    }
+    else{
+
     NSMutableArray *arrayList1 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"cliniclist call:%@",arrayList1);
     
@@ -244,6 +251,7 @@
     }
     if ([self.summaryClinicNameField.text isEqualToString:@""]) {
         self.summaryClinicNameField.text = [NSString stringWithFormat:@"NA"];
+    }
     }
 }
 #pragma mark Summary End
@@ -403,6 +411,13 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+    if ([httpResponse statusCode] != 200) {
+        [self errorMessage];
+    }
+    else{
+
     NSMutableArray *arrayList2 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
@@ -431,7 +446,7 @@
         else{
             self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
         }
-        
+    }
     }
 }
 - (IBAction)treatmentPlan:(id)sender {
@@ -488,6 +503,12 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+    if ([httpResponse statusCode] != 200) {
+        [self errorMessage];
+    }
+    else{
     NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"pihu pihu pihu pihu pihu pihu-------%@",arrayList3);
     
@@ -553,7 +574,7 @@
         
     }
     
-    
+    }
 }
 #pragma mark Summary End
 

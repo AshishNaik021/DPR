@@ -251,7 +251,7 @@
 - (void)nextAppointment:(id)sender {
     UIButton *senderButton = (UIButton *)sender;
     int n = (int)senderButton.tag;
-    
+    NSLog(@"patientArr:%@",patientArr);
         DoctorBookAppointmentViewController *summary =
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
         summary.patientEmailPassData = [[patientArr objectAtIndex:n] valueForKey:@"emailID"];
