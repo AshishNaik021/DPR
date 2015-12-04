@@ -6773,28 +6773,28 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gX-A7-ZW1">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gX-A7-ZW1">
                                 <rect key="frame" x="48" y="401" width="15" height="15"/>
                                 <color key="backgroundColor" red="0.74242424240000005" green="0.0" blue="0.007462492052" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn4-vC-EPI">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn4-vC-EPI">
                                 <rect key="frame" x="204" y="401" width="15" height="15"/>
                                 <color key="backgroundColor" red="0.28754471910000001" green="0.5" blue="0.12539032319999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz5-Jx-Ilc">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz5-Jx-Ilc">
                                 <rect key="frame" x="48" y="425" width="15" height="15"/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsa-K7-4Lx">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsa-K7-4Lx">
                                 <rect key="frame" x="204" y="425" width="15" height="15"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal">
@@ -6864,6 +6864,24 @@
                         <outlet property="lastVisitedDateLabel" destination="AH1-Oi-3i0" id="afA-yV-4qQ"/>
                         <outlet property="nextAppointment" destination="G6K-UG-LwA" id="sCa-ZK-9WB"/>
                         <outlet property="nextAppointmentDateLabel" destination="G6K-UG-LwA" id="ULd-bv-uqW"/>
+                        <outlet property="time1" destination="yRq-L1-Bup" id="wBl-2T-uyI"/>
+                        <outlet property="time10" destination="o6Q-OT-cpc" id="vLI-Cu-fQW"/>
+                        <outlet property="time11" destination="P6V-fr-0gx" id="bLt-rP-w9R"/>
+                        <outlet property="time12" destination="tbi-Ul-wkm" id="h1I-Xw-GM3"/>
+                        <outlet property="time13" destination="XeY-sy-mqV" id="Mjw-me-Vop"/>
+                        <outlet property="time14" destination="qNy-fA-UPf" id="s23-sv-Zd0"/>
+                        <outlet property="time15" destination="y99-Bv-7vT" id="cP2-Nb-a1J"/>
+                        <outlet property="time16" destination="uhc-J6-2U1" id="FuV-zs-Gkn"/>
+                        <outlet property="time17" destination="ZFT-Ld-3Bc" id="qiD-yT-HCo"/>
+                        <outlet property="time18" destination="X1L-k3-yCg" id="gAp-GU-0UI"/>
+                        <outlet property="time2" destination="kOs-C5-iVG" id="6Ww-Fc-u5W"/>
+                        <outlet property="time3" destination="OHl-a9-jfl" id="9Kb-On-pOQ"/>
+                        <outlet property="time4" destination="mTs-e1-526" id="7MD-gG-oHx"/>
+                        <outlet property="time5" destination="MZZ-oq-lxT" id="wYs-jb-hoF"/>
+                        <outlet property="time6" destination="cQw-cJ-1aj" id="LVP-Mj-t7H"/>
+                        <outlet property="time7" destination="COr-p6-BOC" id="vCY-Vd-PkV"/>
+                        <outlet property="time8" destination="ns5-mY-nME" id="NwY-yO-9kl"/>
+                        <outlet property="time9" destination="faQ-dr-Mxs" id="IqS-BH-mxI"/>
                         <outlet property="typeTextField" destination="ZED-fI-sKB" id="otd-8V-ilA"/>
                     </connections>
                 </viewController>
