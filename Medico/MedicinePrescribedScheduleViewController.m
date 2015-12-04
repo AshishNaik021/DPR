@@ -259,6 +259,14 @@
         NSLog(@"The data in the dictionary is************************%@",dict);
         
         NSError *error;
+        NSLog(@"Medicine Name = %@",medicineNameField.text);
+        NSLog(@"Schedule Name = %@",scheduleField.text);
+        NSLog(@"Number of Doses = %@",numberOfDosesField.text);
+        NSLog(@"Total Medication Duration = %@",totalMedicationDurationField.text);
+        NSLog(@"Start Date = %@",startDateField.text);
+        NSLog(@"End Date = %@",endDateField.text);
+        NSLog(@"Schedule Time for medicine = %@",scheduleTimeTextView.text);
+        NSLog(@"Doctor instruction = %@",doctorsInstructionTextView.text);
         //   NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
         // options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
         //  error:&error];
@@ -305,6 +313,7 @@
     else{
         if (check) {
             NSLog(@"Checked and calling func");
+            
             [self callValidateAllFields];
         }
         else{
