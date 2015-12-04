@@ -258,7 +258,7 @@
         summary.doctorIdPassData = [[patientArr objectAtIndex:n] valueForKey:@"doctorId"];
         summary.appointmentDatePassData = [[patientArr objectAtIndex:n] valueForKey:@"bookDate"];
         summary.appointmentTimePassData = [[patientArr objectAtIndex:n] valueForKey:@"bookTime"];
-        
+    summary.patientArr = patientArr;
         [self.navigationController pushViewController:summary animated:YES];
 
 }

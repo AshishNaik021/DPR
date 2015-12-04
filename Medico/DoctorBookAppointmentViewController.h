@@ -10,6 +10,8 @@
 
 @interface DoctorBookAppointmentViewController : UIViewController
 
+@property NSArray *patientArr;
+
 - (IBAction)timeClicked1:(id)sender;
 - (IBAction)timeClicked2:(id)sender;
 - (IBAction)timeClicked3:(id)sender;
