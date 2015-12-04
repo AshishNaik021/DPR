@@ -740,10 +740,10 @@
             self.invoiceTotalField.text = [invoiceResponse valueForKey:@"total"];
             self.invoiceTotalField.userInteractionEnabled = false;
         }
-        NSLog(@"TYpe of response :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
-        NSDictionary *dic = [invoiceResponse dictionaryWithValuesForKeys:@"allTemplate"];
-        NSArray *result = [invoiceResponse valueForKeyPath:@"fieldDefaultValue"];
-        
+//        NSLog(@"TYpe of response :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
+//        NSDictionary *dic = [invoiceResponse dictionaryWithValuesForKeys:@"allTemplate"];
+//        NSArray *result = [invoiceResponse valueForKeyPath:@"fieldDefaultValue"];
+//        
     }
     
     
