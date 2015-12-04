@@ -10,7 +10,7 @@
 
 @interface MedicinePrescribedScheduleViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *medicineNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *medicineNameField;
 @property (weak, nonatomic) IBOutlet UITextField *scheduleField;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfDosesField;
 @property (weak, nonatomic) IBOutlet UITextField *totalMedicationDurationField;
@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startDateButton;
 @property (weak, nonatomic) IBOutlet UIButton *endDateButton;
 @property BOOL *check;
+@property IBOutlet NSDictionary *dict;
 
 - (IBAction)save:(id)sender;
 - (IBAction)medicineReminder:(id)sender;
