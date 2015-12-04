@@ -44,7 +44,7 @@
     NSLog(@"_patientEmailPassData:%@",_patientEmailPassData);
     NSLog(@"_appointmentDatePassData:%@",_appointmentDatePassData);
     NSLog(@"_appointmentTimePassData:%@",_appointmentTimePassData);
-    self.appointmentLabel.text = @"Vitthal's Appointmnt";
+    self.appointmentNameLable.text = @"Vitthal's Appointmnt";
     // Do any additional setup after loading the view.
 }
 
