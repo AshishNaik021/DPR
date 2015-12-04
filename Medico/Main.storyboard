@@ -6856,13 +6856,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="appointmentLabel" destination="lMi-4l-3Ms" id="7bP-U8-tVG"/>
+                        <outlet property="appointmentLabel" destination="lMi-4l-3Ms" id="eI8-Ro-Gtt"/>
                         <outlet property="appointmentNameLable" destination="J9X-HC-XNG" id="1ts-Zv-h0H"/>
-                        <outlet property="currentBookedAppointment" destination="lMi-4l-3Ms" id="F9M-Uf-m9R"/>
                         <outlet property="dateTextField" destination="HWy-gn-vPC" id="Ots-mF-j4O"/>
-                        <outlet property="lastVisitedDate" destination="AH1-Oi-3i0" id="pM9-tn-KQ2"/>
                         <outlet property="lastVisitedDateLabel" destination="AH1-Oi-3i0" id="afA-yV-4qQ"/>
-                        <outlet property="nextAppointment" destination="G6K-UG-LwA" id="sCa-ZK-9WB"/>
                         <outlet property="nextAppointmentDateLabel" destination="G6K-UG-LwA" id="ULd-bv-uqW"/>
                         <outlet property="time1" destination="yRq-L1-Bup" id="wBl-2T-uyI"/>
                         <outlet property="time10" destination="o6Q-OT-cpc" id="vLI-Cu-fQW"/>
