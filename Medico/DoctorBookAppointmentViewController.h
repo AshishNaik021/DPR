@@ -10,6 +10,27 @@
 
 @interface DoctorBookAppointmentViewController : UIViewController
 
+- (IBAction)timeClicked1:(id)sender;
+- (IBAction)timeClicked2:(id)sender;
+- (IBAction)timeClicked3:(id)sender;
+- (IBAction)timeClicked4:(id)sender;
+- (IBAction)timeClicked5:(id)sender;
+- (IBAction)timeClicked6:(id)sender;
+- (IBAction)timeClicked7:(id)sender;
+- (IBAction)timeClicked8:(id)sender;
+- (IBAction)timeClicked9:(id)sender;
+- (IBAction)timeClicked10:(id)sender;
+- (IBAction)timeClicked11:(id)sender;
+- (IBAction)timeClicked12:(id)sender;
+- (IBAction)timeClicked13:(id)sender;
+- (IBAction)timeClicked14:(id)sender;
+- (IBAction)timeClicked15:(id)sender;
+- (IBAction)timeClicked16:(id)sender;
+- (IBAction)timeClicked17:(id)sender;
+- (IBAction)timeClicked18:(id)sender;
+- (IBAction)doneButtonClicked:(id)sender;
+
+
 @property IBOutlet NSString *doctorIdPassData;
 @property IBOutlet NSString *patientEmailPassData;
 @property IBOutlet NSString *appointmentDatePassData;
@@ -38,5 +59,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *time16;
 @property (weak, nonatomic) IBOutlet UIButton *time17;
 @property (weak, nonatomic) IBOutlet UIButton *time18;
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @end

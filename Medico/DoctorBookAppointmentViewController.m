@@ -50,7 +50,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dmainispose of any resources that can be recreated.
 }
 
 /*
@@ -62,5 +62,64 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)changeAppointmentDate:(id)sender {
+}
+- (IBAction)timeClicked1:(id)sender {
+}
+- (IBAction)timeClicked2:(id)sender {
+}
+
+- (IBAction)timeClicked3:(id)sender {
+}
+
+- (IBAction)timeClicked4:(id)sender {
+}
+
+- (IBAction)timeClicked5:(id)sender{
+    
+}
+- (IBAction)timeClicked6:(id)sender{
+    
+}
+- (IBAction)timeClicked7:(id)sender{
+    
+}
+- (IBAction)timeClicked8:(id)sender{
+    
+}
+- (IBAction)timeClicked9:(id)sender{
+    
+}
+- (IBAction)timeClicked10:(id)sender{
+    
+}
+- (IBAction)timeClicked11:(id)sender{
+    
+}
+- (IBAction)timeClicked12:(id)sender{
+    
+}
+- (IBAction)timeClicked13:(id)sender{
+    
+}
+- (IBAction)timeClicked14:(id)sender{
+    
+}
+- (IBAction)timeClicked15:(id)sender{
+    
+}
+- (IBAction)timeClicked16:(id)sender{
+    
+}
+- (IBAction)timeClicked17:(id)sender{
+    
+}
+- (IBAction)timeClicked18:(id)sender{
+    
+}
+- (IBAction)doneButtonClicked:(id)sender{
+    
+}
 
 @end
