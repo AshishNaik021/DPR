@@ -10,13 +10,14 @@
 
 @interface PatientProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
--(IBAction)homePage:(id)sender;
-- (IBAction)nextAppointment:(id)sender;
 @property IBOutlet NSArray *patientArr;
 @property IBOutlet NSArray *arrDoctor;
 @property NSDictionary *args;
 @property (weak, nonatomic) IBOutlet UIButton *nextAppointmentButton;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)redirectToListofAppointment:(id)sender;
+- (IBAction)homePage:(id)sender;
+- (IBAction)nextAppointment:(id)sender;
 
 @end

@@ -25,6 +25,9 @@
 @synthesize arrDoctor;
 @synthesize args;
 
+- (IBAction)redirectToListofAppointment:(id)sender {
+}
+
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
@@ -249,26 +252,14 @@
     UIButton *senderButton = (UIButton *)sender;
     int n = (int)senderButton.tag;
     
-    if (![[[patientArr objectAtIndex:n] objectForKey:@"lastVisited"] isEqual:[NSNull null]]){
-        
-        // if (![[[patientArr objectAtIndex:n] objectForKey:@"lastVisitedTime"] isEqual:[NSNull null]] ) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"There is no last visited summary." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        
-        
-        //  }
-    }
-    else{
         DoctorBookAppointmentViewController *summary =
         [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorBookAppointmentViewController"];
         summary.patientEmailPassData = [[patientArr objectAtIndex:n] valueForKey:@"emailID"];
         summary.doctorIdPassData = [[patientArr objectAtIndex:n] valueForKey:@"doctorId"];
-        summary.appointmentDatePassData = [[patientArr objectAtIndex:n] valueForKey:@"lastVisited"];
-        summary.appointmentTimePassData = [[patientArr objectAtIndex:n] valueForKey:@"lastVisitedTime"];
+        summary.appointmentDatePassData = [[patientArr objectAtIndex:n] valueForKey:@"bookDate"];
+        summary.appointmentTimePassData = [[patientArr objectAtIndex:n] valueForKey:@"bookTime"];
         
         [self.navigationController pushViewController:summary animated:YES];
-        
-    }
 
 }
 
