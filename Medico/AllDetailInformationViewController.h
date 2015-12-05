@@ -24,6 +24,14 @@
 @property CGFloat height;
 @property CGFloat scrollHeight;
 @property CGRect screen;
+@property  BOOL *keyboardVisibleInvoice;
+@property CGPoint offsetInvoice;
+@property CGFloat widthInvoice;
+@property CGFloat heightInvoice;
+@property CGFloat scrollHeightInvoice;
+@property CGRect screenInvoice;
+
+
 @property IBOutlet NSArray *collectionArray;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *treatmentScrollView;
@@ -47,10 +55,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *summaryVisiteDateField;
 @property (weak, nonatomic) IBOutlet UITextField *summaryVisiteTypeField;
 @property (weak, nonatomic) IBOutlet UITextField *summaryReferredbyField;
-@property (weak, nonatomic) IBOutlet UITextView *summarySymptomsTextView;
-@property (weak, nonatomic) IBOutlet UITextView *summaryDiagnosisTextview;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *summarySymptomsTextView;
+
+
+
+@property (weak, nonatomic) IBOutlet UITextField *summaryDiagnosisTextview;
 @property (weak, nonatomic) IBOutlet UITextView *summaryMedicineTextView;
-@property (weak, nonatomic) IBOutlet UITextView *summaryTestPrescribedTextView;
+@property (weak, nonatomic) IBOutlet UITextField *summaryTestPrescribedTextView;
 
 @property (weak, nonatomic) IBOutlet UIButton *summarySymptomsHistoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *summaryDiagnosisHistoryButton;
@@ -84,6 +97,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *invoiceCollection;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *invoiceScroll;
 
 
 

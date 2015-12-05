@@ -23,6 +23,13 @@
 @synthesize width;
 @synthesize screen;
 @synthesize scrollHeight;
+@synthesize  keyboardVisibleInvoice;
+@synthesize offsetInvoice;
+@synthesize heightInvoice;
+@synthesize widthInvoice;
+@synthesize screenInvoice;
+@synthesize scrollHeightInvoice;
+
 @synthesize pickerArr;
 @synthesize returnString;
 @synthesize objForMedicine;
@@ -60,6 +67,7 @@
 @synthesize summaryDoctorIDPassData = _summaryDoctorIDPassData;
 @synthesize patientAppointmentArray = _patientAppointmentArray;
 @synthesize collectionArray;
+@synthesize invoiceScroll;
 
 //need to add
 @synthesize summaryDiagnosis;
@@ -135,6 +143,30 @@
     [self fetchPatientReminder];
     [self fetchAllClinics];
     
+    keyboardVisible = NO;
+    screen = [summaryContentView bounds];
+   
+    width = CGRectGetWidth(screen);
+    //Bonus height.
+    height = CGRectGetHeight(screen);
+    scrollHeight = height + 400;
+    NSLog(@"Width is--- %f",width);
+    NSLog(@"Height is--- %f",height);
+    [scroll setScrollEnabled:YES];
+    [scroll setContentSize:CGSizeMake(width, scrollHeight)];
+    
+    keyboardVisibleInvoice = NO;
+    screenInvoice = [invoiceContentView bounds];
+    
+    widthInvoice = CGRectGetWidth(screenInvoice);
+    //Bonus height.
+    heightInvoice = CGRectGetHeight(screenInvoice);
+    scrollHeightInvoice = heightInvoice + 400;
+    NSLog(@"Width is--- %f",widthInvoice);
+    NSLog(@"Height is--- %f",heightInvoice);
+    [invoiceScroll setScrollEnabled:YES];
+    [invoiceScroll setContentSize:CGSizeMake(widthInvoice, scrollHeightInvoice)];
+
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
@@ -173,6 +205,93 @@
     [self setAllValuesInSummary];
     
 }
+
+/*-----------------------------------------------------------------------------------------------------*/
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"Registering for keyboard events");
+    
+    // Register for the events
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidShow:)
+                                                 name: UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidHide:)
+                                                 name: UIKeyboardDidHideNotification object:nil];
+    
+    //Initially the keyboard is hidden
+    keyboardVisible = NO;
+    keyboardVisibleInvoice = NO;
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    NSLog (@"Unregister for keyboard events");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void) keyboardDidShow: (NSNotification *)notif
+{
+    // If keyboard is visible, return
+    if (keyboardVisible || keyboardVisibleInvoice)
+    {
+        NSLog(@"Keyboard is already visible. Ignore notification.");
+        return;
+    }
+    
+    // Get the size of the keyboard.
+    NSDictionary* info = [notif userInfo];
+    NSValue* aValue = [info objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize keyboardSize = [aValue CGRectValue].size;
+    CGSize keyboardSizeInvoice = [aValue CGRectValue].size;
+    // Save the current location so we can restore
+    // when keyboard is dismissed
+    offset = scroll.contentOffset;
+    offsetInvoice = invoiceScroll.contentOffset;
+    // Resize the scroll view to make room for the keyboard
+    CGRect viewFrame = scroll.frame;
+    CGRect viewFrameInvoice = invoiceScroll.frame;
+    viewFrame.size.height -= keyboardSize.height;
+    viewFrameInvoice.size.height -= keyboardSizeInvoice.height;
+    scroll.frame = viewFrame;
+    invoiceScroll.frame = viewFrameInvoice;
+    // Keyboard is now visible
+    keyboardVisible = YES;
+}
+
+-(void) keyboardDidHide: (NSNotification *)notif
+{
+    // Is the keyboard already shown
+    if (!keyboardVisible || !keyboardVisibleInvoice)
+    {
+        NSLog(@"Keyboard is already hidden. Ignore notification.");
+        return;
+    }
+    
+    // Reset the frame scroll view to its original value
+    scroll.frame = CGRectMake(0, 0, width, scrollHeight);
+    invoiceScroll.frame = CGRectMake(0, 0, widthInvoice, scrollHeightInvoice);
+    // Reset the scrollview to previous location
+    scroll.contentOffset = offset;
+    invoiceScroll.contentOffset = offset;
+    // Keyboard is no longer visible
+    keyboardVisible = NO;
+    keyboardVisibleInvoice = NO;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField.returnKeyType==UIReturnKeyNext) {
+        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
+        [next becomeFirstResponder];
+        [textField resignFirstResponder];
+    }else if (textField.returnKeyType==UIReturnKeyDone) {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
 #pragma mark Summary Start
 -(void)setAllValuesInSummary{
     NSLog(@"_patientAppointmentArray:%@",_patientAppointmentArray);
