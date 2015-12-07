@@ -8,20 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateDoctorsClinicSettingsViewController : UIViewController
+@interface CreateDoctorsClinicSettingsViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *createClinicNameField;
 @property (weak, nonatomic) IBOutlet UITextField *createEmailField;
 @property (weak, nonatomic) IBOutlet UITextField *createMobileField;
 @property (weak, nonatomic) IBOutlet UITextField *createLandLineField;
-@property (weak, nonatomic) IBOutlet UITextView *createSpecialtyTextView;
+@property (weak, nonatomic) IBOutlet UITextField *createSpecialtyTextView;
 @property (weak, nonatomic) IBOutlet UIButton *addSlotsButton;
 - (IBAction)addSlots:(id)sender;
 @property IBOutlet NSArray *returnArr;
 @property BOOL *clinicFlag;
 @property BOOL *slotFlag;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
-@property (weak, nonatomic) IBOutlet UITextView *createLocationTextView;
+@property (weak, nonatomic) IBOutlet UITextField *createLocationTextView;
 @property (weak, nonatomic) IBOutlet UIButton *createClinicButton;
 - (IBAction)createClinic:(id)sender;
 @property NSString *returnStringClinic;
@@ -44,4 +45,14 @@
 @property IBOutlet NSDictionary *passDictionaryForSlots;
 @property IBOutlet NSString *passString;
 @property NSString *emailid;
+
+
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
+
 @end

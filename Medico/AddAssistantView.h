@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 BOOL CreateNew;
-@interface AddAssistantView : UIViewController
+@interface AddAssistantView : UIViewController<UITextFieldDelegate>
 @property IBOutlet UIButton *createNewBtn;
 -(IBAction)checkBtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
@@ -23,6 +23,7 @@ BOOL CreateNew;
 @property (weak, nonatomic) IBOutlet UITextField *locationField;
 @property (weak, nonatomic) IBOutlet UITextField *professionField;
 @property (weak, nonatomic) IBOutlet UITextView *specializationField;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 @property (weak, nonatomic) IBOutlet UIButton *readTCButton;
 - (IBAction)readTermConditions:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *createAssistantButton;
@@ -33,5 +34,13 @@ BOOL CreateNew;
 @property IBOutlet NSString *loggedInUserEmailId;
 @property IBOutlet NSDictionary *dict;
 @property IBOutlet NSString *returnString;
+
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
 
 @end
