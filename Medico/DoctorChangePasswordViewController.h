@@ -11,9 +11,9 @@ BOOL doctor;
 
 @interface DoctorChangePasswordViewController : UIViewController{
 
-    IBOutlet UIScrollView *scroll;
 
 }
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @property (weak, nonatomic) IBOutlet UIImageView *doctorImage;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
@@ -39,5 +39,13 @@ BOOL doctor;
 - (IBAction)changePassword:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 - (IBAction)save:(id)sender;
+
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
 
 @end
