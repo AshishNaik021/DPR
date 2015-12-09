@@ -11,6 +11,7 @@
 #import "PatientSettingPageViewController.h"
 #import "PatientDoctorConsultationsViewController.h"
 #import "PatientClinicAndLabsViewController.h"
+#import "PatientManageAppointmentViewController.h"
 
 
 @interface PatientLandingPageViewController ()
@@ -91,6 +92,9 @@
     [self.navigationController pushViewController:clinic animated:YES];
 }
 - (IBAction)appointment:(id)sender {
+    PatientManageAppointmentViewController *appointment =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientManageAppointmentViewController"];
+    [self.navigationController pushViewController:appointment animated:YES];
 }
 - (IBAction)reminder:(id)sender {
 }

@@ -21,4 +21,10 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)showDetails:(id)sender {
+}
+- (IBAction)getAllAppointment:(id)sender {
+}
+- (IBAction)bookOnline:(id)sender {
+}
 @end

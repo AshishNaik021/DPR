@@ -9,6 +9,8 @@
 #import "PatientDetailSearchDoctorViewController.h"
 #import "PatientDetailSearchDoctorCell.h"
 #import "DoctorLandingPageView.h"
+#import "DetailPatientDoctorConsultationsViewController.h"
+#import "YearlyCountAppointmentForPatientDoctorConsultationViewController.h"
 
 @interface PatientDetailSearchDoctorViewController ()
 
@@ -44,13 +46,13 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
-    
+   /*
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"searchDoctor" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     NSError *e;
     jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
-    
+    */
     
 
 }
@@ -61,7 +63,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return jsonList.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,12 +75,47 @@
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-    cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
-    cell.locationLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
-    cell.specialtyLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"speciality"];
-    cell.doctorImage.image = [UIImage imageNamed:@"doctordefault.png"];
+//    cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
+//    cell.locationLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
+//    cell.specialtyLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"speciality"];
+//    cell.doctorImage.image = [UIImage imageNamed:@"doctordefault.png"];
     
-    return cell;
+    cell.getAllAppointmentButton.tag = row;
+    [cell.getAllAppointmentButton addTarget:self action:@selector(getAllAppointment:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.bookOnlineButton.tag = row;
+    [cell.bookOnlineButton addTarget:self action:@selector(bookOnline:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.showDetailsButton.tag = row;
+    [cell.showDetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+
+return cell;
+}
+
+-(void)getAllAppointment:(id)sender {
+    
+    YearlyCountAppointmentForPatientDoctorConsultationViewController *pdf =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"YearlyCountAppointmentForPatientDoctorConsultationViewController"];
+    
+    [self.navigationController pushViewController:pdf animated:YES];
+    
+}
+
+-(void)bookOnline:(id)sender {
+    
+     DetailPatientDoctorConsultationsViewController *pdf =
+     [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientDoctorConsultationsViewController"];
+    pdf.value = @"a";
+     [self.navigationController pushViewController:pdf animated:YES];
+    
+}
+
+-(void)showDetails:(id)sender {
+    
+     DetailPatientDoctorConsultationsViewController *pdf =
+     [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientDoctorConsultationsViewController"];
+    
+     [self.navigationController pushViewController:pdf animated:YES];
     
 }
 

@@ -33,7 +33,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *profilePracticeNameField;
 @property (weak, nonatomic) IBOutlet UITextView *profileSpecializationField;
 
-
+@property IBOutlet NSString *value;
 
 
 

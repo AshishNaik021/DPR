@@ -14,6 +14,12 @@
 @property IBOutlet UILabel *specialtyLabel;
 @property IBOutlet UILabel *locationLabel;
 @property IBOutlet UIImageView *doctorImage;
+@property (weak, nonatomic) IBOutlet UIButton *showDetailsButton;
+- (IBAction)showDetails:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *getAllAppointmentButton;
+- (IBAction)getAllAppointment:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *bookOnlineButton;
+- (IBAction)bookOnline:(id)sender;
 
 
 @end

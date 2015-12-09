@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RWx-wm-FQX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hzv-uG-u24">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -12401,7 +12401,7 @@
         <!--Patient Detail Search Doctor View Controller-->
         <scene sceneID="2AJ-2t-QY0">
             <objects>
-                <viewController storyboardIdentifier="PatientDetailSearchDoctorViewController" id="FKd-vt-abW" customClass="PatientDetailSearchDoctorViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientDetailSearchDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="FKd-vt-abW" customClass="PatientDetailSearchDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XnW-gc-pJv"/>
                         <viewControllerLayoutGuide type="bottom" id="57T-jg-crt"/>
@@ -12410,36 +12410,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-yU-zhC">
+                                <rect key="frame" x="16" y="144" width="343" height="503"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i8g-BB-TN3">
+                                        <rect key="frame" x="8" y="8" width="327" height="487"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVo-ya-j6g">
                                 <rect key="frame" x="16" y="143" width="343" height="504"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BUr-tK-477">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BUr-tK-477">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="504"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="60" id="G2v-2M-p91" customClass="PatientDetailSearchDoctorCell">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="72" id="G2v-2M-p91" customClass="PatientDetailSearchDoctorCell">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2v-2M-p91" id="qDb-nB-E9g">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-Ab-HuX">
-                                                            <rect key="frame" x="8" y="8" width="45" height="43"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorLanding.png" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-Ab-HuX">
+                                                            <rect key="frame" x="8" y="8" width="36" height="35"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-JH-GGp">
-                                                            <rect key="frame" x="61" y="7" width="274" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmW-JH-GGp">
+                                                            <rect key="frame" x="61" y="7" width="233" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrw-Sd-vMJ">
-                                                            <rect key="frame" x="61" y="22" width="274" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pune" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwE-Fl-f5g">
+                                                            <rect key="frame" x="61" y="44" width="176" height="20"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwE-Fl-f5g">
-                                                            <rect key="frame" x="61" y="37" width="274" height="21"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txb-6c-La1">
+                                                            <rect key="frame" x="8" y="45" width="36" height="17"/>
+                                                            <state key="normal" image="arrowButton.png">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="showDetails:" destination="G2v-2M-p91" eventType="touchUpInside" id="mhz-vd-DhS"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfd-GE-GpZ">
+                                                            <rect key="frame" x="317" y="8" width="18" height="19"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <state key="normal" title="&gt;">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="getAllAppointment:" destination="G2v-2M-p91" eventType="touchUpInside" id="CuF-hm-DwH"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc0-Wo-GVA">
+                                                            <rect key="frame" x="245" y="44" width="90" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal" title="Book Online &gt;">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="bookOnline:" destination="G2v-2M-p91" eventType="touchUpInside" id="bl7-PJ-mVS"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dentist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrw-Sd-vMJ">
+                                                            <rect key="frame" x="61" y="24" width="233" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -12447,9 +12485,12 @@
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="bookOnlineButton" destination="Cc0-Wo-GVA" id="SVi-uz-hXm"/>
                                                     <outlet property="doctorImage" destination="cRQ-Ab-HuX" id="zxw-4V-LXK"/>
+                                                    <outlet property="getAllAppointmentButton" destination="pfd-GE-GpZ" id="mdX-DB-XrQ"/>
                                                     <outlet property="locationLabel" destination="BwE-Fl-f5g" id="Oam-gu-IIh"/>
                                                     <outlet property="nameLabel" destination="CmW-JH-GGp" id="wVS-jA-XEy"/>
+                                                    <outlet property="showDetailsButton" destination="Txb-6c-La1" id="UJd-4L-rjX"/>
                                                     <outlet property="specialtyLabel" destination="Hrw-Sd-vMJ" id="PpO-6q-udb"/>
                                                 </connections>
                                             </tableViewCell>
@@ -12512,15 +12553,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pBz-yU-zhC">
-                                <rect key="frame" x="16" y="144" width="343" height="503"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i8g-BB-TN3">
-                                        <rect key="frame" x="8" y="8" width="327" height="487"/>
-                                    </mapView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -13104,6 +13136,310 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPv-QD-7X1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1302.5" y="-5849.5"/>
+        </scene>
+        <!--Patient Manage Appointment View Controller-->
+        <scene sceneID="g0n-fg-1iO">
+            <objects>
+                <viewController storyboardIdentifier="PatientManageAppointmentViewController" automaticallyAdjustsScrollViewInsets="NO" id="Mn1-9K-0ke" customClass="PatientManageAppointmentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xCA-dc-501"/>
+                        <viewControllerLayoutGuide type="bottom" id="GsW-GZ-u0I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Rc-n5-0Ne">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Llm-Gd-NYY">
+                                <rect key="frame" x="0.0" y="73" width="375" height="594"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="102" id="SL2-9P-yYS" customClass="PatientManageAppointmentCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SL2-9P-yYS" id="cMm-Bh-tTu">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manageClinics.png" translatesAutoresizingMaskIntoConstraints="NO" id="V4Z-XS-jjt">
+                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-Af-WNn">
+                                                    <rect key="frame" x="8" y="64" width="48" height="25"/>
+                                                    <state key="normal" image="arrowButton.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showDetails:" destination="SL2-9P-yYS" eventType="touchUpInside" id="6Rs-77-S8Q"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hospital Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6B-Dd-jUX">
+                                                    <rect key="frame" x="64" y="8" width="261" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Clinic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O18-1U-g10">
+                                                    <rect key="frame" x="64" y="30" width="180" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Appointment Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxu-cN-hFd">
+                                                    <rect key="frame" x="64" y="52" width="115" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Appointment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysr-vH-TA5">
+                                                    <rect key="frame" x="64" y="70" width="115" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diagnostic -  CT Scan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1b-Hk-SSd">
+                                                    <rect key="frame" x="187" y="52" width="180" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-oP-top">
+                                                    <rect key="frame" x="343" y="11" width="24" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="&gt;">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showDocuments:" destination="SL2-9P-yYS" eventType="touchUpInside" id="sPm-9P-gQZ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCC-ZM-UTG">
+                                                    <rect key="frame" x="327" y="32" width="40" height="22"/>
+                                                    <state key="normal" image="alarmOffgrey.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="alarmOnOff:" destination="SL2-9P-yYS" eventType="touchUpInside" id="0xN-40-x8T"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXq-PD-Rg1">
+                                                    <rect key="frame" x="187" y="70" width="80" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="25-Feb-2015">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="appointmentDate:" destination="SL2-9P-yYS" eventType="touchUpInside" id="z68-hR-QnQ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1s-X1-mLN">
+                                                    <rect key="frame" x="275" y="70" width="60" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="9.30 Am">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="appointmentTime:" destination="SL2-9P-yYS" eventType="touchUpInside" id="Eeb-rO-r8x"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timing.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-Yr-9et">
+                                                    <rect key="frame" x="297" y="30" width="26" height="26"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="alarmOnOffButton" destination="NCC-ZM-UTG" id="xkt-zq-gej"/>
+                                            <outlet property="appointmentDateButton" destination="XXq-PD-Rg1" id="gQb-Jj-woz"/>
+                                            <outlet property="appointmentTimeButton" destination="e1s-X1-mLN" id="NQp-87-IsL"/>
+                                            <outlet property="appointmentTypeLabel" destination="F1b-Hk-SSd" id="YNf-ew-CQc"/>
+                                            <outlet property="clinicImage" destination="V4Z-XS-jjt" id="v9E-h6-6At"/>
+                                            <outlet property="clinicNameLabel" destination="H6B-Dd-jUX" id="beb-eI-HEX"/>
+                                            <outlet property="showDetailsButton" destination="exT-Af-WNn" id="7ag-h4-Z7g"/>
+                                            <outlet property="showDocumentsButton" destination="S3a-oP-top" id="aWF-jH-EDT"/>
+                                            <outlet property="typeOfClinicLabel" destination="O18-1U-g10" id="EjK-On-wEg"/>
+                                            <outlet property="watchImage" destination="hXa-Yr-9et" id="Ame-8b-SmB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mn1-9K-0ke" id="vIJ-hO-FKd"/>
+                                    <outlet property="delegate" destination="Mn1-9K-0ke" id="ESB-SS-Q8d"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcq-0E-fbO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797.5" y="-5849.5"/>
+        </scene>
+        <!--Patient New Appointment View Controller-->
+        <scene sceneID="63j-hG-2Zf">
+            <objects>
+                <viewController storyboardIdentifier="PatientNewAppointmentViewController" id="do8-oD-RXu" customClass="PatientNewAppointmentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K8L-KY-eU0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ale-e9-fSr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kp9-dv-ihF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zh9-vC-JYA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1db-Z0-fJX">
+                                        <rect key="frame" x="19" y="95" width="20" height="18"/>
+                                        <state key="normal" image="unchechRadio.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="doctorConsultationCheck:" destination="do8-oD-RXu" eventType="touchUpInside" id="FJR-DM-Ai4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor Consultations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b91-ch-Pb5">
+                                        <rect key="frame" x="47" y="93" width="210" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTT-Yn-Z5b">
+                                        <rect key="frame" x="47" y="128" width="57" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QuH-MY-8Oi">
+                                        <rect key="frame" x="112" y="128" width="214" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="do8-oD-RXu" id="NNX-wH-nMX"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeE-Ia-w7T">
+                                        <rect key="frame" x="200" y="176" width="156" height="20"/>
+                                        <state key="normal" title="Book Appointment &gt;">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bookAppointment:" destination="do8-oD-RXu" eventType="touchUpInside" id="oxD-kp-GWT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-uS-wx3">
+                                        <rect key="frame" x="19" y="281" width="20" height="18"/>
+                                        <state key="normal" image="unchechRadio.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="diagnosticTestReminder:" destination="do8-oD-RXu" eventType="touchUpInside" id="Hmn-Gh-gC6"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diagnostic Test Reminder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf3-eq-ype">
+                                        <rect key="frame" x="47" y="279" width="210" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQO-RX-8oE">
+                                        <rect key="frame" x="47" y="320" width="57" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwe-oL-fae">
+                                        <rect key="frame" x="144" y="320" width="173" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="do8-oD-RXu" id="eOm-1c-9nQ"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Referred by :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Gf-WZY">
+                                        <rect key="frame" x="47" y="355" width="89" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbT-bz-v53">
+                                        <rect key="frame" x="144" y="355" width="212" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="do8-oD-RXu" id="wUU-wW-GJm"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinic :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8K-vp-CTV">
+                                        <rect key="frame" x="47" y="390" width="57" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-LH-AMw">
+                                        <rect key="frame" x="144" y="390" width="212" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="do8-oD-RXu" id="4qr-Mu-ru5"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfA-8J-HcD">
+                                        <rect key="frame" x="47" y="425" width="57" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-CI-SDe">
+                                        <rect key="frame" x="144" y="425" width="212" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="do8-oD-RXu" id="dU0-ip-U8Y"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-g4-Xw0">
+                                        <rect key="frame" x="258" y="485" width="98" height="20"/>
+                                        <state key="normal" title="Set Alarm &gt;">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setAlarm:" destination="do8-oD-RXu" eventType="touchUpInside" id="tIV-xC-V0F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPr-3a-H8N">
+                                        <rect key="frame" x="325" y="316" width="31" height="27"/>
+                                        <state key="normal" image="calendar.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calender:" destination="do8-oD-RXu" eventType="touchUpInside" id="PaM-KV-syO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bookAppointmentButton" destination="OeE-Ia-w7T" id="AYW-lM-0sK"/>
+                        <outlet property="calenderButton" destination="XPr-3a-H8N" id="IKA-T2-DJb"/>
+                        <outlet property="clinicNameField" destination="Bga-LH-AMw" id="l3i-VO-y4P"/>
+                        <outlet property="dateField" destination="Xwe-oL-fae" id="eqm-62-hX6"/>
+                        <outlet property="diagnosticTestReminderButton" destination="GW9-uS-wx3" id="hGE-4w-vsM"/>
+                        <outlet property="doctorConsultationCheckButton" destination="1db-Z0-fJX" id="mLA-ia-Bxe"/>
+                        <outlet property="doctorConsultationNameField" destination="QuH-MY-8Oi" id="EMp-nk-QTh"/>
+                        <outlet property="referredByField" destination="tbT-bz-v53" id="YTV-hg-cCu"/>
+                        <outlet property="scroll" destination="zh9-vC-JYA" id="cWx-mM-6Pg"/>
+                        <outlet property="setAlarmButton" destination="VtR-g4-Xw0" id="a2m-ez-Jh4"/>
+                        <outlet property="typeField" destination="fEL-CI-SDe" id="yTF-mU-WeW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHh-P4-oC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.5" y="-5849.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O4K-MA-jb5">
@@ -13861,6 +14197,7 @@
     </scenes>
     <resources>
         <image name="Timing.png" width="50" height="50"/>
+        <image name="alarmOffgrey.png" width="29" height="15"/>
         <image name="appointment.png" width="251" height="303"/>
         <image name="arrowButton.png" width="50" height="32"/>
         <image name="assistance.png" width="89" height="89"/>

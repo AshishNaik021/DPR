@@ -22,6 +22,7 @@
 @synthesize profileButton;
 @synthesize clinicsButton;
 @synthesize profileSpecializationField;
+@synthesize value = _value;
 
 
 - (void) patientHomePage:(id)sender{
@@ -45,11 +46,19 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    if (![_value isEqualToString:@"a"]) {
+        
     clinicsContentView.hidden = FALSE;
     [clinicsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     profileContentView.hidden = TRUE;
     bookOnlineAppointContentView.hidden =TRUE;
-    
+    }
+    else {
+        clinicsContentView.hidden = TRUE;
+        [clinicsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        profileContentView.hidden = TRUE;
+        bookOnlineAppointContentView.hidden =FALSE;
+    }
 
 
 }
