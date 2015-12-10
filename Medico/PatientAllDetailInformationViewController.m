@@ -36,6 +36,26 @@
 @synthesize summaryTestPrescribedTextView;
 @synthesize documentTableView;
 @synthesize summaryTableView;
+@synthesize array;
+@synthesize invoiceCollectionView;
+@synthesize invoiceCollectionScroll;
+
+@synthesize summaryScrollView;
+@synthesize  summarykeyboardVisible;
+@synthesize summaryoffset;
+@synthesize summaryheight;
+@synthesize summarywidth;
+@synthesize summaryscreen;
+@synthesize summaryscrollHeight;
+
+@synthesize invoiceScrollView;
+@synthesize  invoicekeyboardVisible;
+@synthesize invoiceoffset;
+@synthesize invoiceheight;
+@synthesize invoicewidth;
+@synthesize invoicescreen;
+@synthesize invoicescrollHeight;
+
 
 - (void) patientHomePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
@@ -44,9 +64,138 @@
     
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"Registering for keyboard events");
+    
+    // Register for the events
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidShow:)
+                                                 name: UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidHide:)
+                                                 name: UIKeyboardDidHideNotification object:nil];
+    
+    //Initially the keyboard is hidden
+    summarykeyboardVisible = NO;
+    invoicekeyboardVisible = NO;
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    NSLog (@"Unregister for keyboard events");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void) keyboardDidShow: (NSNotification *)notif
+{
+    // If keyboard is visible, return
+    if (summarykeyboardVisible || invoicekeyboardVisible)
+    {
+        NSLog(@"Keyboard is already visible. Ignore notification.");
+        return;
+    }
+    
+    // Get the size of the keyboard.
+    NSDictionary* summaryinfo = [notif userInfo];
+    NSValue* summaryaValue = [summaryinfo objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize keyboardSize = [summaryaValue CGRectValue].size;
+   
+    NSDictionary* invoiceinfo = [notif userInfo];
+    NSValue* invoiceaValue = [invoiceinfo objectForKey:UIKeyboardBoundsUserInfoKey];
+    CGSize invoicekeyboardSize = [invoiceaValue CGRectValue].size;
+    // Save the current location so we can restore
+    // when keyboard is dismissed
+    summaryoffset = self.summaryScrollView.contentOffset;
+    invoiceoffset = self.invoiceScrollView.contentOffset;
+    
+    // Resize the scroll view to make room for the keyboard
+    CGRect summaryviewFrame = summaryScrollView.frame;
+    CGRect invoiceviewFrame = invoiceScrollView.frame;
+    summaryviewFrame.size.height -= keyboardSize.height;
+    invoiceviewFrame.size.height -= keyboardSize.height;
+    summaryScrollView.frame = summaryviewFrame;
+    invoiceScrollView.frame = invoiceviewFrame;
+    // Keyboard is now visible
+    summarykeyboardVisible = YES;
+    invoicekeyboardVisible = YES;
+}
+
+-(void) keyboardDidHide: (NSNotification *)notif
+{
+    // Is the keyboard already shown
+    if (!summarykeyboardVisible || !invoicekeyboardVisible)
+    {
+        NSLog(@"Keyboard is already hidden. Ignore notification.");
+        return;
+    }
+    
+    // Reset the frame scroll view to its original value
+    summaryScrollView.frame = CGRectMake(0, 0, summarywidth, summaryscrollHeight);
+    invoiceScrollView.frame = CGRectMake(0, 0, invoicewidth, invoicescrollHeight);
+    // Reset the scrollview to previous location
+    summaryScrollView.contentOffset = summaryoffset;
+    invoiceScrollView.contentOffset = invoiceoffset;
+    // Keyboard is no longer visible
+    summarykeyboardVisible = NO;
+    invoicekeyboardVisible = NO;
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField.returnKeyType==UIReturnKeyNext) {
+        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
+        [next becomeFirstResponder];
+        //[textField resignFirstResponder];
+    }else if (textField.returnKeyType==UIReturnKeyDone) {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"PatientAllDetailInformationViewController.m");
+    
+    array = [[NSMutableArray alloc]init];
+    [array addObject:@"Name"];
+    [array addObject:@"Total"];
+    [array addObject:@"Cost"];
+    [array addObject:@"Currency"];
+    [array addObject:@"Discount"];
+    [array addObject:@"Taxes"];
+    [array addObject:@"Total"];
+    [array addObject:@"Note"];
+    [array addObject:@"Cost Dollar"];
+    self.treatmentCollectionView.layer.borderWidth = 1.0f;
+    self.invoiceCollectionView.layer.borderWidth = 1.0f;
+    
+    
+    summarykeyboardVisible = NO;
+    summaryscreen = [summaryContentView bounds];
+    summarywidth = CGRectGetWidth(summaryscreen);
+    //Bonus height.
+    summaryheight = CGRectGetHeight(summaryscreen);
+    summaryscrollHeight = summaryheight + 200;
+    NSLog(@"Width is--- %f",summarywidth);
+    NSLog(@"Height is--- %f",summaryheight);
+    [summaryScrollView setScrollEnabled:YES];
+    [summaryScrollView setContentSize:CGSizeMake(summarywidth, summaryscrollHeight)];
+    
+    invoicekeyboardVisible = NO;
+    invoicescreen = [invoiceContentView bounds];
+    invoicewidth = CGRectGetWidth(invoicescreen);
+    //Bonus height.
+    invoiceheight = CGRectGetHeight(invoicescreen);
+    invoicescrollHeight = invoiceheight + 200;
+    NSLog(@"Width is--- %f",invoicewidth);
+    NSLog(@"Height is--- %f",invoiceheight);
+    [invoiceScrollView setScrollEnabled:YES];
+    [invoiceScrollView setContentSize:CGSizeMake(invoicewidth, invoicescrollHeight)];
+
+    
     self.navigationItem.title = @"Doctors Name";
     
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
@@ -73,6 +222,28 @@
     
     // Do any additional setup after loading the view.
 }
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return array.count;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return array.count;
+}
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    UILabel *l = (UILabel *)[cell viewWithTag:10];
+    l.text = [array objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)viewDidLayoutSubviews {
+    self.treatmentCollectionScrollView.contentSize = self.treatmentCollectionView.frame.size;
+    self.invoiceCollectionScroll.contentSize = self.invoiceCollectionView.frame.size;
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -266,5 +437,7 @@
 //    UploadDocumentsViewController *upload =
 //    [self.storyboard instantiateViewControllerWithIdentifier:@"UploadDocumentsViewController"];
 //    [self.navigationController pushViewController:upload animated:YES];
+}
+- (IBAction)treatmentCheck:(id)sender {
 }
 @end

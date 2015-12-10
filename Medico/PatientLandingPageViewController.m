@@ -12,6 +12,8 @@
 #import "PatientDoctorConsultationsViewController.h"
 #import "PatientClinicAndLabsViewController.h"
 #import "PatientManageAppointmentViewController.h"
+#import "PatientSearchDoctorViewController.h"
+#import "PatientSearchClinicViewController.h"
 
 
 @interface PatientLandingPageViewController ()
@@ -99,8 +101,14 @@
 - (IBAction)reminder:(id)sender {
 }
 - (IBAction)searchDoctor:(id)sender {
+    PatientSearchDoctorViewController *searchDoc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientSearchDoctorViewController"];
+    [self.navigationController pushViewController:searchDoc animated:YES];
 }
 - (IBAction)searchClinic:(id)sender {
+    PatientSearchClinicViewController *searchClinic =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientSearchClinicViewController"];
+    [self.navigationController pushViewController:searchClinic animated:YES];
 }
 - (IBAction)setting:(id)sender {
     PatientSettingPageViewController *setting =

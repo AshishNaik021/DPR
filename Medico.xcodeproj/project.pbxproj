@@ -390,6 +390,9 @@
 		1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */; };
 		1897CDA21BCD2F320043F0FD /* DoctorChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CDA11BCD2F320043F0FD /* DoctorChangePasswordViewController.m */; };
 		1897CDA51BCD33DA0043F0FD /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CDA41BCD33DA0043F0FD /* ChangePasswordViewController.m */; };
+		189B526E1C193FA200E83439 /* PatientSearchClinicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B526D1C193FA200E83439 /* PatientSearchClinicViewController.m */; };
+		189B52711C1948D800E83439 /* PatientDetailSearchClinicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B52701C1948D800E83439 /* PatientDetailSearchClinicViewController.m */; };
+		189B52741C194A3000E83439 /* PatientDetailSearchClinicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189B52731C194A3000E83439 /* PatientDetailSearchClinicCell.m */; };
 		189EDB8B1BD6121100AA9B96 /* BookAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */; };
 		189EDB921BD62FFE00AA9B96 /* dentist.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB8C1BD62FFE00AA9B96 /* dentist.png */; };
 		189EDB931BD62FFE00AA9B96 /* dermatologist.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB8D1BD62FFE00AA9B96 /* dermatologist.png */; };
@@ -949,6 +952,12 @@
 		1897CDA11BCD2F320043F0FD /* DoctorChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorChangePasswordViewController.m; sourceTree = "<group>"; };
 		1897CDA31BCD33DA0043F0FD /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		1897CDA41BCD33DA0043F0FD /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		189B526C1C193FA200E83439 /* PatientSearchClinicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSearchClinicViewController.h; sourceTree = "<group>"; };
+		189B526D1C193FA200E83439 /* PatientSearchClinicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientSearchClinicViewController.m; sourceTree = "<group>"; };
+		189B526F1C1948D800E83439 /* PatientDetailSearchClinicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailSearchClinicViewController.h; sourceTree = "<group>"; };
+		189B52701C1948D800E83439 /* PatientDetailSearchClinicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailSearchClinicViewController.m; sourceTree = "<group>"; };
+		189B52721C194A3000E83439 /* PatientDetailSearchClinicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailSearchClinicCell.h; sourceTree = "<group>"; };
+		189B52731C194A3000E83439 /* PatientDetailSearchClinicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailSearchClinicCell.m; sourceTree = "<group>"; };
 		189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookAppointmentViewController.h; sourceTree = "<group>"; };
 		189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookAppointmentViewController.m; sourceTree = "<group>"; };
 		189EDB8C1BD62FFE00AA9B96 /* dentist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dentist.png; sourceTree = "<group>"; };
@@ -1348,6 +1357,18 @@
 				18C7DB011BC798E6005B93A9 /* Dental.json */,
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
+				189B526C1C193FA200E83439 /* PatientSearchClinicViewController.h */,
+				189B526D1C193FA200E83439 /* PatientSearchClinicViewController.m */,
+				189B526F1C1948D800E83439 /* PatientDetailSearchClinicViewController.h */,
+				189B52701C1948D800E83439 /* PatientDetailSearchClinicViewController.m */,
+				189B52721C194A3000E83439 /* PatientDetailSearchClinicCell.h */,
+				189B52731C194A3000E83439 /* PatientDetailSearchClinicCell.m */,
+				189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */,
+				189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */,
+				185D87091BD7A2AB003B357C /* PatientDetailSearchDoctorCell.h */,
+				185D870A1BD7A2AB003B357C /* PatientDetailSearchDoctorCell.m */,
+				189EDB981BD6347900AA9B96 /* PatientSearchDoctorViewController.h */,
+				189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */,
 				188F68B91C17F58E005DBA11 /* PatientManageAppointmentViewController.h */,
 				188F68BA1C17F58E005DBA11 /* PatientManageAppointmentViewController.m */,
 				188F68BC1C1804EC005DBA11 /* PatientManageAppointmentCell.h */,
@@ -1512,12 +1533,6 @@
 				185D86FD1BD78C97003B357C /* AddPatientViewController.m */,
 				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
 				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
-				189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */,
-				189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */,
-				185D87091BD7A2AB003B357C /* PatientDetailSearchDoctorCell.h */,
-				185D870A1BD7A2AB003B357C /* PatientDetailSearchDoctorCell.m */,
-				189EDB981BD6347900AA9B96 /* PatientSearchDoctorViewController.h */,
-				189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */,
 				189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */,
 				189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */,
 				1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */,
@@ -2093,6 +2108,7 @@
 				185D87061BD796EC003B357C /* SearchPatientForDoctorCell.m in Sources */,
 				18C7DB051BC799ED005B93A9 /* SearchTemplateCell.m in Sources */,
 				18427DBD1BC23DC1002A15FC /* ManageTemplateTableViewController.m in Sources */,
+				189B52741C194A3000E83439 /* PatientDetailSearchClinicCell.m in Sources */,
 				188E5E491C0431C70001E400 /* PatientDoctorConsultationsViewController.m in Sources */,
 				1853068B1C0707960058C6CE /* PatientYearlyPDFListOfClinicLabCell.m in Sources */,
 				1891253C1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m in Sources */,
@@ -2137,6 +2153,7 @@
 				185306831C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m in Sources */,
 				185306941C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m in Sources */,
 				185D87161BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m in Sources */,
+				189B526E1C193FA200E83439 /* PatientSearchClinicViewController.m in Sources */,
 				183D1A471BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.m in Sources */,
 				1835118E1BCBE5120045BC1C /* ManageDoctorsClinicSettingsViewController.m in Sources */,
 				1897CD9F1BCCCD0F0043F0FD /* HowItWorksViewController.m in Sources */,
@@ -2166,6 +2183,7 @@
 				189125391C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m in Sources */,
 				189125451C05A74000136C97 /* PatientDiagnosisHistoryViewController.m in Sources */,
 				184F01E11BCE7A1800913B23 /* DoctorLandingCell.m in Sources */,
+				189B52711C1948D800E83439 /* PatientDetailSearchClinicViewController.m in Sources */,
 				188B90C41BEBA473003F425F /* SearchResultClinicForDoctorViewController.m in Sources */,
 				187330391BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m in Sources */,
 				189086541BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m in Sources */,

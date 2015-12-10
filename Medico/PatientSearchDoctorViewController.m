@@ -9,6 +9,7 @@
 #import "PatientSearchDoctorViewController.h"
 #import "PatientLandingPageViewController.h"
 #import "DoctorLandingPageView.h"
+#import "PatientDetailSearchDoctorViewController.h"
 
 @interface PatientSearchDoctorViewController ()
 
@@ -62,6 +63,10 @@
  */
 
 - (IBAction)search:(id)sender {
+    PatientDetailSearchDoctorViewController *search =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientDetailSearchDoctorViewController"];
+    [self.navigationController pushViewController:search animated:YES];
+
 }
 
 - (IBAction)pediatricianDoctor:(id)sender {

@@ -1,28 +1,27 @@
 //
-//  PatientDetailSearchDoctorViewController.m
+//  PatientDetailSearchClinicViewController.m
 //  Medico
 //
-//  Created by APPLE on 20/10/15.
+//  Created by Apple on 10/12/15.
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
-#import "PatientDetailSearchDoctorViewController.h"
-#import "PatientDetailSearchDoctorCell.h"
-#import "DoctorLandingPageView.h"
-#import "DetailPatientDoctorConsultationsViewController.h"
-#import "YearlyCountAppointmentForPatientDoctorConsultationViewController.h"
+#import "PatientDetailSearchClinicViewController.h"
+#import "PatientDetailSearchClinicCell.h"
 #import "PatientLandingPageViewController.h"
+#import "PatientClinicProfileAndAppointmentsViewController.h"
+#import "PatientYearlyPDFListOfClinicLabViewController.h"
 
-@interface PatientDetailSearchDoctorViewController ()
+@interface PatientDetailSearchClinicViewController ()
 
 @end
 
-@implementation PatientDetailSearchDoctorViewController
+@implementation PatientDetailSearchClinicViewController
 @synthesize listRadioButton;
 @synthesize mapRadioButton;
 @synthesize radioButton;
 @synthesize map = _map;
-@synthesize jsonList;
+
 
 - (void) homePage:(id)sender{
     PatientLandingPageViewController *patient =
@@ -31,10 +30,9 @@
     
 }
 
-
 - (void)viewDidLoad {
-    NSLog(@"PatientDetailSearchDoctorViewController.m");
     [super viewDidLoad];
+    NSLog(@"PatientDetailSearchClinicViewController.m");
     radioButton = NO;
     self.listContentView.hidden = FALSE;
     self.mapContentView.hidden = TRUE;
@@ -43,19 +41,12 @@
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
-    self.navigationItem.title = @"Search Doctor";
+    self.navigationItem.title = @"Search Clinic/Labs";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
-   /*
-    NSString *fileName = [[NSBundle mainBundle] pathForResource:@"searchDoctor" ofType:@"json"];
-    NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *e;
-    jsonList = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&e];
-    */
-    
 
+    // Do any additional setup after loading the view.
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -70,63 +61,43 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"TableCell";
-    PatientDetailSearchDoctorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    PatientDetailSearchClinicCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     //for(int count = 0;count<_arr.count;count++){
     int row = [indexPath row];
-//    cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
-//    cell.locationLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
-//    cell.specialtyLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"speciality"];
-//    cell.doctorImage.image = [UIImage imageNamed:@"doctordefault.png"];
+    //    cell.nameLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"name"];
+    //    cell.locationLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"location"];
+    //    cell.specialtyLabel.text = [[jsonList objectAtIndex:row] objectForKey:@"speciality"];
+    //    cell.doctorImage.image = [UIImage imageNamed:@"doctordefault.png"];
     
     cell.getAllAppointmentButton.tag = row;
     [cell.getAllAppointmentButton addTarget:self action:@selector(getAllAppointment:) forControlEvents:UIControlEventTouchUpInside];
     
-    cell.bookOnlineButton.tag = row;
-    [cell.bookOnlineButton addTarget:self action:@selector(bookOnline:) forControlEvents:UIControlEventTouchUpInside];
-    
+//    cell.bookOnlineButton.tag = row;
+//    [cell.bookOnlineButton addTarget:self action:@selector(bookOnline:) forControlEvents:UIControlEventTouchUpInside];
+//    
     cell.showDetailsButton.tag = row;
     [cell.showDetailsButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
-
-return cell;
+    
+    return cell;
 }
 
--(void)getAllAppointment:(id)sender {
+- (void)showDetails:(id)sender {
     
-    YearlyCountAppointmentForPatientDoctorConsultationViewController *pdf =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"YearlyCountAppointmentForPatientDoctorConsultationViewController"];
+    PatientClinicProfileAndAppointmentsViewController *profile =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientClinicProfileAndAppointmentsViewController"];
+    [self.navigationController pushViewController:profile animated:YES];
+}
+
+- (void)getAllAppointment:(id)sender {
     
+    PatientYearlyPDFListOfClinicLabViewController *pdf =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientYearlyPDFListOfClinicLabViewController"];
     [self.navigationController pushViewController:pdf animated:YES];
-    
 }
 
--(void)bookOnline:(id)sender {
-    
-     DetailPatientDoctorConsultationsViewController *pdf =
-     [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientDoctorConsultationsViewController"];
-    pdf.value = @"a";
-     [self.navigationController pushViewController:pdf animated:YES];
-    
-}
-
--(void)showDetails:(id)sender {
-    
-     DetailPatientDoctorConsultationsViewController *pdf =
-     [self.storyboard instantiateViewControllerWithIdentifier:@"DetailPatientDoctorConsultationsViewController"];
-    
-     [self.navigationController pushViewController:pdf animated:YES];
-    
-}
-
-
-
-
-
-- (IBAction)searchDoctor:(id)sender {
-    
-}
 - (IBAction)listRadio:(id)sender {
     
     [listRadioButton setImage:[UIImage imageNamed:@"checkRadio.png"] forState:UIControlStateNormal];
@@ -142,16 +113,14 @@ return cell;
     [listRadioButton setImage:[UIImage imageNamed:@"unchechRadio.png"] forState:UIControlStateNormal];
     self.listContentView.hidden = TRUE;
     self.mapContentView.hidden = FALSE;
-
+    
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-@end
+
 /*
 #pragma mark - Navigation
 
@@ -162,3 +131,4 @@ return cell;
 }
 */
 
+@end
