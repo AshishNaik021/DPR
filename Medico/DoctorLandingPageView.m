@@ -74,6 +74,9 @@
 - (IBAction)settings:(id)sender {
 }
 - (IBAction)logout:(id)sender {
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    [[NSUserDefaults standardUserDefaults]synchronize ];
     
     LoginPage *loginPage =
     [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];

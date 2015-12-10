@@ -808,9 +808,10 @@
      __procedureArr = [json valueForKeyPath:@"DentalPro"];
      
      */
-    NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    // NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     //NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseStr options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
     //   NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
     
@@ -824,34 +825,20 @@
     else{
         NSLog(@"response form traetment :%@",dict);
         NSDictionary *procedureArr = [dict valueForKey:@"procedure"];
-        //  NSLog(@"procedurebvbvbvbvbvbvbvbv-------%@",procedureArr);
-        
+        NSLog(@"procedureArr:%@",procedureArr);
         NSDictionary *allTemplateArr = [procedureArr valueForKey:@"allTemplate"];
-        // NSLog(@"Before------------%@",allTemplateArr);
-        
+        NSLog(@"allTemplateArr:%@",allTemplateArr);
         NSDictionary *temp = [allTemplateArr valueForKey:@"templates"];
-        
-        //        NSString *coll = [collectionArray description];
-        //        NSLog(@"my string is------------%@",coll);
-        //        NSString *newStr = [coll substringFromIndex:50];
-        //        NSLog(@"Newstring------------%@",newStr);
-        //        if ([newStr length] > 0) {
-        //           NSString *finalString = [newStr substringToIndex:[newStr length] - 17];
-        //            NSLog(@"final--------------------%@",finalString);
-        //            NSDictionary *d = [NSJSONSerialization JSONObjectWithData:[finalString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-        //            //collectionArray = [d allValues];
-        //            NSLog(@"finally array is ----------%@",d);
-        //        }
-        
-        collectionArray = [NSArray arrayWithArray:[temp valueForKey:@"fieldDefaultValue"]];
-        
-        NSLog(@"values-------------%lu",(unsigned long)collectionArray.count);
-        
-        // NSLog(@"gahdgjhasgdhgshajgdhgdhagdjhgajhgasgjh-------------%@",collectionArray);
-        //    NSLog(@"%lu",(unsigned long)collectionArray.count);
-        
-        //  NSLog(@"value print----------%@",[collectionArray valueForKey:@"fieldDefaultValue"]);
-        
+        NSLog(@"temp:%@",temp);
+        NSArray *array;
+        for (NSArray *array1 in temp) {
+            NSLog(@"tempo:%@",[array valueForKey:@"fieldDisplayName"]);
+            array = [NSArray arrayWithArray:array1];
+        }
+        int i = 0;
+        for (NSArray *array2 in array) {
+            NSLog(@"array2:%@",array2[i++]);
+        }
     }
     
 }
