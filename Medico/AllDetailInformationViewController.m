@@ -17,6 +17,8 @@
 
 @implementation AllDetailInformationViewController
 
+@synthesize arrayHeader;
+@synthesize arrayValue;
 @synthesize  keyboardVisible;
 @synthesize offset;
 @synthesize height;
@@ -68,6 +70,7 @@
 @synthesize patientAppointmentArray = _patientAppointmentArray;
 @synthesize collectionArray;
 @synthesize invoiceScroll;
+@synthesize arrayForCollectionView;
 
 //need to add
 @synthesize summaryDiagnosis;
@@ -189,16 +192,26 @@
     [doctorsNoteSymptomsTextView.layer setBorderWidth:1.0];
     [doctorsNoteNoteTextView.layer setBorderWidth:1.0];
     [doctorsNoteDiagnosisTextView.layer setBorderWidth:1.0];
-    array = [[NSMutableArray alloc]init];
-    [array addObject:@"Name"];
-    [array addObject:@"Total"];
-    [array addObject:@"Cost"];
-    [array addObject:@"Currency"];
-    [array addObject:@"Discount"];
-    [array addObject:@"Taxes"];
-    [array addObject:@"Total"];
-    [array addObject:@"Note"];
-    [array addObject:@"Cost Dollar"];
+    //    array = [[NSMutableArray alloc]init];
+    //    [array addObject:@"Name"];
+    //    [array addObject:@"Total"];
+    //    [array addObject:@"Cost"];
+    //    [array addObject:@"Currency"];
+    //    [array addObject:@"Discount"];
+    //    [array addObject:@"Taxes"];
+    //    [array addObject:@"Total"];
+    //    [array addObject:@"Note"];
+    //    [array addObject:@"Cost Dollar"];
+    //    arrayo1 = [[NSMutableArray alloc]init];
+    //    [arrayo1 addObject:@"Name1"];
+    //    [arrayo1 addObject:@"Total1"];
+    //    [arrayo1 addObject:@"Cost1"];
+    //    [arrayo1 addObject:@"Curre1nc1y"];
+    //    [arrayo1 addObject:@"Discou1nt"];
+    //    [arrayo1 addObject:@"Taxe1s"];
+    //    [arrayo1 addObject:@"Tot1al"];
+    //    [arrayo1 addObject:@"Note1"];
+    //    [arrayo1 addObject:@"Cost 1Dollar"];
     self.collection.layer.borderWidth = 1.0f;
     self.invoiceCollection.layer.borderWidth = 1.0f;
     
@@ -314,6 +327,7 @@
         return 1;
     } else{
         //        [spinner stopAnimating];
+        [self noNetworkAlert];
         NSLog(@"Device is not connected to the internet");
         return 0;
     }
@@ -408,7 +422,7 @@
 
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return array.count;
+    return 2;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -418,8 +432,14 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    UILabel *l = (UILabel *)[cell viewWithTag:10];
-    l.text = [array objectAtIndex:indexPath.row];
+    if (indexPath.section == 0) {
+        UILabel *l = (UILabel *)[cell viewWithTag:10];
+        l.text = [arrayForCollectionView objectAtIndex:indexPath.row];
+    }
+    else{
+        UILabel *l = (UILabel *)[cell viewWithTag:10];
+        l.text = [arrayForCollectionView objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 
@@ -542,27 +562,27 @@
         NSLog(@"Error : %@",error.localizedDescription);
     }
     else if([arrayList2 isKindOfClass:[NSNull class]]){
-        self.doctorsNoteSymptomsTextView.text = @"NA";
-        self.doctorsNoteDiagnosisTextView.text = @"NA";
-        self.doctorsNoteNoteTextView.text = @"NA";
-    }
-    else {
-        if ([[arrayList2 valueForKey:@"symptoms"] isKindOfClass:[NSNull class]]) {
             self.doctorsNoteSymptomsTextView.text = @"NA";
+            self.doctorsNoteDiagnosisTextView.text = @"NA";
+            self.doctorsNoteNoteTextView.text = @"NA";
         }
         else{
-            self.doctorsNoteSymptomsTextView.text = [arrayList2 valueForKey:@"symptoms"];
-        }
-        if ([[arrayList2 valueForKey:@"diagnosis"] isKindOfClass:[NSNull class]]) {
-            self.doctorsNoteDiagnosisTextView.text = @"";
-        }
-        else{
-            self.doctorsNoteDiagnosisTextView.text = [arrayList2 valueForKey:@"diagnosis"];
-        }
-        if ([[arrayList2 valueForKey:@"doctorNotes"] isKindOfClass:[NSNull class]]) {
-            self.doctorsNoteNoteTextView.text = @"";
-        }
-        else{
+            if ([[arrayList2 valueForKey:@"symptoms"] isKindOfClass:[NSNull class]]){
+                self.doctorsNoteSymptomsTextView.text = @"NA";
+            }
+            else{
+                self.doctorsNoteSymptomsTextView.text = [arrayList2 valueForKey:@"symptoms"];
+            }
+            if ([[arrayList2 valueForKey:@"diagnosis"] isKindOfClass:[NSNull class]]) {
+                self.doctorsNoteDiagnosisTextView.text = @"";
+            }
+            else{
+                self.doctorsNoteDiagnosisTextView.text = [arrayList2 valueForKey:@"diagnosis"];
+            }
+            if ([[arrayList2 valueForKey:@"doctorNotes"] isKindOfClass:[NSNull class]]) {
+                self.doctorsNoteNoteTextView.text = @"";
+            }
+            else{
             self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
         }
     }
@@ -683,16 +703,16 @@
         if (![[arrayList3 valueForKey:@"visitDate"]isKindOfClass:[NSNull class]]) {
             summaryViDate = [arrayList3 valueForKey:@"visitDate"];
             [self setVisitedDate:[arrayList3 valueForKey:@"visitDate"]];
+                
+            }
+            else{
+                summaryViDate = @"NA";
+                [self setVisitedDate:@"NA"];
+            }
+            objForMedicine = [arrayList3 copy];
             
         }
-        else{
-            summaryViDate = @"NA";
-            [self setVisitedDate:@"NA"];
-        }
-        objForMedicine = [arrayList3 copy];
         
-    }
-    
     }
 }
 #pragma mark Summary End
@@ -817,6 +837,7 @@
     
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
+        [self errorMessage];
     }
     else if ([dict isKindOfClass:[NSNull class]])
     {
@@ -830,14 +851,18 @@
         NSLog(@"allTemplateArr:%@",allTemplateArr);
         NSDictionary *temp = [allTemplateArr valueForKey:@"templates"];
         NSLog(@"temp:%@",temp);
-        NSArray *array;
         for (NSArray *array1 in temp) {
-            NSLog(@"tempo:%@",[array valueForKey:@"fieldDisplayName"]);
-            array = [NSArray arrayWithArray:array1];
+            NSLog(@"array1[0]:%@",[array1[0] valueForKey:@"fieldDisplayName"]);
+            NSLog(@"array1:%@",array1);
+            NSLog(@"array1:%@",array1[0]);
+            arrayForCollectionView = [NSArray arrayWithArray:array1[0]];
+            NSLog(@"arrayForCollectionView:%@",arrayForCollectionView);
         }
-        int i = 0;
-        for (NSArray *array2 in array) {
-            NSLog(@"array2:%@",array2[i++]);
+        for (int i = 0; i< arrayForCollectionView.count; i++) {
+            NSLog(@"arrayForCollectionView[i]:%@",arrayForCollectionView[i]);
+            NSLog(@"another:%@",[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]);
+            [arrayHeader addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]];
+            NSLog(@"header:%@",arrayHeader[i]);
         }
     }
     

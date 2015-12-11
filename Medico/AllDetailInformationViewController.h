@@ -11,7 +11,7 @@
 @interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
     
     IBOutlet UIScrollView *scroll;
-
+    
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *summaryPicker;
 @property IBOutlet NSArray *pickerArr;
@@ -32,11 +32,11 @@
 @property CGRect screenInvoice;
 
 
-@property IBOutlet NSArray *collectionArray;
+@property(nonatomic,retain) IBOutlet NSArray *collectionArray;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *treatmentScrollView;
 
-@property IBOutlet NSMutableArray *array;
+@property(nonatomic,retain) IBOutlet NSMutableArray *array;
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
 @property (weak, nonatomic) IBOutlet UIButton *summaryTagButton;
 @property (weak, nonatomic) IBOutlet UIButton *documentTagButton;
@@ -75,8 +75,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *doctorsNoteDiagnosisTextView;
 @property (weak, nonatomic) IBOutlet UITextView *doctorsNoteNoteTextView;
 @property (weak, nonatomic) IBOutlet UIButton *doctorsNoteSaveButton;
-@property NSArray *patientAppointmentArray;
-@property NSMutableArray *objForMedicine;
+@property(nonatomic,retain) NSArray *patientAppointmentArray;
+@property(nonatomic,retain) NSMutableArray *objForMedicine;
 
 
 @property (weak, nonatomic) IBOutlet UIButton *invoiceAddButton;
@@ -116,6 +116,9 @@
 
 //end
 
+@property(nonatomic,retain) NSMutableArray *arrayForCollectionView;
+@property(nonatomic,retain) NSMutableArray *arrayHeader;
+@property(nonatomic,retain) NSMutableArray *arrayValue;
 
 - (IBAction)summary:(id)sender;
 - (IBAction)documents:(id)sender;
