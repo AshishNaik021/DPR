@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ForgotPasswordView : UIViewController
+@interface ForgotPasswordView : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 
@@ -17,8 +17,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *mobileNoField;
 
 - (IBAction)sendPassword:(id)sender;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
-
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
 
 
 

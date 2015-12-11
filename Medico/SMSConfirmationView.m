@@ -13,6 +13,7 @@
 
 @end
 
+
 @implementation SMSConfirmationView
 
 @synthesize data = _data;
@@ -31,6 +32,12 @@
     spinner.color = [UIColor blueColor];
     spinner.center=self.view.center;
     [self.view addSubview:spinner];
+    self.navigationItem.title = @"Registration";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    
     
     registrationCode = @"";
     [super viewDidLoad];
