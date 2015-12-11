@@ -818,23 +818,9 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-    // NSLog(@"sssssssssssssssssssss%@",responseStr);
-    
-    
-    /*
-     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
-     NSError *error = nil;
-     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-     __procedureArr = [json valueForKeyPath:@"DentalPro"];
-     
-     */
-    // NSDictionary *dict  = [NSJSONSerialization JSONObjectWithData:[responseStr dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    
-    //NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseStr options:NSJSONReadingMutableContainers error:&error];
+
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-    
-    //   NSLog(@"Type of :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
-    
+        
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
         [self errorMessage];
