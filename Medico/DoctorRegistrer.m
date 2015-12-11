@@ -30,7 +30,7 @@
 @synthesize specializationField;
 @synthesize readTCButton;
 @synthesize nextButton;
-
+@synthesize doctorCheck;
 @synthesize  keyboardVisible;
 @synthesize offset;
 @synthesize height;
@@ -39,13 +39,13 @@
 @synthesize scrollHeight;
 
 -(IBAction)checkButton:(id)sender{
-    if(!doctorchecked){
-        [checkButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
-        doctorchecked = YES;
+    if(!doctorCheck){
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        doctorCheck = YES;
     }
-    else if(doctorchecked){
-        [checkButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
-        doctorchecked = NO;
+    else if(doctorCheck){
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        doctorCheck = NO;
         
     }
 }
@@ -56,7 +56,14 @@
     self.view.userInteractionEnabled = YES;
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
-    doctorchecked = NO;
+    
+    self.navigationItem.title = @"Register As Doctor";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    
+    doctorCheck = NO;
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
     width = CGRectGetWidth(screen);
@@ -417,7 +424,7 @@
         [self errorAllFieldsMandatory];
     }
     else{
-        if (doctorchecked) {
+        if (doctorCheck) {
             NSLog(@"Checked and calling func");
             [self callValidateAllFields];
         }

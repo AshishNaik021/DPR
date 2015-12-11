@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-BOOL doctorchecked;
 
 @interface DoctorRegistrer : UIViewController <UITextFieldDelegate> {
     IBOutlet UIScrollView *scroll;
@@ -34,7 +33,7 @@ BOOL doctorchecked;
 @property (weak, nonatomic) IBOutlet UITextField *specializationField;
 @property (weak, nonatomic) IBOutlet UIButton *readTCButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-
+@property BOOL *doctorCheck;
 -(IBAction)checkButton:(id)sender;
 - (IBAction)changeImage:(id)sender;
 - (IBAction)addCalendar:(id)sender;

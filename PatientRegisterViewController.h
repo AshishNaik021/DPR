@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-BOOL patientChecked;
+
 @interface PatientRegisterViewController : UIViewController<UITextFieldDelegate> {
     
     IBOutlet UIScrollView *scroll;
@@ -20,7 +20,7 @@ BOOL patientChecked;
 @property CGFloat height;
 @property CGFloat scrollHeight;
 @property CGRect screen;
-
+@property BOOL *patientChecked;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *emailField;

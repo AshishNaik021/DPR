@@ -26,8 +26,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *knowMore;
 @property (weak, nonatomic) IBOutlet UIButton *regAssistant;
 @property (nonatomic,retain) NSString *returnString;
+- (IBAction)doctorRegister:(id)sender;
+- (IBAction)patientRegister:(id)sender;
+- (IBAction)assistantRegister:(id)sender;
+- (IBAction)aboutMedico:(id)sender;
 
 - (IBAction)validate:(id)sender;
+- (IBAction)forgotPassword:(id)sender;
 
 - (void)loginRequest;
 

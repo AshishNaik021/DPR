@@ -21,10 +21,11 @@
 @synthesize width;
 @synthesize screen;
 @synthesize scrollHeight;
+@synthesize scroll;
 
 
 @synthesize checkButton;
-
+@synthesize assistantChecked;
 @synthesize nameField;
 @synthesize emailField;
 @synthesize changeImageButton;
@@ -40,11 +41,11 @@
 
 -(IBAction)checkButton:(id)sender{
     if(!assistantChecked){
-        [checkButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         assistantChecked = YES;
     }
     else if(assistantChecked){
-        [checkButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         assistantChecked = NO;
         
     }
@@ -57,6 +58,18 @@
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     
+   // UIImage *myImage = [UIImage imageNamed:@"home.png"];
+  //  UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    
+  //  NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+  //  self.navigationItem.rightBarButtonItems = buttonArr;
+    
+    self.navigationItem.title = @"Register As Assistant";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+   // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    
       assistantChecked = NO;
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
@@ -64,6 +77,8 @@
     //Bonus height.
     height = CGRectGetHeight(screen);
     scrollHeight = height + 200;
+    NSLog(@"Width is--- %f",width);
+    NSLog(@"Height is--- %f",height);
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
 
@@ -107,7 +122,7 @@
     
     // Save the current location so we can restore
     // when keyboard is dismissed
-    offset = scroll.contentOffset;
+    offset = self.scroll.contentOffset;
     
     // Resize the scroll view to make room for the keyboard
     CGRect viewFrame = scroll.frame;
@@ -149,8 +164,6 @@
     }
     
     return YES;
-//    [textField resignFirstResponder];
-//    return YES;
 }
 
 

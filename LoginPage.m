@@ -9,6 +9,11 @@
 #import "LoginPage.h"
 #import "DoctorLandingPageView.h"
 #import "PatientLandingPageViewController.h"
+#import "DoctorRegistrer.h"
+#import "PatientRegisterViewController.h"
+#import "AssistantRegister.h"
+#import "ForgotPasswordView.h"
+#import "AboutMedicoViewController.h"
 
 @interface LoginPage ()
 
@@ -35,16 +40,15 @@
     spinner.center=self.view.center;
     [self.view addSubview:spinner];
     self.navigationItem.hidesBackButton = YES;
-
-    //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
-    // self.view.backgroundColor = [UIColor clearColor];
-    //    UIGraphicsBeginImageContext(self.view.frame.size);
-    //    [[UIImage imageNamed:@"background.png"] drawInRect:self.view.bounds];
-    //    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    //    UIGraphicsEndImageContext();
-    //
-    //    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background final640_940.png"]];
+     self.view.backgroundColor = [UIColor clearColor];
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageNamed:@"Background final640_940.png"] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
     
+        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    [self.navigationController.navigationBar setTranslucent:NO];
     // Do any additional setup after loading the view.
 }
 
@@ -69,6 +73,37 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:checkString];
 }
+- (IBAction)doctorRegister:(id)sender {
+    DoctorRegistrer *doc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorRegistrer"];
+    [self.navigationController pushViewController:doc animated:YES];
+
+}
+
+- (IBAction)patientRegister:(id)sender {
+    PatientRegisterViewController *doc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientRegisterViewController"];
+    [self.navigationController pushViewController:doc animated:YES];
+    
+
+}
+
+- (IBAction)assistantRegister:(id)sender {
+    AssistantRegister *doc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"AssistantRegister"];
+    [self.navigationController pushViewController:doc animated:YES];
+    
+
+}
+
+- (IBAction)aboutMedico:(id)sender {
+    AboutMedicoViewController *doc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"AboutMedicoViewController"];
+    [self.navigationController pushViewController:doc animated:YES];
+    
+
+}
+
 - (IBAction)validate:(id)sender {
     [self.view setUserInteractionEnabled:NO];
     [self.passwordField resignFirstResponder];
@@ -115,6 +150,14 @@
         
     }
     
+}
+
+- (IBAction)forgotPassword:(id)sender {
+    ForgotPasswordView *doc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordView"];
+    [self.navigationController pushViewController:doc animated:YES];
+    
+
 }
 
 -(void)errorMessage{

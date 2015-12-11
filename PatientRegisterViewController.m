@@ -18,6 +18,7 @@
 
 @synthesize checkButton;
 @synthesize nameField;
+@synthesize patientChecked;
 @synthesize emailField;
 @synthesize changeImageButton;
 @synthesize bloodGroupField;
@@ -40,11 +41,11 @@
 
 -(IBAction)checkButton:(id)sender{
     if(!patientChecked){
-        [checkButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         patientChecked = YES;
     }
     else if(patientChecked){
-        [checkButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         patientChecked = NO;
         
     }
@@ -58,6 +59,12 @@
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     patientChecked = NO;
+    
+    self.navigationItem.title = @"Register As Patient";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+    // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
