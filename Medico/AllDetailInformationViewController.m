@@ -134,7 +134,7 @@
 - (void)viewDidLoad {
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
-    [self getTreatmentPlan];
+//    [self getTreatmentPlan];
     // NSLog(@"Data came from PatientAppointmentsForDoctorViewController (self.pa) :%@",self.patientAppointmentArray);
     //NSLog(@"Data came from PatientAppointmentsForDoctorViewController (_pa):%@",_patientAppointmentArray);
     self.summaryMedicinTableView.layer.borderWidth = 1.0;
