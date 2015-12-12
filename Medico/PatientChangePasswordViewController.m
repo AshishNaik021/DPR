@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
+
 #import "PatientChangePasswordViewController.h"
+#import "ChangePasswordViewController.h"
 
 @interface PatientChangePasswordViewController ()
 
@@ -48,5 +50,8 @@
 }
 
 - (IBAction)changePassword:(id)sender {
+    ChangePasswordViewController *changePass =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+    [self.navigationController pushViewController:changePass animated:YES];
 }
 @end

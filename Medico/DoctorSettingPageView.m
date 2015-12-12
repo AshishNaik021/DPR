@@ -9,6 +9,9 @@
 #import "DoctorSettingPageView.h"
 #import "DoctorLandingPageView.h"
 #import "ManageTemplateForDoctorViewController.h"
+#import "ManageDoctorsClinicSettingsViewController.h"
+#import "ManageAssistant.h"
+#import "DoctorChangePasswordViewController.h"
 
 @interface DoctorSettingPageView ()
 
@@ -21,6 +24,9 @@
 @synthesize manageProfileButton;
 
 - (IBAction)manageProfile:(id)sender {
+    DoctorChangePasswordViewController *profile =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorChangePasswordViewController"];
+    [self.navigationController pushViewController:profile animated:YES];
 }
 
 - (void) homePage:(id)sender{
@@ -81,6 +87,9 @@
  */
 
 - (IBAction)manageAssistant:(id)sender {
+    ManageAssistant *assistant =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ManageAssistant"];
+    [self.navigationController pushViewController:assistant animated:YES];
 }
 - (IBAction)manageTemplate:(id)sender {
     ManageTemplateForDoctorViewController *template =
@@ -88,6 +97,9 @@
     [self.navigationController pushViewController:template animated:YES];
 }
 - (IBAction)manageClinics:(id)sender {
+    ManageDoctorsClinicSettingsViewController *clinic =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ManageDoctorsClinicSettingsViewController"];
+    [self.navigationController pushViewController:clinic animated:YES];
 }
 - (IBAction)smsNotification:(id)sender {
 }

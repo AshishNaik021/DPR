@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hzv-uG-u24">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xfj-QT-kHQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -141,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1566.5" y="-436.5"/>
+            <point key="canvasLocation" x="-818.5" y="-442.5"/>
         </scene>
         <!--Patient Setting Page View Controller-->
         <scene sceneID="Aef-LQ-POf">
@@ -449,7 +449,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="changePassword:" destination="HNu-Zk-d5t" eventType="touchUpInside" id="7Kc-Ig-wz2"/>
-                                                    <segue destination="ffm-WR-xY9" kind="push" id="rKr-LI-ZmT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -675,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAY-f0-0Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662.5" y="-436.5"/>
+            <point key="canvasLocation" x="149.5" y="-436.5"/>
         </scene>
         <!--Forgot Password View-->
         <scene sceneID="FR8-TX-Kud">
@@ -762,7 +761,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4N-Na-8UK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117.5" y="-442.5"/>
+            <point key="canvasLocation" x="-305.5" y="-442.5"/>
         </scene>
         <!--Registration-->
         <scene sceneID="mqI-La-QUi">
@@ -1416,7 +1415,6 @@
                                 </state>
                                 <connections>
                                     <action selector="settings:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="HYX-nD-mvb"/>
-                                    <segue destination="Exi-cC-6vI" kind="push" id="Wse-Ka-fsS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-Ct-KuB">
@@ -1836,7 +1834,6 @@
                                         </state>
                                         <connections>
                                             <action selector="changePassword:" destination="rur-Ft-b1n" eventType="touchUpInside" id="2Fy-xY-F4K"/>
-                                            <segue destination="ffm-WR-xY9" kind="push" id="llE-oE-nCp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdY-uP-fPc">
@@ -1879,7 +1876,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0S-NR-vmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159.5" y="-442.5"/>
+            <point key="canvasLocation" x="652.5" y="-442.5"/>
         </scene>
         <!--Doctor Feed Back View Controller-->
         <scene sceneID="SCZ-ie-IVb">
@@ -2928,7 +2925,6 @@
                                 </state>
                                 <connections>
                                     <action selector="manageAssistant:" destination="Exi-cC-6vI" eventType="touchUpInside" id="zcg-Us-def"/>
-                                    <segue destination="ZOx-Yl-mse" kind="push" id="o44-gL-NBX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCf-VR-Wrz">
@@ -2941,7 +2937,6 @@
                                 </state>
                                 <connections>
                                     <action selector="manageClinics:" destination="Exi-cC-6vI" eventType="touchUpInside" id="zLx-jw-KMy"/>
-                                    <segue destination="0cy-Vu-FF9" kind="push" id="tOe-dT-VuS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-9G-0tS">
@@ -2954,7 +2949,6 @@
                                 </state>
                                 <connections>
                                     <action selector="manageProfile:" destination="Exi-cC-6vI" eventType="touchUpInside" id="DM4-mZ-U07"/>
-                                    <segue destination="rur-Ft-b1n" kind="push" id="FgI-CK-WiH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYW-J1-ajm">
@@ -4875,7 +4869,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZQ-zG-g8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330.5" y="-414.5"/>
+            <point key="canvasLocation" x="1142.5" y="-414.5"/>
         </scene>
         <!--Create Assistant-->
         <scene sceneID="oaa-Gb-Aih">
@@ -5089,7 +5083,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkl-QQ-lWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777.5" y="-414.5"/>
+            <point key="canvasLocation" x="1589.5" y="-414.5"/>
         </scene>
         <!--Template Detail View Controller-->
         <scene sceneID="6KX-v1-qdT">
@@ -6009,7 +6003,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3L-CW-zxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1226.5" y="-422.5"/>
+            <point key="canvasLocation" x="2038.5" y="-422.5"/>
         </scene>
         <!--Search Result Assistant View Controller-->
         <scene sceneID="rEO-Xi-Yw3">
@@ -6077,7 +6071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi0-1x-3MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686.5" y="-414.5"/>
+            <point key="canvasLocation" x="2498.5" y="-414.5"/>
         </scene>
         <!--Doctor Book Appointment View Controller-->
         <scene sceneID="hdT-qp-bAQ">
@@ -6439,7 +6433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE1-89-k7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175.5" y="-422.5"/>
+            <point key="canvasLocation" x="2987.5" y="-422.5"/>
         </scene>
         <!--Edit Details-->
         <scene sceneID="2Je-yi-K6S">
@@ -7009,26 +7003,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSe-rb-KUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-349.5" y="1852.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="A4Y-pT-HsH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RWx-wm-FQX" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vBj-Q2-fnf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="q0t-kd-AMK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ala-6h-fEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2026.5" y="-436.5"/>
         </scene>
         <!--Detail Clinic View-->
         <scene sceneID="1hC-l6-yIy">
@@ -14215,6 +14189,26 @@
             </objects>
             <point key="canvasLocation" x="455.5" y="-3797.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6AY-pm-rYC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xfj-QT-kHQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIy-Uf-nfY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="QmZ-4E-Xqi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oic-W8-Xfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1295.5" y="-436.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Timing.png" width="50" height="50"/>
@@ -14264,9 +14258,8 @@
         <image name="uparrowButton.png" width="50" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="llE-oE-nCp"/>
         <segue reference="uIc-gH-mMb"/>
-        <segue reference="wIh-Nq-vqk"/>
         <segue reference="Y0t-Ms-amc"/>
+        <segue reference="wIh-Nq-vqk"/>
     </inferredMetricsTieBreakers>
 </document>
