@@ -170,7 +170,8 @@
     [invoiceScroll setScrollEnabled:YES];
     [invoiceScroll setContentSize:CGSizeMake(widthInvoice, scrollHeightInvoice)];
 
-    
+    arrayHeader = [[NSMutableArray alloc] init];
+    arrayValue = [[NSMutableArray alloc] init];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -216,6 +217,10 @@
     self.invoiceCollection.layer.borderWidth = 1.0f;
     
     [self setAllValuesInSummary];
+//    [self getTreatmentPlan];
+    self.collection.delegate = self;
+    self.collection.dataSource = self;
+
     
 }
 
@@ -434,11 +439,13 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     if (indexPath.section == 0) {
         UILabel *l = (UILabel *)[cell viewWithTag:10];
-        l.text = [arrayForCollectionView objectAtIndex:indexPath.row];
+        NSLog(@"arayheader:%@",arrayHeader);
+        l.text = [arrayHeader objectAtIndex:indexPath.row];
     }
     else{
         UILabel *l = (UILabel *)[cell viewWithTag:10];
-        l.text = [arrayForCollectionView objectAtIndex:indexPath.row];
+        NSLog(@"value:%@",arrayValue);
+        l.text = [arrayValue objectAtIndex:indexPath.row];
     }
     return cell;
 }
@@ -820,7 +827,7 @@
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-        
+    
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
         [self errorMessage];
@@ -844,11 +851,20 @@
             arrayForCollectionView = [NSArray arrayWithArray:array1[0]];
             NSLog(@"arrayForCollectionView:%@",arrayForCollectionView);
         }
-        for (int i = 0; i< arrayForCollectionView.count; i++) {
-            NSLog(@"arrayForCollectionView[i]:%@",arrayForCollectionView[i]);
-            NSLog(@"another:%@",[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]);
-            [arrayHeader addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]];
-            NSLog(@"header:%@",arrayHeader[i]);
+//        for (int i = 0; i< arrayForCollectionView.count; i++) {
+//            NSLog(@"arrayForCollectionView[i]:%@",arrayForCollectionView[i]);
+//            NSLog(@"another:%@",[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]);
+//            [arrayHeader addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]];
+//            [arrayValue addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDefaultValue"]];
+//            NSLog(@"header:%@",arrayHeader[i]);
+//        }
+        for (NSMutableArray *arrayFromCollectionViewArray in  arrayForCollectionView) {
+            NSLog(@"arrayForCollectionView[i]:%@",arrayFromCollectionViewArray);
+            NSLog(@"another:%@",[arrayFromCollectionViewArray valueForKey:@"fieldDisplayName"]);
+            [arrayHeader addObject:[arrayFromCollectionViewArray valueForKey:@"fieldDisplayName"]];
+            [arrayValue addObject:(NSString *)[arrayFromCollectionViewArray valueForKey:@"fieldDefaultValue"]];
+            NSLog(@"header:%@",arrayHeader);
+            NSLog(@"value:%@",arrayValue);
         }
     }
     
