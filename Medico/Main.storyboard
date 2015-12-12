@@ -1380,19 +1380,15 @@
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMa-yk-Byq">
-                                <rect key="frame" x="0.0" y="60" width="375" height="153"/>
-                                <color key="backgroundColor" red="0.82860295299999998" green="0.92622106120000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MQ-ih-Lwc">
                                 <rect key="frame" x="256" y="62" width="29" height="30"/>
-                                <state key="normal" image="refresh.png">
+                                <state key="normal" image="refreshblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xu-nF-VsZ">
-                                <rect key="frame" x="206" y="163" width="45" height="50"/>
-                                <state key="normal" image="searchDoctor.png">
+                                <rect key="frame" x="209" y="163" width="47" height="47"/>
+                                <state key="normal" image="searchdoctorblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1400,8 +1396,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jt-jQ-xGH">
-                                <rect key="frame" x="302" y="163" width="42" height="50"/>
-                                <state key="normal" image="searchHospital.png">
+                                <rect key="frame" x="302" y="163" width="47" height="47"/>
+                                <state key="normal" image="searchclinicblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1410,7 +1406,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOk-YS-9Bf">
                                 <rect key="frame" x="293" y="62" width="29" height="30"/>
-                                <state key="normal" image="setting.png">
+                                <state key="normal" image="settingsblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1418,78 +1414,162 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuM-Ct-KuB">
-                                <rect key="frame" x="330" y="62" width="29" height="30"/>
-                                <state key="normal" image="logout.png">
+                                <rect key="frame" x="330" y="62" width="29" height="37"/>
+                                <state key="normal" image="Log-out.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="logout:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="b8a-2q-qjf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorLanding.png" translatesAutoresizingMaskIntoConstraints="NO" id="mMX-u9-9ZO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorprofileblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="mMX-u9-9ZO">
                                 <rect key="frame" x="160" y="74" width="55" height="52"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meL-D2-T7a">
-                                <rect key="frame" x="0.0" y="221" width="375" height="52"/>
-                                <state key="normal" title="Patients Profiles                            &gt;" image="patientProfile.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="patientprofile:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="GCq-CD-Xwv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-Up-uVU">
-                                <rect key="frame" x="0.0" y="421" width="375" height="52"/>
-                                <state key="normal" title="Manage Finance                           &gt;" image="patientProfile.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="h37-qt-qg7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpE-P4-vpi">
-                                <rect key="frame" x="0.0" y="521" width="375" height="52"/>
-                                <state key="normal" title="Feedback                                     &gt;" image="patientProfile.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="feedBck:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="rfU-Dj-lF6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-VQ-4ua">
                                 <rect key="frame" x="16" y="124" width="343" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orw-d2-gUs">
-                                <rect key="frame" x="113" y="163" width="45" height="50"/>
-                                <state key="normal" image="assistance.png">
+                                <rect key="frame" x="121" y="163" width="47" height="47"/>
+                                <state key="normal" image="searchpatientblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="searchPatient:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="ulh-9U-fwD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ys5-4y-i5e">
-                                <rect key="frame" x="0.0" y="321" width="375" height="52"/>
-                                <state key="normal" title="Manage Appointments                 &gt;" image="patientProfile.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="axX-U5-kS0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qox-Eu-1WM">
-                                <rect key="frame" x="31" y="167" width="33" height="42"/>
-                                <state key="normal" image="appointment.png">
+                                <rect key="frame" x="26" y="163" width="47" height="47"/>
+                                <state key="normal" image="notesblue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="searchAppointment:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="QrG-0h-WF3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hj8-aL-5A8">
+                                <rect key="frame" x="4" y="251" width="52" height="52"/>
+                                <state key="normal" image="patientgrey.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="patientprofile:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="bCj-Tk-l5X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esy-px-Y7b">
+                                <rect key="frame" x="56" y="251" width="239" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="   Patients Profiles">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="patientprofile:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="RHE-MM-BkU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1S-aO-q6U">
+                                <rect key="frame" x="298" y="251" width="73" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="0  &gt;">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="patientprofile:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="muE-R3-cda"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gT7-zL-esQ">
+                                <rect key="frame" x="4" y="358" width="52" height="52"/>
+                                <state key="normal" image="appointmentsgrey.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="kvg-Vv-t5F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2b-4A-MnA">
+                                <rect key="frame" x="56" y="358" width="239" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="   Manage Appointments">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="7Nx-XI-474"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ8-dN-Wsp">
+                                <rect key="frame" x="298" y="358" width="73" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="0  &gt;">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageAppointments:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="UL9-Ez-ljF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zb-fI-c04">
+                                <rect key="frame" x="4" y="466" width="52" height="52"/>
+                                <state key="normal" image="financegrey.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="UZ0-EE-tbE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBC-eV-Iic">
+                                <rect key="frame" x="56" y="466" width="239" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="   Manage Finance">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="odA-yo-dtY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QD7-mR-JIe">
+                                <rect key="frame" x="298" y="466" width="73" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="0  &gt;">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="manageFinance:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="QcR-eU-qOL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-nE-YFN">
+                                <rect key="frame" x="4" y="557" width="52" height="52"/>
+                                <state key="normal" image="ic_star.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedBck:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="DUi-MM-rPJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3v-tM-6wx">
+                                <rect key="frame" x="56" y="557" width="239" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="   Feedback">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedBck:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="8Co-hQ-dJx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erE-cq-d6X">
+                                <rect key="frame" x="298" y="557" width="73" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="0  &gt;">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedBck:" destination="BuQ-z7-7Qx" eventType="touchUpInside" id="UCG-d6-1oJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1502,11 +1582,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="doctorNameLabel" destination="qBt-VQ-4ua" id="11s-Vj-SnI"/>
-                        <outlet property="feedBackButton" destination="GpE-P4-vpi" id="eBC-Ax-kth"/>
                         <outlet property="logoutButton" destination="PuM-Ct-KuB" id="x2h-8i-oaK"/>
-                        <outlet property="manageAppointmentButton" destination="Ys5-4y-i5e" id="kcW-d0-DSb"/>
-                        <outlet property="manageFinanceButton" destination="mcV-Up-uVU" id="ccV-qH-Lt8"/>
-                        <outlet property="patientProfileButton" destination="meL-D2-T7a" id="wyt-aw-Yik"/>
                         <outlet property="searchAppointmentsButton" destination="Qox-Eu-1WM" id="hm4-AL-vnT"/>
                         <outlet property="searchClinicButton" destination="8jt-jQ-xGH" id="7kb-K0-nw7"/>
                         <outlet property="searchDoctorButton" destination="2Xu-nF-VsZ" id="Btt-pF-J55"/>
@@ -14211,9 +14287,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Log-out.png" width="533" height="533"/>
         <image name="Timing.png" width="50" height="50"/>
         <image name="alarmOffgrey.png" width="29" height="15"/>
         <image name="appointment.png" width="251" height="303"/>
+        <image name="appointmentsgrey.png" width="60" height="60"/>
         <image name="arrowButton.png" width="50" height="32"/>
         <image name="assistance.png" width="89" height="89"/>
         <image name="behind_alert_view.png" width="320" height="460"/>
@@ -14226,6 +14304,7 @@
         <image name="doctorprofileblue.png" width="60" height="60"/>
         <image name="downArrow.png" width="256" height="256"/>
         <image name="emptyStar.jpeg" width="113" height="106"/>
+        <image name="financegrey.png" width="60" height="60"/>
         <image name="generalPhysician.png" width="81" height="83"/>
         <image name="gynecologist.png" width="60" height="57"/>
         <image name="history.png" width="35" height="43"/>
@@ -14234,6 +14313,7 @@
         <image name="ic_check_box_outline_blank.png" width="24" height="24"/>
         <image name="ic_clear_3x.png" width="72" height="72"/>
         <image name="ic_date_range.png" width="24" height="24"/>
+        <image name="ic_star.png" width="24" height="24"/>
         <image name="location.png" width="44" height="44"/>
         <image name="locationgrey.png" width="60" height="60"/>
         <image name="logo.png" width="84" height="88"/>
@@ -14241,17 +14321,24 @@
         <image name="manageAssistents.png" width="75" height="71"/>
         <image name="manageClinics.png" width="75" height="71"/>
         <image name="medicinePrescribed.png" width="53" height="57"/>
+        <image name="notesblue.png" width="60" height="60"/>
         <image name="nurseprofileblue.png" width="60" height="60"/>
         <image name="patientProfile.png" width="78" height="71"/>
+        <image name="patientgrey.png" width="60" height="60"/>
         <image name="patientprofileblue.png" width="60" height="60"/>
         <image name="pdf.jpeg" width="233" height="216"/>
         <image name="pediatrician.png" width="56" height="56"/>
         <image name="refresh.png" width="46" height="46"/>
+        <image name="refreshblue.png" width="60" height="60"/>
         <image name="search.png" width="41" height="41"/>
         <image name="searchButton.png" width="223" height="226"/>
         <image name="searchDoctor.png" width="79" height="79"/>
         <image name="searchHospital.png" width="79" height="81"/>
+        <image name="searchclinicblue.png" width="60" height="60"/>
+        <image name="searchdoctorblue.png" width="60" height="60"/>
+        <image name="searchpatientblue.png" width="60" height="60"/>
         <image name="setting.png" width="46" height="46"/>
+        <image name="settingsblue.png" width="60" height="60"/>
         <image name="unchechRadio.png" width="37" height="37"/>
         <image name="unchecked.png" width="21" height="18"/>
         <image name="upArrow.png" width="256" height="256"/>

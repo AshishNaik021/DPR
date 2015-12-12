@@ -28,12 +28,29 @@
 @synthesize doctorName = _doctorName;
 @synthesize doctorEmail = _doctorEmail;
 
+
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+
 - (void)viewDidLoad {
     NSLog(@"DoctorLandingPageView.m");
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     NSLog(@"Name:%@ Email :%@" ,_doctorName,_doctorEmail);
     
+   // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background final v1.0-0.png"]];
+   // self.view.backgroundColor = [UIColor clearColor];
+  //  UIGraphicsBeginImageContext(self.view.frame.size);
+  //  [[UIImage imageNamed:@"Background final v1.0-0.png"] drawInRect:self.view.bounds];
+  //  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  //  UIGraphicsEndImageContext();
+  //  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+  //  self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    //    [self.navigationController.navigationBar setTranslucent:NO];
+  //  self.navigationController.navigationBar.hidden = YES;
+
     //    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
     //    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     //    spinner.color = [UIColor blueColor];
