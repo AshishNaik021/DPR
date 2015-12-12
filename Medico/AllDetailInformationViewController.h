@@ -37,6 +37,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *treatmentScrollView;
 
 @property(nonatomic,retain) IBOutlet NSMutableArray *array;
+@property(nonatomic,retain) NSMutableArray *arrayo1;
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
 @property (weak, nonatomic) IBOutlet UIButton *summaryTagButton;
 @property (weak, nonatomic) IBOutlet UIButton *documentTagButton;

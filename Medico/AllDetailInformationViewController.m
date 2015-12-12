@@ -63,6 +63,7 @@
 @synthesize doctorsNoteSaveButton;
 @synthesize doctorsNoteSymptomsTextView;
 @synthesize array;
+@synthesize arrayo1;
 @synthesize summaryDatePassData = _summaryDatePassData;
 @synthesize summaryPatientEmailPassData = _summaryPatientEmailPassData;
 @synthesize summaryTimePassData =_summaryTimePassData;
@@ -133,7 +134,7 @@
 - (void)viewDidLoad {
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
-    
+    [self getTreatmentPlan];
     // NSLog(@"Data came from PatientAppointmentsForDoctorViewController (self.pa) :%@",self.patientAppointmentArray);
     //NSLog(@"Data came from PatientAppointmentsForDoctorViewController (_pa):%@",_patientAppointmentArray);
     self.summaryMedicinTableView.layer.borderWidth = 1.0;
@@ -193,34 +194,34 @@
     [doctorsNoteSymptomsTextView.layer setBorderWidth:1.0];
     [doctorsNoteNoteTextView.layer setBorderWidth:1.0];
     [doctorsNoteDiagnosisTextView.layer setBorderWidth:1.0];
-    //    array = [[NSMutableArray alloc]init];
-    //    [array addObject:@"Name"];
-    //    [array addObject:@"Total"];
-    //    [array addObject:@"Cost"];
-    //    [array addObject:@"Currency"];
-    //    [array addObject:@"Discount"];
-    //    [array addObject:@"Taxes"];
-    //    [array addObject:@"Total"];
-    //    [array addObject:@"Note"];
-    //    [array addObject:@"Cost Dollar"];
-    //    arrayo1 = [[NSMutableArray alloc]init];
-    //    [arrayo1 addObject:@"Name1"];
-    //    [arrayo1 addObject:@"Total1"];
-    //    [arrayo1 addObject:@"Cost1"];
-    //    [arrayo1 addObject:@"Curre1nc1y"];
-    //    [arrayo1 addObject:@"Discou1nt"];
-    //    [arrayo1 addObject:@"Taxe1s"];
-    //    [arrayo1 addObject:@"Tot1al"];
-    //    [arrayo1 addObject:@"Note1"];
-    //    [arrayo1 addObject:@"Cost 1Dollar"];
+    array = [[NSMutableArray alloc]init];
+    [array addObject:@"Name"];
+    [array addObject:@"Total"];
+    [array addObject:@"Cost"];
+    [array addObject:@"Currency"];
+    [array addObject:@"Discount"];
+    [array addObject:@"Taxes"];
+    [array addObject:@"Total"];
+    [array addObject:@"Note"];
+    [array addObject:@"Cost Dollar"];
+            arrayo1 = [[NSMutableArray alloc]init];
+            [arrayo1 addObject:@"Name1"];
+            [arrayo1 addObject:@"Total1"];
+            [arrayo1 addObject:@"Cost1"];
+            [arrayo1 addObject:@"Curre1nc1y"];
+            [arrayo1 addObject:@"Discou1nt"];
+            [arrayo1 addObject:@"Taxe1s"];
+            [arrayo1 addObject:@"Tot1al"];
+            [arrayo1 addObject:@"Note1"];
+            [arrayo1 addObject:@"Cost 1Dollar"];
     self.collection.layer.borderWidth = 1.0f;
     self.invoiceCollection.layer.borderWidth = 1.0f;
     
     [self setAllValuesInSummary];
-//    [self getTreatmentPlan];
+    [self getTreatmentPlan];
     self.collection.delegate = self;
     self.collection.dataSource = self;
-
+    
     
 }
 
@@ -358,6 +359,10 @@
 -(void)setVisitedDate:(NSString *)date{
     self.summaryVisiteDateField.text = [NSString stringWithFormat:date];
 }
+-(void)errorMessageForName{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Unable to fetch name of clinic." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
 -(void)setClinicName{
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
@@ -373,7 +378,7 @@
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
     if ([httpResponse statusCode] != 200) {
-        [self errorMessage];
+        [self errorMessageForName];
     }
     else{
         
@@ -590,7 +595,7 @@
                 self.doctorsNoteNoteTextView.text = @"";
             }
             else{
-            self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
+                self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
             }
         }
     }
@@ -655,61 +660,61 @@
         [self errorMessage];
     }
     else{
-    NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-    NSLog(@"pihu pihu pihu pihu pihu pihu-------%@",arrayList3);
-    
-    if (error) {
-        NSLog(@"Error : %@",error.localizedDescription);
-    }
-else{
-        if ([array isKindOfClass:[NSNull class]]) {
-            NSLog(@"Empty array");
-            self.summaryTestPrescribedTextView.text = @"NA";
-            self.summaryDiagnosisTextview.text = @"NA";
-            self.summarySymptomsTextView.text = @"NA";
-            self.summaryVisiteTypeField.text = @"NA";
-            self.summaryVisiteDateField.text = @"NA";
-            self.summaryClinicNameField.text = @"NA";
-        }
-        NSLog(@"arraylist3%@",arrayList3);
-        if (![[arrayList3 valueForKey:@"testsPrescribed"]isKindOfClass:[NSNull class]]) {
-            summaryTestPres = [arrayList3 valueForKey:@"testsPrescribed"];
-            [self setPrescription:[arrayList3 valueForKey:@"testsPrescribed"]];
-            
+        NSMutableArray *arrayList3 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+        NSLog(@"pihu pihu pihu pihu pihu pihu-------%@",arrayList3);
+        
+        if (error) {
+            NSLog(@"Error : %@",error.localizedDescription);
         }
         else{
-            summaryTestPres = @"NA";
-            [self setPrescription:@"NA"];
-        }
-        if (![[arrayList3 valueForKey:@"diagnosis"]isKindOfClass:[NSNull class]]) {
-            summaryDiagnosis = [arrayList3 valueForKey:@"diagnosis"];
-            
-            [self setDiagnosis:[arrayList3 valueForKey:@"diagnosis"]];
-        }
-        else{
-            summaryDiagnosis = @"NA";
-            [self setDiagnosis:@"NA"];
-        }
-        if (![[arrayList3 valueForKey:@"symptoms"]isKindOfClass:[NSNull class]]) {
-            summarySymptoms = [arrayList3 valueForKey:@"symptoms"];
-            [self setSymptom:[arrayList3 valueForKey:@"symptoms"]];
-        }
-        else{
-            summarySymptoms = @"NA";
-            [self setSymptom:@"NA"];
-        }
-        if (![[arrayList3 valueForKey:@"visitType"]isKindOfClass:[NSNull class]]) {
-            summaryViType = [arrayList3 valueForKey:@"visitType"];
-            
-            [self setVisitType:[arrayList3 valueForKey:@"visitType"]];
-        }
-        else{
-            summaryViType = @"NA";
-            [self setVisitType:@"NA"];
-        }
-        if (![[arrayList3 valueForKey:@"visitDate"]isKindOfClass:[NSNull class]]) {
-            summaryViDate = [arrayList3 valueForKey:@"visitDate"];
-            [self setVisitedDate:[arrayList3 valueForKey:@"visitDate"]];
+            if ([array isKindOfClass:[NSNull class]]) {
+                NSLog(@"Empty array");
+                self.summaryTestPrescribedTextView.text = @"NA";
+                self.summaryDiagnosisTextview.text = @"NA";
+                self.summarySymptomsTextView.text = @"NA";
+                self.summaryVisiteTypeField.text = @"NA";
+                self.summaryVisiteDateField.text = @"NA";
+                self.summaryClinicNameField.text = @"NA";
+            }
+            NSLog(@"arraylist3%@",arrayList3);
+            if (![[arrayList3 valueForKey:@"testsPrescribed"]isKindOfClass:[NSNull class]]) {
+                summaryTestPres = [arrayList3 valueForKey:@"testsPrescribed"];
+                [self setPrescription:[arrayList3 valueForKey:@"testsPrescribed"]];
+                
+            }
+            else{
+                summaryTestPres = @"NA";
+                [self setPrescription:@"NA"];
+            }
+            if (![[arrayList3 valueForKey:@"diagnosis"]isKindOfClass:[NSNull class]]) {
+                summaryDiagnosis = [arrayList3 valueForKey:@"diagnosis"];
+                
+                [self setDiagnosis:[arrayList3 valueForKey:@"diagnosis"]];
+            }
+            else{
+                summaryDiagnosis = @"NA";
+                [self setDiagnosis:@"NA"];
+            }
+            if (![[arrayList3 valueForKey:@"symptoms"]isKindOfClass:[NSNull class]]) {
+                summarySymptoms = [arrayList3 valueForKey:@"symptoms"];
+                [self setSymptom:[arrayList3 valueForKey:@"symptoms"]];
+            }
+            else{
+                summarySymptoms = @"NA";
+                [self setSymptom:@"NA"];
+            }
+            if (![[arrayList3 valueForKey:@"visitType"]isKindOfClass:[NSNull class]]) {
+                summaryViType = [arrayList3 valueForKey:@"visitType"];
+                
+                [self setVisitType:[arrayList3 valueForKey:@"visitType"]];
+            }
+            else{
+                summaryViType = @"NA";
+                [self setVisitType:@"NA"];
+            }
+            if (![[arrayList3 valueForKey:@"visitDate"]isKindOfClass:[NSNull class]]) {
+                summaryViDate = [arrayList3 valueForKey:@"visitDate"];
+                [self setVisitedDate:[arrayList3 valueForKey:@"visitDate"]];
                 
             }
             else{
