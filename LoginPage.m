@@ -41,14 +41,14 @@
     [self.view addSubview:spinner];
     self.navigationItem.hidesBackButton = YES;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background final640_940.png"]];
-     self.view.backgroundColor = [UIColor clearColor];
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        [[UIImage imageNamed:@"Background final640_940.png"] drawInRect:self.view.bounds];
-        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
-        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-//    [self.navigationController.navigationBar setTranslucent:NO];
+    self.view.backgroundColor = [UIColor clearColor];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Background final640_940.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    //    [self.navigationController.navigationBar setTranslucent:NO];
     self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view.
 }
@@ -78,7 +78,7 @@
     DoctorRegistrer *doc =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorRegistrer"];
     [self.navigationController pushViewController:doc animated:YES];
-
+    
 }
 
 - (IBAction)patientRegister:(id)sender {
@@ -86,7 +86,7 @@
     [self.storyboard instantiateViewControllerWithIdentifier:@"PatientRegisterViewController"];
     [self.navigationController pushViewController:doc animated:YES];
     
-
+    
 }
 
 - (IBAction)assistantRegister:(id)sender {
@@ -94,7 +94,7 @@
     [self.storyboard instantiateViewControllerWithIdentifier:@"AssistantRegister"];
     [self.navigationController pushViewController:doc animated:YES];
     
-
+    
 }
 
 - (IBAction)aboutMedico:(id)sender {
@@ -102,7 +102,7 @@
     [self.storyboard instantiateViewControllerWithIdentifier:@"AboutMedicoViewController"];
     [self.navigationController pushViewController:doc animated:YES];
     
-
+    
 }
 
 - (IBAction)validate:(id)sender {
@@ -158,7 +158,7 @@
     [self.storyboard instantiateViewControllerWithIdentifier:@"ForgotPasswordView"];
     [self.navigationController pushViewController:doc animated:YES];
     
-
+    
 }
 
 -(void)errorMessage{
@@ -372,7 +372,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-   self.navigationController.navigationBar.hidden = NO;
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 @end

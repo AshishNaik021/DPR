@@ -148,7 +148,7 @@
     
     keyboardVisible = NO;
     screen = [summaryContentView bounds];
-   
+
     width = CGRectGetWidth(screen);
     //Bonus height.
     height = CGRectGetHeight(screen);
@@ -376,20 +376,20 @@
         [self errorMessage];
     }
     else{
-
-    NSMutableArray *arrayList1 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-    NSLog(@"cliniclist call:%@",arrayList1);
-    
-    for (int i = 0; i < arrayList1.count; i++) {
-        NSLog(@"typeofidclinic %@",[[arrayList1[i] valueForKey:@"idClinic"] class]);
-        NSLog(@"typeofclinicid::%@",[[self.patientAppointmentArray[0] valueForKey:@"clinicId"] class]);
-        if ([[arrayList1[i] valueForKey:@"idClinic"] isEqualToNumber:[self.patientAppointmentArray[0] valueForKey:@"clinicId"]]) {
-            self.summaryClinicNameField.text = [arrayList1[i] valueForKey:@"clinicName"];
+        
+        NSMutableArray *arrayList1 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+        NSLog(@"cliniclist call:%@",arrayList1);
+        
+        for (int i = 0; i < arrayList1.count; i++) {
+            NSLog(@"typeofidclinic %@",[[arrayList1[i] valueForKey:@"idClinic"] class]);
+            NSLog(@"typeofclinicid::%@",[[self.patientAppointmentArray[0] valueForKey:@"clinicId"] class]);
+            if ([[arrayList1[i] valueForKey:@"idClinic"] isEqualToNumber:[self.patientAppointmentArray[0] valueForKey:@"clinicId"]]) {
+                self.summaryClinicNameField.text = [arrayList1[i] valueForKey:@"clinicName"];
+            }
         }
-    }
-    if ([self.summaryClinicNameField.text isEqualToString:@""]) {
-        self.summaryClinicNameField.text = [NSString stringWithFormat:@"NA"];
-    }
+        if ([self.summaryClinicNameField.text isEqualToString:@""]) {
+            self.summaryClinicNameField.text = [NSString stringWithFormat:@"NA"];
+        }
     }
 }
 #pragma mark Summary End
@@ -563,12 +563,12 @@
         [self errorMessage];
     }
     else{
-
-    NSMutableArray *arrayList2 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
-    if (error) {
-        NSLog(@"Error : %@",error.localizedDescription);
-    }
-    else if([arrayList2 isKindOfClass:[NSNull class]]){
+        
+        NSMutableArray *arrayList2 = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+        if (error) {
+            NSLog(@"Error : %@",error.localizedDescription);
+        }
+        else if([arrayList2 isKindOfClass:[NSNull class]]){
             self.doctorsNoteSymptomsTextView.text = @"NA";
             self.doctorsNoteDiagnosisTextView.text = @"NA";
             self.doctorsNoteNoteTextView.text = @"NA";
@@ -591,8 +591,8 @@
             }
             else{
             self.doctorsNoteNoteTextView.text = [arrayList2 valueForKey:@"doctorNotes"];
+            }
         }
-    }
     }
 }
 - (IBAction)treatmentPlan:(id)sender {
@@ -661,7 +661,7 @@
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
     }
-    else{
+else{
         if ([array isKindOfClass:[NSNull class]]) {
             NSLog(@"Empty array");
             self.summaryTestPrescribedTextView.text = @"NA";
@@ -825,7 +825,7 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
-
+    
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
     
     if (error) {
@@ -851,13 +851,13 @@
             arrayForCollectionView = [NSArray arrayWithArray:array1[0]];
             NSLog(@"arrayForCollectionView:%@",arrayForCollectionView);
         }
-//        for (int i = 0; i< arrayForCollectionView.count; i++) {
-//            NSLog(@"arrayForCollectionView[i]:%@",arrayForCollectionView[i]);
-//            NSLog(@"another:%@",[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]);
-//            [arrayHeader addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]];
-//            [arrayValue addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDefaultValue"]];
-//            NSLog(@"header:%@",arrayHeader[i]);
-//        }
+        //        for (int i = 0; i< arrayForCollectionView.count; i++) {
+        //            NSLog(@"arrayForCollectionView[i]:%@",arrayForCollectionView[i]);
+        //            NSLog(@"another:%@",[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]);
+        //            [arrayHeader addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDisplayName"]];
+        //            [arrayValue addObject:(NSString *)[arrayForCollectionView[i] valueForKey:@"fieldDefaultValue"]];
+        //            NSLog(@"header:%@",arrayHeader[i]);
+        //        }
         for (NSMutableArray *arrayFromCollectionViewArray in  arrayForCollectionView) {
             NSLog(@"arrayForCollectionView[i]:%@",arrayFromCollectionViewArray);
             NSLog(@"another:%@",[arrayFromCollectionViewArray valueForKey:@"fieldDisplayName"]);
