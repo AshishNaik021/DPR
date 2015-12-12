@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-BOOL doctor;
 
 @interface DoctorChangePasswordViewController : UIViewController{
 
@@ -32,7 +31,7 @@ BOOL doctor;
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 - (IBAction)check:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *readTCButton;
-
+@property BOOL *doctor;
 - (IBAction)readTermsConditions:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *changePasswordButton;

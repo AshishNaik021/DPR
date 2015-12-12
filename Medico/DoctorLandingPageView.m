@@ -16,6 +16,7 @@
 #import "SearchPatientViewController.h"
 #import "PatientSearchDoctorViewController.h"
 #import "SearchClinicView.h"
+#import "DoctorSettingPageView.h"
 
 
 @interface DoctorLandingPageView ()
@@ -72,6 +73,8 @@
  */
 
 - (IBAction)settings:(id)sender {
+    DoctorSettingPageView *setting =[self.storyboard instantiateViewControllerWithIdentifier:@"DoctorSettingPageView"];
+    [self.navigationController pushViewController:setting animated:YES];
 }
 - (IBAction)logout:(id)sender {
     NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];

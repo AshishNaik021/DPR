@@ -7,6 +7,7 @@
 //
 
 #import "DoctorChangePasswordViewController.h"
+#import "ChangePasswordViewController.h"
 
 @interface DoctorChangePasswordViewController ()
 
@@ -21,6 +22,7 @@
 @synthesize screen;
 @synthesize scrollHeight;
 @synthesize scroll;
+@synthesize doctor;
 
 - (void)viewDidLoad {
     NSLog(@"DoctorChangePasswordViewController.m");
@@ -161,6 +163,9 @@
 - (IBAction)readTermsConditions:(id)sender {
 }
 - (IBAction)changePassword:(id)sender {
+    ChangePasswordViewController *changePass =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ChangePasswordViewController"];
+    [self.navigationController pushViewController:changePass animated:YES];
 }
 - (IBAction)save:(id)sender {
 }
