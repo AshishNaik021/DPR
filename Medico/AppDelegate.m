@@ -17,11 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"AppDelegate.m");
+    //For alarm activity added
     if([application respondsToSelector:@selector(registerUserNotificationSettings:)]) //ios 8+
     {
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
         [application registerForRemoteNotifications];
     }
+    // for dismissing keyboard
+    [self.window addGestureRecognizer:[[UITapGestureRecognizer alloc]
+                                     initWithTarget:self.window
+                                     action:@selector(endEditing:)]];
     return YES;
 }
 
