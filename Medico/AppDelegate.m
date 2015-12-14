@@ -24,9 +24,9 @@
         [application registerForRemoteNotifications];
     }
     // for dismissing keyboard
-    [self.window addGestureRecognizer:[[UITapGestureRecognizer alloc]
-                                     initWithTarget:self.window
-                                     action:@selector(endEditing:)]];
+   // [self.window addGestureRecognizer:[[UITapGestureRecognizer alloc]
+     //                                initWithTarget:self.window
+       //                              action:@selector(endEditing:)]];
     return YES;
 }
 
