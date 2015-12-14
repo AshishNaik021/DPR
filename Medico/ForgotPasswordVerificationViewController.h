@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ForgotPasswordVerificationViewController : UIViewController
+@interface ForgotPasswordVerificationViewController : UIViewController<UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *confirmCodeField;
 @property (weak, nonatomic) IBOutlet UIButton *confirmCodeButton;
 - (IBAction)confirmCode:(id)sender;

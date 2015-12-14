@@ -715,7 +715,7 @@
                                         <rect key="frame" x="138" y="241" width="221" height="23"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="MLe-cs-Wkb" id="be1-xO-V7A"/>
                                         </connections>
@@ -724,7 +724,7 @@
                                         <rect key="frame" x="138" y="313" width="221" height="23"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="MLe-cs-Wkb" id="UD7-4Y-HGH"/>
                                         </connections>
