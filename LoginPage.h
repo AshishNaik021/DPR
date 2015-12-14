@@ -11,7 +11,7 @@
 #import "PatientLandingPageViewController.h"
 //#import "AssistantLandingPageView.h"
 
-@interface LoginPage : UIViewController{
+@interface LoginPage : UIViewController<UITextFieldDelegate>{
     UIActivityIndicatorView *spinner;
     NSString *returnString;
 }
