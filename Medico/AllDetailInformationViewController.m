@@ -134,7 +134,7 @@
 - (void)viewDidLoad {
     NSLog(@"AllDetailInformationViewController.m");
     [super viewDidLoad];
-//    [self getTreatmentPlan];
+    //    [self getTreatmentPlan];
     // NSLog(@"Data came from PatientAppointmentsForDoctorViewController (self.pa) :%@",self.patientAppointmentArray);
     //NSLog(@"Data came from PatientAppointmentsForDoctorViewController (_pa):%@",_patientAppointmentArray);
     self.summaryMedicinTableView.layer.borderWidth = 1.0;
@@ -170,7 +170,7 @@
     NSLog(@"Height is--- %f",heightInvoice);
     [invoiceScroll setScrollEnabled:YES];
     [invoiceScroll setContentSize:CGSizeMake(widthInvoice, scrollHeightInvoice)];
-
+    
     arrayHeader = [[NSMutableArray alloc] init];
     arrayValue = [[NSMutableArray alloc] init];
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
@@ -204,16 +204,16 @@
     [array addObject:@"Total"];
     [array addObject:@"Note"];
     [array addObject:@"Cost Dollar"];
-            arrayo1 = [[NSMutableArray alloc]init];
-            [arrayo1 addObject:@"Name1"];
-            [arrayo1 addObject:@"Total1"];
-            [arrayo1 addObject:@"Cost1"];
-            [arrayo1 addObject:@"Curre1nc1y"];
-            [arrayo1 addObject:@"Discou1nt"];
-            [arrayo1 addObject:@"Taxe1s"];
-            [arrayo1 addObject:@"Tot1al"];
-            [arrayo1 addObject:@"Note1"];
-            [arrayo1 addObject:@"Cost 1Dollar"];
+    arrayo1 = [[NSMutableArray alloc]init];
+    [arrayo1 addObject:@"Name1"];
+    [arrayo1 addObject:@"Total1"];
+    [arrayo1 addObject:@"Cost1"];
+    [arrayo1 addObject:@"Curre1nc1y"];
+    [arrayo1 addObject:@"Discou1nt"];
+    [arrayo1 addObject:@"Taxe1s"];
+    [arrayo1 addObject:@"Tot1al"];
+    [arrayo1 addObject:@"Note1"];
+    [arrayo1 addObject:@"Cost 1Dollar"];
     self.collection.layer.borderWidth = 1.0f;
     self.invoiceCollection.layer.borderWidth = 1.0f;
     
@@ -914,6 +914,7 @@
     NSMutableDictionary *invoiceResponse = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
+        [self errorMessage];
     }
     else if([invoiceResponse isKindOfClass:[NSNull class]]){
         NSLog(@"Emprty Response");
@@ -921,13 +922,56 @@
     else{
         NSLog(@"Invoice response :%@",invoiceResponse);
         if ([[invoiceResponse valueForKey:@"total"] isKindOfClass:[NSNull class]]) {
-            self.invoiceTotalField.text = @"NA";
+            self.invoiceTotalField.text = @"0";
             self.invoiceTotalField.userInteractionEnabled = false;
         }
         else {
             self.invoiceTotalField.text = [invoiceResponse valueForKey:@"total"];
             self.invoiceTotalField.userInteractionEnabled = false;
         }
+        if ([[invoiceResponse valueForKey:@"totalDue"] isKindOfClass:[NSNull class]]) {
+            self.invoiceTotalDueField.text = @"0";
+            self.invoiceTotalDueField.userInteractionEnabled = false;
+        }
+        else {
+            self.invoiceTotalDueField.text = [invoiceResponse valueForKey:@"totalDue"];
+            self.invoiceTotalDueField.userInteractionEnabled = false;
+        }
+        if ([[invoiceResponse valueForKey:@"advance"] isKindOfClass:[NSNull class]]) {
+            self.invoiceAdvanceField.text = @"0";
+            self.invoiceAdvanceField.userInteractionEnabled = false;
+        }
+        else {
+            self.invoiceAdvanceField.text = [invoiceResponse valueForKey:@"advance"];
+            self.invoiceAdvanceField.userInteractionEnabled = false;
+        }
+        if ([[invoiceResponse valueForKey:@"grandTotal"] isKindOfClass:[NSNull class]]) {
+            self.invoiceGrandTotalField.text = @"0";
+            self.invoiceGrandTotalField.userInteractionEnabled = false;
+        }
+        else {
+            self.invoiceGrandTotalField.text = [invoiceResponse valueForKey:@"grandTotal"];
+            self.invoiceGrandTotalField.userInteractionEnabled = false;
+        }
+        
+        if ([[invoiceResponse valueForKey:@"tax"] isKindOfClass:[NSNull class]]) {
+            self.invoiceTaxTotalField.text = @"0";
+            self.invoiceTaxTotalField.userInteractionEnabled = false;
+        }
+        else {
+            self.invoiceTaxTotalField.text = [invoiceResponse valueForKey:@"tax"];
+            self.invoiceTaxTotalField.userInteractionEnabled = false;
+        }
+        if ([[invoiceResponse valueForKey:@"discount"] isKindOfClass:[NSNull class]]) {
+            self.invoiceDiscountTotalField.text = @"0";
+            self.invoiceDiscountTotalField.userInteractionEnabled = false;
+        }
+        else {
+            self.invoiceDiscountTotalField.text = [invoiceResponse valueForKey:@"discount"];
+            self.invoiceDiscountTotalField.userInteractionEnabled = false;
+        }
+        
+        
         NSLog(@"TYpe of response :%@",[[NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error] class]);
         // NSDictionary *dic = [invoiceResponse dictionaryWithValuesForKeys:@"allTemplate"];
         //  NSArray *result = [invoiceResponse valueForKeyPath:@"fieldDefaultValue"];
