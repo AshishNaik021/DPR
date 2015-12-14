@@ -9803,7 +9803,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0I-aT-ccj">
                                                 <rect key="frame" x="9" y="164" width="277" height="51"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="xAO-xi-dRd" id="5y1-ZW-cRa"/>
                                                 </connections>
@@ -9811,7 +9811,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXy-AO-3Ff">
                                                 <rect key="frame" x="9" y="252" width="277" height="51"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="xAO-xi-dRd" id="h0y-NJ-1os"/>
                                                 </connections>
@@ -9819,7 +9819,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="35s-Kn-hAx">
                                                 <rect key="frame" x="9" y="428" width="277" height="51"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="xAO-xi-dRd" id="loD-cR-SVh"/>
                                                 </connections>
