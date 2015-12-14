@@ -1597,7 +1597,11 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="doctorNameLabel" destination="qBt-VQ-4ua" id="11s-Vj-SnI"/>
+                        <outlet property="feedbackHomeCountButton" destination="erE-cq-d6X" id="5Hx-TW-f2S"/>
                         <outlet property="logoutButton" destination="PuM-Ct-KuB" id="x2h-8i-oaK"/>
+                        <outlet property="manageAppointmentHomeCountButton" destination="bJ8-dN-Wsp" id="FSv-L8-WaN"/>
+                        <outlet property="manageFinanceHomeCountButton" destination="QD7-mR-JIe" id="OSx-bD-hA6"/>
+                        <outlet property="patientProfileHomeCountButton" destination="L1S-aO-q6U" id="egp-r2-B0t"/>
                         <outlet property="searchAppointmentsButton" destination="Qox-Eu-1WM" id="hm4-AL-vnT"/>
                         <outlet property="searchClinicButton" destination="8jt-jQ-xGH" id="7kb-K0-nw7"/>
                         <outlet property="searchDoctorButton" destination="2Xu-nF-VsZ" id="Btt-pF-J55"/>
