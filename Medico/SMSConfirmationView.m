@@ -265,7 +265,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(textField.returnKeyType==UIReturnKeyNext) {
         UIView *next = [[textField superview] viewWithTag:textField.tag+1];
         [next becomeFirstResponder];
-        [textField resignFirstResponder];
+       // [textField resignFirstResponder];
     }else if (textField.returnKeyType==UIReturnKeyDone) {
         [textField resignFirstResponder];
     }
