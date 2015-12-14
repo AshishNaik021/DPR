@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorAddTreatmentViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface DoctorAddTreatmentViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchProcedureField;
 @property (weak, nonatomic) IBOutlet UITextField *categoryField;
