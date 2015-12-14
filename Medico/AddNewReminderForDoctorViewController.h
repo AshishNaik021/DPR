@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddNewReminderForDoctorViewController : UIViewController
+@interface AddNewReminderForDoctorViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *reminderTitleText;
 @property (weak, nonatomic) IBOutlet UITextField *reminderStartDateField;
 @property (weak, nonatomic) IBOutlet UITextField *reminderEndDateField;
