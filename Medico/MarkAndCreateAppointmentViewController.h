@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MarkAndCreateAppointmentViewController : UIViewController
+@interface MarkAndCreateAppointmentViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIButton *createAppointmentButton;
