@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddPatientViewController : UIViewController
+@interface AddPatientViewController : UIViewController<UITextFieldDelegate>
 
 @end

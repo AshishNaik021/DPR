@@ -40,6 +40,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if(textField.returnKeyType==UIReturnKeyNext) {
+        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
+        [next becomeFirstResponder];
+        //[textField resignFirstResponder];
+    }else if (textField.returnKeyType==UIReturnKeyDone) {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+}
 /*
 #pragma mark - Navigation
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailPatientProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface DetailPatientProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate>
 
 @property IBOutlet NSArray *detailArr;
 @property IBOutlet NSArray *getAllClinic;
