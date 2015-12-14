@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SMSConfirmationView : UIViewController<UIAlertViewDelegate>{
+@interface SMSConfirmationView : UIViewController<UIAlertViewDelegate,UITextFieldDelegate>{
     UIActivityIndicatorView *spinner;
 }
 
