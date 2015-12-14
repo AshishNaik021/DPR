@@ -34,6 +34,10 @@
 @property (nonatomic, retain) NSString * doctorName;
 @property (nonatomic, retain) NSString * doctorEmail;
 - (IBAction)searchPatient:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *patientProfileHomeCountButton;
+@property (weak, nonatomic) IBOutlet UIButton *manageAppointmentHomeCountButton;
+@property (weak, nonatomic) IBOutlet UIButton *manageFinanceHomeCountButton;
+@property (weak, nonatomic) IBOutlet UIButton *feedbackHomeCountButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *searchPatientButton;
 
