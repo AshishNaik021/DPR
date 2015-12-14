@@ -40,6 +40,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *feedbackHomeCountButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *searchPatientButton;
-
+@property NSArray *homeCountArr;
 
 @end
+

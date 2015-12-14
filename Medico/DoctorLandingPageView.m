@@ -27,30 +27,115 @@
 @implementation DoctorLandingPageView
 @synthesize doctorName = _doctorName;
 @synthesize doctorEmail = _doctorEmail;
+@synthesize homeCountArr;
+@synthesize patientProfileHomeCountButton;
+@synthesize manageAppointmentHomeCountButton;
+@synthesize manageFinanceHomeCountButton;
+@synthesize feedbackHomeCountButton;
 
 
 -(void)viewWillDisappear:(BOOL)animated{
     self.navigationController.navigationBar.hidden = NO;
 }
 
+-(void)fetchHomeCountForDoctor{
+    
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/homeCountDoctor?doctorId=%@",_doctorEmail];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountDoctor.json"];
+    NSLog(@"%@",docPath);
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+    
+    
+}
 
 - (void)viewDidLoad {
     NSLog(@"DoctorLandingPageView.m");
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     NSLog(@"Name:%@ Email :%@" ,_doctorName,_doctorEmail);
+    [self fetchHomeCountForDoctor];
     
-   // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background final v1.0-0.png"]];
-   // self.view.backgroundColor = [UIColor clearColor];
-  //  UIGraphicsBeginImageContext(self.view.frame.size);
-  //  [[UIImage imageNamed:@"Background final v1.0-0.png"] drawInRect:self.view.bounds];
-  //  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-  //  UIGraphicsEndImageContext();
-  //  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
-  //  self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountDoctor.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    homeCountArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    NSLog(@">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>%@",homeCountArr);
+    
+    
+    if (![[homeCountArr valueForKey:@"patientCount"] isEqual:[NSNull null]]) {
+        
+        [patientProfileHomeCountButton setTitle:[NSString stringWithFormat:@"%@ >",[homeCountArr valueForKey:@"patientCount"]] forState:UIControlStateNormal];
+        
+    }
+    
+    else
+    {
+        [patientProfileHomeCountButton setTitle:@"0 >" forState:UIControlStateNormal];
+    }
+    
+    
+    if (![[homeCountArr valueForKey:@"appointments"] isEqual:[NSNull null]]) {
+        
+        [manageAppointmentHomeCountButton setTitle:[NSString stringWithFormat:@"%@ >",[homeCountArr valueForKey:@"appointments"]] forState:UIControlStateNormal];
+        
+    }
+    
+    else
+    {
+        [manageAppointmentHomeCountButton setTitle:@"0 >" forState:UIControlStateNormal];
+    }
+    
+    if (![[homeCountArr valueForKey:@"financeCount"] isEqual:[NSNull null]]) {
+        
+        [manageFinanceHomeCountButton setTitle:[NSString stringWithFormat:@"%@ >",[homeCountArr valueForKey:@"financeCount"]] forState:UIControlStateNormal];
+        
+    }
+    
+    else
+    {
+        [manageFinanceHomeCountButton setTitle:@"0 >" forState:UIControlStateNormal];
+    }
+    
+    
+    // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background final v1.0-0.png"]];
+    // self.view.backgroundColor = [UIColor clearColor];
+    //  UIGraphicsBeginImageContext(self.view.frame.size);
+    //  [[UIImage imageNamed:@"Background final v1.0-0.png"] drawInRect:self.view.bounds];
+    //  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    //  UIGraphicsEndImageContext();
+    //  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    //  self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     //    [self.navigationController.navigationBar setTranslucent:NO];
-  //  self.navigationController.navigationBar.hidden = YES;
-
+    //  self.navigationController.navigationBar.hidden = YES;
+    
     //    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(150, 225, 20, 30)];
     //    [spinner setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     //    spinner.color = [UIColor blueColor];
