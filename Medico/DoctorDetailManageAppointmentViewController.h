@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorDetailManageAppointmentViewController : UIViewController
+@interface DoctorDetailManageAppointmentViewController : UIViewController<UITextFieldDelegate>
     @property IBOutlet NSString *clinicName;
 
 @property IBOutlet NSMutableArray *passDataArr;
