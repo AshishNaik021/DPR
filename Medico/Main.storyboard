@@ -132,6 +132,7 @@
                     <navigationItem key="navigationItem" id="mNf-e0-AX7">
                         <barButtonItem key="backBarButtonItem" title="Back" id="o7a-3H-Ge3"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -765,6 +766,7 @@
                     <navigationItem key="navigationItem" id="OA4-9a-YYG">
                         <barButtonItem key="backBarButtonItem" title="Back" id="mKW-sX-eyL"/>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -1672,6 +1674,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="E2f-2L-iRL"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -3040,24 +3043,36 @@
                                 <state key="normal" image="patientgrey.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageProfile:" destination="Exi-cC-6vI" eventType="touchUpInside" id="cjS-tL-Y09"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRj-Wf-wuk">
                                 <rect key="frame" x="2" y="322" width="52" height="52"/>
-                                <state key="normal" image="patientgrey.png">
+                                <state key="normal" image="clinicgrey.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageClinics:" destination="Exi-cC-6vI" eventType="touchUpInside" id="PA7-86-9i2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvr-w9-0lo">
                                 <rect key="frame" x="2" y="432" width="52" height="52"/>
-                                <state key="normal" image="patientgrey.png">
+                                <state key="normal" image="nursegrey.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageAssistant:" destination="Exi-cC-6vI" eventType="touchUpInside" id="WMV-QK-fSQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6we-hU-nNL">
                                 <rect key="frame" x="2" y="541" width="52" height="52"/>
-                                <state key="normal" image="patientgrey.png">
+                                <state key="normal" image="templatesgrey.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="manageTemplate:" destination="Exi-cC-6vI" eventType="touchUpInside" id="Ewh-TV-vOp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0C-9G-0tS">
                                 <rect key="frame" x="55" y="211" width="320" height="52"/>
@@ -4943,6 +4958,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qUi-qw-nPz"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -5852,70 +5868,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ea8-w2-MEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1701.5" y="-1205.5"/>
-        </scene>
-        <!--Manage Template-->
-        <scene sceneID="NAN-IT-ThK">
-            <objects>
-                <tableViewController storyboardIdentifier="ManageTemplateTableViewController" id="zmp-eV-Mht" customClass="ManageTemplateTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" id="sXB-by-Mab">
-                        <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="58" id="WFA-WO-Bko">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WFA-WO-Bko" id="d2A-DL-Imj">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="OTs-NO-nPZ" kind="show" identifier="" id="nnj-Nn-xnb"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="zmp-eV-Mht" id="5kf-ah-mcw"/>
-                            <outlet property="delegate" destination="zmp-eV-Mht" id="nze-rv-PnY"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Manage Template" id="CBg-5W-o1q">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="1bs-wF-1Lm"/>
-                    </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VjJ-fT-kNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="284.5" y="3344.5"/>
-        </scene>
-        <!--Detail Manage Template-->
-        <scene sceneID="BFA-Lf-829">
-            <objects>
-                <tableViewController storyboardIdentifier="DetailManageTemplate" id="OTs-NO-nPZ" customClass="DetailManageTemplate" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" id="2bR-sZ-AF0">
-                        <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailTableCell" rowHeight="62" id="gHh-2u-ShF">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gHh-2u-ShF" id="LCT-iy-Vq4">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="OTs-NO-nPZ" id="yHE-1w-BC9"/>
-                            <outlet property="delegate" destination="OTs-NO-nPZ" id="2Ul-WT-ZGC"/>
-                        </connections>
-                    </tableView>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="667"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I4x-3S-kNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="707.5" y="3344.5"/>
         </scene>
         <!--Search Assistant View-->
         <scene sceneID="4dj-BZ-vaA">
@@ -13810,6 +13762,7 @@
         <image name="assistance.png" width="89" height="89"/>
         <image name="behind_alert_view.png" width="320" height="460"/>
         <image name="calendar.png" width="46" height="46"/>
+        <image name="clinicgrey.png" width="60" height="60"/>
         <image name="default.png" width="70" height="69"/>
         <image name="dentist.png" width="72" height="61"/>
         <image name="dermatologist.png" width="50" height="49"/>
@@ -13836,6 +13789,7 @@
         <image name="manageClinics.png" width="75" height="71"/>
         <image name="medicinePrescribed.png" width="53" height="57"/>
         <image name="notesblue.png" width="60" height="60"/>
+        <image name="nursegrey.png" width="60" height="60"/>
         <image name="nurseprofileblue.png" width="60" height="60"/>
         <image name="patientProfile.png" width="78" height="71"/>
         <image name="patientgrey.png" width="60" height="60"/>
@@ -13853,6 +13807,7 @@
         <image name="searchpatientblue.png" width="60" height="60"/>
         <image name="setting.png" width="46" height="46"/>
         <image name="settingsblue.png" width="60" height="60"/>
+        <image name="templatesgrey.png" width="60" height="60"/>
         <image name="unchechRadio.png" width="37" height="37"/>
         <image name="unchecked.png" width="21" height="18"/>
         <image name="upArrow.png" width="256" height="256"/>

@@ -38,7 +38,6 @@
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    [self.navigationController.navigationBar setTranslucent:NO];
     // Do any additional setup after loading the view.
     
     keyboardVisible = NO;
@@ -59,6 +58,7 @@
 {
     [super viewWillAppear:animated];
     NSLog(@"Registering for keyboard events");
+    [self.navigationController.navigationBar setHidden:YES];
     
     // Register for the events
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (keyboardDidShow:)

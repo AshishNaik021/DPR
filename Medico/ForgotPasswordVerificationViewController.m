@@ -27,13 +27,16 @@
     [[UIImage imageNamed:@"Background final640_940.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+  //  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    [self.navigationController.navigationBar setTranslucent:NO];
+   // [self.navigationController.navigationBar setTranslucent:NO];
 
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController.navigationBar setHidden:YES];
+}
 
 
 - (void)didReceiveMemoryWarning {

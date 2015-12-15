@@ -34,8 +34,12 @@
 @synthesize feedbackHomeCountButton;
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:NO];
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
-    self.navigationController.navigationBar.hidden = NO;
 }
 
 -(void)fetchHomeCountForDoctor{
@@ -72,6 +76,10 @@
     NSLog(@"DoctorLandingPageView.m");
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.title = @"Doctor";
+
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+
     NSLog(@"Name:%@ Email :%@" ,_doctorName,_doctorEmail);
     [self fetchHomeCountForDoctor];
     
