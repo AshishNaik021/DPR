@@ -6808,7 +6808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSe-rb-KUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-349.5" y="1852.5"/>
+            <point key="canvasLocation" x="-608.5" y="1852.5"/>
         </scene>
         <!--Detail Clinic View-->
         <scene sceneID="1hC-l6-yIy">
@@ -7012,7 +7012,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-qN-HUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88.5" y="1852.5"/>
+            <point key="canvasLocation" x="298.5" y="1084.5"/>
         </scene>
         <!--Add Slots For Doctor Clinic Setting View Controller-->
         <scene sceneID="jhh-Kh-jjY">
@@ -7694,7 +7694,7 @@
         <!--Manage Doctors Clinic Settings View Controller-->
         <scene sceneID="ccN-oR-AGg">
             <objects>
-                <viewController storyboardIdentifier="ManageDoctorsClinicSettingsViewController" id="0cy-Vu-FF9" customClass="ManageDoctorsClinicSettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManageDoctorsClinicSettingsViewController" automaticallyAdjustsScrollViewInsets="NO" id="0cy-Vu-FF9" customClass="ManageDoctorsClinicSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dVl-20-86b"/>
                         <viewControllerLayoutGuide type="bottom" id="87t-O0-VfI"/>
@@ -7704,7 +7704,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IF6-0b-TQB">
-                                <rect key="frame" x="0.0" y="36" width="375" height="537"/>
+                                <rect key="frame" x="0.0" y="73" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="63" id="8X4-yh-bYH" customClass="ManageDoctorsClinicSettingsCell">
@@ -7784,7 +7784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYU-80-13H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165.5" y="1112.5"/>
+            <point key="canvasLocation" x="-608.5" y="1084.5"/>
         </scene>
         <!--Create Doctors Clinic Settings View Controller-->
         <scene sceneID="HPj-UH-Gwl">
@@ -7995,7 +7995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6M-sx-LsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330.5" y="1084.5"/>
+            <point key="canvasLocation" x="-159.5" y="1084.5"/>
         </scene>
         <!--Search Result Clinic For Doctor View Controller-->
         <scene sceneID="rcG-Rj-jSc">

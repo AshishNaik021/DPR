@@ -47,8 +47,10 @@
     NSLog(@"The fetchJson method is called.........");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/homeCountDoctor?doctorId=%@",_doctorEmail];
+
+    NSString *email = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/homeCountDoctor?doctorId=%@",email];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -77,7 +79,6 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     self.navigationItem.title = @"Doctor";
-
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
 
     NSLog(@"Name:%@ Email :%@" ,_doctorName,_doctorEmail);
