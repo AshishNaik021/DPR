@@ -1702,7 +1702,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axW-0W-IHA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctordefault.png" translatesAutoresizingMaskIntoConstraints="NO" id="u4v-Va-Lce">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctorprofileblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="u4v-Va-Lce">
                                         <rect key="frame" x="13" y="70" width="52" height="49"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(default)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETJ-FH-nem">
@@ -1781,7 +1781,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-xm-hK7">
                                         <rect key="frame" x="16" y="418" width="21" height="22"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1806,7 +1806,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-rC-1fh">
                                         <rect key="frame" x="85" y="352" width="29" height="21"/>
-                                        <state key="normal" image="location.png">
+                                        <state key="normal" image="locationgrey.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -1831,7 +1831,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-5K-SEt">
                                         <rect key="frame" x="328" y="323" width="28" height="21"/>
-                                        <state key="normal" image="calendar.png">
+                                        <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -13706,7 +13706,6 @@
         <image name="dentist.png" width="72" height="61"/>
         <image name="dermatologist.png" width="50" height="49"/>
         <image name="doctorLanding.png" width="144" height="145"/>
-        <image name="doctordefault.png" width="76" height="76"/>
         <image name="doctorprofileblue.png" width="60" height="60"/>
         <image name="downArrow.png" width="256" height="256"/>
         <image name="emptyStar.jpeg" width="113" height="106"/>

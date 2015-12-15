@@ -66,7 +66,7 @@
     NSLog(@"catagory For Clinic-------%@",_searchCatagory);
     catagoryLabel.text = _searchCatagory;
 
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;

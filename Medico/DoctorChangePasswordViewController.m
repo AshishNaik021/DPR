@@ -43,6 +43,7 @@
     self.navigationItem.title = @"Profile";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     
     // Do any additional setup after loading the view.
 }
@@ -154,11 +155,11 @@
 }
 - (IBAction)check:(id)sender {
     if(!doctor){
-        [checkButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         doctor = YES;
     }
     else if(doctor){
-        [checkButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         doctor = NO;
         
     }
