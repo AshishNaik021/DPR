@@ -10,6 +10,7 @@
 #import "SearchClinicCell.h"
 #import "DoctorLandingPageView.h"
 #import "DetailClinicView.h"
+#import "CreateDoctorsClinicSettingsViewController.h"
 
 @interface SearchResultClinicForDoctorViewController ()
 
@@ -21,7 +22,7 @@
 @synthesize createNewButton;
 @synthesize searchCatagory = _searchCatagory;
 @synthesize CopyArr;
-
+@synthesize searchField;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -30,6 +31,34 @@
     
 }
 
+-(void)fetchAllClinics{
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+  //  NSString *email = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllClinics"];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+    
+}
 
 
 - (void)viewDidLoad {
@@ -46,6 +75,9 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    [self fetchAllClinics];
+    
+    /* ----------------- Read File For Parse JSON Data -------------------- */
     
     NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
     NSLog(@"%@",docPath);
@@ -54,14 +86,27 @@
     NSError *error = nil;
     NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
     
-    catagoryClinicArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    CopyArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
     
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"speciality = %@",_searchCatagory];
-    CopyArr = [NSMutableArray arrayWithArray:[catagoryClinicArr filteredArrayUsingPredicate:predicate]];
+    NSLog(@"MY Clinics--------------%@",CopyArr);
+
     
-    NSLog(@"===========================================%@",CopyArr);
-    NSLog(@"Count==================%lu",(unsigned long)CopyArr.count);
+//    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
+//    NSLog(@"%@",docPath);
+//    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+//    
+//    NSError *error = nil;
+//    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+//    
+//    catagoryClinicArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+//    
+//    
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"speciality = %@",_searchCatagory];
+//    CopyArr = [NSMutableArray arrayWithArray:[catagoryClinicArr filteredArrayUsingPredicate:predicate]];
+//    
+//    NSLog(@"===========================================%@",CopyArr);
+//    NSLog(@"Count==================%lu",(unsigned long)CopyArr.count);
     
     
 }
@@ -116,7 +161,7 @@
 
     }
     
-    cell.searchClinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
+   // cell.searchClinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
     
     return cell;
     
@@ -144,5 +189,22 @@
 */
 
 - (IBAction)createNew:(id)sender {
+    CreateDoctorsClinicSettingsViewController *createClinic =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+    [self.navigationController pushViewController:createClinic animated:YES];
+}
+- (IBAction)search:(id)sender {
+    
+    NSString *textData = searchField.text;
+    NSLog(@"data----%@",textData);
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"clinicName = %@",textData];
+    
+    catagoryClinicArr = [NSMutableArray arrayWithArray:[CopyArr filteredArrayUsingPredicate:predicate]];
+    
+        NSLog(@"===========================================%@",catagoryClinicArr);
+        NSLog(@"Count==================%lu",(unsigned long)catagoryClinicArr.count);
+
+    
 }
 @end

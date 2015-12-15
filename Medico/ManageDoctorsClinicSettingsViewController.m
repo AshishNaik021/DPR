@@ -10,6 +10,8 @@
 #import "ManageDoctorsClinicSettingsCell.h"
 #import "SearchClinicView.h"
 #import "CreateDoctorsClinicSettingsViewController.h"
+#import "DoctorLandingPageView.h"
+#import "SearchResultClinicForDoctorViewController.h"
 
 @interface ManageDoctorsClinicSettingsViewController ()
 
@@ -19,13 +21,21 @@
 @synthesize allClinicArr;
 @synthesize checkDelete;
 
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
+
 -(void)fetchAllClinics{
     NSLog(@"The fetchJson method is called.........");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    NSString *email = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+
     
-    
-    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllClinics"];
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getDoctorsClinic?id=%@",email];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
@@ -39,7 +49,7 @@
     
     /* ---------- Code for Writing response data into the file -------------- */
     
-    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getDoctorsClinic.json"];
     [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
     
     /* ---------- End of Code for Writing response data into the file -------------- */
@@ -67,8 +77,10 @@
     //    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     //    allClinicArr = [json valueForKeyPath:@"ClinicList"];
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchClinicFunction:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
+   // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchClinicFunction:)];
+    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
     
@@ -76,7 +88,7 @@
     
     /* ----------------- Read File For Parse JSON Data -------------------- */
     
-    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllClinics.json"];
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getDoctorsClinic.json"];
     NSLog(@"%@",docPath);
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
     
@@ -129,7 +141,7 @@
     }
     
     
-    cell.doctorImage.image = [UIImage imageNamed:@"manageClinics.png"];
+   // cell.doctorImage.image = [UIImage imageNamed:@"manageClinics.png"];
     
     return cell;
     
@@ -154,6 +166,10 @@
  */
 
 - (IBAction)addNew:(id)sender {
+    SearchResultClinicForDoctorViewController *add =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"SearchResultClinicForDoctorViewController"];
+    [self.navigationController pushViewController:add animated:YES];
+
 }
 - (IBAction)remove:(id)sender {
 }

@@ -25,11 +25,11 @@
 
 -(IBAction)deleteClinic:(id)sender{
     if(!checkDelete){
-        [deleteClinicButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [deleteClinicButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         checkDelete = YES;
     }
     else if(checkDelete){
-        [deleteClinicButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [deleteClinicButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         checkDelete = NO;
         
     }
