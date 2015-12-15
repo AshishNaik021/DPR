@@ -130,6 +130,16 @@
 - (void)viewDidLoad {
     NSLog(@"DetailPatientProfileViewController.m");
     [super viewDidLoad];
+    
+    emailField.userInteractionEnabled = NO;
+    mobileField.userInteractionEnabled = NO;
+    genderField.userInteractionEnabled = NO;
+    dateofBirthField.userInteractionEnabled = NO;
+    locationTextView.userInteractionEnabled = NO;
+    bloodGroupField.userInteractionEnabled = NO;
+    allergicTextView.userInteractionEnabled = NO;
+    
+    
     [self fetchAllDoctorPatientClinic];
     [self readAndDisplayData];
     
