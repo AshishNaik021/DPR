@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addSlotsButton;
 - (IBAction)addSlots:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UITextView *specialityField;
+@property (weak, nonatomic) IBOutlet UITextField *specialityField;
 @property (weak, nonatomic) IBOutlet UITextView *slotsField;
 @property (weak, nonatomic) IBOutlet UIButton *alwaysButton;
 - (IBAction)always:(id)sender;
