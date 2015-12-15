@@ -255,6 +255,10 @@
 		180CF3381BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CF3371BDF6ED400FA7D86 /* DoctorAddTreatmentCell.m */; };
 		180CF33B1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180CF33A1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m */; };
 		180CF33D1BDF7C1900FA7D86 /* subProcedures.json in Resources */ = {isa = PBXBuildFile; fileRef = 180CF33C1BDF7C1900FA7D86 /* subProcedures.json */; };
+		18154DF91C1FD09B0063FA26 /* SymptomsHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154DF81C1FD09B0063FA26 /* SymptomsHistoryCell.m */; };
+		18154DFC1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154DFB1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m */; };
+		18154DFF1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */; };
+		18154E021C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */; };
 		1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822A71D1BBE4BD500019B58 /* LoginPage.m */; };
 		1822C4501BD4FCC400DD24C0 /* uparrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */; };
 		1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */; };
@@ -726,6 +730,14 @@
 		180CF3391BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailAddTreatmentCell.h; sourceTree = "<group>"; };
 		180CF33A1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailAddTreatmentCell.m; sourceTree = "<group>"; };
 		180CF33C1BDF7C1900FA7D86 /* subProcedures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subProcedures.json; sourceTree = "<group>"; };
+		18154DF71C1FD09B0063FA26 /* SymptomsHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymptomsHistoryCell.h; sourceTree = "<group>"; };
+		18154DF81C1FD09B0063FA26 /* SymptomsHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymptomsHistoryCell.m; sourceTree = "<group>"; };
+		18154DFA1C1FD0FC0063FA26 /* DiagnosisHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiagnosisHistoryCell.h; sourceTree = "<group>"; };
+		18154DFB1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiagnosisHistoryCell.m; sourceTree = "<group>"; };
+		18154DFD1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicinePrescribedHistoryCell.h; sourceTree = "<group>"; };
+		18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicinePrescribedHistoryCell.m; sourceTree = "<group>"; };
+		18154E001C1FD19E0063FA26 /* TestPrescirbedHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrescirbedHistoryCell.h; sourceTree = "<group>"; };
+		18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrescirbedHistoryCell.m; sourceTree = "<group>"; };
 		1822A71C1BBE4BD500019B58 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = ../LoginPage.h; sourceTree = "<group>"; };
 		1822A71D1BBE4BD500019B58 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = ../LoginPage.m; sourceTree = "<group>"; };
 		1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrowButton.png; sourceTree = "<group>"; };
@@ -1392,6 +1404,22 @@
 				18C7DB011BC798E6005B93A9 /* Dental.json */,
 				187A0C811BC68ABD003AC5D9 /* ClinicList.json */,
 				18327F211BC4FD79002210BC /* MyDemo.json */,
+				183D407F1BDDF8D600AB4FA5 /* SymptomsHistoryViewController.h */,
+				183D40801BDDF8D600AB4FA5 /* SymptomsHistoryViewController.m */,
+				18154DF71C1FD09B0063FA26 /* SymptomsHistoryCell.h */,
+				18154DF81C1FD09B0063FA26 /* SymptomsHistoryCell.m */,
+				183D40821BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.h */,
+				183D40831BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m */,
+				18154DFA1C1FD0FC0063FA26 /* DiagnosisHistoryCell.h */,
+				18154DFB1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m */,
+				183D40851BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.h */,
+				183D40861BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m */,
+				18154DFD1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.h */,
+				18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */,
+				183D40881BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.h */,
+				183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */,
+				18154E001C1FD19E0063FA26 /* TestPrescirbedHistoryCell.h */,
+				18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */,
 				189B526C1C193FA200E83439 /* PatientSearchClinicViewController.h */,
 				189B526D1C193FA200E83439 /* PatientSearchClinicViewController.m */,
 				189B526F1C1948D800E83439 /* PatientDetailSearchClinicViewController.h */,
@@ -1542,14 +1570,6 @@
 				183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */,
 				183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */,
 				183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */,
-				183D407F1BDDF8D600AB4FA5 /* SymptomsHistoryViewController.h */,
-				183D40801BDDF8D600AB4FA5 /* SymptomsHistoryViewController.m */,
-				183D40821BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.h */,
-				183D40831BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m */,
-				183D40851BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.h */,
-				183D40861BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m */,
-				183D40881BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.h */,
-				183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */,
 				186E57A91BDB88A400F7CA72 /* DoctorBookAppointmentViewController.h */,
 				186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */,
 				186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */,
@@ -2185,6 +2205,7 @@
 				185D87031BD796AB003B357C /* SearchPatientForDoctorViewController.m in Sources */,
 				18327F331BC5234B002210BC /* TemplateDetailCell.m in Sources */,
 				186E57A21BDB62F500F7CA72 /* DoctorFeedBackViewController.m in Sources */,
+				18154DF91C1FD09B0063FA26 /* SymptomsHistoryCell.m in Sources */,
 				18C7DB101BC7AD94005B93A9 /* SearchAssistantCell.m in Sources */,
 				1842F3711BC3F1600055597E /* AddNewTemplateView.m in Sources */,
 				189EDB9D1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m in Sources */,
@@ -2267,6 +2288,7 @@
 				184C23571BDA5FC2004F3EF1 /* DetailPatientProfileCell.m in Sources */,
 				1853068E1C070E8F0058C6CE /* PatientPDFDocumentViewController.m in Sources */,
 				1897CD9C1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m in Sources */,
+				18154DFC1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m in Sources */,
 				185D86FE1BD78C97003B357C /* AddPatientViewController.m in Sources */,
 				185D87111BD7B4FC003B357C /* DoctorManageAppointmentCell.m in Sources */,
 				189086561BFAF5D300669969 /* ManageTemplateForDoctorCell.m in Sources */,
@@ -2296,7 +2318,9 @@
 				186D36971BE201EF00EBA634 /* DoctorManageFinanceCell.m in Sources */,
 				1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */,
 				1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */,
+				18154DFF1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m in Sources */,
 				186BD6231BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m in Sources */,
+				18154E021C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m in Sources */,
 				189125361C05753E00136C97 /* AllDetailInformationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

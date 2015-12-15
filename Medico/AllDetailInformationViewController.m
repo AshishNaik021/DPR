@@ -9,7 +9,11 @@
 #import "AllDetailInformationViewController.h"
 #import "DoctorLandingPageView.h"
 #import "AllDetailInformationCell.h"
-#import "MedicinePrescribedScheduleViewController.h" //Need to add by Vitthal Sir
+#import "MedicinePrescribedScheduleViewController.h"
+#import "DiagnosisHistoryViewController.h"
+#import "SymptomsHistoryViewController.h"
+#import "TestPrescirbedHistoryViewController.h"
+#import "MedicinePrescribedHistoryViewController.h"
 
 @interface AllDetailInformationViewController ()
 
@@ -275,6 +279,7 @@
     invoiceScroll.frame = viewFrameInvoice;
     // Keyboard is now visible
     keyboardVisible = YES;
+    keyboardVisibleInvoice = YES;
 }
 
 -(void) keyboardDidHide: (NSNotification *)notif
@@ -619,15 +624,35 @@
     }
 }
 - (IBAction)summarySymptomsHistory:(id)sender {
+    
+    SymptomsHistoryViewController *symptoms =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"SymptomsHistoryViewController"];
+    [self.navigationController pushViewController:symptoms animated:YES];
+    
 }
 
 - (IBAction)summaryDiagnosisHistory:(id)sender {
+    
+    DiagnosisHistoryViewController *diagnosis =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DiagnosisHistoryViewController"];
+    [self.navigationController pushViewController:diagnosis animated:YES];
+
 }
 
 - (IBAction)summaryMedicineHistory:(id)sender {
+    
+    MedicinePrescribedHistoryViewController *medicine =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"MedicinePrescribedHistoryViewController"];
+    [self.navigationController pushViewController:medicine animated:YES];
+
 }
 
 - (IBAction)summaryTestPrescribedHistory:(id)sender {
+    
+    TestPrescirbedHistoryViewController *test =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"TestPrescirbedHistoryViewController"];
+    [self.navigationController pushViewController:test animated:YES];
+    
 }
 
 - (IBAction)summarySave:(id)sender {
