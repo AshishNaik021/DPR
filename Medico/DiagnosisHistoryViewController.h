@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiagnosisHistoryViewController : UIViewController
+@interface DiagnosisHistoryViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property NSArray *diagnosisArr;
 
 @end

@@ -8,12 +8,14 @@
 
 #import "TestPrescirbedHistoryViewController.h"
 #import "DoctorLandingPageView.h"
+#import "TestPrescirbedHistoryCell.h"
 
 @interface TestPrescirbedHistoryViewController ()
 
 @end
 
 @implementation TestPrescirbedHistoryViewController
+@synthesize testPrescribedArr;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -37,6 +39,41 @@
 
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    TestPrescirbedHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    int row = [indexPath row];
+    
+    //    if (![[[reminderArr objectAtIndex:row] objectForKey:@"title"] isEqual:[NSNull null]]) {
+    //        cell.reminderTitleLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"title"];
+    //    }
+    //    else
+    //    {
+    //        cell.reminderTitleLabel.text = @"Unknown";
+    //    }
+    //
+    //
+    //
+    //    cell.reminderDateLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"date"];
+    //    cell.reminderTimeLabel.text = [[reminderArr objectAtIndex:row] objectForKey:@"time"];
+    
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

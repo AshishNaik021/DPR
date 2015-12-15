@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestPrescirbedHistoryViewController : UIViewController
+@interface TestPrescirbedHistoryViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property NSArray *testPrescribedArr;
 
 @end

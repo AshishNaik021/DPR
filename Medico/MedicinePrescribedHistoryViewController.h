@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MedicinePrescribedHistoryViewController : UIViewController
+@interface MedicinePrescribedHistoryViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property NSArray *MedicineArr;
 
 @end
