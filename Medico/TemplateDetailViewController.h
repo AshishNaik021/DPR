@@ -19,4 +19,12 @@
 @property IBOutlet NSString *templateName;
 @property IBOutlet NSString *templateId;
 @property IBOutlet NSArray *templateDataArr;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+- (IBAction)add:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+- (IBAction)save:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *DeleteButton;
+- (IBAction)Delete:(id)sender;
+
+
 @end

@@ -10,6 +10,7 @@
 #import "TemplateDetailCell.h"
 #import "EditTemplateView.h"
 
+
 @interface TemplateDetailViewController ()
 
 @end
@@ -65,8 +66,11 @@
     NSLog(@"template id is =%@",_templateId);
     
     //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleDone target:self action:@selector(editTemplateAction:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:editButton, nil];
+    //UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleDone target:self action:@selector(editTemplateAction:)];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     self.navigationItem.title = _templateName;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
@@ -109,8 +113,9 @@
 //    cell.systemNameLabel.text = [NSString stringWithFormat:@"Start %ld", (long)indexPath.row];
 //    cell.typeLabel.text = [NSString stringWithFormat:@"End %ld", (long)indexPath.row];
   
-        
-    
+   
+    [cell.nameLabel.layer setBorderWidth:1.0];
+    [cell.defaultValueLabel.layer setBorderWidth:1.0];
     cell.nameLabel.text = [[templateDataArr objectAtIndex:indexPath.row]objectForKey:@"fieldDisplayName"];
     cell.systemNameLabel.text = [[templateDataArr objectAtIndex:indexPath.row]objectForKey:@"fieldName"];
     cell.typeLabel.text = [[templateDataArr objectAtIndex:indexPath.row]objectForKey:@"fieldType"];
@@ -135,4 +140,10 @@
 }
 */
 
+- (IBAction)add:(id)sender {
+}
+- (IBAction)save:(id)sender {
+}
+- (IBAction)Delete:(id)sender {
+}
 @end

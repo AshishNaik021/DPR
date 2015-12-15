@@ -14,7 +14,8 @@
 @end
 
 @implementation TemplateDetailCell
-
+@synthesize checkButton;
+@synthesize checkDelete;
 
 - (UILabel *)label {
     UILabel *label = [[UILabel alloc] init];
@@ -56,6 +57,7 @@
     NSArray *horizontalConstraints2 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_divider2]|" options:0 metrics:nil views:views];
     [self.contentView addConstraints:horizontalConstraints2];
     
+
     return self;
 }
 
@@ -71,4 +73,17 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)check:(id)sender {
+    if(!checkDelete){
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        checkDelete = YES;
+    }
+    else if(checkDelete){
+        [checkButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        checkDelete = NO;
+        
+    }
+    
+
+}
 @end

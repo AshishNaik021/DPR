@@ -5332,32 +5332,44 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Smc-BJ-Q8U" id="AGG-cH-Umm">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQs-ha-DOe">
-                                                    <rect key="frame" x="8" y="8" width="69" height="45"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-uo-I3d">
-                                                    <rect key="frame" x="93" y="8" width="69" height="45"/>
+                                                    <rect key="frame" x="112" y="8" width="69" height="45"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uto-7M-baz">
-                                                    <rect key="frame" x="178" y="8" width="69" height="45"/>
+                                                    <rect key="frame" x="189" y="8" width="69" height="45"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uH-Np-eWX">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Name" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-cM-naO">
+                                                    <rect key="frame" x="35" y="8" width="69" height="45"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Default Value" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L77-Xn-iUP">
                                                     <rect key="frame" x="266" y="8" width="69" height="45"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyP-qC-TkV">
+                                                    <rect key="frame" x="8" y="21" width="20" height="20"/>
+                                                    <state key="normal" image="ic_check_box_outline_blank.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="check:" destination="Smc-BJ-Q8U" eventType="touchUpInside" id="mZO-Kj-fsS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="defaultValueLabel" destination="9uH-Np-eWX" id="gB9-Er-sp4"/>
-                                            <outlet property="nameLabel" destination="QQs-ha-DOe" id="Ewf-ej-vqA"/>
+                                            <outlet property="checkButton" destination="wyP-qC-TkV" id="5IT-KT-vnG"/>
+                                            <outlet property="defaultValueLabel" destination="L77-Xn-iUP" id="VMW-we-6By"/>
+                                            <outlet property="nameLabel" destination="jUA-cM-naO" id="PGS-a3-JVB"/>
                                             <outlet property="systemNameLabel" destination="BAs-uo-I3d" id="dNB-tF-KSw"/>
                                             <outlet property="typeLabel" destination="Uto-7M-baz" id="jdy-fZ-32C"/>
                                         </connections>
@@ -5368,13 +5380,43 @@
                                     <outlet property="delegate" destination="LaN-Wy-S9o" id="84O-XM-1d4"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpP-XQ-7R8">
+                                <rect key="frame" x="24" y="549" width="66" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="add:" destination="LaN-Wy-S9o" eventType="touchUpInside" id="f3X-Jg-2wJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F42-ow-tNa">
+                                <rect key="frame" x="154" y="549" width="66" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="LaN-Wy-S9o" eventType="touchUpInside" id="v7W-L7-Wzo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-dk-YU8">
+                                <rect key="frame" x="285" y="549" width="66" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Delete:" destination="LaN-Wy-S9o" eventType="touchUpInside" id="G91-JC-7uR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="DeleteButton" destination="5YB-dk-YU8" id="kBu-qL-toi"/>
+                        <outlet property="addButton" destination="fpP-XQ-7R8" id="jBu-Cd-UqS"/>
                         <outlet property="gridTableView" destination="0L3-Cz-pXH" id="VsJ-0H-xar"/>
+                        <outlet property="saveButton" destination="F42-ow-tNa" id="86J-Z2-IJL"/>
                         <outlet property="templateNameLabel" destination="3Sd-p7-cbl" id="b6O-bu-OYB"/>
                     </connections>
                 </viewController>

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface TemplateDetailCell : UITableViewCell
-@property IBOutlet UILabel *nameLabel;
+@property IBOutlet UITextView *nameLabel;
 @property IBOutlet UILabel *systemNameLabel;
 @property IBOutlet UILabel *typeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *defaultValueLabel;
-
+@property (weak, nonatomic) IBOutlet UITextView *defaultValueLabel;
+@property (weak, nonatomic) IBOutlet UIButton *checkButton;
+- (IBAction)check:(id)sender;
+@property BOOL checkDelete;
 @end
