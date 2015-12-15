@@ -62,6 +62,8 @@
 - (void)viewDidLoad {
     NSLog(@"MedicinePrescribedScheduleViewController.m");
     [super viewDidLoad];
+    startDateField.tag = 1;
+    endDateField.tag = 2;
     UIImage *myImage = [UIImage imageNamed:@"home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
@@ -175,7 +177,7 @@
     if(textField.returnKeyType==UIReturnKeyNext) {
         UIView *next = [[textField superview] viewWithTag:textField.tag+1];
         [next becomeFirstResponder];
-       // [textField resignFirstResponder];
+        // [textField resignFirstResponder];
     }else if (textField.returnKeyType==UIReturnKeyDone) {
         [textField resignFirstResponder];
     }
@@ -473,4 +475,81 @@
 
 - (IBAction)endDate:(id)sender {
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.returnKeyType =UIReturnKeyDone;
+    
+    if (textField.tag == 1) {
+        self.startDateField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 1;
+        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.startDateField.inputView = datePicker;
+        self.startDateField.text = [self formatDate:datePicker.date];
+        
+    }
+    else if (textField.tag == 2) {
+        self.endDateField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 2;
+        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.endDateField.inputView = datePicker;
+        self.endDateField.text = [self formatDate:datePicker.date];
+        
+    }
+    else{
+        
+    }
+}
+
+
+
+// Called when the date picker changes.
+- (void)updateDateField:(id)sender
+{
+    if (startDateField.isEditing) {
+        UIDatePicker *picker = (UIDatePicker*)self.startDateField.inputView;
+        self.startDateField.text = [self formatDate:picker.date];
+    }
+    else if (endDateField.isEditing){
+        UIDatePicker *picker = (UIDatePicker*)self.endDateField.inputView;
+        self.endDateField.text = [self formatDate:picker.date];
+    }
+    
+}
+
+
+
+// Formats the date chosen with the date picker.
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
+
+
 @end
