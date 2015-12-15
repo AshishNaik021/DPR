@@ -38,12 +38,12 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
     
-
+    
     doctor = NO;
     self.navigationItem.title = @"Profile";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -118,9 +118,9 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     if(textField.returnKeyType==UIReturnKeyNext) {
-        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
-        [next becomeFirstResponder];
-        //[textField resignFirstResponder];
+        //        UIView *next = [[textField superview] viewWithTag:textField.tag+1];
+        //        [next becomeFirstResponder];
+        [textField resignFirstResponder];
     }else if (textField.returnKeyType==UIReturnKeyDone) {
         [textField resignFirstResponder];
     }
@@ -133,16 +133,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)changeImage:(id)sender {
 }
@@ -158,7 +162,7 @@
         doctor = NO;
         
     }
-
+    
 }
 - (IBAction)readTermsConditions:(id)sender {
 }
@@ -169,4 +173,47 @@
 }
 - (IBAction)save:(id)sender {
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.returnKeyType = UIReturnKeyDone;
+    if (textField.tag == 7) {
+        self.dateoBirthField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.dateoBirthField.inputView = datePicker;
+        self.dateoBirthField.text = [self formatDate:datePicker.date];
+        
+    }
+}
+
+
+
+// Called when the date picker changes.
+- (void)updateDateField:(id)sender
+{
+    UIDatePicker *picker = (UIDatePicker*)self.dateoBirthField.inputView;
+    self.dateoBirthField.text = [self formatDate:picker.date];
+}
+
+
+
+// Formats the date chosen with the date picker.
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
+
+
 @end
