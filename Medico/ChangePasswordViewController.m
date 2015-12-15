@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     NSLog(@"ChangePasswordViewController.m");
     [super viewDidLoad];
-   // self.navigationItem.title = @"Change Password";
+    // self.navigationItem.title = @"Change Password";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     keyboardVisible = NO;
@@ -47,10 +47,12 @@
     [[UIImage imageNamed:@"Background final640_940.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-  //  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    //  self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-
     
+    oldPasswordField.tag = 1;
+    writeNewPasswordField.tag = 2;
+    reEnterPasswordField.tag = 3;
     // Do any additional setup after loading the view.
 }
 
@@ -223,9 +225,9 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfuly Changed Password." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             alert.tag = 100;
             [alert show];
-//                    LoginPage *forgotPass =
-//                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
-//                    [self.navigationController pushViewController:forgotPass animated:YES];
+            //                    LoginPage *forgotPass =
+            //                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+            //                    [self.navigationController pushViewController:forgotPass animated:YES];
         }
     }
     else{
@@ -233,16 +235,25 @@
     }
     
 }
-
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField.tag ==3)
+        textField.returnKeyType = UIReturnKeyDone;
+    else
+        textField.returnKeyType = UIReturnKeyNext;
+}
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if ( alertView.tag == 100 ) {
         NSLog(@"Launching the store");
         LoginPage *forgotPass =
-                    [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
+        [self.storyboard instantiateViewControllerWithIdentifier:@"LoginPage"];
         [self.navigationController pushViewController:forgotPass animated:YES];
     }
 }
 
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
 @end
 

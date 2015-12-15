@@ -37,14 +37,14 @@
 -(void)checkBtn:(id)sender{
     if(!CreateNew){
         [createNewBtn setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
-         CreateNew= YES;
+        CreateNew= YES;
     }
     else if(CreateNew){
         [createNewBtn setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
         CreateNew = NO;
         
     }
-
+    
 }
 
 - (void)viewDidLoad {
@@ -66,7 +66,13 @@
     
     loggedInUserEmailId = [[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
     NSLog(@"email id for logged in user...%@",loggedInUserEmailId);
-    
+    nameField.tag = 1;
+    emailField.tag = 2;
+    mobileField.tag = 3;
+    genderField.tag = 4;
+    dateofBirthField.tag = 5;
+    locationField.tag = 6;
+    bloodGroupField.tag = 7;
     // Do any additional setup after loading the view.
 }
 
@@ -270,15 +276,15 @@
     [alert show];
 }
 -(BOOL)validateDOB:(NSString *) DOB{
-//    NSString *nameRegex = @"";
-//    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
-//    
-//    if(![nameTest evaluateWithObject:DOB]){
-//        [self errorMessageDOBNotValid];
-//        return 0;
-//    }
-//    else
-//        return 1;
+    //    NSString *nameRegex = @"";
+    //    NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
+    //
+    //    if(![nameTest evaluateWithObject:DOB]){
+    //        [self errorMessageDOBNotValid];
+    //        return 0;
+    //    }
+    //    else
+    //        return 1;
     
     if (![DOB  isEqualToString:@""])
         return 1;
@@ -353,11 +359,11 @@
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
             
-             //[self addAssistant];
+            //[self addAssistant];
         }
-       
+        
     }
-   
+    
     else {
         NSLog(@"Data invalid");
     }
@@ -444,7 +450,7 @@
                                                                if ([httpResponse statusCode] == 200) {
                                                                    
                                                                    [self parseJSON:returnString];
-
+                                                                   
                                                                } else {
                                                                    //[self reportError:[httpResponse statusCode]];
                                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
@@ -504,14 +510,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)changeImage:(id)sender {
 }
@@ -521,4 +527,55 @@
 }
 - (IBAction)addLocation:(id)sender {
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField.tag == 7)
+        textField.returnKeyType = UIReturnKeyDone;
+    else
+        textField.returnKeyType = UIReturnKeyNext;
+    if (textField.tag == 5) {
+        self.dateofBirthField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 1;
+        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.dateofBirthField.inputView = datePicker;
+        self.dateofBirthField.text = [self formatDate:datePicker.date];
+    }
+}
+
+
+
+// Called when the date picker changes.
+- (void)updateDateField:(id)sender
+{
+    UIDatePicker *picker = (UIDatePicker*)self.dateofBirthField.inputView;
+    self.dateofBirthField.text = [self formatDate:picker.date];
+}
+
+
+
+// Formats the date chosen with the date picker.
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
+
+
 @end
