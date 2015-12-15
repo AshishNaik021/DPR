@@ -37,6 +37,8 @@
     addTimeSlot2Button.hidden = TRUE;
     NSLog(@"---------------------%@",[addTimeSlot1Button titleForState:UIControlStateNormal]);
     // Do any additional setup after loading the view.
+    reminderStartDateField.tag = 2;
+    reminderEndDateField.tag = 3;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,14 +47,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)startDateCalendar:(id)sender {
 }
@@ -65,7 +67,7 @@
 - (IBAction)setTime3:(id)sender {
 }
 - (IBAction)addTimeSlot1:(id)sender {
-
+    
     if ([[addTimeSlot1Button titleForState:UIControlStateNormal]  isEqual: @"+"]) {
         [addTimeSlot1Button setTitle:@"-" forState:UIControlStateNormal];
         reminderSetTime2Field.hidden = FALSE;
@@ -91,7 +93,7 @@
         reminderSetTime3Field.hidden = TRUE;
         setTime3Button.hidden = TRUE;
     }
-
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -106,4 +108,77 @@
     
     return YES;
 }
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField.tag == 2) {
+        self.reminderStartDateField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 2;
+        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.reminderStartDateField.inputView = datePicker;
+        self.reminderStartDateField.text = [self formatDate:datePicker.date];
+        
+    }
+    else if (textField.tag == 3) {
+        self.reminderEndDateField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 3;
+        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.reminderEndDateField.inputView = datePicker;
+        self.reminderEndDateField.text = [self formatDate:datePicker.date];
+        
+    }
+    else{
+        
+    }
+}
+
+
+
+// Called when the date picker changes.
+- (void)updateDateField:(id)sender
+{
+    if (reminderStartDateField.isEditing) {
+        UIDatePicker *picker = (UIDatePicker*)self.reminderStartDateField.inputView;
+        self.reminderStartDateField.text = [self formatDate:picker.date];
+    }
+    else if (reminderEndDateField.isEditing){
+        UIDatePicker *picker = (UIDatePicker*)self.reminderEndDateField.inputView;
+        self.reminderEndDateField.text = [self formatDate:picker.date];
+    }
+    
+}
+
+
+
+// Formats the date chosen with the date picker.
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
+
 @end
