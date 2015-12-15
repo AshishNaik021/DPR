@@ -9,6 +9,7 @@
 #import "DetailManageTemplateForDoctorViewController.h"
 #import "DetailManageTemplateForDoctorCell.h"
 #import "TemplateDetailViewController.h"
+#import "DoctorLandingPageView.h"
 
 
 @interface DetailManageTemplateForDoctorViewController ()
@@ -21,6 +22,7 @@
 
 
 -(void)fetchProcedureTemplates{
+    
     NSLog(@"The fetchJson method is called.........");
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
@@ -51,8 +53,12 @@
     
 }
 
-
-
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,8 +66,11 @@
 
     NSLog(@"Name======%@",_procedureName);
     
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
+    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     self.navigationItem.title = _procedureName;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
@@ -137,4 +146,8 @@
 }
 */
 
+- (IBAction)search:(id)sender {
+}
+- (IBAction)addTemplate:(id)sender {
+}
 @end

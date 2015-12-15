@@ -10,5 +10,6 @@
 
 @interface ManageTemplateForDoctorCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *procedureNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
 @end

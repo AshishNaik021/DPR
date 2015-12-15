@@ -9,6 +9,7 @@
 #import "ManageTemplateForDoctorViewController.h"
 #import "ManageTemplateForDoctorCell.h"
 #import "DetailManageTemplateForDoctorViewController.h"
+#import "DoctorLandingPageView.h"
 
 
 @interface ManageTemplateForDoctorViewController ()
@@ -20,6 +21,7 @@
 @synthesize searchButton;
 @synthesize searchField;
 @synthesize searchResult;
+
 
 
 -(IBAction)searchTemplateFunction:(id)sender{
@@ -60,12 +62,22 @@
     
 }
 
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"ManageTemplateForDoctorViewController.m");
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchTemplateFunction:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:addButton, nil];
+   // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(searchTemplateFunction:)];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     self.navigationItem.title = @"Manage Template";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
@@ -107,6 +119,8 @@
    
      // Configure the cell...
     cell.procedureNameLabel.text = [[allProcedureArr objectAtIndex:indexPath.row]objectForKey:@"procedureName"];
+    cell.totalLabel.text = [[allProcedureArr objectAtIndex:indexPath.row]objectForKey:@"numberOfTemplate"];
+    
     return cell;
     
 }
@@ -155,5 +169,7 @@
 
 
     }
+}
+- (IBAction)addCategory:(id)sender {
 }
 @end

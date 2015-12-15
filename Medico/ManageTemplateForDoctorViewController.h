@@ -19,5 +19,8 @@
 - (IBAction)searchTemplate:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *categoryField;
+@property (weak, nonatomic) IBOutlet UIButton *addCategoryButton;
+- (IBAction)addCategory:(id)sender;
 
 @end
