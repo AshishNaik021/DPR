@@ -259,6 +259,18 @@
 		18154DFC1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154DFB1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m */; };
 		18154DFF1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */; };
 		18154E021C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */; };
+		18154E061C2029550063FA26 /* ic_home_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E031C2029550063FA26 /* ic_home_2x.png */; };
+		18154E071C2029550063FA26 /* ic_home_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E041C2029550063FA26 /* ic_home_3x.png */; };
+		18154E081C2029550063FA26 /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E051C2029550063FA26 /* ic_home.png */; };
+		18154E121C20299D0063FA26 /* ic_radio_button_checked_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E091C20299D0063FA26 /* ic_radio_button_checked_2x.png */; };
+		18154E131C20299D0063FA26 /* ic_radio_button_checked_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E0A1C20299D0063FA26 /* ic_radio_button_checked_3x.png */; };
+		18154E141C20299D0063FA26 /* ic_radio_button_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E0B1C20299D0063FA26 /* ic_radio_button_checked.png */; };
+		18154E151C20299D0063FA26 /* ic_radio_button_unchecked_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E0C1C20299D0063FA26 /* ic_radio_button_unchecked_2x.png */; };
+		18154E161C20299D0063FA26 /* ic_radio_button_unchecked_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E0D1C20299D0063FA26 /* ic_radio_button_unchecked_3x.png */; };
+		18154E171C20299D0063FA26 /* ic_radio_button_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E0E1C20299D0063FA26 /* ic_radio_button_unchecked.png */; };
+		18154E181C20299D0063FA26 /* ic_search_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E0F1C20299D0063FA26 /* ic_search_2x.png */; };
+		18154E191C20299D0063FA26 /* ic_search_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E101C20299D0063FA26 /* ic_search_3x.png */; };
+		18154E1A1C20299D0063FA26 /* ic_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 18154E111C20299D0063FA26 /* ic_search.png */; };
 		1822A71E1BBE4BD500019B58 /* LoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822A71D1BBE4BD500019B58 /* LoginPage.m */; };
 		1822C4501BD4FCC400DD24C0 /* uparrowButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */; };
 		1822C4531BD5054000DD24C0 /* ProfileContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */; };
@@ -738,6 +750,18 @@
 		18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicinePrescribedHistoryCell.m; sourceTree = "<group>"; };
 		18154E001C1FD19E0063FA26 /* TestPrescirbedHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestPrescirbedHistoryCell.h; sourceTree = "<group>"; };
 		18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestPrescirbedHistoryCell.m; sourceTree = "<group>"; };
+		18154E031C2029550063FA26 /* ic_home_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_2x.png; sourceTree = "<group>"; };
+		18154E041C2029550063FA26 /* ic_home_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_3x.png; sourceTree = "<group>"; };
+		18154E051C2029550063FA26 /* ic_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home.png; sourceTree = "<group>"; };
+		18154E091C20299D0063FA26 /* ic_radio_button_checked_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_button_checked_2x.png; sourceTree = "<group>"; };
+		18154E0A1C20299D0063FA26 /* ic_radio_button_checked_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_button_checked_3x.png; sourceTree = "<group>"; };
+		18154E0B1C20299D0063FA26 /* ic_radio_button_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_button_checked.png; sourceTree = "<group>"; };
+		18154E0C1C20299D0063FA26 /* ic_radio_button_unchecked_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_button_unchecked_2x.png; sourceTree = "<group>"; };
+		18154E0D1C20299D0063FA26 /* ic_radio_button_unchecked_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_button_unchecked_3x.png; sourceTree = "<group>"; };
+		18154E0E1C20299D0063FA26 /* ic_radio_button_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_radio_button_unchecked.png; sourceTree = "<group>"; };
+		18154E0F1C20299D0063FA26 /* ic_search_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_search_2x.png; sourceTree = "<group>"; };
+		18154E101C20299D0063FA26 /* ic_search_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_search_3x.png; sourceTree = "<group>"; };
+		18154E111C20299D0063FA26 /* ic_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_search.png; sourceTree = "<group>"; };
 		1822A71C1BBE4BD500019B58 /* LoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginPage.h; path = ../LoginPage.h; sourceTree = "<group>"; };
 		1822A71D1BBE4BD500019B58 /* LoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginPage.m; path = ../LoginPage.m; sourceTree = "<group>"; };
 		1822C44F1BD4FCC400DD24C0 /* uparrowButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uparrowButton.png; sourceTree = "<group>"; };
@@ -1514,10 +1538,6 @@
 				18C7DB0A1BC7AA75005B93A9 /* SearchAssistantView.m */,
 				18C7DB0E1BC7AD94005B93A9 /* SearchAssistantCell.h */,
 				18C7DB0F1BC7AD94005B93A9 /* SearchAssistantCell.m */,
-				1854A2111BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.h */,
-				1854A2121BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m */,
-				186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */,
-				186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */,
 				184C234D1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.h */,
 				184C234E1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m */,
 				184C23501BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.h */,
@@ -1632,8 +1652,12 @@
 				189125471C05A76300136C97 /* PatientMedicineHistoryViewController.m */,
 				189125491C05A79200136C97 /* PatientTestPrescribedHistoryViewController.h */,
 				1891254A1C05A79200136C97 /* PatientTestPrescribedHistoryViewController.m */,
-				189B52A91C1AAB8700E83439 /* AboutMedicoViewController.h */,
-				189B52AA1C1AAB8700E83439 /* AboutMedicoViewController.m */,
+				18327F1B1BC4F1A0002210BC /* DoctorLandingPageView.h */,
+				18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */,
+				1854A2111BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.h */,
+				1854A2121BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m */,
+				186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */,
+				186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */,
 				18C7DAF81BC78767005B93A9 /* DetailClinicView.h */,
 				18C7DAF91BC78767005B93A9 /* DetailClinicView.m */,
 				188B90C21BEBA473003F425F /* SearchResultClinicForDoctorViewController.h */,
@@ -1646,8 +1670,6 @@
 				183511901BCBE56E0045BC1C /* ManageDoctorsClinicSettingsCell.m */,
 				18327F1E1BC4F5D9002210BC /* DoctorSettingPageView.h */,
 				18327F1F1BC4F5D9002210BC /* DoctorSettingPageView.m */,
-				18327F1B1BC4F1A0002210BC /* DoctorLandingPageView.h */,
-				18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */,
 				1822A71C1BBE4BD500019B58 /* LoginPage.h */,
 				1822A71D1BBE4BD500019B58 /* LoginPage.m */,
 				18327F151BC4E57A002210BC /* ForgotPasswordView.h */,
@@ -1662,6 +1684,8 @@
 				186BD6221BCF8B3000B43A8C /* ForgotPasswordVerificationViewController.m */,
 				1897CDA31BCD33DA0043F0FD /* ChangePasswordViewController.h */,
 				1897CDA41BCD33DA0043F0FD /* ChangePasswordViewController.m */,
+				189B52A91C1AAB8700E83439 /* AboutMedicoViewController.h */,
+				189B52AA1C1AAB8700E83439 /* AboutMedicoViewController.m */,
 				18327F181BC4E8FC002210BC /* SMSConfirmationView.h */,
 				18327F191BC4E8FC002210BC /* SMSConfirmationView.m */,
 				182394EF1BBD0DCE00D97366 /* Images.xcassets */,
@@ -1674,6 +1698,18 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18154E091C20299D0063FA26 /* ic_radio_button_checked_2x.png */,
+				18154E0A1C20299D0063FA26 /* ic_radio_button_checked_3x.png */,
+				18154E0B1C20299D0063FA26 /* ic_radio_button_checked.png */,
+				18154E0C1C20299D0063FA26 /* ic_radio_button_unchecked_2x.png */,
+				18154E0D1C20299D0063FA26 /* ic_radio_button_unchecked_3x.png */,
+				18154E0E1C20299D0063FA26 /* ic_radio_button_unchecked.png */,
+				18154E0F1C20299D0063FA26 /* ic_search_2x.png */,
+				18154E101C20299D0063FA26 /* ic_search_3x.png */,
+				18154E111C20299D0063FA26 /* ic_search.png */,
+				18154E031C2029550063FA26 /* ic_home_2x.png */,
+				18154E041C2029550063FA26 /* ic_home_3x.png */,
+				18154E051C2029550063FA26 /* ic_home.png */,
 				188DE75E1C1C39F20016DA15 /* Log-out.png */,
 				188DE7581C1C387C0016DA15 /* ic_star_2x.png */,
 				188DE7591C1C387C0016DA15 /* ic_star_3x.png */,
@@ -1859,6 +1895,7 @@
 				180CF3091BDF547600FA7D86 /* searchclinicblue@2x~ipad.png in Resources */,
 				18BB05701BC24DFE00D237CD /* manageFinance.png in Resources */,
 				189B52B51C1ACA0C00E83439 /* ic_check_box_3x.png in Resources */,
+				18154E191C20299D0063FA26 /* ic_search_3x.png in Resources */,
 				183D40CB1BDE1DCC00AB4FA5 /* medicinePrescribed.png in Resources */,
 				180CF3271BDF549100FA7D86 /* patientprofileblue@1x~ipad.png in Resources */,
 				180CF20E1BDF539700FA7D86 /* searchLaparoscopygrey@2x~iphone.png in Resources */,
@@ -1942,6 +1979,8 @@
 				180CF2D21BDF545C00FA7D86 /* medicineAlarmgrey@1x~ipad.png in Resources */,
 				188DE75D1C1C387C0016DA15 /* ic_star.png in Resources */,
 				180CF26C1BDF543400FA7D86 /* chatgrey@2x~ipad.png in Resources */,
+				18154E161C20299D0063FA26 /* ic_radio_button_unchecked_3x.png in Resources */,
+				18154E181C20299D0063FA26 /* ic_search_2x.png in Resources */,
 				180CF2881BDF543400FA7D86 /* searchgynecologistgrey@2x~ipad.png in Resources */,
 				180CF2841BDF543400FA7D86 /* searchdermatologygrey@2x~ipad.png in Resources */,
 				180CF1A01BDF531E00FA7D86 /* chatblue@3x~iphone.png in Resources */,
@@ -1975,6 +2014,7 @@
 				180CF22D1BDF53B000FA7D86 /* filterblue@2x~iphone.png in Resources */,
 				180CF19A1BDF52C700FA7D86 /* searchXraygrey@3x~iphone.png in Resources */,
 				187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */,
+				18154E151C20299D0063FA26 /* ic_radio_button_unchecked_2x.png in Resources */,
 				188DE75B1C1C387C0016DA15 /* ic_star_2x.png in Resources */,
 				180CF1FD1BDF539700FA7D86 /* Medicinegrey@2x~iphone.png in Resources */,
 				186BD6251BCFA87B00B43A8C /* HomeCountPatients.json in Resources */,
@@ -1989,6 +2029,7 @@
 				180CF2731BDF543400FA7D86 /* financegrey@2x~ipad.png in Resources */,
 				180CF3201BDF549100FA7D86 /* doctorprofileblue@1x~ipad.png in Resources */,
 				180CF2751BDF543400FA7D86 /* labsgrey@2x~ipad.png in Resources */,
+				18154E141C20299D0063FA26 /* ic_radio_button_checked.png in Resources */,
 				187A0C821BC68ABD003AC5D9 /* ClinicList.json in Resources */,
 				184C23541BDA4D04004F3EF1 /* getAllPatientAppointment.json in Resources */,
 				180CF1851BDF52C700FA7D86 /* patientgirlgrey@3x~iphone.png in Resources */,
@@ -2002,6 +2043,7 @@
 				180CF1871BDF52C700FA7D86 /* searchangiographygrey@3x~iphone.png in Resources */,
 				180CF2741BDF543400FA7D86 /* firstaidgrey@2x~ipad.png in Resources */,
 				180CF2941BDF543400FA7D86 /* Timinggrey@2x~ipad.png in Resources */,
+				18154E171C20299D0063FA26 /* ic_radio_button_unchecked.png in Resources */,
 				180CF3031BDF547600FA7D86 /* nurseprofileblue@2x~ipad.png in Resources */,
 				180CF2791BDF543400FA7D86 /* Medicinegrey@2x~ipad.png in Resources */,
 				180CF26D1BDF543400FA7D86 /* clinicgrey@2x~ipad.png in Resources */,
@@ -2054,6 +2096,7 @@
 				180CF1B61BDF535500FA7D86 /* patientblue@3x~iphone.png in Resources */,
 				180CF2161BDF539700FA7D86 /* settingsgrey@2x~iphone.png in Resources */,
 				180CF1791BDF52C700FA7D86 /* doctorgrey@3x~iphone.png in Resources */,
+				18154E121C20299D0063FA26 /* ic_radio_button_checked_2x.png in Resources */,
 				180CF2001BDF539700FA7D86 /* patientgirlgrey@2x~iphone.png in Resources */,
 				180CF2ED1BDF545C00FA7D86 /* templatesgrey@1x~ipad.png in Resources */,
 				186D36911BE1EDD900EBA634 /* getNotifications.json in Resources */,
@@ -2066,6 +2109,7 @@
 				180CF1B31BDF535500FA7D86 /* filterblue@3x~iphone.png in Resources */,
 				180CF26A1BDF543400FA7D86 /* appointmentsgrey@2x~ipad.png in Resources */,
 				180CF2C61BDF545C00FA7D86 /* chatgrey@1x~ipad.png in Resources */,
+				18154E1A1C20299D0063FA26 /* ic_search.png in Resources */,
 				180CF1B81BDF535500FA7D86 /* patientgirlprofileblue@3x~iphone.png in Resources */,
 				180CF28D1BDF543400FA7D86 /* searchMRIgrey@2x~ipad.png in Resources */,
 				180CF2CD1BDF545C00FA7D86 /* financegrey@1x~ipad.png in Resources */,
@@ -2083,6 +2127,7 @@
 				180CF26F1BDF543400FA7D86 /* dependentsgrey@2x~ipad.png in Resources */,
 				189B52C51C1AD8E500E83439 /* ic_date_range_2x.png in Resources */,
 				180CF2071BDF539700FA7D86 /* searchdentistgrey@2x~iphone.png in Resources */,
+				18154E071C2029550063FA26 /* ic_home_3x.png in Resources */,
 				189EDB921BD62FFE00AA9B96 /* dentist.png in Resources */,
 				180CF28F1BDF543400FA7D86 /* searchPETgrey@2x~ipad.png in Resources */,
 				180CF2D71BDF545C00FA7D86 /* patientgrey@1x~ipad.png in Resources */,
@@ -2130,10 +2175,12 @@
 				180CF2701BDF543400FA7D86 /* doctorgrey@2x~ipad.png in Resources */,
 				180CF2DE1BDF545C00FA7D86 /* searchdermatologygrey@1x~ipad.png in Resources */,
 				180CF2061BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png in Resources */,
+				18154E081C2029550063FA26 /* ic_home.png in Resources */,
 				180CF3291BDF549100FA7D86 /* searchclinicblue@1x~ipad.png in Resources */,
 				189B52B61C1ACA0C00E83439 /* ic_check_box.png in Resources */,
 				180CF1EC1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png in Resources */,
 				180CF2821BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png in Resources */,
+				18154E131C20299D0063FA26 /* ic_radio_button_checked_3x.png in Resources */,
 				180CF1B01BDF535500FA7D86 /* consultingblue@3x~iphone.png in Resources */,
 				180CF20B1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png in Resources */,
 				180CF1F71BDF539700FA7D86 /* financegrey@2x~iphone.png in Resources */,
@@ -2149,6 +2196,7 @@
 				188DE7571C1C34430016DA15 /* AppointmentsBlue.png in Resources */,
 				180CF2011BDF539700FA7D86 /* patientgrey@2x~iphone.png in Resources */,
 				180CF2C81BDF545C00FA7D86 /* consultinggrey@1x~ipad.png in Resources */,
+				18154E061C2029550063FA26 /* ic_home_2x.png in Resources */,
 				180CF1731BDF52C700FA7D86 /* appointmentsgrey@3x~iphone.png in Resources */,
 				182394F01BBD0DCE00D97366 /* Images.xcassets in Resources */,
 				18BB05671BC24DFE00D237CD /* default.png in Resources */,

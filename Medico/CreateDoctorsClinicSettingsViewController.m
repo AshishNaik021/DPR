@@ -648,11 +648,11 @@
 
 - (IBAction)always:(id)sender {
     if (!alwaysRadioButton) {
-        [alwaysButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"]forState:UIControlStateNormal];
         alwaysRadioButton = YES;
-        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [confirmByDoctorButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
         exceptDayRadioButton = NO;
         exceptSlotRadioButton = NO;
         confirmDoctorRadioButton = NO;
@@ -662,12 +662,12 @@
 
 - (IBAction)exceptCurrentSlot:(id)sender {
     if (!exceptSlotRadioButton) {
-        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"]forState:UIControlStateNormal];
         exceptSlotRadioButton = YES;
         
-        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [alwaysButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [confirmByDoctorButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
         exceptDayRadioButton = NO;
         alwaysRadioButton = NO;
         confirmDoctorRadioButton = NO;
@@ -679,13 +679,13 @@
 
 - (IBAction)exceptCurrentDay:(id)sender {
     if (!exceptDayRadioButton) {
-        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"]forState:UIControlStateNormal];
         exceptDayRadioButton = YES;
         
         
-        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [alwaysButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [confirmByDoctorButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
         exceptSlotRadioButton = NO;
         alwaysRadioButton = NO;
         confirmDoctorRadioButton = NO;
@@ -696,12 +696,12 @@
 
 - (IBAction)confirmByDoctor:(id)sender {
     if (!confirmDoctorRadioButton) {
-        [confirmByDoctorButton setImage:[UIImage imageNamed:@"checkRadio.png"]forState:UIControlStateNormal];
+        [confirmByDoctorButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"]forState:UIControlStateNormal];
         confirmDoctorRadioButton = YES;
         
-        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
-        [alwaysButton setImage:[UIImage imageNamed:@"unchechRadio.png"]forState:UIControlStateNormal];
+        [exceptCurrentSlotButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [exceptCurrentDayButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
+        [alwaysButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"]forState:UIControlStateNormal];
         exceptDayRadioButton = NO;
         exceptSlotRadioButton = NO;
         alwaysRadioButton = NO;

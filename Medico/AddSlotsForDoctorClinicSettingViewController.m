@@ -1817,13 +1817,13 @@
 
 - (IBAction)slot1Mon:(id)sender{
     if(!slot1MonBool){
-        [slot1MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1MonButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1MonBool = YES;
         slot1MonDay = @"Mon";
         
     }
     else if(slot1MonBool){
-        [slot1MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1MonButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1MonBool = NO;
         slot1MonDay = @"";
     }
@@ -1832,12 +1832,12 @@
 }
 - (IBAction)slot1Tue:(id)sender{
     if(!slot1TueBool){
-        [slot1TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1TueButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1TueBool = YES;
         slot1TueDay = @"Tue";
     }
     else if(slot1TueBool){
-        [slot1TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1TueButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1TueBool = NO;
         slot1TueDay = @"";
         
@@ -1846,12 +1846,12 @@
 }
 - (IBAction)slot1Wed:(id)sender{
     if(!slot1WedBool){
-        [slot1WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1WedButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1WedBool = YES;
         slot1WedDay = @"Wed";
     }
     else if(slot1WedBool){
-        [slot1WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1WedButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1WedBool = NO;
         slot1WedDay = @"";
         
@@ -1859,12 +1859,12 @@
 }
 - (IBAction)slot1Thu:(id)sender{
     if(!slot1ThuBool){
-        [slot1ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1ThuButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1ThuBool = YES;
         slot1ThuDay = @"Thu";
     }
     else if(slot1ThuBool){
-        [slot1ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1ThuButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1ThuBool = NO;
         slot1ThuDay = @"";
         
@@ -1872,12 +1872,12 @@
 }
 - (IBAction)slot1Fri:(id)sender{
     if(!slot1FriBool){
-        [slot1FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1FriButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1FriBool = YES;
         slot1FriDay = @"Fri";
     }
     else if(slot1FriBool){
-        [slot1FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1FriButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1FriBool = NO;
         slot1FriDay = @"";
         
@@ -1886,12 +1886,12 @@
 }
 - (IBAction)slot1Sat:(id)sender{
     if(!slot1SatBool){
-        [slot1SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1SatButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1SatBool = YES;
         slot1SatDay = @"Sat";
     }
     else if(slot1SatBool){
-        [slot1SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1SatButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1SatBool = NO;
         slot1SatDay = @"";
         
@@ -1899,12 +1899,12 @@
 }
 - (IBAction)slot1Sun:(id)sender{
     if(!slot1SunBool){
-        [slot1SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot1SunButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot1SunBool = YES;
         slot1SunDay = @"Sun";
     }
     else if(slot1SunBool){
-        [slot1SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot1SunButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot1SunBool = NO;
         slot1SunDay = @"";
         
@@ -1914,12 +1914,12 @@
 
 - (IBAction)slot2Mon:(id)sender{
     if(!slot2MonBool){
-        [slot2MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2MonButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2MonBool = YES;
         slot2MonDay =@"Mon";
     }
     else if(slot2MonBool){
-        [slot2MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2MonButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2MonBool = NO;
         slot2MonDay =@"";
     }
@@ -1927,12 +1927,12 @@
 }
 - (IBAction)slot2Tue:(id)sender{
     if(!slot2TueBool){
-        [slot2TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2TueButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2TueBool = YES;
         slot2TueDay =@"Tue";
     }
     else if(slot2TueBool){
-        [slot2TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2TueButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2TueBool = NO;
         slot2TueDay =@"";
         
@@ -1941,12 +1941,12 @@
 }
 - (IBAction)slot2Wed:(id)sender{
     if(!slot2WedBool){
-        [slot2WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2WedButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2WedBool = YES;
         slot2WedDay =@"Wed";
     }
     else if(slot2WedBool){
-        [slot2WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2WedButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2WedBool = NO;
         slot2WedDay =@"";
     }
@@ -1955,24 +1955,24 @@
 - (IBAction)slot2Thu:(id)sender{
     
     if(!slot2ThuBool){
-        [slot2ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2ThuButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2ThuBool = YES;
         slot2ThuDay =@"Thu";
     }
     else if(slot2ThuBool){
-        [slot2ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2ThuButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2ThuBool = NO;
         slot2ThuDay =@"";
     }
 }
 - (IBAction)slot2Fri:(id)sender{
     if(!slot2FriBool){
-        [slot2FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2FriButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2FriBool = YES;
         slot2FriDay =@"Fri";
     }
     else if(slot2FriBool){
-        [slot2FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2FriButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2FriBool = NO;
         slot2FriDay =@"";
     }
@@ -1980,24 +1980,24 @@
 }
 - (IBAction)slot2Sat:(id)sender{
     if(!slot2SatBool){
-        [slot2SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2SatButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2SatBool = YES;
         slot2SatDay =@"Sat";
     }
     else if(slot2SatBool){
-        [slot2SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2SatButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2SatBool = NO;
         slot2SatDay =@"";
     }
 }
 - (IBAction)slot2Sun:(id)sender{
     if(!slot2SunBool){
-        [slot2SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot2SunButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot2SunBool = YES;
         slot2SunDay =@"Sun";
     }
     else if(slot2SunBool){
-        [slot2SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot2SunButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot2SunBool = NO;
         slot2SunDay =@"";
     }
@@ -2006,12 +2006,12 @@
 
 - (IBAction)slot3Mon:(id)sender{
     if(!slot3MonBool){
-        [slot3MonButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3MonButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3MonBool = YES;
         slot3MonDay =@"Mon";
     }
     else if(slot3MonBool){
-        [slot3MonButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3MonButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3MonBool = NO;
         slot3MonDay =@"";
         
@@ -2019,12 +2019,12 @@
 }
 - (IBAction)slot3Tue:(id)sender{
     if(!slot3TueBool){
-        [slot3TueButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3TueButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3TueBool = YES;
         slot3TueDay =@"Tue";
     }
     else if(slot3TueBool){
-        [slot3TueButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3TueButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3TueBool = NO;
         slot3TueDay =@"";
         
@@ -2032,24 +2032,24 @@
 }
 - (IBAction)slot3Wed:(id)sender{
     if(!slot3WedBool){
-        [slot3WedButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3WedButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3WedBool = YES;
         slot3WedDay =@"Wed";
     }
     else if(slot3WedBool){
-        [slot3WedButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3WedButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3WedBool = NO;
         slot3WedDay =@"";
     }
 }
 - (IBAction)slot3Thu:(id)sender{
     if(!slot3ThuBool){
-        [slot3ThuButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3ThuButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3ThuBool = YES;
         slot3ThuDay =@"Thu";
     }
     else if(slot3ThuBool){
-        [slot3ThuButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3ThuButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3ThuBool = NO;
         slot3ThuDay =@"";
     }
@@ -2057,12 +2057,12 @@
 }
 - (IBAction)slot3Fri:(id)sender{
     if(!slot3FriBool){
-        [slot3FriButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3FriButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3FriBool = YES;
         slot3FriDay =@"Fri";
     }
     else if(slot3FriBool){
-        [slot3FriButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3FriButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3FriBool = NO;
         slot3FriDay =@"";
     }
@@ -2070,24 +2070,24 @@
 }
 - (IBAction)slot3Sat:(id)sender{
     if(!slot3SatBool){
-        [slot3SatButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3SatButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3SatBool = YES;
         slot3SatDay =@"Sat";
     }
     else if(slot3SatBool){
-        [slot3SatButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3SatButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3SatBool = NO;
         slot3SatDay =@"";
     }
 }
 - (IBAction)slot3Sun:(id)sender{
     if(!slot3SunBool){
-        [slot3SunButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [slot3SunButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         slot3SunBool = YES;
         slot3SunDay =@"Sun";
     }
     else if(slot3SunBool){
-        [slot3SunButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [slot3SunButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         slot3SunBool = NO;
         slot3SunDay =@"";
     }

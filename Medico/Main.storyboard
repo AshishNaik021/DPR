@@ -1017,7 +1017,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5U-QK-hYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117.5" y="1084.5"/>
+            <point key="canvasLocation" x="-1566.5" y="1084.5"/>
         </scene>
         <!--Registration as Assistant-->
         <scene sceneID="Tc4-Md-c2m">
@@ -1283,7 +1283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14m-L1-nbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2026.5" y="1084.5"/>
+            <point key="canvasLocation" x="-2488.5" y="1084.5"/>
         </scene>
         <!--SMS Confirmation-->
         <scene sceneID="oPb-3w-fgw">
@@ -1966,7 +1966,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RlE-el-rds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791.5" y="1090.5"/>
+            <point key="canvasLocation" x="1127.5" y="1852.5"/>
         </scene>
         <!--Manage Reminder View Controller-->
         <scene sceneID="gS7-WD-KbL">
@@ -4893,7 +4893,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLm-1H-Tk5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1550.5" y="1084.5"/>
+            <point key="canvasLocation" x="-2026.5" y="1084.5"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="JfL-N0-YoA">
@@ -6823,7 +6823,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSe-rb-KUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608.5" y="1852.5"/>
+            <point key="canvasLocation" x="-2036.5" y="1900.5"/>
         </scene>
         <!--Detail Clinic View-->
         <scene sceneID="1hC-l6-yIy">
@@ -6958,7 +6958,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRX-qN-HUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298.5" y="1084.5"/>
+            <point key="canvasLocation" x="-643.5" y="1852.5"/>
         </scene>
         <!--Add Slots For Doctor Clinic Setting View Controller-->
         <scene sceneID="jhh-Kh-jjY">
@@ -7031,7 +7031,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTQ-Ff-rF9">
                                         <rect key="frame" x="12" y="105" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7040,7 +7040,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufn-39-PVK">
                                         <rect key="frame" x="12" y="141" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7061,7 +7061,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agF-RV-tAq">
                                         <rect key="frame" x="99" y="105" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7070,7 +7070,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoH-SI-ft5">
                                         <rect key="frame" x="99" y="141" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7091,7 +7091,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vp-Wz-ZXm">
                                         <rect key="frame" x="188" y="105" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7100,7 +7100,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqA-VL-6Aa">
                                         <rect key="frame" x="188" y="141" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7115,7 +7115,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggx-Y0-HpW">
                                         <rect key="frame" x="278" y="105" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7134,16 +7134,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-9E-vwj">
-                                        <rect key="frame" x="336" y="42" width="21" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="+">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="slot1Add:" destination="UyL-nV-oEz" eventType="touchUpInside" id="Iz3-i5-Iaw"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slot 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ub-yz-sHQ">
                                         <rect key="frame" x="12" y="8" width="55" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -7159,8 +7149,18 @@
                                             <action selector="slot1SelectAll:" destination="UyL-nV-oEz" eventType="touchUpInside" id="jMl-Zm-fF0"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-9E-vwj">
+                                        <rect key="frame" x="335" y="42" width="25" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" image="ic_add_2x copy.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="slot1Add:" destination="UyL-nV-oEz" eventType="touchUpInside" id="Iz3-i5-Iaw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOW-x4-8Yt">
                                 <rect key="frame" x="0.0" y="439" width="375" height="183"/>
@@ -7221,7 +7221,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA6-My-NZv">
                                         <rect key="frame" x="12" y="110" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7230,7 +7230,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-HC-F9X">
                                         <rect key="frame" x="12" y="146" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7251,7 +7251,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kz-zz-Bdq">
                                         <rect key="frame" x="99" y="110" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7260,7 +7260,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22y-MI-FhL">
                                         <rect key="frame" x="99" y="146" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7281,7 +7281,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0T-K0-TMM">
                                         <rect key="frame" x="188" y="110" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7290,7 +7290,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRI-Sl-m1a">
                                         <rect key="frame" x="188" y="146" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7305,7 +7305,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rV-eb-dH0">
                                         <rect key="frame" x="278" y="110" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7335,7 +7335,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ins-ka-TVK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
-                                        <color key="backgroundColor" red="0.41568627450000001" green="0.71764705880000002" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -7357,7 +7357,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiw-h0-tcN">
                                 <rect key="frame" x="0.0" y="255" width="375" height="183"/>
@@ -7418,7 +7418,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-h8-D1e">
                                         <rect key="frame" x="12" y="111" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7427,7 +7427,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-xp-QJo">
                                         <rect key="frame" x="12" y="147" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7448,7 +7448,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX7-hv-TYy">
                                         <rect key="frame" x="99" y="111" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7457,7 +7457,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ke-L2-ebj">
                                         <rect key="frame" x="99" y="147" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7478,7 +7478,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sy3-5e-6Il">
                                         <rect key="frame" x="188" y="111" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7487,7 +7487,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYk-O7-fK6">
                                         <rect key="frame" x="188" y="147" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7502,7 +7502,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbZ-8c-fjJ">
                                         <rect key="frame" x="278" y="111" width="21" height="21"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7530,10 +7530,9 @@
                                             <action selector="slot2SelectAll:" destination="UyL-nV-oEz" eventType="touchUpInside" id="D4L-qY-AmJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-2s-UJ3">
-                                        <rect key="frame" x="315" y="48" width="21" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="+">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-2s-UJ3">
+                                        <rect key="frame" x="311" y="44" width="25" height="25"/>
+                                        <state key="normal" image="ic_add_2x copy.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7552,7 +7551,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-x5-r9j">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="7"/>
-                                        <color key="backgroundColor" red="0.41568627450000001" green="0.71764705880000002" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -7564,7 +7563,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kM-Io-39L">
                                 <rect key="frame" x="154" y="623" width="67" height="30"/>
@@ -7635,7 +7634,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhZ-Nt-El3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-47.5" y="1852.5"/>
+            <point key="canvasLocation" x="255.5" y="1092.5"/>
         </scene>
         <!--Manage Doctors Clinic Settings View Controller-->
         <scene sceneID="ccN-oR-AGg">
@@ -7725,7 +7724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYU-80-13H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608.5" y="1084.5"/>
+            <point key="canvasLocation" x="-1117.5" y="1092.5"/>
         </scene>
         <!--Create Doctors Clinic Settings View Controller-->
         <scene sceneID="HPj-UH-Gwl">
@@ -7819,7 +7818,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-zn-dKN">
                                         <rect key="frame" x="16" y="402" width="19" height="20"/>
-                                        <state key="normal" image="unchechRadio.png">
+                                        <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7828,7 +7827,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-zi-4jK">
                                         <rect key="frame" x="16" y="430" width="19" height="20"/>
-                                        <state key="normal" image="unchechRadio.png">
+                                        <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7837,7 +7836,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-GS-T54">
                                         <rect key="frame" x="16" y="458" width="19" height="20"/>
-                                        <state key="normal" image="unchechRadio.png">
+                                        <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7873,7 +7872,7 @@
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfx-dJ-he6">
                                         <rect key="frame" x="16" y="491" width="19" height="20"/>
-                                        <state key="normal" image="unchechRadio.png">
+                                        <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -7881,8 +7880,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzZ-xK-l0K">
-                                        <rect key="frame" x="103" y="199" width="32" height="24"/>
-                                        <state key="normal" image="location.png">
+                                        <rect key="frame" x="103" y="170" width="32" height="24"/>
+                                        <state key="normal" image="locationgrey.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -7936,7 +7935,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6M-sx-LsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159.5" y="1084.5"/>
+            <point key="canvasLocation" x="-175.5" y="1092.5"/>
         </scene>
         <!--Search Result Clinic For Doctor View Controller-->
         <scene sceneID="rcG-Rj-jSc">
@@ -7992,8 +7991,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IT-k9-8cn">
-                                <rect key="frame" x="329" y="81" width="30" height="28"/>
-                                <state key="normal" image="searchButton.png">
+                                <rect key="frame" x="324" y="78" width="30" height="28"/>
+                                <state key="normal" image="ic_search.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -8023,7 +8022,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE8-7W-RcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542.5" y="1852.5"/>
+            <point key="canvasLocation" x="-643.5" y="1092.5"/>
         </scene>
         <!--Patient Clinic And Labs View Controller-->
         <scene sceneID="Ugv-fL-iGX">
@@ -13720,6 +13719,8 @@
         <image name="ic_check_box_outline_blank.png" width="24" height="24"/>
         <image name="ic_clear_3x.png" width="72" height="72"/>
         <image name="ic_date_range.png" width="24" height="24"/>
+        <image name="ic_radio_button_unchecked.png" width="24" height="24"/>
+        <image name="ic_search.png" width="24" height="24"/>
         <image name="ic_star.png" width="24" height="24"/>
         <image name="location.png" width="44" height="44"/>
         <image name="locationgrey.png" width="60" height="60"/>
