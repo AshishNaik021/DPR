@@ -180,8 +180,11 @@
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode = UIDatePickerModeDate;
         datePicker.tag = 3;
-        datePicker.minimumDate =  [NSDate date];
-        [datePicker setDate:[NSDate date]];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+        NSDate *date = [dateFormatter dateFromString:self.reminderStartDateField.text];
+        datePicker.minimumDate =  date;
+        [datePicker setDate: date];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         
         // If the date field has focus, display a date picker instead of keyboard.
