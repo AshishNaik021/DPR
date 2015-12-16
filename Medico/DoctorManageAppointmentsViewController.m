@@ -16,6 +16,8 @@
     NSInteger _selectedRow;
 }
 
+
+
 @end
 
 @implementation DoctorManageAppointmentsViewController
@@ -96,8 +98,9 @@
     //    spinner.center=self.view.center;
     //    [self.view addSubview:spinner];
     //
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
@@ -233,7 +236,7 @@
     
     
     
-    cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
+   // cell.clinicImage.image = [UIImage imageNamed:@"manageClinics.png"];
     cell.downArrowButton.tag = indexPath.row;
     
     //  NSArray *newArray = [NSMutableArray arrayWithArray:oldArray];
