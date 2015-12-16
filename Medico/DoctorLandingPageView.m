@@ -17,6 +17,7 @@
 #import "PatientSearchDoctorViewController.h"
 #import "SearchClinicView.h"
 #import "DoctorSettingPageView.h"
+#import "SearchDoctorViewController.h"
 
 
 @interface DoctorLandingPageView ()
@@ -207,7 +208,7 @@
 }
 
 - (IBAction)searchDoctor:(id)sender {
-    PatientSearchDoctorViewController *objPatientSearchDoctorViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PatientSearchDoctorViewController"];
+    SearchDoctorViewController *objPatientSearchDoctorViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchDoctorViewController"];
     [self.navigationController pushViewController:objPatientSearchDoctorViewController animated:YES];
 }
 - (IBAction)searchClinic:(id)sender {
