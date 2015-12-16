@@ -11,5 +11,10 @@
 @interface SearchResultAssistantViewController : UIViewController
 @property IBOutlet NSArray *assistantTotal;
 @property NSString *assistantName;
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+- (IBAction)search:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addNewAssistantButton;
+- (IBAction)addNewAssistant:(id)sender;
 
 @end

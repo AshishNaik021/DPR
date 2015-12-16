@@ -25,6 +25,7 @@
 @synthesize loggedInUserEmailId;
 @synthesize returnString;
 @synthesize dict;
+@synthesize CreateNew;
 
 @synthesize  keyboardVisible;
 @synthesize offset;
@@ -36,11 +37,11 @@
 
 -(void)checkBtn:(id)sender{
     if(!CreateNew){
-        [createNewBtn setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [createNewBtn setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         CreateNew= YES;
     }
     else if(CreateNew){
-        [createNewBtn setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [createNewBtn setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         CreateNew = NO;
         
     }

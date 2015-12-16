@@ -11,6 +11,7 @@
 #import "ManageTemplateForDoctorViewController.h"
 #import "ManageDoctorsClinicSettingsViewController.h"
 #import "ManageAssistant.h"
+#import "DoctorManageAssistantViewController.h"
 #import "DoctorChangePasswordViewController.h"
 
 @interface DoctorSettingPageView ()
@@ -89,8 +90,8 @@
  */
 
 - (IBAction)manageAssistant:(id)sender {
-    ManageAssistant *assistant =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"ManageAssistant"];
+    DoctorManageAssistantViewController *assistant =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorManageAssistantViewController"];
     [self.navigationController pushViewController:assistant animated:YES];
 }
 - (IBAction)manageTemplate:(id)sender {

@@ -5219,7 +5219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZQ-zG-g8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142.5" y="-414.5"/>
+            <point key="canvasLocation" x="2666.5" y="1111.5"/>
         </scene>
         <!--Create Assistant-->
         <scene sceneID="oaa-Gb-Aih">
@@ -5236,7 +5236,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZj-MN-hb9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="assistance.png" translatesAutoresizingMaskIntoConstraints="NO" id="3XI-EJ-ff5">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nursegrey.png" translatesAutoresizingMaskIntoConstraints="NO" id="3XI-EJ-ff5">
                                         <rect key="frame" x="16" y="55" width="52" height="49"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(default)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYL-vS-DPs">
@@ -5354,7 +5354,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-XX-se5">
                                         <rect key="frame" x="19" y="433" width="21" height="22"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5378,7 +5378,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8md-tu-sKG">
                                         <rect key="frame" x="319" y="282" width="34" height="36"/>
-                                        <state key="normal" image="calendar.png">
+                                        <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5397,7 +5397,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MED-XF-UUP">
                                         <rect key="frame" x="90" y="323" width="33" height="26"/>
-                                        <state key="normal" image="location.png">
+                                        <state key="normal" image="locationgrey.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5433,7 +5433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkl-QQ-lWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1589.5" y="-414.5"/>
+            <point key="canvasLocation" x="2011.5" y="-442.5"/>
         </scene>
         <!--Template Detail View Controller-->
         <scene sceneID="6KX-v1-qdT">
@@ -6176,9 +6176,6 @@
                                 <state key="normal" title="Add Assistant">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Vha-Gx-tDF" kind="push" id="YBH-ZN-jNt"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -6192,12 +6189,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3L-CW-zxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038.5" y="-422.5"/>
+            <point key="canvasLocation" x="2460.5" y="-442.5"/>
         </scene>
         <!--Search Result Assistant View Controller-->
         <scene sceneID="rEO-Xi-Yw3">
             <objects>
-                <viewController storyboardIdentifier="SearchResultAssistantViewController" id="txz-dY-uqp" customClass="SearchResultAssistantViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchResultAssistantViewController" automaticallyAdjustsScrollViewInsets="NO" id="txz-dY-uqp" customClass="SearchResultAssistantViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y1W-ow-UW6"/>
                         <viewControllerLayoutGuide type="bottom" id="sZa-zm-yi3"/>
@@ -6207,7 +6204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Ev-Ls-vUU">
-                                <rect key="frame" x="16" y="74" width="343" height="573"/>
+                                <rect key="frame" x="16" y="184" width="343" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="55" id="sTr-yx-xw1" customClass="SearchAssistantCell">
@@ -6216,7 +6213,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sTr-yx-xw1" id="bfr-dZ-Ill">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manageAssistents.png" translatesAutoresizingMaskIntoConstraints="NO" id="X9b-ML-SpJ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nursegrey.png" translatesAutoresizingMaskIntoConstraints="NO" id="X9b-ML-SpJ">
                                                     <rect key="frame" x="8" y="8" width="37" height="35"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNx-SE-gQb">
@@ -6246,21 +6243,148 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Results:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNQ-BK-k14">
-                                <rect key="frame" x="16" y="45" width="121" height="21"/>
+                                <rect key="frame" x="16" y="142" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHH-sZ-xzO">
+                                <rect key="frame" x="326" y="93" width="32" height="26"/>
+                                <state key="normal" image="ic_search.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="search:" destination="txz-dY-uqp" eventType="touchUpInside" id="fSH-o6-r2H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Could not find one?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tA-Tw-w76">
+                                <rect key="frame" x="44" y="626" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcv-iZ-EKk">
+                                <rect key="frame" x="195" y="626" width="96" height="21"/>
+                                <state key="normal" title="Add Assistant">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewAssistant:" destination="txz-dY-uqp" eventType="touchUpInside" id="Ndr-CB-Jx1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XW1-UF-LQ8">
+                                <rect key="frame" x="17" y="93" width="301" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ogU-DM-8u9"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="addNewAssistantButton" destination="jcv-iZ-EKk" id="rJ7-dC-Uc4"/>
+                        <outlet property="searchButton" destination="vHH-sZ-xzO" id="pZQ-z4-Ugm"/>
+                        <outlet property="searchField" destination="XW1-UF-LQ8" id="ISa-0E-oXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi0-1x-3MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498.5" y="-414.5"/>
+            <point key="canvasLocation" x="1564.5" y="-442.5"/>
+        </scene>
+        <!--Doctor Manage Assistant View Controller-->
+        <scene sceneID="cNS-Z8-3fu">
+            <objects>
+                <viewController storyboardIdentifier="DoctorManageAssistantViewController" automaticallyAdjustsScrollViewInsets="NO" id="8Bz-HD-pfe" customClass="DoctorManageAssistantViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eP9-0h-Wt3"/>
+                        <viewControllerLayoutGuide type="bottom" id="dJL-1k-3xk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qfw-xK-7b0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JSi-ll-OUG">
+                                <rect key="frame" x="16" y="77" width="343" height="316"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="57" id="JhD-Cq-62d" customClass="DoctorManageAssistantCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JhD-Cq-62d" id="gCp-Wi-TlT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nursegrey.png" translatesAutoresizingMaskIntoConstraints="NO" id="bpJ-f6-KoG">
+                                                    <rect key="frame" x="8" y="7" width="41" height="41"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krh-IP-hDo">
+                                                    <rect key="frame" x="57" y="7" width="241" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-kK-D9c">
+                                                    <rect key="frame" x="57" y="27" width="241" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hop-Mz-DFs">
+                                                    <rect key="frame" x="313" y="17" width="21" height="22"/>
+                                                    <state key="normal" image="ic_check_box_outline_blank.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteAssistant:" destination="JhD-Cq-62d" eventType="touchUpInside" id="wgq-Si-PVS"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="assistantCityLabel" destination="XQd-kK-D9c" id="RNA-nj-8ea"/>
+                                            <outlet property="assistantImg" destination="bpJ-f6-KoG" id="3KC-Sn-vef"/>
+                                            <outlet property="assistantNameLabel" destination="Krh-IP-hDo" id="qeZ-43-BMz"/>
+                                            <outlet property="deleteAssistantButton" destination="hop-Mz-DFs" id="fOq-FM-cZZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Bz-HD-pfe" id="Xkk-34-ZwZ"/>
+                                    <outlet property="delegate" destination="8Bz-HD-pfe" id="sXY-MT-usq"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV4-N4-LWw">
+                                <rect key="frame" x="101" y="434" width="62" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addAssistant:" destination="8Bz-HD-pfe" eventType="touchUpInside" id="c59-XV-Rkw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziA-bS-5iJ">
+                                <rect key="frame" x="212" y="434" width="62" height="30"/>
+                                <state key="normal" title="Remove">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="remove:" destination="8Bz-HD-pfe" eventType="touchUpInside" id="BWW-LL-U1R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="addAssistantButton" destination="lV4-N4-LWw" id="Y7z-Cw-dsT"/>
+                        <outlet property="removeButton" destination="ziA-bS-5iJ" id="soA-Nm-vaW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utV-wZ-hgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123.5" y="-442.5"/>
         </scene>
         <!--Doctor Book Appointment View Controller-->
         <scene sceneID="hdT-qp-bAQ">
@@ -6622,7 +6746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE1-89-k7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2987.5" y="-422.5"/>
+            <point key="canvasLocation" x="2222.5" y="1111.5"/>
         </scene>
         <!--Edit Template View-->
         <scene sceneID="0dw-dH-Zeq">
@@ -14883,7 +15007,6 @@
         <image name="appointment.png" width="251" height="303"/>
         <image name="appointmentsgrey.png" width="60" height="60"/>
         <image name="arrowButton.png" width="50" height="32"/>
-        <image name="assistance.png" width="89" height="89"/>
         <image name="behind_alert_view.png" width="320" height="460"/>
         <image name="calendar.png" width="46" height="46"/>
         <image name="clinicgrey.png" width="60" height="60"/>

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-BOOL CreateNew;
 @interface AddAssistantView : UIViewController<UITextFieldDelegate>
 @property IBOutlet UIButton *createNewBtn;
 -(IBAction)checkBtn:(id)sender;
@@ -34,7 +33,7 @@ BOOL CreateNew;
 @property IBOutlet NSString *loggedInUserEmailId;
 @property IBOutlet NSDictionary *dict;
 @property IBOutlet NSString *returnString;
-
+@property BOOL *CreateNew;
 
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;
