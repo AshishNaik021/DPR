@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorFeedBackViewController : UIViewController
+@interface DoctorFeedBackViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

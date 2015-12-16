@@ -380,6 +380,13 @@
 		187499E11C21503000F18AB7 /* GetSearchDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187499E01C21503000F18AB7 /* GetSearchDoctorCell.m */; };
 		187499E41C21505300F18AB7 /* GetDetailSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187499E31C21505300F18AB7 /* GetDetailSearchDoctorViewController.m */; };
 		187499E71C21506800F18AB7 /* GetDetailSearchDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187499E61C21506800F18AB7 /* GetDetailSearchDoctorCell.m */; };
+		187499EA1C216F8400F18AB7 /* DoctorFeedBackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187499E91C216F8400F18AB7 /* DoctorFeedBackCell.m */; };
+		187499F11C21738900F18AB7 /* ic_star_border_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187499EB1C21738900F18AB7 /* ic_star_border_2x.png */; };
+		187499F21C21738900F18AB7 /* ic_star_border_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187499EC1C21738900F18AB7 /* ic_star_border_3x.png */; };
+		187499F31C21738900F18AB7 /* ic_star_border.png in Resources */ = {isa = PBXBuildFile; fileRef = 187499ED1C21738900F18AB7 /* ic_star_border.png */; };
+		187499F41C21738900F18AB7 /* ic_star_half_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187499EE1C21738900F18AB7 /* ic_star_half_2x.png */; };
+		187499F51C21738900F18AB7 /* ic_star_half_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187499EF1C21738900F18AB7 /* ic_star_half_3x.png */; };
+		187499F61C21738900F18AB7 /* ic_star_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 187499F01C21738900F18AB7 /* ic_star_half.png */; };
 		187A0C7A1BC67BA0003AC5D9 /* SearchClinicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */; };
 		187A0C7C1BC67C78003AC5D9 /* searchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7B1BC67C78003AC5D9 /* searchButton.png */; };
 		187A0C7F1BC67F1F003AC5D9 /* checkRadio.png in Resources */ = {isa = PBXBuildFile; fileRef = 187A0C7D1BC67F1F003AC5D9 /* checkRadio.png */; };
@@ -969,6 +976,14 @@
 		187499E31C21505300F18AB7 /* GetDetailSearchDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailSearchDoctorViewController.m; sourceTree = "<group>"; };
 		187499E51C21506800F18AB7 /* GetDetailSearchDoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailSearchDoctorCell.h; sourceTree = "<group>"; };
 		187499E61C21506800F18AB7 /* GetDetailSearchDoctorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailSearchDoctorCell.m; sourceTree = "<group>"; };
+		187499E81C216F8400F18AB7 /* DoctorFeedBackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorFeedBackCell.h; sourceTree = "<group>"; };
+		187499E91C216F8400F18AB7 /* DoctorFeedBackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorFeedBackCell.m; sourceTree = "<group>"; };
+		187499EB1C21738900F18AB7 /* ic_star_border_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_border_2x.png; sourceTree = "<group>"; };
+		187499EC1C21738900F18AB7 /* ic_star_border_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_border_3x.png; sourceTree = "<group>"; };
+		187499ED1C21738900F18AB7 /* ic_star_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_border.png; sourceTree = "<group>"; };
+		187499EE1C21738900F18AB7 /* ic_star_half_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_half_2x.png; sourceTree = "<group>"; };
+		187499EF1C21738900F18AB7 /* ic_star_half_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_half_3x.png; sourceTree = "<group>"; };
+		187499F01C21738900F18AB7 /* ic_star_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_star_half.png; sourceTree = "<group>"; };
 		187A0C781BC67BA0003AC5D9 /* SearchClinicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchClinicView.h; sourceTree = "<group>"; };
 		187A0C791BC67BA0003AC5D9 /* SearchClinicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchClinicView.m; sourceTree = "<group>"; };
 		187A0C7B1BC67C78003AC5D9 /* searchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchButton.png; sourceTree = "<group>"; };
@@ -1598,16 +1613,6 @@
 				186E57AA1BDB88A400F7CA72 /* DoctorBookAppointmentViewController.m */,
 				186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */,
 				186E57A71BDB80A600F7CA72 /* LastVisitedConsultationViewController.m */,
-				186E57A01BDB62F500F7CA72 /* DoctorFeedBackViewController.h */,
-				186E57A11BDB62F500F7CA72 /* DoctorFeedBackViewController.m */,
-				185D87011BD796AB003B357C /* SearchPatientForDoctorViewController.h */,
-				185D87021BD796AB003B357C /* SearchPatientForDoctorViewController.m */,
-				185D87041BD796EC003B357C /* SearchPatientForDoctorCell.h */,
-				185D87051BD796EC003B357C /* SearchPatientForDoctorCell.m */,
-				185D86FC1BD78C97003B357C /* AddPatientViewController.h */,
-				185D86FD1BD78C97003B357C /* AddPatientViewController.m */,
-				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
-				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
 				189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */,
 				189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */,
 				1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */,
@@ -1668,6 +1673,14 @@
 				188E5E541C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m */,
 				18327F1B1BC4F1A0002210BC /* DoctorLandingPageView.h */,
 				18327F1C1BC4F1A0002210BC /* DoctorLandingPageView.m */,
+				185D87011BD796AB003B357C /* SearchPatientForDoctorViewController.h */,
+				185D87021BD796AB003B357C /* SearchPatientForDoctorViewController.m */,
+				185D86FC1BD78C97003B357C /* AddPatientViewController.h */,
+				185D86FD1BD78C97003B357C /* AddPatientViewController.m */,
+				185D87041BD796EC003B357C /* SearchPatientForDoctorCell.h */,
+				185D87051BD796EC003B357C /* SearchPatientForDoctorCell.m */,
+				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
+				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
 				187499DC1C21501500F18AB7 /* GetSearchDoctorViewController.h */,
 				187499DD1C21501500F18AB7 /* GetSearchDoctorViewController.m */,
 				187499DF1C21503000F18AB7 /* GetSearchDoctorCell.h */,
@@ -1740,6 +1753,10 @@
 				189B52AA1C1AAB8700E83439 /* AboutMedicoViewController.m */,
 				18327F181BC4E8FC002210BC /* SMSConfirmationView.h */,
 				18327F191BC4E8FC002210BC /* SMSConfirmationView.m */,
+				186E57A01BDB62F500F7CA72 /* DoctorFeedBackViewController.h */,
+				186E57A11BDB62F500F7CA72 /* DoctorFeedBackViewController.m */,
+				187499E81C216F8400F18AB7 /* DoctorFeedBackCell.h */,
+				187499E91C216F8400F18AB7 /* DoctorFeedBackCell.m */,
 				182394EF1BBD0DCE00D97366 /* Images.xcassets */,
 				182394F11BBD0DCE00D97366 /* LaunchScreen.xib */,
 				182394E21BBD0DCE00D97366 /* Supporting Files */,
@@ -1750,6 +1767,12 @@
 		182394E21BBD0DCE00D97366 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				187499EB1C21738900F18AB7 /* ic_star_border_2x.png */,
+				187499EC1C21738900F18AB7 /* ic_star_border_3x.png */,
+				187499ED1C21738900F18AB7 /* ic_star_border.png */,
+				187499EE1C21738900F18AB7 /* ic_star_half_2x.png */,
+				187499EF1C21738900F18AB7 /* ic_star_half_3x.png */,
+				187499F01C21738900F18AB7 /* ic_star_half.png */,
 				187499D01C214D7F00F18AB7 /* ic_expand_less_2x.png */,
 				187499D11C214D7F00F18AB7 /* ic_expand_less_3x.png */,
 				187499D21C214D7F00F18AB7 /* ic_expand_less.png */,
@@ -2010,6 +2033,7 @@
 				180CF2CF1BDF545C00FA7D86 /* labsgrey@1x~ipad.png in Resources */,
 				18BB05751BC24DFE00D237CD /* searchDoctor.png in Resources */,
 				180CF17C1BDF52C700FA7D86 /* financegrey@3x~iphone.png in Resources */,
+				187499F11C21738900F18AB7 /* ic_star_border_2x.png in Resources */,
 				180CF1ED1BDF539700FA7D86 /* alarmOngrey@2x~iphone.png in Resources */,
 				180CF2361BDF53B000FA7D86 /* searchdoctorblue@2x~iphone.png in Resources */,
 				180CF3221BDF549100FA7D86 /* notesblue@1x~ipad.png in Resources */,
@@ -2099,6 +2123,7 @@
 				180CF1921BDF52C700FA7D86 /* searchhomeopathygrey@3x~iphone.png in Resources */,
 				187A0C801BC67F1F003AC5D9 /* unchechRadio.png in Resources */,
 				18BB05721BC24DFE00D237CD /* notifications.png in Resources */,
+				187499F31C21738900F18AB7 /* ic_star_border.png in Resources */,
 				180CF1871BDF52C700FA7D86 /* searchangiographygrey@3x~iphone.png in Resources */,
 				180CF2741BDF543400FA7D86 /* firstaidgrey@2x~ipad.png in Resources */,
 				180CF2941BDF543400FA7D86 /* Timinggrey@2x~ipad.png in Resources */,
@@ -2199,6 +2224,7 @@
 				180CF2771BDF543400FA7D86 /* logoutgrey@2x~ipad.png in Resources */,
 				180CF2141BDF539700FA7D86 /* searchUltrasoundgrey@2x~iphone.png in Resources */,
 				180CF27B1BDF543400FA7D86 /* nursegrey@2x~ipad.png in Resources */,
+				187499F41C21738900F18AB7 /* ic_star_half_2x.png in Resources */,
 				180CF2FF1BDF547600FA7D86 /* consultingblue@2x~ipad.png in Resources */,
 				180CF17F1BDF52C700FA7D86 /* locationgrey@3x~iphone.png in Resources */,
 				180CF2C41BDF545C00FA7D86 /* appointmentsgrey@1x~ipad.png in Resources */,
@@ -2239,10 +2265,12 @@
 				180CF2061BDF539700FA7D86 /* searchcolonoscopygrey@2x~iphone.png in Resources */,
 				18154E081C2029550063FA26 /* ic_home.png in Resources */,
 				180CF3291BDF549100FA7D86 /* searchclinicblue@1x~ipad.png in Resources */,
+				187499F51C21738900F18AB7 /* ic_star_half_3x.png in Resources */,
 				189B52B61C1ACA0C00E83439 /* ic_check_box.png in Resources */,
 				187499D81C214D7F00F18AB7 /* ic_expand_less.png in Resources */,
 				180CF1EC1BDF539700FA7D86 /* alarmOffgrey@2x~iphone.png in Resources */,
 				180CF2821BDF543400FA7D86 /* searchcolonoscopygrey@2x~ipad.png in Resources */,
+				187499F61C21738900F18AB7 /* ic_star_half.png in Resources */,
 				18154E131C20299D0063FA26 /* ic_radio_button_checked_3x.png in Resources */,
 				180CF1B01BDF535500FA7D86 /* consultingblue@3x~iphone.png in Resources */,
 				180CF20B1BDF539700FA7D86 /* searchEEGgrey@2x~iphone.png in Resources */,
@@ -2258,6 +2286,7 @@
 				180CF2EE1BDF545C00FA7D86 /* Timinggrey@1x~ipad.png in Resources */,
 				188DE7571C1C34430016DA15 /* AppointmentsBlue.png in Resources */,
 				180CF2011BDF539700FA7D86 /* patientgrey@2x~iphone.png in Resources */,
+				187499F21C21738900F18AB7 /* ic_star_border_3x.png in Resources */,
 				180CF2C81BDF545C00FA7D86 /* consultinggrey@1x~ipad.png in Resources */,
 				18154E061C2029550063FA26 /* ic_home_2x.png in Resources */,
 				180CF1731BDF52C700FA7D86 /* appointmentsgrey@3x~iphone.png in Resources */,
@@ -2326,6 +2355,7 @@
 				1842F36E1BC3E7850055597E /* EditTemplateDetailViewCell.m in Sources */,
 				184F01D81BCE593800913B23 /* SearchResultAssistantViewController.m in Sources */,
 				18C7DB1D1BC7D231005B93A9 /* PatientProfileViewController.m in Sources */,
+				187499EA1C216F8400F18AB7 /* DoctorFeedBackCell.m in Sources */,
 				186D36941BE1F67300EBA634 /* ReminderDetailsViewController.m in Sources */,
 				1897CDA21BCD2F320043F0FD /* DoctorChangePasswordViewController.m in Sources */,
 				187499E41C21505300F18AB7 /* GetDetailSearchDoctorViewController.m in Sources */,
