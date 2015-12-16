@@ -69,8 +69,35 @@
  */
 
 - (IBAction)startDateCalendar:(id)sender {
+    
+    // Create a date picker for the date field.
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.tag = 2;
+    datePicker.minimumDate = [NSDate date];
+    [datePicker setDate:[NSDate date]];
+    [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+    
+    // If the date field has focus, display a date picker instead of keyboard.
+    // Set the text to the date currently displayed by the picker.
+    self.reminderStartDateField.inputView = datePicker;
+    self.reminderStartDateField.text = [self formatDate:datePicker.date];
+    
 }
 - (IBAction)endDateCalendar:(id)sender {
+    // Create a date picker for the date field.
+    UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.tag = 3;
+    datePicker.minimumDate = [NSDate date];
+    [datePicker setDate:[NSDate date]];
+    [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+    
+    // If the date field has focus, display a date picker instead of keyboard.
+    // Set the text to the date currently displayed by the picker.
+    self.reminderEndDateField.inputView = datePicker;
+    self.reminderEndDateField.text = [self formatDate:datePicker.date];
+
 }
 - (IBAction)setTime1:(id)sender {
 }
@@ -124,6 +151,9 @@
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.view endEditing:YES];
+}
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if (textField.tag == 2) {
@@ -133,7 +163,7 @@
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode = UIDatePickerModeDate;
         datePicker.tag = 2;
-        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        datePicker.minimumDate = [NSDate date];
         [datePicker setDate:[NSDate date]];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         
@@ -150,7 +180,7 @@
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode = UIDatePickerModeDate;
         datePicker.tag = 3;
-        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        datePicker.minimumDate =  [NSDate date];
         [datePicker setDate:[NSDate date]];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         

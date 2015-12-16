@@ -415,7 +415,8 @@
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
     if ([httpResponse statusCode] != 200) {
-        [self errorMessageForName];
+        //        [self errorMessageForName];
+        NSLog(@"Name not set");
     }
     else{
         
