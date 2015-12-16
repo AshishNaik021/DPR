@@ -13,8 +13,8 @@
     IBOutlet UIScrollView *scroll;
     
 }
-@property (weak, nonatomic) IBOutlet UIPickerView *summaryPicker;
-@property IBOutlet NSArray *pickerArr;
+@property (retain, nonatomic)  UIPickerView *summaryPicker;
+@property (nonatomic,retain) NSArray *pickerArr;
 @property (weak, nonatomic) IBOutlet UIButton *summaryVisiteTypeButton;
 - (IBAction)summaryVisiteType:(id)sender;
 

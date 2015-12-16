@@ -21,6 +21,7 @@
 
 @implementation AllDetailInformationViewController
 
+@synthesize summaryPicker;
 @synthesize arrayHeader;
 @synthesize arrayValue;
 @synthesize  keyboardVisible;
@@ -153,7 +154,7 @@
     
     keyboardVisible = NO;
     screen = [summaryContentView bounds];
-
+    
     width = CGRectGetWidth(screen);
     //Bonus height.
     height = CGRectGetHeight(screen);
@@ -226,7 +227,14 @@
     self.collection.delegate = self;
     self.collection.dataSource = self;
     
+    //picker
+    pickerArr = [[NSMutableArray alloc] initWithObjects:@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
     
+    summaryPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 200, 300, 200)];
+    summaryPicker.showsSelectionIndicator = YES;
+    summaryPicker.hidden = YES;
+    summaryPicker.delegate = self;
+    [self.view addSubview:summaryPicker];
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
@@ -245,6 +253,30 @@
     keyboardVisible = NO;
     keyboardVisibleInvoice = NO;
 }
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    return 4;
+}
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [pickerArr objectAtIndex:row];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    summaryVisiteTypeField.text = [NSString stringWithFormat:pickerArr[row]];
+    summaryPicker.hidden = YES;
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if ([textField isEqual:summaryVisiteTypeField]) {
+        self.summaryPicker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    return YES;
+}
+
 
 -(void) viewWillDisappear:(BOOL)animated
 {
@@ -636,7 +668,7 @@
     DiagnosisHistoryViewController *diagnosis =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DiagnosisHistoryViewController"];
     [self.navigationController pushViewController:diagnosis animated:YES];
-
+    
 }
 
 - (IBAction)summaryMedicineHistory:(id)sender {
@@ -644,7 +676,7 @@
     MedicinePrescribedHistoryViewController *medicine =
     [self.storyboard instantiateViewControllerWithIdentifier:@"MedicinePrescribedHistoryViewController"];
     [self.navigationController pushViewController:medicine animated:YES];
-
+    
 }
 
 - (IBAction)summaryTestPrescribedHistory:(id)sender {
@@ -836,6 +868,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
+    summaryPicker.hidden = YES;
     [self.view endEditing:YES];
 }
 
