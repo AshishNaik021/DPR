@@ -119,6 +119,10 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    UIViewController *newVC = segue.destinationViewController;
+    
+    [DetailManageTemplateForDoctorViewController setPresentationStyleForSelfController:self presentingController:newVC];
+    
     if ([[segue identifier] isEqualToString:@"ShowDetails"]) {
         TemplateDetailViewController *detailmanagetemplate = [segue destinationViewController];
         NSIndexPath *myIndex = [self.tableView indexPathForSelectedRow];
@@ -150,4 +154,22 @@
 }
 - (IBAction)addTemplate:(id)sender {
 }
+
++ (void)setPresentationStyleForSelfController:(UIViewController *)selfController presentingController:(UIViewController *)presentingController
+{
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)])
+    {
+        //iOS 8.0 and above
+        presentingController.providesPresentationContextTransitionStyle = YES;
+        presentingController.definesPresentationContext = YES;
+        
+        [presentingController setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+    }
+    else
+    {
+        [selfController setModalPresentationStyle:UIModalPresentationCurrentContext];
+        [selfController.navigationController setModalPresentationStyle:UIModalPresentationCurrentContext];
+    }
+}
+
 @end

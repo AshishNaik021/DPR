@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddNewTemplateView : UIViewController
+@interface AddNewTemplateView : UIViewController<UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *systemNameField;
 @property (weak, nonatomic) IBOutlet UITextField *typeField;
 @property (weak, nonatomic) IBOutlet UITextField *displayNameField;
@@ -16,7 +17,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *addFieldsButton;
 - (IBAction)addFields:(id)sender;
 @property NSString *returnString;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @property IBOutlet NSString *passTemplateId;
 @property IBOutlet NSDictionary *dict;
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
+
 @end

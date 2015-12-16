@@ -135,6 +135,7 @@
     
     int row = [indexPath row];
     int c = (int)CopyArr.count;
+    
     if (c != 0) {
         
         if (![[[CopyArr objectAtIndex:row] objectForKey:@"clinicName"] isEqual:[NSNull null]]){
@@ -152,7 +153,7 @@
                 }
 
     }
-    else{
+        else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                         message:@"Results not found."
                                                        delegate:self
@@ -203,9 +204,10 @@
     
     catagoryClinicArr = [NSMutableArray arrayWithArray:[CopyArr filteredArrayUsingPredicate:predicate]];
     
+   // CopyArr = [NSMutableArray arrayWithArray:catagoryClinicArr];
         NSLog(@"===========================================%@",catagoryClinicArr);
         NSLog(@"Count==================%lu",(unsigned long)catagoryClinicArr.count);
-
+    [_tableView reloadData];
     
 }
 @end

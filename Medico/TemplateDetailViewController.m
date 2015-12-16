@@ -9,6 +9,8 @@
 #import "TemplateDetailViewController.h"
 #import "TemplateDetailCell.h"
 #import "EditTemplateView.h"
+#import "AddNewTemplateView.h"
+#import "DoctorLandingPageView.h"
 
 
 @interface TemplateDetailViewController ()
@@ -58,6 +60,14 @@
     [self.navigationController pushViewController:editTemplate animated:YES];
     
 }
+
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
+
 
 - (void)viewDidLoad {
     NSLog(@"TemplateDetailViewController.m");
@@ -141,6 +151,12 @@
 */
 
 - (IBAction)add:(id)sender {
+    AddNewTemplateView *addTemplate =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"AddNewTemplateView"];
+    addTemplate.passTemplateId = [[templateDataArr objectAtIndex:0] objectForKey:@"templateId"];
+    NSLog(@"[[templateDataArr objectAtIndex:0] objectForKey:@]%@",[[templateDataArr objectAtIndex:0] objectForKey:@"templateId"]);
+    [self.navigationController pushViewController:addTemplate animated:YES];
+
 }
 - (IBAction)save:(id)sender {
 }
