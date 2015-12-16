@@ -9,6 +9,8 @@
 #import "ManageReminderCell.h"
 
 @implementation ManageReminderCell
+@synthesize checkDelete;
+@synthesize checkForDeleteReminderButton;
 
 - (void)awakeFromNib {
     NSLog(@"ManageReminderCell.m");
@@ -22,5 +24,15 @@
 }
 
 - (IBAction)checkFroDeleteReminder:(id)sender {
+    if(!checkDelete){
+        [checkForDeleteReminderButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        checkDelete = YES;
+    }
+    else if(checkDelete){
+        [checkForDeleteReminderButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        checkDelete = NO;
+        
+    }
+
 }
 @end

@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *reminderTimeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *checkForDeleteReminderButton;
 - (IBAction)checkFroDeleteReminder:(id)sender;
-
+@property BOOL checkDelete;
 
 @end
