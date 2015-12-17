@@ -163,7 +163,7 @@
             
             //            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
             //
-            //            [formatter setDateFormat:@"dd-MM-yyyy"];
+            //            [formatter setDateFormat:@"dd-MMM-yyyy"];
             //            date = [formatter stringFromDate:appointmentDate];
             //
             cell.bookDateLabel.text = [[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDateIos"];
@@ -176,7 +176,7 @@
             appointmentDate = [NSDate dateWithTimeIntervalSinceReferenceDate:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
             
-            [formatter setDateFormat:@"dd-MM-yyyy"];
+            [formatter setDateFormat:@"dd-MMM-yyyy"];
             date = [formatter stringFromDate:appointmentDate];
             cell.bookDateLabel.text = date;
             if ([cell.bookDateLabel.text length] == 0) {
@@ -221,7 +221,7 @@
          appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:row] objectForKey:@"appointmentDate"]];
          
          NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-         [formatter setDateFormat:@"dd-MM-yyyy"];
+         [formatter setDateFormat:@"dd-MMM-yyyy"];
          date = [formatter stringFromDate:appointmentDate];
          
          cell.bookDateLabel.text = date;
@@ -269,7 +269,7 @@
     appointmentDate = [NSDate dateWithTimeIntervalSinceNow:(int)[[patientAppointmentArr objectAtIndex:n] objectForKey:@"appointmentDate"]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"dd-MM-yyyy"];
+    [formatter setDateFormat:@"dd-MMM-yyyy"];
     date = [formatter stringFromDate:appointmentDate];
     allInfo.summaryDatePassData = [[patientAppointmentArr objectAtIndex:n] objectForKey:@"appointmentDateIos"];
     //allInfo.summaryDatePassData = date; Poonam
