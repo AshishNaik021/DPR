@@ -546,7 +546,7 @@
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode = UIDatePickerModeDate;
         datePicker.tag = 1;
-        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        datePicker.maximumDate = [NSDate date];
         [datePicker setDate:[NSDate date]];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         
