@@ -60,6 +60,7 @@
 - (void)viewDidLoad {
     NSLog(@"DoctorBookAppointmentViewController.m");
     [super viewDidLoad];
+    dateTextField.text = [NSDate date];
     UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
