@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MedicinePrescribedScheduleViewController : UIViewController<UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+@interface MedicinePrescribedScheduleViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
+@property(nonatomic,retain) UIPickerView *medSchedule;
+@property (nonatomic,retain) NSMutableArray *schedules;
+@property (nonatomic,retain) UIPickerView *dosesPicker;
+@property (nonatomic,retain) NSMutableArray *dosesArray;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 @property (weak, nonatomic) IBOutlet UITextField *medicineNameField;
 @property (weak, nonatomic) IBOutlet UITextField *scheduleField;
 @property (weak, nonatomic) IBOutlet UITextField *numberOfDosesField;
