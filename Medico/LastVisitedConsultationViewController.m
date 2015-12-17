@@ -178,8 +178,8 @@
     if (![star isEqualToString:@"0"]) {
         if(![self.reviewsTextField.text isEqualToString:@""]){
             // Temporarily commenting it remove at the time of commit. and check for other minor changes also.
-            //[self submitReview];
-            [self temporaryRedirect];
+            [self submitReview];
+            //[self temporaryRedirect];
         }
         else
             [self alertForTextReview];
