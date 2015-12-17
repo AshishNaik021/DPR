@@ -26,9 +26,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *readTCButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIButton *changePasswordButton;
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+- (IBAction)calendar:(id)sender;
 
 
-
+@property BOOL *passCheckBool;
 
 
 - (IBAction)changeImage:(id)sender;
@@ -36,5 +38,12 @@
 - (IBAction)readTermsConditions:(id)sender;
 - (IBAction)save:(id)sender;
 - (IBAction)changePassword:(id)sender;
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
 
 @end

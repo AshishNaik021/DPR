@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *pNameLabel;
 @property (nonatomic, retain) NSString * patientName;
 @property (nonatomic, retain) NSString * patientEmail;
-
+@property NSArray *homeCountPatientArr;
 - (IBAction)logout:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (weak, nonatomic) IBOutlet UIImageView *patientProfileImage;

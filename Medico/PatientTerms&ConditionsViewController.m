@@ -7,6 +7,7 @@
 //
 
 #import "PatientTerms&ConditionsViewController.h"
+#import "PatientLandingPageViewController.h"
 
 @interface PatientTerms_ConditionsViewController ()
 
@@ -14,10 +15,25 @@
 
 @implementation PatientTerms_ConditionsViewController
 
+- (void) homePage:(id)sender{
+    PatientLandingPageViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+    
+}
+
 - (void)viewDidLoad {
     NSLog(@"PatientTerms&ConditionsViewController.m");
     [super viewDidLoad];
-    self.navigationController.navigationBar.barTintColor = [UIColor cyanColor];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    
+    self.navigationItem.title = @"Terms & Conditions";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
 
     // Do any additional setup after loading the view.
 }

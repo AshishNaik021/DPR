@@ -7,6 +7,11 @@
 //
 
 #import "PatientSettingPageViewController.h"
+#import "PatientLandingPageViewController.h"
+#import "PatientChangePasswordViewController.h"
+#import "PatientTerms&ConditionsViewController.h"
+#import "HowItWorksViewController.h"
+
 
 @interface PatientSettingPageViewController ()
 
@@ -14,10 +19,28 @@
 
 @implementation PatientSettingPageViewController
 
+- (void) homePage:(id)sender{
+    PatientLandingPageViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+    
+}
+
 - (void)viewDidLoad {
     NSLog(@"PatientSettingPageViewController.m");
     [super viewDidLoad];
+    
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    
     self.navigationItem.title = @"Settings";
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
+
+    
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"MyDemo" ofType:@"json"];
     NSString *myJson = [[NSString alloc] initWithContentsOfFile:fileName encoding:NSUTF8StringEncoding error:NULL];
     NSError *error = nil;
@@ -44,11 +67,31 @@
 */
 
 - (IBAction)manageProfile:(id)sender {
+    
+    PatientChangePasswordViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientChangePasswordViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+
 }
 - (IBAction)termsAndCondition:(id)sender {
+    
+    PatientTerms_ConditionsViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientTerms_ConditionsViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+
 }
 - (IBAction)howItWorks:(id)sender {
+    
+    HowItWorksViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"HowItWorksViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+
 }
 - (IBAction)rateThisApp:(id)sender {
+    
+//    PatientLandingPageViewController *PatientHome =
+//    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+//    [self.navigationController pushViewController:PatientHome animated:YES];
+
 }
 @end

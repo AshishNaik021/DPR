@@ -24,6 +24,10 @@
 @synthesize patientName = _patientName;
 @synthesize patientEmail = _patientEmail;
 @synthesize pNameLabel;
+@synthesize homeCountPatientArr;
+@synthesize doctorConsultationsTotalButton;
+@synthesize diagnosticClinicsLabsTotalButton;
+@synthesize appointmentTotalButton;
 
 -(void)setName{
     //    NSString *cameFrom = [self navigationController.v]
@@ -41,15 +45,99 @@
         NSLog(@"Name Not Set");
 }
 
+-(void)fetchHomeCountForPatient{
+    
+    NSLog(@"The fetchJson method is called.........");
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSString *email = @"vb1@gmail.com"; //[[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInEmail"];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/homeCountPatient?id=%@",email];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array==============%@",responseStr);
+    
+    /* ---------- Code for Writing response data into the file -------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountPatient.json"];
+    NSLog(@"%@",docPath);
+    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    /* ---------- End of Code for Writing response data into the file -------------- */
+    
+    
+    
+}
 
 - (void)viewDidLoad {
     NSLog(@"PatientLandingPageViewController.m");
     [super viewDidLoad];
+    [self fetchHomeCountForPatient];
     
- 
-    self.navigationItem.title = @"Welcome";
+    /* ----------------- Read File For Parse JSON Data -------------------- */
+    
+    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountPatient.json"];
+    NSLog(@"%@",docPath);
+    NSString *myJson = [[NSString alloc] initWithContentsOfFile:docPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSError *error = nil;
+    NSData *json = [myJson dataUsingEncoding:NSUTF8StringEncoding];
+    
+    homeCountPatientArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:[myJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    NSLog(@">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>%@",homeCountPatientArr);
+    
+    
+    if (![[homeCountPatientArr valueForKey:@"doctorsCount"] isEqual:[NSNull null]]) {
+        
+        [doctorConsultationsTotalButton setTitle:[NSString stringWithFormat:@"%@ >",[homeCountPatientArr valueForKey:@"doctorsCount"]] forState:UIControlStateNormal];
+        
+    }
+    
+    else
+    {
+        [doctorConsultationsTotalButton setTitle:@"0 >" forState:UIControlStateNormal];
+    }
+    
+    
+    if (![[homeCountPatientArr valueForKey:@"clinicsCount"] isEqual:[NSNull null]]) {
+        
+        [diagnosticClinicsLabsTotalButton setTitle:[NSString stringWithFormat:@"%@ >",[homeCountPatientArr valueForKey:@"clinicsCount"]] forState:UIControlStateNormal];
+        
+    }
+    
+    else
+    {
+        [diagnosticClinicsLabsTotalButton setTitle:@"0 >" forState:UIControlStateNormal];
+    }
+    
+    if (![[homeCountPatientArr valueForKey:@"appointmentsCount"] isEqual:[NSNull null]]) {
+        
+        [appointmentTotalButton setTitle:[NSString stringWithFormat:@"%@ >",[homeCountPatientArr valueForKey:@"appointmentsCount"]] forState:UIControlStateNormal];
+        
+    }
+    
+    else
+    {
+        [appointmentTotalButton setTitle:@"0 >" forState:UIControlStateNormal];
+    }
+
+    
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.title = @"Patient";
     self.navigationItem.hidesBackButton = YES;
 
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
