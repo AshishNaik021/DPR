@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientSymptomHistoryViewController : UIViewController
+@interface PatientSymptomHistoryViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property NSArray *symptomArr;
 
 @end

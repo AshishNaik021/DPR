@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PatientMedicineHistoryCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UILabel *editedByLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *previousTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *updatedTextLabel;
 @end

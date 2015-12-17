@@ -543,7 +543,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQK-Yl-WFO">
                                 <rect key="frame" x="16" y="72" width="343" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">You will ensure that at all times you use the Services, the Properties have a clearly labeled and easily accessible privacy policy that provides end users with clear and comprehensive information about cookies, device-specific information, location information and other information stored on, accessed on, or collected from end users’ devices in connection with the Services, including, as applicable, information about end users’ options for cookie management.  You will use commercially reasonable efforts to ensure that an end user gives consent to the storing and accessing of cookies, device-specific information, location information or other information on the end user's device in connection with the Services where such consent is required by law.</mutableString>
+                                <string key="text">You will ensure that at all times you use the Services, the Properties have a clearly labeled and easily accessible privacy policy that provides end users with clear and comprehensive information about cookies, device-specific information, location information and other information stored on, accessed on, or collected from end users’ devices in connection with the Services, including, as applicable, information about end users’ options for cookie management.  You will use commercially reasonable efforts to ensure that an end user gives consent to the storing and accessing of cookies, device-specific information, location information or other information on the end user's device in connection with the Services where such consent is required by law.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -12765,7 +12765,7 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="n8n-Dm-hVO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="n8n-Dm-hVO" customClass="PatientSymptomHistoryCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n8n-Dm-hVO" id="uhn-ew-m7y">
@@ -12827,6 +12827,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="D1s-aG-Sdk" id="g9N-ZI-9ZP"/>
+                                            <outlet property="editedByLabel" destination="Xvt-SB-BjQ" id="Jp3-90-FeU"/>
+                                            <outlet property="previousTextLabel" destination="q13-kW-hZ3" id="9vW-kg-xJk"/>
+                                            <outlet property="timeLabel" destination="rDT-xp-Yfz" id="uyE-uc-SPz"/>
+                                            <outlet property="updatedTextLabel" destination="8ce-Xs-hdb" id="Hcn-Ln-gR5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -12860,7 +12867,7 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="aLX-1g-d5R">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="aLX-1g-d5R" customClass="PatientDiagnosisHistoryCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aLX-1g-d5R" id="Ger-Q7-uHH">
@@ -12922,6 +12929,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="G4x-Xu-lOe" id="eMg-Id-6OA"/>
+                                            <outlet property="editedByLabel" destination="XGJ-IE-nz6" id="Lpe-mn-TY8"/>
+                                            <outlet property="previousTextLabel" destination="2iM-Vj-hWS" id="p8s-dd-NiO"/>
+                                            <outlet property="timeLabel" destination="9OB-kx-eka" id="08I-ma-tlH"/>
+                                            <outlet property="updatedTextLabel" destination="X0F-yR-zmf" id="ZbJ-VC-bNf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -12955,7 +12969,7 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="bUD-xc-Isr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="bUD-xc-Isr" customClass="PatientMedicineHistoryCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bUD-xc-Isr" id="XyB-qr-bxg">
@@ -13017,6 +13031,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="LUS-Bi-lbp" id="4J4-mV-8Hk"/>
+                                            <outlet property="editedByLabel" destination="Axu-Tm-2Mq" id="ISf-ny-1O6"/>
+                                            <outlet property="previousTextLabel" destination="Lga-PI-KXy" id="Jad-zC-aWY"/>
+                                            <outlet property="timeLabel" destination="lNU-VZ-BUj" id="u9W-QQ-CLF"/>
+                                            <outlet property="updatedTextLabel" destination="Nwg-iF-zOR" id="hHb-Uj-K9k"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -13050,7 +13071,7 @@
                                 <rect key="frame" x="0.0" y="66" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="p3h-p6-qzF">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="106" id="p3h-p6-qzF" customClass="PatientTestPrescribedHistoryCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p3h-p6-qzF" id="XVB-5p-vDK">
@@ -13112,6 +13133,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="ooK-Gi-FUM" id="4i9-Zy-2TM"/>
+                                            <outlet property="editedByLabel" destination="4GX-Vs-p4W" id="7wB-qB-hny"/>
+                                            <outlet property="previousTextLabel" destination="Kc9-vh-IRk" id="4Jk-s2-uUb"/>
+                                            <outlet property="timeLabel" destination="vIX-cm-y3o" id="fnC-Xb-fce"/>
+                                            <outlet property="updatedTextLabel" destination="NnL-cg-Mbz" id="7lg-dm-MDf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
