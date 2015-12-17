@@ -16,6 +16,7 @@
 @end
 
 @implementation PatientAppointmentsForDoctorViewController
+
 @synthesize jsonList;
 @synthesize doctorIdForCallAPI = _doctorIdForCallAPI;
 @synthesize patientEmailIdForCallAPI = _patientEmailIdForCallAPI;

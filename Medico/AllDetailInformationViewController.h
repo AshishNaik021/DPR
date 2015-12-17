@@ -18,6 +18,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *summaryVisiteTypeButton;
 - (IBAction)summaryVisiteType:(id)sender;
 
+@property BOOL *invoiceCheckBool;
+@property BOOL *treatmentCheckBool;
+@property (weak, nonatomic) IBOutlet UIButton *treatmentCheckButton;
+- (IBAction)treatmentCheck:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *treatmentAddButton;
+- (IBAction)treatmentAdd:(id)sender;
+
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;
 @property CGFloat width;

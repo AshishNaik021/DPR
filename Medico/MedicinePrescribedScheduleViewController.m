@@ -15,6 +15,7 @@
 
 @implementation MedicinePrescribedScheduleViewController
 
+
 @synthesize doctorsInstructionTextView;
 @synthesize scheduleTimeTextView;
 @synthesize check;
@@ -64,10 +65,12 @@
     [super viewDidLoad];
     startDateField.tag = 1;
     endDateField.tag = 2;
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+
     
     self.navigationItem.title = @"Medicine Schedule";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
@@ -459,11 +462,11 @@
 
 - (IBAction)medicineReminder:(id)sender {
     if(!check){
-        [medicineReminderButton setImage:[UIImage imageNamed:@"checked.png"]forState:UIControlStateNormal];
+        [medicineReminderButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
         check = YES;
     }
     else if(check){
-        [medicineReminderButton setImage:[UIImage imageNamed:@"unchecked.png"]forState:UIControlStateNormal];
+        [medicineReminderButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
         check = NO;
         
     }

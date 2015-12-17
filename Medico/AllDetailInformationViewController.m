@@ -21,6 +21,11 @@
 
 @implementation AllDetailInformationViewController
 
+@synthesize invoiceCheckBool;
+@synthesize invoiceCheckButton;
+@synthesize treatmentCheckBool;
+@synthesize treatmentCheckButton;
+
 @synthesize summaryPicker;
 @synthesize arrayHeader;
 @synthesize arrayValue;
@@ -144,6 +149,10 @@
     //NSLog(@"Data came from PatientAppointmentsForDoctorViewController (_pa):%@",_patientAppointmentArray);
     self.summaryMedicinTableView.layer.borderWidth = 1.0;
     
+    
+    invoiceCheckBool = NO;
+    treatmentCheckBool = NO;
+    
     NSLog(@"Date----------------%@",_summaryDatePassData);
     NSLog(@"Time-----------------%@",_summaryTimePassData);
     NSLog(@"patient Email----------%@",_summaryPatientEmailPassData);
@@ -178,8 +187,9 @@
     
     arrayHeader = [[NSMutableArray alloc] init];
     arrayValue = [[NSMutableArray alloc] init];
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
@@ -540,6 +550,16 @@
 }
 
 - (IBAction)invoiceCheck:(id)sender {
+    if(!invoiceCheckBool){
+        [invoiceCheckButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        invoiceCheckBool = YES;
+    }
+    else if(invoiceCheckBool){
+        [invoiceCheckButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        invoiceCheckBool = NO;
+        
+    }
+
 }
 
 - (IBAction)invoiceSave:(id)sender {
@@ -1079,4 +1099,18 @@
     
 }
 
+- (IBAction)treatmentCheck:(id)sender {
+    if(!treatmentCheckBool){
+        [treatmentCheckButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        treatmentCheckBool = YES;
+    }
+    else if(treatmentCheckBool){
+        [treatmentCheckButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        treatmentCheckBool = NO;
+        
+    }
+
+}
+- (IBAction)treatmentAdd:(id)sender {
+}
 @end

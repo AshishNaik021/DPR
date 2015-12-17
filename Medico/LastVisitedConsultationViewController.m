@@ -25,6 +25,7 @@
 @synthesize star;
 @synthesize returnString;
 @synthesize patientArr = _patientArr;
+@synthesize reviewsTextField;
 
 - (void) homePage:(id)sender{
     if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
@@ -43,8 +44,9 @@
 - (void)viewDidLoad {
     NSLog(@"LastVisitedConsultationViewController.m");
     [super viewDidLoad];
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
@@ -52,11 +54,13 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    
     isVisited = NO;
     isNotVisitedClicked = NO;
     isVisitedClicked = NO;
     star = [NSString stringWithFormat:@"0"];
     [self notVisitedClickedChangeRadioButton];
+    [reviewsTextField.layer setBorderWidth:1.0];
     // Do any additional setup after loading the view.
 }
 
@@ -78,8 +82,8 @@
 
 - (IBAction)ratingOne:(id)sender{
     [self visitedClickedChangeRadioButton];
-    UIImage *ckbtnImage = [UIImage imageNamed:@"filledStar.jpeg"];
-    UIImage *unckbtnImage = [UIImage imageNamed:@"emptyStar.jpeg"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_star.png"];
+    UIImage *unckbtnImage = [UIImage imageNamed:@"ic_star_border.png"];
     [self.ratingOneButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingTwoButton setImage:unckbtnImage forState:UIControlStateNormal];
     [self.ratingThreeButton setImage:unckbtnImage forState:UIControlStateNormal];
@@ -89,8 +93,8 @@
 }
 - (IBAction)ratingTwo:(id)sender{
     [self visitedClickedChangeRadioButton];
-    UIImage *ckbtnImage = [UIImage imageNamed:@"filledStar.jpeg"];
-    UIImage *unckbtnImage = [UIImage imageNamed:@"emptyStar.jpeg"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_star.png"];
+    UIImage *unckbtnImage = [UIImage imageNamed:@"ic_star_border.png"];
     [self.ratingOneButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingTwoButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingThreeButton setImage:unckbtnImage forState:UIControlStateNormal];
@@ -100,8 +104,8 @@
 }
 - (IBAction)ratingThree:(id)sender{
     [self visitedClickedChangeRadioButton];
-    UIImage *ckbtnImage = [UIImage imageNamed:@"filledStar.jpeg"];
-    UIImage *unckbtnImage = [UIImage imageNamed:@"emptyStar.jpeg"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_star.png"];
+    UIImage *unckbtnImage = [UIImage imageNamed:@"ic_star_border.png"];
     [self.ratingOneButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingTwoButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingThreeButton setImage:ckbtnImage forState:UIControlStateNormal];
@@ -111,8 +115,8 @@
 }
 - (IBAction)ratingFour:(id)sender{
     [self visitedClickedChangeRadioButton];
-    UIImage *ckbtnImage = [UIImage imageNamed:@"filledStar.jpeg"];
-    UIImage *unckbtnImage = [UIImage imageNamed:@"emptyStar.jpeg"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_star.png"];
+    UIImage *unckbtnImage = [UIImage imageNamed:@"ic_star_border.png"];
     [self.ratingOneButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingTwoButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingThreeButton setImage:ckbtnImage forState:UIControlStateNormal];
@@ -122,7 +126,7 @@
 }
 - (IBAction)ratingFive:(id)sender{
     [self visitedClickedChangeRadioButton];
-    UIImage *ckbtnImage = [UIImage imageNamed:@"filledStar.jpeg"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_star.png"];
     [self.ratingOneButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingTwoButton setImage:ckbtnImage forState:UIControlStateNormal];
     [self.ratingThreeButton setImage:ckbtnImage forState:UIControlStateNormal];
@@ -149,7 +153,7 @@
     self.reviewsTextField.hidden = value;
     if (value) {
         star = [NSString stringWithFormat:@"0"];
-        UIImage *unckbtnImage = [UIImage imageNamed:@"emptyStar.jpeg"];
+        UIImage *unckbtnImage = [UIImage imageNamed:@"ic_star_border.png"];
         [self.ratingOneButton setImage:unckbtnImage forState:UIControlStateNormal];
         [self.ratingTwoButton setImage:unckbtnImage forState:UIControlStateNormal];
         [self.ratingThreeButton setImage:unckbtnImage forState:UIControlStateNormal];
@@ -283,18 +287,18 @@
     [alert show];
 }
 -(void)visitedClickedChangeRadioButton{
-    UIImage *ckbtnImage = [UIImage imageNamed:@"checkRadio.png"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_radio_button_checked.png"];
     [self.visitedButton setImage:ckbtnImage forState:UIControlStateNormal];
-    UIImage *unckbtnImage = [UIImage imageNamed:@"unchechRadio.png"];
+    UIImage *unckbtnImage = [UIImage imageNamed:@"ic_radio_button_unchecked.png"];
     [self.notVisitedButton setImage:unckbtnImage forState:UIControlStateNormal];
     [self toggleHiden:NO];
     isVisitedClicked = YES;
     isNotVisitedClicked = NO;
 }
 -(void)notVisitedClickedChangeRadioButton{
-    UIImage *ckbtnImage = [UIImage imageNamed:@"checkRadio.png"];
+    UIImage *ckbtnImage = [UIImage imageNamed:@"ic_radio_button_checked.png"];
     [self.notVisitedButton setImage:ckbtnImage forState:UIControlStateNormal];
-    UIImage *unckbtnImage = [UIImage imageNamed:@"unchechRadio.png"];
+    UIImage *unckbtnImage = [UIImage imageNamed:@"ic_radio_button_unchecked.png"];
     [self.visitedButton setImage:unckbtnImage forState:UIControlStateNormal];
     [self toggleHiden:YES];
     isVisitedClicked = NO;
