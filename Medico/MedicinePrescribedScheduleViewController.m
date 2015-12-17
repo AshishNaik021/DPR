@@ -15,7 +15,10 @@
 
 @implementation MedicinePrescribedScheduleViewController
 
-
+@synthesize dosesPicker;
+@synthesize dosesArray;
+@synthesize medSchedule;
+@synthesize schedules;
 @synthesize doctorsInstructionTextView;
 @synthesize scheduleTimeTextView;
 @synthesize check;
@@ -63,6 +66,7 @@
 - (void)viewDidLoad {
     NSLog(@"MedicinePrescribedScheduleViewController.m");
     [super viewDidLoad];
+    self.startDateField.text = [self formatDate:[NSDate date]];
     startDateField.tag = 1;
     endDateField.tag = 2;
     UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
@@ -102,11 +106,78 @@
     NSLog(@"summaryViDate----%@",_passVisitDate);
     NSLog(@"summaryViType----%@",_passvisitType);
     
+    schedules = [[NSMutableArray alloc] initWithObjects:@"Daily",@"Weekly",@"Monthly",nil];
+    
+    medSchedule = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 200, 300, 200)];
+    medSchedule.showsSelectionIndicator = YES;
+    medSchedule.hidden = YES;
+    medSchedule.tag =2;
+    medSchedule.delegate = self;
+    [self.view addSubview:medSchedule];
+    
+    dosesArray = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",nil];
+    
+    dosesPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 200, 300, 200)];
+    dosesPicker.showsSelectionIndicator = YES;
+    dosesPicker.hidden = YES;
+    dosesPicker.tag = 3;
+    dosesPicker.delegate = self;
+    [self.view addSubview:dosesPicker];
+    
     
     
     // Do any additional setup after loading the view.
 }
 
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    if (pickerView.tag == 2) {
+        scheduleField.text = [NSString stringWithFormat:schedules[row]];
+        medSchedule.hidden = YES;
+    }
+    else if (pickerView.tag == 3){
+        numberOfDosesField.text = [NSString stringWithFormat:dosesArray[row]];
+        dosesPicker.hidden = YES;
+    }
+    else{
+        
+    }
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if ([textField isEqual:scheduleField]) {
+        self.medSchedule.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:numberOfDosesField]){
+        self.dosesPicker.hidden = NO;
+        return NO;
+    }
+    return YES;
+}
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str;
+    if (pickerView.tag == 2) {
+        str =[NSString stringWithFormat:[schedules objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 3){
+        str = [NSString stringWithFormat:dosesArray[row]];
+    }
+    return str;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    NSInteger retval;
+    if (pickerView.tag ==2) {
+        retval = schedules.count;
+    }
+    else if(pickerView.tag == 3){
+        retval = dosesArray.count;
+    }
+    return retval;
+}
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -481,7 +552,14 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
+    medSchedule.hidden = YES;
+    dosesPicker.hidden =YES;
     [self.view endEditing:YES];
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    [textField resignFirstResponder];
+    medSchedule.hidden = YES;
+    dosesPicker.hidden = YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
@@ -492,9 +570,9 @@
         
         // Create a date picker for the date field.
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
-        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.datePickerMode = UIDatePickerModeDateAndTime;
         datePicker.tag = 1;
-        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
+        datePicker.minimumDate = [NSDate date];
         [datePicker setDate:[NSDate date]];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         
@@ -511,8 +589,11 @@
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode = UIDatePickerModeDate;
         datePicker.tag = 2;
-        //    datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-31536000];
-        [datePicker setDate:[NSDate date]];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MMM-yyyy hh-mm a"];
+        NSDate *date = [dateFormatter dateFromString:self.startDateField.text];
+        datePicker.minimumDate = date;
+        [datePicker setDate:date];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         
         // If the date field has focus, display a date picker instead of keyboard.
@@ -549,7 +630,7 @@
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy hh-mm a"];
     NSString *formattedDate = [dateFormatter stringFromDate:date];
     return formattedDate;
 }
