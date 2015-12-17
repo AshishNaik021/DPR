@@ -10794,12 +10794,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rbh-Vb-VJu" id="6fj-Fe-HSZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="patientProfile.png" translatesAutoresizingMaskIntoConstraints="NO" id="UJg-kO-DTY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="patientprofileblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="UJg-kO-DTY">
                                                     <rect key="frame" x="8" y="8" width="48" height="48"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh1-34-Ce6">
                                                     <rect key="frame" x="8" y="64" width="48" height="21"/>
-                                                    <state key="normal" image="arrowButton.png">
+                                                    <state key="normal" image="ic_expand_more.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -10900,10 +10900,9 @@
                                     <outlet property="delegate" destination="oLH-av-Kcp" id="5Wd-1I-o6J"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-wM-8Jm">
-                                <rect key="frame" x="320" y="70" width="39" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="+">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-wM-8Jm">
+                                <rect key="frame" x="329" y="70" width="30" height="30"/>
+                                <state key="normal" image="ic_add_2x copy.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -10926,7 +10925,7 @@
         <!--Detail Patient Doctor Consultations View Controller-->
         <scene sceneID="zG0-bK-6ec">
             <objects>
-                <viewController storyboardIdentifier="DetailPatientDoctorConsultationsViewController" id="klJ-Ia-G8F" customClass="DetailPatientDoctorConsultationsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailPatientDoctorConsultationsViewController" automaticallyAdjustsScrollViewInsets="NO" id="klJ-Ia-G8F" customClass="DetailPatientDoctorConsultationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yz3-eG-5WJ"/>
                         <viewControllerLayoutGuide type="bottom" id="3RC-ST-Tm8"/>
@@ -10935,90 +10934,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ii7-8W-mxS">
-                                <rect key="frame" x="0.0" y="222" width="375" height="445"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnA-ke-Qi3">
-                                        <rect key="frame" x="8" y="92" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkZ-hE-QZU">
-                                        <rect key="frame" x="8" y="8" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxQ-xr-oLI">
-                                        <rect key="frame" x="8" y="36" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRE-sA-SdP">
-                                        <rect key="frame" x="8" y="64" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGd-uO-1Bd">
-                                        <rect key="frame" x="137" y="64" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-aG-sRG">
-                                        <rect key="frame" x="8" y="148" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9y-fJ-PFe">
-                                        <rect key="frame" x="8" y="176" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF7-aC-TuS">
-                                        <rect key="frame" x="8" y="120" width="121" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="puA-bx-IBs">
-                                        <rect key="frame" x="137" y="92" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQI-te-A7z">
-                                        <rect key="frame" x="137" y="36" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23T-Sb-Bdo">
-                                        <rect key="frame" x="137" y="148" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yy4-u8-cdn">
-                                        <rect key="frame" x="137" y="120" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-8w-n3n">
-                                        <rect key="frame" x="137" y="8" width="230" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="some text here..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-dD-DNa">
-                                        <rect key="frame" x="137" y="176" width="230" height="64"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PeN-rW-4Zm">
                                 <rect key="frame" x="0.0" y="222" width="375" height="445"/>
                                 <subviews>
@@ -11038,7 +10953,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location.png" translatesAutoresizingMaskIntoConstraints="NO" id="iOZ-Jm-Z0m">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="locationgrey.png" translatesAutoresizingMaskIntoConstraints="NO" id="iOZ-Jm-Z0m">
                                                             <rect key="frame" x="8" y="30" width="22" height="22"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timing.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbx-8W-Tf7">
@@ -11369,12 +11284,96 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="patientProfile.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZo-Do-Qjs">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ii7-8W-mxS">
+                                <rect key="frame" x="0.0" y="222" width="375" height="445"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnA-ke-Qi3">
+                                        <rect key="frame" x="8" y="92" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email Id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkZ-hE-QZU">
+                                        <rect key="frame" x="8" y="8" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxQ-xr-oLI">
+                                        <rect key="frame" x="8" y="36" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRE-sA-SdP">
+                                        <rect key="frame" x="8" y="64" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGd-uO-1Bd">
+                                        <rect key="frame" x="137" y="64" width="230" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bG-aG-sRG">
+                                        <rect key="frame" x="8" y="148" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Specialization" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9y-fJ-PFe">
+                                        <rect key="frame" x="8" y="176" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF7-aC-TuS">
+                                        <rect key="frame" x="8" y="120" width="121" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="puA-bx-IBs">
+                                        <rect key="frame" x="137" y="92" width="230" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQI-te-A7z">
+                                        <rect key="frame" x="137" y="36" width="230" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23T-Sb-Bdo">
+                                        <rect key="frame" x="137" y="148" width="230" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yy4-u8-cdn">
+                                        <rect key="frame" x="137" y="120" width="230" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-8w-n3n">
+                                        <rect key="frame" x="137" y="8" width="230" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="some text here..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-dD-DNa">
+                                        <rect key="frame" x="137" y="176" width="230" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="patientprofileblue.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZo-Do-Qjs">
                                 <rect key="frame" x="16" y="85" width="48" height="48"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRW-eu-V6s">
                                 <rect key="frame" x="16" y="141" width="48" height="21"/>
-                                <state key="normal" image="uparrowButton.png">
+                                <state key="normal" image="ic_expand_less.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -12037,7 +12036,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jTp-2I-BeE">
-                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <rect key="frame" x="16" y="76" width="343" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="xD7-YK-Wx1" customClass="YearlyCountAppointmentForPatientDoctorConsultationCell">
@@ -12102,7 +12101,7 @@
         <!--Patient All Detail Information View Controller-->
         <scene sceneID="0n2-Qs-nAf">
             <objects>
-                <viewController storyboardIdentifier="PatientAllDetailInformationViewController" id="K33-5a-QEJ" customClass="PatientAllDetailInformationViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientAllDetailInformationViewController" automaticallyAdjustsScrollViewInsets="NO" id="K33-5a-QEJ" customClass="PatientAllDetailInformationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tkl-aM-Dep"/>
                         <viewControllerLayoutGuide type="bottom" id="XXO-s0-MAw"/>
@@ -12111,6 +12110,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbo-hu-PyK">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRA-7c-Kgc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PPR-uU-hay">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
                                 <subviews>
@@ -12119,19 +12127,21 @@
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-sl-ECm">
                                         <rect key="frame" x="22" y="36" width="21" height="22"/>
-                                        <state key="normal" image="unchecked.png">
+                                        <state key="normal" image="ic_check_box_outline_blank.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="treatmentCheck:" destination="K33-5a-QEJ" eventType="touchUpInside" id="8a5-hW-pgk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrB-cc-5q0">
-                                        <rect key="frame" x="306" y="32" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="+">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrB-cc-5q0">
+                                        <rect key="frame" x="322" y="31" width="30" height="30"/>
+                                        <state key="normal" image="ic_add_2x copy.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="treatmentAdd:" destination="K33-5a-QEJ" eventType="touchUpInside" id="7wH-g6-UqP"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share with the Patient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ce-zw-8Kz">
                                         <rect key="frame" x="51" y="36" width="158" height="21"/>
@@ -12178,7 +12188,7 @@
                                         </subviews>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84285053453947367" green="0.94107216282894723" blue="0.76554790296052633" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2UK-82-NeD">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
@@ -12186,18 +12196,23 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmK-nl-iCl">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czS-dv-HNx">
-                                                <rect key="frame" x="306" y="17" width="46" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="+">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czS-dv-HNx">
+                                                <rect key="frame" x="322" y="24" width="30" height="30"/>
+                                                <state key="normal" image="ic_add_2x copy.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="invoiceAdd:" destination="K33-5a-QEJ" eventType="touchUpInside" id="Xpr-1G-taO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBQ-uJ-lDk">
                                                 <rect key="frame" x="27" y="38" width="21" height="22"/>
-                                                <state key="normal" image="unchecked.png">
+                                                <state key="normal" image="ic_check_box_outline_blank.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="invoiceShareCheck:" destination="K33-5a-QEJ" eventType="touchUpInside" id="Lsv-JN-QBY"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share with the Patient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-Pu-dri">
                                                 <rect key="frame" x="56" y="38" width="189" height="21"/>
@@ -12247,7 +12262,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOW-zd-et2">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GOW-zd-et2">
                                                 <rect key="frame" x="271" y="289" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12255,7 +12270,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="sNt-dB-Ep5"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zx-ZN-m2q">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zx-ZN-m2q">
                                                 <rect key="frame" x="271" y="318" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12263,7 +12278,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="QYS-Tb-E9b"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmj-1Q-oWn">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pmj-1Q-oWn">
                                                 <rect key="frame" x="271" y="347" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12271,7 +12286,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="RdN-BB-Vi0"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3N-ur-jsw">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3N-ur-jsw">
                                                 <rect key="frame" x="271" y="376" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12279,7 +12294,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="sHv-1v-0nM"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzH-2h-S2G">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzH-2h-S2G">
                                                 <rect key="frame" x="173" y="318" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12287,7 +12302,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="zU7-s0-tHr"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYs-gQ-fBh">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYs-gQ-fBh">
                                                 <rect key="frame" x="173" y="347" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12295,7 +12310,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="yFm-yQ-kEC"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekQ-qE-acd">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekQ-qE-acd">
                                                 <rect key="frame" x="271" y="434" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12303,7 +12318,7 @@
                                                     <outlet property="delegate" destination="K33-5a-QEJ" id="hfY-dM-npM"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-g8-Xnw">
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-g8-Xnw">
                                                 <rect key="frame" x="271" y="463" width="81" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -12361,7 +12376,7 @@
                                         </subviews>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93122944078947367" green="0.82385896381578949" blue="0.9677734375" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v4t-m0-gZW">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
@@ -12515,16 +12530,16 @@
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-1n-kvl">
                                                                             <rect key="frame" x="216" y="11" width="22" height="22"/>
-                                                                            <state key="normal" image="medicinePrescribed.png">
+                                                                            <state key="normal" image="medicineAlarmgrey.png">
                                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </state>
                                                                             <connections>
                                                                                 <action selector="summaryAlarm:" destination="VPk-6E-TVh" eventType="touchUpInside" id="zyh-0l-OzW"/>
                                                                             </connections>
                                                                         </button>
-                                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doP-V0-HMp">
+                                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doP-V0-HMp">
                                                                             <rect key="frame" x="246" y="11" width="22" height="22"/>
-                                                                            <state key="normal" title="X">
+                                                                            <state key="normal" title="X" image="ic_clear_3x.png">
                                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                             </state>
                                                                             <connections>
@@ -12575,7 +12590,7 @@
                                         </subviews>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.8422851562" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGg-Nd-aqs">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
@@ -12583,10 +12598,9 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U4-Vn-AkN">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLU-LU-TeE">
-                                                <rect key="frame" x="321" y="8" width="46" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <state key="normal" title="+">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLU-LU-TeE">
+                                                <rect key="frame" x="325" y="16" width="30" height="30"/>
+                                                <state key="normal" image="ic_add_2x copy.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -12625,7 +12639,7 @@
                                         </subviews>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="0.83999794409999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8F-gx-8ms">
                                 <rect key="frame" x="285" y="66" width="74" height="21"/>
@@ -12637,15 +12651,6 @@
                                     <action selector="doctorNoteTab:" destination="K33-5a-QEJ" eventType="touchUpInside" id="QFB-Li-pjq"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbo-hu-PyK">
-                                <rect key="frame" x="16" y="641" width="343" height="18"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRA-7c-Kgc">
-                                        <rect key="frame" x="0.0" y="-40" width="343" height="58"/>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.82139185855263153" green="0.84991776315789469" blue="0.89450555098684215" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-pZ-A2F">
                                 <rect key="frame" x="146" y="66" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -12700,11 +12705,21 @@
                         <outlet property="documentScrollView" destination="7U4-Vn-AkN" id="8Nd-Cs-Ybq"/>
                         <outlet property="documentTabButton" destination="XXk-3C-Hsh" id="U03-zc-MdE"/>
                         <outlet property="documentTableView" destination="0Nx-VF-EEs" id="QWD-4L-bzn"/>
+                        <outlet property="invoiceAddButton" destination="czS-dv-HNx" id="zC8-G5-Hub"/>
+                        <outlet property="invoiceAddTaxField" destination="eYs-gQ-fBh" id="b5c-ev-5In"/>
+                        <outlet property="invoiceAdvanceField" destination="ekQ-qE-acd" id="94e-u8-R5o"/>
                         <outlet property="invoiceCollectionScroll" destination="FYk-E4-nPw" id="Ue5-Wz-z9S"/>
                         <outlet property="invoiceCollectionView" destination="6d3-O8-XUv" id="UkR-36-4ld"/>
                         <outlet property="invoiceContentView" destination="2UK-82-NeD" id="Z7s-tN-bGA"/>
+                        <outlet property="invoiceDiscountField" destination="2Zx-ZN-m2q" id="na4-Dw-w7B"/>
+                        <outlet property="invoiceGrandTotalField" destination="H3N-ur-jsw" id="If7-kA-Hbn"/>
+                        <outlet property="invoiceMinusDiscountField" destination="wzH-2h-S2G" id="MkE-p3-wRP"/>
                         <outlet property="invoiceScrollView" destination="jmK-nl-iCl" id="6T4-Bc-nOX"/>
+                        <outlet property="invoiceShareCheckButton" destination="LBQ-uJ-lDk" id="LcJ-iV-tye"/>
                         <outlet property="invoiceTabButton" destination="jtJ-yN-RhQ" id="51f-c0-Zj0"/>
+                        <outlet property="invoiceTaxField" destination="pmj-1Q-oWn" id="pfh-wN-Hrc"/>
+                        <outlet property="invoiceTotalDueField" destination="hj5-g8-Xnw" id="eg0-aP-LJy"/>
+                        <outlet property="invoiceTotalField" destination="GOW-zd-et2" id="HbY-aG-rIf"/>
                         <outlet property="summaryClinicNameField" destination="jEc-Qv-vox" id="7ZQ-Rr-HRg"/>
                         <outlet property="summaryContentView" destination="v4t-m0-gZW" id="cIh-mJ-JLG"/>
                         <outlet property="summaryDiagnosisButton" destination="bEi-2G-jRo" id="FfU-2q-uak"/>
@@ -12721,6 +12736,7 @@
                         <outlet property="summaryTestPrescribedTextView" destination="qHj-HQ-a96" id="fV7-dZ-BEC"/>
                         <outlet property="summaryVisiteDateField" destination="vdC-KW-57s" id="NMg-lV-zzw"/>
                         <outlet property="summaryVisiteTypeField" destination="qal-gg-WzM" id="Xqg-td-aEP"/>
+                        <outlet property="treatmentAddButton" destination="yrB-cc-5q0" id="OaJ-WF-vEM"/>
                         <outlet property="treatmentCheckButton" destination="5qK-sl-ECm" id="bj8-bL-21b"/>
                         <outlet property="treatmentCollectionScrollView" destination="7Cn-hk-QUx" id="7oX-sq-mRs"/>
                         <outlet property="treatmentCollectionView" destination="kJp-ff-pcB" id="Zj4-Bv-8dU"/>
@@ -15083,16 +15099,13 @@
         <image name="ic_star.png" width="24" height="24"/>
         <image name="ic_star_border.png" width="24" height="24"/>
         <image name="labsgrey.png" width="60" height="60"/>
-        <image name="location.png" width="44" height="44"/>
         <image name="locationgrey.png" width="60" height="60"/>
         <image name="manageAssistents.png" width="75" height="71"/>
         <image name="manageClinics.png" width="75" height="71"/>
         <image name="medicineAlarmgrey.png" width="60" height="60"/>
-        <image name="medicinePrescribed.png" width="53" height="57"/>
         <image name="notesblue.png" width="60" height="60"/>
         <image name="nursegrey.png" width="60" height="60"/>
         <image name="nurseprofileblue.png" width="60" height="60"/>
-        <image name="patientProfile.png" width="78" height="71"/>
         <image name="patientgirlgrey.png" width="60" height="60"/>
         <image name="patientgrey.png" width="60" height="60"/>
         <image name="patientprofileblue.png" width="60" height="60"/>

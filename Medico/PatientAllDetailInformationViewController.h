@@ -41,7 +41,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *documentAddFilesButton;
 
 - (IBAction)documentAddFiles:(id)sender;
-
+@property BOOL *invoiceCheckBool;
+@property BOOL *treatmentCheckBool;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *treatmentPlanScrollView;
 @property (weak, nonatomic) IBOutlet UIView *treatmentPlanContentView;
@@ -60,6 +61,21 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *invoiceCollectionScroll;
 @property (weak, nonatomic) IBOutlet UICollectionView *invoiceCollectionView;
 
+
+@property (weak, nonatomic) IBOutlet UIButton *invoiceShareCheckButton;
+- (IBAction)invoiceShareCheck:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *invoiceAddButton;
+- (IBAction)invoiceAdd:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTotalField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceMinusDiscountField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceDiscountField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceAddTaxField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTaxField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceGrandTotalField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceAdvanceField;
+@property (weak, nonatomic) IBOutlet UITextField *invoiceTotalDueField;
+@property (weak, nonatomic) IBOutlet UIButton *treatmentAddButton;
+- (IBAction)treatmentAdd:(id)sender;
 
 
 

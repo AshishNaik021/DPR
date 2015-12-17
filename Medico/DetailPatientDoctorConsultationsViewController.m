@@ -26,7 +26,8 @@
 @synthesize value = _value;
 
 
-- (void) patientHomePage:(id)sender{
+
+- (void) homePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
     [self.navigationController pushViewController:PatientHome animated:YES];
@@ -39,10 +40,11 @@
     [profileSpecializationField.layer setBorderWidth:1.0];
     self.navigationItem.title = @"Clinic Name";
     
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(patientHomePage:)];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];

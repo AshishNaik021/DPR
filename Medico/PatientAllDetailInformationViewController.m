@@ -56,8 +56,13 @@
 @synthesize invoicescreen;
 @synthesize invoicescrollHeight;
 
+@synthesize invoiceCheckBool;
+@synthesize treatmentCheckBool;
+@synthesize invoiceShareCheckButton;
+@synthesize treatmentCheckButton;
 
-- (void) patientHomePage:(id)sender{
+
+- (void) homePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
     [self.navigationController pushViewController:PatientHome animated:YES];
@@ -159,6 +164,9 @@
     [super viewDidLoad];
     NSLog(@"PatientAllDetailInformationViewController.m");
     
+    invoiceCheckBool = NO;
+    treatmentCheckBool = NO;
+    
     array = [[NSMutableArray alloc]init];
     [array addObject:@"Name"];
     [array addObject:@"Total"];
@@ -198,10 +206,12 @@
     
     self.navigationItem.title = @"Doctors Name";
     
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
-    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(patientHomePage:)];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
@@ -439,5 +449,33 @@
 //    [self.navigationController pushViewController:upload animated:YES];
 }
 - (IBAction)treatmentCheck:(id)sender {
+    
+    if(!treatmentCheckBool){
+        [treatmentCheckButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        treatmentCheckBool = YES;
+    }
+    else if(treatmentCheckBool){
+        [treatmentCheckButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        treatmentCheckBool = NO;
+        
+    }
+
+}
+- (IBAction)invoiceShareCheck:(id)sender {
+    
+    if(!invoiceCheckBool){
+        [invoiceShareCheckButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
+        invoiceCheckBool = YES;
+    }
+    else if(invoiceCheckBool){
+        [invoiceShareCheckButton setImage:[UIImage imageNamed:@"ic_check_box_outline_blank.png"]forState:UIControlStateNormal];
+        invoiceCheckBool = NO;
+        
+    }
+
+}
+- (IBAction)invoiceAdd:(id)sender {
+}
+- (IBAction)treatmentAdd:(id)sender {
 }
 @end
