@@ -34,6 +34,8 @@
 - (IBAction)summaryMedicinePrescribed:(id)sender;
 - (IBAction)summaryTestPrescribed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *summaryAddMedicinePrescribedScheduleButton;
+- (IBAction)summaryAddMedicinePrescribedSchedule:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIView *documentContentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *documentScrollView;

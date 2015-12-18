@@ -15,6 +15,7 @@
 #import "PatientAllDetailSummaryInformationCell.h"
 #import "PatientUploadDocumentsViewController.h"
 #import "PatientAllDetailDocumentInformationCell.h"
+#import "PatientMedicinePrescribedScheduleViewController.h"
 
 @interface PatientAllDetailInformationViewController ()
 
@@ -477,5 +478,12 @@
 - (IBAction)invoiceAdd:(id)sender {
 }
 - (IBAction)treatmentAdd:(id)sender {
+}
+- (IBAction)summaryAddMedicinePrescribedSchedule:(id)sender {
+    
+    PatientMedicinePrescribedScheduleViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientMedicinePrescribedScheduleViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+    
 }
 @end

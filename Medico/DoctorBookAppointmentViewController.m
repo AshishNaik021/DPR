@@ -210,4 +210,10 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please try again later." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
+- (IBAction)calendar:(id)sender {
+}
+- (IBAction)cancelAppointment:(id)sender {
+}
+- (IBAction)bookNow:(id)sender {
+}
 @end

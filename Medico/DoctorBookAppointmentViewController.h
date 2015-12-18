@@ -31,7 +31,14 @@
 - (IBAction)timeClicked17:(id)sender;
 - (IBAction)timeClicked18:(id)sender;
 - (IBAction)doneButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *shiftLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+- (IBAction)calendar:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *cancelAppointmentButton;
+- (IBAction)cancelAppointment:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *bookNowButton;
+- (IBAction)bookNow:(id)sender;
 
 @property IBOutlet NSString *doctorIdPassData;
 @property IBOutlet NSString *patientEmailPassData;
