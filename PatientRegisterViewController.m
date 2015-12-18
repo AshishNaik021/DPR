@@ -69,6 +69,8 @@
     // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     
+    dateofBirthField.tag = 6;
+
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
     width = CGRectGetWidth(screen);
@@ -90,6 +92,50 @@
     
     // Do any additional setup after loading the view.
 }
+
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
+
+- (void)updateDateField:(id)sender
+{
+    if (dateofBirthField.isEditing) {
+        UIDatePicker *picker = (UIDatePicker*)self.dateofBirthField.inputView;
+        self.dateofBirthField.text = [self formatDate:picker.date];
+    }
+    
+}
+
+
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.returnKeyType = UIReturnKeyDone;
+    if (textField.tag == 6) {
+        self.dateofBirthField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 2;
+        datePicker.minimumDate = [NSDate date];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.dateofBirthField.inputView = datePicker;
+        self.dateofBirthField.text = [self formatDate:datePicker.date];
+        
+    }
+}
+
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
     return 1;

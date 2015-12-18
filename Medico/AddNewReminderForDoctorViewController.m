@@ -7,6 +7,7 @@
 //
 
 #import "AddNewReminderForDoctorViewController.h"
+#import "DoctorLandingPageView.h"
 
 @interface AddNewReminderForDoctorViewController ()
 
@@ -27,6 +28,12 @@
 @synthesize setTime3Button;
 @synthesize endDateCalendarButton;
 
+- (void) homePage:(id)sender{
+    DoctorLandingPageView *DoctorHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+    [self.navigationController pushViewController:DoctorHome animated:YES];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"AddNewReminderForDoctorViewController.m");
