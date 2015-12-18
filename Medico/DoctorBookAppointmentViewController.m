@@ -76,19 +76,33 @@
     NSLog(@"_patientEmailPassData:%@",_patientEmailPassData);
     NSLog(@"_appointmentDatePassData:%@",_appointmentDatePassData);
     NSLog(@"_appointmentTimePassData:%@",_appointmentTimePassData);
-    [self setPatientName];
-    [self lastVisitedDateLabel];
-    // Do any additional setup after loading the view.
+    if ([self checkInternetConnection]) {
+        [self setPatientName];
+        [self lastVisitedDateLabel];
+        [self setSlotDetails];
+    }
+    else{
+        [self noNetworkAlert];
+    }
+   // Do any additional setup after loading the view.
+}
+-(void)noNetworkAlert{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Opps!" message:@"Please check for Internet Connectivity." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+-(void)setSlotDetails{
+    
 }
 -(void)setLastVisitedDateLabel{
     if([[self.patientArr valueForKey:@"lastVisited"] isKindOfClass:[NSNull class]]){
-    self.lastVisitedDateLabel.text = @"Not Visited";
+        self.lastVisitedDateLabel.text = @"Not Visited";
     }
     else{
         self.lastVisitedDateLabel.text = [self.patientArr valueForKey:@"lastVisited"];
         self.lastVisitedDateLabel.text = @"Not Visited";
     }
 }
+
 -(void)setPatientName{
         NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
@@ -215,4 +229,19 @@
 }
 - (IBAction)bookNow:(id)sender {
 }
+-(BOOL)checkInternetConnection{
+    //        [self.view endEditing:YES];
+    //[NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
+    NSURL *scriptUrl = [NSURL URLWithString:@"http://www.msftncsi.com/ncsi.txt"];
+    NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
+    if (data){
+        NSLog(@"Device is connected to the internet");
+        //[spinner stopAnimating];
+        return 1;
+    } else{
+        NSLog(@"Device is not connected to the internet");
+        return 0;
+    }
+}
+
 @end
