@@ -39,6 +39,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 - (IBAction)save:(id)sender;
 
+@property NSArray *doctorProfileArr;
 
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;
