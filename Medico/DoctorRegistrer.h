@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorRegistrer : UIViewController <UITextFieldDelegate> {
+@interface DoctorRegistrer : UIViewController <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate> {
     IBOutlet UIScrollView *scroll;
-   // BOOL clearField;
+    // BOOL clearField;
 }
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (retain, nonatomic)  UIPickerView *pickerSpeciality;
+
+@property (nonatomic,retain) NSArray *pickerBloodGroupArr;
+@property (nonatomic,retain) NSArray *pickerSpecialityArr;
+
+
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;
 @property CGFloat width;
@@ -41,9 +49,5 @@
 - (IBAction)next:(id)sender;
 - (IBAction)addLocation:(id)sender;
 
-
-
-
-
-
 @end
+

@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientRegisterViewController : UIViewController<UITextFieldDelegate> {
+@interface PatientRegisterViewController : UIViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource> {
     
     IBOutlet UIScrollView *scroll;
     
 }
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerBloodGroupArr;
+
+
 
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;

@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AssistantRegister : UIViewController <UITextFieldDelegate>
+@interface AssistantRegister : UIViewController <UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (retain, nonatomic)  UIPickerView *pickerSpeciality;
+
+@property (nonatomic,retain) NSArray *pickerProfesionArr;
+@property (nonatomic,retain) NSArray *pickerSpecialityArr;
 
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;
@@ -45,9 +52,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 - (IBAction)next:(id)sender;
 
-
-
-
-
-
 @end
+

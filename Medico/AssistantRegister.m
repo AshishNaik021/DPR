@@ -1,3 +1,4 @@
+
 //
 //  AssistantRegister.m
 //  Medico
@@ -23,8 +24,14 @@
 @synthesize scrollHeight;
 @synthesize scroll;
 
+@synthesize picker;
+@synthesize pickerSpeciality;
+@synthesize pickerSpecialityArr;
+@synthesize pickerProfesionArr;
+
 
 @synthesize checkButton;
+@synthesize professionField;
 @synthesize assistantChecked;
 @synthesize nameField;
 @synthesize emailField;
@@ -58,19 +65,19 @@
     [super viewDidLoad];
     self.dateofBirthField.placeholder = @"YYYY-DD-MM";
     
-   // UIImage *myImage = [UIImage imageNamed:@"home.png"];
-  //  UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    // UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    //  UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     
-  //  NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
-  //  self.navigationItem.rightBarButtonItems = buttonArr;
+    //  NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+    //  self.navigationItem.rightBarButtonItems = buttonArr;
     
     self.navigationItem.title = @"Register As Assistant";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
-   // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
+    // self.navigationController.navigationBar.backgroundColor = [UIColor cyanColor];//[UIColor colorWithRed:120 green:211 blue:199 alpha:1.0];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     
-      assistantChecked = NO;
+    assistantChecked = NO;
     keyboardVisible = NO;
     screen = [[UIScreen mainScreen] bounds];
     width = CGRectGetWidth(screen);
@@ -81,9 +88,105 @@
     NSLog(@"Height is--- %f",height);
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
-
+    
+    //picker
+    pickerProfesionArr = [[NSMutableArray alloc] initWithObjects:@"Select Profession",@"nurse",nil];
+    
+    pickerSpecialityArr = [[NSMutableArray alloc] initWithObjects:@"Gynachologic",@"Pedriatic", nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    picker.tag =2;
+    [self.view addSubview:picker];
+    
+    pickerSpeciality = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    pickerSpeciality.showsSelectionIndicator = YES;
+    pickerSpeciality.hidden = YES;
+    pickerSpeciality.delegate = self;
+    pickerSpeciality.tag = 3;
+    [self.view addSubview:pickerSpeciality];
+    
+    
+    
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    NSInteger retval;
+    if (pickerView.tag ==2) {
+        retval = pickerProfesionArr.count;
+    }
+    else if(pickerView.tag == 3){
+        retval = pickerSpecialityArr.count;
+    }
+    return retval;
+    
+    
+    //return pickerBloodGroupArr.count;
+    
+}
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str;
+    if (pickerView.tag == 2) {
+        str =[NSString stringWithFormat:@"%@",[pickerProfesionArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 3){
+        str = [NSString stringWithFormat:@"%@",pickerSpecialityArr[row]];
+    }
+    return str;
+    
+    
+    
+    //return [pickerBloodGroupArr objectAtIndex:row];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    if (pickerView.tag == 2) {
+        professionField.text = [NSString stringWithFormat:@"%@",pickerProfesionArr[row]];
+        picker.hidden = YES;
+    }
+    else if (pickerView.tag == 3){
+        specializationField.text = [NSString stringWithFormat:@"%@",pickerSpecialityArr[row]];
+        pickerSpeciality.hidden = YES;
+    }
+    else{
+        
+    }
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    /*if ([textField isEqual:scheduleField]) {
+     self.medSchedule.hidden = NO;
+     return NO;
+     }
+     else if ([textField isEqual:numberOfDosesField]){
+     self.dosesPicker.hidden = NO;
+     return NO;
+     }
+     return YES;
+     */
+    
+    if ([textField isEqual:professionField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    else if ([textField isEqual:specializationField]){
+        self.pickerSpeciality.hidden = NO;
+        return NO;
+    }
+    return YES;
+}
+
 
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -341,68 +444,68 @@
         return 0;
     }
 }
-    -(void)callValidateAllFields{
+-(void)callValidateAllFields{
+    
+    if([self validateAllFields:nameField.text
+                              :emailField.text
+                              :passwordField.text
+                              :mobileField.text
+                              :genderField.text
+                              :dateofBirthField.text
+                              :locationField.text
+                              :specializationField.text]){
+        NSLog(@"Sending data to next vc");
+        NSArray *objects=[[NSArray alloc]initWithObjects:
+                          nameField.text,
+                          emailField.text,
+                          passwordField.text,
+                          mobileField.text,
+                          genderField.text,
+                          dateofBirthField.text,
+                          locationField.text,
+                          specializationField.text,
+                          @"",
+                          @"",
+                          @"",
+                          nil];
+        NSArray *keys=[[NSArray alloc]initWithObjects:
+                       @"name",
+                       @"emailID",
+                       @"password",
+                       @"mobileNumber",
+                       @"gender",
+                       @"dateOfBirth",
+                       @"location",
+                       @"speciality",
+                       @"cloudLoginId",
+                       @"cloudLoginPassword",
+                       @"cloudType",
+                       nil];
         
-        if([self validateAllFields:nameField.text
-                                  :emailField.text
-                                  :passwordField.text
-                                  :mobileField.text
-                                  :genderField.text
-                                  :dateofBirthField.text
-                                  :locationField.text
-                                  :specializationField.text]){
-            NSLog(@"Sending data to next vc");
-            NSArray *objects=[[NSArray alloc]initWithObjects:
-                              nameField.text,
-                              emailField.text,
-                              passwordField.text,
-                              mobileField.text,
-                              genderField.text,
-                              dateofBirthField.text,
-                              locationField.text,
-                              specializationField.text,
-                              @"",
-                              @"",
-                              @"",
-                              nil];
-            NSArray *keys=[[NSArray alloc]initWithObjects:
-                           @"name",
-                           @"emailID",
-                           @"password",
-                           @"mobileNumber",
-                           @"gender",
-                           @"dateOfBirth",
-                           @"location",
-                           @"speciality",
-                           @"cloudLoginId",
-                           @"cloudLoginPassword",
-                           @"cloudType",
-                           nil];
-            
-            NSDictionary *dict=[NSDictionary dictionaryWithObjects:objects forKeys:keys];
-            SMSConfirmationView *viewController =
-            [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
-            viewController.data = dict;
-            NSLog(@"is dic copied? %@",viewController.data);
-            [self.navigationController pushViewController:viewController animated:YES];
-        }
-        else {
-            NSLog(@"Data invalid");
-        }
+        NSDictionary *dict=[NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        SMSConfirmationView *viewController =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
+        viewController.data = dict;
+        NSLog(@"is dic copied? %@",viewController.data);
+        [self.navigationController pushViewController:viewController animated:YES];
     }
+    else {
+        NSLog(@"Data invalid");
+    }
+}
 
 
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)changeImage:(id)sender {
 }
@@ -417,3 +520,5 @@
 - (IBAction)next:(id)sender {
 }
 @end
+
+

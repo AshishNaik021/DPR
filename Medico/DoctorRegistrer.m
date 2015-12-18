@@ -38,6 +38,11 @@
 @synthesize screen;
 @synthesize scrollHeight;
 
+@synthesize picker;
+@synthesize pickerBloodGroupArr;
+@synthesize pickerSpecialityArr;
+@synthesize pickerSpeciality;
+
 -(IBAction)checkButton:(id)sender{
     if(!doctorCheck){
         [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
@@ -74,7 +79,100 @@
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
     
     
+    //picker
+    pickerBloodGroupArr = [[NSMutableArray alloc] initWithObjects:@"A+",@"A-",@"B+",@"B-",@"O+",@"O-",@"AB+",@"AB-",nil];
+    
+    pickerSpecialityArr = [[NSMutableArray alloc] initWithObjects:@"Gynachologic",@"Pedriatic", nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    picker.tag =2;
+    [self.view addSubview:picker];
+    
+    pickerSpeciality = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    pickerSpeciality.showsSelectionIndicator = YES;
+    pickerSpeciality.hidden = YES;
+    pickerSpeciality.delegate = self;
+    pickerSpeciality.tag = 3;
+    [self.view addSubview:pickerSpeciality];
+    
     // Do any additional setup after loading the view.
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    NSInteger retval;
+    if (pickerView.tag ==2) {
+        retval = pickerBloodGroupArr.count;
+    }
+    else if(pickerView.tag == 3){
+        retval = pickerSpecialityArr.count;
+    }
+    return retval;
+    
+    
+    //return pickerBloodGroupArr.count;
+    
+}
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str;
+    if (pickerView.tag == 2) {
+        str =[NSString stringWithFormat:@"%@",[pickerBloodGroupArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 3){
+        str = [NSString stringWithFormat:@"%@",pickerSpecialityArr[row]];
+    }
+    return str;
+    
+    
+    
+    //return [pickerBloodGroupArr objectAtIndex:row];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    if (pickerView.tag == 2) {
+        bloodGroupField.text = [NSString stringWithFormat:@"%@",pickerBloodGroupArr[row]];
+        picker.hidden = YES;
+    }
+    else if (pickerView.tag == 3){
+        specializationField.text = [NSString stringWithFormat:@"%@",pickerSpecialityArr[row]];
+        pickerSpeciality.hidden = YES;
+    }
+    else{
+        
+    }
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    /*if ([textField isEqual:scheduleField]) {
+     self.medSchedule.hidden = NO;
+     return NO;
+     }
+     else if ([textField isEqual:numberOfDosesField]){
+     self.dosesPicker.hidden = NO;
+     return NO;
+     }
+     return YES;
+     */
+    
+    if ([textField isEqual:bloodGroupField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    else if ([textField isEqual:specializationField]){
+        self.pickerSpeciality.hidden = NO;
+        return NO;
+    }
+    return YES;
 }
 
 

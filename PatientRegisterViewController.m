@@ -39,6 +39,9 @@
 @synthesize screen;
 @synthesize scrollHeight;
 
+@synthesize picker;
+@synthesize pickerBloodGroupArr;
+
 -(IBAction)checkButton:(id)sender{
     if(!patientChecked){
         [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];
@@ -75,8 +78,51 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
     
+    //picker
+    pickerBloodGroupArr = [[NSMutableArray alloc] initWithObjects:@"A+",@"A-",@"B+",@"B-",@"O+",@"O-",@"AB+",@"AB-",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
     
     // Do any additional setup after loading the view.
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerBloodGroupArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerBloodGroupArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    bloodGroupField.text = [NSString stringWithFormat:@"%@",pickerBloodGroupArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:bloodGroupField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
 }
 
 
@@ -154,7 +200,7 @@
     if(textField.returnKeyType==UIReturnKeyNext) {
         UIView *next = [[textField superview] viewWithTag:textField.tag+1];
         [next becomeFirstResponder];
-       // [textField resignFirstResponder];
+        // [textField resignFirstResponder];
     }else if (textField.returnKeyType==UIReturnKeyDone) {
         [textField resignFirstResponder];
     }
