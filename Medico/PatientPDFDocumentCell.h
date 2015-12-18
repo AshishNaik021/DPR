@@ -11,5 +11,7 @@
 @interface PatientPDFDocumentCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *documentNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *pdfImageView;
+@property (weak, nonatomic) IBOutlet UIButton *downloadPDFButton;
+- (IBAction)downloadPDF:(id)sender;
 
 @end

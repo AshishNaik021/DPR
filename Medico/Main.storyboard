@@ -14071,14 +14071,20 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pdf.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="bEe-nt-1fE">
-                                                    <rect key="frame" x="321" y="8" width="46" height="37"/>
-                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYq-mi-YRi">
+                                                    <rect key="frame" x="332" y="9" width="35" height="35"/>
+                                                    <state key="normal" image="downloadgrey.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="downloadPDF:" destination="eyH-ck-h6g" eventType="touchUpInside" id="ZQF-6a-X1m"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="documentNameLabel" destination="1LZ-QW-43f" id="5e4-88-2eU"/>
-                                            <outlet property="pdfImageView" destination="bEe-nt-1fE" id="4gd-bX-rWI"/>
+                                            <outlet property="downloadPDFButton" destination="dYq-mi-YRi" id="yqF-MJ-dXR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -14138,8 +14144,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0b-NP-UZg">
-                                <rect key="frame" x="314" y="125" width="29" height="25"/>
-                                <state key="normal" image="calendar.png">
+                                <rect key="frame" x="304" y="125" width="29" height="25"/>
+                                <state key="normal" image="ic_date_range.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -14148,7 +14154,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqL-9Q-fzc">
                                 <rect key="frame" x="16" y="171" width="22" height="23"/>
-                                <state key="normal" image="unchechRadio.png">
+                                <state key="normal" image="ic_radio_button_unchecked.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -14174,7 +14180,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGt-wJ-dLW">
                                 <rect key="frame" x="16" y="368" width="22" height="23"/>
-                                <state key="normal" image="unchechRadio.png">
+                                <state key="normal" image="ic_radio_button_unchecked.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -15312,6 +15318,7 @@
         <image name="doctorgrey.png" width="60" height="60"/>
         <image name="doctorprofileblue.png" width="60" height="60"/>
         <image name="downArrow.png" width="256" height="256"/>
+        <image name="downloadgrey.png" width="60" height="60"/>
         <image name="financegrey.png" width="60" height="60"/>
         <image name="generalPhysician.png" width="81" height="83"/>
         <image name="gynecologist.png" width="60" height="57"/>
@@ -15338,7 +15345,6 @@
         <image name="patientgirlgrey.png" width="60" height="60"/>
         <image name="patientgrey.png" width="60" height="60"/>
         <image name="patientprofileblue.png" width="60" height="60"/>
-        <image name="pdf.jpeg" width="233" height="216"/>
         <image name="pediatrician.png" width="56" height="56"/>
         <image name="refreshblue.png" width="60" height="60"/>
         <image name="search.png" width="41" height="41"/>

@@ -21,4 +21,6 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)downloadPDF:(id)sender {
+}
 @end
