@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorChangePasswordViewController : UIViewController{
-
-
+@interface DoctorChangePasswordViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
+    
+    
 }
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (retain, nonatomic)  UIPickerView *pickerSpeciality;
+
+@property (nonatomic,retain) NSArray *pickerBloodGroupArr;
+@property (nonatomic,retain) NSArray *pickerSpecialityArr;
+
+
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @property (weak, nonatomic) IBOutlet UIImageView *doctorImage;
@@ -39,6 +48,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 - (IBAction)save:(id)sender;
 
+
 @property NSArray *doctorProfileArr;
 
 @property  BOOL *keyboardVisible;
@@ -49,3 +59,4 @@
 @property CGRect screen;
 
 @end
+
