@@ -311,5 +311,12 @@
     NSString *formattedDate = [dateFormatter stringFromDate:date];
     return formattedDate;
 }
+- (IBAction)addTime:(id)sender{
+    
+}
+- (IBAction)back:(id)sender{
+    
+}
+
 
 @end

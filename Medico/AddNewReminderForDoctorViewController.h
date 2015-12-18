@@ -29,5 +29,9 @@
 - (IBAction)addTimeSlot1:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *addTimeSlot2Button;
 - (IBAction)addTimeSlot2:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *addTimeButton;
+- (IBAction)addTime:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+- (IBAction)back:(id)sender;
 
 @end

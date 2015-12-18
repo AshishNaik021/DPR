@@ -2274,6 +2274,9 @@
                                 <rect key="frame" x="103" y="98" width="236" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="C4l-SR-ARZ" id="dWK-aG-t2i"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwC-0d-TB2">
                                 <rect key="frame" x="103" y="133" width="190" height="20"/>
@@ -2304,12 +2307,18 @@
                                 <state key="normal" title="Add Time">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTime:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="LaW-VS-H9k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2C-Ub-kve">
                                 <rect key="frame" x="216" y="386" width="66" height="30"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="back:" destination="C4l-SR-ARZ" eventType="touchUpInside" id="bS3-PG-RUn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-c5-J8R">
                                 <rect key="frame" x="308" y="128" width="31" height="27"/>
@@ -2399,8 +2408,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="addTimeButton" destination="qQX-Rb-usG" id="a18-og-jYY"/>
                         <outlet property="addTimeSlot1Button" destination="NKQ-vT-exv" id="agL-Y9-2Zw"/>
                         <outlet property="addTimeSlot2Button" destination="seQ-at-Ca5" id="fqK-Ij-UQN"/>
+                        <outlet property="backButton" destination="e2C-Ub-kve" id="fib-9b-4aZ"/>
                         <outlet property="endDateCalendarButton" destination="8R0-RN-d6G" id="diW-Qy-Hme"/>
                         <outlet property="reminderEndDateField" destination="7mG-PD-aED" id="QN6-sK-WdU"/>
                         <outlet property="reminderSetTime1Field" destination="0wL-n8-4cz" id="teT-Ak-f4r"/>
