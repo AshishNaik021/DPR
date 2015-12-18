@@ -46,6 +46,15 @@
 @synthesize readTCButton;
 @synthesize nextButton;
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
+    pickerSpeciality.hidden = YES;
+    [self.view endEditing:YES];
+}
+
+
 -(IBAction)checkButton:(id)sender{
     if(!assistantChecked){
         [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];

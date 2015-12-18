@@ -127,6 +127,7 @@
 
 
 
+
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -488,6 +489,7 @@
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
     [self.view endEditing:YES];
 }
 

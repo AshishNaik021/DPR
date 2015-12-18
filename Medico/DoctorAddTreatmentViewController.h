@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorAddTreatmentViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate>
+@interface DoctorAddTreatmentViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerCategoryArr;
 
 @property (weak, nonatomic) IBOutlet UITextField *searchProcedureField;
 @property (weak, nonatomic) IBOutlet UITextField *categoryField;

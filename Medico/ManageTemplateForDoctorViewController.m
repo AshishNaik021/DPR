@@ -22,6 +22,11 @@
 @synthesize searchField;
 @synthesize searchResult;
 
+@synthesize picker;
+@synthesize pickerCategoryArr;
+@synthesize categoryField;
+
+
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 //{
 //    UIViewController *newVC = segue.destinationViewController;
@@ -120,8 +125,59 @@
     
     allProcedureArr = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingMutableContainers error:&error];
 
+    
+    //picker
+    pickerCategoryArr = [[NSMutableArray alloc] initWithObjects:@"Category1",@"Category2",@"Category3",@"Category4",@"Category5",@"Category6",@"Category7",@"Category8",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerCategoryArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerCategoryArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    categoryField.text = [NSString stringWithFormat:@"%@",pickerCategoryArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:categoryField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
+    [self.view endEditing:YES];
+}
+
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

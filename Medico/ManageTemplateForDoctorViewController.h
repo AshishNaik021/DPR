@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManageTemplateForDoctorViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ManageTemplateForDoctorViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate>
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerCategoryArr;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property IBOutlet NSArray *allProcedureArr;
@@ -22,5 +26,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *categoryField;
 @property (weak, nonatomic) IBOutlet UIButton *addCategoryButton;
 - (IBAction)addCategory:(id)sender;
+
 
 @end

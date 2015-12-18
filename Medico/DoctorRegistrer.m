@@ -538,6 +538,8 @@
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
+    pickerSpeciality.hidden = YES;
     [self.view endEditing:YES];
 }
 @end

@@ -31,6 +31,12 @@
 @synthesize scrollHeight;
 @synthesize scroll;
 
+@synthesize pickerSystemArr;
+@synthesize pickerSystemName;
+@synthesize pickerType;
+@synthesize pickerTypeArr;
+
+
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
@@ -65,8 +71,125 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
 
+    //picker
+    pickerTypeArr = [[NSMutableArray alloc] initWithObjects:@"String",
+                     @"Numeric",
+                     @"String",
+                     @"Currency",
+                     @"Date",
+                     @"String",
+                     @"Numeric",
+                     @"Note",
+                     @"Custom",
+                     nil];
+    
+    pickerSystemArr = [[NSMutableArray alloc] initWithObjects:@"Name",
+                       @"Cost",
+                       @"Procedure Date",
+                       @"Currency",
+                       @"Discount",
+                       @"Taxes",
+                       @"Total",
+                       @"Custom", nil];
+    
+    pickerType = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    pickerType.showsSelectionIndicator = YES;
+    pickerType.hidden = YES;
+    pickerType.delegate = self;
+    pickerType.tag =2;
+    [self.view addSubview:pickerType];
+    
+    pickerSystemName = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    pickerSystemName.showsSelectionIndicator = YES;
+    pickerSystemName.hidden = YES;
+    pickerSystemName.delegate = self;
+    pickerSystemName.tag = 3;
+    [self.view addSubview:pickerSystemName];
+
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    NSInteger retval;
+    if (pickerView.tag ==2) {
+        retval = pickerTypeArr.count;
+    }
+    else if(pickerView.tag == 3){
+        retval = pickerSystemArr.count;
+    }
+    return retval;
+    
+    
+    //return pickerBloodGroupArr.count;
+    
+}
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str;
+    if (pickerView.tag == 2) {
+        str =[NSString stringWithFormat:@"%@",[pickerTypeArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 3){
+        str = [NSString stringWithFormat:@"%@",pickerSystemArr[row]];
+    }
+    return str;
+    
+    
+    
+    //return [pickerBloodGroupArr objectAtIndex:row];
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    if (pickerView.tag == 2) {
+        typeField.text = [NSString stringWithFormat:@"%@",pickerTypeArr[row]];
+        pickerType.hidden = YES;
+    }
+    else if (pickerView.tag == 3){
+        systemNameField.text = [NSString stringWithFormat:@"%@",pickerSystemArr[row]];
+        pickerSystemName.hidden = YES;
+    }
+    else{
+        
+    }
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    /*if ([textField isEqual:scheduleField]) {
+     self.medSchedule.hidden = NO;
+     return NO;
+     }
+     else if ([textField isEqual:numberOfDosesField]){
+     self.dosesPicker.hidden = NO;
+     return NO;
+     }
+     return YES;
+     */
+    
+    if ([textField isEqual:typeField]) {
+        self.pickerType.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    else if ([textField isEqual:systemNameField]){
+        self.pickerSystemName.hidden = NO;
+        return NO;
+    }
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    pickerSystemName.hidden = YES;
+    pickerType.hidden = YES;
+    [self.view endEditing:YES];
+}
+
 
 - (void) viewWillAppear:(BOOL)animated
 {

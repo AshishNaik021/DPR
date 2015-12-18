@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddNewTemplateView : UIViewController<UITextFieldDelegate>
+@interface AddNewTemplateView : UIViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+
+@property (retain, nonatomic)  UIPickerView *pickerSystemName;
+@property (nonatomic,retain) NSArray *pickerSystemArr;
+
+@property (retain, nonatomic)  UIPickerView *pickerType;
+@property (nonatomic,retain) NSArray *pickerTypeArr;
 
 @property (weak, nonatomic) IBOutlet UITextField *systemNameField;
 @property (weak, nonatomic) IBOutlet UITextField *typeField;
