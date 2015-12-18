@@ -1743,7 +1743,6 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="changeImage:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="MI5-MU-3pe"/>
                                             <action selector="changeImage:" destination="rur-Ft-b1n" eventType="touchUpInside" id="iOP-gC-V6M"/>
                                         </connections>
                                     </button>
@@ -1804,31 +1803,6 @@
                                             <outlet property="delegate" destination="rur-Ft-b1n" id="VlU-pc-zTb"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjk-xm-hK7">
-                                        <rect key="frame" x="16" y="418" width="21" height="22"/>
-                                        <state key="normal" image="ic_check_box_outline_blank.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="check:" destination="rur-Ft-b1n" eventType="touchUpInside" id="ycT-ed-Ddf"/>
-                                            <action selector="checkButton:" destination="0cL-gk-Fiz" eventType="touchUpInside" id="ZEz-8W-Hgy"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agree to Terms and Conditions." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r2-W0-HPB">
-                                        <rect key="frame" x="50" y="418" width="249" height="21"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6N-Iy-Q3c">
-                                        <rect key="frame" x="45" y="434" width="75" height="30"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
-                                        <state key="normal" title="Read T &amp; C">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="readTermsConditions:" destination="rur-Ft-b1n" eventType="touchUpInside" id="IGm-6w-rgt"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-rC-1fh">
                                         <rect key="frame" x="85" y="352" width="29" height="21"/>
                                         <state key="normal" image="locationgrey.png">
@@ -1913,17 +1887,8 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYA-OD-FfF">
-                                        <rect key="frame" x="13" y="478" width="135" height="30"/>
-                                        <state key="normal" title="Change Password">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="changePassword:" destination="rur-Ft-b1n" eventType="touchUpInside" id="2Fy-xY-F4K"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdY-uP-fPc">
-                                        <rect key="frame" x="302" y="478" width="54" height="30"/>
+                                        <rect key="frame" x="302" y="443" width="54" height="30"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                         <state key="normal" title="Save">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1944,8 +1909,6 @@
                         <outlet property="bloodGroupField" destination="sVh-JK-hHH" id="Xb6-Mi-o8s"/>
                         <outlet property="calendarButton" destination="dmm-5K-SEt" id="LoD-cX-K8d"/>
                         <outlet property="changeImageButton" destination="k4V-xa-KHN" id="9gf-lH-d4Y"/>
-                        <outlet property="changePasswordButton" destination="zYA-OD-FfF" id="aQW-3C-PGy"/>
-                        <outlet property="checkButton" destination="tjk-xm-hK7" id="stZ-KS-eO6"/>
                         <outlet property="dateoBirthField" destination="MP4-Z6-4TR" id="uMP-UN-ysM"/>
                         <outlet property="doctorImage" destination="u4v-Va-Lce" id="bU3-tt-iyf"/>
                         <outlet property="emailField" destination="cB9-SH-OXd" id="QGj-td-JPc"/>
@@ -1954,7 +1917,6 @@
                         <outlet property="mobileField" destination="3Yh-Xf-cab" id="baG-oW-lf8"/>
                         <outlet property="nameField" destination="3oF-TX-wcH" id="oM6-WI-MQr"/>
                         <outlet property="passwordField" destination="m4Y-De-EOW" id="NJv-SU-mdx"/>
-                        <outlet property="readTCButton" destination="G6N-Iy-Q3c" id="U6I-tL-UA9"/>
                         <outlet property="saveButton" destination="LdY-uP-fPc" id="iid-ot-G9N"/>
                         <outlet property="scroll" destination="axW-0W-IHA" id="U4I-k7-xA3"/>
                         <outlet property="specializationField" destination="6E5-3e-pEj" id="tkv-6P-kig"/>
