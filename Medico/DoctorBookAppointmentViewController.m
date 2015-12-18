@@ -94,13 +94,7 @@
     
 }
 -(void)setLastVisitedDateLabel{
-    if([[self.patientArr valueForKey:@"lastVisited"] isKindOfClass:[NSNull class]]){
-        self.lastVisitedDateLabel.text = @"Not Visited";
-    }
-    else{
-        self.lastVisitedDateLabel.text = [self.patientArr valueForKey:@"lastVisited"];
-        self.lastVisitedDateLabel.text = @"Not Visited";
-    }
+        self.dateTextField.text = [self.patientArr valueForKey:@"bookDate"];
 }
 
 -(void)setPatientName{

@@ -6601,14 +6601,20 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWy-gn-vPC">
-                                <rect key="frame" x="155" y="155" width="138" height="21"/>
+                                <rect key="frame" x="155" y="155" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fkH-pd-bns" id="Y3O-FB-Jbk"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZED-fI-sKB">
                                 <rect key="frame" x="155" y="182" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fkH-pd-bns" id="8z4-c0-Nc7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Occupied" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEA-cS-AaH">
                                 <rect key="frame" x="45" y="471" width="100" height="16"/>
@@ -6640,15 +6646,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adz-5J-7Y3">
-                                <rect key="frame" x="301" y="152" width="24" height="24"/>
-                                <state key="normal" image="ic_date_range.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="calendar:" destination="fkH-pd-bns" eventType="touchUpInside" id="LSZ-5a-46K"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeY-sy-mqV">
                                 <rect key="frame" x="157" y="333" width="58" height="25"/>
                                 <color key="backgroundColor" red="0.56862745100000001" green="0.81176470590000005" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -6678,7 +6675,6 @@
                     <connections>
                         <outlet property="appointmentNameLable" destination="J9X-HC-XNG" id="1ts-Zv-h0H"/>
                         <outlet property="bookNowButton" destination="smR-5Y-5CD" id="hKE-Oo-U6h"/>
-                        <outlet property="calendarButton" destination="adz-5J-7Y3" id="ZIs-rU-SDq"/>
                         <outlet property="cancelAppointmentButton" destination="wR4-Hd-OBT" id="FLa-xY-JgE"/>
                         <outlet property="dateTextField" destination="HWy-gn-vPC" id="Ots-mF-j4O"/>
                         <outlet property="shiftLabel" destination="KgS-zu-rj8" id="jgq-By-PJD"/>
