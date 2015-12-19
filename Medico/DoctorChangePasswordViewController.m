@@ -425,7 +425,7 @@
         // Set the text to the date currently displayed by the picker.
         self.dateoBirthField.inputView = datePicker;
         self.dateoBirthField.text = [self formatDate:datePicker.date];
-        
+    
     }
 }
 

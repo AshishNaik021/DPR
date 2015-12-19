@@ -239,11 +239,14 @@
     
     //picker
     pickerArr = [[NSMutableArray alloc] initWithObjects:@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
-    
-    summaryPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 200, 300, 200)];
+
+
+    summaryPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 200)];
     summaryPicker.showsSelectionIndicator = YES;
     summaryPicker.hidden = YES;
     summaryPicker.delegate = self;
+    [summaryPicker setBackgroundColor:[UIColor whiteColor]];
+
     [self.view addSubview:summaryPicker];
 }
 
