@@ -14,6 +14,7 @@
     
 }
 @property (retain, nonatomic)  UIPickerView *summaryPicker;
+//@property (retain,nonatomic) IBOutlet UITableView *autocompleteTableView;
 @property (nonatomic,retain) NSArray *pickerArr;
 @property (weak, nonatomic) IBOutlet UIButton *summaryVisiteTypeButton;
 - (IBAction)summaryVisiteType:(id)sender;
