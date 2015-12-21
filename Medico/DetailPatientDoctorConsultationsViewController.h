@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailPatientDoctorConsultationsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface DetailPatientDoctorConsultationsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *doctorProfileImage;
 @property (weak, nonatomic) IBOutlet UIButton *hideDetailsButton;
@@ -32,8 +32,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *profileLocationField;
 @property (weak, nonatomic) IBOutlet UITextField *profilePracticeNameField;
 @property (weak, nonatomic) IBOutlet UITextView *profileSpecializationField;
+@property (weak, nonatomic) IBOutlet UILabel *bookOnlineAppointShiftTimeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *bookOnlineAppointBookAppointmentButton;
+- (IBAction)bookOnlineAppointBookAppointment:(id)sender;
 
 @property IBOutlet NSString *value;
+@property (weak, nonatomic) IBOutlet UILabel *bookOnlineAppointClinicNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *bookOnlineAppointVisiteTypeField;
+
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerVisiteTypeArr;
 
 
 - (IBAction)hideDetails:(id)sender;

@@ -39,14 +39,16 @@
     radioButton = NO;
     self.listContentView.hidden = FALSE;
     self.mapContentView.hidden = TRUE;
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     
     self.navigationItem.title = @"Search Doctor";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
+    [listRadioButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
     
    /*
     NSString *fileName = [[NSBundle mainBundle] pathForResource:@"searchDoctor" ofType:@"json"];
@@ -130,8 +132,8 @@ return cell;
 }
 - (IBAction)listRadio:(id)sender {
     
-    [listRadioButton setImage:[UIImage imageNamed:@"checkRadio.png"] forState:UIControlStateNormal];
-    [mapRadioButton setImage:[UIImage imageNamed:@"unchechRadio.png"] forState:UIControlStateNormal];
+    [listRadioButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [mapRadioButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
     self.mapContentView.hidden = TRUE;
     self.listContentView.hidden = FALSE;
     
@@ -139,8 +141,8 @@ return cell;
 
 - (IBAction)mapRadio:(id)sender {
     
-    [mapRadioButton setImage:[UIImage imageNamed:@"checkRadio.png"] forState:UIControlStateNormal];
-    [listRadioButton setImage:[UIImage imageNamed:@"unchechRadio.png"] forState:UIControlStateNormal];
+    [mapRadioButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [listRadioButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
     self.listContentView.hidden = TRUE;
     self.mapContentView.hidden = FALSE;
 

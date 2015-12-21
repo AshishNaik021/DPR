@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientSearchDoctorViewController : UIViewController
+@interface PatientSearchDoctorViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *homeopathyButton;
 @property (weak, nonatomic) IBOutlet UIButton *ayurvedaButton;
 @property (weak, nonatomic) IBOutlet UIButton *acupunctureButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)search:(id)sender;
 - (IBAction)pediatricianDoctor:(id)sender;

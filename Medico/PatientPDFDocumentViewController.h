@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PatientPDFDocumentViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *addNewDocumentButton;
+- (IBAction)addNewDocument:(id)sender;
 
 
 @end

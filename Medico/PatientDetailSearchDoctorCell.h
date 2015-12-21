@@ -21,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *bookOnlineButton;
 - (IBAction)bookOnline:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *addDoctorButton;
+- (IBAction)addDoctor:(id)sender;
 
 @end

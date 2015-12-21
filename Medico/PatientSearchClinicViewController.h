@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientSearchClinicViewController : UIViewController
+@interface PatientSearchClinicViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
 
 @property (weak, nonatomic) IBOutlet UITextField *searchClinicField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 - (IBAction)search:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *addNewClinicButton;
 - (IBAction)addNewClinic:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end

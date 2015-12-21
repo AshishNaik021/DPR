@@ -15,6 +15,7 @@
 
 @end
 
+
 @implementation PatientPDFDocumentViewController
 
 - (void) homePage:(id)sender{
@@ -39,8 +40,8 @@
     UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
 self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
-        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDocument:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
+      //  UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDocument:)];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
@@ -85,4 +86,10 @@ self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120
 }
 */
 
+- (IBAction)addNewDocument:(id)sender {
+    
+    PatientUploadPDFDocumentViewController *upload =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientUploadPDFDocumentViewController"];
+    [self.navigationController pushViewController:upload animated:YES];
+}
 @end

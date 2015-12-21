@@ -9,6 +9,7 @@
 #import "CreateDoctorsClinicSettingsViewController.h"
 #import "AddSlotsForDoctorClinicSettingViewController.h"
 #import "DoctorLandingPageView.h"
+#import "PatientLandingPageViewController.h"
 
 @interface CreateDoctorsClinicSettingsViewController ()
 
@@ -50,6 +51,7 @@
 @synthesize returnArr;
 @synthesize passDictionaryForSlots = _passDictionaryForSlots;
 @synthesize passString = _passString;
+
 
 
 
@@ -135,10 +137,21 @@
 }
 
 - (void) homePage:(id)sender{
-    DoctorLandingPageView *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
-    
+//    DoctorLandingPageView *DoctorHome =
+//    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+//    [self.navigationController pushViewController:DoctorHome animated:YES];
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+        
+        DoctorLandingPageView *DoctorHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:DoctorHome animated:YES];
+    }
+    else{
+        PatientLandingPageViewController *patientHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+        [self.navigationController pushViewController:patientHome animated:YES];
+    }
+
 }
 
 - (void)viewDidLoad {

@@ -24,6 +24,9 @@
 @synthesize clinicsButton;
 @synthesize profileSpecializationField;
 @synthesize value = _value;
+@synthesize bookOnlineAppointVisiteTypeField;
+@synthesize pickerVisiteTypeArr;
+@synthesize picker;
 
 
 
@@ -62,9 +65,62 @@
         profileContentView.hidden = TRUE;
         bookOnlineAppointContentView.hidden =FALSE;
     }
+    
+    //picker
+    pickerVisiteTypeArr = [[NSMutableArray alloc] initWithObjects:@"Select Visite Type",@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 250, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
 
 
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerVisiteTypeArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerVisiteTypeArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    bookOnlineAppointVisiteTypeField.text = [NSString stringWithFormat:@"%@",pickerVisiteTypeArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:bookOnlineAppointVisiteTypeField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
+    [self.view endEditing:YES];
+}
+
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
@@ -171,5 +227,7 @@
     bookOnlineAppointContentView.hidden = TRUE;
     [profileButton setTitleColor:[UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]forState:UIControlStateNormal];
     [clinicsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+- (IBAction)bookOnlineAppointBookAppointment:(id)sender {
 }
 @end

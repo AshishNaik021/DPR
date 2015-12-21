@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientUploadPDFDocumentViewController : UIViewController
+@interface PatientUploadPDFDocumentViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *dateField;
 @property (weak, nonatomic) IBOutlet UIButton *calendarButton;
@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *referredByField;
 @property (weak, nonatomic) IBOutlet UIButton *addLabReportButton;
 - (IBAction)addLabReport:(id)sender;
+
 
 
 

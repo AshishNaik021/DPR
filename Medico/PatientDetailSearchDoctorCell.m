@@ -27,4 +27,6 @@
 }
 - (IBAction)bookOnline:(id)sender {
 }
+- (IBAction)addDoctor:(id)sender {
+}
 @end
