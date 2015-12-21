@@ -2339,7 +2339,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O95-fE-dLn">
-                                <rect key="frame" x="308" y="195" width="31" height="27"/>
+                                <rect key="frame" x="270" y="196" width="25" height="25"/>
                                 <state key="normal" image="Timing.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2366,7 +2366,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s87-HS-y56">
-                                <rect key="frame" x="308" y="226" width="31" height="27"/>
+                                <rect key="frame" x="270" y="227" width="25" height="25"/>
                                 <state key="normal" image="Timing.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2393,7 +2393,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGt-8Y-974">
-                                <rect key="frame" x="308" y="257" width="31" height="27"/>
+                                <rect key="frame" x="270" y="258" width="25" height="25"/>
                                 <state key="normal" image="Timing.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

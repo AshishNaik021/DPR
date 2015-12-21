@@ -11,6 +11,7 @@
 #import "ManageReminderCell.h"
 #import "ReminderDetailsViewController.h"
 #import "AddNewReminderForDoctorViewController.h"
+#import "PatientLandingPageViewController.h"
 
 @interface ManageReminderViewController ()
 
@@ -20,10 +21,18 @@
 @synthesize reminderArr;
 
 - (void) homePage:(id)sender{
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+
     DoctorLandingPageView *DoctorHome =
     [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
     [self.navigationController pushViewController:DoctorHome animated:YES];
-    
+    }
+    else{
+        PatientLandingPageViewController *patientHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+        [self.navigationController pushViewController:patientHome animated:YES];
+    }
+
 }
 
 

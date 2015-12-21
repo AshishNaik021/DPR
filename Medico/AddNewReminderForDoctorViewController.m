@@ -8,6 +8,7 @@
 
 #import "AddNewReminderForDoctorViewController.h"
 #import "DoctorLandingPageView.h"
+#import "PatientLandingPageViewController.h"
 
 @interface AddNewReminderForDoctorViewController ()
 
@@ -29,9 +30,18 @@
 @synthesize endDateCalendarButton;
 
 - (void) homePage:(id)sender{
-    DoctorLandingPageView *DoctorHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
-    [self.navigationController pushViewController:DoctorHome animated:YES];
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+        
+        DoctorLandingPageView *DoctorHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:DoctorHome animated:YES];
+    }
+    else{
+        PatientLandingPageViewController *patientHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
+        [self.navigationController pushViewController:patientHome animated:YES];
+    }
+
     
 }
 - (void)viewDidLoad {
