@@ -42,6 +42,10 @@
 @synthesize picker;
 @synthesize pickerBloodGroupArr;
 
+-(IBAction)readTermConditions:(id)sender{
+    
+}
+
 -(IBAction)checkButton:(id)sender{
     if(!patientChecked){
         [checkButton setImage:[UIImage imageNamed:@"ic_check_box.png"]forState:UIControlStateNormal];

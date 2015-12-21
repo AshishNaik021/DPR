@@ -26,6 +26,10 @@
 @synthesize screen;
 @synthesize scrollHeight;
 @synthesize scroll;
+@synthesize picker;
+@synthesize pickerBloodGroupArr;
+@synthesize bloodGroupField;
+@synthesize dateofBirthField;
 
 
 - (void) homePage:(id)sender{
@@ -38,6 +42,8 @@
 - (void)viewDidLoad {
     NSLog(@"PatientChangePasswordViewController.m");
     [super viewDidLoad];
+    
+    dateofBirthField.tag = 6;
     
     UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
@@ -62,7 +68,109 @@
     [scroll setScrollEnabled:YES];
     [scroll setContentSize:CGSizeMake(width, scrollHeight)];
     // Do any additional setup after loading the view.
+    
+    //picker
+    pickerBloodGroupArr = [[NSMutableArray alloc] initWithObjects:@"Select Blood Group",@"A+",@"A-",@"B+",@"B-",@"O+",@"O-",@"AB+",@"AB-",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 300, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
+    
+
+    
+    
 }
+
+
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
+
+- (void)updateDateField:(id)sender
+{
+    if (dateofBirthField.isEditing) {
+        UIDatePicker *picker = (UIDatePicker*)self.dateofBirthField.inputView;
+        self.dateofBirthField.text = [self formatDate:picker.date];
+    }
+    
+}
+
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    textField.returnKeyType = UIReturnKeyDone;
+    if (textField.tag == 6) {
+        self.dateofBirthField = textField;
+        
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 2;
+        datePicker.minimumDate = [NSDate date];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.dateofBirthField.inputView = datePicker;
+        self.dateofBirthField.text = [self formatDate:datePicker.date];
+        
+    }
+}
+
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerBloodGroupArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerBloodGroupArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    bloodGroupField.text = [NSString stringWithFormat:@"%@",pickerBloodGroupArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:bloodGroupField]) {
+        self.picker.hidden = NO;
+       // [bloodGroupField resignFirstResponder];
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
+    [self.view endEditing:YES];
+}
+
+
+
 
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -134,6 +242,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    
     if(textField.returnKeyType==UIReturnKeyNext) {
         UIView *next = [[textField superview] viewWithTag:textField.tag+1];
         [next becomeFirstResponder];

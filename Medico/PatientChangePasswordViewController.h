@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientChangePasswordViewController : UIViewController
+@interface PatientChangePasswordViewController : UIViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scroll;
 
 @property (weak, nonatomic) IBOutlet UIImageView *patientPictureImage;
@@ -28,6 +29,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *changePasswordButton;
 @property (weak, nonatomic) IBOutlet UIButton *calendarButton;
 - (IBAction)calendar:(id)sender;
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerBloodGroupArr;
+
 
 
 @property BOOL *passCheckBool;

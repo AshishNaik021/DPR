@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xfj-QT-kHQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7528.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hzv-uG-u24">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7518.3"/>
     </dependencies>
@@ -280,7 +280,7 @@
         <!--Profile-->
         <scene sceneID="RHO-aW-7AX">
             <objects>
-                <viewController storyboardIdentifier="PatientChangePasswordViewController" id="HNu-Zk-d5t" customClass="PatientChangePasswordViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PatientChangePasswordViewController" automaticallyAdjustsScrollViewInsets="NO" id="HNu-Zk-d5t" customClass="PatientChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QU9-Wy-5OI"/>
                         <viewControllerLayoutGuide type="bottom" id="ygz-TZ-tDx"/>
@@ -336,12 +336,12 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-0G-TgE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4V-0G-TgE">
                                         <rect key="frame" x="20" y="331" width="70" height="21"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth•" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvV-96-xAn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvV-96-xAn">
                                         <rect key="frame" x="20" y="302" width="121" height="21"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <nil key="highlightedColor"/>
@@ -362,7 +362,7 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="lXI-Px-rx8" id="5ho-cz-Yps"/>
+                                            <outlet property="delegate" destination="HNu-Zk-d5t" id="cRa-6S-b5O"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3g9-PJ-dzD">
@@ -371,7 +371,7 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="lXI-Px-rx8" id="edb-Lx-ZUO"/>
+                                            <outlet property="delegate" destination="HNu-Zk-d5t" id="BUs-mA-kIg"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-bQ-rgu">
@@ -380,16 +380,16 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="lXI-Px-rx8" id="bdt-Dn-AgZ"/>
+                                            <outlet property="delegate" destination="HNu-Zk-d5t" id="rqo-bA-Avz"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJt-e9-980">
                                         <rect key="frame" x="149" y="362" width="207" height="21"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="lXI-Px-rx8" id="5mr-2N-FmB"/>
+                                            <outlet property="delegate" destination="HNu-Zk-d5t" id="1mJ-9N-jir"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3N-Q9-RoZ">
@@ -398,7 +398,7 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="lXI-Px-rx8" id="NKZ-TZ-3sa"/>
+                                            <outlet property="delegate" destination="HNu-Zk-d5t" id="ZJR-2y-GGG"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Gx-O4-rL3">
@@ -492,7 +492,7 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <outlet property="delegate" destination="lXI-Px-rx8" id="CZm-Sp-nmm"/>
+                                            <outlet property="delegate" destination="HNu-Zk-d5t" id="Do9-QP-xY7"/>
                                         </connections>
                                     </textField>
                                 </subviews>
