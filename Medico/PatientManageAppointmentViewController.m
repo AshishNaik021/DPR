@@ -27,9 +27,9 @@
 }
 
 - (void) addNewAppointment:(id)sender{
-    PatientNewAppointmentViewController *PatientHome =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientNewAppointmentViewController"];
-    [self.navigationController pushViewController:PatientHome animated:YES];
+//    PatientNewAppointmentViewController *PatientHome =
+//    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientNewAppointmentViewController"];
+//    [self.navigationController pushViewController:PatientHome animated:YES];
     
 }
 
@@ -37,11 +37,18 @@
     [super viewDidLoad];
     NSLog(@"PatientManageAppointmentViewController.m");
     
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+//    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+//    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+//   // UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewAppointment:)];
+//    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
+//    self.navigationItem.rightBarButtonItems = buttonArr;
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewAppointment:)];
-    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton,addButton, nil];
+    NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+
+    
     
     self.navigationItem.title = @"Appointments";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
@@ -149,4 +156,9 @@
 }
 */
 
+- (IBAction)addManageAppointment:(id)sender {
+    PatientNewAppointmentViewController *PatientHome =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"PatientNewAppointmentViewController"];
+    [self.navigationController pushViewController:PatientHome animated:YES];
+}
 @end

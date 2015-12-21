@@ -10,5 +10,9 @@
 
 @interface YearlyCountAppointmentForPatientDoctorConsultationViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIButton *addNewAppointmentButton;
+- (IBAction)addNewAppointment:(id)sender;
+
+
 
 @end

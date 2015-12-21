@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PatientClinicProfileAndAppointmentsViewController : UIViewController
+@interface PatientClinicProfileAndAppointmentsViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *countDocumentButton;
 - (IBAction)countDocument:(id)sender;
 
@@ -28,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIView *bookAppointmentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *appointmentScrollView;
+@property (weak, nonatomic) IBOutlet UILabel *bookAppointmentClinicNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *bookAppointmentVisiteTypeField;
+@property (weak, nonatomic) IBOutlet UILabel *bookAppointmentShiftLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *profileNameField;
 @property (weak, nonatomic) IBOutlet UITextField *profileEmailField;
@@ -41,6 +45,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *appointmentBookOnlineAMbutton;
 - (IBAction)appointmentBookOnlineAM:(id)sender;
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerVisiteTypeArr;
 
 /*
 

@@ -15,6 +15,7 @@
 
 @end
 
+
 @implementation PatientClinicProfileAndAppointmentsViewController
 @synthesize appointmentView;
 @synthesize profileView;
@@ -22,6 +23,10 @@
 @synthesize appointmentsButton;
 @synthesize profileButton;
 @synthesize profileSpecialtyField;
+@synthesize picker;
+@synthesize pickerVisiteTypeArr;
+@synthesize bookAppointmentVisiteTypeField;
+
 
 - (void) homePage:(id)sender{
     PatientLandingPageViewController *PatientHome =
@@ -32,8 +37,9 @@
 - (void)viewDidLoad {
     NSLog(@"PatientClinicProfileAndAppointmentsViewController.m");
     [super viewDidLoad];
-    UIImage *myImage = [UIImage imageNamed:@"home.png"];
+    UIImage *myImage = [UIImage imageNamed:@"ic_home.png"];
     UIBarButtonItem *homeButton = [[UIBarButtonItem alloc]  initWithImage:myImage style:UIBarButtonItemStylePlain target:self action:@selector(homePage:)];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
     NSArray *buttonArr = [[NSArray alloc] initWithObjects:homeButton, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
     
@@ -48,8 +54,61 @@
     
     [profileSpecialtyField.layer setBorderWidth:1.0];
 
+    
+    //picker
+    pickerVisiteTypeArr = [[NSMutableArray alloc] initWithObjects:@"Select Visite Type",@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 220, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
+    
     // Do any additional setup after loading the view.
 }
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerVisiteTypeArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerVisiteTypeArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    bookAppointmentVisiteTypeField.text = [NSString stringWithFormat:@"%@",pickerVisiteTypeArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:bookAppointmentVisiteTypeField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
+    [self.view endEditing:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

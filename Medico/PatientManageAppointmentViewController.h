@@ -10,5 +10,7 @@
 
 @interface PatientManageAppointmentViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *addManageAppointmentButton;
+- (IBAction)addManageAppointment:(id)sender;
 
 @end
