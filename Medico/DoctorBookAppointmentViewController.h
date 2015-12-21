@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoctorBookAppointmentViewController : UIViewController
+@interface DoctorBookAppointmentViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource, UIPickerViewDelegate>
+
 
 @property NSArray *patientArr;
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerVisiteTypeArr;
 
 - (IBAction)timeClicked1:(id)sender;
 - (IBAction)timeClicked2:(id)sender;

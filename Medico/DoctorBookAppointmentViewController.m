@@ -43,6 +43,9 @@
 @synthesize time7;
 @synthesize time8;
 @synthesize time9;
+@synthesize picker;
+@synthesize pickerVisiteTypeArr;
+
 
 
 
@@ -84,8 +87,55 @@
     else{
         [self noNetworkAlert];
     }
+    
+    //picker
+    pickerVisiteTypeArr = [[NSMutableArray alloc] initWithObjects:@"Select Visite Type",@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 150, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
    // Do any additional setup after loading the view.
 }
+
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerVisiteTypeArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerVisiteTypeArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    typeTextField.text = [NSString stringWithFormat:@"%@",pickerVisiteTypeArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:typeTextField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
 -(void)noNetworkAlert{
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Opps!" message:@"Please check for Internet Connectivity." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
