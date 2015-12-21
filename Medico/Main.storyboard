@@ -435,7 +435,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jam-Mn-L7B">
-                                        <rect key="frame" x="326" y="300" width="30" height="23"/>
+                                        <rect key="frame" x="301" y="302" width="20" height="20"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -953,7 +953,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrI-U7-Ya5">
-                                        <rect key="frame" x="328" y="282" width="28" height="21"/>
+                                        <rect key="frame" x="294" y="282" width="28" height="21"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1214,7 +1214,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ael-GQ-VhD">
-                                        <rect key="frame" x="323" y="251" width="34" height="29"/>
+                                        <rect key="frame" x="299" y="255" width="20" height="20"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1829,7 +1829,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-5K-SEt">
-                                        <rect key="frame" x="328" y="323" width="28" height="21"/>
+                                        <rect key="frame" x="293" y="323" width="28" height="21"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2321,7 +2321,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-c5-J8R">
-                                <rect key="frame" x="308" y="128" width="31" height="27"/>
+                                <rect key="frame" x="272" y="132" width="20" height="20"/>
                                 <state key="normal" image="ic_date_range.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2330,7 +2330,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R0-RN-d6G">
-                                <rect key="frame" x="308" y="161" width="31" height="27"/>
+                                <rect key="frame" x="272" y="165" width="20" height="20"/>
                                 <state key="normal" image="ic_date_range.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -5020,7 +5020,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dny-Zw-5AI">
-                                                <rect key="frame" x="329" y="284" width="26" height="21"/>
+                                                <rect key="frame" x="296" y="284" width="26" height="21"/>
                                                 <state key="normal" image="ic_date_range.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -5375,7 +5375,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8md-tu-sKG">
-                                        <rect key="frame" x="319" y="282" width="34" height="36"/>
+                                        <rect key="frame" x="278" y="290" width="20" height="20"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -10586,7 +10586,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2I-0Q-vEX">
-                                        <rect key="frame" x="320" y="240" width="25" height="23"/>
+                                        <rect key="frame" x="287" y="240" width="25" height="23"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -10595,7 +10595,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAB-6c-9N4">
-                                        <rect key="frame" x="320" y="267" width="25" height="23"/>
+                                        <rect key="frame" x="287" y="267" width="25" height="23"/>
                                         <state key="normal" image="ic_date_range.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -13901,7 +13901,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-vk-UwR">
-                                <rect key="frame" x="320" y="231" width="25" height="23"/>
+                                <rect key="frame" x="291" y="232" width="21" height="21"/>
                                 <state key="normal" image="ic_date_range.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -13910,7 +13910,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXk-qX-x69">
-                                <rect key="frame" x="320" y="258" width="25" height="23"/>
+                                <rect key="frame" x="291" y="259" width="21" height="21"/>
                                 <state key="normal" image="ic_date_range.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -14154,7 +14154,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0b-NP-UZg">
-                                <rect key="frame" x="304" y="125" width="29" height="25"/>
+                                <rect key="frame" x="274" y="127" width="20" height="20"/>
                                 <state key="normal" image="ic_date_range.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
