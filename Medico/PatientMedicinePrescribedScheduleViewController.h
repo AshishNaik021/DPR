@@ -16,13 +16,21 @@
 @property (weak, nonatomic) IBOutlet UITextField *totalMedicationDurationField;
 @property (weak, nonatomic) IBOutlet UITextField *startDateField;
 @property (weak, nonatomic) IBOutlet UITextField *endDateField;
-@property (weak, nonatomic) IBOutlet UITextView *scheduleTimeTextView;
+@property (weak, nonatomic) IBOutlet UITextField *scheduleTimeTextView;
 @property (weak, nonatomic) IBOutlet UIButton *medicineReminderButton;
-@property (weak, nonatomic) IBOutlet UITextView *doctorsInstructionTextView;
+@property (weak, nonatomic) IBOutlet UITextField *doctorsInstructionTextView;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIButton *startDateButton;
 @property (weak, nonatomic) IBOutlet UIButton *endDateButton;
 @property BOOL *check;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll;
+
+@property  BOOL *keyboardVisible;
+@property CGPoint offset;
+@property CGFloat width;
+@property CGFloat height;
+@property CGFloat scrollHeight;
+@property CGRect screen;
 
 - (IBAction)save:(id)sender;
 - (IBAction)medicineReminder:(id)sender;
