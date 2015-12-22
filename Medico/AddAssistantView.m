@@ -12,6 +12,7 @@
 
 @end
 
+
 @implementation AddAssistantView
 @synthesize createNewBtn;
 @synthesize nameField;
@@ -34,6 +35,9 @@
 @synthesize screen;
 @synthesize scrollHeight;
 @synthesize scroll;
+
+@synthesize picker;
+@synthesize pickerBloodGroupArr;
 
 -(void)checkBtn:(id)sender{
     if(!CreateNew){
@@ -75,7 +79,53 @@
     locationField.tag = 6;
     bloodGroupField.tag = 7;
     // Do any additional setup after loading the view.
+    
+    //picker
+    pickerBloodGroupArr = [[NSMutableArray alloc] initWithObjects:@"Select Blood Group",@"A+",@"A-",@"B+",@"B-",@"O+",@"O-",@"AB+",@"AB-",nil];
+    
+    picker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 450, 300, 200)];
+    picker.showsSelectionIndicator = YES;
+    picker.hidden = YES;
+    picker.delegate = self;
+    //picker.tag =2;
+    [self.view addSubview:picker];
 }
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    return pickerBloodGroupArr.count;
+}
+
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    return [pickerBloodGroupArr objectAtIndex:row];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    
+    bloodGroupField.text = [NSString stringWithFormat:@"%@",pickerBloodGroupArr[row]];
+    picker.hidden = YES;
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if ([textField isEqual:bloodGroupField]) {
+        self.picker.hidden = NO;
+        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
+        return NO;
+    }
+    
+    return YES;
+}
+
+
+
 
 - (void) viewWillAppear:(BOOL)animated
 {
@@ -531,6 +581,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
+    picker.hidden = YES;
     [self.view endEditing:YES];
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField

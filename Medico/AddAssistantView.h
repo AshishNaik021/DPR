@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface AddAssistantView : UIViewController<UITextFieldDelegate>
+@interface AddAssistantView : UIViewController<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+
+@property (retain, nonatomic)  UIPickerView *picker;
+@property (nonatomic,retain) NSArray *pickerBloodGroupArr;
+
+
 @property IBOutlet UIButton *createNewBtn;
 -(IBAction)checkBtn:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *changeImageButton;

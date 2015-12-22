@@ -7,13 +7,30 @@
 //
 
 #import "MarkAndCreateAppointmentViewController.h"
+#import "DoctorLandingPageView.h"
 
 @interface MarkAndCreateAppointmentViewController ()
 
 @end
 
 @implementation MarkAndCreateAppointmentViewController
+@synthesize createAppointmentButton;
+@synthesize markAsButton;
+@synthesize allSlotsButton;
+@synthesize selectedSlotsButton;
+@synthesize selectTimeButton;
+@synthesize wholeWeekButton;
 
+- (void) homePage:(id)sender{
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"loggedInUserType"] isEqualToString:@"Doctor"]) {
+        DoctorLandingPageView *DoctorHome =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"DoctorHome"];
+        [self.navigationController pushViewController:DoctorHome animated:YES];
+    }
+    else{
+        NSLog(@"Navigate to patient");
+    }
+}
 
 - (void)viewDidLoad {
     NSLog(@"MarkAndCreateAppointmentViewController.m");
@@ -29,6 +46,7 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
+    [createAppointmentButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
 }
 
@@ -60,16 +78,50 @@
 }
 
 - (IBAction)createAppointment:(id)sender {
+    
+    [createAppointmentButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [markAsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    
+
 }
 - (IBAction)markAs:(id)sender {
+    
+    [markAsButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [createAppointmentButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    
+
 }
 - (IBAction)allSlots:(id)sender {
+    
+    [allSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [selectTimeButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [selectedSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [wholeWeekButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    
 }
 - (IBAction)selectedSlots:(id)sender {
+    
+    [selectedSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [selectTimeButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [allSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [wholeWeekButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+
 }
 - (IBAction)selectTime:(id)sender {
+    
+    [selectTimeButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [allSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [selectedSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [wholeWeekButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+
 }
 - (IBAction)wholeWeek:(id)sender {
+    
+    [wholeWeekButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
+    [selectTimeButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [selectedSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+    [allSlotsButton setImage:[UIImage imageNamed:@"ic_radio_button_unchecked.png"] forState:UIControlStateNormal];
+
 }
 - (IBAction)save:(id)sender {
 }

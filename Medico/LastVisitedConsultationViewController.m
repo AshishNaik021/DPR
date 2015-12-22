@@ -16,6 +16,7 @@
 
 @end
 
+
 @implementation LastVisitedConsultationViewController
 @synthesize visitedButton;
 @synthesize notVisitedButton;

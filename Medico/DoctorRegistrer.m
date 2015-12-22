@@ -125,23 +125,42 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     textField.returnKeyType = UIReturnKeyDone;
-    if (textField.tag == 7) {
-        self.dateofBirthField = textField;
-        
-        // Create a date picker for the date field.
-        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
-        datePicker.datePickerMode = UIDatePickerModeDate;
-        datePicker.tag = 2;
-        datePicker.minimumDate = [NSDate date];
-        [datePicker setDate:[NSDate date]];
-        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
-        
-        // If the date field has focus, display a date picker instead of keyboard.
-        // Set the text to the date currently displayed by the picker.
-        self.dateofBirthField.inputView = datePicker;
-        self.dateofBirthField.text = [self formatDate:datePicker.date];
-        
-    }
+     if (textField.tag == 7) {
+     self.dateofBirthField = textField;
+     
+     // Create a date picker for the date field.
+     UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+     datePicker.datePickerMode = UIDatePickerModeDate;
+     datePicker.maximumDate = [NSDate date];
+     [datePicker setDate:[NSDate date]];
+     [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+     
+     // If the date field has focus, display a date picker instead of keyboard.
+     // Set the text to the date currently displayed by the picker.
+     self.dateofBirthField.inputView = datePicker;
+     self.dateofBirthField.text = [self formatDate:datePicker.date];
+     
+     }
+
+    
+//    textField.returnKeyType = UIReturnKeyDone;
+//    if (textField.tag == 7) {
+//        self.dateofBirthField = textField;
+//        
+//        // Create a date picker for the date field.
+//        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+//        datePicker.datePickerMode = UIDatePickerModeDate;
+//        datePicker.tag = 2;
+//        datePicker.minimumDate = [NSDate date];
+//        [datePicker setDate:[NSDate date]];
+//        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+//        
+//        // If the date field has focus, display a date picker instead of keyboard.
+//        // Set the text to the date currently displayed by the picker.
+//        self.dateofBirthField.inputView = datePicker;
+//        self.dateofBirthField.text = [self formatDate:datePicker.date];
+//        
+//    }
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
     return 1;

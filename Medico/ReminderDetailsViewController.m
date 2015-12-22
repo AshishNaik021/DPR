@@ -18,6 +18,7 @@
 @synthesize dateLabel;
 @synthesize timeLabel;
 @synthesize discussionLabel;
+@synthesize setDateTimeButton;
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -25,6 +26,7 @@
     [self.navigationController pushViewController:DoctorHome animated:YES];
     
 }
+
 
 
 - (void)viewDidLoad {
@@ -159,6 +161,8 @@
     return components[1];
 }
 - (IBAction)setDateTimeAlarm:(id)sender {
+    
+     [setDateTimeButton setImage:[UIImage imageNamed:@"ic_radio_button_checked.png"] forState:UIControlStateNormal];
     [self scheduleNotificationForDate];
 }
 @end

@@ -126,8 +126,7 @@
         // Create a date picker for the date field.
         UIDatePicker *datePicker = [[UIDatePicker alloc]init];
         datePicker.datePickerMode = UIDatePickerModeDate;
-        datePicker.tag = 2;
-        datePicker.minimumDate = [NSDate date];
+        datePicker.maximumDate = [NSDate date];
         [datePicker setDate:[NSDate date]];
         [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
         
