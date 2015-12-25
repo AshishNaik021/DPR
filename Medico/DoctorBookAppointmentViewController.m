@@ -109,8 +109,10 @@
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
     return 1;
 }
+
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
-    
+    //test
     return pickerVisiteTypeArr.count;
 }
 
