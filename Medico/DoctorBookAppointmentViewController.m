@@ -135,7 +135,6 @@
     
     if ([textField isEqual:typeTextField]) {
         self.picker.hidden = NO;
-        //        self.summaryPicker.backgroundColor = [UIColor clearColor];
         return NO;
     }
     
