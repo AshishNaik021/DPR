@@ -10,5 +10,5 @@
 
 @interface PatientSearchClinicCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *specialityClinicLabel;
-
+//test
 @end
