@@ -101,6 +101,11 @@
 }
 
 
+
+
+
+
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
     return 1;
 }
@@ -181,6 +186,7 @@
                     NSLog(@"emial :%@",self.patientEmailPassData);
                     if ([[arrayList[i] valueForKey:@"emailID"] isEqualToString:self.patientEmailPassData]) {
                         self.appointmentNameLable.text = [arrayList[i] valueForKey:@"name"];
+                        self.dateTextField.text = [arrayList[i] valueForKey:@"bookDate"];
                     }
                 }
                 if ([self.appointmentNameLable.text isEqualToString:@""]) {
