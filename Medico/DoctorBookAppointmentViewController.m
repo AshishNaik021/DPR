@@ -124,8 +124,6 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 {
-    
-    
     typeTextField.text = [NSString stringWithFormat:@"%@",pickerVisiteTypeArr[row]];
     picker.hidden = YES;
     
