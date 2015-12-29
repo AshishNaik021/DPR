@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @interface AllDetailInformationViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource,UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,UITextViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
     
@@ -38,6 +39,7 @@
 @property CGFloat heightInvoice;
 @property CGFloat scrollHeightInvoice;
 @property CGRect screenInvoice;
+@property(weak) MBProgressHUD *hud;
 
 
 @property(nonatomic,retain) IBOutlet NSArray *collectionArray;
@@ -128,6 +130,12 @@
 @property(nonatomic,retain) NSMutableArray *arrayForCollectionView;
 @property(nonatomic,retain) NSMutableArray *arrayHeader;
 @property(nonatomic,retain) NSMutableArray *arrayValue;
+@property(nonatomic,retain) UITableView *autocompleteTableView;
+@property(nonatomic,retain) NSMutableArray *autoCompleteArray;
+@property(nonatomic,retain) NSMutableArray *arrSymptoms;
+@property(nonatomic,retain) NSMutableArray *arrDiagnostic;
+//@property(nonatomic,retain) NSMutableArray *autoCompleteArray;
+//@property(nonatomic,retain) NSString *searchString;
 
 - (IBAction)summary:(id)sender;
 - (IBAction)documents:(id)sender;
@@ -146,5 +154,7 @@
 @property IBOutlet NSString *summaryPatientEmailPassData;
 @property IBOutlet NSString *summaryDoctorIDPassData;
 @property NSString *returnString;
+
+
 
 @end

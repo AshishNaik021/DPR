@@ -46,6 +46,10 @@
 -(void)fetchHomeCountForDoctor{
     
     NSLog(@"The fetchJson method is called.........");
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing...";
+    
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
 
@@ -64,7 +68,9 @@
     NSLog(@"Data in Array==============%@",responseStr);
     
     /* ---------- Code for Writing response data into the file -------------- */
-    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    hud = nil;
+
     NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/homeCountDoctor.json"];
     NSLog(@"%@",docPath);
     [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];

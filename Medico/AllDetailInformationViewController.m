@@ -14,6 +14,7 @@
 #import "SymptomsHistoryViewController.h"
 #import "TestPrescirbedHistoryViewController.h"
 #import "MedicinePrescribedHistoryViewController.h"
+#import "MBProgressHUD.h"
 
 @interface AllDetailInformationViewController ()
 
@@ -107,6 +108,10 @@
 -(void)fetchPatientReminder{
     
     NSLog(@"The fetchJson method is called.........");
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -120,6 +125,9 @@
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
     
     //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"Data in Array+++++++++++++++++++++++++++++++++++++++++++++++++++%@",responseStr);
@@ -249,40 +257,76 @@
 
     [self.view addSubview:summaryPicker];
 //   //autocomplete
-//    autocompleteTableView = [[UITableView alloc] initWithFrame:
-//                             CGRectMake(0, 80, 320, 120) style:UITableViewStylePlain];
-//    autocompleteTableView.delegate = self;
-//    autocompleteTableView.dataSource = self;
-//    autocompleteTableView.scrollEnabled = YES;
-//    autocompleteTableView.hidden = YES;
-//    [self.view addSubview:autocompleteTableView];
-//    // autocomplete
+    self.autocompleteTableView = [[UITableView alloc] initWithFrame:
+                             CGRectMake(0, 80, 320, 120) style:UITableViewStylePlain];
+    self.autocompleteTableView.delegate = self;
+    self.autocompleteTableView.dataSource = self;
+    self.autocompleteTableView.scrollEnabled = YES;
+    self.autocompleteTableView.hidden = YES;
+    [self.view addSubview:self.autocompleteTableView];
+    // autocomplete
+    
+    self.arrSymptoms = [[NSMutableArray alloc] initWithObjects:@"Abdominal Pain",@"Acute Diarrhoea in Adults",@"Adute Diarrhoea in Children",@"Aedominal Pain", nil];
+    self.autoCompleteArray = [[NSMutableArray alloc] init];
+    
 }
+
 //autoco
-//- (BOOL)textField:(UITextField *)textField
-//shouldChangeCharactersInRange:(NSRange)range
-//replacementString:(NSString *)string {
-//    autocompleteTableView.hidden = NO;
-//    
-//    NSString *substring = [NSString stringWithString:textField.text];
-//    substring = [substring
-//                 stringByReplacingCharactersInRange:range withString:string];
-//    [self searchAutocompleteEntriesWithSubstring:substring];
-//    return YES;
-//}
-//- (void)searchAutocompleteEntriesWithSubstring:(NSString *)substring {
-//    
-//    // Put anything that starts with this substring into the autocompleteUrls array
-//    // The items in this array is what will show up in the table view
-//    [autocompleteUrls removeAllObjects];
-//    for(NSString *curString in pastUrls) {
-//        NSRange substringRange = [curString rangeOfString:substring];
-//        if (substringRange.location == 0) {
-//            [autocompleteUrls addObject:curString];
-//        }
-//    }
-//    [autocompleteTableView reloadData];
-//}
+/*
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    
+    self.autocompleteTableView.hidden = NO;
+    
+    NSString *substring = [NSString stringWithString:textField.text];
+    substring = [substring
+                 stringByReplacingCharactersInRange:range withString:string];
+    [self searchAutocompleteEntriesWithSubstring:substring];
+    return YES;
+}
+*/
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    self.autocompleteTableView.hidden = NO;
+    
+    NSArray *arr = [textField.text componentsSeparatedByString:@","];
+    NSString *strLastObj = [NSString stringWithFormat:@"%@%@",[arr lastObject], string ];
+    
+    NSString *searchString;
+    if (string.length > 0) {
+        searchString = [NSString stringWithFormat:@"%@",strLastObj];
+    } else {
+        searchString = [strLastObj substringToIndex:[strLastObj length] - 1];
+    }
+    NSPredicate *filter = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchString];
+    self.autoCompleteArray = [[self.arrSymptoms filteredArrayUsingPredicate:filter] mutableCopy];
+    
+    if (!searchString || searchString.length == 0) {
+        
+        self.autoCompleteArray = [self.arrSymptoms mutableCopy];
+    } else {
+        if (self.autoCompleteArray.count == 0) {
+            NSLog(@"No data From Search");
+        }
+    }    
+    [self.autocompleteTableView reloadData];
+    return YES;
+}
+
+
+- (void)searchAutocompleteEntriesWithSubstring:(NSString *)substring {
+    
+    // Put anything that starts with this substring into the autocompleteUrls array
+    // The items in this array is what will show up in the table view
+    [self.autoCompleteArray removeAllObjects];
+    for(NSString *curString in self.arrSymptoms) {
+        NSRange substringRange = [curString rangeOfString:substring];
+        if (substringRange.location == 0) {
+            [self.autoCompleteArray addObject:curString];
+        }
+    }
+    [self.autocompleteTableView reloadData];
+}
 //autoco
 /*-----------------------------------------------------------------------------------------------------*/
 - (void) viewWillAppear:(BOOL)animated
@@ -432,8 +476,27 @@
 -(void)setDiagnosis:(NSString *)diagnosis{
     self.summaryDiagnosisTextview.text = [NSString stringWithFormat:diagnosis];
 }
--(void)setSymptom:(NSString *)symptom{
-    self.summarySymptomsTextView.text = [NSString stringWithFormat:symptom];
+-(void)setSymptom:(NSString *)symptom {
+    
+    if ([self.summarySymptomsTextView.text length] > 0) {
+
+        NSMutableString* str = [NSMutableString stringWithString:self.summarySymptomsTextView.text];
+        NSRange allOfStr = NSMakeRange(0, [str length]);
+        
+        [str replaceOccurrencesOfString: @","
+                             withString: @"/"
+                                options: 0
+                                  range: allOfStr];
+        NSString *lastChars = [str lastPathComponent];
+        
+        NSString *strSym = [str stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"/%@",lastChars] withString:[NSString stringWithFormat:@",%@,",symptom]];
+
+        self.summarySymptomsTextView.text = strSym;
+    }else {
+        self.summarySymptomsTextView.text = [NSString stringWithFormat:@"%@",symptom];
+    }
+    
+
 }
 -(void)setVisitType:(NSString *)type{
     self.summaryVisiteTypeField.text = [NSString stringWithFormat:type];
@@ -448,6 +511,10 @@
     [alert show];
 }
 -(void)setClinicName{
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -461,6 +528,10 @@
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
+    
     if ([httpResponse statusCode] != 200) {
         //        [self errorMessageForName];
         NSLog(@"Name not set");
@@ -491,30 +562,40 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    if ([self.autoCompleteArray count] > 0) {
+        return [self.autoCompleteArray count];
+    }else {
+        return [self.arrSymptoms count];
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"TableCell";
-    AllDetailInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    //for(int count = 0;count<_arr.count;count++){
-    int row = [indexPath row];
-    // cell.subProcedureName.text = [[subprocedureArr objectAtIndex:row] objectForKey:@"templateName"];
-    
-    if (![[objForMedicine valueForKey:@"medicinName"]isKindOfClass:[NSNull class]]) {
-        NSLog(@"type:%@",[[objForMedicine valueForKey:@"medicinName"] class]);
-        NSLog(@"objmed%@",objForMedicine);
-        cell.medicineNameLabel.text = [objForMedicine valueForKey:@"medicinName"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    return cell;
+    if ([self.autoCompleteArray count] > 0) {
+         cell.textLabel.text = [self.autoCompleteArray objectAtIndex:indexPath.row];
+    }else {
+        cell.textLabel.text = [self.arrSymptoms objectAtIndex:indexPath.row];
+    }
     
+
+    return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    [self setSymptom:selectedCell.textLabel.text];
+    self.autocompleteTableView.hidden = YES;
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 2;
@@ -646,6 +727,11 @@
 }
 
 -(void)setDoctorsNote{
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -658,6 +744,9 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
+    
     NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
     if ([httpResponse statusCode] != 200) {
         [self errorMessage];
@@ -758,6 +847,10 @@
 }
 #pragma mark Summary Start
 -(void)getSummaryDetails{
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -771,6 +864,9 @@
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
     if ([httpResponse statusCode] != 200) {
         [self errorMessage];
     }
@@ -849,6 +945,9 @@
     //    [self.view endEditing:YES];
     returnString = @"";
     
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -864,6 +963,9 @@
                                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                            NSLog(@"Response:%@ Error : %@\n", response, error);
                                                            //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           
+                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                           self.hud = nil;
                                                            if(error == nil)
                                                            {
                                                                returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
@@ -935,6 +1037,10 @@
 #pragma mark Treatment Plan Start (Value fetched but not set due to collection view problem)
 
 -(void)getTreatmentPlan{
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -948,6 +1054,9 @@
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
     
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
@@ -1016,6 +1125,10 @@
 
 -(void)setInvoices{
     NSLog(@"SET INVOICE METHOD IS CALLED.........");
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -1028,6 +1141,9 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSMutableDictionary *invoiceResponse = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
+    
     if (error) {
         NSLog(@"Error : %@",error.localizedDescription);
         [self errorMessage];

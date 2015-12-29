@@ -453,6 +453,10 @@
 
 -(void)callAddSlotsForClinic :(NSString *)clinicId{
     
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -484,6 +488,8 @@
     NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
                                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                            NSLog(@"Response:%@ Error : %@\n", response, error);
+                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                           self.hud = nil;
                                                            //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
                                                            if(error == nil)
                                                            {
@@ -582,6 +588,9 @@
 -(void)addClinic{
     //returnString = @"";
     
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -602,6 +611,9 @@
                                                        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                            NSLog(@"Response:%@ Error : %@\n", response, error);
                                                            //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                           self.hud = nil;
+                                                           
                                                            if(error == nil)
                                                            {
                                                                returnStringClinic = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];

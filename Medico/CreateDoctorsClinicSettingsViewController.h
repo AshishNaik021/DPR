@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
 @interface CreateDoctorsClinicSettingsViewController : UIViewController<UITextFieldDelegate>
 
@@ -38,6 +39,8 @@
 @property BOOL *exceptDayRadioButton;
 @property BOOL *confirmDoctorRadioButton;
 @property IBOutlet NSString *appointment;
+@property(weak) MBProgressHUD *hud;
+
 - (IBAction)always:(id)sender;
 - (IBAction)exceptCurrentSlot:(id)sender;
 - (IBAction)exceptCurrentDay:(id)sender;

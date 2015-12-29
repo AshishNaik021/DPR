@@ -11,5 +11,10 @@
 @interface SymptomsHistoryViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property NSArray *symptomArr;
+@property IBOutlet NSString *summaryDatePassData;
+@property IBOutlet NSString *summaryTimePassData;
+@property IBOutlet NSString *summaryPatientEmailPassData;
+@property IBOutlet NSString *summaryDoctorIDPassData;
+
 
 @end

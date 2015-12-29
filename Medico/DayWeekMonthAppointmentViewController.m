@@ -8,6 +8,7 @@
 
 #import "DayWeekMonthAppointmentViewController.h"
 #import "DoctorLandingPageView.h"
+#import "MBProgressHUD.h"
 
 @interface DayWeekMonthAppointmentViewController ()
 
@@ -67,6 +68,10 @@
         NSLog(@"Day View displaed: %@",objTodaysDateYYYYMMDD);
         NSString *objTodaysDateDDMMYYYY = [NSString stringWithFormat:[self todaysDateDDMMYYYY]];
         self.DayDateLabel.text = [NSString stringWithFormat:objTodaysDateDDMMYYYY];
+     
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.labelText = @"Processing...";
+        
         NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
         
@@ -83,6 +88,8 @@
         NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        hud = nil;
         int statusCode =[responseCode statusCode];
         NSLog(@"Response code:%@",statusCode);
         NSLog(@"Dictionry day=%@",dict);

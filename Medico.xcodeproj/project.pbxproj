@@ -509,6 +509,7 @@
 		18C7DB1D1BC7D231005B93A9 /* PatientProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7DB1C1BC7D231005B93A9 /* PatientProfileViewController.m */; };
 		18C7DB201BC7D277005B93A9 /* PatientProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C7DB1F1BC7D277005B93A9 /* PatientProfileTableViewCell.m */; };
 		18DB3C251BD6659C00A9C3E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB3C241BD6659C00A9C3E3 /* MapKit.framework */; };
+		A49B6D061C2E4035002849FF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A49B6D041C2E4035002849FF /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1175,6 +1176,8 @@
 		18C7DB1E1BC7D277005B93A9 /* PatientProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientProfileTableViewCell.h; sourceTree = "<group>"; };
 		18C7DB1F1BC7D277005B93A9 /* PatientProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientProfileTableViewCell.m; sourceTree = "<group>"; };
 		18DB3C241BD6659C00A9C3E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A49B6D041C2E4035002849FF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A49B6D051C2E4035002849FF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1489,6 +1492,8 @@
 		182394E11BBD0DCE00D97366 /* Medico */ = {
 			isa = PBXGroup;
 			children = (
+				A49B6D041C2E4035002849FF /* MBProgressHUD.m */,
+				A49B6D051C2E4035002849FF /* MBProgressHUD.h */,
 				188B90C01BEBA363003F425F /* Main.storyboard */,
 				186D36901BE1EDD900EBA634 /* getNotifications.json */,
 				1873303A1BE0D97300933411 /* testing.json */,
@@ -2437,6 +2442,7 @@
 				189125511C05C0E500136C97 /* PatientUploadDocumentsViewController.m in Sources */,
 				185306831C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m in Sources */,
 				185306941C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m in Sources */,
+				A49B6D061C2E4035002849FF /* MBProgressHUD.m in Sources */,
 				185D87161BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m in Sources */,
 				189B526E1C193FA200E83439 /* PatientSearchClinicViewController.m in Sources */,
 				183D1A471BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.m in Sources */,

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DoctorLandingPageView.h"
 #import "PatientLandingPageViewController.h"
-//#import "AssistantLandingPageView.h"
+#import "MBProgressHUD.h"
 
 @interface LoginPage : UIViewController<UITextFieldDelegate>{
     UIActivityIndicatorView *spinner;
@@ -26,6 +26,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *knowMore;
 @property (weak, nonatomic) IBOutlet UIButton *regAssistant;
 @property (nonatomic,retain) NSString *returnString;
+@property(weak) MBProgressHUD *hud;
+
+
+
 - (IBAction)doctorRegister:(id)sender;
 - (IBAction)patientRegister:(id)sender;
 - (IBAction)assistantRegister:(id)sender;

@@ -198,6 +198,10 @@
 }
 -(NSString *)getDoctorName{
     NSLog(@"GetName Method is called....");
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -211,6 +215,10 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
+    
     NSLog(@"Data in Array==============%@",arratList);
     NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
     
@@ -229,6 +237,11 @@
 
 -(NSString *)getPatientName{
     NSLog(@"GetName Method is called....");
+
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -242,6 +255,9 @@
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.hud = nil;
+
     NSLog(@"Data in Array==============%@",arratList);
     NSLog(@"name of doctor=====%@",[arratList valueForKey:@"name"]);
     
@@ -261,6 +277,9 @@
 
 -(void)loginRequest{
     //    [self.view endEditing:YES];
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
     returnString = @"";
     
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -280,6 +299,9 @@
                                                            //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
                                                            if(error == nil)
                                                            {
+                                                               [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                               self.hud = nil;
+                                                               
                                                                returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
                                                                NSLog(@"Data = %@",returnString);
                                                                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
@@ -306,7 +328,7 @@
 
 -(BOOL)checkInternetConnection{
     //        [self.view endEditing:YES];
-    [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
+   // [NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];
     NSURL *scriptUrl = [NSURL URLWithString:@"http://www.msftncsi.com/ncsi.txt"];
     NSData *data = [NSData dataWithContentsOfURL:scriptUrl];
     if (data){
@@ -314,7 +336,7 @@
         //[spinner stopAnimating];
         return 1;
     } else{
-        [spinner stopAnimating];
+      //  [spinner stopAnimating];
         NSLog(@"Device is not connected to the internet");
         return 0;
     }

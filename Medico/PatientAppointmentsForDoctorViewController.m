@@ -10,6 +10,7 @@
 #import "DoctorLandingPageView.h"
 #import "PatientAppointmentsForDoctorCell.h"
 #import "AllDetailInformationViewController.h"
+#import "MBProgressHUD.h"
 
 @interface PatientAppointmentsForDoctorViewController ()
 
@@ -36,6 +37,11 @@
 -(void)fetchAllPatientAppointment{
     
     NSLog(@"The fetchJson method is called.........");
+    
+
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing...";
+
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -51,6 +57,9 @@
     //NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"Data in Array==============%@",responseStr);
     
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    hud = nil;
+
     /* ---------- Code for Writing response data into the file -------------- */
     
     NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientAppointment.json"];

@@ -8,8 +8,11 @@
 
 #import "DoctorBookAppointmentViewController.h"
 #import "DoctorLandingPageView.h"
+#import "MBProgressHUD.h"
 
 @interface DoctorBookAppointmentViewController ()
+
+@property(nonatomic, strong) NSMutableArray *arrPatient;
 
 @end
 
@@ -88,6 +91,9 @@
         [self noNetworkAlert];
     }
     
+    
+   
+    
     //picker
     pickerVisiteTypeArr = [[NSMutableArray alloc] initWithObjects:@"Select Visite Type",@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
     
@@ -101,7 +107,23 @@
 }
 
 
+- (NSString *)formatDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+    NSString *formattedDate = [dateFormatter stringFromDate:date];
+    return formattedDate;
+}
 
+- (void)updateDateField:(id)sender
+{
+    if (dateTextField.isEditing) {
+
+        UIDatePicker *picker1 = (UIDatePicker*)self.dateTextField.inputView;
+        self.dateTextField.text = [self formatDate:picker1.date];
+    }
+}
 
 
 
@@ -129,11 +151,31 @@
     
     
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+}
+
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     
     if ([textField isEqual:typeTextField]) {
         self.picker.hidden = NO;
         return NO;
+    }
+    else if([textField isEqual:dateTextField]) {
+        // Create a date picker for the date field.
+        UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.tag = 1;
+        datePicker.minimumDate = [NSDate date];
+        [datePicker setDate:[NSDate date]];
+        [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+        
+        // If the date field has focus, display a date picker instead of keyboard.
+        // Set the text to the date currently displayed by the picker.
+        self.dateTextField.inputView = datePicker;
+        self.dateTextField.text = [self formatDate:datePicker.date];
     }
     
     return YES;
@@ -152,6 +194,10 @@
 }
 
 -(void)setPatientName{
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing...";
+
         NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
         
@@ -165,6 +211,10 @@
         NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
         NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    hud = nil;
+
         if ([httpResponse statusCode] != 200) {
             [self errorMessage];
         }
@@ -186,6 +236,7 @@
                     if ([[arrayList[i] valueForKey:@"emailID"] isEqualToString:self.patientEmailPassData]) {
                         self.appointmentNameLable.text = [arrayList[i] valueForKey:@"name"];
                         self.dateTextField.text = [arrayList[i] valueForKey:@"bookDate"];
+                        self.arrPatient = [arrayList objectAtIndex:i];
                     }
                 }
                 if ([self.appointmentNameLable.text isEqualToString:@""]) {
@@ -195,6 +246,7 @@
                 }
             }
     }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dmainispose of any resources that can be recreated.
@@ -276,8 +328,67 @@
 }
 - (IBAction)cancelAppointment:(id)sender {
 }
+
 - (IBAction)bookNow:(id)sender {
+
+   // self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+   // self.hud.labelText = @"Processing...";
+
+   /* NSString *strAppDate = self.dateTextField.text;
+    NSString *strBookTime = @"6:30AM";
+    NSString *strClinicID = @"6:30AM";
+    NSString *strDoctorID = @"6:30AM";
+    NSString *strPatientID = @"6:30AM";
+    NSString *strShift = @"6:30AM";
+    NSString *strStatus = @"6:30AM";
+    NSString *strTimeSlot = @"6:30AM";
+    NSString *strVisitType = @"6:30AM";
+
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/saveClinicsAppointmentDetails"];
+    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
+    NSString * params =[NSString stringWithFormat:@"\{\"appointmentDate\":\"%@\",\"bookTime\":\"%@\",\"clinicId\":\"%@\",\"doctorId\":\"%@\",\"patientId\":\"%@\",\"shift\":\"%@\",\"status\":\"%@\",\"timeSlot\":\"%@\",\"visitType\":\"%@\"}",strAppDate,strBookTime,[self.arrPatient],[self.patientAppointmentArray[0] valueForKey:@"doctorId"],self.doctorsNoteNoteTextView.text,[self.patientAppointmentArray[0] valueForKey:@"patientId"],self.doctorsNoteSymptomsTextView.text];
+    NSLog(@"%@",params);
+    [urlRequest setHTTPMethod:@"POST"];
+    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
+                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                           NSLog(@"Response:%@ Error : %@\n", response, error);
+                                                           //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           
+                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                           self.hud = nil;
+                                                           if(error == nil)
+                                                           {
+                                                               returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+                                                               NSLog(@"Data = %@",returnString);
+                                                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                               NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+                                                               if ([httpResponse statusCode] == 200) {
+                                                                   [self parseJSON:returnString];
+                                                               } else {
+                                                                   [self errorMessage];
+                                                               }
+                                                           }
+                                                           else if ([error.localizedDescription isEqualToString:@"The request timed out."]){
+                                                               [self requestTimeOut];
+                                                           }
+                                                           else {
+                                                               [self errorMessage];
+                                                           }
+                                                           
+                                                       }];
+    [dataTask resume];
+    
+*/
 }
+
+
 -(BOOL)checkInternetConnection{
     //        [self.view endEditing:YES];
     //[NSThread detachNewThreadSelector:@selector(threadStartAnimating:) toTarget:self withObject:nil];

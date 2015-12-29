@@ -9,13 +9,23 @@
 #import "SymptomsHistoryViewController.h"
 #import "DoctorLandingPageView.h"
 #import "SymptomsHistoryCell.h"
+#import "MBProgressHUD.h"
+
+
+
 
 @interface SymptomsHistoryViewController ()
 
 @end
 
 @implementation SymptomsHistoryViewController
+
 @synthesize symptomArr;
+@synthesize summaryDatePassData = _summaryDatePassData;
+@synthesize summaryPatientEmailPassData = _summaryPatientEmailPassData;
+@synthesize summaryTimePassData =_summaryTimePassData;
+@synthesize summaryDoctorIDPassData = _summaryDoctorIDPassData;
+
 
 - (void) homePage:(id)sender{
     DoctorLandingPageView *DoctorHome =
@@ -38,8 +48,56 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:nil action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
 
+    NSLog(@"Date----------------%@",_summaryDatePassData);
+    NSLog(@"Time-----------------%@",_summaryTimePassData);
+    NSLog(@"patient Email----------%@",_summaryPatientEmailPassData);
+    NSLog(@"DoctorId---------------%@",_summaryDoctorIDPassData);
+    
+
+    [self fetchAllSympHistory];
+    
     // Do any additional setup after loading the view.
 }
+
+-(void)fetchAllSympHistory{
+    
+    NSLog(@"The fetchJson method is called.........");
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing...";
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    // NSString *emailid = emailField.text;
+    
+    NSString *urlStr = [NSString stringWithFormat:@"http://139.162.31.36:9000/getAllHistory?doctorId=%@&patientId=%@&appointmentDate=%@&appointmentTime=%@",_summaryDoctorIDPassData,_summaryPatientEmailPassData,_summaryDatePassData,_summaryTimePassData];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    hud = nil;
+    
+    NSMutableArray *arratList = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:&error];
+    NSLog(@"Data in Array+++++++++++++++++++++++++++++++++++++++++++++++++++%@",responseStr);
+    
+    //    /* ---------- Code for Writing response data into the file -------------- */
+    //
+    //    NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/getAllPatientInformation.json"];
+    //    NSLog(@"%@",docPath);
+    //    [responseStr writeToFile:docPath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    //
+    //    /* ---------- End of Code for Writing response data into the file -------------- */
+    //
+    
+}
+
+
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

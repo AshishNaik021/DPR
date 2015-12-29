@@ -7,6 +7,7 @@
 //
 
 #import "AddAssistantView.h"
+#import "MBProgressHUD.h"
 
 @interface AddAssistantView ()
 
@@ -469,6 +470,10 @@
 -(void)addAssistant{
     //returnString = @"";
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing...";
+
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -494,6 +499,9 @@
                                                            //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
                                                            if(error == nil)
                                                            {
+                                                               [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                               __block hud = nil;
+                                                               
                                                                returnString = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
                                                                NSLog(@"Poonam Data = %@",returnString);
                                                                NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;

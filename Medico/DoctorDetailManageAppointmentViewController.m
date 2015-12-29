@@ -9,6 +9,7 @@
 #import "DoctorDetailManageAppointmentViewController.h"
 #import "DoctorLandingPageView.h"
 #import "DoctorManageAppointmentsViewController.h"
+#import "MBProgressHUD.h"
 
 @interface DoctorDetailManageAppointmentViewController ()
 
@@ -67,6 +68,11 @@
 -(void)fetchCliniProfile{
     NSLog(@"-------------------------------------------------------");
     NSLog(@"The fetchJson method is called....DoctorDetailManageAppointmentViewController.m.....");
+    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Processing...";
+
+    
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
@@ -82,6 +88,9 @@
     NSString *responseStr = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
     //  NSLog(@"Data from web Service in responceStr------%@",responseStr);
     /* ---------- Code for Writing response data into the file -------------- */
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    hud = nil;
+
     
     NSString *docPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/searchClinic.json"];
     NSLog(@"%@",docPath);
