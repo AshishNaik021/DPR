@@ -1691,10 +1691,8 @@
 				187499CD1C21444400F18AB7 /* SearchDoctorCell.h */,
 				187499CE1C21444400F18AB7 /* SearchDoctorCell.m */,
 				18A50F601C32B22300B72BE1 /* Doctor - Manage Reminder */,
-				187499C71C212EEA00F18AB7 /* DoctorAddTemplateSettingViewController.h */,
-				187499C81C212EEA00F18AB7 /* DoctorAddTemplateSettingViewController.m */,
-				187499C41C21276A00F18AB7 /* DoctorAddProcedureSettingViewController.h */,
-				187499C51C21276A00F18AB7 /* DoctorAddProcedureSettingViewController.m */,
+				18A50F621C32BB2B00B72BE1 /* Doctor - Add Template */,
+				18A50F631C32BB3E00B72BE1 /* Doctor - Add Procedure */,
 				18327F2B1BC521C8002210BC /* TemplateDetailViewController.h */,
 				18327F2C1BC521C8002210BC /* TemplateDetailViewController.m */,
 				18327F311BC5234B002210BC /* TemplateDetailCell.h */,
@@ -1710,10 +1708,7 @@
 				186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */,
 				18C7DAF81BC78767005B93A9 /* DetailClinicView.h */,
 				18C7DAF91BC78767005B93A9 /* DetailClinicView.m */,
-				188B90C21BEBA473003F425F /* SearchResultClinicForDoctorViewController.h */,
-				188B90C31BEBA473003F425F /* SearchResultClinicForDoctorViewController.m */,
-				187A0C831BC68B5D003AC5D9 /* SearchClinicCell.h */,
-				187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */,
+				18A50F611C32BA3300B72BE1 /* Doctor - Search Clinics */,
 				18A50F531C32A73F00B72BE1 /* Doctor - Manage Clinic Settings */,
 				18A50F521C32A6EC00B72BE1 /* Doctor - Settings */,
 				18A50F511C32A68600B72BE1 /* Doctor - Add New Template */,
@@ -2186,6 +2181,35 @@
 				186D368E1BE1EC2A00EBA634 /* ManageReminderCell.m */,
 			);
 			name = "Doctor - Manage Reminder";
+			sourceTree = "<group>";
+		};
+		18A50F611C32BA3300B72BE1 /* Doctor - Search Clinics */ = {
+			isa = PBXGroup;
+			children = (
+				188B90C21BEBA473003F425F /* SearchResultClinicForDoctorViewController.h */,
+				188B90C31BEBA473003F425F /* SearchResultClinicForDoctorViewController.m */,
+				187A0C831BC68B5D003AC5D9 /* SearchClinicCell.h */,
+				187A0C841BC68B5D003AC5D9 /* SearchClinicCell.m */,
+			);
+			name = "Doctor - Search Clinics";
+			sourceTree = "<group>";
+		};
+		18A50F621C32BB2B00B72BE1 /* Doctor - Add Template */ = {
+			isa = PBXGroup;
+			children = (
+				187499C71C212EEA00F18AB7 /* DoctorAddTemplateSettingViewController.h */,
+				187499C81C212EEA00F18AB7 /* DoctorAddTemplateSettingViewController.m */,
+			);
+			name = "Doctor - Add Template";
+			sourceTree = "<group>";
+		};
+		18A50F631C32BB3E00B72BE1 /* Doctor - Add Procedure */ = {
+			isa = PBXGroup;
+			children = (
+				187499C41C21276A00F18AB7 /* DoctorAddProcedureSettingViewController.h */,
+				187499C51C21276A00F18AB7 /* DoctorAddProcedureSettingViewController.m */,
+			);
+			name = "Doctor - Add Procedure";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
