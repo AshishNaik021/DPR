@@ -10,5 +10,9 @@
 
 @interface AllDetailDocumentInformationCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *documentNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *clinicNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *allergyLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *documentImage;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
 @end
