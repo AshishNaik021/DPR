@@ -15,6 +15,7 @@
 #import "TestPrescirbedHistoryViewController.h"
 #import "MedicinePrescribedHistoryViewController.h"
 #import "MBProgressHUD.h"
+#import "AllDetailDocumentInformationCell.h"
 
 @interface AllDetailInformationViewController ()
 
@@ -42,6 +43,8 @@
 @synthesize widthInvoice;
 @synthesize screenInvoice;
 @synthesize scrollHeightInvoice;
+@synthesize documentTableView;
+@synthesize summaryMedicinTableView;
 
 @synthesize pickerArr;
 @synthesize returnString;
@@ -244,6 +247,9 @@
     [self getTreatmentPlan];
     self.collection.delegate = self;
     self.collection.dataSource = self;
+    
+    summaryMedicinTableView.tag = 1;
+    documentTableView.tag = 2;
     
     //picker
     pickerArr = [[NSMutableArray alloc] initWithObjects:@"New Profile",@"Regular Visit",@"Follow Up",@"Physical exam",nil];
@@ -557,23 +563,42 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
+    if (tableView == summaryMedicinTableView) {
+        return 1;
+    }
+    if (tableView == documentTableView) {
+        return 1;
+    }
     return 1;
+
+    //return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    if ([self.autoCompleteArray count] > 0) {
-        return [self.autoCompleteArray count];
-    }else {
-        return [self.arrSymptoms count];
-    }
+    //if (tableView == summaryMedicinTableView) {
+        if ([self.autoCompleteArray count] > 0) {
+            return [self.autoCompleteArray count];
+        }else {
+            return [self.arrSymptoms count];
+        }
+
+    //}
+//    if (tableView == documentTableView) {
+//        return 1;
+//    }
+//    
+//    return 1;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+ 
+    
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
+    //if (tableView.tag == 1) {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
@@ -588,6 +613,40 @@
     
 
     return cell;
+//    }
+//    if(tableView.tag == 2)
+//    {
+//        
+//        AllDetailDocumentInformationCell *cell1 = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//        cell1.documentNameLabel.text = @"Document";
+//        
+//        return cell1;
+//        
+//    }
+//    return 0;
+    
+    /*
+     static NSString *CellIdentifier = @"Cell";
+     int row = [indexPath row];
+     
+     
+     if (tableView.tag == 1) {
+     PatientAllDetailSummaryInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     cell.summaryMedicineNameLabel.text = @"Summary";
+     return cell;
+     }
+     if(tableView.tag == 2)
+     {
+     
+     PatientAllDetailDocumentInformationCell *cell1 = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     cell1.testLabel.text = @"Document";
+     
+     return cell1;
+     
+     }
+     
+     return 0;
+     */
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

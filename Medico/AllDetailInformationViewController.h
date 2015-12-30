@@ -26,6 +26,7 @@
 - (IBAction)treatmentCheck:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *treatmentAddButton;
 - (IBAction)treatmentAdd:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *documentTableView;
 
 @property  BOOL *keyboardVisible;
 @property CGPoint offset;

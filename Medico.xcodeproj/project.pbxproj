@@ -463,6 +463,7 @@
 		189EDB971BD62FFE00AA9B96 /* pediatrician.png in Resources */ = {isa = PBXBuildFile; fileRef = 189EDB911BD62FFE00AA9B96 /* pediatrician.png */; };
 		189EDB9A1BD6347900AA9B96 /* PatientSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */; };
 		189EDB9D1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */; };
+		18A0FAA31C33A9530013686B /* AllDetailDocumentInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A0FAA21C33A9530013686B /* AllDetailDocumentInformationCell.m */; };
 		18A135B71C0C38CC0057E820 /* ic_clear_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A135B61C0C38CC0057E820 /* ic_clear_3x.png */; };
 		18A135BB1C0D5C4B0057E820 /* ic_add_2x copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A135BA1C0D5C4B0057E820 /* ic_add_2x copy.png */; };
 		18A43E251C28032000AB7EA8 /* PatientSearchDoctorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A43E241C28032000AB7EA8 /* PatientSearchDoctorCell.m */; };
@@ -1115,6 +1116,8 @@
 		189EDB991BD6347900AA9B96 /* PatientSearchDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientSearchDoctorViewController.m; sourceTree = "<group>"; };
 		189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetailSearchDoctorViewController.h; sourceTree = "<group>"; };
 		189EDB9C1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetailSearchDoctorViewController.m; sourceTree = "<group>"; };
+		18A0FAA11C33A9530013686B /* AllDetailDocumentInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllDetailDocumentInformationCell.h; sourceTree = "<group>"; };
+		18A0FAA21C33A9530013686B /* AllDetailDocumentInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllDetailDocumentInformationCell.m; sourceTree = "<group>"; };
 		18A135B61C0C38CC0057E820 /* ic_clear_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_clear_3x.png; sourceTree = "<group>"; };
 		18A135BA1C0D5C4B0057E820 /* ic_add_2x copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_add_2x copy.png"; sourceTree = "<group>"; };
 		18A43E231C28032000AB7EA8 /* PatientSearchDoctorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientSearchDoctorCell.h; sourceTree = "<group>"; };
@@ -1497,15 +1500,15 @@
 				188B90C01BEBA363003F425F /* Main.storyboard */,
 				18A50F441C32A5A000B72BE1 /* JSON */,
 				18A50F411C32A3DB00B72BE1 /* Login */,
-				18A50F541C32A83F00B72BE1 /* Patient Search Clinic */,
-				18A50F551C32A85700B72BE1 /* patient Search Clinic Details */,
-				18A50F561C32A89800B72BE1 /* Patient Search Doctor */,
-				18A50F571C32A8A800B72BE1 /* Patient Search Doctor Details */,
-				18A50F581C32A8C500B72BE1 /* Patient New Appointment */,
-				18A50F591C32A8D900B72BE1 /* Patient Clinics and Labs */,
-				18A50F5A1C32AE7100B72BE1 /* Patient Clinic and Labs Profile and Appointment */,
-				18A50F5B1C32AEE200B72BE1 /* Patient Document Upload */,
-				18A50F5C1C32AEF600B72BE1 /* Patient Documents */,
+				18A50F541C32A83F00B72BE1 /* Patient - Search Clinic */,
+				18A50F551C32A85700B72BE1 /* Patient - Search Clinic Details */,
+				18A50F561C32A89800B72BE1 /* Patient - Search Doctor */,
+				18A50F571C32A8A800B72BE1 /* Patient - Search Doctor Details */,
+				18A50F581C32A8C500B72BE1 /* Patient - New Appointment */,
+				18A50F591C32A8D900B72BE1 /* Patient - Clinics and Labs */,
+				18A50F5A1C32AE7100B72BE1 /* Patient - Clinic and Labs Profile and Appointment */,
+				18A50F5B1C32AEE200B72BE1 /* Patient - Document Upload */,
+				18A50F5C1C32AEF600B72BE1 /* Patient - Documents */,
 				185306861C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.h */,
 				185306871C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m */,
 				185306891C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.h */,
@@ -1528,12 +1531,6 @@
 				1891254A1C05A79200136C97 /* PatientTestPrescribedHistoryViewController.m */,
 				189ED8BA1C22DB0200476827 /* PatientTestPrescribedHistoryCell.h */,
 				189ED8BB1C22DB0300476827 /* PatientTestPrescribedHistoryCell.m */,
-				1891253D1C058CF500136C97 /* PatientAllDetailInformationViewController.h */,
-				1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */,
-				1891254C1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.h */,
-				1891254D1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.m */,
-				185306811C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.h */,
-				185306821C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m */,
 				189125371C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.h */,
 				189125381C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m */,
 				1891253A1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.h */,
@@ -1639,6 +1636,14 @@
 				183D407B1BDDE56C00AB4FA5 /* AllDetailInformationViewController.m */,
 				189125341C05753E00136C97 /* AllDetailInformationCell.h */,
 				189125351C05753E00136C97 /* AllDetailInformationCell.m */,
+				18A0FAA11C33A9530013686B /* AllDetailDocumentInformationCell.h */,
+				18A0FAA21C33A9530013686B /* AllDetailDocumentInformationCell.m */,
+				1891253D1C058CF500136C97 /* PatientAllDetailInformationViewController.h */,
+				1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */,
+				1891254C1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.h */,
+				1891254D1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.m */,
+				185306811C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.h */,
+				185306821C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m */,
 				184C234D1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.h */,
 				184C234E1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m */,
 				184C23501BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.h */,
@@ -2050,7 +2055,7 @@
 			name = "Doctor - Manage Clinic Settings";
 			sourceTree = "<group>";
 		};
-		18A50F541C32A83F00B72BE1 /* Patient Search Clinic */ = {
+		18A50F541C32A83F00B72BE1 /* Patient - Search Clinic */ = {
 			isa = PBXGroup;
 			children = (
 				189B526C1C193FA200E83439 /* PatientSearchClinicViewController.h */,
@@ -2058,10 +2063,10 @@
 				18A43E261C280C7500AB7EA8 /* PatientSearchClinicCell.h */,
 				18A43E271C280C7500AB7EA8 /* PatientSearchClinicCell.m */,
 			);
-			name = "Patient Search Clinic";
+			name = "Patient - Search Clinic";
 			sourceTree = "<group>";
 		};
-		18A50F551C32A85700B72BE1 /* patient Search Clinic Details */ = {
+		18A50F551C32A85700B72BE1 /* Patient - Search Clinic Details */ = {
 			isa = PBXGroup;
 			children = (
 				189B526F1C1948D800E83439 /* PatientDetailSearchClinicViewController.h */,
@@ -2069,10 +2074,10 @@
 				189B52721C194A3000E83439 /* PatientDetailSearchClinicCell.h */,
 				189B52731C194A3000E83439 /* PatientDetailSearchClinicCell.m */,
 			);
-			name = "patient Search Clinic Details";
+			name = "Patient - Search Clinic Details";
 			sourceTree = "<group>";
 		};
-		18A50F561C32A89800B72BE1 /* Patient Search Doctor */ = {
+		18A50F561C32A89800B72BE1 /* Patient - Search Doctor */ = {
 			isa = PBXGroup;
 			children = (
 				189EDB981BD6347900AA9B96 /* PatientSearchDoctorViewController.h */,
@@ -2080,10 +2085,10 @@
 				18A43E231C28032000AB7EA8 /* PatientSearchDoctorCell.h */,
 				18A43E241C28032000AB7EA8 /* PatientSearchDoctorCell.m */,
 			);
-			name = "Patient Search Doctor";
+			name = "Patient - Search Doctor";
 			sourceTree = "<group>";
 		};
-		18A50F571C32A8A800B72BE1 /* Patient Search Doctor Details */ = {
+		18A50F571C32A8A800B72BE1 /* Patient - Search Doctor Details */ = {
 			isa = PBXGroup;
 			children = (
 				189EDB9B1BD63C2500AA9B96 /* PatientDetailSearchDoctorViewController.h */,
@@ -2091,19 +2096,19 @@
 				185D87091BD7A2AB003B357C /* PatientDetailSearchDoctorCell.h */,
 				185D870A1BD7A2AB003B357C /* PatientDetailSearchDoctorCell.m */,
 			);
-			name = "Patient Search Doctor Details";
+			name = "Patient - Search Doctor Details";
 			sourceTree = "<group>";
 		};
-		18A50F581C32A8C500B72BE1 /* Patient New Appointment */ = {
+		18A50F581C32A8C500B72BE1 /* Patient - New Appointment */ = {
 			isa = PBXGroup;
 			children = (
 				188F68BF1C181A58005DBA11 /* PatientNewAppointmentViewController.h */,
 				188F68C01C181A58005DBA11 /* PatientNewAppointmentViewController.m */,
 			);
-			name = "Patient New Appointment";
+			name = "Patient - New Appointment";
 			sourceTree = "<group>";
 		};
-		18A50F591C32A8D900B72BE1 /* Patient Clinics and Labs */ = {
+		18A50F591C32A8D900B72BE1 /* Patient - Clinics and Labs */ = {
 			isa = PBXGroup;
 			children = (
 				183D1A451BD0FBBC003E0CFC /* PatientClinicAndLabsViewController.h */,
@@ -2111,28 +2116,28 @@
 				183D1A481BD0FC1D003E0CFC /* PatientClinicAndLabsCell.h */,
 				183D1A491BD0FC1D003E0CFC /* PatientClinicAndLabsCell.m */,
 			);
-			name = "Patient Clinics and Labs";
+			name = "Patient - Clinics and Labs";
 			sourceTree = "<group>";
 		};
-		18A50F5A1C32AE7100B72BE1 /* Patient Clinic and Labs Profile and Appointment */ = {
+		18A50F5A1C32AE7100B72BE1 /* Patient - Clinic and Labs Profile and Appointment */ = {
 			isa = PBXGroup;
 			children = (
 				183D1A4B1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.h */,
 				183D1A4C1BD101D9003E0CFC /* PatientClinicProfileAndAppointmentsViewController.m */,
 			);
-			name = "Patient Clinic and Labs Profile and Appointment";
+			name = "Patient - Clinic and Labs Profile and Appointment";
 			sourceTree = "<group>";
 		};
-		18A50F5B1C32AEE200B72BE1 /* Patient Document Upload */ = {
+		18A50F5B1C32AEE200B72BE1 /* Patient - Document Upload */ = {
 			isa = PBXGroup;
 			children = (
 				185306921C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.h */,
 				185306931C071BCC0058C6CE /* PatientUploadPDFDocumentViewController.m */,
 			);
-			name = "Patient Document Upload";
+			name = "Patient - Document Upload";
 			sourceTree = "<group>";
 		};
-		18A50F5C1C32AEF600B72BE1 /* Patient Documents */ = {
+		18A50F5C1C32AEF600B72BE1 /* Patient - Documents */ = {
 			isa = PBXGroup;
 			children = (
 				1853068C1C070E8F0058C6CE /* PatientPDFDocumentViewController.h */,
@@ -2140,7 +2145,7 @@
 				1853068F1C070F870058C6CE /* PatientPDFDocumentCell.h */,
 				185306901C070F870058C6CE /* PatientPDFDocumentCell.m */,
 			);
-			name = "Patient Documents";
+			name = "Patient - Documents";
 			sourceTree = "<group>";
 		};
 		18A50F5D1C32AF8100B72BE1 /* App Delegate */ = {
@@ -2732,6 +2737,7 @@
 				18327F1A1BC4E8FC002210BC /* SMSConfirmationView.m in Sources */,
 				185306911C070F870058C6CE /* PatientPDFDocumentCell.m in Sources */,
 				18A43E251C28032000AB7EA8 /* PatientSearchDoctorCell.m in Sources */,
+				18A0FAA31C33A9530013686B /* AllDetailDocumentInformationCell.m in Sources */,
 				183D40CE1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m in Sources */,
 				18AD4AEE1BBD51BE009308AC /* PatientRegisterViewController.m in Sources */,
 				1842F31F1BC3A1B50055597E /* AddAssistantView.m in Sources */,
