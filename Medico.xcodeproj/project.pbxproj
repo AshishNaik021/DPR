@@ -1509,55 +1509,22 @@
 				18A50F5A1C32AE7100B72BE1 /* Patient - Clinic and Labs Profile and Appointment */,
 				18A50F5B1C32AEE200B72BE1 /* Patient - Document Upload */,
 				18A50F5C1C32AEF600B72BE1 /* Patient - Documents */,
-				185306861C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.h */,
-				185306871C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m */,
-				185306891C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.h */,
-				1853068A1C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.m */,
-				189125521C05CB7700136C97 /* PatientMedicinePrescribedScheduleViewController.h */,
-				189125531C05CB7700136C97 /* PatientMedicinePrescribedScheduleViewController.m */,
-				189125401C05A70900136C97 /* PatientSymptomHistoryViewController.h */,
-				189125411C05A70900136C97 /* PatientSymptomHistoryViewController.m */,
-				189ED8B11C22DAA000476827 /* PatientSymptomHistoryCell.h */,
-				189ED8B21C22DAA000476827 /* PatientSymptomHistoryCell.m */,
-				189125431C05A74000136C97 /* PatientDiagnosisHistoryViewController.h */,
-				189125441C05A74000136C97 /* PatientDiagnosisHistoryViewController.m */,
-				189ED8B41C22DAC200476827 /* PatientDiagnosisHistoryCell.h */,
-				189ED8B51C22DAC200476827 /* PatientDiagnosisHistoryCell.m */,
-				189125461C05A76300136C97 /* PatientMedicineHistoryViewController.h */,
-				189125471C05A76300136C97 /* PatientMedicineHistoryViewController.m */,
-				189ED8B71C22DAE200476827 /* PatientMedicineHistoryCell.h */,
-				189ED8B81C22DAE200476827 /* PatientMedicineHistoryCell.m */,
-				189125491C05A79200136C97 /* PatientTestPrescribedHistoryViewController.h */,
-				1891254A1C05A79200136C97 /* PatientTestPrescribedHistoryViewController.m */,
-				189ED8BA1C22DB0200476827 /* PatientTestPrescribedHistoryCell.h */,
-				189ED8BB1C22DB0300476827 /* PatientTestPrescribedHistoryCell.m */,
-				189125371C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.h */,
-				189125381C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m */,
-				1891253A1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.h */,
-				1891253B1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m */,
-				188E5E501C043F150001E400 /* DetailPatientDoctorConsultationsViewController.h */,
-				188E5E511C043F150001E400 /* DetailPatientDoctorConsultationsViewController.m */,
-				188E5E531C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.h */,
-				188E5E541C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m */,
-				188E5E471C0431C70001E400 /* PatientDoctorConsultationsViewController.h */,
-				188E5E481C0431C70001E400 /* PatientDoctorConsultationsViewController.m */,
-				1897CD9D1BCCCD0F0043F0FD /* HowItWorksViewController.h */,
-				1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */,
-				1897CD9A1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.h */,
-				1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */,
-				186BD61E1BCF7F8400B43A8C /* PatientChangePasswordViewController.h */,
-				186BD61F1BCF7F8400B43A8C /* PatientChangePasswordViewController.m */,
-				1897CD971BCCC5570043F0FD /* PatientSettingPageViewController.h */,
-				1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */,
+				18A0FAA41C33F34F0013686B /* Patient - List of Clinics And Labs */,
+				18A0FAA51C33F3A00013686B /* Patient - Medicine Prescribed */,
+				18A0FAA61C33F3CA0013686B /* Patient - Symptom History */,
+				18A0FAA71C33F3F70013686B /* Patient - Diagnosis History */,
+				18A0FAA81C33F4220013686B /* Patient - Medicine History */,
+				18A0FAA91C33F4440013686B /* Patient - Test Prescribed History */,
+				18A0FAAA1C33F4F00013686B /* Patient - Yearly Count Appointment */,
+				18A0FAAC1C33F6060013686B /* Patient - Detail Doctor Consultations */,
+				18A0FAAB1C33F5CC0013686B /* Patient - Doctor Consultations */,
+				18A0FAAD1C33F6420013686B /* Patient - How it Works */,
+				18A0FAAE1C33F67F0013686B /* Patient - T and C */,
+				18A0FAAF1C33F6A20013686B /* Patient - Change Password */,
+				18A0FAB01C33F6C70013686B /* Patient - Setting Page */,
 				18A50F431C32A58900B72BE1 /* Patient - Landing Page */,
-				188F68B91C17F58E005DBA11 /* PatientManageAppointmentViewController.h */,
-				188F68BA1C17F58E005DBA11 /* PatientManageAppointmentViewController.m */,
-				188F68BC1C1804EC005DBA11 /* PatientManageAppointmentCell.h */,
-				188F68BD1C1804EC005DBA11 /* PatientManageAppointmentCell.m */,
-				1891254F1C05C0E500136C97 /* PatientUploadDocumentsViewController.h */,
-				189125501C05C0E500136C97 /* PatientUploadDocumentsViewController.m */,
-				188E5E4D1C0437460001E400 /* PatientDoctorConsultationsCell.h */,
-				188E5E4E1C0437460001E400 /* PatientDoctorConsultationsCell.m */,
+				18A0FAB11C33F7080013686B /* Patient - Manage Appointment */,
+				18A0FAB21C33F7320013686B /* Patient - Upload Documents */,
 				1842F3661BC3E0530055597E /* TemplateDetailViewCell.h */,
 				1842F3671BC3E0530055597E /* TemplateDetailViewCell.m */,
 				18327F3C1BC536DD002210BC /* EditTemplateView.h */,
@@ -1568,14 +1535,8 @@
 				18C7DB0A1BC7AA75005B93A9 /* SearchAssistantView.m */,
 				18C7DB0E1BC7AD94005B93A9 /* SearchAssistantCell.h */,
 				18C7DB0F1BC7AD94005B93A9 /* SearchAssistantCell.m */,
-				186D36921BE1F67300EBA634 /* ReminderDetailsViewController.h */,
-				186D36931BE1F67300EBA634 /* ReminderDetailsViewController.m */,
-				189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */,
-				189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */,
-				1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */,
-				1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */,
-				1822C4511BD5054000DD24C0 /* ProfileContainerViewController.h */,
-				1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */,
+				18A0FAD01C34012E0013686B /* Doctor - Reminder Details */,
+				18A0FAD11C3401840013686B /* Not used */,
 				18A50F421C32A57600B72BE1 /* Doctor - Landing Page */,
 				18C7DB061BC7A047005B93A9 /* ClinicInformationView.h */,
 				18C7DB071BC7A047005B93A9 /* ClinicInformationView.m */,
@@ -1588,99 +1549,39 @@
 				18A50F5D1C32AF8100B72BE1 /* App Delegate */,
 				182394E91BBD0DCE00D97366 /* ViewController.h */,
 				182394EA1BBD0DCE00D97366 /* ViewController.m */,
-				18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */,
-				18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */,
-				18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */,
-				18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */,
-				18C14F371BC2564300AFF591 /* DetailManageTemplate.h */,
-				18C14F381BC2564300AFF591 /* DetailManageTemplate.m */,
-				18C14F3A1BC2567900AFF591 /* DetailManageTemplateCell.h */,
-				18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */,
-				1842F3631BC3E0300055597E /* TemplateDetailView.h */,
-				1842F3641BC3E0300055597E /* TemplateDetailView.m */,
-				1842F3691BC3E7600055597E /* EditTemplateDetailView.h */,
-				1842F36A1BC3E7600055597E /* EditTemplateDetailView.m */,
-				1842F3121BC38F970055597E /* ManageAssistant.h */,
-				1842F3131BC38F970055597E /* ManageAssistant.m */,
-				1842F31A1BC399A80055597E /* ManageAssistantCell.h */,
-				1842F31B1BC399A80055597E /* ManageAssistantCell.m */,
-				186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */,
-				186E57A71BDB80A600F7CA72 /* LastVisitedConsultationViewController.m */,
-				187330371BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.h */,
-				187330381BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m */,
+				18A0FAB31C33F7FC0013686B /* Table Controller 1 */,
+				18A0FAB41C33F8280013686B /* Table Controller 2 */,
+				18A0FAB51C33F8470013686B /* Table Controller 3 */,
+				18A0FAB61C33F8690013686B /* Table Controller 4 */,
+				18A0FAB71C33FA500013686B /* Last Visited Consultations */,
+				18A0FAB81C33FA780013686B /* Mark n Create Appointment */,
 				186E57AF1BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.h */,
 				186E57B01BDB8D2000F7CA72 /* DoctorDetailAddTreatmentViewController.m */,
 				180CF3391BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.h */,
 				180CF33A1BDF790800FA7D86 /* DoctorDetailAddTreatmentCell.m */,
-				183D40CC1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.h */,
-				183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */,
-				183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */,
-				183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */,
-				183D407F1BDDF8D600AB4FA5 /* SymptomsHistoryViewController.h */,
-				183D40801BDDF8D600AB4FA5 /* SymptomsHistoryViewController.m */,
-				18154DF71C1FD09B0063FA26 /* SymptomsHistoryCell.h */,
-				18154DF81C1FD09B0063FA26 /* SymptomsHistoryCell.m */,
-				183D40821BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.h */,
-				183D40831BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m */,
-				18154DFA1C1FD0FC0063FA26 /* DiagnosisHistoryCell.h */,
-				18154DFB1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m */,
-				183D40851BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.h */,
-				183D40861BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m */,
-				18154DFD1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.h */,
-				18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */,
-				183D40881BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.h */,
-				183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */,
-				18154E001C1FD19E0063FA26 /* TestPrescirbedHistoryCell.h */,
-				18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */,
-				183D407A1BDDE56C00AB4FA5 /* AllDetailInformationViewController.h */,
-				183D407B1BDDE56C00AB4FA5 /* AllDetailInformationViewController.m */,
-				189125341C05753E00136C97 /* AllDetailInformationCell.h */,
-				189125351C05753E00136C97 /* AllDetailInformationCell.m */,
-				18A0FAA11C33A9530013686B /* AllDetailDocumentInformationCell.h */,
-				18A0FAA21C33A9530013686B /* AllDetailDocumentInformationCell.m */,
-				1891253D1C058CF500136C97 /* PatientAllDetailInformationViewController.h */,
-				1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */,
-				1891254C1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.h */,
-				1891254D1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.m */,
-				185306811C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.h */,
-				185306821C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m */,
-				184C234D1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.h */,
-				184C234E1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m */,
-				184C23501BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.h */,
-				184C23511BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.m */,
+				18A0FAB91C33FAA60013686B /* Doctor - Medicine Prescribed */,
+				18A0FABA1C33FAE30013686B /* Doctor - Upload Documents */,
+				18A0FABB1C33FB020013686B /* Doctor - Symptoms History */,
+				18A0FABC1C33FB1C0013686B /* Doctor - Diagnosis History */,
+				18A0FABD1C33FB3D0013686B /* Doctor - Medicine Prescribed History */,
+				18A0FABE1C33FB600013686B /* Doctor - Test Prescribed History */,
+				18A0FABF1C33FB8B0013686B /* Doctor - All Detail Information */,
+				18A0FAC01C33FCF30013686B /* Patient - All Detail Information */,
+				18A0FAC11C33FD250013686B /* Doctor - Patient Appointment */,
 				18A50F5E1C32AFB300B72BE1 /* Doctor - Patient Profiles */,
-				1895A1DA1BC8CBF100C8647D /* DetailPatientProfileViewController.h */,
-				1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */,
-				184C23551BDA5FC2004F3EF1 /* DetailPatientProfileCell.h */,
-				184C23561BDA5FC2004F3EF1 /* DetailPatientProfileCell.m */,
-				185D870C1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.h */,
-				185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */,
-				185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */,
-				185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */,
-				185D87141BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.h */,
-				185D87151BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m */,
-				183D36CD1BE32A3F004328F9 /* DayWeekMonthAppointmentViewController.h */,
-				183D36CE1BE32A3F004328F9 /* DayWeekMonthAppointmentViewController.m */,
-				183D36D01BE338B5004328F9 /* DoctorDetailManageFinanceViewController.h */,
-				183D36D11BE338B5004328F9 /* DoctorDetailManageFinanceViewController.m */,
-				186E579D1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.h */,
-				186E579E1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.m */,
-				186D36951BE201EF00EBA634 /* DoctorManageFinanceCell.h */,
-				186D36961BE201EF00EBA634 /* DoctorManageFinanceCell.m */,
-				187499F71C2178E900F18AB7 /* DoctorManageAssistantViewController.h */,
-				187499F81C2178E900F18AB7 /* DoctorManageAssistantViewController.m */,
-				187499FA1C21790400F18AB7 /* DoctorManageAssistantCell.h */,
-				187499FB1C21790400F18AB7 /* DoctorManageAssistantCell.m */,
-				184F01D61BCE593800913B23 /* SearchResultAssistantViewController.h */,
-				184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */,
+				18A0FAC21C33FD490013686B /* Doctor - Detail Patient Profile */,
+				18A0FAC31C33FD730013686B /* Doctor - Manage Appointment */,
+				18A0FAC41C33FDE40013686B /* Doctor - Detail Manage Appointment */,
+				18A0FAC51C33FE120013686B /* Doctor - Day Week Month Appointment */,
+				18A0FAC61C33FE4A0013686B /* Doctor - Manage Finance */,
+				18A0FAC71C33FE680013686B /* Doctor - Detail Manage Finance */,
+				18A0FAC81C33FED50013686B /* Doctor - Manage Assistant */,
+				18A0FAC91C33FF350013686B /* Doctor - Search Result Assistant */,
 				1842F31D1BC3A1B50055597E /* AddAssistantView.h */,
 				1842F31E1BC3A1B50055597E /* AddAssistantView.m */,
-				185D87011BD796AB003B357C /* SearchPatientForDoctorViewController.h */,
-				185D87021BD796AB003B357C /* SearchPatientForDoctorViewController.m */,
+				18A0FACA1C33FFD80013686B /* Doctor - Search Patient */,
 				185D86FC1BD78C97003B357C /* AddPatientViewController.h */,
 				185D86FD1BD78C97003B357C /* AddPatientViewController.m */,
-				185D87041BD796EC003B357C /* SearchPatientForDoctorCell.h */,
-				185D87051BD796EC003B357C /* SearchPatientForDoctorCell.m */,
 				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
 				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
 				187499DC1C21501500F18AB7 /* GetSearchDoctorViewController.h */,
@@ -1691,26 +1592,15 @@
 				187499E31C21505300F18AB7 /* GetDetailSearchDoctorViewController.m */,
 				187499E51C21506800F18AB7 /* GetDetailSearchDoctorCell.h */,
 				187499E61C21506800F18AB7 /* GetDetailSearchDoctorCell.m */,
-				187499CA1C21425400F18AB7 /* SearchDoctorViewController.h */,
-				187499CB1C21425400F18AB7 /* SearchDoctorViewController.m */,
-				187499CD1C21444400F18AB7 /* SearchDoctorCell.h */,
-				187499CE1C21444400F18AB7 /* SearchDoctorCell.m */,
+				18A0FACB1C3400470013686B /* Doctor - Search Doctor */,
 				18A50F601C32B22300B72BE1 /* Doctor - Manage Reminder */,
 				18A50F621C32BB2B00B72BE1 /* Doctor - Add Template */,
 				18A50F631C32BB3E00B72BE1 /* Doctor - Add Procedure */,
-				18327F2B1BC521C8002210BC /* TemplateDetailViewController.h */,
-				18327F2C1BC521C8002210BC /* TemplateDetailViewController.m */,
-				18327F311BC5234B002210BC /* TemplateDetailCell.h */,
-				18327F321BC5234B002210BC /* TemplateDetailCell.m */,
-				1890864E1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.h */,
-				1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */,
-				1890864C1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.h */,
-				1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */,
+				18A0FACC1C3400650013686B /* Doctor - Template Detail */,
+				18A0FACD1C34008A0013686B /* Doctor - Detail Manage Template */,
 				18A50F5F1C32B1C800B72BE1 /* Doctor - Change Password */,
-				1854A2111BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.h */,
-				1854A2121BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m */,
-				186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */,
-				186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */,
+				18A0FACE1C3400A60013686B /* Doctor - Add Slots For Clinic */,
+				18A0FACF1C3400C40013686B /* Doctor - Create Clinic */,
 				18C7DAF81BC78767005B93A9 /* DetailClinicView.h */,
 				18C7DAF91BC78767005B93A9 /* DetailClinicView.m */,
 				18A50F611C32BA3300B72BE1 /* Doctor - Search Clinics */,
@@ -1855,6 +1745,484 @@
 				182394FD1BBD0DCE00D97366 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18A0FAA41C33F34F0013686B /* Patient - List of Clinics And Labs */ = {
+			isa = PBXGroup;
+			children = (
+				185306861C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.h */,
+				185306871C0704CD0058C6CE /* PatientYearlyPDFListOfClinicLabViewController.m */,
+				185306891C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.h */,
+				1853068A1C0707950058C6CE /* PatientYearlyPDFListOfClinicLabCell.m */,
+			);
+			name = "Patient - List of Clinics And Labs";
+			sourceTree = "<group>";
+		};
+		18A0FAA51C33F3A00013686B /* Patient - Medicine Prescribed */ = {
+			isa = PBXGroup;
+			children = (
+				189125521C05CB7700136C97 /* PatientMedicinePrescribedScheduleViewController.h */,
+				189125531C05CB7700136C97 /* PatientMedicinePrescribedScheduleViewController.m */,
+			);
+			name = "Patient - Medicine Prescribed";
+			sourceTree = "<group>";
+		};
+		18A0FAA61C33F3CA0013686B /* Patient - Symptom History */ = {
+			isa = PBXGroup;
+			children = (
+				189125401C05A70900136C97 /* PatientSymptomHistoryViewController.h */,
+				189125411C05A70900136C97 /* PatientSymptomHistoryViewController.m */,
+				189ED8B11C22DAA000476827 /* PatientSymptomHistoryCell.h */,
+				189ED8B21C22DAA000476827 /* PatientSymptomHistoryCell.m */,
+			);
+			name = "Patient - Symptom History";
+			sourceTree = "<group>";
+		};
+		18A0FAA71C33F3F70013686B /* Patient - Diagnosis History */ = {
+			isa = PBXGroup;
+			children = (
+				189125431C05A74000136C97 /* PatientDiagnosisHistoryViewController.h */,
+				189125441C05A74000136C97 /* PatientDiagnosisHistoryViewController.m */,
+				189ED8B41C22DAC200476827 /* PatientDiagnosisHistoryCell.h */,
+				189ED8B51C22DAC200476827 /* PatientDiagnosisHistoryCell.m */,
+			);
+			name = "Patient - Diagnosis History";
+			sourceTree = "<group>";
+		};
+		18A0FAA81C33F4220013686B /* Patient - Medicine History */ = {
+			isa = PBXGroup;
+			children = (
+				189125461C05A76300136C97 /* PatientMedicineHistoryViewController.h */,
+				189125471C05A76300136C97 /* PatientMedicineHistoryViewController.m */,
+				189ED8B71C22DAE200476827 /* PatientMedicineHistoryCell.h */,
+				189ED8B81C22DAE200476827 /* PatientMedicineHistoryCell.m */,
+			);
+			name = "Patient - Medicine History";
+			sourceTree = "<group>";
+		};
+		18A0FAA91C33F4440013686B /* Patient - Test Prescribed History */ = {
+			isa = PBXGroup;
+			children = (
+				189125491C05A79200136C97 /* PatientTestPrescribedHistoryViewController.h */,
+				1891254A1C05A79200136C97 /* PatientTestPrescribedHistoryViewController.m */,
+				189ED8BA1C22DB0200476827 /* PatientTestPrescribedHistoryCell.h */,
+				189ED8BB1C22DB0300476827 /* PatientTestPrescribedHistoryCell.m */,
+			);
+			name = "Patient - Test Prescribed History";
+			sourceTree = "<group>";
+		};
+		18A0FAAA1C33F4F00013686B /* Patient - Yearly Count Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				189125371C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.h */,
+				189125381C05810100136C97 /* YearlyCountAppointmentForPatientDoctorConsultationViewController.m */,
+				1891253A1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.h */,
+				1891253B1C05813A00136C97 /* YearlyCountAppointmentForPatientDoctorConsultationCell.m */,
+			);
+			name = "Patient - Yearly Count Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAAB1C33F5CC0013686B /* Patient - Doctor Consultations */ = {
+			isa = PBXGroup;
+			children = (
+				188E5E471C0431C70001E400 /* PatientDoctorConsultationsViewController.h */,
+				188E5E481C0431C70001E400 /* PatientDoctorConsultationsViewController.m */,
+				188E5E4D1C0437460001E400 /* PatientDoctorConsultationsCell.h */,
+				188E5E4E1C0437460001E400 /* PatientDoctorConsultationsCell.m */,
+			);
+			name = "Patient - Doctor Consultations";
+			sourceTree = "<group>";
+		};
+		18A0FAAC1C33F6060013686B /* Patient - Detail Doctor Consultations */ = {
+			isa = PBXGroup;
+			children = (
+				188E5E501C043F150001E400 /* DetailPatientDoctorConsultationsViewController.h */,
+				188E5E511C043F150001E400 /* DetailPatientDoctorConsultationsViewController.m */,
+				188E5E531C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.h */,
+				188E5E541C0457CF0001E400 /* DetailPatientDoctorConsultationsCell.m */,
+			);
+			name = "Patient - Detail Doctor Consultations";
+			sourceTree = "<group>";
+		};
+		18A0FAAD1C33F6420013686B /* Patient - How it Works */ = {
+			isa = PBXGroup;
+			children = (
+				1897CD9D1BCCCD0F0043F0FD /* HowItWorksViewController.h */,
+				1897CD9E1BCCCD0F0043F0FD /* HowItWorksViewController.m */,
+			);
+			name = "Patient - How it Works";
+			sourceTree = "<group>";
+		};
+		18A0FAAE1C33F67F0013686B /* Patient - T and C */ = {
+			isa = PBXGroup;
+			children = (
+				1897CD9A1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.h */,
+				1897CD9B1BCCC9F80043F0FD /* PatientTerms&ConditionsViewController.m */,
+			);
+			name = "Patient - T and C";
+			sourceTree = "<group>";
+		};
+		18A0FAAF1C33F6A20013686B /* Patient - Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				186BD61E1BCF7F8400B43A8C /* PatientChangePasswordViewController.h */,
+				186BD61F1BCF7F8400B43A8C /* PatientChangePasswordViewController.m */,
+			);
+			name = "Patient - Change Password";
+			sourceTree = "<group>";
+		};
+		18A0FAB01C33F6C70013686B /* Patient - Setting Page */ = {
+			isa = PBXGroup;
+			children = (
+				1897CD971BCCC5570043F0FD /* PatientSettingPageViewController.h */,
+				1897CD981BCCC5570043F0FD /* PatientSettingPageViewController.m */,
+			);
+			name = "Patient - Setting Page";
+			sourceTree = "<group>";
+		};
+		18A0FAB11C33F7080013686B /* Patient - Manage Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				188F68B91C17F58E005DBA11 /* PatientManageAppointmentViewController.h */,
+				188F68BA1C17F58E005DBA11 /* PatientManageAppointmentViewController.m */,
+				188F68BC1C1804EC005DBA11 /* PatientManageAppointmentCell.h */,
+				188F68BD1C1804EC005DBA11 /* PatientManageAppointmentCell.m */,
+			);
+			name = "Patient - Manage Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAB21C33F7320013686B /* Patient - Upload Documents */ = {
+			isa = PBXGroup;
+			children = (
+				1891254F1C05C0E500136C97 /* PatientUploadDocumentsViewController.h */,
+				189125501C05C0E500136C97 /* PatientUploadDocumentsViewController.m */,
+			);
+			name = "Patient - Upload Documents";
+			sourceTree = "<group>";
+		};
+		18A0FAB31C33F7FC0013686B /* Table Controller 1 */ = {
+			isa = PBXGroup;
+			children = (
+				18427DBB1BC23DC1002A15FC /* ManageTemplateTableViewController.h */,
+				18427DBC1BC23DC1002A15FC /* ManageTemplateTableViewController.m */,
+				18427DBE1BC23E12002A15FC /* ManageTemplateCell.h */,
+				18427DBF1BC23E12002A15FC /* ManageTemplateCell.m */,
+			);
+			name = "Table Controller 1";
+			sourceTree = "<group>";
+		};
+		18A0FAB41C33F8280013686B /* Table Controller 2 */ = {
+			isa = PBXGroup;
+			children = (
+				18C14F371BC2564300AFF591 /* DetailManageTemplate.h */,
+				18C14F381BC2564300AFF591 /* DetailManageTemplate.m */,
+				18C14F3A1BC2567900AFF591 /* DetailManageTemplateCell.h */,
+				18C14F3B1BC2567900AFF591 /* DetailManageTemplateCell.m */,
+			);
+			name = "Table Controller 2";
+			sourceTree = "<group>";
+		};
+		18A0FAB51C33F8470013686B /* Table Controller 3 */ = {
+			isa = PBXGroup;
+			children = (
+				1842F3631BC3E0300055597E /* TemplateDetailView.h */,
+				1842F3641BC3E0300055597E /* TemplateDetailView.m */,
+				1842F3691BC3E7600055597E /* EditTemplateDetailView.h */,
+				1842F36A1BC3E7600055597E /* EditTemplateDetailView.m */,
+			);
+			name = "Table Controller 3";
+			sourceTree = "<group>";
+		};
+		18A0FAB61C33F8690013686B /* Table Controller 4 */ = {
+			isa = PBXGroup;
+			children = (
+				1842F3121BC38F970055597E /* ManageAssistant.h */,
+				1842F3131BC38F970055597E /* ManageAssistant.m */,
+				1842F31A1BC399A80055597E /* ManageAssistantCell.h */,
+				1842F31B1BC399A80055597E /* ManageAssistantCell.m */,
+			);
+			name = "Table Controller 4";
+			sourceTree = "<group>";
+		};
+		18A0FAB71C33FA500013686B /* Last Visited Consultations */ = {
+			isa = PBXGroup;
+			children = (
+				186E57A61BDB80A600F7CA72 /* LastVisitedConsultationViewController.h */,
+				186E57A71BDB80A600F7CA72 /* LastVisitedConsultationViewController.m */,
+			);
+			name = "Last Visited Consultations";
+			sourceTree = "<group>";
+		};
+		18A0FAB81C33FA780013686B /* Mark n Create Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				187330371BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.h */,
+				187330381BE0BB4A00933411 /* MarkAndCreateAppointmentViewController.m */,
+			);
+			name = "Mark n Create Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAB91C33FAA60013686B /* Doctor - Medicine Prescribed */ = {
+			isa = PBXGroup;
+			children = (
+				183D40CC1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.h */,
+				183D40CD1BDE1E4F00AB4FA5 /* MedicinePrescribedScheduleViewController.m */,
+			);
+			name = "Doctor - Medicine Prescribed";
+			sourceTree = "<group>";
+		};
+		18A0FABA1C33FAE30013686B /* Doctor - Upload Documents */ = {
+			isa = PBXGroup;
+			children = (
+				183D40C51BDE112300AB4FA5 /* UploadDocumentsViewController.h */,
+				183D40C61BDE112300AB4FA5 /* UploadDocumentsViewController.m */,
+			);
+			name = "Doctor - Upload Documents";
+			sourceTree = "<group>";
+		};
+		18A0FABB1C33FB020013686B /* Doctor - Symptoms History */ = {
+			isa = PBXGroup;
+			children = (
+				183D407F1BDDF8D600AB4FA5 /* SymptomsHistoryViewController.h */,
+				183D40801BDDF8D600AB4FA5 /* SymptomsHistoryViewController.m */,
+				18154DF71C1FD09B0063FA26 /* SymptomsHistoryCell.h */,
+				18154DF81C1FD09B0063FA26 /* SymptomsHistoryCell.m */,
+			);
+			name = "Doctor - Symptoms History";
+			sourceTree = "<group>";
+		};
+		18A0FABC1C33FB1C0013686B /* Doctor - Diagnosis History */ = {
+			isa = PBXGroup;
+			children = (
+				183D40821BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.h */,
+				183D40831BDDF8F300AB4FA5 /* DiagnosisHistoryViewController.m */,
+				18154DFA1C1FD0FC0063FA26 /* DiagnosisHistoryCell.h */,
+				18154DFB1C1FD0FC0063FA26 /* DiagnosisHistoryCell.m */,
+			);
+			name = "Doctor - Diagnosis History";
+			sourceTree = "<group>";
+		};
+		18A0FABD1C33FB3D0013686B /* Doctor - Medicine Prescribed History */ = {
+			isa = PBXGroup;
+			children = (
+				183D40851BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.h */,
+				183D40861BDDF9AC00AB4FA5 /* MedicinePrescribedHistoryViewController.m */,
+				18154DFD1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.h */,
+				18154DFE1C1FD16D0063FA26 /* MedicinePrescribedHistoryCell.m */,
+			);
+			name = "Doctor - Medicine Prescribed History";
+			sourceTree = "<group>";
+		};
+		18A0FABE1C33FB600013686B /* Doctor - Test Prescribed History */ = {
+			isa = PBXGroup;
+			children = (
+				183D40881BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.h */,
+				183D40891BDDF9C900AB4FA5 /* TestPrescirbedHistoryViewController.m */,
+				18154E001C1FD19E0063FA26 /* TestPrescirbedHistoryCell.h */,
+				18154E011C1FD19E0063FA26 /* TestPrescirbedHistoryCell.m */,
+			);
+			name = "Doctor - Test Prescribed History";
+			sourceTree = "<group>";
+		};
+		18A0FABF1C33FB8B0013686B /* Doctor - All Detail Information */ = {
+			isa = PBXGroup;
+			children = (
+				183D407A1BDDE56C00AB4FA5 /* AllDetailInformationViewController.h */,
+				183D407B1BDDE56C00AB4FA5 /* AllDetailInformationViewController.m */,
+				189125341C05753E00136C97 /* AllDetailInformationCell.h */,
+				189125351C05753E00136C97 /* AllDetailInformationCell.m */,
+				18A0FAA11C33A9530013686B /* AllDetailDocumentInformationCell.h */,
+				18A0FAA21C33A9530013686B /* AllDetailDocumentInformationCell.m */,
+			);
+			name = "Doctor - All Detail Information";
+			sourceTree = "<group>";
+		};
+		18A0FAC01C33FCF30013686B /* Patient - All Detail Information */ = {
+			isa = PBXGroup;
+			children = (
+				1891253D1C058CF500136C97 /* PatientAllDetailInformationViewController.h */,
+				1891253E1C058CF500136C97 /* PatientAllDetailInformationViewController.m */,
+				1891254C1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.h */,
+				1891254D1C05B18D00136C97 /* PatientAllDetailSummaryInformationCell.m */,
+				185306811C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.h */,
+				185306821C06D8250058C6CE /* PatientAllDetailDocumentInformationCell.m */,
+			);
+			name = "Patient - All Detail Information";
+			sourceTree = "<group>";
+		};
+		18A0FAC11C33FD250013686B /* Doctor - Patient Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				184C234D1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.h */,
+				184C234E1BDA4C36004F3EF1 /* PatientAppointmentsForDoctorViewController.m */,
+				184C23501BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.h */,
+				184C23511BDA4C60004F3EF1 /* PatientAppointmentsForDoctorCell.m */,
+			);
+			name = "Doctor - Patient Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAC21C33FD490013686B /* Doctor - Detail Patient Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1895A1DA1BC8CBF100C8647D /* DetailPatientProfileViewController.h */,
+				1895A1DB1BC8CBF100C8647D /* DetailPatientProfileViewController.m */,
+				184C23551BDA5FC2004F3EF1 /* DetailPatientProfileCell.h */,
+				184C23561BDA5FC2004F3EF1 /* DetailPatientProfileCell.m */,
+			);
+			name = "Doctor - Detail Patient Profile";
+			sourceTree = "<group>";
+		};
+		18A0FAC31C33FD730013686B /* Doctor - Manage Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				185D870C1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.h */,
+				185D870D1BD7B0B0003B357C /* DoctorManageAppointmentsViewController.m */,
+				185D870F1BD7B4FC003B357C /* DoctorManageAppointmentCell.h */,
+				185D87101BD7B4FC003B357C /* DoctorManageAppointmentCell.m */,
+			);
+			name = "Doctor - Manage Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAC41C33FDE40013686B /* Doctor - Detail Manage Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				185D87141BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.h */,
+				185D87151BD7BE3B003B357C /* DoctorDetailManageAppointmentViewController.m */,
+			);
+			name = "Doctor - Detail Manage Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAC51C33FE120013686B /* Doctor - Day Week Month Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				183D36CD1BE32A3F004328F9 /* DayWeekMonthAppointmentViewController.h */,
+				183D36CE1BE32A3F004328F9 /* DayWeekMonthAppointmentViewController.m */,
+			);
+			name = "Doctor - Day Week Month Appointment";
+			sourceTree = "<group>";
+		};
+		18A0FAC61C33FE4A0013686B /* Doctor - Manage Finance */ = {
+			isa = PBXGroup;
+			children = (
+				186E579D1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.h */,
+				186E579E1BDB62DB00F7CA72 /* DoctorManageFinanceViewController.m */,
+				186D36951BE201EF00EBA634 /* DoctorManageFinanceCell.h */,
+				186D36961BE201EF00EBA634 /* DoctorManageFinanceCell.m */,
+			);
+			name = "Doctor - Manage Finance";
+			sourceTree = "<group>";
+		};
+		18A0FAC71C33FE680013686B /* Doctor - Detail Manage Finance */ = {
+			isa = PBXGroup;
+			children = (
+				183D36D01BE338B5004328F9 /* DoctorDetailManageFinanceViewController.h */,
+				183D36D11BE338B5004328F9 /* DoctorDetailManageFinanceViewController.m */,
+			);
+			name = "Doctor - Detail Manage Finance";
+			sourceTree = "<group>";
+		};
+		18A0FAC81C33FED50013686B /* Doctor - Manage Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				187499F81C2178E900F18AB7 /* DoctorManageAssistantViewController.m */,
+				187499F71C2178E900F18AB7 /* DoctorManageAssistantViewController.h */,
+				187499FA1C21790400F18AB7 /* DoctorManageAssistantCell.h */,
+				187499FB1C21790400F18AB7 /* DoctorManageAssistantCell.m */,
+			);
+			name = "Doctor - Manage Assistant";
+			sourceTree = "<group>";
+		};
+		18A0FAC91C33FF350013686B /* Doctor - Search Result Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				184F01D61BCE593800913B23 /* SearchResultAssistantViewController.h */,
+				184F01D71BCE593800913B23 /* SearchResultAssistantViewController.m */,
+			);
+			name = "Doctor - Search Result Assistant";
+			sourceTree = "<group>";
+		};
+		18A0FACA1C33FFD80013686B /* Doctor - Search Patient */ = {
+			isa = PBXGroup;
+			children = (
+				185D87011BD796AB003B357C /* SearchPatientForDoctorViewController.h */,
+				185D87021BD796AB003B357C /* SearchPatientForDoctorViewController.m */,
+				185D87041BD796EC003B357C /* SearchPatientForDoctorCell.h */,
+				185D87051BD796EC003B357C /* SearchPatientForDoctorCell.m */,
+			);
+			name = "Doctor - Search Patient";
+			sourceTree = "<group>";
+		};
+		18A0FACB1C3400470013686B /* Doctor - Search Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				187499CA1C21425400F18AB7 /* SearchDoctorViewController.h */,
+				187499CB1C21425400F18AB7 /* SearchDoctorViewController.m */,
+				187499CD1C21444400F18AB7 /* SearchDoctorCell.h */,
+				187499CE1C21444400F18AB7 /* SearchDoctorCell.m */,
+			);
+			name = "Doctor - Search Doctor";
+			sourceTree = "<group>";
+		};
+		18A0FACC1C3400650013686B /* Doctor - Template Detail */ = {
+			isa = PBXGroup;
+			children = (
+				18327F2B1BC521C8002210BC /* TemplateDetailViewController.h */,
+				18327F2C1BC521C8002210BC /* TemplateDetailViewController.m */,
+				18327F311BC5234B002210BC /* TemplateDetailCell.h */,
+				18327F321BC5234B002210BC /* TemplateDetailCell.m */,
+			);
+			name = "Doctor - Template Detail";
+			sourceTree = "<group>";
+		};
+		18A0FACD1C34008A0013686B /* Doctor - Detail Manage Template */ = {
+			isa = PBXGroup;
+			children = (
+				1890864E1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.h */,
+				1890864F1BFAF5D300669969 /* DetailManageTemplateForDoctorViewController.m */,
+				1890864C1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.h */,
+				1890864D1BFAF5D300669969 /* DetailManageTemplateForDoctorCell.m */,
+			);
+			name = "Doctor - Detail Manage Template";
+			sourceTree = "<group>";
+		};
+		18A0FACE1C3400A60013686B /* Doctor - Add Slots For Clinic */ = {
+			isa = PBXGroup;
+			children = (
+				1854A2111BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.h */,
+				1854A2121BF9F2BB00356200 /* AddSlotsForDoctorClinicSettingViewController.m */,
+			);
+			name = "Doctor - Add Slots For Clinic";
+			sourceTree = "<group>";
+		};
+		18A0FACF1C3400C40013686B /* Doctor - Create Clinic */ = {
+			isa = PBXGroup;
+			children = (
+				186BD61B1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.h */,
+				186BD61C1BCF78F300B43A8C /* CreateDoctorsClinicSettingsViewController.m */,
+			);
+			name = "Doctor - Create Clinic";
+			sourceTree = "<group>";
+		};
+		18A0FAD01C34012E0013686B /* Doctor - Reminder Details */ = {
+			isa = PBXGroup;
+			children = (
+				186D36921BE1F67300EBA634 /* ReminderDetailsViewController.h */,
+				186D36931BE1F67300EBA634 /* ReminderDetailsViewController.m */,
+			);
+			name = "Doctor - Reminder Details";
+			sourceTree = "<group>";
+		};
+		18A0FAD11C3401840013686B /* Not used */ = {
+			isa = PBXGroup;
+			children = (
+				189EDB891BD6121100AA9B96 /* BookAppointmentViewController.h */,
+				189EDB8A1BD6121100AA9B96 /* BookAppointmentViewController.m */,
+				1822C4541BD50CD500DD24C0 /* AppointmentContainerViewController.h */,
+				1822C4551BD50CD500DD24C0 /* AppointmentContainerViewController.m */,
+				1822C4511BD5054000DD24C0 /* ProfileContainerViewController.h */,
+				1822C4521BD5054000DD24C0 /* ProfileContainerViewController.m */,
+			);
+			name = "Not used";
 			sourceTree = "<group>";
 		};
 		18A50F411C32A3DB00B72BE1 /* Login */ = {
