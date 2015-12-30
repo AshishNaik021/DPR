@@ -140,7 +140,9 @@
     cell.patientNameLabel.text = [[patientArr objectAtIndex:row] objectForKey:@"name"];
     
     if (![[[patientArr objectAtIndex:row] objectForKey:@"lastVisited"] isEqual:[NSNull null]]) {
+        
         [cell.lastVisitedButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"lastVisited"]] forState:UIControlStateNormal];
+        
         if ([cell.lastVisitedButton.titleLabel.text length] == 0) {
             [cell.lastVisitedButton setTitle:@"Not Visited" forState:UIControlStateNormal];
         }
@@ -151,14 +153,16 @@
     }
     
     
-    if ((![[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]])&& (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"] isEqual:[NSNull null]])) {
+    if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"] isEqual:[NSNull null]]) {
         
-        NSString *concatinate = [NSString stringWithFormat:@"%@ %@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"],[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"]];
-        NSLog(@"Concatinate-------%@",concatinate);
+//        NSString *appDate = [[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"];
+//        NSString *appTime = [[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"];
         
+        NSString *concat = [NSString stringWithFormat:@"%@ %@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"],[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"]];
+        NSLog(@"%lu",(unsigned long)[concat length]);
         
-        [cell.lastAppointmentButton setTitle:[NSString stringWithFormat:@"%@",concatinate]forState:UIControlStateNormal ];//[[patientArr objectAtIndex:row] objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
-        if ([cell.lastAppointmentButton.titleLabel.text length] == 0) {
+        [cell.lastAppointmentButton setTitle:concat forState:UIControlStateNormal];
+        if ([cell.lastAppointmentButton.titleLabel.text length] == 1) {
             [cell.lastAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
         }
         
@@ -168,24 +172,23 @@
         [cell.lastAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
     }
     
-//    if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"] isEqual:[NSNull null]]) {
-//        [cell.appointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"]] forState:UIControlStateNormal];
-//        if ([cell.appointmentButton.titleLabel.text length] == 0) {
-//            [cell.appointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
-//        }
-//        
-//    }
-//    else
-//    {
-//        [cell.appointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
-//    }
-    if ((![[[patientArr objectAtIndex:row] objectForKey:@"bookDate"] isEqual:[NSNull null]]) && (![[[patientArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]])) {
+    if (![[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"] isEqual:[NSNull null]]) {
+        [cell.appointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"appointmentTime"]] forState:UIControlStateNormal];
+        if ([cell.appointmentButton.titleLabel.text length] == 0) {
+            [cell.appointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
+        }
         
-        NSString *concatinate = [NSString stringWithFormat:@"%@ %@",[[patientArr objectAtIndex:row] objectForKey:@"bookDate"],[[patientArr objectAtIndex:row] objectForKey:@"bookTime"]];
-        NSLog(@"Concatinate-------%@",concatinate);
-
-        [cell.nextAppointmentButton setTitle:[NSString stringWithFormat:@"%@",concatinate]forState:UIControlStateNormal];//[[patientArr objectAtIndex:row] objectForKey:@"bookDate"]] forState:UIControlStateNormal];
-        if ([cell.nextAppointmentButton.titleLabel.text length] == 0) {
+    }
+    else
+    {
+        [cell.appointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
+    }
+    if (![[[patientArr objectAtIndex:row] objectForKey:@"bookDate"] isEqual:[NSNull null]]) {
+        
+        NSString *concat = [NSString stringWithFormat:@"%@ %@",[[patientArr objectAtIndex:row] objectForKey:@"bookDate"],[[patientArr objectAtIndex:row] objectForKey:@"bookTime"]];
+        
+        [cell.nextAppointmentButton setTitle:concat forState:UIControlStateNormal];
+        if ([cell.nextAppointmentButton.titleLabel.text length] == 1) {
             [cell.nextAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
         }
         
@@ -195,18 +198,21 @@
         [cell.nextAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
     }
     
-//    if (![[[patientArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]) {
-//        [cell.nextTimeAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"bookTime"]] forState:UIControlStateNormal];
-//        if ([cell.nextTimeAppointmentButton.titleLabel.text length] == 0) {
-//            [cell.nextTimeAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
-//        }
-//        
-//    }
-//    else
-//    {
-//        [cell.nextTimeAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
-//    }
-//    
+    if (![[[patientArr objectAtIndex:row] objectForKey:@"bookTime"] isEqual:[NSNull null]]) {
+        
+        
+        
+        [cell.nextTimeAppointmentButton setTitle:[NSString stringWithFormat:@"%@",[[patientArr objectAtIndex:row] objectForKey:@"bookTime"]] forState:UIControlStateNormal];
+        if ([cell.nextTimeAppointmentButton.titleLabel.text length] == 0) {
+            [cell.nextTimeAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
+        }
+        
+    }
+    else
+    {
+        [cell.nextTimeAppointmentButton setTitle:@"Not Booked" forState:UIControlStateNormal];
+    }
+    
     
     
     // [cell.appointmentButton setTitle:[NSString stringWithFormat:[args objectForKey:@"appointmentDate"]] forState:UIControlStateNormal];
