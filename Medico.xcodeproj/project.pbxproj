@@ -1561,18 +1561,10 @@
 				18A0FAC91C33FF350013686B /* Doctor - Search Result Assistant */,
 				18EFA0161C34F185007EDCB4 /* Doctor - Add Assistant */,
 				18A0FACA1C33FFD80013686B /* Doctor - Search Patient */,
-				185D86FC1BD78C97003B357C /* AddPatientViewController.h */,
-				185D86FD1BD78C97003B357C /* AddPatientViewController.m */,
-				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
-				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
-				187499DC1C21501500F18AB7 /* GetSearchDoctorViewController.h */,
-				187499DD1C21501500F18AB7 /* GetSearchDoctorViewController.m */,
-				187499DF1C21503000F18AB7 /* GetSearchDoctorCell.h */,
-				187499E01C21503000F18AB7 /* GetSearchDoctorCell.m */,
-				187499E21C21505300F18AB7 /* GetDetailSearchDoctorViewController.h */,
-				187499E31C21505300F18AB7 /* GetDetailSearchDoctorViewController.m */,
-				187499E51C21506800F18AB7 /* GetDetailSearchDoctorCell.h */,
-				187499E61C21506800F18AB7 /* GetDetailSearchDoctorCell.m */,
+				18EFA01A1C34F9DE007EDCB4 /* Doctor - Add Patient */,
+				18EFA01B1C34F9F8007EDCB4 /* Doctor - Search Patient */,
+				18EFA01C1C34FA12007EDCB4 /* Doctor - Get Search Doctor */,
+				18EFA01D1C34FA30007EDCB4 /* Doctor - Get Detail Search Doctor */,
 				18A0FACB1C3400470013686B /* Doctor - Search Doctor */,
 				18A50F601C32B22300B72BE1 /* Doctor - Manage Reminder */,
 				18A50F621C32BB2B00B72BE1 /* Doctor - Add Template */,
@@ -1582,8 +1574,7 @@
 				18A50F5F1C32B1C800B72BE1 /* Doctor - Change Password */,
 				18A0FACE1C3400A60013686B /* Doctor - Add Slots For Clinic */,
 				18A0FACF1C3400C40013686B /* Doctor - Create Clinic */,
-				18C7DAF81BC78767005B93A9 /* DetailClinicView.h */,
-				18C7DAF91BC78767005B93A9 /* DetailClinicView.m */,
+				18EFA01E1C34FAA1007EDCB4 /* Doctor - Detail Clinic */,
 				18A50F611C32BA3300B72BE1 /* Doctor - Search Clinics */,
 				18A50F531C32A73F00B72BE1 /* Doctor - Manage Clinic Settings */,
 				18A50F521C32A6EC00B72BE1 /* Doctor - Settings */,
@@ -2623,6 +2614,55 @@
 				18C7DB041BC799ED005B93A9 /* SearchTemplateCell.m */,
 			);
 			name = "Doctor - Search Template";
+			sourceTree = "<group>";
+		};
+		18EFA01A1C34F9DE007EDCB4 /* Doctor - Add Patient */ = {
+			isa = PBXGroup;
+			children = (
+				185D86FC1BD78C97003B357C /* AddPatientViewController.h */,
+				185D86FD1BD78C97003B357C /* AddPatientViewController.m */,
+			);
+			name = "Doctor - Add Patient";
+			sourceTree = "<group>";
+		};
+		18EFA01B1C34F9F8007EDCB4 /* Doctor - Search Patient */ = {
+			isa = PBXGroup;
+			children = (
+				185D86F91BD75F93003B357C /* SearchPatientViewController.h */,
+				185D86FA1BD75F93003B357C /* SearchPatientViewController.m */,
+			);
+			name = "Doctor - Search Patient";
+			sourceTree = "<group>";
+		};
+		18EFA01C1C34FA12007EDCB4 /* Doctor - Get Search Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				187499DC1C21501500F18AB7 /* GetSearchDoctorViewController.h */,
+				187499DD1C21501500F18AB7 /* GetSearchDoctorViewController.m */,
+				187499DF1C21503000F18AB7 /* GetSearchDoctorCell.h */,
+				187499E01C21503000F18AB7 /* GetSearchDoctorCell.m */,
+			);
+			name = "Doctor - Get Search Doctor";
+			sourceTree = "<group>";
+		};
+		18EFA01D1C34FA30007EDCB4 /* Doctor - Get Detail Search Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				187499E21C21505300F18AB7 /* GetDetailSearchDoctorViewController.h */,
+				187499E31C21505300F18AB7 /* GetDetailSearchDoctorViewController.m */,
+				187499E51C21506800F18AB7 /* GetDetailSearchDoctorCell.h */,
+				187499E61C21506800F18AB7 /* GetDetailSearchDoctorCell.m */,
+			);
+			name = "Doctor - Get Detail Search Doctor";
+			sourceTree = "<group>";
+		};
+		18EFA01E1C34FAA1007EDCB4 /* Doctor - Detail Clinic */ = {
+			isa = PBXGroup;
+			children = (
+				18C7DAF81BC78767005B93A9 /* DetailClinicView.h */,
+				18C7DAF91BC78767005B93A9 /* DetailClinicView.m */,
+			);
+			name = "Doctor - Detail Clinic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
