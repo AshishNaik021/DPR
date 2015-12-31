@@ -9,8 +9,8 @@
             <objects>
                 <viewController storyboardIdentifier="LoginPage" id="vXZ-lx-hvc" customClass="LoginPage" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="asV-wt-hRv"/>
+                        <viewControllerLayoutGuide type="bottom" id="BSI-Dq-SSl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -149,15 +149,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-818.5" y="-442.5"/>
+            <point key="canvasLocation" x="-818.5" y="-442.49999999999994"/>
         </scene>
         <!--Patient Setting Page View Controller-->
         <scene sceneID="Aef-LQ-POf">
             <objects>
                 <viewController storyboardIdentifier="PatientSettingPageViewController" id="Dtp-uY-QKh" customClass="PatientSettingPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WXY-5J-S4P"/>
-                        <viewControllerLayoutGuide type="bottom" id="m74-Zh-AZc"/>
+                        <viewControllerLayoutGuide type="top" id="1Gt-WW-wXU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gde-aX-OKp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JIe-uO-Lho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -282,8 +282,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientChangePasswordViewController" automaticallyAdjustsScrollViewInsets="NO" id="HNu-Zk-d5t" customClass="PatientChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QU9-Wy-5OI"/>
-                        <viewControllerLayoutGuide type="bottom" id="ygz-TZ-tDx"/>
+                        <viewControllerLayoutGuide type="top" id="HvX-eb-S5Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="wk3-mH-HPr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eEP-4y-HdD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -534,8 +534,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientTerms_ConditionsViewController" id="NHk-fu-BkW" customClass="PatientTerms_ConditionsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y5m-Gz-kvn"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ird-rB-aj3"/>
+                        <viewControllerLayoutGuide type="top" id="S0C-TZ-ZE2"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbY-2d-LIR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LRR-3f-XQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -569,8 +569,8 @@
             <objects>
                 <viewController storyboardIdentifier="HowItWorksViewController" id="R8R-p6-dnY" customClass="HowItWorksViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L3a-tN-q5b"/>
-                        <viewControllerLayoutGuide type="bottom" id="YS3-ej-m1M"/>
+                        <viewControllerLayoutGuide type="top" id="I1K-uF-hbt"/>
+                        <viewControllerLayoutGuide type="bottom" id="TxD-rw-pG7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YTt-ko-eFz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -601,8 +601,8 @@
             <objects>
                 <viewController id="ZTJ-48-qat" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="k3r-ge-uPM"/>
-                        <viewControllerLayoutGuide type="bottom" id="wKL-fb-On9"/>
+                        <viewControllerLayoutGuide type="top" id="8mQ-nj-phL"/>
+                        <viewControllerLayoutGuide type="bottom" id="vDu-Ri-DaE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fEY-1E-074">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -683,8 +683,8 @@
             <objects>
                 <viewController storyboardIdentifier="AboutMedicoViewController" id="08b-rN-PUI" customClass="AboutMedicoViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YRx-S9-ftr"/>
-                        <viewControllerLayoutGuide type="bottom" id="u6r-M3-vSA"/>
+                        <viewControllerLayoutGuide type="top" id="pI9-53-dcE"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZPO-8y-cj3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xpe-iO-kBZ">
                         <rect key="frame" x="1" y="0.0" width="375" height="667"/>
@@ -715,15 +715,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAY-f0-0Tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.5" y="-436.5"/>
+            <point key="canvasLocation" x="149.5" y="-436.49999999999994"/>
         </scene>
         <!--Forgot Password View-->
         <scene sceneID="FR8-TX-Kud">
             <objects>
                 <viewController storyboardIdentifier="ForgotPasswordView" id="MLe-cs-Wkb" customClass="ForgotPasswordView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GUR-pr-uQ3"/>
-                        <viewControllerLayoutGuide type="bottom" id="M2r-yq-ACv"/>
+                        <viewControllerLayoutGuide type="top" id="8D9-1z-U8j"/>
+                        <viewControllerLayoutGuide type="bottom" id="spO-vJ-6ZA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QXO-cx-Z1q">
                         <rect key="frame" x="1" y="-1" width="375" height="667"/>
@@ -803,15 +803,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4N-Na-8UK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305.5" y="-442.5"/>
+            <point key="canvasLocation" x="-305.5" y="-442.49999999999994"/>
         </scene>
         <!--Registration-->
         <scene sceneID="mqI-La-QUi">
             <objects>
                 <viewController storyboardIdentifier="DoctorRegistrer" id="0cL-gk-Fiz" customClass="DoctorRegistrer" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NzA-J3-LGw"/>
-                        <viewControllerLayoutGuide type="bottom" id="WSB-Dr-6bd"/>
+                        <viewControllerLayoutGuide type="top" id="wSr-gx-taN"/>
+                        <viewControllerLayoutGuide type="bottom" id="AAv-b8-hBU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qsP-wU-xEI">
                         <rect key="frame" x="1" y="-1" width="375" height="667"/>
@@ -1049,8 +1049,8 @@
             <objects>
                 <viewController storyboardIdentifier="AssistantRegister" id="y3W-hf-Nnx" customClass="AssistantRegister" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tdm-Q7-lzB"/>
-                        <viewControllerLayoutGuide type="bottom" id="j8y-Lm-1nX"/>
+                        <viewControllerLayoutGuide type="top" id="T94-Ll-4Pd"/>
+                        <viewControllerLayoutGuide type="bottom" id="I0i-Ls-p7B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m2d-f5-zWa">
                         <rect key="frame" x="1" y="0.0" width="375" height="667"/>
@@ -1315,8 +1315,8 @@
             <objects>
                 <viewController storyboardIdentifier="SMSConfirmationView" id="k0O-gn-cqy" customClass="SMSConfirmationView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xqa-pW-0mX"/>
-                        <viewControllerLayoutGuide type="bottom" id="he8-r0-kVc"/>
+                        <viewControllerLayoutGuide type="top" id="fqm-Py-HTc"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Gg-jB-nry"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FzR-hL-SUB">
                         <rect key="frame" x="1" y="-1" width="375" height="667"/>
@@ -1414,15 +1414,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bF-T6-Mpr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1117.5" y="326.5"/>
+            <point key="canvasLocation" x="-1117.5" y="326.49999999999994"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="aKc-K4-PiV">
             <objects>
                 <viewController storyboardIdentifier="DoctorHome" id="BuQ-z7-7Qx" customClass="DoctorLandingPageView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ioF-vf-pHe"/>
-                        <viewControllerLayoutGuide type="bottom" id="kh4-6h-kW1"/>
+                        <viewControllerLayoutGuide type="top" id="yoS-OI-zKj"/>
+                        <viewControllerLayoutGuide type="bottom" id="mje-fq-IAl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bwX-yk-g7d">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -1644,15 +1644,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpM-6E-Vho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608.5" y="326.5"/>
+            <point key="canvasLocation" x="-608.5" y="326.49999999999994"/>
         </scene>
         <!--Forgot Password Verification View Controller-->
         <scene sceneID="dfL-ns-BV0">
             <objects>
                 <viewController storyboardIdentifier="ForgotPasswordVerificationViewController" id="pnb-Ma-kfx" customClass="ForgotPasswordVerificationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IhR-ix-s0W"/>
-                        <viewControllerLayoutGuide type="bottom" id="tvm-3u-fRz"/>
+                        <viewControllerLayoutGuide type="top" id="pVZ-2F-dyp"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFl-uk-2Fp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yzd-WD-Llh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1710,15 +1710,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcJ-Cy-6Es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2026.5" y="326.5"/>
+            <point key="canvasLocation" x="-2026.5" y="326.49999999999994"/>
         </scene>
         <!--Doctor Change Password View Controller-->
         <scene sceneID="o8Y-Rt-xIe">
             <objects>
                 <viewController storyboardIdentifier="DoctorChangePasswordViewController" id="rur-Ft-b1n" customClass="DoctorChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="78I-IA-Nlc"/>
-                        <viewControllerLayoutGuide type="bottom" id="U4J-id-t34"/>
+                        <viewControllerLayoutGuide type="top" id="HwS-LY-HRQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="X0x-W3-nyn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QGC-e3-wfE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1924,15 +1924,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0S-NR-vmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652.5" y="-442.5"/>
+            <point key="canvasLocation" x="652.5" y="-442.49999999999994"/>
         </scene>
         <!--Doctor Feed Back View Controller-->
         <scene sceneID="SCZ-ie-IVb">
             <objects>
                 <viewController storyboardIdentifier="DoctorFeedBackViewController" automaticallyAdjustsScrollViewInsets="NO" id="VPs-cC-Lhg" customClass="DoctorFeedBackViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uEg-eZ-ldk"/>
-                        <viewControllerLayoutGuide type="bottom" id="mFW-Hk-Vec"/>
+                        <viewControllerLayoutGuide type="top" id="KQK-F1-8Te"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Ce-te-y1D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CCD-zD-Gb7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2065,8 +2065,8 @@
             <objects>
                 <viewController storyboardIdentifier="SearchDoctorViewController" id="UVz-6P-XUi" customClass="SearchDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YcB-Pc-gn8"/>
-                        <viewControllerLayoutGuide type="bottom" id="bB7-PW-ela"/>
+                        <viewControllerLayoutGuide type="top" id="LYe-c2-xND"/>
+                        <viewControllerLayoutGuide type="bottom" id="7jR-cn-oKk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TEN-Jo-gd9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2106,7 +2106,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="specialityLabel" destination="9qw-oR-qEB" id="sL7-vN-en1"/>
-                                            <segue destination="gzY-bq-cnc" kind="show" identifier="ShowDetails" id="UP3-3H-1FM"/>
+                                            <segue destination="gzY-bq-cnc" kind="presentation" identifier="ShowDetails" id="UP3-3H-1FM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2128,15 +2128,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reZ-1H-9Os" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046.5" y="2582.5"/>
+            <point key="canvasLocation" x="-1046.5" y="2582.4999999999995"/>
         </scene>
         <!--Manage Reminder View Controller-->
         <scene sceneID="gS7-WD-KbL">
             <objects>
                 <viewController storyboardIdentifier="ManageReminderViewController" automaticallyAdjustsScrollViewInsets="NO" id="wXD-7j-uQN" customClass="ManageReminderViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zL0-7C-Hem"/>
-                        <viewControllerLayoutGuide type="bottom" id="yGa-Ki-DCM"/>
+                        <viewControllerLayoutGuide type="top" id="HWB-iA-OOk"/>
+                        <viewControllerLayoutGuide type="bottom" id="qfM-ch-Q5R"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PxQ-vj-iZu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2239,8 +2239,8 @@
             <objects>
                 <viewController storyboardIdentifier="AddNewReminderForDoctorViewController" id="C4l-SR-ARZ" customClass="AddNewReminderForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cNy-ep-T8d"/>
-                        <viewControllerLayoutGuide type="bottom" id="HPh-94-rye"/>
+                        <viewControllerLayoutGuide type="top" id="0NK-lv-u0v"/>
+                        <viewControllerLayoutGuide type="bottom" id="ihI-Vd-5CC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hoB-Jg-IiS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2427,15 +2427,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSu-t4-8CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255.5" y="1852.5"/>
+            <point key="canvasLocation" x="255.49999999999997" y="1852.5"/>
         </scene>
         <!--Reminder Details View Controller-->
         <scene sceneID="58n-pE-SeO">
             <objects>
                 <viewController storyboardIdentifier="ReminderDetailsViewController" id="QGq-N5-obS" customClass="ReminderDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jvl-Y3-Yj9"/>
-                        <viewControllerLayoutGuide type="bottom" id="NEM-PN-Qah"/>
+                        <viewControllerLayoutGuide type="top" id="6Jl-vc-yfc"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Kx-ni-bbd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dP5-br-Xsd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2513,8 +2513,8 @@
             <objects>
                 <viewController storyboardIdentifier="DoctorAddTreatmentViewController" automaticallyAdjustsScrollViewInsets="NO" id="FXG-k3-ksu" customClass="DoctorAddTreatmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TOn-aE-ch1"/>
-                        <viewControllerLayoutGuide type="bottom" id="JTj-NV-iSM"/>
+                        <viewControllerLayoutGuide type="top" id="2M0-Qg-A0d"/>
+                        <viewControllerLayoutGuide type="bottom" id="XwD-GN-IDl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mjI-Sf-9q2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2573,7 +2573,7 @@
                                 <rect key="frame" x="16" y="216" width="343" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="53" id="2V7-XY-zyk" customClass="DoctorAddTreatmentCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="53" id="2V7-XY-zyk" customClass="DoctorAddTreatmentCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2V7-XY-zyk" id="2Wl-Vo-37V">
@@ -2619,15 +2619,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHl-Df-nLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-215.5" y="-2019.4999999999998"/>
         </scene>
         <!--Doctor Detail Add Treatment View Controller-->
         <scene sceneID="Fz2-yg-vkm">
             <objects>
                 <viewController storyboardIdentifier="DoctorDetailAddTreatmentViewController" automaticallyAdjustsScrollViewInsets="NO" id="geO-SW-zYi" customClass="DoctorDetailAddTreatmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vsm-XY-ZoD"/>
-                        <viewControllerLayoutGuide type="bottom" id="diO-jW-IAA"/>
+                        <viewControllerLayoutGuide type="top" id="afc-py-R1I"/>
+                        <viewControllerLayoutGuide type="bottom" id="L5L-Ch-tdZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GgS-xO-Zg1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2637,7 +2637,7 @@
                                 <rect key="frame" x="0.0" y="91" width="375" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="EPs-sf-sjv" customClass="DoctorDetailAddTreatmentCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="EPs-sf-sjv" customClass="DoctorDetailAddTreatmentCell">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EPs-sf-sjv" id="UWy-lr-b9k">
@@ -2671,6 +2671,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="h8z-Hn-fyS"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -2679,15 +2680,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBX-X6-Xsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255.5" y="-2019.5"/>
+            <point key="canvasLocation" x="255.49999999999997" y="-2019.4999999999998"/>
         </scene>
         <!--Mark And Create Appointment View Controller-->
         <scene sceneID="Q3i-yY-OAx">
             <objects>
                 <viewController storyboardIdentifier="MarkAndCreateAppointmentViewController" automaticallyAdjustsScrollViewInsets="NO" id="Eal-Yg-FZR" customClass="MarkAndCreateAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xhv-cX-Wn9"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xbt-JV-oEb"/>
+                        <viewControllerLayoutGuide type="top" id="K4d-kA-xqb"/>
+                        <viewControllerLayoutGuide type="bottom" id="DSb-ZD-6lc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hNr-xP-MSm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2888,15 +2889,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWe-kk-4b1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786.5" y="-2019.5"/>
+            <point key="canvasLocation" x="786.5" y="-2019.4999999999998"/>
         </scene>
         <!--Day Week Month Appointment View Controller-->
         <scene sceneID="JDK-Ew-GO4">
             <objects>
                 <viewController storyboardIdentifier="DayWeekMonthAppointmentViewController" id="EY5-vO-39x" customClass="DayWeekMonthAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vUm-sD-uwk"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jk3-WX-sLt"/>
+                        <viewControllerLayoutGuide type="top" id="oaF-iZ-yKZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aa3-Ys-akm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RrU-rc-BCA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -3166,15 +3167,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEc-0f-LpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253.5" y="-2027.5"/>
+            <point key="canvasLocation" x="1253.5" y="-2027.4999999999998"/>
         </scene>
         <!--Manage Profile-->
         <scene sceneID="tPx-lR-CY8">
             <objects>
                 <viewController storyboardIdentifier="DoctorSettingPageView" id="Exi-cC-6vI" customClass="DoctorSettingPageView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hgA-uo-rKm"/>
-                        <viewControllerLayoutGuide type="bottom" id="hEv-Xl-3vm"/>
+                        <viewControllerLayoutGuide type="top" id="iNt-1I-oPA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z8e-LI-wd1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n4g-fH-Cvh">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -3291,15 +3292,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVM-S1-1kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.5" y="326.5"/>
+            <point key="canvasLocation" x="-71.5" y="326.49999999999994"/>
         </scene>
         <!--Patient Profile View Controller-->
         <scene sceneID="VD2-to-KOv">
             <objects>
                 <viewController storyboardIdentifier="PatientProfileViewController" automaticallyAdjustsScrollViewInsets="NO" id="9mz-sv-bNt" customClass="PatientProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ny3-4a-nBH"/>
-                        <viewControllerLayoutGuide type="bottom" id="oTN-mu-hYZ"/>
+                        <viewControllerLayoutGuide type="top" id="bJ9-Nw-k1O"/>
+                        <viewControllerLayoutGuide type="bottom" id="v6p-bI-4EB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xbT-Xn-fpf">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -3402,7 +3403,7 @@
                                             <outlet property="patientNameLabel" destination="V2W-xj-9cG" id="W3F-21-N5s"/>
                                             <outlet property="patientPicture" destination="19L-Ip-FqJ" id="MP9-Xi-uwR"/>
                                             <outlet property="showPatientProfileButton" destination="k9X-AD-Qff" id="plo-hy-8df"/>
-                                            <segue destination="qe6-h4-X7p" kind="show" identifier="ShowDetails" id="RP6-EF-nzT"/>
+                                            <segue destination="qe6-h4-X7p" kind="presentation" identifier="ShowDetails" id="RP6-EF-nzT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -3436,8 +3437,8 @@
             <objects>
                 <viewController storyboardIdentifier="DetailPatientProfileViewController" id="qe6-h4-X7p" customClass="DetailPatientProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Mbu-zf-Fgk"/>
-                        <viewControllerLayoutGuide type="bottom" id="2ME-rJ-K0Q"/>
+                        <viewControllerLayoutGuide type="top" id="AKF-vf-zyp"/>
+                        <viewControllerLayoutGuide type="bottom" id="gMa-Xk-hd3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fNp-G3-coQ">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -3880,8 +3881,8 @@
             <objects>
                 <viewController storyboardIdentifier="SearchPatientViewController" id="5kp-ev-dGM" customClass="SearchPatientViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="R97-sz-mpW"/>
-                        <viewControllerLayoutGuide type="bottom" id="kLP-9T-5un"/>
+                        <viewControllerLayoutGuide type="top" id="7G5-d1-YG9"/>
+                        <viewControllerLayoutGuide type="bottom" id="LPC-6k-7bH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rfw-gi-iIo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -4000,8 +4001,8 @@
             <objects>
                 <viewController storyboardIdentifier="AddPatientViewController" id="JCQ-l7-MO7" customClass="AddPatientViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZCD-4C-89l"/>
-                        <viewControllerLayoutGuide type="bottom" id="udC-ne-LdL"/>
+                        <viewControllerLayoutGuide type="top" id="UnI-H1-KYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="3lI-6I-ZCa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uLf-aN-zQZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -4085,8 +4086,8 @@
             <objects>
                 <viewController storyboardIdentifier="SearchPatientForDoctorViewController" id="w4h-Rh-mPo" customClass="SearchPatientForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lby-le-zo7"/>
-                        <viewControllerLayoutGuide type="bottom" id="kzg-JA-sAt"/>
+                        <viewControllerLayoutGuide type="top" id="MTJ-Vh-MNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="IXb-yt-OBr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1vY-25-Ns0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -4168,8 +4169,8 @@
             <objects>
                 <viewController storyboardIdentifier="DoctorManageAppointmentsViewController" automaticallyAdjustsScrollViewInsets="NO" id="McF-sr-ViV" customClass="DoctorManageAppointmentsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BjH-lI-swz"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cw7-LB-wHV"/>
+                        <viewControllerLayoutGuide type="top" id="2F1-wL-LqH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q0W-Gq-UUe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zki-fb-bJm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -4342,8 +4343,8 @@
             <objects>
                 <viewController storyboardIdentifier="DoctorDetailManageAppointmentViewController" id="q3g-G1-XSK" customClass="DoctorDetailManageAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tp9-jI-okq"/>
-                        <viewControllerLayoutGuide type="bottom" id="aHH-Y4-pUV"/>
+                        <viewControllerLayoutGuide type="top" id="NYo-op-gDG"/>
+                        <viewControllerLayoutGuide type="bottom" id="z0k-yT-oWa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iyj-FW-R0P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -4470,7 +4471,7 @@
                                         </state>
                                         <connections>
                                             <action selector="slot1TotalApp:" destination="q3g-G1-XSK" eventType="touchUpInside" id="L22-Hx-pl0"/>
-                                            <segue destination="EY5-vO-39x" kind="push" id="a49-Y3-WZK"/>
+                                            <segue destination="EY5-vO-39x" kind="show" id="a49-Y3-WZK"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4N-AV-tOs">
@@ -4505,7 +4506,7 @@
                                         </state>
                                         <connections>
                                             <action selector="slot2TotalApp:" destination="q3g-G1-XSK" eventType="touchUpInside" id="86p-QP-bEV"/>
-                                            <segue destination="EY5-vO-39x" kind="push" id="wIh-Nq-vqk"/>
+                                            <segue destination="EY5-vO-39x" kind="show" id="wIh-Nq-vqk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flT-vp-l6e">
@@ -4728,8 +4729,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientAppointmentsForDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="dd4-ji-pPO" customClass="PatientAppointmentsForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TMQ-gf-NDy"/>
-                        <viewControllerLayoutGuide type="bottom" id="atn-Wa-inK"/>
+                        <viewControllerLayoutGuide type="top" id="zfr-56-9F9"/>
+                        <viewControllerLayoutGuide type="bottom" id="OdK-30-UTH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lvg-hO-DdX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -4805,8 +4806,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientRegisterViewController" id="lXI-Px-rx8" customClass="PatientRegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cNC-h8-aG0"/>
-                        <viewControllerLayoutGuide type="bottom" id="5SI-JT-bKd"/>
+                        <viewControllerLayoutGuide type="top" id="awL-Ib-GER"/>
+                        <viewControllerLayoutGuide type="bottom" id="qOP-fs-zch"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iuI-bf-MBC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -5045,8 +5046,8 @@
             <objects>
                 <viewController storyboardIdentifier="ChangePasswordViewController" id="ffm-WR-xY9" customClass="ChangePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pA8-Qz-tQ6"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ref-9q-m6C"/>
+                        <viewControllerLayoutGuide type="top" id="cJs-n0-0Dq"/>
+                        <viewControllerLayoutGuide type="bottom" id="0gY-Q6-ZkJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t1h-Bf-PMl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -5202,8 +5203,8 @@
             <objects>
                 <viewController storyboardIdentifier="AddAssistantView" id="Vha-Gx-tDF" customClass="AddAssistantView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Bne-bz-P6x"/>
-                        <viewControllerLayoutGuide type="bottom" id="EeI-lu-Iiy"/>
+                        <viewControllerLayoutGuide type="top" id="ToD-Vp-tU7"/>
+                        <viewControllerLayoutGuide type="bottom" id="IMJ-kU-Wef"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="db8-EP-ZLg">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -5409,15 +5410,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkl-QQ-lWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2011.5" y="-442.5"/>
+            <point key="canvasLocation" x="2011.5" y="-442.49999999999994"/>
         </scene>
         <!--Template Detail View Controller-->
         <scene sceneID="6KX-v1-qdT">
             <objects>
                 <viewController storyboardIdentifier="TemplateDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="LaN-Wy-S9o" customClass="TemplateDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MeJ-74-Qp6"/>
-                        <viewControllerLayoutGuide type="bottom" id="eiJ-Zu-tXE"/>
+                        <viewControllerLayoutGuide type="top" id="2c1-wi-kJa"/>
+                        <viewControllerLayoutGuide type="bottom" id="h6M-1O-DJE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4uq-Zh-tRJ">
                         <rect key="frame" x="1" y="-1" width="375" height="667"/>
@@ -5555,6 +5556,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dV6-zt-Evq"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -5567,15 +5569,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6F-FN-aZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281.5" y="326.5"/>
+            <point key="canvasLocation" x="1281.5" y="326.49999999999994"/>
         </scene>
         <!--Doctor Manage Finance View Controller-->
         <scene sceneID="9if-14-q9T">
             <objects>
                 <viewController storyboardIdentifier="DoctorManageFinanceViewController" automaticallyAdjustsScrollViewInsets="NO" id="CuX-X1-W1D" customClass="DoctorManageFinanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j64-Yk-kNE"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZGM-wG-e2G"/>
+                        <viewControllerLayoutGuide type="top" id="bGg-rY-csf"/>
+                        <viewControllerLayoutGuide type="bottom" id="zAw-Lr-a5c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QDa-t6-yhZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -5621,7 +5623,7 @@
                                             <outlet property="amountLabel" destination="JU2-5k-YeT" id="8zV-pQ-bqj"/>
                                             <outlet property="dateLabel" destination="tYA-89-jA4" id="Vba-d3-PPI"/>
                                             <outlet property="totalLabel" destination="Ic9-0B-kvI" id="03U-BE-QNk"/>
-                                            <segue destination="U3c-JK-Gdv" kind="show" id="Apn-tJ-i2x"/>
+                                            <segue destination="U3c-JK-Gdv" kind="presentation" id="Apn-tJ-i2x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -5649,8 +5651,8 @@
             <objects>
                 <viewController storyboardIdentifier="DoctorDetailManageFinanceViewController" id="U3c-JK-Gdv" customClass="DoctorDetailManageFinanceViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="kP5-3K-HoE"/>
-                        <viewControllerLayoutGuide type="bottom" id="pSI-Si-8Qe"/>
+                        <viewControllerLayoutGuide type="top" id="DMh-KN-mhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="hob-cK-HDl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rDS-1X-wQz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -5933,8 +5935,8 @@
             <objects>
                 <viewController storyboardIdentifier="LastVisitedConsultationViewController" id="hGf-lD-dk2" customClass="LastVisitedConsultationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TwS-Ez-7Pz"/>
-                        <viewControllerLayoutGuide type="bottom" id="yin-jY-FEV"/>
+                        <viewControllerLayoutGuide type="top" id="XGO-99-TqO"/>
+                        <viewControllerLayoutGuide type="bottom" id="h59-ET-daW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K2j-Gw-obg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -6075,8 +6077,8 @@
             <objects>
                 <viewController storyboardIdentifier="SearchAssistantID" id="5Uq-Uz-amn" customClass="SearchAssistantView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BCc-98-zSK"/>
-                        <viewControllerLayoutGuide type="bottom" id="ige-Qk-8QQ"/>
+                        <viewControllerLayoutGuide type="top" id="ui7-xr-FVa"/>
+                        <viewControllerLayoutGuide type="bottom" id="R6t-c3-7zG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Y9C-tW-bb4">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -6164,15 +6166,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h3L-CW-zxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460.5" y="-442.5"/>
+            <point key="canvasLocation" x="2460.5" y="-442.49999999999994"/>
         </scene>
         <!--Search Result Assistant View Controller-->
         <scene sceneID="rEO-Xi-Yw3">
             <objects>
                 <viewController storyboardIdentifier="SearchResultAssistantViewController" automaticallyAdjustsScrollViewInsets="NO" id="txz-dY-uqp" customClass="SearchResultAssistantViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y1W-ow-UW6"/>
-                        <viewControllerLayoutGuide type="bottom" id="sZa-zm-yi3"/>
+                        <viewControllerLayoutGuide type="top" id="wMc-AH-80Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="RZB-tO-dTJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="P94-Nn-Del">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -6266,15 +6268,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi0-1x-3MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564.5" y="-442.5"/>
+            <point key="canvasLocation" x="1564.5" y="-442.49999999999994"/>
         </scene>
         <!--Doctor Manage Assistant View Controller-->
         <scene sceneID="cNS-Z8-3fu">
             <objects>
                 <viewController storyboardIdentifier="DoctorManageAssistantViewController" automaticallyAdjustsScrollViewInsets="NO" id="8Bz-HD-pfe" customClass="DoctorManageAssistantViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eP9-0h-Wt3"/>
-                        <viewControllerLayoutGuide type="bottom" id="dJL-1k-3xk"/>
+                        <viewControllerLayoutGuide type="top" id="Pqz-r3-kic"/>
+                        <viewControllerLayoutGuide type="bottom" id="2nL-ZE-oJO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qfw-xK-7b0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -6359,15 +6361,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utV-wZ-hgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123.5" y="-442.5"/>
+            <point key="canvasLocation" x="1123.5" y="-442.49999999999994"/>
         </scene>
         <!--Doctor Book Appointment View Controller-->
         <scene sceneID="hdT-qp-bAQ">
             <objects>
                 <viewController storyboardIdentifier="DoctorBookAppointmentViewController" id="fkH-pd-bns" customClass="DoctorBookAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5jf-kQ-Fsa"/>
-                        <viewControllerLayoutGuide type="bottom" id="QPL-ls-q17"/>
+                        <viewControllerLayoutGuide type="top" id="0Ur-IS-BAN"/>
+                        <viewControllerLayoutGuide type="bottom" id="LmW-98-AZF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cCh-nM-TUa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -6681,8 +6683,8 @@
             <objects>
                 <viewController storyboardIdentifier="EditTemplateView" id="0Df-cG-S9M" customClass="EditTemplateView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vd5-NK-deV"/>
-                        <viewControllerLayoutGuide type="bottom" id="aaC-8q-xFv"/>
+                        <viewControllerLayoutGuide type="top" id="KoK-rb-KIP"/>
+                        <viewControllerLayoutGuide type="bottom" id="50a-Vz-NCw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WbE-V1-e4B">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -6814,15 +6816,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLe-CW-CWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222.5" y="326.5"/>
+            <point key="canvasLocation" x="2222.5" y="326.49999999999994"/>
         </scene>
         <!--Add New Fields-->
         <scene sceneID="qir-s1-by7">
             <objects>
                 <viewController storyboardIdentifier="AddNewTemplateView" id="Lek-vj-FLP" customClass="AddNewTemplateView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nmm-f2-riw"/>
-                        <viewControllerLayoutGuide type="bottom" id="TYA-xn-tod"/>
+                        <viewControllerLayoutGuide type="top" id="tDY-qO-CYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="64g-gn-BGc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lmy-q5-fYR">
                         <rect key="frame" x="1" y="-1" width="375" height="667"/>
@@ -6917,15 +6919,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqC-vo-tE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735.5" y="326.5"/>
+            <point key="canvasLocation" x="1735.5" y="326.49999999999994"/>
         </scene>
         <!--Search Clinic View-->
         <scene sceneID="e8y-JU-Mc2">
             <objects>
                 <viewController storyboardIdentifier="SearchClinicView" id="atU-bR-N5A" customClass="SearchClinicView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zDQ-NZ-C7V"/>
-                        <viewControllerLayoutGuide type="bottom" id="riM-Uv-OKt"/>
+                        <viewControllerLayoutGuide type="top" id="63Z-c6-rlr"/>
+                        <viewControllerLayoutGuide type="bottom" id="dux-0b-B8H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3jC-03-bAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -7095,15 +7097,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSe-rb-KUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2036.5" y="1900.5"/>
+            <point key="canvasLocation" x="-2036.4999999999998" y="1900.4999999999998"/>
         </scene>
         <!--Detail Clinic View-->
         <scene sceneID="1hC-l6-yIy">
             <objects>
                 <viewController storyboardIdentifier="DetailClinicView" id="cX5-dE-l2x" customClass="DetailClinicView" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EBF-Ry-MNQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="qjd-PX-3QK"/>
+                        <viewControllerLayoutGuide type="top" id="ke7-Wg-6eT"/>
+                        <viewControllerLayoutGuide type="bottom" id="G8I-qf-o6Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RHt-2s-sda">
                         <rect key="frame" x="0.0" y="-1" width="375" height="667"/>
@@ -7237,8 +7239,8 @@
             <objects>
                 <viewController storyboardIdentifier="AddSlotsForDoctorClinicSettingViewController" id="UyL-nV-oEz" customClass="AddSlotsForDoctorClinicSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sUX-28-Z7O"/>
-                        <viewControllerLayoutGuide type="bottom" id="vV4-vp-afd"/>
+                        <viewControllerLayoutGuide type="top" id="1wp-LW-q0f"/>
+                        <viewControllerLayoutGuide type="bottom" id="F3L-ZO-6bS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="S1I-D0-unI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -7906,15 +7908,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhZ-Nt-El3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255.5" y="1092.5"/>
+            <point key="canvasLocation" x="255.49999999999997" y="1092.5"/>
         </scene>
         <!--Manage Doctors Clinic Settings View Controller-->
         <scene sceneID="ccN-oR-AGg">
             <objects>
                 <viewController storyboardIdentifier="ManageDoctorsClinicSettingsViewController" automaticallyAdjustsScrollViewInsets="NO" id="0cy-Vu-FF9" customClass="ManageDoctorsClinicSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dVl-20-86b"/>
-                        <viewControllerLayoutGuide type="bottom" id="87t-O0-VfI"/>
+                        <viewControllerLayoutGuide type="top" id="X1O-NO-hmf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZMj-8i-fjD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g4f-tt-ETK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -8003,8 +8005,8 @@
             <objects>
                 <viewController storyboardIdentifier="CreateDoctorsClinicSettingsViewController" id="aUT-lw-Xyb" customClass="CreateDoctorsClinicSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N0O-AV-MN0"/>
-                        <viewControllerLayoutGuide type="bottom" id="goN-Nr-kEB"/>
+                        <viewControllerLayoutGuide type="top" id="Wd1-xQ-Roa"/>
+                        <viewControllerLayoutGuide type="bottom" id="rpt-8R-DOd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eDB-d5-xK6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -8214,8 +8216,8 @@
             <objects>
                 <viewController storyboardIdentifier="SearchResultClinicForDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="QLK-y1-jyh" customClass="SearchResultClinicForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DDE-SJ-6rt"/>
-                        <viewControllerLayoutGuide type="bottom" id="FYj-DA-FSE"/>
+                        <viewControllerLayoutGuide type="top" id="ETb-bJ-tix"/>
+                        <viewControllerLayoutGuide type="bottom" id="251-hb-msv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mso-NB-dqs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -8248,7 +8250,7 @@
                                         <connections>
                                             <outlet property="cityLabel" destination="grM-OU-ro8" id="PKi-ja-0cB"/>
                                             <outlet property="clinicNameLabel" destination="eOg-wD-u5K" id="JEF-9q-hjg"/>
-                                            <segue destination="cX5-dE-l2x" kind="show" identifier="ShowDetails" id="8vp-HO-cib"/>
+                                            <segue destination="cX5-dE-l2x" kind="presentation" identifier="ShowDetails" id="8vp-HO-cib"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -8301,8 +8303,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientClinicAndLabsViewController" automaticallyAdjustsScrollViewInsets="NO" id="mCS-n3-nid" customClass="PatientClinicAndLabsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="frQ-03-psa"/>
-                        <viewControllerLayoutGuide type="bottom" id="fYO-km-3IM"/>
+                        <viewControllerLayoutGuide type="top" id="rb1-ZK-P1P"/>
+                        <viewControllerLayoutGuide type="bottom" id="MF3-x9-t9G"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H80-ft-muh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -8447,15 +8449,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWr-uh-sMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1797.5" y="-3797.5"/>
+            <point key="canvasLocation" x="-1797.5" y="-3797.4999999999995"/>
         </scene>
         <!--Patient Clinic Profile And Appointments View Controller-->
         <scene sceneID="QEF-N2-peo">
             <objects>
                 <viewController storyboardIdentifier="PatientClinicProfileAndAppointmentsViewController" automaticallyAdjustsScrollViewInsets="NO" id="337-e6-T4w" customClass="PatientClinicProfileAndAppointmentsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vu9-FS-qng"/>
-                        <viewControllerLayoutGuide type="bottom" id="hlX-PU-h3Z"/>
+                        <viewControllerLayoutGuide type="top" id="Wpk-AD-dhQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="KNI-Is-zpj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qlX-RJ-Mrh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9036,15 +9038,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwc-cQ-vqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1379.5" y="-3797.5"/>
+            <point key="canvasLocation" x="-1379.5" y="-3797.4999999999995"/>
         </scene>
         <!--Patient Landing Page View Controller-->
         <scene sceneID="UoD-yR-Dd7">
             <objects>
                 <viewController storyboardIdentifier="PatientLandingPageViewController" id="1iT-x8-XNu" customClass="PatientLandingPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="r7U-S2-BA4"/>
-                        <viewControllerLayoutGuide type="bottom" id="kZd-DJ-PXN"/>
+                        <viewControllerLayoutGuide type="top" id="T7Y-y0-Tl6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fpd-Ha-IJ8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PJu-10-94P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9225,7 +9227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qk-lf-PZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1943.5" y="-3054.5"/>
+            <point key="canvasLocation" x="-1943.5" y="-3054.4999999999995"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qqz-Gj-TUm">
@@ -9245,15 +9247,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rd1-ov-kxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2373.5" y="-3054.5"/>
+            <point key="canvasLocation" x="-2373.5" y="-3054.4999999999995"/>
         </scene>
         <!--Symptoms History View Controller-->
         <scene sceneID="zZg-e5-GJv">
             <objects>
                 <viewController storyboardIdentifier="SymptomsHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="Vdv-gm-OsR" customClass="SymptomsHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eM1-eh-ptT"/>
-                        <viewControllerLayoutGuide type="bottom" id="nfe-qE-mjX"/>
+                        <viewControllerLayoutGuide type="top" id="N07-BZ-ILJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYT-A6-CEF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2g6-UY-MmU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9348,15 +9350,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPH-s7-X7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2482.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-2482.5" y="-2019.4999999999998"/>
         </scene>
         <!--Medicine Prescribed History View Controller-->
         <scene sceneID="PEa-fm-MoB">
             <objects>
                 <viewController storyboardIdentifier="MedicinePrescribedHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="Lct-Xh-62U" customClass="MedicinePrescribedHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rrE-4c-pCG"/>
-                        <viewControllerLayoutGuide type="bottom" id="vHR-fw-bW1"/>
+                        <viewControllerLayoutGuide type="top" id="b3T-NM-tGl"/>
+                        <viewControllerLayoutGuide type="bottom" id="92A-pd-VpM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GYU-0p-gPq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9451,15 +9453,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80k-YK-V08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2482.5" y="-1277.5"/>
+            <point key="canvasLocation" x="-2482.5" y="-1277.4999999999998"/>
         </scene>
         <!--Test Prescirbed History View Controller-->
         <scene sceneID="fGD-KM-c9P">
             <objects>
                 <viewController storyboardIdentifier="TestPrescirbedHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="DB4-yq-gSg" customClass="TestPrescirbedHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xhv-nC-obF"/>
-                        <viewControllerLayoutGuide type="bottom" id="5ru-ZM-Ggf"/>
+                        <viewControllerLayoutGuide type="top" id="VpD-w1-oSY"/>
+                        <viewControllerLayoutGuide type="bottom" id="STy-f1-cUI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nH0-TF-U9m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9554,15 +9556,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMG-ib-4xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2904.5" y="-1277.5"/>
+            <point key="canvasLocation" x="-2904.5" y="-1277.4999999999998"/>
         </scene>
         <!--Diagnosis History View Controller-->
         <scene sceneID="1Zz-J7-yNq">
             <objects>
                 <viewController storyboardIdentifier="DiagnosisHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="FYZ-R1-Oqr" customClass="DiagnosisHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ecB-nG-HSK"/>
-                        <viewControllerLayoutGuide type="bottom" id="WU9-QJ-HUs"/>
+                        <viewControllerLayoutGuide type="top" id="0WX-rM-q0T"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ypl-SK-xtm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PEN-HE-Vy1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9657,15 +9659,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gW-SW-Z2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2904.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-2904.5" y="-2019.4999999999998"/>
         </scene>
         <!--All Detail Information View Controller-->
         <scene sceneID="ySI-OM-iJy">
             <objects>
                 <viewController storyboardIdentifier="AllDetailInformationViewController" id="xAO-xi-dRd" customClass="AllDetailInformationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QDi-kr-iA3"/>
-                        <viewControllerLayoutGuide type="bottom" id="lNy-zx-xZa"/>
+                        <viewControllerLayoutGuide type="top" id="ciG-ax-EOo"/>
+                        <viewControllerLayoutGuide type="bottom" id="CTO-OD-Bqw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nfH-el-X4i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -9741,7 +9743,7 @@
                                         </state>
                                         <connections>
                                             <action selector="treatmentAdd:" destination="xAO-xi-dRd" eventType="touchUpInside" id="UJE-SB-I7i"/>
-                                            <segue destination="FXG-k3-ksu" kind="push" id="Prz-pJ-xFv"/>
+                                            <segue destination="FXG-k3-ksu" kind="show" id="Prz-pJ-xFv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share with the Patient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-36-lsL">
@@ -9804,7 +9806,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="invoiceAdd:" destination="xAO-xi-dRd" eventType="touchUpInside" id="PfB-m3-bNR"/>
-                                                    <segue destination="FXG-k3-ksu" kind="push" id="uIc-gH-mMb"/>
+                                                    <segue destination="FXG-k3-ksu" kind="show" id="uIc-gH-mMb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpc-ze-tsq">
@@ -10212,7 +10214,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="hgg-hU-vU3" kind="modal" id="2tw-xM-8ho"/>
+                                            <segue destination="hgg-hU-vU3" kind="presentation" id="2tw-xM-8ho"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="u4x-Fb-tpe">
@@ -10386,15 +10388,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sQ-pD-nvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1566.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-1566.5" y="-2019.4999999999998"/>
         </scene>
         <!--Upload Documents View Controller-->
         <scene sceneID="KdO-TN-4kj">
             <objects>
                 <viewController storyboardIdentifier="UploadDocumentsViewController" id="hgg-hU-vU3" customClass="UploadDocumentsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wEL-t0-Leo"/>
-                        <viewControllerLayoutGuide type="bottom" id="FdU-4m-5j5"/>
+                        <viewControllerLayoutGuide type="top" id="ely-fw-CVd"/>
+                        <viewControllerLayoutGuide type="bottom" id="2go-LC-vdK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lqm-hB-Knz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -10502,15 +10504,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJD-bN-EIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1126.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-1126.5" y="-2019.4999999999998"/>
         </scene>
         <!--Medicine Prescribed Schedule View Controller-->
         <scene sceneID="xFr-7a-ahs">
             <objects>
                 <viewController storyboardIdentifier="MedicinePrescribedScheduleViewController" id="5C2-cg-Vx5" customClass="MedicinePrescribedScheduleViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1bg-r1-wgs"/>
-                        <viewControllerLayoutGuide type="bottom" id="YcX-eP-ebb"/>
+                        <viewControllerLayoutGuide type="top" id="6Av-x6-gAH"/>
+                        <viewControllerLayoutGuide type="bottom" id="m1W-uf-xDx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wDq-GG-fIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -10711,7 +10713,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bI-Jl-hDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-662.5" y="-2019.4999999999998"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BbT-74-MCT">
@@ -10731,15 +10733,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVW-8b-tGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2223.5" y="-3797.5"/>
+            <point key="canvasLocation" x="-2223.5" y="-3797.4999999999995"/>
         </scene>
         <!--Patient Doctor Consultations View Controller-->
         <scene sceneID="BcI-ln-kxn">
             <objects>
                 <viewController storyboardIdentifier="PatientDoctorConsultationsViewController" automaticallyAdjustsScrollViewInsets="NO" id="oLH-av-Kcp" customClass="PatientDoctorConsultationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lg2-BF-FLY"/>
-                        <viewControllerLayoutGuide type="bottom" id="fg4-1B-2R8"/>
+                        <viewControllerLayoutGuide type="top" id="WrX-5s-GwV"/>
+                        <viewControllerLayoutGuide type="bottom" id="vHb-Jb-jiN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="khi-d2-jlt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -10888,8 +10890,8 @@
             <objects>
                 <viewController storyboardIdentifier="DetailPatientDoctorConsultationsViewController" automaticallyAdjustsScrollViewInsets="NO" id="klJ-Ia-G8F" customClass="DetailPatientDoctorConsultationsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yz3-eG-5WJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="3RC-ST-Tm8"/>
+                        <viewControllerLayoutGuide type="top" id="XnG-TH-z1e"/>
+                        <viewControllerLayoutGuide type="bottom" id="4W3-yo-E4g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T1j-Pv-LQ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -11501,8 +11503,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientSearchDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="0gw-fd-a6R" customClass="PatientSearchDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vQu-Hs-NaA"/>
-                        <viewControllerLayoutGuide type="bottom" id="snj-Tf-LGJ"/>
+                        <viewControllerLayoutGuide type="top" id="PsH-hn-2Yu"/>
+                        <viewControllerLayoutGuide type="bottom" id="uzq-eR-cme"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3jc-bZ-2D3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -11542,7 +11544,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="doctorSpecialityLabel" destination="DpE-Ni-Y7J" id="m8C-0s-52v"/>
-                                            <segue destination="FKd-vt-abW" kind="show" id="JLi-1x-Q5l"/>
+                                            <segue destination="FKd-vt-abW" kind="presentation" id="JLi-1x-Q5l"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -11565,15 +11567,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNP-v3-1wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-944.5" y="-3797.5"/>
+            <point key="canvasLocation" x="-944.5" y="-3797.4999999999995"/>
         </scene>
         <!--Patient Detail Search Doctor View Controller-->
         <scene sceneID="2AJ-2t-QY0">
             <objects>
                 <viewController storyboardIdentifier="PatientDetailSearchDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="FKd-vt-abW" customClass="PatientDetailSearchDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XnW-gc-pJv"/>
-                        <viewControllerLayoutGuide type="bottom" id="57T-jg-crt"/>
+                        <viewControllerLayoutGuide type="top" id="iNE-BO-TXu"/>
+                        <viewControllerLayoutGuide type="bottom" id="EJH-cN-kf0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aQY-re-tq7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -11728,15 +11730,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQh-BP-Stv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-474.5" y="-3797.5"/>
+            <point key="canvasLocation" x="-474.5" y="-3797.4999999999995"/>
         </scene>
         <!--Patient Search Clinic View Controller-->
         <scene sceneID="uMF-tq-e1O">
             <objects>
                 <viewController storyboardIdentifier="PatientSearchClinicViewController" automaticallyAdjustsScrollViewInsets="NO" id="3Hh-n4-W6R" customClass="PatientSearchClinicViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lkt-tA-JhQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="B7L-om-U4J"/>
+                        <viewControllerLayoutGuide type="top" id="gMB-Ze-oiT"/>
+                        <viewControllerLayoutGuide type="bottom" id="drc-UB-Sld"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rdx-zQ-xbd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -11792,7 +11794,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="specialityClinicLabel" destination="SYl-zu-FX7" id="bro-Of-JIm"/>
-                                            <segue destination="MTs-1W-Zod" kind="show" id="bw0-Ff-UZC"/>
+                                            <segue destination="MTs-1W-Zod" kind="presentation" id="bw0-Ff-UZC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -11815,15 +11817,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jB6-gN-AWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8.5" y="-3797.5"/>
+            <point key="canvasLocation" x="8.5" y="-3797.4999999999995"/>
         </scene>
         <!--Yearly Count Appointment For Patient Doctor Consultation View Controller-->
         <scene sceneID="RiK-sD-Npg">
             <objects>
                 <viewController storyboardIdentifier="YearlyCountAppointmentForPatientDoctorConsultationViewController" automaticallyAdjustsScrollViewInsets="NO" id="eVf-o2-XKh" customClass="YearlyCountAppointmentForPatientDoctorConsultationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mne-GV-o6d"/>
-                        <viewControllerLayoutGuide type="bottom" id="SoM-fp-iOC"/>
+                        <viewControllerLayoutGuide type="top" id="A0i-fU-tfP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mfx-BD-h45"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZfH-mr-cGI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -11909,8 +11911,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientAllDetailInformationViewController" automaticallyAdjustsScrollViewInsets="NO" id="K33-5a-QEJ" customClass="PatientAllDetailInformationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tkl-aM-Dep"/>
-                        <viewControllerLayoutGuide type="bottom" id="XXO-s0-MAw"/>
+                        <viewControllerLayoutGuide type="top" id="el1-7g-7Vc"/>
+                        <viewControllerLayoutGuide type="bottom" id="YJF-fQ-4fc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="60H-Ll-mmi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -11929,7 +11931,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="documentAddFiles:" destination="K33-5a-QEJ" eventType="touchUpInside" id="ggn-uI-wOf"/>
-                                                    <segue destination="rhH-ai-Gw0" kind="modal" id="kKW-M4-ywg"/>
+                                                    <segue destination="rhH-ai-Gw0" kind="presentation" id="kKW-M4-ywg"/>
                                                 </connections>
                                             </button>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0Nx-VF-EEs">
@@ -12570,8 +12572,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientSymptomHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="iOH-HM-rvY" customClass="PatientSymptomHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mvn-6U-qfX"/>
-                        <viewControllerLayoutGuide type="bottom" id="zkn-Xn-dgM"/>
+                        <viewControllerLayoutGuide type="top" id="dMp-ln-sAP"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKu-gD-XEs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cfr-v7-qiF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -12672,8 +12674,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientDiagnosisHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="hRj-Ah-MU2" customClass="PatientDiagnosisHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jVU-BY-1ex"/>
-                        <viewControllerLayoutGuide type="bottom" id="3yv-Qi-i3T"/>
+                        <viewControllerLayoutGuide type="top" id="jCe-CB-nrT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sj9-hv-NzO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XXF-yB-2QY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -12774,8 +12776,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientMedicineHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="LHg-88-awp" customClass="PatientMedicineHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9Je-Hb-aCA"/>
-                        <viewControllerLayoutGuide type="bottom" id="c7l-bw-D03"/>
+                        <viewControllerLayoutGuide type="top" id="64z-Wz-0IB"/>
+                        <viewControllerLayoutGuide type="bottom" id="bS3-qY-GtH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="95s-cn-lx8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -12876,8 +12878,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientTestPrescribedHistoryViewController" automaticallyAdjustsScrollViewInsets="NO" id="KQE-WR-G2H" customClass="PatientTestPrescribedHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8lH-f9-12f"/>
-                        <viewControllerLayoutGuide type="bottom" id="vQg-dM-3kb"/>
+                        <viewControllerLayoutGuide type="top" id="aKb-5V-vtg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Li9-eg-FIr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NpW-yj-uhq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -12978,8 +12980,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientManageAppointmentViewController" automaticallyAdjustsScrollViewInsets="NO" id="Mn1-9K-0ke" customClass="PatientManageAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xCA-dc-501"/>
-                        <viewControllerLayoutGuide type="bottom" id="GsW-GZ-u0I"/>
+                        <viewControllerLayoutGuide type="top" id="4sQ-PN-xBl"/>
+                        <viewControllerLayoutGuide type="bottom" id="BmH-QG-Cwa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7Rc-n5-0Ne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13127,8 +13129,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientNewAppointmentViewController" automaticallyAdjustsScrollViewInsets="NO" id="do8-oD-RXu" customClass="PatientNewAppointmentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K8L-KY-eU0"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ale-e9-fSr"/>
+                        <viewControllerLayoutGuide type="top" id="mt8-lb-ika"/>
+                        <viewControllerLayoutGuide type="bottom" id="7dn-SW-aWd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kp9-dv-ihF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13307,15 +13309,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUw-9j-X8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1998.5" y="-2019.5"/>
+            <point key="canvasLocation" x="-1998.4999999999998" y="-2019.4999999999998"/>
         </scene>
         <!--Manage Template For Doctor View Controller-->
         <scene sceneID="WW6-yV-LzN">
             <objects>
                 <viewController storyboardIdentifier="ManageTemplateForDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="acx-wv-ZwT" customClass="ManageTemplateForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pZk-E5-kZ0"/>
-                        <viewControllerLayoutGuide type="bottom" id="eTX-la-FRl"/>
+                        <viewControllerLayoutGuide type="top" id="K4r-qH-i1j"/>
+                        <viewControllerLayoutGuide type="bottom" id="vJS-Yr-aJ4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VDG-nc-5jG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13362,7 +13364,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addCategory:" destination="acx-wv-ZwT" eventType="touchUpInside" id="tqT-ti-1E0"/>
-                                    <segue destination="v0p-65-AmP" kind="modal" id="78J-75-pfP"/>
+                                    <segue destination="v0p-65-AmP" kind="presentation" id="78J-75-pfP"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vcv-fg-ksu">
@@ -13404,7 +13406,7 @@
                                         <connections>
                                             <outlet property="procedureNameLabel" destination="mtR-iN-eL2" id="VtP-3f-acg"/>
                                             <outlet property="totalLabel" destination="6iO-bw-VDj" id="jOw-Ez-Bv0"/>
-                                            <segue destination="PMY-IA-6wO" kind="show" identifier="ShowDetails" id="17V-en-p0c"/>
+                                            <segue destination="PMY-IA-6wO" kind="presentation" identifier="ShowDetails" id="17V-en-p0c"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -13428,15 +13430,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baj-Yd-4gD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399.5" y="326.5"/>
+            <point key="canvasLocation" x="399.5" y="326.49999999999994"/>
         </scene>
         <!--Detail Manage Template For Doctor View Controller-->
         <scene sceneID="18b-VY-ue4">
             <objects>
                 <viewController storyboardIdentifier="DetailManageTemplateForDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="PMY-IA-6wO" customClass="DetailManageTemplateForDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SSy-Mt-Zio"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jo9-wZ-5h3"/>
+                        <viewControllerLayoutGuide type="top" id="1mM-Bs-IeV"/>
+                        <viewControllerLayoutGuide type="bottom" id="PjB-FZ-fQ3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UFD-j3-3Jr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13474,7 +13476,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="templateLabel" destination="poQ-hm-CTL" id="Ozf-kx-iX4"/>
-                                            <segue destination="LaN-Wy-S9o" kind="show" identifier="ShowDetails" id="Y0t-Ms-amc"/>
+                                            <segue destination="LaN-Wy-S9o" kind="presentation" identifier="ShowDetails" id="Y0t-Ms-amc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -13516,7 +13518,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addTemplate:" destination="PMY-IA-6wO" eventType="touchUpInside" id="EsH-Da-JDO"/>
-                                    <segue destination="HxY-Zp-v0z" kind="modal" id="ibT-nv-idN"/>
+                                    <segue destination="HxY-Zp-v0z" kind="presentation" id="ibT-nv-idN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -13533,15 +13535,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhZ-lc-TnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821.5" y="326.5"/>
+            <point key="canvasLocation" x="821.5" y="326.49999999999994"/>
         </scene>
         <!--Patient Upload Documents View Controller-->
         <scene sceneID="QZg-RY-iEU">
             <objects>
                 <viewController storyboardIdentifier="PatientUploadDocumentsViewController" id="rhH-ai-Gw0" customClass="PatientUploadDocumentsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w5g-Jx-60x"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZV7-EX-rXu"/>
+                        <viewControllerLayoutGuide type="top" id="TZr-mf-SkC"/>
+                        <viewControllerLayoutGuide type="bottom" id="LTe-qU-Qo6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d2B-mh-Upl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13693,8 +13695,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientMedicinePrescribedScheduleViewController" automaticallyAdjustsScrollViewInsets="NO" id="gaT-2q-Xeq" customClass="PatientMedicinePrescribedScheduleViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="biv-fv-Dxx"/>
-                        <viewControllerLayoutGuide type="bottom" id="cYe-fD-HJl"/>
+                        <viewControllerLayoutGuide type="top" id="ZmH-Z1-wBJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wEc-Yc-5Sy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OWx-Fu-otb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13900,8 +13902,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientYearlyPDFListOfClinicLabViewController" automaticallyAdjustsScrollViewInsets="NO" id="zW9-ck-5X0" customClass="PatientYearlyPDFListOfClinicLabViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nVs-IX-2We"/>
-                        <viewControllerLayoutGuide type="bottom" id="5Md-Fu-zO7"/>
+                        <viewControllerLayoutGuide type="top" id="ELj-LA-DWv"/>
+                        <viewControllerLayoutGuide type="bottom" id="iS5-06-RgS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SYh-An-QXc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -13974,8 +13976,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientPDFDocumentViewController" automaticallyAdjustsScrollViewInsets="NO" id="06O-iu-j8O" customClass="PatientPDFDocumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VQO-pg-ghi"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wvr-eA-HfU"/>
+                        <viewControllerLayoutGuide type="top" id="M4O-Mw-xlL"/>
+                        <viewControllerLayoutGuide type="bottom" id="O3a-DE-sYh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DMx-bV-KYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -14046,8 +14048,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientUploadPDFDocumentViewController" id="7He-Iw-iB5" customClass="PatientUploadPDFDocumentViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="t8P-8U-5zc"/>
-                        <viewControllerLayoutGuide type="bottom" id="fKP-7m-ahW"/>
+                        <viewControllerLayoutGuide type="top" id="AaM-2Y-4ic"/>
+                        <viewControllerLayoutGuide type="bottom" id="mdq-Wj-JcI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uCO-xF-c8l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -14183,8 +14185,8 @@
             <objects>
                 <viewController storyboardIdentifier="PatientDetailSearchClinicViewController" automaticallyAdjustsScrollViewInsets="NO" id="MTs-1W-Zod" customClass="PatientDetailSearchClinicViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2SU-Lj-eh2"/>
-                        <viewControllerLayoutGuide type="bottom" id="fxP-Fa-hJ4"/>
+                        <viewControllerLayoutGuide type="top" id="egQ-kb-EcL"/>
+                        <viewControllerLayoutGuide type="bottom" id="VFa-NU-pjx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="l0G-Bp-8lZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -14340,7 +14342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cX-5Z-GrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455.5" y="-3797.5"/>
+            <point key="canvasLocation" x="455.5" y="-3797.4999999999995"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6AY-pm-rYC">
@@ -14363,15 +14365,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oic-W8-Xfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1295.5" y="-436.5"/>
+            <point key="canvasLocation" x="-1295.5" y="-436.49999999999994"/>
         </scene>
         <!--Doctor Add Procedure Setting View Controller-->
         <scene sceneID="Q2z-Fe-XOh">
             <objects>
                 <viewController storyboardIdentifier="DoctorAddProcedureSettingViewController" id="v0p-65-AmP" customClass="DoctorAddProcedureSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BSY-90-KfG"/>
-                        <viewControllerLayoutGuide type="bottom" id="FF1-AE-mGd"/>
+                        <viewControllerLayoutGuide type="top" id="Ks8-mb-xCn"/>
+                        <viewControllerLayoutGuide type="bottom" id="JI1-Kr-78i"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4tc-Ti-MOp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -14456,8 +14458,8 @@
             <objects>
                 <viewController storyboardIdentifier="DoctorAddTemplateSettingViewController" id="HxY-Zp-v0z" customClass="DoctorAddTemplateSettingViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="b6W-Ud-hKf"/>
-                        <viewControllerLayoutGuide type="bottom" id="KTl-sN-yOz"/>
+                        <viewControllerLayoutGuide type="top" id="1tY-lQ-3d2"/>
+                        <viewControllerLayoutGuide type="bottom" id="M5X-4q-4Eh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BT0-wW-yrw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -14527,8 +14529,8 @@
             <objects>
                 <viewController storyboardIdentifier="GetSearchDoctorViewController" automaticallyAdjustsScrollViewInsets="NO" id="gzY-bq-cnc" customClass="GetSearchDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bx4-mE-cRe"/>
-                        <viewControllerLayoutGuide type="bottom" id="5CK-YY-fTl"/>
+                        <viewControllerLayoutGuide type="top" id="SZU-Xp-RFU"/>
+                        <viewControllerLayoutGuide type="bottom" id="oAv-kh-OX6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fK7-No-XY2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -14674,15 +14676,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhl-0f-IEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-608.5" y="2582.5"/>
+            <point key="canvasLocation" x="-608.5" y="2582.4999999999995"/>
         </scene>
         <!--Get Detail Search Doctor View Controller-->
         <scene sceneID="uFw-L0-94a">
             <objects>
                 <viewController storyboardIdentifier="GetDetailSearchDoctorViewController" id="gG3-zy-59a" customClass="GetDetailSearchDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g7F-F2-dZf"/>
-                        <viewControllerLayoutGuide type="bottom" id="zuh-MF-O4d"/>
+                        <viewControllerLayoutGuide type="top" id="ryA-PW-T9l"/>
+                        <viewControllerLayoutGuide type="bottom" id="I0T-r6-WPW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mJG-2x-UWS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -15250,7 +15252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlt-BP-2lJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170.5" y="2582.5"/>
+            <point key="canvasLocation" x="-170.5" y="2582.4999999999995"/>
         </scene>
     </scenes>
     <resources>
@@ -15305,7 +15307,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uIc-gH-mMb"/>
-        <segue reference="Fnq-rk-h64"/>
+        <segue reference="Y0t-Ms-amc"/>
         <segue reference="wIh-Nq-vqk"/>
     </inferredMetricsTieBreakers>
 </document>
