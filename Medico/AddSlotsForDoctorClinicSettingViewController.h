@@ -10,7 +10,36 @@
 #import "MBProgressHUD.h"
 
 
-@interface AddSlotsForDoctorClinicSettingViewController : UIViewController
+@interface AddSlotsForDoctorClinicSettingViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+
+
+@property (retain, nonatomic)  UIPickerView *slot1FromHourPicker;
+@property (retain, nonatomic)  UIPickerView *slot1FromMinutePicker;
+@property (retain, nonatomic)  UIPickerView *slot1FromAmPmPicker;
+
+@property (retain, nonatomic)  UIPickerView *slot1ToHourPicker;
+@property (retain, nonatomic)  UIPickerView *slot1ToMinutePicker;
+@property (retain, nonatomic)  UIPickerView *slot1ToAmPmPicker;
+
+@property (retain, nonatomic)  UIPickerView *slot2FromHourPicker;
+@property (retain, nonatomic)  UIPickerView *slot2FromMinutePicker;
+@property (retain, nonatomic)  UIPickerView *slot2FromAmPmPicker;
+
+@property (retain, nonatomic)  UIPickerView *slot2ToHourPicker;
+@property (retain, nonatomic)  UIPickerView *slot2ToMinutePicker;
+@property (retain, nonatomic)  UIPickerView *slot2ToAmPmPicker;
+
+@property (retain, nonatomic)  UIPickerView *slot3FromHourPicker;
+@property (retain, nonatomic)  UIPickerView *slot3FromMinutePicker;
+@property (retain, nonatomic)  UIPickerView *slot3FromAmPmPicker;
+
+@property (retain, nonatomic)  UIPickerView *slot3ToHourPicker;
+@property (retain, nonatomic)  UIPickerView *slot3ToMinutePicker;
+@property (retain, nonatomic)  UIPickerView *slot3ToAmPmPicker;
+
+@property (nonatomic,retain) NSArray *hourPickerArr;
+@property (nonatomic,retain) NSArray *minutePickerArr;
+@property (nonatomic,retain) NSArray *amPmPickerArr;
 
 @property NSString *passClinicId;
 @property NSString *passDoctorId;

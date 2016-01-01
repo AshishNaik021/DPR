@@ -14,6 +14,32 @@
 @end
 
 @implementation AddSlotsForDoctorClinicSettingViewController
+
+@synthesize slot1FromHourPicker;
+@synthesize hourPickerArr;
+@synthesize slot1FromMinutePicker;
+@synthesize minutePickerArr;
+@synthesize slot1FromAmPmPicker;
+@synthesize amPmPickerArr;
+
+@synthesize slot1ToHourPicker;
+@synthesize slot1ToMinutePicker;
+@synthesize slot1ToAmPmPicker;
+
+@synthesize slot2ToHourPicker;
+@synthesize slot2ToMinutePicker;
+@synthesize slot2ToAmPmPicker;
+@synthesize slot2FromHourPicker;
+@synthesize slot2FromMinutePicker;
+@synthesize slot2FromAmPmPicker;
+
+@synthesize slot3ToHourPicker;
+@synthesize slot3ToMinutePicker;
+@synthesize slot3ToAmPmPicker;
+@synthesize slot3FromHourPicker;
+@synthesize slot3FromMinutePicker;
+@synthesize slot3FromAmPmPicker;
+
 @synthesize slot3ContentView;
 @synthesize slot2ContentView;
 @synthesize slot1ContentView;
@@ -183,6 +209,404 @@
     sundaySlot1Arr = [[NSDictionary alloc]init];
     
     NSLog(@"passes Clinic ID is---------%@",_passClinicId);
+    
+    
+    //picker
+    hourPickerArr = [[NSMutableArray alloc] initWithObjects:@"Select",@"01",@"02",@"03",@"04",@"05",@"06",@"07",@"08",@"09",@"10",@"11",@"12",nil];
+    
+    minutePickerArr = [[NSMutableArray alloc] initWithObjects:@"Select",@"00",@"30",@"45",@"60", nil];
+    
+    amPmPickerArr = [[NSMutableArray alloc] initWithObjects:@"Select",@"AM",@"PM", nil];
+    
+    slot1FromHourPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot1FromHourPicker.showsSelectionIndicator = YES;
+    slot1FromHourPicker.hidden = YES;
+    slot1FromHourPicker.delegate = self;
+    slot1FromHourPicker.tag =2;
+    [self.view addSubview:slot1FromHourPicker];
+    
+    slot1FromMinutePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot1FromMinutePicker.showsSelectionIndicator = YES;
+    slot1FromMinutePicker.hidden = YES;
+    slot1FromMinutePicker.delegate = self;
+    slot1FromMinutePicker.tag = 3;
+    [self.view addSubview:slot1FromMinutePicker];
+
+    slot1FromAmPmPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot1FromAmPmPicker.showsSelectionIndicator = YES;
+    slot1FromAmPmPicker.hidden = YES;
+    slot1FromAmPmPicker.delegate = self;
+    slot1FromAmPmPicker.tag = 4;
+    [self.view addSubview:slot1FromAmPmPicker];
+    
+    //----------------------------------------------------
+    
+    slot1ToHourPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot1ToHourPicker.showsSelectionIndicator = YES;
+    slot1ToHourPicker.hidden = YES;
+    slot1ToHourPicker.delegate = self;
+    slot1ToHourPicker.tag =5;
+    [self.view addSubview:slot1ToHourPicker];
+    
+    slot1ToMinutePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot1ToMinutePicker.showsSelectionIndicator = YES;
+    slot1ToMinutePicker.hidden = YES;
+    slot1ToMinutePicker.delegate = self;
+    slot1ToMinutePicker.tag = 6;
+    [self.view addSubview:slot1ToMinutePicker];
+    
+    slot1ToAmPmPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot1ToAmPmPicker.showsSelectionIndicator = YES;
+    slot1ToAmPmPicker.hidden = YES;
+    slot1ToAmPmPicker.delegate = self;
+    slot1ToAmPmPicker.tag = 7;
+    [self.view addSubview:slot1ToAmPmPicker];
+    
+    //*********************************************************
+    
+    slot2FromHourPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot2FromHourPicker.showsSelectionIndicator = YES;
+    slot2FromHourPicker.hidden = YES;
+    slot2FromHourPicker.delegate = self;
+    slot2FromHourPicker.tag =8;
+    [self.view addSubview:slot2FromHourPicker];
+    
+    slot2FromMinutePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot2FromMinutePicker.showsSelectionIndicator = YES;
+    slot2FromMinutePicker.hidden = YES;
+    slot2FromMinutePicker.delegate = self;
+    slot2FromMinutePicker.tag = 9;
+    [self.view addSubview:slot2FromMinutePicker];
+    
+    slot2FromAmPmPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot2FromAmPmPicker.showsSelectionIndicator = YES;
+    slot2FromAmPmPicker.hidden = YES;
+    slot2FromAmPmPicker.delegate = self;
+    slot2FromAmPmPicker.tag = 10;
+    [self.view addSubview:slot2FromAmPmPicker];
+    
+    //----------------------------------------------------
+    
+    slot2ToHourPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot2ToHourPicker.showsSelectionIndicator = YES;
+    slot2ToHourPicker.hidden = YES;
+    slot2ToHourPicker.delegate = self;
+    slot2ToHourPicker.tag =11;
+    [self.view addSubview:slot2ToHourPicker];
+    
+    slot2ToMinutePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot2ToMinutePicker.showsSelectionIndicator = YES;
+    slot2ToMinutePicker.hidden = YES;
+    slot2ToMinutePicker.delegate = self;
+    slot2ToMinutePicker.tag = 12;
+    [self.view addSubview:slot2ToMinutePicker];
+    
+    slot2ToAmPmPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot2ToAmPmPicker.showsSelectionIndicator = YES;
+    slot2ToAmPmPicker.hidden = YES;
+    slot2ToAmPmPicker.delegate = self;
+    slot2ToAmPmPicker.tag = 13;
+    [self.view addSubview:slot2ToAmPmPicker];
+    
+    //*********************************************************
+    
+    slot3FromHourPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot3FromHourPicker.showsSelectionIndicator = YES;
+    slot3FromHourPicker.hidden = YES;
+    slot3FromHourPicker.delegate = self;
+    slot3FromHourPicker.tag =14;
+    [self.view addSubview:slot3FromHourPicker];
+    
+    slot3FromMinutePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot3FromMinutePicker.showsSelectionIndicator = YES;
+    slot3FromMinutePicker.hidden = YES;
+    slot3FromMinutePicker.delegate = self;
+    slot3FromMinutePicker.tag = 15;
+    [self.view addSubview:slot3FromMinutePicker];
+    
+    slot3FromAmPmPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot3FromAmPmPicker.showsSelectionIndicator = YES;
+    slot3FromAmPmPicker.hidden = YES;
+    slot3FromAmPmPicker.delegate = self;
+    slot3FromAmPmPicker.tag = 16;
+    [self.view addSubview:slot3FromAmPmPicker];
+    
+    //----------------------------------------------------
+    
+    slot3ToHourPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot3ToHourPicker.showsSelectionIndicator = YES;
+    slot3ToHourPicker.hidden = YES;
+    slot3ToHourPicker.delegate = self;
+    slot3ToHourPicker.tag =17;
+    [self.view addSubview:slot3ToHourPicker];
+    
+    slot3ToMinutePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot3ToMinutePicker.showsSelectionIndicator = YES;
+    slot3ToMinutePicker.hidden = YES;
+    slot3ToMinutePicker.delegate = self;
+    slot3ToMinutePicker.tag = 18;
+    [self.view addSubview:slot3ToMinutePicker];
+    
+    slot3ToAmPmPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 10, 300, 200)];
+    slot3ToAmPmPicker.showsSelectionIndicator = YES;
+    slot3ToAmPmPicker.hidden = YES;
+    slot3ToAmPmPicker.delegate = self;
+    slot3ToAmPmPicker.tag = 19;
+    [self.view addSubview:slot3ToAmPmPicker];
+
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
+    
+    NSInteger retval;
+    if (pickerView.tag ==2 ||pickerView.tag == 5 || pickerView.tag == 8 || pickerView.tag == 11 || pickerView.tag == 14 || pickerView.tag == 17) {
+        retval = hourPickerArr.count;
+    }
+    else if(pickerView.tag == 3 ||pickerView.tag == 6 || pickerView.tag == 9 || pickerView.tag == 12 || pickerView.tag == 15 || pickerView.tag == 18){
+        retval = minutePickerArr.count;
+    }
+    else if (pickerView.tag == 4 ||pickerView.tag == 7 || pickerView.tag == 10 || pickerView.tag == 13 || pickerView.tag == 16 || pickerView.tag == 19){
+        retval = amPmPickerArr.count;
+    }
+    return retval;
+
+    
+}
+-(NSString*) pickerView:(UIPickerView*)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    NSString *str;
+    if (pickerView.tag == 2) {
+        str =[NSString stringWithFormat:@"%@",[hourPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 3){
+        str = [NSString stringWithFormat:@"%@",[minutePickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 4){
+        str = [NSString stringWithFormat:@"%@",[amPmPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 5){
+        str = [NSString stringWithFormat:@"%@",[hourPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 6){
+        str = [NSString stringWithFormat:@"%@",[minutePickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 7){
+        str = [NSString stringWithFormat:@"%@",[amPmPickerArr objectAtIndex:row]];
+    }
+
+    else if (pickerView.tag == 8) {
+        str =[NSString stringWithFormat:@"%@",[hourPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 9){
+        str = [NSString stringWithFormat:@"%@",[minutePickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 10){
+        str = [NSString stringWithFormat:@"%@",[amPmPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 11){
+        str = [NSString stringWithFormat:@"%@",[hourPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 12){
+        str = [NSString stringWithFormat:@"%@",[minutePickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 13){
+        str = [NSString stringWithFormat:@"%@",[amPmPickerArr objectAtIndex:row]];
+    }
+
+    else if (pickerView.tag == 14) {
+        str =[NSString stringWithFormat:@"%@",[hourPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 15){
+        str = [NSString stringWithFormat:@"%@",[minutePickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 16){
+        str = [NSString stringWithFormat:@"%@",[amPmPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 17){
+        str = [NSString stringWithFormat:@"%@",[hourPickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 18){
+        str = [NSString stringWithFormat:@"%@",[minutePickerArr objectAtIndex:row]];
+    }
+    else if(pickerView.tag == 19){
+        str = [NSString stringWithFormat:@"%@",[amPmPickerArr objectAtIndex:row]];
+    }
+
+    return str;
+    
+    
+    
+}
+
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+{
+    
+    if (pickerView.tag == 2) {
+        slot1FromHourField.text = [NSString stringWithFormat:@"%@",hourPickerArr[row]];
+        slot1FromHourPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 3){
+        slot1FromMinuteField.text = [NSString stringWithFormat:@"%@",minutePickerArr[row]];
+        slot1FromMinutePicker.hidden = YES;
+    }
+    else if (pickerView.tag == 4){
+        slot1FromAmPmField.text = [NSString stringWithFormat:@"%@",amPmPickerArr[row]];
+        slot1FromAmPmPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 5){
+        slot1ToHourField.text = [NSString stringWithFormat:@"%@",hourPickerArr[row]];
+        slot1ToHourPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 6){
+        slot1ToMinuteField.text = [NSString stringWithFormat:@"%@",minutePickerArr[row]];
+        slot1ToMinutePicker.hidden = YES;
+    }
+    else if (pickerView.tag == 7){
+        slot1ToAmPmField.text = [NSString stringWithFormat:@"%@",amPmPickerArr[row]];
+        slot1ToAmPmPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 8) {
+        slot2FromHourField.text = [NSString stringWithFormat:@"%@",hourPickerArr[row]];
+        slot2FromHourPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 9){
+        slot2FromMinuteField.text = [NSString stringWithFormat:@"%@",minutePickerArr[row]];
+        slot2FromMinutePicker.hidden = YES;
+    }
+    else if (pickerView.tag == 10){
+        slot2FromAmPmField.text = [NSString stringWithFormat:@"%@",amPmPickerArr[row]];
+        slot2FromAmPmPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 11){
+        slot2ToHourField.text = [NSString stringWithFormat:@"%@",hourPickerArr[row]];
+        slot2ToHourPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 12){
+        slot2ToMinuteField.text = [NSString stringWithFormat:@"%@",minutePickerArr[row]];
+        slot2ToMinutePicker.hidden = YES;
+    }
+    else if (pickerView.tag == 13){
+        slot2ToAmPmField.text = [NSString stringWithFormat:@"%@",amPmPickerArr[row]];
+        slot2ToAmPmPicker.hidden = YES;
+    }
+
+    else if (pickerView.tag == 14) {
+        slot3FromHourField.text = [NSString stringWithFormat:@"%@",hourPickerArr[row]];
+        slot3FromHourPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 15){
+        slot3FromMinuteField.text = [NSString stringWithFormat:@"%@",minutePickerArr[row]];
+        slot3FromMinutePicker.hidden = YES;
+    }
+    else if (pickerView.tag == 16){
+        slot3FromAmPmField.text = [NSString stringWithFormat:@"%@",amPmPickerArr[row]];
+        slot3FromAmPmPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 17){
+        slot3ToHourField.text = [NSString stringWithFormat:@"%@",hourPickerArr[row]];
+        slot3ToHourPicker.hidden = YES;
+    }
+    else if (pickerView.tag == 18){
+        slot3ToMinuteField.text = [NSString stringWithFormat:@"%@",minutePickerArr[row]];
+        slot3ToMinutePicker.hidden = YES;
+    }
+    else if (pickerView.tag == 19){
+        slot3ToAmPmField.text = [NSString stringWithFormat:@"%@",amPmPickerArr[row]];
+        slot3ToAmPmPicker.hidden = YES;
+    }
+    
+
+    else{
+        
+    }
+    
+    
+}
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+   
+    if ([textField isEqual:slot1FromHourField]) {
+        self.slot1FromHourPicker.hidden = NO;
+       
+        return NO;
+    }
+    else if ([textField isEqual:slot1FromMinuteField]){
+        self.slot1FromMinutePicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot1FromAmPmField]){
+        self.slot1FromAmPmPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot1ToHourField]){
+        self.slot1ToHourPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot1ToMinuteField]){
+        self.slot1ToMinutePicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot1ToAmPmField]){
+        self.slot1ToAmPmPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot2FromHourField]) {
+        self.slot2FromHourPicker.hidden = NO;
+        
+        return NO;
+    }
+    else if ([textField isEqual:slot2FromMinuteField]){
+        self.slot2FromMinutePicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot2FromAmPmField]){
+        self.slot2FromAmPmPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot2ToHourField]){
+        self.slot2ToHourPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot2ToMinuteField]){
+        self.slot2ToMinutePicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot2ToAmPmField]){
+        self.slot2ToAmPmPicker.hidden = NO;
+        return NO;
+    }
+    
+    else if ([textField isEqual:slot3FromHourField]) {
+        self.slot3FromHourPicker.hidden = NO;
+        
+        return NO;
+    }
+    else if ([textField isEqual:slot3FromMinuteField]){
+        self.slot3FromMinutePicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot3FromAmPmField]){
+        self.slot3FromAmPmPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot3ToHourField]){
+        self.slot3ToHourPicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot3ToMinuteField]){
+        self.slot3ToMinutePicker.hidden = NO;
+        return NO;
+    }
+    else if ([textField isEqual:slot3ToAmPmField]){
+        self.slot3ToAmPmPicker.hidden = NO;
+        return NO;
+    }
+
+    return YES;
 }
 
 
@@ -199,7 +623,7 @@
 }
 
 -(BOOL)validateSlot1FromHr:(NSString *) slot1FromHr{
-    NSString *nameRegex =  @"(0?[1-9]|1[012])";
+    NSString *nameRegex =  @"[0-9]+";//@"(0?[1-9]|1[012])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot1FromHr]){
@@ -216,7 +640,7 @@
 }
 
 -(BOOL)validateSlot1ToHr:(NSString *) slot1ToHr{
-    NSString *nameRegex = @"(0?[1-9]|1[012])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[012])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot1ToHr]){
@@ -234,7 +658,7 @@
 }
 
 -(BOOL)validateSlot1FromMin:(NSString *) slot1FromMin{
-    NSString *nameRegex = @"(0?[1-9]|1[061])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[061])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot1FromMin]){
@@ -251,7 +675,7 @@
 }
 
 -(BOOL)validateSlot1ToMin:(NSString *) slot1ToMin{
-    NSString *nameRegex = @"(0?[1-9]|1[061])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[061])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot1ToMin]){
@@ -269,7 +693,7 @@
 
 -(BOOL)validateSlot1FromAmPm:(NSString *) slot1FromAmPm{
     
-    NSString *nameRegex = @"[APap][mM]$";
+    NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot1FromAmPm]){
@@ -287,7 +711,7 @@
 
 -(BOOL)validateSlot1ToAmPm:(NSString *) slot1ToAmPm{
     
-    NSString *nameRegex = @"[APap][mM]$";
+    NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot1ToAmPm]){
@@ -640,7 +1064,7 @@
 }
 
 -(BOOL)validateSlot2FromHr:(NSString *) slot2FromHr{
-    NSString *nameRegex = @"(0?[1-9]|1[012])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[012])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot2FromHr]){
@@ -657,7 +1081,7 @@
 }
 
 -(BOOL)validateSlot2ToHr:(NSString *) slot2ToHr{
-    NSString *nameRegex = @"(0?[1-9]|1[012])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[012])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot2ToHr]){
@@ -675,7 +1099,7 @@
 }
 
 -(BOOL)validateSlot2FromMin:(NSString *) slot2FromMin{
-    NSString *nameRegex = @"(0?[1-9]|1[061])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[061])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot2FromMin]){
@@ -692,7 +1116,7 @@
 }
 
 -(BOOL)validateSlot2ToMin:(NSString *) slot2ToMin{
-    NSString *nameRegex = @"(0?[1-9]|1[061])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[061])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot2ToMin]){
@@ -710,7 +1134,7 @@
 
 -(BOOL)validateSlot2FromAmPm:(NSString *) slot2FromAmPm{
     
-    NSString *nameRegex = @"[APap][mM]$";
+    NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot2FromAmPm]){
@@ -728,7 +1152,7 @@
 
 -(BOOL)validateSlot2ToAmPm:(NSString *) slot2ToAmPm{
     
-    NSString *nameRegex = @"[APap][mM]$";
+    NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot2ToAmPm]){
@@ -754,7 +1178,7 @@
 }
 
 -(BOOL)validateSlot3FromHr:(NSString *) slot3FromHr{
-    NSString *nameRegex = @"(0?[1-9]|1[012])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[012])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot3FromHr]){
@@ -771,7 +1195,7 @@
 }
 
 -(BOOL)validateSlot3ToHr:(NSString *) slot3ToHr{
-    NSString *nameRegex = @"(0?[1-9]|1[012])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[012])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot3ToHr]){
@@ -789,7 +1213,7 @@
 }
 
 -(BOOL)validateSlot3FromMin:(NSString *) slot3FromMin{
-    NSString *nameRegex = @"(0?[1-9]|1[061])";
+    NSString *nameRegex = @"[0-9]+";//@"(0?[1-9]|1[061])";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot3FromMin]){
@@ -806,7 +1230,7 @@
 }
 
 -(BOOL)validateSlot3ToMin:(NSString *) slot3ToMin{
-    NSString *nameRegex = @"(0?[1-9]|1[061])";
+    NSString *nameRegex = @"[0-9]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot3ToMin]){
@@ -824,7 +1248,7 @@
 
 -(BOOL)validateSlot3FromAmPm:(NSString *) slot3FromAmPm{
     
-    NSString *nameRegex = @"[APap][mM]$";
+    NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot3FromAmPm]){
@@ -842,7 +1266,7 @@
 
 -(BOOL)validateSlot3ToAmPm:(NSString *) slot3ToAmPm{
     
-    NSString *nameRegex = @"[APap][mM]$";
+    NSString *nameRegex = @"[a-z]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES [c]%@", nameRegex];
     
     if(![nameTest evaluateWithObject:slot3ToAmPm]){
