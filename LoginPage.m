@@ -60,6 +60,7 @@
     
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:YES];
+    [self.navigationController.toolbar setHidden:YES];
 }
 
 - (IBAction)validate1:(id)sender {

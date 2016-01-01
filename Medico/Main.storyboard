@@ -7840,12 +7840,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kM-Io-39L">
-                                <rect key="frame" x="154" y="623" width="67" height="30"/>
-                                <state key="normal" title="Done">
+                                <rect key="frame" x="207" y="623" width="67" height="30"/>
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="done:" destination="UyL-nV-oEz" eventType="touchUpInside" id="4WU-6p-EUb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzV-ar-Tav">
+                                <rect key="frame" x="106" y="623" width="55" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="UyL-nV-oEz" eventType="touchUpInside" id="8ZK-aj-BDN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -7854,6 +7863,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="cancelButton" destination="yzV-ar-Tav" id="RJS-Tb-QkY"/>
                         <outlet property="doneButton" destination="8kM-Io-39L" id="exw-rd-azN"/>
                         <outlet property="slot1AddButton" destination="ehm-9E-vwj" id="p8d-Ur-QUT"/>
                         <outlet property="slot1ContentView" destination="Plw-xH-IIy" id="GCi-XQ-21A"/>
@@ -7908,7 +7918,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhZ-Nt-El3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255.49999999999997" y="1092.5"/>
+            <point key="canvasLocation" x="254.5" y="1092.5"/>
         </scene>
         <!--Manage Doctors Clinic Settings View Controller-->
         <scene sceneID="ccN-oR-AGg">
@@ -8045,11 +8055,6 @@
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slots" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnn-MT-hjw">
-                                        <rect key="frame" x="16" y="303" width="132" height="21"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQa-kc-Zhp">
                                         <rect key="frame" x="156" y="42" width="203" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -8091,7 +8096,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-zn-dKN">
-                                        <rect key="frame" x="16" y="402" width="19" height="20"/>
+                                        <rect key="frame" x="16" y="337" width="19" height="20"/>
                                         <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -8100,7 +8105,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-zi-4jK">
-                                        <rect key="frame" x="16" y="430" width="19" height="20"/>
+                                        <rect key="frame" x="16" y="365" width="19" height="20"/>
                                         <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -8109,7 +8114,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsU-GS-T54">
-                                        <rect key="frame" x="16" y="458" width="19" height="20"/>
+                                        <rect key="frame" x="16" y="393" width="19" height="20"/>
                                         <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -8118,34 +8123,34 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Always" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TY-do-MrG">
-                                        <rect key="frame" x="43" y="399" width="316" height="21"/>
+                                        <rect key="frame" x="43" y="334" width="316" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Always except current slot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsL-yx-sYf">
-                                        <rect key="frame" x="43" y="427" width="316" height="21"/>
+                                        <rect key="frame" x="43" y="362" width="316" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Always except current day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkB-nV-9qq">
-                                        <rect key="frame" x="43" y="455" width="316" height="21"/>
+                                        <rect key="frame" x="43" y="390" width="316" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online Appointment :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU8-sE-yPi">
-                                        <rect key="frame" x="16" y="368" width="343" height="21"/>
+                                        <rect key="frame" x="16" y="303" width="343" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Always except Appointment set as tentative, to be confirmed by Doctor slot" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfk-sT-oqX">
-                                        <rect key="frame" x="43" y="474" width="316" height="48"/>
+                                        <rect key="frame" x="43" y="409" width="316" height="48"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfx-dJ-he6">
-                                        <rect key="frame" x="16" y="491" width="19" height="20"/>
+                                        <rect key="frame" x="16" y="426" width="19" height="20"/>
                                         <state key="normal" image="ic_radio_button_unchecked.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -8160,21 +8165,15 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shI-ah-pWG">
-                                        <rect key="frame" x="275" y="545" width="84" height="35"/>
+                                        <rect key="frame" x="275" y="480" width="84" height="35"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                        <state key="normal" title="Create">
+                                        <state key="normal" title="Next">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="createClinic:" destination="aUT-lw-Xyb" eventType="touchUpInside" id="TSk-Q6-N2e"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hm-Ou-bkL">
-                                        <rect key="frame" x="156" y="303" width="203" height="57"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sm4-Dr-nvO">
                                         <rect key="frame" x="156" y="235" width="203" height="57"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -8200,7 +8199,6 @@
                         <outlet property="createLandLineField" destination="iZb-EV-Pay" id="BE2-2o-d3m"/>
                         <outlet property="createLocationTextView" destination="tjU-SU-4ie" id="6IP-Oq-Vra"/>
                         <outlet property="createMobileField" destination="PUE-5S-wO4" id="9aj-3A-NfH"/>
-                        <outlet property="createSlotTextView" destination="6Hm-Ou-bkL" id="daW-cG-5Ky"/>
                         <outlet property="createSpecialtyTextView" destination="Sm4-Dr-nvO" id="15k-v0-vGd"/>
                         <outlet property="exceptCurrentDayButton" destination="xsU-GS-T54" id="6Sk-pn-JbN"/>
                         <outlet property="exceptCurrentSlotButton" destination="m8p-zi-4jK" id="Rms-ap-BWn"/>
@@ -14451,7 +14449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lb1-h8-QWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700.5" y="1092.5"/>
+            <point key="canvasLocation" x="1281.5" y="1092.5"/>
         </scene>
         <!--Doctor Add Template Setting View Controller-->
         <scene sceneID="K8T-I7-aHE">
@@ -14522,7 +14520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nx0-So-Kam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190.5" y="1092.5"/>
+            <point key="canvasLocation" x="1735.5" y="1092.5"/>
         </scene>
         <!--Get Search Doctor View Controller-->
         <scene sceneID="mq3-JU-S6W">

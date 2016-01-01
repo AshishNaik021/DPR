@@ -7,7 +7,7 @@
 //
 
 #import "AddSlotsForDoctorClinicSettingViewController.h"
-#import "CreateDoctorsClinicSettingsViewController.h"
+#import "ManageDoctorsClinicSettingsViewController.h"
 
 @interface AddSlotsForDoctorClinicSettingViewController ()
 
@@ -137,9 +137,16 @@
 @synthesize slot3SunDay;
 @synthesize indexCount2;
 
+@synthesize passClinicId = _passClinicId;
+@synthesize passDoctorId = _passDoctorId;
+@synthesize returnStringSlot;
+@synthesize scheduleString;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"AddSlotsForDoctorClinicSettingViewController.m");
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:120.0/255.0 green:199.0/255.0 blue:211.0/255.0 alpha:0];
+    self.navigationController.title = @"Add Slots For Clinic";
     slot1ContentView.hidden = FALSE;
     slot2ContentView.hidden = TRUE;
     slot3ContentView.hidden = TRUE;
@@ -174,6 +181,8 @@
     fridaySlot1Arr = [[NSDictionary alloc]init];
     saturdaySlot1Arr = [[NSDictionary alloc]init];
     sundaySlot1Arr = [[NSDictionary alloc]init];
+    
+    NSLog(@"passes Clinic ID is---------%@",_passClinicId);
 }
 
 
@@ -443,7 +452,7 @@
 //        [self.navigationController pushViewController:createClinic animated:YES];
         
         NSError *error;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objectArr
                                                            options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
                                                              error:&error];
         NSLog(@"Checking valid JSON..................%@",jsonData);
@@ -453,12 +462,19 @@
         } else {
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
-            CreateDoctorsClinicSettingsViewController *createClinic =
-            [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
-            createClinic.passDictionaryForSlots = dict;
-            createClinic.passString = jsonString;
-            NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
-            [self.navigationController pushViewController:createClinic animated:YES];
+            scheduleString = jsonString;
+            NSLog(@"checking copy string to another.......%@",scheduleString);
+            [self addClinicSlots];
+            
+            
+            // write call to method slots.......
+            
+//            CreateDoctorsClinicSettingsViewController *createClinic =
+//            [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+//            createClinic.passDictionaryForSlots = dict;
+//            createClinic.passString = jsonString;
+//            NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
+//            [self.navigationController pushViewController:createClinic animated:YES];
 
         }
         
@@ -473,6 +489,148 @@
 
 
 /*-------------------------------------------------------------------------------------------------------*/
+
+-(void)addClinicSlots{
+    //returnString = @"";
+    
+    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.hud.labelText = @"Processing...";
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
+    
+    
+    NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/saveDoctorClinicScheduleTime"];
+    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
+
+    
+//    NSString *params = [NSString stringWithFormat:@"\{\"clinicName\":\"%@\",\"email\":\"%@\",\"mobileNumber\":\"%@\",\"landLineNumber\":\"%@\",\"location\":\"%@\",\"speciality\":\"%@\",\"onlineAppointment\":\"%@\",\"selected\":\"%@\",\"doctorId\":\"%@\",\"parameter\":\"%@\"}",[dict objectForKey:@"clinicName"],[dict objectForKey:@"email"],[dict objectForKey:@"mobileNumber"],[dict objectForKey:@"landLineNumber"],[dict objectForKey:@"location"],[dict objectForKey:@"speciality"],[dict objectForKey:@"onlineAppointment"],[dict objectForKey:@"selected"],[dict objectForKey:@"doctorId"],[dict objectForKey:@"parameter"]];
+    
+    //returnArray
+    //    //clinicAdded
+    //    //emailid
+    //    NSDictionary *slotDict = [[NSDictionary alloc]init];
+    //
+    //    slotDict = @{@"clinicId" : clinicAdded,
+    //                 @"doctorId" : emailid,
+    //                 @"schedules" : returnArr};
+    //
+    //    NSLog(@"my slotDict-----------%@",slotDict);
+
+    
+    NSString *params = [NSString stringWithFormat:@"\{\"clinicId\":\"%@\",\"doctorId\":\"%@\",\"schedules\":%@}",_passClinicId,_passDoctorId,scheduleString];
+
+    
+    NSLog(@"params %@",params);
+    [urlRequest setHTTPMethod:@"POST"];
+    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
+                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                           NSLog(@"Response:%@ Error : %@\n", response, error);
+                                                           //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
+                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                                           self.hud = nil;
+                                                           
+                                                           if(error == nil)
+                                                           {
+                                                               returnStringSlot = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+                                                               NSLog(@"Poonam Data = %@",returnStringSlot);
+                                                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                               NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+                                                               if ([httpResponse statusCode] == 200) {
+                                                                   
+                                                                   [self parseJSONForSlots:returnStringSlot];
+                                                                   
+                                                               } else {
+                                                                   //[self reportError:[httpResponse statusCode]];
+                                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                                   message:@"An error occured. Please try again later."
+                                                                                                                  delegate:self
+                                                                                                         cancelButtonTitle:@"OK"
+                                                                                                         otherButtonTitles:nil];
+                                                                   [alert show];
+                                                                   
+                                                               }
+                                                           }
+                                                           else{
+                                                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                               message:@"An error occured. Please try again later."
+                                                                                                              delegate:self
+                                                                                                     cancelButtonTitle:@"OK"
+                                                                                                     otherButtonTitles:nil];
+                                                               [alert show];
+                                                           }
+                                                           
+                                                       }];
+    [dataTask resume];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ( alertView.tag == 200 ) {
+        NSLog(@"Launching the store");
+        ManageDoctorsClinicSettingsViewController *clinic =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"ManageDoctorsClinicSettingsViewController"];
+        [self.navigationController pushViewController:clinic animated:YES];
+    }
+}
+
+
+-(void)parseJSONForSlots : (NSString *)responseData{
+    NSString * jsonString = responseData;
+    NSLog(@"responseData %@",responseData);
+    NSLog(@"jsonString %@",jsonString);
+    
+    
+    if ([jsonString rangeOfString:@"Clinic Doctor time Added " options:NSCaseInsensitiveSearch].location !=NSNotFound) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfully Added." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 200;
+        
+//        AddSlotsForDoctorClinicSettingViewController *slots =
+//        [self.storyboard instantiateViewControllerWithIdentifier:@"AddSlotsForDoctorClinicSettingViewController"];
+//        slots.passClinicId = returnStringSlot;
+//        slots.passDoctorId = emailid;
+//        [self.navigationController pushViewController:slots animated:YES];
+        
+        [alert show];
+    }
+    else{
+        //NSStringEncoding  encoding;
+        NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError * error=nil;
+        NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+        NSLog(@"NSDictionery:%@",parsedData);
+        /*  NSString *message = [NSString stringWithFormat:[parsedData valueForKey:@"message"]];
+         //NSLog(@"userType:%@",[parsedData valueForKey:@"type"]);
+         if ([message isEqualToString:@"User Already Exist!"]) {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
+         message:@"User already exists. Please try to Login!"
+         delegate:self
+         cancelButtonTitle:@"OK"
+         otherButtonTitles:nil]; */
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
+                                                        message:@"Try again later!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        alert.tag = 201;
+        [alert show];
+        
+        
+        //    else if ([userType isEqualToString:@"Patient"]){
+        //        PatientLandingPageView *patientHome =
+        //        [self.storyboard instantiateViewControllerWithIdentifier:@"PatientHome"];
+        //        [self.navigationController pushViewController:patientHome animated:YES];
+        //    }
+        //    else {
+        //        AssistantLandingPageView *assistantHome =
+        //        [self.storyboard instantiateViewControllerWithIdentifier:@"AssistantHome"];
+        //        [self.navigationController pushViewController:assistantHome animated:YES];
+        //    }
+    }
+}
+
 
 /*------------------------------------Slot2 Validations-------------------------------------------------*/
 
@@ -959,14 +1117,14 @@
         
         
         NSLog(@"The Slot1 data in the dictionary is************************%@",dict);
-        CreateDoctorsClinicSettingsViewController *createClinic =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
-        createClinic.passDictionaryForSlots = dict;
-        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
-        [self.navigationController pushViewController:createClinic animated:YES];
+//        CreateDoctorsClinicSettingsViewController *createClinic =
+//        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+//        createClinic.passDictionaryForSlots = dict;
+//        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
+//        [self.navigationController pushViewController:createClinic animated:YES];
         
         NSError *error;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objectArr
                                                            options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
                                                              error:&error];
         
@@ -975,6 +1133,10 @@
         } else {
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
+            scheduleString = jsonString;
+            NSLog(@"checking copy string to another.......%@",scheduleString);
+            [self addClinicSlots];
+
         }
         
     }
@@ -1244,14 +1406,14 @@
         
         
         NSLog(@"The Slot1 data in the dictionary is************************%@",dict);
-        CreateDoctorsClinicSettingsViewController *createClinic =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
-        createClinic.passDictionaryForSlots = dict;
-        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
-        [self.navigationController pushViewController:createClinic animated:YES];
+//        CreateDoctorsClinicSettingsViewController *createClinic =
+//        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+//        createClinic.passDictionaryForSlots = dict;
+//        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
+//        [self.navigationController pushViewController:createClinic animated:YES];
         
         NSError *error;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objectArr
                                                            options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
                                                              error:&error];
         
@@ -1260,6 +1422,10 @@
         } else {
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
+            scheduleString = jsonString;
+            NSLog(@"checking copy string to another.......%@",scheduleString);
+            [self addClinicSlots];
+
         }
         
     }
@@ -1641,14 +1807,14 @@
         
         
         NSLog(@"The Slot1 data in the dictionary is************************%@",dict);
-        CreateDoctorsClinicSettingsViewController *createClinic =
-        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
-        createClinic.passDictionaryForSlots = dict;
-        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
-        [self.navigationController pushViewController:createClinic animated:YES];
+//        CreateDoctorsClinicSettingsViewController *createClinic =
+//        [self.storyboard instantiateViewControllerWithIdentifier:@"CreateDoctorsClinicSettingsViewController"];
+//        createClinic.passDictionaryForSlots = dict;
+//        NSLog(@"is dic copied? %@",createClinic.passDictionaryForSlots);
+//        [self.navigationController pushViewController:createClinic animated:YES];
         
         NSError *error;
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:objectArr
                                                            options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
                                                              error:&error];
         
@@ -1657,6 +1823,10 @@
         } else {
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
+            scheduleString = jsonString;
+            NSLog(@"checking copy string to another.......%@",scheduleString);
+            [self addClinicSlots];
+
         }
         
     }
@@ -2259,4 +2429,11 @@
     
 }
 
+- (IBAction)cancel:(id)sender {
+    
+    ManageDoctorsClinicSettingsViewController *clinic =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ManageDoctorsClinicSettingsViewController"];
+    [self.navigationController pushViewController:clinic animated:YES];
+    
+}
 @end

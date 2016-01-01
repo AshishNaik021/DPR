@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+
 
 @interface AddSlotsForDoctorClinicSettingViewController : UIViewController
+
+@property NSString *passClinicId;
+@property NSString *passDoctorId;
+@property(weak) MBProgressHUD *hud;
+@property NSString *scheduleString;
+@property NSString *returnStringSlot;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+- (IBAction)cancel:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UIView *slot1ContentView;
 @property (weak, nonatomic) IBOutlet UIView *slot2ContentView;

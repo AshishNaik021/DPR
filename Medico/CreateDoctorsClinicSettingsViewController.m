@@ -147,6 +147,7 @@
         [self.navigationController pushViewController:DoctorHome animated:YES];
     }
     else{
+        
         PatientLandingPageViewController *patientHome =
         [self.storyboard instantiateViewControllerWithIdentifier:@"PatientLandingPageViewController"];
         [self.navigationController pushViewController:patientHome animated:YES];
@@ -186,9 +187,9 @@
     clinicFlag = NO;
     slotFlag = NO;
     
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addSlots:)];
+   // UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addSlots:)];
     
-    [createSlotTextView addGestureRecognizer:gestureRecognizer];
+  //  [createSlotTextView addGestureRecognizer:gestureRecognizer];
     
     exceptSlotRadioButton = NO;
     exceptDayRadioButton = NO;
@@ -201,36 +202,6 @@
     NSLog(@"email id for logged in user...%@",emailid);
     // Do any additional setup after loading the view.
    
-     returnArr = [_passDictionaryForSlots valueForKeyPath:@"schedules"];
-    if (returnArr.count == 0) {
-        createSlotTextView.text = @"To Add Slots, Click Here!";
-    }
-    else{
-        createSlotTextView.text = @"Slots are added. To change the slots, Click again!";
-            }
-    NSLog(@"my checking arrr========%@",returnArr);
-
-    //NSLog(@"checking value for particular key........%@",[[checkArr objectAtIndex:0] objectForKey:@"day"]);
-       if (_passString) {
-        
-           NSArray *a = _passString;
-           NSLog(@"aaaaaaaaaaaaaaaaaaaaaaaa%@",a);
-    NSDictionary *slotDict = [[NSDictionary alloc]init];
-    
-    slotDict = @{@"clinicId" : @"9",
-                 @"doctorId" : emailid,
-                 @"schedules" : a};
-    
-    NSLog(@"my slotDict-----------%@",slotDict);
-    
-    }
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -286,7 +257,7 @@
 }
 
 -(BOOL)validateMobileNumber:(NSString *) mobileNumber{
-    NSString *nameRegex = @"[0-9]+";
+    NSString *nameRegex = @"[0-9]{10}"; //@"[0-9]+";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:mobileNumber]){
@@ -303,7 +274,7 @@
 }
 
 -(BOOL)validateLandlineNumber:(NSString *) landlineNumber{
-    NSString *nameRegex = @"[0-9]+";
+    NSString *nameRegex = @"[0-9]{10}";
     NSPredicate *nameTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", nameRegex];
     
     if(![nameTest evaluateWithObject:landlineNumber]){
@@ -437,106 +408,14 @@
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             NSLog(@"jsonstring %@",jsonString);
             
-           // [self addClinic];
+            [self addClinic];
         }
         
-        /*   SMSConfirmationView *viewController =
-         [self.storyboard instantiateViewControllerWithIdentifier:@"SMSConfirmationView"];
-         viewController.data = dict;
-         NSLog(@"is dic copied? %@",viewController.data);
-         [self.navigationController pushViewController:viewController animated:YES];*/
+        
     }
     else {
         NSLog(@"Data invalid");
     }
-}
-
--(void)callAddSlotsForClinic :(NSString *)clinicId{
-    
-    self.hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    self.hud.labelText = @"Processing...";
-
-    
-    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSString *clinicAdded = clinicId;
-    
-    
-    NSURL * url = [NSURL URLWithString:@"http://139.162.31.36:9000/saveDoctorClinicScheduleTime"];
-    
-    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
-    
-    //returnArray
-    //clinicAdded
-    //emailid
-    NSDictionary *slotDict = [[NSDictionary alloc]init];
-    
-    slotDict = @{@"clinicId" : clinicAdded,
-                 @"doctorId" : emailid,
-                 @"schedules" : returnArr};
-    
-    NSLog(@"my slotDict-----------%@",slotDict);
-    
-    NSString *params = [NSString stringWithFormat:@"\{\"clinicId\":\"%@\",\"doctorId\":\"%@\",\"schedules\":\"%@\"}",[slotDict objectForKey:@"clinicId"],[slotDict objectForKey:@"doctorId"],[slotDict objectForKey:@"schedules"]];
-    
-    NSLog(@"params %@",params);
-   [urlRequest setHTTPMethod:@"POST"];
-    [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [urlRequest setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    NSURLSessionDataTask * dataTask =[defaultSession dataTaskWithRequest:urlRequest
-                                                       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                           NSLog(@"Response:%@ Error : %@\n", response, error);
-                                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                                           self.hud = nil;
-                                                           //NSLog(@"Response Code:%@",[response valueForKey:@"status code"]);
-                                                           if(error == nil)
-                                                           {
-                                                               returnStringSlot = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-                                                               NSLog(@"Poonam Data = %@",returnStringSlot);
-                                                               NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-                                                               NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
-                                                               if ([httpResponse statusCode] == 200) {
-                                                                   
-                                                                   [self parseJSONForSlot:returnStringSlot];
-                                                                   
-                                                               } else {
-                                                                   //[self reportError:[httpResponse statusCode]];
-                                                                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                                                                                   message:@"An error occured. Please try again later."
-                                                                                                                  delegate:self
-                                                                                                         cancelButtonTitle:@"OK"
-                                                                                                         otherButtonTitles:nil];
-                                                                   [alert show];
-                                                                   
-                                                               }
-                                                           }
-                                                           else{
-                                                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                                                                               message:@"An error occured. Please try again later."
-                                                                                                              delegate:self
-                                                                                                     cancelButtonTitle:@"OK"
-                                                                                                     otherButtonTitles:nil];
-                                                               [alert show];
-                                                           }
-                                                           
-                                                       }];
-    [dataTask resume];
-
-}
-
--(void)parseJSONForSlot : (NSString *)responseData{
-    NSString * jsonString = responseData;
-    //NSStringEncoding  encoding;
-    NSData * jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError * error=nil;
-    NSDictionary * parsedData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-    NSLog(@"NSDictionery:%@",parsedData);
-    NSString *code = [NSString stringWithFormat:@"%@",[parsedData valueForKey:@"code"]];
-    NSString *message = [NSString stringWithFormat:@"%@",[parsedData valueForKey:@"message"]];
-    NSLog(@"code:%@",[parsedData valueForKey:@"code"]);
-    NSLog(@"message:%@",[parsedData valueForKey:@"message"]);
 }
 
 -(void)parseJSONForClinic : (NSString *)responseData{
@@ -545,11 +424,17 @@
     NSLog(@"jsonString %@",jsonString);
     if ([jsonString intValue]) {
         
-        [self callAddSlotsForClinic:jsonString];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfully Registered." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Successful!" message:@"Successfully Added." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         alert.tag = 200;
-        [alert show];
+        
+        AddSlotsForDoctorClinicSettingViewController *slots =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"AddSlotsForDoctorClinicSettingViewController"];
+        slots.passClinicId = returnStringClinic;
+        slots.passDoctorId = emailid;
+        [self.navigationController pushViewController:slots animated:YES];
+
+        //[alert show];
     }
     else{
         //NSStringEncoding  encoding;
@@ -652,7 +537,7 @@
 //Return String....
 
 -(void)errorMessaggeRadioBox{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please select slot for Clinic." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please select online appointment for Clinic." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -749,12 +634,15 @@
         if (alwaysRadioButton || exceptDayRadioButton || exceptSlotRadioButton || confirmDoctorRadioButton) {
             NSLog(@"Checked and calling func");
             [self callValidateAllFields];
+            
         }
         else{
             NSLog(@"Check button");
             [self errorMessaggeRadioBox];
         }
     }
+    
+    
     
 }
 - (IBAction)addSlots:(id)sender {
