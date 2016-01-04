@@ -12,7 +12,7 @@
 
 @interface AddSlotsForDoctorClinicSettingViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
-
+//test
 @property (retain, nonatomic)  UIPickerView *slot1FromHourPicker;
 @property (retain, nonatomic)  UIPickerView *slot1FromMinutePicker;
 @property (retain, nonatomic)  UIPickerView *slot1FromAmPmPicker;
