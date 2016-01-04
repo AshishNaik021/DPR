@@ -10,7 +10,9 @@
 
 @interface MedicinePrescribedScheduleViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 
-@property(nonatomic,retain) UIPickerView *medSchedule;
+@property (nonatomic,retain) UIPickerView *medicineNamePicker;
+@property (nonatomic,retain) NSArray *medicineNameArray;
+@property (nonatomic,retain) UIPickerView *medSchedule;
 @property (nonatomic,retain) NSMutableArray *schedules;
 @property (nonatomic,retain) UIPickerView *dosesPicker;
 @property (nonatomic,retain) NSMutableArray *dosesArray;

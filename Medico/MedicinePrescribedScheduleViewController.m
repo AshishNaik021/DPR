@@ -15,6 +15,8 @@
 
 @implementation MedicinePrescribedScheduleViewController
 
+@synthesize medicineNamePicker;
+@synthesize medicineNameArray;
 @synthesize dosesPicker;
 @synthesize dosesArray;
 @synthesize medSchedule;
@@ -81,9 +83,9 @@
     [[self navigationItem] setBackBarButtonItem:backButton];
     [doctorsInstructionTextView.layer setBorderWidth:1.0];
     [scheduleTimeTextView.layer setBorderWidth:1.0];
-    check = NO;
+    check = false;
     
-    keyboardVisible = NO;
+    keyboardVisible = false;
     screen = [[UIScreen mainScreen] bounds];
     width = CGRectGetWidth(screen);
     //Bonus height.
@@ -108,21 +110,34 @@
     
     schedules = [[NSMutableArray alloc] initWithObjects:@"Daily",@"Weekly",@"Monthly",nil];
     
-    medSchedule = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 200, 300, 200)];
+    medSchedule = [[UIPickerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-200, self.view.frame.size.width, 200)];
+    medSchedule.backgroundColor = [UIColor whiteColor];
     medSchedule.showsSelectionIndicator = YES;
     medSchedule.hidden = YES;
     medSchedule.tag =2;
     medSchedule.delegate = self;
     [self.view addSubview:medSchedule];
     
-    dosesArray = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",nil];
+    dosesArray = [[NSMutableArray alloc] initWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",nil];
     
-    dosesPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 200, 300, 200)];
+    dosesPicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-200, self.view.frame.size.width, 200)];
+    dosesPicker.backgroundColor = [UIColor whiteColor];
     dosesPicker.showsSelectionIndicator = YES;
     dosesPicker.hidden = YES;
     dosesPicker.tag = 3;
     dosesPicker.delegate = self;
     [self.view addSubview:dosesPicker];
+    
+    medicineNameArray = [[NSArray alloc] initWithObjects:@"Ibrufen 400 mg",@"Dextrose",@"Avelox",@"Crocin",@"Combiflam",@"Sumo",@"Nise",@"Paracitamal",@"Bicasule",nil];
+    
+    medicineNamePicker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-200, self.view.frame.size.width, 200)];
+    [self.view bringSubviewToFront:medicineNamePicker];
+    medicineNamePicker.showsSelectionIndicator = YES;
+    medicineNamePicker.hidden = YES;
+    medicineNamePicker.backgroundColor = [UIColor whiteColor];
+    medicineNamePicker.tag =4;
+    medicineNamePicker.delegate = self;
+    [self.view addSubview:medicineNamePicker];
     
     
     
@@ -132,15 +147,16 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 {
     if (pickerView.tag == 2) {
-        scheduleField.text = [NSString stringWithFormat:schedules[row]];
+        scheduleField.text = [NSString stringWithFormat:@"%@",schedules[row]];
         medSchedule.hidden = YES;
     }
     else if (pickerView.tag == 3){
-        numberOfDosesField.text = [NSString stringWithFormat:dosesArray[row]];
+        numberOfDosesField.text = [NSString stringWithFormat:@"%@",dosesArray[row]];
         dosesPicker.hidden = YES;
     }
-    else{
-        
+    else if (pickerView.tag == 4){
+        medicineNameField.text = [NSString stringWithFormat:@"%@",medicineNameArray[row]];
+        medicineNamePicker.hidden = YES;
     }
 }
 
@@ -153,6 +169,10 @@
         self.dosesPicker.hidden = NO;
         return NO;
     }
+    else if ([textField isEqual:medicineNameField]){
+        self.medicineNamePicker.hidden = NO;
+        return NO;
+    }
     return YES;
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView; {
@@ -162,11 +182,15 @@
 {
     NSString *str;
     if (pickerView.tag == 2) {
-        str =[NSString stringWithFormat:[schedules objectAtIndex:row]];
+        str =[NSString stringWithFormat:@"%@",[schedules objectAtIndex:row]];
     }
     else if(pickerView.tag == 3){
-        str = [NSString stringWithFormat:dosesArray[row]];
+        str = [NSString stringWithFormat:@"%@",dosesArray[row]];
     }
+    else if(pickerView.tag == 4){
+        str = [NSString stringWithFormat:@"%@",medicineNameArray[row]];
+    }
+
     return str;
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component; {
@@ -176,6 +200,9 @@
     }
     else if(pickerView.tag == 3){
         retval = dosesArray.count;
+    }
+    else if(pickerView.tag == 4){
+        retval = medicineNameArray.count;
     }
     return retval;
 }
@@ -191,7 +218,7 @@
                                                  name: UIKeyboardDidHideNotification object:nil];
     
     //Initially the keyboard is hidden
-    keyboardVisible = NO;
+    keyboardVisible = false;
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -555,6 +582,7 @@
     NSLog(@"touchesBegan:withEvent:");
     medSchedule.hidden = YES;
     dosesPicker.hidden =YES;
+    medicineNamePicker.hidden = YES;
     [self.view endEditing:YES];
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField{
@@ -562,6 +590,7 @@
     [textField resignFirstResponder];
     medSchedule.hidden = YES;
     dosesPicker.hidden = YES;
+    medicineNamePicker.hidden = YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
