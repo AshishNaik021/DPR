@@ -163,13 +163,19 @@
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if ([textField isEqual:scheduleField]) {
         self.medSchedule.hidden = NO;
+        self.dosesPicker.hidden = YES;
+        self.medicineNamePicker.hidden = YES;
         return NO;
     }
     else if ([textField isEqual:numberOfDosesField]){
+        self.medSchedule.hidden = YES;
         self.dosesPicker.hidden = NO;
+        self.medicineNamePicker.hidden = YES;
         return NO;
     }
     else if ([textField isEqual:medicineNameField]){
+        self.medSchedule.hidden = YES;
+        self.dosesPicker.hidden = YES;
         self.medicineNamePicker.hidden = NO;
         return NO;
     }
@@ -597,6 +603,24 @@
     self.endDateField.text = [self formatDate:[self returnDate]];
 
     textField.returnKeyType =UIReturnKeyDone;
+        if (textField.tag == 1) {
+            self.startDateField = textField;
+    
+            // Create a date picker for the date field.
+            UIDatePicker *datePicker = [[UIDatePicker alloc]init];
+            datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+            datePicker.tag = 1;
+            datePicker.minimumDate = [NSDate date];
+            [datePicker setDate:[NSDate date]];
+            [datePicker addTarget:self action:@selector(updateDateField:) forControlEvents:UIControlEventValueChanged];
+    
+            // If the date field has focus, display a date picker instead of keyboard.
+            // Set the text to the date currently displayed by the picker.
+            self.startDateField.inputView = datePicker;
+            datePicker.hidden =NO;
+            self.startDateField.text = [self formatDate:datePicker.date];
+            self.startDateField.text = [self formatDate:[NSDate date]];
+        }
     
 //    if (textField.tag == 1) {
 //        self.startDateField = textField;
